@@ -1,0 +1,254 @@
+//--------------------------
+// MODELLO DELLE CONDIZIONI
+//--------------------------  
+orCondition 
+  : 
+    andCondition ( OR andCondition  )*
+
+  ;
+
+ 
+andCondition 
+  : 
+    notCondition ( AND notCondition )*
+  ;
+
+
+
+notCondition 
+  : 
+    ( NOT )? predicate 
+  ;
+
+
+
+//--------------------------
+// MODELLO DEI PREDICATI
+//--------------------------  
+
+predicate 
+  :
+    	expression ( comparator expression )?
+
+// predicati WITH e WITHOUT    	
+    | withPredicate      
+    | withoutPredicate  
+
+// predicati ( OPERATORY ) fuzzy --------> LI SPOSTO A LIVELLO di FACTOR all'interno di EXPRESSION? ---- **** vedere "factor"
+		| ifFails	
+		| INSIDE LP (LEFT | RIGHT) RP
+		|	OVERLAP LP RP
+		| HOWMEET LP (LEFT | RIGHT) RP
+		| DIRECTION LP (LEFT | RIGHT) RP         		// left/right = from
+		| AREA LP ID COMMA (LEFT | RIGHT) RP				// left/right = geometry
+		| PERIMETER LP ID COMMA (LEFT | RIGHT) RP		// left/right = geometry
+  ;
+
+
+withPredicate
+  :
+    WITH ( ID | ARRAY )? 
+	    fieldRef ( COMMA fieldRef )*
+  ;
+
+withoutPredicate 
+  :
+    WITHOUT 
+ 			fieldRef ( COMMA fieldRef )*
+  ;
+
+//------------------------------------
+// MODELLO CLASSICO DELLE ESPRESSIONI
+//------------------------------------
+
+expression 
+  : ( ADD | SUB)? term ( ( ADD | SUB) term )*
+  ;
+
+
+term 
+  : factor ( ( MUL |  DIV) factor )*
+  ;
+  
+factor 
+  : fieldRef
+  | LP orCondition RP         // RICORSIONE VERSO LE CONDIZIONI
+  | INT
+  | FLOAT
+  | APEX_VALUE
+  | QUOTED_VALUE
+  | ID ( LP (functionParams)? RP )?      // VARIABILI E/O FUNZIONI (eventualmente anche fuzzy definite dall'utente)
+  																			// ***** inserico anche gli operatori FUZZY PREDEFINITI???	**** vedere "predicate"
+  ;
+  
+
+//--------------------------
+// VARIE
+//--------------------------
+
+  
+functionParams 
+  : expression ( COMMA expression )*
+  ;
+  
+  
+comparator 
+  : ( EQ
+    | NEQ
+    | LT
+    | GT
+    | LE
+    | GE
+    )
+  ;
+ 
+
+numeric 
+  : ( ADD | SUB )? ( FLOAT | INT )
+  ;
+
+
+//--------------------------
+// IF FAILS BLOCK
+//--------------------------
+ifFails 
+	:	
+		IFFAILS LP 
+			orIffOperator COMMA numeric 
+		RP
+	;
+
+
+orIffOperator
+	:
+		andIffOperator ( OR andIffOperator )*
+	;
+
+andIffOperator
+	:
+			notIffOperator ( AND notIffOperator )*
+	;	  
+
+notIffOperator 
+	:	
+		(NOT)?
+		( iffOperator
+		| LP orIffOperator RP
+		)
+	;
+	  
+iffOperator
+	:
+		ID LP ID (COMMA ID)* RP 
+	;
+
+
+	
+//---------------------------------------------------------
+//---------------------------------------------------------
+// PUNTI DOVE VIENE RICHIAMATO IL MODELLO DELLE CONDIZIONI
+//---------------------------------------------------------
+//---------------------------------------------------------
+// prestare attenzione al commento:    		// *** QUI ***
+//---------------------------------------------------------
+
+	
+1.clausola WHERE all'interno della CASE
+whereCase 
+  : 
+    WHERE (
+      	orCondition ( generateAction )?   // *** QUI ***
+      | fuzzyWhere						
+      )
+  ;
+  
+
+2.clausola GENERATE FUZZY SET all'interno della CASE
+fuzzyGenerate 
+	:	
+		( GENERATE FUZZY SET ID
+			EVALUATE orCondition 				            // *** QUI ***
+		)+
+
+		(ALPHACUT numeric ON ID )*
+		( DROPPING FUZZY SETS ID ( COMMA ID )* )? 
+	;
+
+  
+3.clausola PARTITION all'interno di GROUP
+groupPartition 
+  :
+    PARTITION orCondition                   // *** QUI ***
+    BY .... etc
+    INTO ... etc
+    ... etc etc
+	;
+	
+	
+4.clausola UNPACK all'interno di EXPAND
+unpack 
+  :
+    UNPACK  orCondition                       // *** QUI ***
+	    ARRAY fieldRef
+	    TO ID
+	    ( generateAction  )?     
+  ;
+
+  
+5.clausola PARTIION all'interno di TRAJECTORY MATCHING
+trajectoryPartition 
+  :
+    PARTITION orCondition                      // *** QUI ***
+    ( partitionMatching )+
+  ;
+
+
+6.clausola WHERE all'interno di TRAJECTORY MATCHING a seguito di un PARTITION MATCHING (Vedi sopra)
+partitionMatching  returns [PartitionMatching pt]
+  :
+    MATCHING fieldRef
+    WRT fieldRef
+    THRESHOLD LP ID RP numeric
+
+    ( WHERE orCondition )?                   // *** QUI ***
+
+    INTO fieldRef     
+    ADDING fieldRef TO INPUT 
+    ( MIN SIMILARITY numeric )?    
+  ;
+
+
+7.clausole PRECONDITION e EVALUATE all'interno di CREATE FUZZY OPERATOR
+createFuzzyOperator 
+	:
+		CREATE_FUZZY_OPERATOR ID
+			PARAMETERS 	parameter ( COMMA parameter )*
+			PRECONDITION orCondition 							// *** QUI ***
+			EVALUATE orCondition									// *** QUI ***
+
+			RANGE LP numeric COMMA numeric RP
+
+			POLYLINE	
+				LP numeric COMMA numeric RP 
+					( COMMA LP numeric COMMA numeric RP )*
+		SC
+	;  
+
+
+8.clausola PRECONDITION all'interno di CREATE JAVASCRIPT FUNCTION
+createJavaScriptFunction
+	:
+		CREATE_JAVASCRIPT_FUNCTION ID 
+			PARAMETERS 	parameter ( COMMA parameter )*
+
+			PRECONDITION orCondition 							// *** QUI ***
+	
+			BODY ... END_BODY		
+			SC
+	;  
+
+
+9. infine ci sono i parametri delle funzioni (fuzzy o meno)... qui il modello parte da "expression" perché evenuali epressioni logiche vanno necessariamente precedute da parantesi (se si parte da orCondition questo non avviene)
+functionParams 
+  : expression ( COMMA expression )*       // *** QUI ***
+  ;

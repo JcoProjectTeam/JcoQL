@@ -1,0 +1,176 @@
+
+createFuzzyOperator 
+	:
+		CREATE_FUZZY_OPERATOR ID								
+			PARAMETERS 	
+					parameter (COMMA parameter )*
+
+			PRECONDITION orCondition 
+			
+			EVALUATE orCondition			
+			
+			RANGE LP numeric COMMA numeric RP
+
+			POLYLINE	
+				LP 	numeric COMMA numeric RP 
+				( COMMA LP numeric COMMA numeric RP )*
+		SC
+	;  
+
+
+createJavaScriptFunction
+	:
+		CREATE_JAVASCRIPT_FUNCTION 
+			ID 				
+			
+			PARAMETERS 	
+					parameter (COMMA parameter)*
+
+			PRECONDITION orCondition			
+			
+			BODY [etc etc] END_BODY		
+		SC
+	;  
+	 
+
+spatialJoin
+  :
+    SPATIAL JOIN OF COLLECTIONS
+	    collectionReference COMMA collectionReference 
+	    
+	    ( ON spatialJoinCondition )?
+
+	    SET GEOMETRY ( INTERSECTION | RIGHT | LEFT | ALL )
+
+			( fuzzySpatialJoin )?
+
+	    ( caseClause )?	    
+    SC   
+  ;
+
+joinOfCollections
+  : JOIN OF COLLECTIONS
+      collectionReference COMMA collectionReference
+
+      ( cc=caseClause )?
+
+      ( fuzzyJoinOfCollection )?
+
+    SC   
+  ;
+
+  
+filter 
+  : FILTER 
+        caseClause 
+    SC
+  ;
+ 
+................................
+parameter
+	:	
+		ID TYPE ID
+	;
+
+spatialJoinCondition 
+	:
+    DISTANCE LP ID RP comparator numeric
+  | AREA LP ID RP  comparator numeric
+  | ORIENTATION LP ( LEFT | RIGHT ) COMMA  ID COLON numeric RP 
+  | INCLUDED LP ( LEFT | RIGHT) RP 
+  | MEET
+  | INTERSECT
+  ;
+
+
+caseClause 
+  :
+    CASE 		    
+	      ( whereCase )+	      
+				( fuzzyGenerate )?				
+	      others 							
+  ;
+
+others returns
+  :    
+      KEEP OTHERS 
+    | DROP OTHERS
+  ;
+
+whereCase 
+  : 
+    WHERE (
+      	orCondition ( generateAction )?
+      | fuzzyWhere
+      )
+  ;
+
+
+//--- fuzzy part
+fuzzyWhere 
+	:	WITHIN FUZZY SETS ID ( COMMA ID )*
+				ALPHACUT numeric ON ID
+				( DROPPING FUZZY SETS ID ( COMMA ID )* )? 
+	| KNOWN FUZZY SET ID
+		AND
+		UNKNOWN FUZZY SET ID
+	;  
+
+fuzzyGenerate 
+	:	
+		( GENERATE FUZZY SET ID
+			EVALUATE fuzzyPredicate 	
+		)+
+		
+		( ALPHACUT numeric ON ID
+		 ( DROPPING FUZZY SETS ID ( COMMA ID )* )? 
+		)? 
+	;
+
+
+fuzzyPredicate 
+	: 
+		 	expression 									
+	 	| IFFAILS LP 
+				ID LP (numeric | ID)
+			  (COMMA (numeric | ID))* RP			
+				COMMA numeric RP
+		| INSIDE LP (LEFT | RIGHT) RP
+		|	OVERALAP
+		| HOWMEET LP (LEFT | RIGHT) RP
+		| DIRECTION LP (LEFT | RIGHT) RP         		
+		| AREA LP ID COMMA (LEFT | RIGHT) RP				
+		| PERIMETER LP ID COMMA (LEFT | RIGHT) RP		
+	;
+ 
+
+fuzzySetName
+	:	ID FIELD_NAME (AS ID)?
+	;  
+
+fuzzyJoinOfCollection 
+	:	
+		SET FUZZY SETS fuzzySetName (COMMA fuzzySetName)*
+
+		( DROPPING SOURCE FUZZY SET 
+		| KEEPING SOURCE FUZZY SET	)
+		;  
+
+fuzzySpatialJoin 
+	: 
+		( SET FUZZY SET ID
+			EVALUATE fuzzyPredicate )+
+
+		( KEEPING SOURCE FUZZY SETS 
+		| DROPPING SOURCE FUZZY SETS )
+	;
+		
+
+
+
+  
+
+
+  
+
+  

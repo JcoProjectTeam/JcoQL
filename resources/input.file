@@ -1,0 +1,46 @@
+
+GATHER FROM WEB
+	FOR EACH NOT(
+					.a = 1
+				AND	
+					NOT (.b = (1+.b) AND .c=1)
+				AND	
+					WITH .a, .b
+				AND	
+					WITHOUT .c 
+			OR	
+				.c = 1 
+				OR NOT ( .c=1 AND .d=1 OR .d=2))
+		CALL .a+(23*(1+.c))
+	FOR EACH
+					.a = 1
+				AND	
+					.b = (1+.b) 
+			OR	
+				WITH .a, .b
+			OR	
+				WITHOUT .c 
+		CALL "ciao mondo"+.a+(23*(1+.c));
+FILTER 
+	CASE
+		WHERE	
+						.a = 1
+					AND	
+						.b = (1+.b)
+					AND	
+						WITH .a, .b
+					AND	
+						WITHOUT .c 
+				OR	
+					.c = 1 
+		WHERE	
+					.c = 1
+				OR	NOT 
+							.a = 1 
+					AND	
+						.b = (1+.b)
+					AND	
+						WITH .a, .b
+					AND	
+						WITHOUT .c ;
+
