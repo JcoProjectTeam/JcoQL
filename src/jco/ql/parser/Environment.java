@@ -502,6 +502,27 @@ public class Environment {
 		sf.setType (SpatialFunction.DISTANCE, unit, comp, n, joinCaller); 				
 	}
 		
+
+
+	public void setLength(SpatialFunction sf, Token u, Token cp, String n, boolean joinCaller) {
+		String unit = "";
+		if (u == null)
+			myErrorHandler(MISSING_UNIT, u);
+		else {
+			unit = u.getText();
+			if (!SpatialFunction.checkUnit(unit))
+				myErrorHandler(WRONG_UNIT, u);
+		}
+		if (joinCaller && cp == null)
+			myErrorHandler(ERR_ON_MISSING_COMPARATOR, cp);
+		else if (!joinCaller && cp != null)
+			myErrorHandler(ERR_ON_UNEXPECTED_COMPARATOR, cp);
+		String comp = "="; // default
+		if (cp != null)
+			comp = cp.getText();
+		sf.setType (SpatialFunction.LENGTH, unit, comp, n, joinCaller); 
+	}
+
 	void setArea(SpatialFunction sf, Token u, Token cp, String n, boolean joinCaller) { 
 		String unit = "";
 		if (u == null)

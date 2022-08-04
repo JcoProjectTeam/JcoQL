@@ -521,6 +521,7 @@ spatialFunctionRule [boolean joinCaller] returns [SpatialFunction sf]
 @init{ sf = new SpatialFunction (); }
   :
 	  	DISTANCE LP u=ID RP ( cp=comparatorRule n=numericRule )?													{ env.setDistance (sf, $u, cp, n, joinCaller); }
+	  | LEN LP u=ID RP ( cp=comparatorRule n=numericRule	)?															{ env.setLength (sf, $u, cp, n, joinCaller);  }
 	  | AREA LP u=ID RP ( cp=comparatorRule n=numericRule	)?															{ env.setArea (sf, $u, cp, n, joinCaller);  }
 	  | ORIENTATION LP ( f=LEFT | f=RIGHT ) ( COMMA  o=ID COLON d=numericRule )? RP 			{ env.setOrientation (sf, $f, $o, d, joinCaller);  }
 	  | INCLUDED LP ( i=LEFT | i=RIGHT) RP																								{ sf.setType (SpatialFunction.INCLUDED, $i.getText()); }
@@ -982,6 +983,7 @@ KEEPING       	: 'KEEPING';
 KNOWN						:	'KNOWN';
 LAST  	        : 'LAST';
 LEFT    	      : 'LEFT';
+LEN							: 'LINE_LENGTH';
 LOOKUP 					:	'LOOKUP';
 MATCHING  	    : 'MATCHING';
 MEET        	  : 'MEET';

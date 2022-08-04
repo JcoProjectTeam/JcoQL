@@ -17,12 +17,13 @@ public class SpatialFunction {
 	public static final int	UNDEFINED		= -1;
 	public static final int	DISTANCE		= 0;
 	public static final int	AREA			= 1;
-	public static final int	ORIENTATION		= 2;
-	public static final int	INCLUDED		= 3;
-	public static final int	INCLUDED_LEFT	= 4;
-	public static final int	INCLUDED_RIGHT	= 5;
-	public static final int	MEET			= 6;
-	public static final int	INTERSECT		= 7;
+	public static final int	LENGTH			= 2;
+	public static final int	ORIENTATION		= 3;
+	public static final int	INCLUDED		= 4;
+	public static final int	INCLUDED_LEFT	= 5;
+	public static final int	INCLUDED_RIGHT	= 6;
+	public static final int	MEET			= 7;
+	public static final int	INTERSECT		= 8;
 	
 	public int type;
 	public String unit;
@@ -30,6 +31,7 @@ public class SpatialFunction {
 	public int comparatorType;
 	public double area;
 	public double distance;
+	public double length;
 	public String from;
 	public String orientationStr;
 	public EOrientation orientation;
@@ -46,6 +48,7 @@ public class SpatialFunction {
 		comparatorType = UNDEFINED;
 		distance = 0;
 		area = 0;
+		length = 0;
 		from = null;
 		orientationStr = null;
 		delta = 0;
@@ -68,28 +71,28 @@ public class SpatialFunction {
 	public void setType(int t, String u, String cp, String n, boolean c) {
 		fullDetails = c;
 		type = t;
-		if (type == ORIENTATION) {
-			from = u;
-			if (cp != null) {
-				orientationStr = cp;
-				if (n != null)
-					delta = Double.parseDouble(n);			
-			}
-		}
-		else if (type == DISTANCE) {
+		if (type == DISTANCE) {
 			unit = u;
-			if (cp != null) {
+			if (fullDetails) {
 				comparator = cp;
 				comparatorType = ComparisonPredicate.setComparator(cp);
 				distance = Double.parseDouble(n);
 			}
 		}
-		else {
+		else if (type == AREA) {
 			unit = u;
-			if (cp != null) {
+			if (fullDetails) {
 				comparator = cp;
 				comparatorType = ComparisonPredicate.setComparator(cp);
 				area = Double.parseDouble(n);
+			}
+		}
+		else if (type == LENGTH) {
+			unit = u;
+			if (fullDetails) {
+				comparator = cp;
+				comparatorType = ComparisonPredicate.setComparator(cp);
+				length = Double.parseDouble(n);
 			}
 		}
 	}
@@ -118,6 +121,10 @@ public class SpatialFunction {
 			str += "AREA(" + unit + ") " + comparator + " " + area;
 		else if (type == AREA)
 			str += "AREA(" + unit + ")";
+		else if (type == LENGTH && fullDetails)
+			str += "LINE_LENGTH(" + unit + ") " + comparator + " " + length;
+		else if (type == LENGTH)
+			str += "LINE_LENGTH(" + unit + ")";
 		else if (type == ORIENTATION && fullDetails)
 			str += "ORIENTATION(" + from + ", " + orientationStr + ": " + delta + ")";
 		else if (type == ORIENTATION)
@@ -146,6 +153,10 @@ public class SpatialFunction {
 			str += "AREA(" + unit + ") " + comparator + " " + area;
 		else if (type == AREA)
 			str += "AREA(" + unit + ")";
+		else if (type == LENGTH && fullDetails)
+			str += "LINE_LENGTH(" + unit + ") " + comparator + " " + length;
+		else if (type == LENGTH)
+			str += "LINE_LENGTH(" + unit + ")";
 		else if (type == ORIENTATION && fullDetails)
 			str += "ORIENTATION(" + from + ", " + orientationStr + ": " + delta + ")";
 		else if (type == ORIENTATION)

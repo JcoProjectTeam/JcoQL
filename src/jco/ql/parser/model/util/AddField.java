@@ -27,7 +27,7 @@ public class AddField {
 
 	
 	public AddField(Field field, SpatialFunction spatialFuncion) {
-		type = FACTOR_FIELD;
+		type = SPATIAL_FUNTION_FIELD;
 		this.field = field;
 		this.factor = null;
 		this.spatialFuncion = spatialFuncion;
