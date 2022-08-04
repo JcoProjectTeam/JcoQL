@@ -367,7 +367,8 @@ insertFieldRule
 spatialFunctionRule
   :
     DISTANCE LP ID RP ( comparatorRule numericRule  )?
-  | AREA LP ID RP ( comparatorRule numericRule  )?
+  | LEN LP u=ID RP    ( comparatorRule numericRule  )?                       
+  | AREA LP ID RP     ( comparatorRule numericRule  )?
   | ORIENTATION LP 
       ( LEFT |  RIGHT ) ( COMMA ID COLON numericRule  )? 
     RP
@@ -767,6 +768,7 @@ KEEPING         :  'KEEPING';
 KNOWN           :  'KNOWN';
 LAST            :  'LAST';
 LEFT            :  'LEFT';
+LEN             :  'LINE_LENGTH';
 LOOKUP          :  'LOOKUP';
 MATCHING        :  'MATCHING';
 MEET            :  'MEET';
