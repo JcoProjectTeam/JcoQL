@@ -503,7 +503,7 @@ public class Environment {
 	}
 		
 
-
+/* ZUN ERASE
 	public void setLength(SpatialFunction sf, Token u, Token cp, String n, boolean joinCaller) {
 		String unit = "";
 		if (u == null)
@@ -541,7 +541,7 @@ public class Environment {
 			comp = cp.getText();
 		sf.setType (SpatialFunction.AREA, unit, comp, n, joinCaller); 
 	}
-	
+*/	
 	void setOrientation(SpatialFunction sf, Token side, Token o, String d, boolean joinCaller) {  
 		String sideString = "LEFT";
 		if (side != null)

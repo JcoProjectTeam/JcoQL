@@ -1,46 +1,7 @@
-
-GATHER FROM WEB
-	FOR EACH NOT(
-					.a = 1
-				AND	
-					NOT (.b = (1+.b) AND .c=1)
-				AND	
-					WITH .a, .b
-				AND	
-					WITHOUT .c 
-			OR	
-				.c = 1 
-				OR NOT ( .c=1 AND .d=1 OR .d=2))
-		CALL .a+(23*(1+.c))
-	FOR EACH
-					.a = 1
-				AND	
-					.b = (1+.b) 
-			OR	
-				WITH .a, .b
-			OR	
-				WITHOUT .c 
-		CALL "ciao mondo"+.a+(23*(1+.c));
-FILTER 
-	CASE
-		WHERE	
-						.a = 1
-					AND	
-						.b = (1+.b)
-					AND	
-						WITH .a, .b
-					AND	
-						WITHOUT .c 
-				OR	
-					.c = 1 
-		WHERE	
-					.c = 1
-				OR	NOT 
-							.a = 1 
-					AND	
-						.b = (1+.b)
-					AND	
-						WITH .a, .b
-					AND	
-						WITHOUT .c ;
-
+JOIN OF COLLECTIONS
+		hotels AS h, cities AS a
+	ON GEOMETRY LINE_LENGTH(KM) > 1.0
+	ADD FIELDS {
+		.a : .v,
+		.len : LINE_LENGTH(KM),
+		.a : (.v+1)	};

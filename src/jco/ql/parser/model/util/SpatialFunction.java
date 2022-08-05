@@ -10,14 +10,15 @@ import jco.ql.parser.model.predicate.EOrientation;
  *
  */
 public class SpatialFunction {
-	public static final String M_UNIT = "M";
-	public static final String KM_UNIT = "KM";
-	public static final String ML_UNIT = "ML";
+	public static final String M_UNIT		= "M";
+	public static final String KM_UNIT		= "KM";
+	public static final String ML_UNIT		= "ML";
 
 	public static final int	UNDEFINED		= -1;
 	public static final int	DISTANCE		= 0;
-	public static final int	AREA			= 1;
-	public static final int	LENGTH			= 2;
+	/* ZUN ERASE */
+//	public static final int	AREA			= 1;
+//	public static final int	LENGTH			= 2;
 	public static final int	ORIENTATION		= 3;
 	public static final int	INCLUDED		= 4;
 	public static final int	INCLUDED_LEFT	= 5;
@@ -79,7 +80,8 @@ public class SpatialFunction {
 				distance = Double.parseDouble(n);
 			}
 		}
-		else if (type == AREA) {
+		/* ZUN ERASE */
+	/*	else if (type == AREA) {
 			unit = u;
 			if (fullDetails) {
 				comparator = cp;
@@ -94,7 +96,7 @@ public class SpatialFunction {
 				comparatorType = ComparisonPredicate.setComparator(cp);
 				length = Double.parseDouble(n);
 			}
-		}
+		}*/
 	}
 
 	public void setType(int t, String tk) {
@@ -117,7 +119,8 @@ public class SpatialFunction {
 			str += "DISTANCE(" + unit + ") " + comparator + " " + distance;
 		else if (type == DISTANCE)
 			str += "DISTANCE(" + unit + ") ";
-		else if (type == AREA && fullDetails)
+		/* ZUN ERASE */
+/*		else if (type == AREA && fullDetails)
 			str += "AREA(" + unit + ") " + comparator + " " + area;
 		else if (type == AREA)
 			str += "AREA(" + unit + ")";
@@ -125,7 +128,7 @@ public class SpatialFunction {
 			str += "LINE_LENGTH(" + unit + ") " + comparator + " " + length;
 		else if (type == LENGTH)
 			str += "LINE_LENGTH(" + unit + ")";
-		else if (type == ORIENTATION && fullDetails)
+*/		else if (type == ORIENTATION && fullDetails)
 			str += "ORIENTATION(" + from + ", " + orientationStr + ": " + delta + ")";
 		else if (type == ORIENTATION)
 			str += "ORIENTATION(" + from + ")";
@@ -149,7 +152,8 @@ public class SpatialFunction {
 			str += "DISTANCE(" + unit + ") " + comparator + " " + distance;
 		else if (type == DISTANCE)
 			str += "DISTANCE(" + unit + ") ";
-		else if (type == AREA && fullDetails)
+		/* ZUN ERASE */
+/*		else if (type == AREA && fullDetails)
 			str += "AREA(" + unit + ") " + comparator + " " + area;
 		else if (type == AREA)
 			str += "AREA(" + unit + ")";
@@ -157,7 +161,7 @@ public class SpatialFunction {
 			str += "LINE_LENGTH(" + unit + ") " + comparator + " " + length;
 		else if (type == LENGTH)
 			str += "LINE_LENGTH(" + unit + ")";
-		else if (type == ORIENTATION && fullDetails)
+*/		else if (type == ORIENTATION && fullDetails)
 			str += "ORIENTATION(" + from + ", " + orientationStr + ": " + delta + ")";
 		else if (type == ORIENTATION)
 			str += "ORIENTATION(" + from + ")";

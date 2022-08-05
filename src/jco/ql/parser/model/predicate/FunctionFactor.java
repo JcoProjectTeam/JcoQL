@@ -10,29 +10,33 @@ import java.util.List;
  *
  */
 public class FunctionFactor extends ExpressionFactor {
-	public static final int COUNT_FUNCTION 			= 11;
-	public static final int TO_STRING_FUNCTION 		= 12;
-	public static final int TO_INT_FUNCTION 		= 13;
-	public static final int TO_FLOAT_FUNCTION 		= 14;
-	public static final int TO_BOOL_FUNCTION  		= 15;
-	public static final int SERIALIZE_FUNCTION 		= 16;
-	public static final int MAX_FUNCTION			= 17;
-	public static final int MIN_FUNCTION			= 18;
-	public static final int ABS_FUNCTION			= 19;
-	public static final int GEO_DISTANCE_FUNCTION	= 21;
-	public static final int JARO_WINKLER_FUNCTION	= 22;
+	public static final int COUNT_FUNCTION 				= 11;
+	public static final int TO_STRING_FUNCTION	 		= 12;
+	public static final int TO_INT_FUNCTION 			= 13;
+	public static final int TO_FLOAT_FUNCTION 			= 14;
+	public static final int TO_BOOL_FUNCTION  			= 15;
+	public static final int SERIALIZE_FUNCTION 			= 16;
+	public static final int MAX_FUNCTION				= 17;
+	public static final int MIN_FUNCTION				= 18;
+	public static final int ABS_FUNCTION				= 19;
+	public static final int GEO_DISTANCE_FUNCTION		= 21;
+	public static final int JARO_WINKLER_FUNCTION		= 22;
+	public static final int GEOMETRY_LENGTH_FUNCTION	= 31;
+	public static final int GEOMETRY_AREA_FUNCTION		= 32;
 
-	public static final String COUNT_STRING 		= "COUNT";
-	public static final String TO_STRING_STRING 	= "TO_STRING";
-	public static final String TO_INT_STRING 		= "TO_INT";
-	public static final String TO_FLOAT_STRING 		= "TO_FLOAT";
-	public static final String TO_BOOL_STRING  		= "TO_BOOL";
-	public static final String SERIALIZE_STRING 	= "SERIALIZE";
-	public static final String MAX_STRING			= "MAX";
-	public static final String MIN_STRING			= "MIN";
-	public static final String ABS_STRING			= "ABS";
-	public static final String GEO_DISTANCE_STRING	= "GEODESIC_DISTANCE";
-	public static final String JARO_WINKLER_STRING	= "JARO_WINKLER_SIMILARITY";
+	public static final String COUNT_STRING 			= "COUNT";
+	public static final String TO_STRING_STRING 		= "TO_STRING";
+	public static final String TO_INT_STRING 			= "TO_INT";
+	public static final String TO_FLOAT_STRING 			= "TO_FLOAT";
+	public static final String TO_BOOL_STRING 	 		= "TO_BOOL";
+	public static final String SERIALIZE_STRING 		= "SERIALIZE";
+	public static final String MAX_STRING				= "MAX";
+	public static final String MIN_STRING				= "MIN";
+	public static final String ABS_STRING				= "ABS";
+	public static final String GEO_DISTANCE_STRING		= "GEODESIC_DISTANCE";
+	public static final String JARO_WINKLER_STRING		= "JARO_WINKLER_SIMILARITY";
+	public static final String GEOMETRY_LENGTH_STRING	= "GEOMETRY_LENGTH";
+	public static final String GEOMETRY_AREA_STRING		= "GEOMENTRY_AREA";
 
 	public int functionType;
 	public String functionName;
@@ -75,7 +79,11 @@ public class FunctionFactor extends ExpressionFactor {
 		functionMap.put(ABS_STRING, ABS_FUNCTION);
 		functionMap.put(GEO_DISTANCE_STRING, GEO_DISTANCE_FUNCTION);		
 		functionMap.put(JARO_WINKLER_STRING, JARO_WINKLER_FUNCTION);		
-	}
+		functionMap.put(JARO_WINKLER_STRING, JARO_WINKLER_FUNCTION);		
+		functionMap.put(JARO_WINKLER_STRING, JARO_WINKLER_FUNCTION);		
+		functionMap.put(GEOMETRY_LENGTH_STRING, GEOMETRY_LENGTH_FUNCTION);		
+		functionMap.put(GEOMETRY_AREA_STRING, GEOMETRY_AREA_FUNCTION);		
+		}
 	
 	
 	public boolean isPredefinedFunction () {

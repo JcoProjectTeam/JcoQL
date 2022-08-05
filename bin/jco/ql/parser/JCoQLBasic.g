@@ -366,8 +366,7 @@ insertFieldRule
 
 spatialFunctionRule
   :
-    DISTANCE LP ID RP ( comparatorRule numericRule  )?
-  | AREA LP ID RP ( comparatorRule numericRule  )?
+    DISTANCE LP ID RP   ( comparatorRule numericRule  )?
   | ORIENTATION LP 
       ( LEFT |  RIGHT ) ( COMMA ID COLON numericRule  )? 
     RP
@@ -707,7 +706,6 @@ ADD_ST          :  'ADD';
 AGGREGATE       :  'AGGREGATE';
 ALL             :  'ALL';
 ALPHACUT        :  'ALPHACUT';
-AREA            :  'AREA';
 ARRAY           :  'ARRAY';
 ARRAY_FUNCTION  :  ( 'MIN' | 'MAX' | 'AVG' | 'SUM' ) '_ARRAY';
 AS              :  'AS';
