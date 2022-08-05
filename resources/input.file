@@ -5,3 +5,5 @@ JOIN OF COLLECTIONS
 		.a : .v,
 		.len : LINE_LENGTH(KM),
 		.a : (.v+1)	};
+   
+   

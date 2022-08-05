@@ -36,7 +36,7 @@ public class FunctionFactor extends ExpressionFactor {
 	public static final String GEO_DISTANCE_STRING		= "GEODESIC_DISTANCE";
 	public static final String JARO_WINKLER_STRING		= "JARO_WINKLER_SIMILARITY";
 	public static final String GEOMETRY_LENGTH_STRING	= "GEOMETRY_LENGTH";
-	public static final String GEOMETRY_AREA_STRING		= "GEOMENTRY_AREA";
+	public static final String GEOMETRY_AREA_STRING		= "GEOMETRY_AREA";
 
 	public int functionType;
 	public String functionName;
