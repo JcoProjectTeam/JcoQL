@@ -16,6 +16,7 @@ import jco.ql.parser.model.fuzzy.AlphaCut;
 import jco.ql.parser.model.fuzzy.FuzzyPoint;
 import jco.ql.parser.model.fuzzy.FuzzyRange;
 import jco.ql.parser.model.fuzzy.FuzzySetDefinition;
+import jco.ql.parser.model.fuzzy.SetFuzzySets;
 import jco.ql.parser.model.predicate.Expression;
 import jco.ql.parser.model.predicate.ExpressionFactor;
 import jco.ql.parser.model.predicate.FunctionFactor;
@@ -503,45 +504,6 @@ public class Environment {
 	}
 		
 
-/* ZUN ERASE
-	public void setLength(SpatialFunction sf, Token u, Token cp, String n, boolean joinCaller) {
-		String unit = "";
-		if (u == null)
-			myErrorHandler(MISSING_UNIT, u);
-		else {
-			unit = u.getText();
-			if (!SpatialFunction.checkUnit(unit))
-				myErrorHandler(WRONG_UNIT, u);
-		}
-		if (joinCaller && cp == null)
-			myErrorHandler(ERR_ON_MISSING_COMPARATOR, cp);
-		else if (!joinCaller && cp != null)
-			myErrorHandler(ERR_ON_UNEXPECTED_COMPARATOR, cp);
-		String comp = "="; // default
-		if (cp != null)
-			comp = cp.getText();
-		sf.setType (SpatialFunction.LENGTH, unit, comp, n, joinCaller); 
-	}
-
-	void setArea(SpatialFunction sf, Token u, Token cp, String n, boolean joinCaller) { 
-		String unit = "";
-		if (u == null)
-			myErrorHandler(MISSING_UNIT, u);
-		else {
-			unit = u.getText();
-			if (!SpatialFunction.checkUnit(unit))
-				myErrorHandler(WRONG_UNIT, u);
-		}
-		if (joinCaller && cp == null)
-			myErrorHandler(ERR_ON_MISSING_COMPARATOR, cp);
-		else if (!joinCaller && cp != null)
-			myErrorHandler(ERR_ON_UNEXPECTED_COMPARATOR, cp);
-		String comp = "="; // default
-		if (cp != null)
-			comp = cp.getText();
-		sf.setType (SpatialFunction.AREA, unit, comp, n, joinCaller); 
-	}
-*/	
 	void setOrientation(SpatialFunction sf, Token side, Token o, String d, boolean joinCaller) {  
 		String sideString = "LEFT";
 		if (side != null)
@@ -924,6 +886,16 @@ public class Environment {
 		}
 		return new SortField (fr, typeStr);
 	}
+
+
+	public void addSetFuzztSets(SetFuzzySets sfs, String side, String sourceFuzzySet, Token newFs) {
+		if (newFs == null)
+			sfs.add(side, sourceFuzzySet, null);
+		else
+			sfs.add(side, sourceFuzzySet, newFs.getText());
+	}
+	
+	
 
 }
 

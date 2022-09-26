@@ -13,6 +13,7 @@ public class GenerateSection {
 	public List<AlphaCut> alphaCuts;
 	public BuildAction buildAction;
 	public KeepingDroppingFuzzySets keepDropFuzzySets;
+	public boolean dropGeometry;
 
 	private boolean empty;
 	private boolean emptyFuzzyOptions;
@@ -28,6 +29,7 @@ public class GenerateSection {
 		buildAction = null;
 		keepDropFuzzySets = null;
 		this.fuzzyOptionsAllowed = fuzzyOptionsAllowed;
+		dropGeometry = false;
 	}
 
 	
@@ -59,7 +61,11 @@ public class GenerateSection {
 		this.keepDropFuzzySets = keepDropFuzzySets;
 	}	
 
-	
+	public void addDropGeometry() {
+		empty = false;
+		dropGeometry = true;
+	}
+
 	public boolean hasGeometricOption () {
 		return (geometricOption != null);
 	}
@@ -79,6 +85,11 @@ public class GenerateSection {
 	public boolean hasKeepDropFuzzySets() {
 		return (keepDropFuzzySets != null);		
 	}
+	
+	public boolean hasDropGeometry () {
+		return dropGeometry;
+	}
+	
 	
 	public boolean isEmpty () {
 		return 	empty;
@@ -108,6 +119,8 @@ public class GenerateSection {
 			str += " " + buildAction.toString();
 		if (hasKeepDropFuzzySets())
 			str += " " + keepDropFuzzySets.toString() + " ";
+		if (hasDropGeometry())
+			str += " DROPPING GEOMETRY ";
 
 		return str;
 	}
@@ -147,7 +160,11 @@ public class GenerateSection {
 			str += buildAction.toMultilineString(level+1);
 		if (hasKeepDropFuzzySets())
 			str += tabs + keepDropFuzzySets.toString();
+		if (hasDropGeometry())
+			str += tabs + "DROPPING GEOMETRY";
 
 		return str;
 	}
+
+
 }

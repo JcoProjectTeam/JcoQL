@@ -1,9 +1,8 @@
-JOIN OF COLLECTIONS
-		hotels AS h, cities AS a
-	ON GEOMETRY LINE_LENGTH(KM) > 1.0
-	ADD FIELDS {
-		.a : .v,
-		.len : LINE_LENGTH(KM),
-		.a : (.v+1)	};
-   
+FILTER
+	CASE  WHERE 1=1
+	GENERATE
+		BUILD {
+		.geometry: GEOMETRY_FIELD()}
+		DEFUZZIFY
+		DROPPING GEOMETRY;
    

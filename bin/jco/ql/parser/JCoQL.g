@@ -157,13 +157,17 @@ geometricOptionRule returns [GeometricOption geo]
 @init { geo = new GeometricOption (); }
   :
 	    KEEPING GEOMETRY																								{ geo.setKeeping (); }
-	  | DROPPING GEOMETRY																								{ geo.setDropping (); }
 	  | SETTING GEOMETRY 
 	            ( POINT LP lat=fieldRefRule COMMA lon=fieldRefRule RP		{ geo.setPoint (lat, lon); }
 	            | AGGREGATE LP afr=fieldRefRule RP 											{ geo.setAggregate (afr); }
 	            | fr=fieldRefRule 																			{ geo.setField (fr); }
 	            | TO_POLYLINE LP f=fieldRefRule RP											{ geo.setPolyline (f); }  
 	            )
+  ;
+// added on 2022.09.22  
+dropGeometryRule 
+  :
+	  DROPPING GEOMETRY																								
   ;
 
 	
@@ -201,6 +205,7 @@ generateSectionRule [boolean complete]	returns [GenerateSection gs]
 			(	ac=alphaCutRule [gs]																						)?
    	 	( ga=buildActionRule 						{ gs.addBuildAction (ga); 			}	)?
 			( df=keepDropFuzzySetsRule	 		{ gs.addKeepDropFuzzySets (df); } )?
+     	( dropGeometryRule							{	gs.addDropGeometry (); 				} )?
    	 																	{	env.checkGenerate (gs, $g);		}
 	;
 
@@ -554,7 +559,7 @@ addFuzzySetRule [SetFuzzySets sfs]
 	:
 		(	s=LEFT | s=RIGHT) 		
 			( ALL 																									{	sfs.add ($s.getText()); }
-			| fs=ID ( AS newFs=ID)?																	{	sfs.add ($s.getText(), $fs.getText(), $newFs.getText()); }
+			| fs=ID ( AS newFs=ID)?																	{	env.addSetFuzztSets (sfs, $s.getText(), $fs.getText(), $newFs); }
 		)
 	|	f=HOWINCLUDE 		LP ( s=LEFT | s=RIGHT ) RP	AS fs=ID			{	sfs.addFunction ($f.getText(), s.getText(), $fs.getText()); }		
 	|	f=HOWMEET 			LP ( s=LEFT | s=RIGHT ) RP 	AS fs=ID			{	sfs.addFunction ($f.getText(), s.getText(), $fs.getText()); }												
