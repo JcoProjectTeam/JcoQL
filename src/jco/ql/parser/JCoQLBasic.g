@@ -70,13 +70,17 @@ outputFieldSpecRule
 geometricOptionRule
   :
     KEEPING GEOMETRY
-  | DROPPING GEOMETRY
   | SETTING GEOMETRY  ( POINT LP fieldRefRule COMMA fieldRefRule RP
                       | AGGREGATE LP fieldRefRule RP
                       | fieldRefRule
                       | TO_POLYLINE LP fieldRefRule RP  )
   ;
 
+
+dropGeometryRule 
+  :
+	  DROPPING GEOMETRY																								
+  ;
 
 caseClauseRule
   :
@@ -108,6 +112,7 @@ generateSectionRule
       ( alphaCutRule  )? 
       ( buildActionRule )? 
       ( keepDropFuzzySetsRule )?
+      ( dropGeometryRule )?
   ;
 
 
