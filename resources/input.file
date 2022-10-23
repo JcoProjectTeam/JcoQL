@@ -1,8 +1,4 @@
-FILTER
-	CASE  WHERE 1=1
-	GENERATE
-		BUILD {
-		.geometry: GEOMETRY_FIELD()}
-		DEFUZZIFY
-		DROPPING GEOMETRY;
-   
+FILTER 
+	CASE 
+		WHERE ciccioXXXXX.t.province = "MILANO" 
+		AND .h.highwayTotalLength > 3000;

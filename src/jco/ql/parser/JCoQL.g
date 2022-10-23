@@ -127,16 +127,16 @@ buildActionRule returns [BuildAction ga]
 @init { ga = new BuildAction(); }
   :
     BUILD								
-	     os=objectStructureRule [true]			{ ga.setObjectStructure (os); }	    
+	     os=objectStructureRule { ga.setObjectStructure (os); }	    
   ;
 
 
 // modficata il 10.03.2022
-objectStructureRule [boolean generateActionCaller] returns [ObjectStructure obj]
+objectStructureRule returns [ObjectStructure obj]
   :
     LBR 
       ofs=outputFieldSpecRule							{ obj = new ObjectStructure (ofs); }
-	      ( t=COMMA ofs=outputFieldSpecRule 			{ env.addOutputFieldSpec (obj, ofs, generateActionCaller, $t); }   )*
+	      ( t=COMMA ofs=outputFieldSpecRule 			{ obj.addOutputFieldSpec(ofs); }   )*
     RBR
   ;
 
@@ -144,8 +144,8 @@ objectStructureRule [boolean generateActionCaller] returns [ObjectStructure obj]
 // modified on 2022.03.30
 outputFieldSpecRule returns [OutputFieldSpec ofs]
   :
-    fr=fieldRefRule					{ ofs = new OutputFieldSpec (fr); }
-    (	COLON ( os=objectStructureRule [false]																						{ ofs.setFieldSpec (os); 	}
+    fr=fieldRefRule																											{ ofs = new OutputFieldSpec (fr); }
+    (	COLON ( os=objectStructureRule																										{ ofs.setFieldSpec (os); 	}
     				| f=factorRule																															{	ofs.setFieldSpec (f);		}
           	)
      )?      
@@ -504,11 +504,9 @@ keepDropFuzzySetsRule returns [KeepingDroppingFuzzySets dfs]
 
 addFieldsRule [JoinCollections jc]  
 	:
-		ADD_ST FIELDS 																					
-			LBR
-				f=fieldRefRule COLON af=insertFieldRule[f]  							{ jc.addAddField (af); }
-				( COMMA f=fieldRefRule COLON af=insertFieldRule[f] 				{ jc.addAddField (af); } 		)*	
-			RBR
+		ADD_ST 
+			FIELD f=fieldRefRule COLON af=insertFieldRule[f]  							{ jc.addAddField (af); }
+				( COMMA FIELD f=fieldRefRule COLON af=insertFieldRule[f] 				{ jc.addAddField (af); } 		)*	
 	;
 
 

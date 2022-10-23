@@ -355,10 +355,9 @@ keepDropFuzzySetsRule
 
 addFieldsRule
   :
-    ADD_ST FIELDS LBR 
-      fieldRefRule COLON insertFieldRule 
-        ( COMMA fieldRefRule COLON insertFieldRule  )* 
-    RBR
+    ADD_ST FIELD 
+      FIELD fieldRefRule COLON insertFieldRule 
+        ( COMMA FIELD fieldRefRule COLON insertFieldRule  )* 
   ;
 
 

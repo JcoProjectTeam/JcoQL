@@ -91,12 +91,10 @@ public class Environment {
 	public static final int ERR_ON_POLYLINE_ORDER = 134;
 	public static final int ERR_ON_ALPHACUT_VALUE = 140;
 	public static final int ERR_ON_FUZZY_SET_NAME = 150;
-	public static final int ERR_ON_GENERATE_COMPLEXITY = 160;
 	public static final int ERR_ON_PARAMETER_REFERENCE = 170;
 	public static final int ERR_ON_PARAMETER_DECLARATION = 171;
 	public static final int ERR_NULL_FUNCTION_NAME = 172;
 	public static final int ERR_WRONG_PARAMETERS_NUMBER = 173;
-//	public static final int ERR_INVALID_PARAMETERS_NUMBER = 174;
 	
 	private String version;
 	private String release;
@@ -313,8 +311,6 @@ public class Environment {
 			st += "Array search type selector can be only 'DOCUMENTS' or nothing";
 		else if (code == ERR_ON_FUZZY_SET_NAME)
 			st += "FuzzySetName should be in the form ID or ID.ID";
-		else if (code == ERR_ON_GENERATE_COMPLEXITY)
-			st += "The following less complex field spec must placed before";
 		else if (code == ERR_ON_PARAMETER_REFERENCE)
 			st += "\"" + tk.getText() + "\" must be declared before in PARAMETERS";
 		else if (code == ERR_ON_PARAMETER_DECLARATION)
@@ -636,13 +632,6 @@ public class Environment {
 	}
 
 
-	// serve a  controllare che gli OutputFieldSpec inseriti abbiano complessità crescente all'interno di una GenerateAction
-	public void addOutputFieldSpec(ObjectStructure obj, OutputFieldSpec ofs, boolean generateActionCaller, Token t) {
-		if (!obj.addOutputFieldSpec(ofs) && generateActionCaller)
-			myErrorHandler(ERR_ON_GENERATE_COMPLEXITY, t);
-	}
-
-	
 	public void checkParameterDeclaration(Token x, ParamList pl) {
 		if (x == null || pl.contains(x.getText()))
 			myErrorHandler(ERR_ON_PARAMETER_DECLARATION, x);						
