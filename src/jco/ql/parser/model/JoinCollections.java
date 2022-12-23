@@ -107,9 +107,10 @@ public class JoinCollections extends Instruction {
 		if (hasSetGeometry())
 			str += " SET GEOMETRY " + setGeometryStr + " ";
 		if (hasAddFields()) {
-			str += " ADD FIELD " + addFields.get(0).toString ();
+			str += " ADD FIELDS { " + addFields.get(0).toString ();
 			for (int i=1; i<addFields.size(); i++)
-				str += ", FIELD " + addFields.get(i).toString();			
+				str += ", " + addFields.get(i).toString();			
+			str += " }";
 		}
 		if (hasSetFuzzySets())
 			str += " " + setFuzzySets.toString();
@@ -129,11 +130,12 @@ public class JoinCollections extends Instruction {
 		if (hasSetGeometry())
 			str += "\n\tSET GEOMETRY " + setGeometryStr;
 		if (hasAddFields()) {
-			str += "\n\tADD ";
-			str += "\n\t\tFIELD " + addFields.get(0).toString ();
+			str += "\n\tADD FIELDS {";
+			str += "\n\t\t" + addFields.get(0).toString ();
 			if (addFields.size() > 1)
 				for (int i=1; i<addFields.size(); i++)
-					str += ",\n\t\tFIELD " + addFields.get(i).toString();
+					str += ",\n\t\t" + addFields.get(i).toString();
+			str += "\t}";	
 		}
 		if (hasSetFuzzySets())
 			str += setFuzzySets.toMultilineString(1);

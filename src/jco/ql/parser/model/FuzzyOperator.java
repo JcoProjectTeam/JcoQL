@@ -5,7 +5,6 @@ import java.util.List;
 
 import jco.ql.parser.model.condition.Condition;
 import jco.ql.parser.model.fuzzy.FuzzyPoint;
-import jco.ql.parser.model.fuzzy.FuzzyRange;
 import jco.ql.parser.model.predicate.Expression;
 import jco.ql.parser.model.util.ParamList;
 import jco.ql.parser.model.util.Parameter;
@@ -21,8 +20,9 @@ public class FuzzyOperator extends Instruction {
 	public List<Parameter> parameters;
 	public Condition preCondition;
 	public Expression evaluate;
-	public FuzzyRange range;
 	public List<FuzzyPoint> polyline;
+
+	public boolean defaultPolyline;
 	
 
 	public FuzzyOperator (int seq, String fo)  {
@@ -33,8 +33,10 @@ public class FuzzyOperator extends Instruction {
 		parameters = new ArrayList<Parameter>();
 		preCondition = null;
 		evaluate = null;
-		range = null;
 		polyline = new ArrayList<FuzzyPoint>();
+		polyline.add(new FuzzyPoint ("0", "0"));
+		polyline.add(new FuzzyPoint ("1", "1"));
+		defaultPolyline = true;
 	}
 
 	
@@ -49,6 +51,17 @@ public class FuzzyOperator extends Instruction {
 	}
 	
 
+	public void resetPolyline() {
+		defaultPolyline = false;
+		polyline = new ArrayList<FuzzyPoint>();
+	}
+	
+
+	public boolean hasDefaultPolyline() {
+		return defaultPolyline;
+	}
+	
+
 	public String toString () {
 		String str = instructionName.toUpperCase() + " ";
 		str += fuzzyOperator + " ";
@@ -60,12 +73,14 @@ public class FuzzyOperator extends Instruction {
 		if (hasPrecondition())
 			str +="PRECONDITION " + preCondition.toString() + " ";
 		str +="EVALUATE " + evaluate.toString() + " ";
-		str +="POLYLINE ";
-		// by construction polyline contains at least one element
-		str +="[ " + polyline.get(0).toString();				
-		for (int i=1; i<polyline.size();i++)
-			str += ", " + polyline.get(i).toString();
-		str += " ]";
+		if (!defaultPolyline) {
+			str +="POLYLINE ";
+			// by construction polyline contains at least one element
+			str +="[ " + polyline.get(0).toString();				
+			for (int i=1; i<polyline.size();i++)
+				str += ", " + polyline.get(i).toString();
+			str += " ]";
+		}
 		
 		return cleanString(str).trim() + ";";
 	}
@@ -81,12 +96,14 @@ public class FuzzyOperator extends Instruction {
 		if (hasPrecondition())
 			str +="\tPRECONDITION " + preCondition.toString() + "\n";
 		str +="\tEVALUATE " + evaluate.toString() + "\n";
-		str +="\tPOLYLINE\n";
-		// by construction polyline contains at least one element
-		str +="\t\t[\t" + polyline.get(0).toString();				
-		for (int i=1; i<polyline.size();i++)
-			str += ",\n\t\t\t" + polyline.get(i).toString();
-		str += "\t]";
+		if (!defaultPolyline) {
+			str +="\tPOLYLINE\n";
+			// by construction polyline contains at least one element
+			str +="\t\t[\t" + polyline.get(0).toString();				
+			for (int i=1; i<polyline.size();i++)
+				str += ",\n\t\t\t" + polyline.get(i).toString();
+			str += "\t]";
+		}
 		str = cleanString(str);
 		
 		return str.trim() + ";\n";

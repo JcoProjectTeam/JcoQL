@@ -18,6 +18,7 @@ public class ExpressionFactor {
 	public static final int FIELDNAME 				= 5;
 	public static final int FUNCTION 				= 6;
 	public static final int SPECIAL_FUNCTION 		= 7;
+	public static final int ARRAY_REF				= 8; //Fuzzy aggregation
 
 	public int type;
 	public String idName;
@@ -25,6 +26,7 @@ public class ExpressionFactor {
 	public Expression subExpression;
 	public Field field;
 	public Value value;
+	public ArrayReference reference; //new
 
 	
 	public ExpressionFactor () {
@@ -34,6 +36,7 @@ public class ExpressionFactor {
 		subExpression = null;
 		field = null;
 		value = null;
+		reference = null; // new
 	}
 
 	public ExpressionFactor (Condition p) {
@@ -66,7 +69,12 @@ public class ExpressionFactor {
 		type = ID;
 		idName = name;
 	}
-
+	
+	public ExpressionFactor (ArrayReference ref) {
+		this ();
+		type = ARRAY_REF;
+		reference = ref;
+	}
 	
 	public int getType () {
 		return type;
@@ -91,6 +99,9 @@ public class ExpressionFactor {
 		
 		if (type == ID)
 			return idName;
+		
+		if (type == ARRAY_REF)
+			return reference.toString();
 
 		return "XXXXXX";
 	}

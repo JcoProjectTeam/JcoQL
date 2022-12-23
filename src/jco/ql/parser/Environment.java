@@ -14,20 +14,22 @@ import jco.ql.parser.model.condition.ConditionNot;
 import jco.ql.parser.model.condition.ConditionOr;
 import jco.ql.parser.model.fuzzy.AlphaCut;
 import jco.ql.parser.model.fuzzy.FuzzyPoint;
-import jco.ql.parser.model.fuzzy.FuzzyRange;
 import jco.ql.parser.model.fuzzy.FuzzySetDefinition;
 import jco.ql.parser.model.fuzzy.SetFuzzySets;
 import jco.ql.parser.model.predicate.Expression;
 import jco.ql.parser.model.predicate.ExpressionFactor;
+import jco.ql.parser.model.predicate.ExpressionTerm;
 import jco.ql.parser.model.predicate.FunctionFactor;
 import jco.ql.parser.model.predicate.IfErrorFunction;
 import jco.ql.parser.model.predicate.InRangePredicate;
 import jco.ql.parser.model.predicate.MembershipOfFunction;
 import jco.ql.parser.model.predicate.ArrayFunctionFactor;
+import jco.ql.parser.model.predicate.ArrayReference;
 import jco.ql.parser.model.predicate.EOrientation;
 import jco.ql.parser.model.predicate.NullPredicate;
 import jco.ql.parser.model.predicate.Predicate;
 import jco.ql.parser.model.predicate.TranslateFunction;
+import jco.ql.parser.model.predicate.UsingAggregatorPredicate;
 import jco.ql.parser.model.predicate.WUKPredicate;
 import jco.ql.parser.model.predicate.WithPredicate;
 import jco.ql.parser.model.util.*;
@@ -58,6 +60,7 @@ public class Environment {
 	public static final int ERR_ON_MISSING_FUZZYOPERATOR = 20;
 	public static final int ERR_ON_MISSING_JSF = 21;
 	public static final int ERR_ON_MISSING_PARAMETER = 22;
+	public static final int ERR_ON_MISSING_FUZZYAGGREGATOR = 23;
 	public static final int ERR_ON_JS_BEGIN = 40;
 	public static final int ERR_ON_JS_PAR = 41;
 	public static final int ERR_ON_JS_NO_END = 42;
@@ -91,10 +94,19 @@ public class Environment {
 	public static final int ERR_ON_POLYLINE_ORDER = 134;
 	public static final int ERR_ON_ALPHACUT_VALUE = 140;
 	public static final int ERR_ON_FUZZY_SET_NAME = 150;
+	public static final int ERR_ON_GENERATE_COMPLEXITY = 160;
 	public static final int ERR_ON_PARAMETER_REFERENCE = 170;
 	public static final int ERR_ON_PARAMETER_DECLARATION = 171;
 	public static final int ERR_NULL_FUNCTION_NAME = 172;
-	public static final int ERR_WRONG_PARAMETERS_NUMBER = 173;
+	public static final int ERR_WRONG_PARAMETERS_NUMBER = 173;	
+	
+	public static final int ERR_ON_VERSUS_IN_FUZZY_AGGREGATOR = 180; 
+	public static final int ERR_ON_ALIAS_REFERENCE_IN_EVALUATE = 181;
+	public static final int ERR_ON_ALIAS_DEFINITION = 182;
+	public static final int ERR_ON_ARRAY_REF_IN_EXPRESSION = 183;
+	public static final int ERR_ON_ID_NOT_DECLARED = 184;
+	public static final int ERR_ON_ARRAY_REFERENCE_NOT_DECLARED = 185;
+	
 	
 	private String version;
 	private String release;
@@ -114,7 +126,7 @@ public class Environment {
 		instructionList = new ArrayList<Instruction> ();		
 		nInstruction = 0;
 		this.version = version;
-		this.release = release + "a";
+		this.release = release + "b";
 		this.input = input;
 		this.checkScannerError = true;
 	}
@@ -165,7 +177,7 @@ public class Environment {
 		errorList.add(msg); 		
 	}
 
-	// h contiene le coordinate, m il messaggio d'errore standard
+	// h holds coordinates, m it's a standard messagge error
 	void handleError(String[] tokenNames,
       RecognitionException e, String h, String m) {
 		
@@ -189,7 +201,7 @@ public class Environment {
 	void disableScannerError () {
 		checkScannerError = false;
 	}
-	// solo per errori lessicali
+	// lexical errors only
 	void myScannerErrorHandler(int line, int col, String token) {
 		if (checkScannerError) {
 			String st = "Lexical Error " + TOKEN_ERROR +
@@ -267,6 +279,8 @@ public class Environment {
 			st += "Wrong number format";		
 		else if (code == ERR_ON_MISSING_FUZZYOPERATOR)
 			st += "Missing Fuzzy Operator name";
+		else if (code == ERR_ON_MISSING_FUZZYAGGREGATOR)
+			st += "Missing Fuzzy Aggregator name";
 		else if (code == ERR_ON_MISSING_JSF)
 			st += "Missing Javascript Function name";
 		else if (code == ERR_ON_MISSING_PARAMETER)
@@ -311,6 +325,8 @@ public class Environment {
 			st += "Array search type selector can be only 'DOCUMENTS' or nothing";
 		else if (code == ERR_ON_FUZZY_SET_NAME)
 			st += "FuzzySetName should be in the form ID or ID.ID";
+		else if (code == ERR_ON_GENERATE_COMPLEXITY)
+			st += "The following less complex field spec must placed before";
 		else if (code == ERR_ON_PARAMETER_REFERENCE)
 			st += "\"" + tk.getText() + "\" must be declared before in PARAMETERS";
 		else if (code == ERR_ON_PARAMETER_DECLARATION)
@@ -319,7 +335,18 @@ public class Environment {
 			st += "Missing function name";
 		else if (code == ERR_WRONG_PARAMETERS_NUMBER)
 			st += "Wrong number of parameters for predefined function " + tk.getText();
-		
+		else if (code == ERR_ON_VERSUS_IN_FUZZY_AGGREGATOR)
+			st += "Non acceptable type of versus selection " + tk.getText();
+		else if (code == ERR_ON_ALIAS_REFERENCE_IN_EVALUATE)
+			st += "All IDs in EVALUATE must be declared before in PARAMETERS or AGGRAGATE";
+		else if (code == ERR_ON_ALIAS_DEFINITION)
+			st += "\"" + tk.getText() + "\" has been already declared before";
+		else if (code == ERR_ON_ARRAY_REF_IN_EXPRESSION)
+			st += "Error in expression: there can't be any array references outside FOR ALL clause";
+		else if (code == ERR_ON_ID_NOT_DECLARED)
+			st += "Error in expression: id \"" + tk.getText() + "\" has never been defined";
+		else if (code == ERR_ON_ARRAY_REFERENCE_NOT_DECLARED)
+			st += "Error in expression: array \"" + tk.getText() + "\" has never been defined";
 		else
 			st += "*";
 							
@@ -446,7 +473,7 @@ public class Environment {
 		instructionList.add(fo);
 		return fo;
 	}
-
+	
 	JavascriptFunction addJavascriptFunction (Token id) {
 		String jsfName = "null";
 		if (id == null) 
@@ -598,16 +625,35 @@ public class Environment {
 		if (x != null && y != null) {
 			double xValue = Double.parseDouble(x) ;
 			double yValue = Double.parseDouble(y) ;
-					
+			
 			if (yValue < 0 || yValue > 1)
 				myErrorHandler(ERR_ON_POLYLINE_Y_VALUE);
+			if (fo.hasDefaultPolyline()) 
+				fo.resetPolyline();
 			if (fo.polyline.size() > 0) {
 				double x0Value = Double.parseDouble(fo.polyline.get(fo.polyline.size()-1).x);
 				if (xValue <= x0Value)
 					myErrorHandler(ERR_ON_POLYLINE_ORDER);
 			}
 			fo.polyline.add(new FuzzyPoint (x, y));
-			fo.range = new FuzzyRange (fo.polyline.get(0).x, x);
+		}
+	}
+	
+	void addFuzzyAggregatorPolylinePoint (FuzzyAggregator fa, String x, String y) {
+		if (x != null && y != null) {
+			double xValue = Double.parseDouble(x) ;
+			double yValue = Double.parseDouble(y) ;
+					
+			if (yValue < 0 || yValue > 1)
+				myErrorHandler(ERR_ON_POLYLINE_Y_VALUE);
+			if (fa.hasDefaultPolyline()) 
+				fa.resetPolyline();
+			if (fa.polyline.size() > 0) {
+				double x0Value = Double.parseDouble(fa.polyline.get(fa.polyline.size()-1).x);
+				if (xValue <= x0Value)
+					myErrorHandler(ERR_ON_POLYLINE_ORDER);
+			}
+			fa.polyline.add(new FuzzyPoint (x, y));
 		}
 	} 
 	
@@ -632,6 +678,13 @@ public class Environment {
 	}
 
 
+	// serve a  controllare che gli OutputFieldSpec inseriti abbiano complessità crescente all'interno di una GenerateAction
+	public void addOutputFieldSpec(ObjectStructure obj, OutputFieldSpec ofs, boolean generateActionCaller, Token t) {
+		if (!obj.addOutputFieldSpec(ofs) && generateActionCaller)
+			myErrorHandler(ERR_ON_GENERATE_COMPLEXITY, t);
+	}
+
+	
 	public void checkParameterDeclaration(Token x, ParamList pl) {
 		if (x == null || pl.contains(x.getText()))
 			myErrorHandler(ERR_ON_PARAMETER_DECLARATION, x);						
@@ -811,7 +864,7 @@ public class Environment {
 			myErrorHandler(ERR_ON_MISSING_PARAMETER);
 		else
 			p = new Parameter (v.getText(), t.getText());
-		
+
 		return p;
 	}
 
@@ -885,6 +938,183 @@ public class Environment {
 	}
 	
 	
+	/* Aggiunte Invernici*/
+	
+	FuzzyAggregator addFuzzyAggregator (Token id) {
+		String foName = "null";
+		if (id == null) 
+			myErrorHandler(ERR_ON_MISSING_FUZZYAGGREGATOR);
+		else
+			foName = id.getText();
+		FuzzyAggregator fa = new FuzzyAggregator (nInstruction, foName);
+		nInstruction++;
+		instructionList.add(fa);
+		return fa;
+	}
+
+	
+	public void setVersusFuzzyAggregator(FuzzyAggregator fa, String versus) {
+		if (versus == null)
+			myErrorHandler(ERR_ON_VERSUS_IN_FUZZY_AGGREGATOR);
+		else {
+			if(versus.equals("ASC"))
+				fa.versus = FuzzyAggregator.ASCENDING;
+			else
+				fa.versus = FuzzyAggregator.DESCENDING;
+		}		
+	}
+	
+	public ArrayReference setArrayRef(Token id_array, Expression e, Field field) {
+		
+		if(id_array == null)
+			myErrorHandler(ERR_ON_SYNTAX);
+		ArrayReference ref = new ArrayReference(id_array.getText());
+		if(field == null)
+			ref.type = ArrayReference.ARRAY;
+		else {
+			ref.type = ArrayReference.ARRAY_FIELD;
+			ref.array_field = field;
+		}
+		
+		if(e == null)
+			myErrorHandler(ERR_ON_SYNTAX);
+		else 
+			ref.index = e;
+		
+		return ref;
+	}
+	
+	public ExpressionFactor setExprFromArrayRef(Token id, ArrayReference ref, FuzzyAggregator fa, ForAllClause fac) {
+		ExpressionFactor e = null;
+		if(id == null) {
+			myErrorHandler(ERR_ON_SYNTAX);
+			e = new ExpressionFactor();
+		}
+		//If I'm not in the FOR ALL clause and I have an array ref, thers's an error
+		else if(fac == null && fa!= null && fa.hasArrayReferenceDefined(id.getText())) 
+				myErrorHandler(ERR_ON_ARRAY_REF_IN_EXPRESSION, id);
+		else if(ref == null) {			
+			if(fac!= null && fac.hasArrayReferenceDefinedInForAll(id.getText())) {		
+				ArrayReference newRef = new ArrayReference(id.getText());
+				newRef.type = ArrayReference.ARRAY;
+				ExpressionFactor exprF = new ExpressionFactor (new Value(Value.POS, "POS"));
+				ExpressionTerm exprT = new ExpressionTerm();
+				exprT.addFactor(exprF);
+				Expression pos = new Expression();
+				pos.addTerm(exprT);
+				newRef.index = pos;
+				e= new ExpressionFactor(newRef);
+			}
+			else {
+				if((fa != null && !fa.hasParameterDefined(id.getText())) && (fac != null && !fac.hasParameterDefinedInForAll(id.getText()))) {
+					myErrorHandler(ERR_ON_ID_NOT_DECLARED, id);
+				}
+				else
+					e = new ExpressionFactor(id.getText());
+			}
+		}
+		else {
+			if(fac!= null && !fac.hasArrayReferenceDefinedInForAll(id.getText()))
+				myErrorHandler(ERR_ON_ARRAY_REFERENCE_NOT_DECLARED, id);
+			e = new ExpressionFactor(ref);
+		}
+		
+		return e;
+	}
+	
+	public AggregateClause createAggregateClause(String withType, Expression e, Token alias, FuzzyAggregator fa, ForAllClause fac){
+		AggregateClause ac = null;
+		if(alias == null || e == null)
+			myErrorHandler(ERR_ON_SYNTAX, alias);
+		
+		String n = alias.getText();
+		
+		//Verifico l'alias non sia già stato usato. Verifico nei parametri, nelle altre AGGREGATE e nelle LOCALLY dell'attuale FOR ALL
+		if(fa.hasParameterDefined(n) || fa.hasParameterDefinedInCurrentForAll(n, fac)) {
+			myErrorHandler(ERR_ON_ALIAS_DEFINITION, alias);
+		}
+		
+		
+		if(withType!=null)
+			ac = new AggregateClause(n, withType);			
+		else
+			ac = new AggregateClause(n);
+		ac.exp = e;		
+		return ac;
+	}
+	
+	public void setUsingAggregateFromArray(UsingAggregatorPredicate p, Token fuzzySet, Token array) {
+		p.aggregatorType = UsingAggregatorPredicate.SELECTED_FUZZY_SET_FROM_ARRAY;
+		
+		if(array == null)
+			myErrorHandler(ERR_ON_SYNTAX, array);
+		
+		if(fuzzySet == null)
+			myErrorHandler(ERR_ON_SYNTAX, fuzzySet);
+		
+		p.arrayName = array.getText();
+		p.fuzzySetsSelected.add(fuzzySet.getText());
+	}
+	
+	public void setUsingAggregateInDocument(UsingAggregatorPredicate p, Token fuzzySet) {
+		if (fuzzySet == null) {
+			myErrorHandler(ERR_ON_SYNTAX, fuzzySet);
+		}
+		
+		p.fuzzySetsSelected.add(fuzzySet.getText());		
+	}
+	
+	
+	public ForAllClause createForAllClause(Token id, FuzzyAggregator fa) {
+		if (id == null) {
+			myErrorHandler(ERR_ON_SYNTAX, id);
+			return new ForAllClause("");
+		}
+		
+		if (!fa.hasArrayReferenceDefined(id.getText())) //Verifico che il parametro della FOR ALL sia stato dichiarato e sia un ARRAY
+			myErrorHandler(ERR_ON_PARAMETER_REFERENCE, id);
+		
+		ForAllClause clause = new ForAllClause(id.getText());
+		return clause;		
+	}
+	
+	public void createLocallyClause(ForAllClause fac, Token id, Expression e, FuzzyAggregator fa) {
+		if (id == null || e == null) {
+			myErrorHandler(ERR_ON_SYNTAX, id);
+		}
+		else {
+			if(fa.hasParameterDefinedInCurrentForAll(id.getText(), fac))
+				myErrorHandler(ERR_ON_ALIAS_DEFINITION, id);
+			
+			fac.locally.add(new LocallyClause(e, id.getText())); 
+		}
+	}
+	//TODO check here
+	public void setEvaluateClause(FuzzyAggregator fa, Expression e) {
+		/*for(ExpressionTerm et: e.terms) {
+			for(ExpressionFactor ef: et.factors){
+				if(ef.getType() == ExpressionFactor.ARRAY_REF)
+					myErrorHandler(ERR_ON_EVALUATE_ARRAY_REF_IN_EXPRESSION);
+				if(ef.getType() == ExpressionFactor.ID && !fa.hasParameterDefined(ef.idName))
+					myErrorHandler(ERR_ON_ALIAS_REFERENCE_IN_EVALUATE);
+			}
+		}*/
+		if(e != null)
+			fa.evaluate = e;
+		else
+			myErrorHandler(ERR_ON_SYNTAX);
+	}
+	
+	public UsingAggregatorPredicate createUsingAggregatorPredicate(Token id) {
+		UsingAggregatorPredicate predicate = new UsingAggregatorPredicate("");
+		if (id == null) {
+			myErrorHandler(ERR_ON_SYNTAX, id);
+		}
+		else {
+			predicate.fuzzyAggregatorName = id.getText();
+		}
+		return predicate;
+	}
 
 }
 

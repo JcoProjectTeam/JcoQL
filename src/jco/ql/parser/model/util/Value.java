@@ -14,9 +14,11 @@ public class Value {
 	public static final int APEX 	= 3;
 	public static final int QUOTED	= 4;
 	public static final int BOOLEAN	= 5;
+	/*Modifiche*/
+	public static final int POS	= 6;
 			
 	public String value;
-	public int type;   						// INT, FLOAT, APEX, QUOTED, BOOLEAN
+	public int type;   						// INT, FLOAT, APEX, QUOTED, BOOLEAN, POS
 	
 /**
  * 	
@@ -54,6 +56,10 @@ public class Value {
 
 	public boolean isBoolean () {
 		return (type == BOOLEAN);
+	}
+	
+	public boolean isPos () {
+		return (type == POS);
 	}
 	
 	public String toString () {

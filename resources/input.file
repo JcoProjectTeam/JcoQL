@@ -1,4 +1,5 @@
-FILTER 
-	CASE 
-		WHERE ciccioXXXXX.t.province = "MILANO" 
-		AND .h.highwayTotalLength > 3000;
+CREATE FUZZY OPERATOR xxx
+	PARAMETERS x  TYPE float
+	PRECONDITION x>1
+	EVALUATE x+1
+	;

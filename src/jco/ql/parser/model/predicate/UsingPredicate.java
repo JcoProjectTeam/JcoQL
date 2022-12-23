@@ -14,6 +14,7 @@ public class UsingPredicate extends Predicate {
 	public static final int USING_FUZZY_SET 		= 2;
 	public static final int USING_FUZZY_OPERATOR	= 3;
 	public static final int USING_IF_FAILS			= 4;
+	public static final int USING_FUZZY_AGGREGATOR	= 5; // FI added
 
 	public int usingType;
 	public Condition subUsingCondition;

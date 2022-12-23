@@ -7,7 +7,7 @@ package jco.ql.parser.model.fuzzy;
  *
  */
 public class FuzzyRange {
-	public String x1;
+/*	public String x1;
 	public String x2;
 
 	public FuzzyRange (String xt1, String xt2) {
@@ -30,5 +30,5 @@ public class FuzzyRange {
 	public String toString () {
 		return "(" + x1 +", " + x2 + ")";
 	}
-
+*/
 }

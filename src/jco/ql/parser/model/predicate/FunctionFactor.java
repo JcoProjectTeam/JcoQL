@@ -86,7 +86,7 @@ public class FunctionFactor extends ExpressionFactor {
 		functionMap.put(GEOMETRY_FIELD_STRING, GEOMETRY_FIELD_FUNCTION);		
 		functionMap.put(GEOMETRY_LENGTH_STRING, GEOMETRY_LENGTH_FUNCTION);		
 		functionMap.put(GEOMETRY_AREA_STRING, GEOMETRY_AREA_FUNCTION);		
-		}
+	}
 	
 	
 	public boolean isPredefinedFunction () {

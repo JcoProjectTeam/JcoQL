@@ -8,11 +8,14 @@ import java.util.List;
  * @author Zunstraal
  *
  */
+//outputFieldSpec ( COMMA ofs=outputFieldSpec )*
 public class ObjectStructure {
 	public List<OutputFieldSpec> outputList;
+	private int maxDepth;
 	
 	public ObjectStructure () {
 		outputList = new ArrayList<OutputFieldSpec>();
+		maxDepth = 0;
 	}
 
 	
@@ -22,9 +25,14 @@ public class ObjectStructure {
 	}
 
 	
+	// return FALSE se l'oggetto ha complessità inferiore a quelli precedenti
 	public boolean addOutputFieldSpec (OutputFieldSpec ofs) {
 		outputList.add (ofs);
 		
+		// controllo che di inserire oggetti a complessità maggiore
+		if (ofs.fieldRefSize() < maxDepth)
+			return false;
+		maxDepth = ofs.fieldRefSize();
 		return true;
 	}
 
