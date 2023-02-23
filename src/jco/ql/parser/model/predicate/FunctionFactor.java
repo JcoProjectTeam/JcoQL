@@ -19,11 +19,13 @@ public class FunctionFactor extends ExpressionFactor {
 	public static final int MAX_FUNCTION				= 17;
 	public static final int MIN_FUNCTION				= 18;
 	public static final int ABS_FUNCTION				= 19;
+	public static final int SQRT_FUNCTION				= 20;
 	public static final int GEO_DISTANCE_FUNCTION		= 21;
 	public static final int JARO_WINKLER_FUNCTION		= 22;
 	public static final int GEOMETRY_FIELD_FUNCTION		= 31;
 	public static final int GEOMETRY_LENGTH_FUNCTION	= 32;
 	public static final int GEOMETRY_AREA_FUNCTION		= 33;
+	
 
 	public static final String COUNT_STRING 			= "COUNT";
 	public static final String TO_STRING_STRING 		= "TO_STRING";
@@ -34,6 +36,7 @@ public class FunctionFactor extends ExpressionFactor {
 	public static final String MAX_STRING				= "MAX";
 	public static final String MIN_STRING				= "MIN";
 	public static final String ABS_STRING				= "ABS";
+	public static final String SQRT_STRING				= "SQRT";
 	public static final String GEO_DISTANCE_STRING		= "GEODESIC_DISTANCE";
 	public static final String JARO_WINKLER_STRING		= "JARO_WINKLER_SIMILARITY";
 	public static final String GEOMETRY_FIELD_STRING	= "GEOMETRY_FIELD";
@@ -79,6 +82,7 @@ public class FunctionFactor extends ExpressionFactor {
 		functionMap.put(MAX_STRING, MAX_FUNCTION);
 		functionMap.put(MIN_STRING, MIN_FUNCTION);
 		functionMap.put(ABS_STRING, ABS_FUNCTION);
+		functionMap.put(SQRT_STRING, SQRT_FUNCTION);
 		functionMap.put(GEO_DISTANCE_STRING, GEO_DISTANCE_FUNCTION);		
 		functionMap.put(JARO_WINKLER_STRING, JARO_WINKLER_FUNCTION);		
 		functionMap.put(JARO_WINKLER_STRING, JARO_WINKLER_FUNCTION);		

@@ -61,11 +61,16 @@ public class Environment {
 	public static final int ERR_ON_MISSING_JSF = 21;
 	public static final int ERR_ON_MISSING_PARAMETER = 22;
 	public static final int ERR_ON_MISSING_FUZZYAGGREGATOR = 23;
+	public static final int ERR_ON_MISSING_JFNAME = 24;
 	public static final int ERR_ON_JS_BEGIN = 40;
 	public static final int ERR_ON_JS_PAR = 41;
 	public static final int ERR_ON_JS_NO_END = 42;
 	public static final int ERR_ON_JS_BAD_END = 43;
-	public static final int ERR_NULL_PREDICATE = 44;
+	public static final int ERR_ON_JAVA_BEGIN = 44;
+	public static final int ERR_ON_JAVA_PAR = 45;
+	public static final int ERR_ON_JAVA_NO_END = 46;
+	public static final int ERR_ON_JAVA_BAD_END = 47;
+	public static final int ERR_NULL_PREDICATE = 49;
 	public static final int ERR_ON_WRONG_FIELD_TYPE = 50;
 	public static final int ERR_ON_FIELD_TYPE_UNAPPLICABLE = 51;
 	public static final int ERR_ON_MISSING_DOC_SELECTOR = 52;
@@ -283,6 +288,8 @@ public class Environment {
 			st += "Missing Fuzzy Aggregator name";
 		else if (code == ERR_ON_MISSING_JSF)
 			st += "Missing Javascript Function name";
+		else if (code == ERR_ON_MISSING_JFNAME)
+			st += "Missing Java Function name";
 		else if (code == ERR_ON_MISSING_PARAMETER)
 			st += "Missing parameter";
 		else if (code == WRONG_UNIT)
@@ -306,13 +313,21 @@ public class Environment {
 		else if (code == ERR_ON_ALPHACUT_VALUE)
 			st += "ALPHA-CUT values must must be within [0, 1]";
 		else if (code == ERR_ON_JS_BEGIN)
-			st += "Missing '{' to open Javascript body";
+			st += "Missing '{' to open Javascript code";
 		else if (code == ERR_ON_JS_PAR)
-			st += "No '{' to match with this '}'";
+			st += "No '{' to match with this '}' in Javascript code";
 		else if (code == ERR_ON_JS_NO_END)
-			st += "Missing '}' to close Javascript body";
+			st += "Missing '}' to close Javascript code";
 		else if (code == ERR_ON_JS_BAD_END)
-			st += "Missing '}' to close Javascript body";
+			st += "Missing '}' to close Javascript code";
+		else if (code == ERR_ON_JAVA_BEGIN)
+			st += "Missing '{' to open Java code";
+		else if (code == ERR_ON_JAVA_PAR)
+			st += "No '{' to match with this '}' in Java code";
+		else if (code == ERR_ON_JAVA_NO_END)
+			st += "Missing '}' to close Java code";
+		else if (code == ERR_ON_JAVA_BAD_END)
+			st += "Missing '}' to close Java code";
 		else if (code == ERR_NULL_PREDICATE)
 			st += "Missing 'IS NULL' or 'IS NOT NULL' predicate";
 		else if (code == ERR_ON_WRONG_FIELD_TYPE)
@@ -502,6 +517,19 @@ public class Environment {
 		return lookupFromWeb;
 	}
 
+
+	public JavaFunction addJavaFunction(Token id) {
+		String jfName = "null";
+		if (id == null) 
+			myErrorHandler(ERR_ON_MISSING_JFNAME);
+		else
+			jfName = id.getText();
+		JavaFunction jf = new JavaFunction (nInstruction, jfName);
+		nInstruction++;
+		instructionList.add(jf);
+		return jf;
+	}
+
 	// ---------------------------	
 	
 	void setDistance(SpatialFunction sf, Token u, Token cp, String n, boolean joinCaller) {  
@@ -675,6 +703,26 @@ public class Environment {
 			myErrorHandler(ERR_ON_JS_NO_END, t);
 		if (response == JavascriptFunction.BAD_END)
 			myErrorHandler(ERR_ON_JS_BAD_END, t);
+	}
+
+
+	int addJavaBody (JavaFunction jsf, Token t) {
+		int response = jsf.addJavaChunck(t.getText());
+		if (response == JavascriptFunction.NO_BEGIN)
+			myErrorHandler(ERR_ON_JAVA_BEGIN, t);
+		if (response == JavaFunction.WRONG_PAR)
+			myErrorHandler(ERR_ON_JAVA_PAR, t);
+		return response;
+	}
+	
+
+	void checkJavaBody (int response, Token t) {
+		if (response == JavaFunction.NO_BEGIN)
+			myErrorHandler(ERR_ON_JAVA_BEGIN, t);
+		if (response == JavaFunction.NO_END)
+			myErrorHandler(ERR_ON_JAVA_NO_END, t);
+		if (response == JavaFunction.BAD_END)
+			myErrorHandler(ERR_ON_JAVA_BAD_END, t);
 	}
 
 
@@ -1115,6 +1163,7 @@ public class Environment {
 		}
 		return predicate;
 	}
+
 
 }
 

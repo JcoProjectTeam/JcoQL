@@ -24,7 +24,8 @@ public abstract class Instruction {
 	public static final int JAVASCRIPT_FUNCTION_INSTRUCTION = 15;
 	public static final int GET_DICTIONARY = 16;
 	public static final int LOOKUP_FROM_WEB = 17;
-	public static final int FUZZY_AGGREGATOR_INSTRUCTION = 18; //!! Aggiunta Invernici
+	public static final int FUZZY_AGGREGATOR_INSTRUCTION = 18; 		//!! Aggiunta Invernici
+	public static final int JAVA_FUNCTION_INSTRUCTION = 19;			// PF 20.01.2023
 	
 	int id;
 	int sequence;

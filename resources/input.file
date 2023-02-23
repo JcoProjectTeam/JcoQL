@@ -1,5 +1,40 @@
-CREATE FUZZY OPERATOR xxx
-	PARAMETERS x  TYPE float
-	PRECONDITION x>1
-	EVALUATE x+1
-	;
+USE DB testDb
+	ON SERVER MongoDB 'http://127.0.0.1:27017';
+
+CREATE JAVASCRIPT FUNCTION doubler
+	PARAMETERS
+		n1 TYPE Float
+	BODY
+	{
+		return n1*2;
+	}
+	END BODY;
+
+CREATE JAVA FUNCTION tripler
+	PARAMETERS
+		n2 TYPE Float
+	PRECONDITION
+		n2 > 0
+	CLASS Tripler
+	CLASS BODY
+	{
+		static float tripler (float n2) {
+		 return n2*4;
+		}
+	}
+	END BODY;
+
+GET COLLECTION B01@testDb;
+
+FILTER 
+	CASE
+		WHERE	
+				1 = 1 
+			GENERATE	
+				BUILD	{
+//					.js: doubler(.c), 
+//					.java: tripler(.c),
+					.c : .c
+					};
+
+SAVE AS javaTest@testDb;

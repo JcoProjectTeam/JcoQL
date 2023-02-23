@@ -7,6 +7,7 @@ grammar JCoQL;
 
 options {
   language = Java;
+  k=3;
 }
 
 @header{
@@ -97,7 +98,8 @@ start
     | createJavaScriptFunctionRule	// 15
     | getDictionaryRule							// 16
     | lookupFromWebRule							// 17
-    | createFuzzyAggregatorRule     //18
+    | createFuzzyAggregatorRule     // 18
+    | createJavaFunctionRule				// 19 PF news
     | test                      // istruzione di test...
     )* EOF
   ;
@@ -203,6 +205,7 @@ generateSectionRule [boolean complete]	returns [GenerateSection gs]
 		g=GENERATE 			{	gs = new GenerateSection (complete);	}
      	( go=geometricOptionRule				{	gs.addGeometricOption (go); 	} )?
 			( cf=checkForFuzzySetRule [gs]																		)?
+			( cf=checkForExtendedFuzzySetRule [gs]																		)?
 			(	ac=alphaCutRule [gs]																						)?
    	 	( ga=buildActionRule 						{ gs.addBuildAction (ga); 			}	)?
 			( df=keepDropFuzzySetsRule	 		{ gs.addKeepDropFuzzySets (df); } )?
@@ -438,6 +441,12 @@ numericRule returns [String num]
 
 //--- CHECK FOR FUZZY SET MODEL
 /* Modifica Invernici*/
+checkForExtendedFuzzySetRule [GenerateSection gs]
+	:	
+		CHECK_FOR_E FUZZY SET fs=ID USING( fe=usingOrConditionRule 	){ env.addCheckForFuzzySet (gs, fs, fe); } 
+		
+			( COMMA FUZZY SET fs=ID	USING fe=usingOrConditionRule 					{ env.addCheckForFuzzySet (gs, fs, fe); }		)*
+	;
 checkForFuzzySetRule [GenerateSection gs]
 	:	
 		CHECK_FOR FUZZY SET fs=ID USING( fe=usingOrConditionRule 	){ env.addCheckForFuzzySet (gs, fs, fe); } 
@@ -790,11 +799,11 @@ parameterRule [ParamList pl] returns [Parameter p]
 		TYPE t=ID								{	p = env.createParameter ($v, $t); }
 	;
 
-  
+
 createJavaScriptFunctionRule
 	:
-		CREATE_JF 
-			jsfn=ID 																										{ JavascriptFunction jsf = env.addJavascriptFunction ($jsfn); }
+			CREATE JAVASCRIPT FUNCTION
+				jsfn=ID 																									{ JavascriptFunction jsf = env.addJavascriptFunction ($jsfn); }
 			PARAMETERS 	
 				p=parameterRule [jsf.getParamList()] 													{ jsf.parameters.add (p); }
 				( COMMA p=parameterRule [jsf.getParamList()]										{ jsf.parameters.add (p);}   )*
@@ -823,7 +832,7 @@ createJavaScriptFunctionRule
 	
 createFuzzyOperatorRule 
 		:		
-			CREATE_FO f=ID																							{ FuzzyOperator fo = env.addFuzzyOperator ($f); }
+			CREATE FUZZY OPERATOR f=ID																			{ FuzzyOperator fo = env.addFuzzyOperator ($f); }
 			PARAMETERS 	
 				p=parameterRule [fo.getParamList()] 													{ fo.parameters.add (p); }
 				( COMMA p=parameterRule [fo.getParamList()]												{ fo.parameters.add (p);}   )*
@@ -843,7 +852,7 @@ aggSpecRule [FuzzyAggregator fa, ForAllClause fac] returns [AggregateClause ac]:
 	;
 createFuzzyAggregatorRule
 	:	
-	CREATE_FA f=ID  								{ FuzzyAggregator fa = env.addFuzzyAggregator ($f); }
+	CREATE FUZZY AGGREGATOR f=ID  								{ FuzzyAggregator fa = env.addFuzzyAggregator ($f); }
 	PARAMETERS 
 		p=faParameterRule [fa.getParamList()]					{ fa.parameters.add (p); }
 		( COMMA p=faParameterRule [fa.getParamList()]				{ fa.parameters.add (p);}   )* 	
@@ -993,6 +1002,39 @@ faArrayRefRule [Token id, FuzzyAggregator fa] returns [ArrayReference ref]:
 	;
   
 
+/*PF news JAVA */
+createJavaFunctionRule
+	:
+			CREATE JAVA FUNCTION
+				jfn=ID 																									{ JavaFunction jf = env.addJavaFunction ($jfn); }
+			PARAMETERS 	
+				p=parameterRule [jf.getParamList()] 												{ jf.parameters.add (p); 					}
+				( COMMA p=parameterRule [jf.getParamList()]									{ jf.parameters.add (p);					} 	)*
+			(	PRECONDITION pc=jfOrConditionRule [jf.getParamList(), true]	{	jf.preCondition = pc; 					}		)?
+			CLASS cl=ID																										{	jf.setClass ($cl.getText());		}
+			( IMPORT imp=QUOTED_VALUE 																		{	jf.setImport ($imp.getText()); 	}		)?
+			CLASS BODY 
+					{ // ANTLR 3.4 apparently do not support multi context, so scanning must be performed this way
+						int res = JavaFunction.NO_BEGIN;
+						Token myToken = null;
+						Token wsToken = null;
+						boolean started = false;
+						while (input.LA(1)!= END_BODY) {						
+							myToken = input.LT(1);
+							wsToken = input.get(myToken.getTokenIndex()-1);
+							if (started && wsToken.getType() == WHITE_SPACES)
+								jf.addJavaWS(wsToken.getText());
+							res = env.addJavaBody(jf, myToken);
+							started = true;
+							input.consume();
+						}
+						env.checkJavaBody (res, myToken);		
+					}
+			END_BODY		
+		SC
+	; 
+
+
 // ************************************
 // ***
 // ***            SCANNER  
@@ -1021,6 +1063,7 @@ NOT : 'NOT';
 ADDING					: 'ADDING';
 ADD_ST  	 			: 'ADD';
 AGGREGATE 	    : 'AGGREGATE';
+AGGREGATOR			: 'AGGREGATOR';
 ALL         	  : 'ALL';
 ALPHACUT				:	'ALPHACUT';
 ARRAY   	      : 'ARRAY';
@@ -1034,18 +1077,18 @@ BY          	  : 'BY';
 CALL          	: 'CALL';
 CASE          	: 'CASE';
 CHECK_FOR				: 'CHECK' WS 'FOR';
+CHECK_FOR_E			: 'CECCK' WS 'FOR' WS 'EXTENDED';
+CLASS						: 'CLASS';
 COLLECTION  	  : 'COLLECTION';
 COLLECTIONS   	: 'COLLECTIONS';
-CREATE_FA				:	'CREATE' WS 'FUZZY' WS 'AGGREGATOR';
-CREATE_FO				:	'CREATE' WS 'FUZZY' WS 'OPERATOR';
-CREATE_JF				: 'CREATE' WS 'JAVASCRIPT' WS 'FUNCTION';
+CREATE					: 'CREATE';							
 DB      	      : 'DB';
 DEFAULT					: 'DEFAULT';
 DEFUZZIFY				:	'DEFUZZIFY';
 DICTIONARY			:	'DICTIONARY';
 DIRECTION				:	'DIRECTION';
 DISTANCE				:	'DISTANCE';
-DIVISION 	: 'DIVISION';
+DIVISION 				: 'DIVISION';
 DOCUMENTS				:	'DOCUMENTS';
 DROP  	        : 'DROP';
 DROPPING      	: 'DROPPING';
@@ -1059,8 +1102,9 @@ FILTER    	    : 'FILTER';
 FIRST	  	      : 'FIRST';
 FOR							: 'FOR';
 FROM						: 'FROM';
-FROM_WEB 		:	 'FROM WEB';
+FROM_WEB 				:	 'FROM WEB';
 FROM_ARRAY			: 'FROM ARRAY';
+FUNCTION				: 'FUNCTION';
 FUZZY						: 'FUZZY';
 GENERATE				:	'GENERATE';
 GEOMETRY  	    : 'GEOMETRY';
@@ -1072,32 +1116,36 @@ HOWINTERSECT		:	'HOW_INTERSECT';
 HOWMEET					:	'HOW_MEET';
 IF_ERROR				: 'IF_ERROR';
 IF_FAILS				: 'IF_FAILS';
+IMPORT					: 'IMPORT';
 INCLUDED    	  : 'INCLUDED';
 INPUT		      	: 'INPUT';
 INRANGE		      : 'IN_RANGE';
 INTERSECT				: 'INTERSECT';
 INTERSECTION	  : 'INTERSECTION';
-IN			: 'IN';
+IN							: 'IN';
 INTO	          : 'INTO';
 ISNULL					: 'IS' WS 'NULL';
 ISNOTNULL				: 'IS' WS 'NOT' WS 'NULL';
 JOIN      	    : 'JOIN';
+JAVA						: 'JAVA';
+JAVASCRIPT			: 'JAVASCRIPT';
 KEEP        	  : 'KEEP';
 KEEPING       	: 'KEEPING';
 KNOWN						:	'KNOWN';
 LAST  	        : 'LAST';
 LEFT    	      : 'LEFT';
-LOCALLY			: 'LOCALLY';
+LOCALLY					: 'LOCALLY';
 LOOKUP 					:	'LOOKUP';
 MATCHING  	    : 'MATCHING';
-MAXIMUM		: 'MAXIMUM';
+MAXIMUM					: 'MAXIMUM';
 MEET        	  : 'MEET';
 MEMBERSHIP_OF 	:	'MEMBERSHIP_OF';	
 MERGE         	: 'MERGE';
 MIN_SIMILARITY	:	'MIN' WS 'SIMILARITY';
-MINIMUM 	: 'MINIMUM';
+MINIMUM 				: 'MINIMUM';
 OF        	    : 'OF';
 ON       	  	  : 'ON';
+OPERATOR 				: 'OPERATOR';
 ORIENTATION  	  : 'ORIENTATION';
 OTHERS					: 'OTHERS';
 ORDER						: 'ORDER' | 'SORTED';
