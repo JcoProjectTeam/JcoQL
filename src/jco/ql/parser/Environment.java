@@ -13,7 +13,9 @@ import jco.ql.parser.model.condition.ConditionAnd;
 import jco.ql.parser.model.condition.ConditionNot;
 import jco.ql.parser.model.condition.ConditionOr;
 import jco.ql.parser.model.fuzzy.AlphaCut;
+import jco.ql.parser.model.fuzzy.FuzzyOperatorDefinition;
 import jco.ql.parser.model.fuzzy.FuzzyPoint;
+import jco.ql.parser.model.fuzzy.FuzzyPolyline;
 import jco.ql.parser.model.fuzzy.FuzzySetDefinition;
 import jco.ql.parser.model.fuzzy.SetFuzzySets;
 import jco.ql.parser.model.predicate.Expression;
@@ -22,9 +24,10 @@ import jco.ql.parser.model.predicate.ExpressionTerm;
 import jco.ql.parser.model.predicate.FunctionFactor;
 import jco.ql.parser.model.predicate.IfErrorFunction;
 import jco.ql.parser.model.predicate.InRangePredicate;
-import jco.ql.parser.model.predicate.MembershipOfFunction;
+import jco.ql.parser.model.predicate.MembershipToFunction;
 import jco.ql.parser.model.predicate.ArrayFunctionFactor;
 import jco.ql.parser.model.predicate.ArrayReference;
+import jco.ql.parser.model.predicate.DegreeFunction;
 import jco.ql.parser.model.predicate.EOrientation;
 import jco.ql.parser.model.predicate.NullPredicate;
 import jco.ql.parser.model.predicate.Predicate;
@@ -42,6 +45,8 @@ import jco.ql.parser.model.util.*;
 public class Environment {
 	public static final int UNDEFINED = -1;	
 	public static final int TOKEN_ERROR = 0;	
+
+	public static final int WARN_MEMBERSHIP = 10;	
 
 	public static final int ERR_ON_SYNTAX = 1;	
 	public static final int ERR_ON_FIELDNAME = 2;
@@ -62,6 +67,8 @@ public class Environment {
 	public static final int ERR_ON_MISSING_PARAMETER = 22;
 	public static final int ERR_ON_MISSING_FUZZYAGGREGATOR = 23;
 	public static final int ERR_ON_MISSING_JFNAME = 24;
+	public static final int ERR_ON_MISSING_FST = 25;				// added by Balicco
+	public static final int ERR_ON_MISSING_FGO = 26;				// added by Balicco
 	public static final int ERR_ON_JS_BEGIN = 40;
 	public static final int ERR_ON_JS_PAR = 41;
 	public static final int ERR_ON_JS_NO_END = 42;
@@ -97,13 +104,22 @@ public class Environment {
 	public static final int ERR_ON_RANGE_ORDER = 131;
 	public static final int ERR_ON_POLYLINE_Y_VALUE = 133;
 	public static final int ERR_ON_POLYLINE_ORDER = 134;
-	public static final int ERR_ON_ALPHACUT_VALUE = 140;
+	public static final int ERR_UNDEFINED_PREFIX_NOT = 135;				// added by Balicco
+	public static final int ERR_ALREADY_DEFINED_OPERATOR = 136;			// added by Balicco
+	public static final int ERR_ALREADY_DEFINED_DEGREE = 137;			// added by Balicco
+	public static final int ERR_WRONG_DEGREES_NUMBER = 138;				// added by Balicco
+	public static final int ERR_UNDEFINED_DEGREE = 139;					// added by Balicco
+	public static final int ERR_UNDEFINED_PREFIX = 140;					// added by Balicco
+	public static final int ERR_DEGREE_NAME_NOT_ALLOWED = 141;
+	public static final int ERR_ON_ALPHACUT_VALUE = 145;				// added by Balicco 
 	public static final int ERR_ON_FUZZY_SET_NAME = 150;
 	public static final int ERR_ON_GENERATE_COMPLEXITY = 160;
 	public static final int ERR_ON_PARAMETER_REFERENCE = 170;
-	public static final int ERR_ON_PARAMETER_DECLARATION = 171;
-	public static final int ERR_NULL_FUNCTION_NAME = 172;
-	public static final int ERR_WRONG_PARAMETERS_NUMBER = 173;	
+	public static final int ERR_ON_PARAMETER_REFERENCE_FOR_ALL = 171;
+	public static final int ERR_ON_PARAMETER_DECLARATION = 172;
+	public static final int ERR_NULL_FUNCTION_NAME = 173;
+	public static final int ERR_WRONG_PARAMETERS_NUMBER = 174;	
+	public static final int ERR_ON_TYPE_DECLARATION = 175;
 	
 	public static final int ERR_ON_VERSUS_IN_FUZZY_AGGREGATOR = 180; 
 	public static final int ERR_ON_ALIAS_REFERENCE_IN_EVALUATE = 181;
@@ -176,6 +192,20 @@ public class Environment {
 	void addInstruction (Instruction instr) {
 		instructionList.add(instr);
 		nInstruction++;
+	}
+
+	void addWarning (int code, Token tk) {
+		String st;
+		if (tk == null)
+			tk = input.LT(-1);
+
+		st = "Warning (" + code + ")";
+		st += " at [" + tk.getLine() + ", " + (tk.getCharPositionInLine()+1) + "]: ";
+		
+		if (code == WARN_MEMBERSHIP)
+			st += "The '" + tk.getText() + "' keyword is deprecated. Use instead 'MEMBERSHIP_TO' keyword";
+		
+		warningList.add(st);		
 	}
 
 	void addError (String msg) {
@@ -288,9 +318,13 @@ public class Environment {
 			st += "Missing Fuzzy Aggregator name";
 		else if (code == ERR_ON_MISSING_JSF)
 			st += "Missing Javascript Function name";
+		else if (code == ERR_ON_MISSING_FST)					// added by Balicco
+			st += "Missing Fuzzy Set Type name";
 		else if (code == ERR_ON_MISSING_JFNAME)
 			st += "Missing Java Function name";
-		else if (code == ERR_ON_MISSING_PARAMETER)
+		else if (code == ERR_ON_MISSING_PARAMETER)				// modified by Balicco
+			st += "Missing General Fuzzy Set name";
+		else if (code == ERR_ON_MISSING_FGO)					// added by Balicco
 			st += "Missing parameter";
 		else if (code == WRONG_UNIT)
 			st += "Expecting 'M', 'KM', 'ML' as distance unit";
@@ -310,6 +344,20 @@ public class Environment {
 			st += "Polyline Y values must must be within [0, 1]";
 		else if (code == ERR_ON_POLYLINE_ORDER)
 			st += "Polyline X value must be greater than the previous";
+		else if (code == ERR_UNDEFINED_PREFIX_NOT)								// added by Balicco
+			st += "All prefix must be 'x'";
+		else if (code == ERR_ALREADY_DEFINED_OPERATOR)							// added by Balicco
+			st += "Fuzzy operator already defined";
+		else if (code == ERR_ALREADY_DEFINED_DEGREE)							// added by Balicco
+			st += "Fuzzy operator already defined";
+		else if (code == ERR_WRONG_DEGREES_NUMBER)								// added by Balicco
+			st += "The operator "+ tk.getText() +" must evaluate all degrees";
+		else if (code == ERR_UNDEFINED_DEGREE)									// added by Balicco
+			st += "Unknown degree";
+		else if (code == ERR_UNDEFINED_PREFIX)									// added by Balicco
+			st += "All prefix must be 'x' or 'y'";
+		else if (code == ERR_DEGREE_NAME_NOT_ALLOWED)							// added by Balicco
+			st += "Degree name: "+ tk.getText() + " is reserved";
 		else if (code == ERR_ON_ALPHACUT_VALUE)
 			st += "ALPHA-CUT values must must be within [0, 1]";
 		else if (code == ERR_ON_JS_BEGIN)
@@ -342,14 +390,18 @@ public class Environment {
 			st += "FuzzySetName should be in the form ID or ID.ID";
 		else if (code == ERR_ON_GENERATE_COMPLEXITY)
 			st += "The following less complex field spec must placed before";
-		else if (code == ERR_ON_PARAMETER_REFERENCE)
-			st += "\"" + tk.getText() + "\" must be declared before in PARAMETERS";
+		else if (code == ERR_ON_PARAMETER_REFERENCE)									// modified by Balicco
+			st += "\"" + tk.getText() + "\" must be declared before";	
+		else if (code == ERR_ON_PARAMETER_REFERENCE_FOR_ALL)							// modified by Balicco
+			st += "\"" + tk.getText() + "\" must be declared of ARRAY type in PARAMETERS";
 		else if (code == ERR_ON_PARAMETER_DECLARATION)
 			st += "\"" + tk.getText() + "\" already declared in PARAMETERS";
 		else if (code == ERR_NULL_FUNCTION_NAME)
 			st += "Missing function name";
 		else if (code == ERR_WRONG_PARAMETERS_NUMBER)
 			st += "Wrong number of parameters for predefined function " + tk.getText();
+		else if (code == ERR_ON_TYPE_DECLARATION)										// added by Balicco
+			st += "\"" + tk.getText() + "\" is not a type";		
 		else if (code == ERR_ON_VERSUS_IN_FUZZY_AGGREGATOR)
 			st += "Non acceptable type of versus selection " + tk.getText();
 		else if (code == ERR_ON_ALIAS_REFERENCE_IN_EVALUATE)
@@ -363,12 +415,12 @@ public class Environment {
 		else if (code == ERR_ON_ARRAY_REFERENCE_NOT_DECLARED)
 			st += "Error in expression: array \"" + tk.getText() + "\" has never been defined";
 		else
-			st += "*";
+			st += "*** Error Code not recognized [" + code + "] ***";
 							
 		addError(st); 
 	}
-	
-// ----------------------------------------------
+
+	// ----------------------------------------------
 	
 	void addField (Field field, Token f) {
 		field.addField(f.getText());
@@ -530,6 +582,36 @@ public class Environment {
 		return jf;
 	}
 
+	// added by Balicco
+	public FuzzySetType addFuzzySetType(Token t) {
+		String name = "null";
+		if (t == null) 
+			myErrorHandler(ERR_ON_MISSING_FST);
+		else
+			name = t.getText();
+		FuzzySetType ft = new FuzzySetType(nInstruction, name);
+		nInstruction++;
+		instructionList.add(ft);
+		return ft;
+	}
+	
+	// added by Balicco
+	public GenericFuzzyOperator addGenericFuzzyOperator(Token t, Token n) {
+		String type = "null", name = "null";
+		if (t == null) 
+			myErrorHandler(ERR_ON_MISSING_FST);
+		else
+			type = t.getText();
+		if (n == null) 
+			myErrorHandler(ERR_ON_MISSING_FGO);
+		else
+			name = n.getText();
+		GenericFuzzyOperator fgo = new GenericFuzzyOperator(nInstruction, name, type);
+		nInstruction++;
+		instructionList.add(fgo);
+		return fgo;
+	}
+	
 	// ---------------------------	
 	
 	void setDistance(SpatialFunction sf, Token u, Token cp, String n, boolean joinCaller) {  
@@ -667,6 +749,32 @@ public class Environment {
 		}
 	}
 	
+	// added by Balicco
+	void addFuzzyPolylinePoint (FuzzyPolyline fp, String x, String y) {
+		if (x != null && y != null) {
+			double xValue = Double.parseDouble(x) ;
+			double yValue = Double.parseDouble(y) ;
+			
+			if (yValue < 0 || yValue > 1)
+				myErrorHandler(ERR_ON_POLYLINE_Y_VALUE);
+			if (fp.hasDefaultPolyline()) 
+				fp.resetPolyline();
+			if (fp.polyline.size() > 0) {
+				double x0Value = Double.parseDouble(fp.polyline.get(fp.polyline.size()-1).x);
+				if (xValue <= x0Value)
+					myErrorHandler(ERR_ON_POLYLINE_ORDER);
+			}
+			fp.polyline.add(new FuzzyPoint (x, y));
+		}
+	}
+
+	// added by Balicco
+	FuzzyPolyline createFuzzyPolyline() {
+		FuzzyPolyline p = new FuzzyPolyline();
+		return p;
+	}		
+	
+	
 	void addFuzzyAggregatorPolylinePoint (FuzzyAggregator fa, String x, String y) {
 		if (x != null && y != null) {
 			double xValue = Double.parseDouble(x) ;
@@ -738,7 +846,7 @@ public class Environment {
 			myErrorHandler(ERR_ON_PARAMETER_DECLARATION, x);						
 	}
 
-
+/* PF Old version before Balicco
 	public void addAlphaCut(GenerateSection gs, String n, Token on) {
 		if (n != null) {
 			double nValue = Double.parseDouble(n) ;
@@ -747,6 +855,21 @@ public class Environment {
 				myErrorHandler(ERR_ON_ALPHACUT_VALUE);	
 			else
 				gs.addAlphaCut (new AlphaCut(n, on.getText()));		
+		}
+	}
+*/
+// Modified by Balicco	
+	public void addAlphaCut(GenerateSection gs, String n, Token on, Token de) {
+		if (n != null) {
+			double nValue = Double.parseDouble(n) ;
+					
+			if (nValue < 0 || nValue > 1)
+				myErrorHandler(ERR_ON_ALPHACUT_VALUE);	
+			else
+				if (de != null )
+					gs.addAlphaCut (new AlphaCut(n, on.getText(), de.getText()));
+				else
+					gs.addAlphaCut (new AlphaCut(n, on.getText()));
 		}
 	}
 
@@ -865,10 +988,27 @@ public class Environment {
 		return exprFactor;
 	}
 
-	public MembershipOfFunction buildMembershipOf(Token mo) {
-		MembershipOfFunction exprFactor = new MembershipOfFunction("@@@@");
-		if (mo != null)
-			exprFactor = new MembershipOfFunction(mo.getText());
+	public void checkMembershipToken (Token mt) {
+		if (mt != null) {
+			if ("MEMBERSHIP_OF".equals(mt.getText()))
+				addWarning (WARN_MEMBERSHIP, mt);				
+		}
+	}
+
+	public MembershipToFunction buildMembershipTo(Token mt) {
+		MembershipToFunction exprFactor = new MembershipToFunction("@@@@");
+		if (mt != null)
+			exprFactor = new MembershipToFunction(mt.getText());
+		return exprFactor;
+	}
+	
+	// added by Balicco
+	public DegreeFunction buildDegree(Token t1, Token t2) {
+		DegreeFunction exprFactor = new DegreeFunction("@@@@","@@@@");
+		if (t1 != null && t2 != null)
+			exprFactor = new DegreeFunction(t1.getText(), t2.getText());
+		else if(t1 != null)
+			exprFactor = new DegreeFunction(t1.getText());
 		return exprFactor;
 	}
 	
@@ -896,15 +1036,17 @@ public class Environment {
 	}
 
 
-	public void addCheckForFuzzySet(GenerateSection gs, Token fs, Condition fe) {
+	// added by Balicco
+	public void addCheckForFuzzySet(GenerateSection gs, Token fs, Condition fe, Token ty) {
 		String fuzzySet = "null";
 		if (fs == null)
 			myErrorHandler(ERR_UNDEFINED_FUZZYSET);
-		else
-			fuzzySet = fs.getText();
-		gs.addFuzzySetDefinition (new FuzzySetDefinition (fuzzySet, fe));
+		fuzzySet = fs.getText();
+		if (ty != null) 
+			gs.addFuzzySetDefinition (new FuzzySetDefinition (fuzzySet, fe, ty.getText()));
+		else 
+			gs.addFuzzySetDefinition (new FuzzySetDefinition (fuzzySet, fe));
 	}
-
 
 	public Parameter createParameter(Token v, Token t) {
 		Parameter p = null;
@@ -1164,6 +1306,127 @@ public class Environment {
 		return predicate;
 	}
 
+	// added by Balicco 
+	public void addDegreeType(FuzzySetType ft, Token t) {
+		String s = "null";
+		ParamList pl = ft.getDegreesList();
+		if (t == null || pl.contains(t.getText()))
+			myErrorHandler(ERR_ON_PARAMETER_DECLARATION, t);
+		else if (t.getText().equals("type"))
+			myErrorHandler(ERR_DEGREE_NAME_NOT_ALLOWED, t);
+		else
+			s = t.getText();
+		Parameter p = new Parameter(s, "DEGREE");
+		ft.degrees.add(p);
+	}
+	
+	// added by Balicco 
+	public void checkDerivedDegree(FuzzySetType ft,Token t) {
+		ParamList pl = new ParamList(ft.degrees);
+		if(t == null) 
+			myErrorHandler(ERR_UNDEFINED_DEGREE,t);
+		if(pl.contains(t.getText())) 
+			myErrorHandler(ERR_ALREADY_DEFINED_DEGREE,t);
+		if(t.getText().equals("type"))
+			myErrorHandler(ERR_DEGREE_NAME_NOT_ALLOWED,t);
+	}
+	
+	// added by Balicco 
+	public ExpressionFactor checkDegree(ParamList pl, Token t) {
+		String s = "null";
+		if(t == null || !pl.contains(t.getText()))
+			myErrorHandler(ERR_UNDEFINED_DEGREE,t);
+		else 
+			s = t.getText();
+		return new ExpressionFactor (s);
+	} 
+
+	
+	// added by Balicco 
+	public void addDerivedDegree(FuzzySetType ft, Token t, Expression e) {
+		ft.derivedDegrees.add(t.getText()); 
+		ft.derivedExpr.add(e);
+	}
+	
+	// added by Balicco 
+	public void addOperatorDegree(FuzzyOperatorDefinition defOp,Token x,Expression exp,ParamList pl) {
+		defOp.addDegree(x, exp);
+	}	
+	
+	
+	// added by Balicco 
+	public boolean setFuzzyOperatorType(FuzzyOperatorDefinition defOp, Token t) {
+		defOp.type = t.getText();
+		if(t.getText().equals("NOT"))
+			return true;
+		return false;
+	}
+		
+	// added by Balicco 
+	public void checkOperatorDegree(FuzzyOperatorDefinition defOp, Token t, ParamList pl) {
+		if (!pl.contains(t.getText()))
+			myErrorHandler(ERR_UNDEFINED_DEGREE,t);
+		for (int i = 0; i<defOp.degrees.size(); i++) {
+			if (defOp.degrees.get(i).equals(t.getText()))
+				myErrorHandler(ERR_ALREADY_DEFINED_DEGREE,t);
+		}
+	}
+	
+	// added by Balicco 
+	public void addOperatorDefinition(FuzzySetType ft,FuzzyOperatorDefinition fo, Token op) {
+		if (fo.type.equals("OR")) {
+			if(ft.defOr != null)
+				myErrorHandler(ERR_ALREADY_DEFINED_OPERATOR,op);
+			ft.defOr = fo;
+		}
+		if (fo.type.equals("AND")) {
+			if(ft.defAnd != null)
+				myErrorHandler(ERR_ALREADY_DEFINED_OPERATOR,op);
+			ft.defAnd = fo;
+		}
+		if (fo.type.equals("NOT")) {
+			if(ft.defNot != null)
+				myErrorHandler(ERR_ALREADY_DEFINED_OPERATOR,op);
+			ft.defNot = fo;
+		}
+		if (ft.degrees.size() > fo.degrees.size() && fo.type != "null"){
+			myErrorHandler(ERR_WRONG_DEGREES_NUMBER,op);
+		}
+	}
+	
+	// added by Balicco 
+	public ExpressionFactor makeExpDegree(Token x,Token f,Boolean isNot,ParamList pl) {
+		String sx = x.getText();
+		String sf = f.getText().substring(1, f.getText().length());
+		if (!pl.contains(sf))
+			myErrorHandler(ERR_UNDEFINED_DEGREE);
+		if (isNot) {
+			if(!sx.equals("x"))
+				myErrorHandler(ERR_UNDEFINED_PREFIX_NOT);
+		}else {
+			if(!sx.equals("x") && !sx.equals("y"))
+				myErrorHandler(ERR_UNDEFINED_PREFIX);
+		}
+		return new ExpressionFactor (sx + "." + sf);
+	} 
+	
+	// added by Balicco 
+	public Parameter createFgoParameter(Token v) {
+		Parameter p = null;
+		if (v == null)
+			myErrorHandler(ERR_ON_MISSING_PARAMETER);
+		else
+			p = new Parameter (v.getText(), "FLOAT");
+		return p;
+	}
+
+	// added by Balicco 
+	public FuzzyPolyline manageEvaluate(GenericFuzzyOperator fgo, Parameter d, Expression e) {
+		fgo.degrees.add(d);  
+		fgo.evaluate.add(e); 	
+		return createFuzzyPolyline();
+	}
+	
 
 }
 

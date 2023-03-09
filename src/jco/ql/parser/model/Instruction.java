@@ -8,7 +8,7 @@ package jco.ql.parser.model;
 public abstract class Instruction {
 	public static final int UNDEFINED = -1;	
 	public static final int GET_INSTRUCTION = 1;	
-	public static final int SET_INTERMEDIATE_INSTRUCTION = 2;	
+	public static final int SET_INTERMEDIATE_INSTRUCTION = 2;		// depracated - substituted by SAVE AS
 	public static final int SAVE_INSTRUCTION = 3;	
 	public static final int JOIN_INSTRUCTION = 4;	
 	public static final int OLD_JOIN_INSTRUCTION = 5;	
@@ -24,8 +24,10 @@ public abstract class Instruction {
 	public static final int JAVASCRIPT_FUNCTION_INSTRUCTION = 15;
 	public static final int GET_DICTIONARY = 16;
 	public static final int LOOKUP_FROM_WEB = 17;
-	public static final int FUZZY_AGGREGATOR_INSTRUCTION = 18; 		//!! Aggiunta Invernici
-	public static final int JAVA_FUNCTION_INSTRUCTION = 19;			// PF 20.01.2023
+	public static final int FUZZY_AGGREGATOR_INSTRUCTION = 18; 			// added by Invernici
+	public static final int FUZZY_TYPE_INSTRUCTION = 19; 				// added by Balicco
+	public static final int FUZZY_GENERAL_OPERATOR_INSTRUCTION = 20; 	// added by Balicco
+	public static final int JAVA_FUNCTION_INSTRUCTION = 21;				// PF 20.01.2023
 	
 	int id;
 	int sequence;

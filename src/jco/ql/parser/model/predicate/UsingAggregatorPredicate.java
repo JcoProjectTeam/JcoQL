@@ -40,7 +40,7 @@ public class UsingAggregatorPredicate extends UsingPredicate{
 	
 	
 	public String toString () {
-		String str = "AGGREGATE THROUGH " + fuzzyAggregatorName + "(MEMBERSHIP OF ";
+		String str = "AGGREGATE THROUGH " + fuzzyAggregatorName + "(MEMBERSHIP_TO ";
 		if(fuzzySetsSelected != null) {
 			if(aggregatorType == SELECTED_FUZZY_SET_IN_DOCUMENT) {
 				str += "[";

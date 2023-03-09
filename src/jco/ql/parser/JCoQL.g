@@ -83,24 +83,26 @@ options {
 
 // Start Symbol
 start 
-  : ( getCollectionRule             // 1 
-    | saveAsRule                    // 3 
-    | joinOfCollectionsRule         // 4 	
-    | filterRule                    // 6 
-    | groupRule                     // 7 
-    | expandRule                    // 8 
-    | mergeCollectionsRule          // 9 
-    | intersectCollectionsRule      // 10
-    | subtractCollectionsRule       // 11
-    | useDbRule                     // 12
-    | trajectoryMatchingRule        // 13
-    |	createFuzzyOperatorRule				// 14
-    | createJavaScriptFunctionRule	// 15
-    | getDictionaryRule							// 16
-    | lookupFromWebRule							// 17
-    | createFuzzyAggregatorRule     // 18
-    | createJavaFunctionRule				// 19 PF news
-    | test                      // istruzione di test...
+  : ( getCollectionRule             	    // 1
+    | saveAsRule                    	    // 3
+    | joinOfCollectionsRule         	    // 4
+    | filterRule                    	    // 6
+    | groupRule                     	    // 7
+    | expandRule                    	    // 8
+    | mergeCollectionsRule          	    // 9
+    | intersectCollectionsRule      	    // 10
+    | subtractCollectionsRule       	    // 11
+    | useDbRule                     	    // 12
+    | trajectoryMatchingRule    			    // 13
+    |	createFuzzyOperatorRule							// 14
+    | createJavaScriptFunctionRule				// 15
+    | getDictionaryRule										// 16
+    | lookupFromWebRule										// 17
+    | createFuzzyAggregatorRule     			// 18 - Invernici
+    | createFuzzySetTypeRule							// 19 - Balicco
+    | createGenericFuzzySetOperatorRule		// 20 - Balicco
+    | createJavaFunctionRule							// 21 PF news
+    | test                      					// istruzione di test...
     )* EOF
   ;
 
@@ -205,7 +207,6 @@ generateSectionRule [boolean complete]	returns [GenerateSection gs]
 		g=GENERATE 			{	gs = new GenerateSection (complete);	}
      	( go=geometricOptionRule				{	gs.addGeometricOption (go); 	} )?
 			( cf=checkForFuzzySetRule [gs]																		)?
-			( cf=checkForExtendedFuzzySetRule [gs]																		)?
 			(	ac=alphaCutRule [gs]																						)?
    	 	( ga=buildActionRule 						{ gs.addBuildAction (ga); 			}	)?
 			( df=keepDropFuzzySetsRule	 		{ gs.addKeepDropFuzzySets (df); } )?
@@ -344,8 +345,9 @@ valueRule returns [Value vl]
 
 specialFunctionRule returns [SpecialFunctionFactor expr]
 	:
-			f=MEMBERSHIP_OF LP mo=ID RP																							{	expr = env.buildMembershipOf ($mo); 		}
-		| f=IF_ERROR			LP e=restrictedExpressionRule COMMA v=valueRule RP			{	expr = env.buildIfError (e, v); 	}
+			f=MEMBERSHIP_TO LP mo=ID RP																							{	expr = env.buildMembershipTo ($mo); }
+		| f=DEGREE 				LP d1=ID d2=FIELD_NAME? RP															{	expr = env.buildDegree ($d1,$d2); 	}		// Balicco		
+		| f=IF_ERROR			LP e=restrictedExpressionRule COMMA v=valueRule RP			{	expr = env.buildIfError (e, v); 		}
 		|	f=TRANSLATE 		LP e=restrictedExpressionRule COMMA dict=ID 
 				    						( COMMA cs=BOOLEAN 
 				    							( COMMA (d=APEX_VALUE | d=QUOTED_VALUE) )? )?	RP		{	expr = env.buildTranslate 	(e, $dict, $cs, $d); 	}	
@@ -440,34 +442,27 @@ numericRule returns [String num]
 
 
 //--- CHECK FOR FUZZY SET MODEL
-/* Modifica Invernici*/
-checkForExtendedFuzzySetRule [GenerateSection gs]
-	:	
-		CHECK_FOR_E FUZZY SET fs=ID USING( fe=usingOrConditionRule 	){ env.addCheckForFuzzySet (gs, fs, fe); } 
-		
-			( COMMA FUZZY SET fs=ID	USING fe=usingOrConditionRule 					{ env.addCheckForFuzzySet (gs, fs, fe); }		)*
-	;
+/* Modifica 1.Invernici; 2.Balicco */
 checkForFuzzySetRule [GenerateSection gs]
 	:	
-		CHECK_FOR FUZZY SET fs=ID USING( fe=usingOrConditionRule 	){ env.addCheckForFuzzySet (gs, fs, fe); } 
-		
-			( COMMA FUZZY SET fs=ID	USING fe=usingOrConditionRule 					{ env.addCheckForFuzzySet (gs, fs, fe); }		)*
+		CHECK_FOR ty=ID? FUZZY SET fs=ID USING  fe=usingOrConditionRule 	{ env.addCheckForFuzzySet (gs, $fs, fe, $ty); } 
+			( 																															{	$ty = null; }
+				COMMA ty=ID? FUZZY SET fs=ID	USING fe=usingOrConditionRule 	{ env.addCheckForFuzzySet (gs, $fs, fe, $ty); }		)*
 	;
-	
 
 
 faUsingPredicateRule returns [UsingAggregatorPredicate p]
   :
   	id=ID							{ p = env.createUsingAggregatorPredicate($id); }
-	LP 
-	(MEMBERSHIP_OF 
-	(ALL 						{p.aggregatorType =  UsingAggregatorPredicate.ALL_MEMBERSHIP_IN_DOCUMENT;}	
-	|fuzzySet=ID FROM_ARRAY array=FIELD_NAME	{env.setUsingAggregateFromArray(p, $fuzzySet, $array);}
-	| LB fuzzySet=ID  				{p.aggregatorType =  UsingAggregatorPredicate.SELECTED_FUZZY_SET_IN_DOCUMENT; env.setUsingAggregateInDocument(p, $fuzzySet);}
-	(',' fuzzySet=ID 				{env.setUsingAggregateInDocument(p, $fuzzySet);})* RB)		
-	)
-	(',' exp=restrictedExpressionRule 		{p.parameters.add(exp);})* 
-	 RP      
+		LP 
+		(	m=MEMBERSHIP_TO 												{ env.checkMembershipToken ($m); }
+			(	ALL 																			{ p.aggregatorType =  UsingAggregatorPredicate.ALL_MEMBERSHIP_IN_DOCUMENT;}	
+			|	fuzzySet=ID FROM_ARRAY array=FIELD_NAME		{ env.setUsingAggregateFromArray(p, $fuzzySet, $array);}
+			| LB fuzzySet=ID  													{ p.aggregatorType =  UsingAggregatorPredicate.SELECTED_FUZZY_SET_IN_DOCUMENT; env.setUsingAggregateInDocument(p, $fuzzySet);}
+				(',' fuzzySet=ID 													{ env.setUsingAggregateInDocument(p, $fuzzySet);})* RB)		
+			)
+			( COMMA exp=restrictedExpressionRule 		{ p.parameters.add(exp);} )* 
+		 RP      
 	;
 	
 /* Fine modifiche Invernici*/
@@ -509,8 +504,9 @@ usingPredicateRule returns [Predicate p]
 
 alphaCutRule [GenerateSection gs]
 	:
-		ALPHACUT 	n=numericRule ON on=ID  		{	env.addAlphaCut (gs, n, $on); }
-			(	COMMA	n=numericRule ON on=ID  		{ env.addAlphaCut (gs, n, $on); }	)*
+		ALPHACUT 	n=numericRule ON on=ID de=FIELD_NAME? 		{	env.addAlphaCut (gs, n, $on, $de); }
+			(																									{ $de = null; }
+				COMMA	n=numericRule ON on=ID de=FIELD_NAME? 		{ env.addAlphaCut (gs, n, $on, $de); }	)*
 	;
 //--- END CHECK FOR FUZZY SET MODEL
 
@@ -1000,9 +996,140 @@ faFactorRule [FuzzyAggregator fa, ForAllClause fac] returns [ExpressionFactor ex
 faArrayRefRule [Token id, FuzzyAggregator fa] returns [ArrayReference ref]:	
 	LB (e=faExpressionRule [fa, null]) RB (f = fieldRefRule)? { ref = env.setArrayRef(id, e, f);}
 	;
+
+
+/* ****************************************************************
+******************     START MATTEO BALICCO      ******************
+***************************************************************** */
+
+createFuzzySetTypeRule: 
+		CREATE TYPE OF FUZZY SET	t=ID			{ FuzzySetType ft = env.addFuzzySetType ($t);	} 
+		DEGREES 		p=ID										{ env.addDegreeType(ft, $p); }
+				( COMMA p=ID									{ env.addDegreeType(ft, $p); }	)* 	 			
+		(	DERIVED DEGREES	n=ID 					{ env.checkDerivedDegree(ft, $n);  }
+			AS e=ftExpressionRule[ft.getDegreesList()]			{ env.addDerivedDegree(ft, $n, e); }
+				(	COMMA 			n=ID 														{ env.checkDerivedDegree(ft, $n);  }
+					AS e=ftExpressionRule[ft.getDegreesList()]	{ env.addDerivedDegree(ft, $n, e); }	)*
+		)?
+		( CONSTRAINT c=jfOrConditionRule	[ft.getAllDegreesList(), false]	{ ft.constraint=c; }	)?	
+		( fo=ftOperator[ft] )*
+		SC	
+;
+
+ftOperator[FuzzySetType ft] returns [FuzzyOperatorDefinition defOp]
+@init { defOp = new FuzzyOperatorDefinition(); }:	
+	OPERATOR o=(OR|AND|NOT)						{	boolean isNot = env.setFuzzyOperatorType(defOp,o);	}	
+	(	EVALUATE x=ID AS  								{	env.checkOperatorDegree(defOp,$x,ft.getDegreesList());		}
+		exp=ftConditionExpressionRule[ft.getDegreesList(), isNot]	{	env.addOperatorDegree(defOp,$x,exp,ft.getDegreesList());	}	
+	)+	{ env.addOperatorDefinition(ft,defOp,$o); }								
+;
+
+createGenericFuzzySetOperatorRule:
+		CREATE t=ID FUZZY OPERATOR n=ID										{ GenericFuzzyOperator fgo = env.addGenericFuzzyOperator($t, $n); }
+		PARAMETERS p=parameterRule	[fgo.getParamList()] 									{ fgo.parameters.add (p); }
+			( COMMA  p=parameterRule	[fgo.getParamList()]										{ fgo.parameters.add (p); } )*
+		( PRECONDITION pc=jfOrConditionRule [fgo.getParamList(), false]		{ fgo.precondition = pc; }	)?
+		(	
+			EVALUATE g=ID 																				{ Parameter ev = env.createFgoParameter ($g); } 
+			AS e=jfExpressionRule [fgo.getParamList(), false]			{ FuzzyPolyline fp = env.manageEvaluate(fgo,ev,e); }
+			( 	
+				POLYLINE	LB				
+					LP x=numericRule COMMA y=numericRule RP						{ env.addFuzzyPolylinePoint (fp, x, y); }
+					( COMMA LP x=numericRule COMMA y=numericRule RP 	{ env.addFuzzyPolylinePoint (fp, x, y); }	)+
+				RB																	
+			)?			{ fgo.polylines.add(fp); }
+		)+
+		SC		
+;
+
+
+
+
+ftExpressionRule[ParamList pl] returns [Expression expr]
+@init { expr = new Expression (); }
+  : 
+  	(	t=ftTermRule[pl]				{ expr.addTerm (t, null); }
+  	|	(s=ADD | s=SUB) t=ftTermRule[pl]		{ expr.addTerm (t, $s.getText()); } )
+    ( (s=ADD | s=SUB) t=ftTermRule[pl] 			{ expr.addTerm (t, $s.getText()); }	)*
+  ;
+
+ftTermRule[ParamList pl] returns [ExpressionTerm et]
+@init { et = new ExpressionTerm (); }
+  : 
+  	f=ftFactorRule[pl]				{ et.addFactor(f, null);}
+    ( (s=MUL | s=DIV) f=ftFactorRule[pl] 			{ et.addFactor(f, s.getText());}		)*
+  ;
+  
+ftFactorRule[ParamList pl] returns [ExpressionFactor ef]: 
+	  	LP op=ftExpressionRule[pl] RP		{ ef = new ExpressionFactor (op); }
+	  | vl=ftValueRule				{ ef = new ExpressionFactor (vl); }
+	  |	x=ID					{ ef = env.checkDegree(pl,$x);	 }
+	  | x=ID LP (fp=ftFunctionParamsRule[pl])? RP				{ ef = env.buildFunction ($x, fp); } 
+	  | e=specialFunctionRule			{ ef = e; }
+;
+  
+ftValueRule returns [Value vl]: 
+  		n=INT           { vl = new Value (Value.INT, $n.getText());   }
+		| f=FLOAT       { vl = new Value (Value.FLOAT, $f.getText()); }
+;
+
+ftFunctionParamsRule[ParamList pl] returns [ArrayList<Expression> params]
+  @init{ params = new ArrayList<Expression>(); }
+  : 
+  	e=ftExpressionRule[pl] 									{ params.add(e); }
+    	( COMMA e=ftExpressionRule[pl] 				{ params.add(e); }		)*
+  ;
+  
+  
+  
+	
+ftConditionExpressionRule[ParamList pl, boolean isNot] returns [Expression expr]
+@init { expr = new Expression (); }
+: 
+  	(	t=ftConditionTermRule[pl,isNot]												{ expr.addTerm (t, null); }
+  	|	(s=ADD | s=SUB) t=ftConditionTermRule[pl,isNot]				{ expr.addTerm (t, $s.getText()); } )
+    ( (s=ADD | s=SUB) t=ftConditionTermRule[pl,isNot] 		{ expr.addTerm (t, $s.getText()); } )*
+;
+
+
+ftConditionTermRule[ParamList pl, boolean isNot] returns [ExpressionTerm et]
+@init { et = new ExpressionTerm (); }
+: 
+  	f=ftConditionFactorRule	[pl,isNot]			{ et.addFactor(f, null);}
+    ( (s=MUL | s=DIV) f=ftConditionFactorRule[pl,isNot] 		{ et.addFactor(f, s.getText());}		)*
+;
+  
+ftConditionFactorRule[ParamList pl, boolean isNot] returns [ExpressionFactor ef]
+: 
+	  	LP op=ftConditionExpressionRule[pl,isNot] RP	{ ef = new ExpressionFactor (op); }
+	  | vl=ftConditionValueRule				{ ef = new ExpressionFactor (vl); }
+	  |	x=ID		f=FIELD_NAME							{ ef = env.makeExpDegree($x,$f,isNot,pl); }
+	  | x=ID LP (fp=ftConditionFunctionParamsRule[pl,isNot])? RP				{ ef = env.buildFunction ($x, fp); } 
+	  | e=specialFunctionRule					{ ef = e; }
+;	
+ 
+  
+ftConditionValueRule returns [Value vl]
+: 
+  		n=INT           { vl = new Value (Value.INT, $n.getText()); }
+		| f=FLOAT       { vl = new Value (Value.FLOAT, $f.getText()); }
+;
+  
+ftConditionFunctionParamsRule[ParamList pl, boolean isNot] returns [ArrayList<Expression> params]
+  @init{ params = new ArrayList<Expression>(); }
+  : 
+  	e=ftConditionExpressionRule[pl,isNot] 							{ params.add(e); }
+    	( COMMA e=ftConditionExpressionRule[pl,isNot] 				{ params.add(e); }		)*
+  ;
+
+
+/* ****************************************************************
+*******************     END MATTEO BALICCO      *******************
+***************************************************************** */
+
   
 
-/*PF news JAVA */
+/* PF news JAVA Functin Rule 2023.01.23 */
 createJavaFunctionRule
 	:
 			CREATE JAVA FUNCTION
@@ -1033,6 +1160,7 @@ createJavaFunctionRule
 			END_BODY		
 		SC
 	; 
+
 
 
 // ************************************
@@ -1077,14 +1205,17 @@ BY          	  : 'BY';
 CALL          	: 'CALL';
 CASE          	: 'CASE';
 CHECK_FOR				: 'CHECK' WS 'FOR';
-CHECK_FOR_E			: 'CECCK' WS 'FOR' WS 'EXTENDED';
 CLASS						: 'CLASS';
 COLLECTION  	  : 'COLLECTION';
 COLLECTIONS   	: 'COLLECTIONS';
+CONSTRAINT			: 'CONSTRAINT';
 CREATE					: 'CREATE';							
 DB      	      : 'DB';
 DEFAULT					: 'DEFAULT';
 DEFUZZIFY				:	'DEFUZZIFY';
+DEGREE					: 'DEGREE';
+DEGREES					: 'DEGREES';
+DERIVED					: 'DERIVED';
 DICTIONARY			:	'DICTIONARY';
 DIRECTION				:	'DIRECTION';
 DISTANCE				:	'DISTANCE';
@@ -1139,7 +1270,7 @@ LOOKUP 					:	'LOOKUP';
 MATCHING  	    : 'MATCHING';
 MAXIMUM					: 'MAXIMUM';
 MEET        	  : 'MEET';
-MEMBERSHIP_OF 	:	'MEMBERSHIP_OF';	
+MEMBERSHIP_TO 	:	'MEMBERSHIP_TO' | 'MEMBERSHIP_OF' ;	
 MERGE         	: 'MERGE';
 MIN_SIMILARITY	:	'MIN' WS 'SIMILARITY';
 MINIMUM 				: 'MINIMUM';
