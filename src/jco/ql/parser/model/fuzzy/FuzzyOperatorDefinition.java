@@ -3,8 +3,6 @@ package jco.ql.parser.model.fuzzy;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.antlr.runtime.Token;
-
 import jco.ql.parser.model.predicate.Expression;
 
 /**
@@ -25,8 +23,8 @@ public class FuzzyOperatorDefinition {
 		expr = new ArrayList<Expression>();
 	}
 	
-	public void addDegree(Token t1, Expression e) {
-		degrees.add(t1.getText());
+	public void addDegree(String t1, Expression e) {
+		degrees.add(t1);
 		expr.add(e);
 	}
 	
@@ -43,7 +41,7 @@ public class FuzzyOperatorDefinition {
 		String str ="\tOPERATOR ";
 		str += type.toUpperCase() + "\n";
 		for (int i=0; i<degrees.size();i++) 
-			str +="\t\tEVALUATE " + degrees.get(i) + " AS " + expr.get(i).toString().replace("@", ".") + "\n";//TODO
+			str +="\t\tEVALUATE " + degrees.get(i) + " AS " + expr.get(i).toString().replace("@", ".") + "\n";
 		return str;
 	}
 	

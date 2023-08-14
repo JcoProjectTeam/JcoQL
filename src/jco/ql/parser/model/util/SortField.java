@@ -7,7 +7,7 @@ package jco.ql.parser.model.util;
  */
 public class SortField {
 	public static int UNDEFINED = -1;
-	public static int DEFAULT = 0;
+	public static int DEFAULT = 0;		// ascending
 	public static int ASCENDING = 1;
 	public static int DESCENDING = 2;
 
@@ -23,6 +23,9 @@ public class SortField {
 	public String versusStr;
 	public int fieldType;
 	public String fieldTypeStr;
+	// for JCO-Engine use
+	public String sourceArray;	
+	public String targetArray;
 	
 	public SortField (Field f, String ft) {
 		field = f;
@@ -30,6 +33,8 @@ public class SortField {
 		versusStr = "";
 		fieldTypeStr = ft;
 		fieldType = getType (ft);
+		sourceArray = null;
+		targetArray = null;
 	}
 
 	
@@ -42,6 +47,24 @@ public class SortField {
 		
 	}
 
+	
+	public boolean isAscending() {
+		return versus == ASCENDING;
+	}
+	
+	public boolean isBoolean () {
+		return fieldType == BOOLEAN;
+	}
+
+	public boolean isNumeric () {
+		return fieldType == NUMERIC;
+	}
+	
+	public boolean isString () {
+		return fieldType == STRING;
+	}
+
+	
 	
 	public String toString () {
 		String st = field.toString() + " TYPE " + fieldTypeStr;

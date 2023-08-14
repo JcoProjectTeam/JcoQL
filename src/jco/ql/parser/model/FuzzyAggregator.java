@@ -1,29 +1,28 @@
 package jco.ql.parser.model;
 
 import java.util.ArrayList;
-
+import java.util.Hashtable;
+import java.util.List;
+import java.util.StringJoiner;
 
 import jco.ql.parser.model.fuzzy.FuzzyPoint;
-import jco.ql.parser.model.predicate.ArrayReference;
 import jco.ql.parser.model.predicate.Expression;
-import jco.ql.parser.model.util.ForAllClause;
+import jco.ql.parser.model.util.ForAllDeriveElement;
 import jco.ql.parser.model.util.ParamList;
 import jco.ql.parser.model.util.Parameter;
+import jco.ql.parser.model.util.SortFuzzyAggregatorElement;
 import jco.ql.parser.model.condition.Condition;
 
-public class FuzzyAggregator extends Instruction{
-	public static int DEFAULT = 0;
-	public static int ASCENDING = 1;
-	public static int DESCENDING = 2;
-	
-	public String fuzzyAggregator;
-	public ArrayList<Parameter> parameters;
-	public Condition preCondition;
-	public int versus;
-	public ArrayList<ForAllClause> forAll;
-	public Expression evaluate;
-	public ArrayList<FuzzyPoint> polyline;
 
+public class FuzzyAggregator extends Instruction{
+	public String fuzzyAggregator;
+	public Hashtable<String, Parameter> namespace;
+	public List<Parameter> parameters;
+	public Condition preCondition;
+	public List<SortFuzzyAggregatorElement> sortList;
+	public List<ForAllDeriveElement> forAllDeriveList;
+	public Expression evaluate;
+	public List<FuzzyPoint> polyline;
 	public boolean defaultPolyline;
 	
 	
@@ -32,25 +31,37 @@ public class FuzzyAggregator extends Instruction{
 		instructionName = "Create Fuzzy Aggregator";
 		fuzzyAggregator = fa;
 		sequence = seq;
-		versus = DEFAULT;
+		namespace = new Hashtable<String, Parameter> (101);
 		parameters = new ArrayList<Parameter>();
 		preCondition = null;
+		sortList = new ArrayList<SortFuzzyAggregatorElement>();
+		forAllDeriveList = new ArrayList<ForAllDeriveElement>();
 		evaluate = null;
-		forAll = new ArrayList<ForAllClause>();
 		polyline = new ArrayList<FuzzyPoint>();
 		polyline.add(new FuzzyPoint ("0", "0"));
 		polyline.add(new FuzzyPoint ("1", "1"));
 		defaultPolyline = true;
 	}
 	
+	
 	public ParamList getParamList() {
 		ParamList pl = new ParamList(parameters);
 		return pl;
 	}
 	
+	
+	public boolean inNamespace (String name) {
+		return namespace.containsKey(name);
+	}
+	public boolean isUnavailable (String name) {
+		return namespace.containsKey(name) || fuzzyAggregator.equals(name);
+	}
+
+
 	public boolean hasPrecondition () {
 		return (preCondition != null);
 	}
+	
 	
 	public void resetPolyline() {
 		defaultPolyline = false;
@@ -62,69 +73,38 @@ public class FuzzyAggregator extends Instruction{
 		return defaultPolyline;
 	}
 	
-	public ArrayList<ForAllClause> getForAllClauses() {
-		return forAll;
+	
+	public List<ForAllDeriveElement> getForAllDeriveClauses() {
+		return forAllDeriveList;
 	}
 	
 	
-	public boolean hasParameterDefined(String name) {
-		if(name == null) return false;
-		if(parameters != null) {
-			for(Parameter p: parameters)
-				if(p.name.equals(name)) return true;
-		}
-		if(forAll != null && !forAll.isEmpty()) {
-			for(ForAllClause clause : forAll) {
-				if(clause.hasParameterDefinedOutsideForAll(name)) return true;
-			}
-		}
-		
-		return false;
+	public boolean hasSortList () {
+		return sortList.size() > 0;
 	}
-	
-	public boolean hasParameterDefinedInCurrentForAll(String name, ForAllClause currentForAll) {
-		if(name == null) return false;
-		if(parameters != null) {
-			for(Parameter p: parameters)
-				if(p.name.equals(name)) return true;
-		}
-		if(forAll != null && !forAll.isEmpty()) {
-			for(ForAllClause clause : forAll)
-				clause.hasParameterDefinedOutsideForAll(name);
-		}
-		if(currentForAll != null) {
-		  currentForAll.hasParameterDefinedInForAll(name);
-		}
-		return false;
-	}
-	
-	//TODO check
-	public boolean hasArrayReferenceDefined(String name) {
-		if(name == null) return false;
-		if(parameters != null && !parameters.isEmpty()) {
-			for(Parameter p: parameters ) {
-				if(p.name.equals(name) && p.type.equals(ArrayReference.ARRAY_STRING)) return true;
-			}
-		}
-		
-		return false;
-	}
-	
+
 	
 	public String toString () {
-		String str = instructionName.toUpperCase() + " ";
-		str += fuzzyAggregator + " ";
-		str += "PARAMETERS ";
-		for (int i=0; i<parameters.size()-1;i++)
-			str += parameters.get(i).toString() + ", ";
-		if (parameters.size() > 0)
-			str += parameters.get(parameters.size()-1).toString() + " ";
-		if (hasPrecondition())
-			str +="PRECONDITION " + preCondition.toString() + " ";
-		str += versusTypeString();
-		for (int i=0; i<forAll.size();i++)
-			str +=  forAll.get(i).toString() + " ";
+		StringJoiner sj;
+		String str = instructionName.toUpperCase() + " " + fuzzyAggregator + " ";
 		
+		sj = new StringJoiner (", ", "PARAMETERS ", " ");
+		for (int i=0; i<parameters.size(); i++)
+			sj.add(parameters.get(i).toString());
+		str += sj.toString();
+		
+		if (hasPrecondition())
+			str += "PRECONDITION " + preCondition.toString() + " ";
+		
+		if (hasSortList()) {
+			sj = new StringJoiner (", ", "SORT ", " ");
+			for (int i=0; i<sortList.size(); i++) 
+				sj.add(sortList.get(i).toString());
+			str += sj.toString();
+		}
+		
+		for (int i=0; i<forAllDeriveList.size();i++)
+			str +=  forAllDeriveList.get(i).toString() + " ";	
 		
 		str +="EVALUATE " + evaluate.toString() + " ";
 		if(!hasDefaultPolyline()) {
@@ -135,44 +115,46 @@ public class FuzzyAggregator extends Instruction{
 			str += " ]";
 		}
 		
-		return str + ";";
+		return str.trim() + ";";
 	}
-	
-	public String versusTypeString() {
-		if(versus == ASCENDING)
-			return "\n\tSORT ASC";
-		else if (versus == DESCENDING)
-			return "\n\tSORT DESC";
-		else return "";
-	}
-	
+
+
 	@Override
 	public String toMultilineString() {
+		StringJoiner sj;
 		String str = instructionName.toUpperCase() + " ";
-		str += fuzzyAggregator + "\n\t";
-		str += "PARAMETERS\n";
+		str += fuzzyAggregator;
+		str += "\n\tPARAMETERS";
 		for (int i=0; i<parameters.size()-1;i++)
-			str += "\t\t" + parameters.get(i).toString() + ",\n";
+			str += "\n\t\t" + parameters.get(i).toString() + ",";
 		if (parameters.size() > 0)
-			str += "\t\t" + parameters.get(parameters.size()-1).toString() + "\n";
-		if (hasPrecondition())
-			str +="\tPRECONDITION " + preCondition.toString();
-		str +=  versusTypeString();
-		for (int i=0; i<forAll.size();i++)
-			str += "\t" + forAll.get(i).toMultilineString(1);
+			str += "\n\t\t" + parameters.get(parameters.size()-1).toString();
 
+		if (hasPrecondition())
+			str +="\n\tPRECONDITION " + preCondition.toString();
+
+		if (hasSortList()) {
+			sj = new StringJoiner (",\n\t\t", "\n\tSORT\n\t\t", "");
+			for (int i=0; i<sortList.size(); i++) 
+				sj.add(sortList.get(i).toString());
+			str += sj.toString();
+		}
 		
+		for (int i=0; i<forAllDeriveList.size();i++)
+			str += forAllDeriveList.get(i).toMultilineString(1);
+
 		if(evaluate != null)
-			str +="\n\tEVALUATE " + evaluate.toString() + "\n";
+			str +="\n\tEVALUATE " + evaluate.toString();
+
 		if(!hasDefaultPolyline()) {
-			str +="\tPOLYLINE ";
+			str +="\n\tPOLYLINE ";
 			str +="\t\t[\t" + polyline.get(0).toString();				
 			for (int i=1; i<polyline.size();i++)
 				str += ",\n\t\t\t" + polyline.get(i).toString();
 			str += "\t]";
 		}
 		
-		return str + ";\n";
+		return str.trim() + ";\n";
 	}
 
 }

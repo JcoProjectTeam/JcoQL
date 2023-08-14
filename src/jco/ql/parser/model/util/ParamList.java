@@ -19,14 +19,13 @@ public class ParamList {
 		return false;
 	}
 	
-	/*public Parameter getParameter(String param) {
-		Parameter pa = null;
-		if (param == null)
-			return pa;
+	public Parameter get (String p){
+		if (p == null)
+			return null;
 		if (parameters != null)
 			for (int i=0; i<parameters.size();i++)
-				if ((parameters.get(i) != null) && (param.equals(parameters.get(i).name)))
+				if ((parameters.get(i) != null) && (p.equals(parameters.get(i).name)))
 					return parameters.get(i);
-		return pa;
-	}*/
+		return null;
+	}
 }

@@ -22,7 +22,12 @@ public class ParserTester {
 							" - Release " + env.getRelease() + 
 							":\tNumero di istruzioni analizzate: " + env.getNInstruction());
 
-			System.out.println("\nNumero di errori:\t" + env.getErrorList().size());
+			System.out.println("\nNumero di warning:\t" + env.getWarningList().size());
+		    // lista degli errori (eventuali)
+		    for (int i=0;i<env.getWarningList().size();i++)
+		    	System.out.println((i+1) + ".\t" + parser.getWarningList().get(i));
+
+		    System.out.println("\nNumero di errori:\t" + env.getErrorList().size());
 		    // lista degli errori (eventuali)
 		    for (int i=0;i<env.getErrorList().size();i++)
 		    	System.out.println((i+1) + ".\t" + parser.getErrorList().get(i));

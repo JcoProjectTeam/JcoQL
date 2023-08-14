@@ -10,18 +10,17 @@ import jco.ql.parser.model.condition.Condition;
  *
  */
 public class UsingPredicate extends Predicate {
-	public static final int USING_SUB_CONDITION 	= 1;
-	public static final int USING_FUZZY_SET 		= 2;
-	public static final int USING_FUZZY_OPERATOR	= 3;
-	public static final int USING_IF_FAILS			= 4;
-	public static final int USING_FUZZY_AGGREGATOR	= 5; // FI added
+	public static final int USING_SUB_CONDITION = 1;
+	public static final int USING_FUZZY_SET 	= 2;
+	public static final int USING_FUNCTION		= 3;
+	public static final int USING_IF_FAILS		= 4;
 
 	public int usingType;
 	public Condition subUsingCondition;
 	public String defaultValue;
 	public String fuzzySet;
-	public String fuzzyOperator;
-	public ArrayList<Expression> fuzzyOperatorParameters;
+	public String fuzzyFunction;
+	public ArrayList<Expression> fuzzyFunctionParameters;
 
 	public UsingPredicate () {
 		type = USING_PREDICATE;
@@ -29,8 +28,8 @@ public class UsingPredicate extends Predicate {
 		defaultValue = null;
 		subUsingCondition = null;
 		fuzzySet = null;
-		fuzzyOperator = null;
-		fuzzyOperatorParameters = null;
+		fuzzyFunction = null;
+		fuzzyFunctionParameters = null;
 	}
 
 	
@@ -48,9 +47,9 @@ public class UsingPredicate extends Predicate {
 			fuzzySet = fName;
 		}
 		else {
-			usingType = USING_FUZZY_OPERATOR;			
-			fuzzyOperator = fName;
-			fuzzyOperatorParameters = parameters;
+			usingType = USING_FUNCTION;			
+			fuzzyFunction = fName;
+			fuzzyFunctionParameters = parameters;
 		}
 	}
 
@@ -81,9 +80,9 @@ public class UsingPredicate extends Predicate {
 			str = "IF_FAILS (" + subUsingCondition.toString() + ", " + defaultValue + ")";
 		else if (usingType == USING_FUZZY_SET)
 			str = fuzzySet;
-		else if (usingType == USING_FUZZY_OPERATOR) {
-			str = fuzzyOperator + "(";
-			for (Expression e : fuzzyOperatorParameters)
+		else if (usingType == USING_FUNCTION) {
+			str = fuzzyFunction + "(";
+			for (Expression e : fuzzyFunctionParameters)
 				str += e.toString() + ", ";
 			str += "###)";
 			str = str.replace(", ###)", ")");
@@ -103,9 +102,9 @@ public class UsingPredicate extends Predicate {
 			str = tabs + "IF_FAILS (" + subUsingCondition.toString() + ", " + defaultValue + ")";
 		else if (usingType == USING_FUZZY_SET)
 			str = tabs + fuzzySet;
-		else if (usingType == USING_FUZZY_OPERATOR) {
-			str = tabs + fuzzyOperator + "(";
-			for (Expression e : fuzzyOperatorParameters)
+		else if (usingType == USING_FUNCTION) {
+			str = tabs + fuzzyFunction + "(";
+			for (Expression e : fuzzyFunctionParameters)
 				str += e.toString() + ", ";
 			str += "###)";
 			str = str.replace(", ###)", ")");

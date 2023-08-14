@@ -22,6 +22,15 @@ public class Expression extends Predicate {
 		terms = new ArrayList<ExpressionTerm>();
 		operators = new ArrayList<String>();
 	}
+	public Expression (ExpressionTerm t) {
+		this();
+		addTerm (t);
+	}
+	public Expression (ExpressionFactor f) {
+		this();
+		ExpressionTerm t = new ExpressionTerm (f);
+		addTerm(t);
+	}
 	
 
 	public ExpressionTerm getTerm (int ndx) {

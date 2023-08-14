@@ -3,6 +3,7 @@ package jco.ql.parser.model.predicate;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.StringJoiner;
 
 /**
  * 
@@ -26,7 +27,7 @@ public class FunctionFactor extends ExpressionFactor {
 	public static final int GEOMETRY_LENGTH_FUNCTION	= 32;
 	public static final int GEOMETRY_AREA_FUNCTION		= 33;
 	
-
+	// predefined functions
 	public static final String COUNT_STRING 			= "COUNT";
 	public static final String TO_STRING_STRING 		= "TO_STRING";
 	public static final String TO_INT_STRING 			= "TO_INT";
@@ -59,6 +60,15 @@ public class FunctionFactor extends ExpressionFactor {
 	}
 
 	
+	public FunctionFactor(String functionName, Expression expr) {
+		type = FUNCTION;
+		loadFunctionMap ();
+
+		this.functionName = functionName;
+		functionType = getFunctionType(functionName);
+		functionParams = new ArrayList<Expression>();
+		functionParams.add(expr);
+	}
 	public FunctionFactor(String functionName, List<Expression> params) {
 		type = FUNCTION;
 		loadFunctionMap ();
@@ -146,19 +156,19 @@ public class FunctionFactor extends ExpressionFactor {
 				return true;
 			else 
 				return false;
-		// Other Prefedined functions have just 1 parameter by default
+		// Other Prededined functions have just 1 parameter by default
 		return (functionParams.size() == 1);
 	}
 
 	
 	public String toString () {
 		String st = functionName + "(";			
-		if (functionParams != null) {
-			for (Expression e : functionParams)				
-				st += e.toString() + ", ";
-		}
-		st += "#####)####";
-		st = st.replace(", #####)####", ")").replace("#####)####", ")");
+		StringJoiner joiner = new StringJoiner(", ", st, ")");
+		for (Expression e : functionParams)				
+			joiner.add(e.toString());
+		st = joiner.toString();
+		if (exp != null)
+			st += "^" + exp.toString();
 		return st;
 	}
 }

@@ -46,7 +46,7 @@ public class CaseClause {
 	
 	
 	public String toString () {
-		String str = "CASE";
+		String str = "CASES";
 
 		for (int i=0; i<whereList.size(); i++)
 			str += " " + whereList.get(i).toString();
@@ -62,7 +62,7 @@ public class CaseClause {
 		String tabs = "\n";
 		for (int i=0; i<level; i++)
 			tabs += "\t";
-		String str = tabs + "CASE";
+		String str = tabs + "CASES";
 		tabs += "\t";
 
 		for (int i=0; i<whereList.size(); i++)

@@ -10,20 +10,20 @@ public class ArrayReference {
 	public static final String ARRAY_STRING 	= "ARRAY"; //costante per fare riferimento al tipo dei parametri della CREATE FUZZY AGGREGATOR
 	
 	
-	public String id_array;
+	public String idArray;
 	public Expression index; //può essere sia POS che un'espressione
-	public Field array_field;
+	public Field arrayField;
 	public int type;
 	
 	public ArrayReference(String id_array) {
-		this.id_array = id_array;
+		this.idArray = id_array;
 		this.type = UNDEFINED;
 		index = null;
-		array_field = null;			
+		arrayField = null;			
 	}
 	
 	public boolean hasFields() {
-		return !(array_field == null);
+		return !(arrayField == null);
 	}
 	
 	public boolean hasIndexPos() {
@@ -31,9 +31,9 @@ public class ArrayReference {
 	}
 	
 	public String toString() {
-		String str = id_array + "[" + index.toString() + "]";
+		String str = idArray + "[" + index.toString() + "]";
 		if(type == ARRAY_FIELD)
-			str += array_field.toString();
+			str += arrayField.toString();
 				
 		return str;
 	}

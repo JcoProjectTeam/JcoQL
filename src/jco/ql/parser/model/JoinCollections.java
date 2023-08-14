@@ -25,6 +25,7 @@ public class JoinCollections extends Instruction {
 	public int setGeometry;
 	String setGeometryStr;
 	public CaseClause caseClause;
+	public GenerateSection generateSection;
 	public SetFuzzySets setFuzzySets;
 	public List<AddField> addFields;
 	public boolean removeDuplicates;
@@ -40,6 +41,7 @@ public class JoinCollections extends Instruction {
 		setGeometry = GEOMETRY_UNDEFINED;
 		setGeometryStr = "";
 		caseClause = null;
+		generateSection = null;
 		setFuzzySets = null;
 		addFields = new ArrayList<AddField>();
 		removeDuplicates = false;
@@ -76,6 +78,16 @@ public class JoinCollections extends Instruction {
 	public boolean hasCaseClause () {
 		return caseClause != null;
 	}
+
+	public void setGenerateSection(GenerateSection gs) {
+		generateSection = gs;		
+	}
+
+	public boolean hasGenerateSection () {
+		return generateSection != null;
+	}
+	
+	
 
 	public void addAddField(AddField af) {
 		addFields.add(af);
@@ -116,6 +128,8 @@ public class JoinCollections extends Instruction {
 			str += " " + setFuzzySets.toString();
 		if (hasCaseClause())
 			str += " " + caseClause.toString();
+		if (hasGenerateSection())
+			str += " " + generateSection.toString();
 		if (removeDuplicates)
 			str += " REMOVE DUPLICATES";
 		
@@ -141,6 +155,8 @@ public class JoinCollections extends Instruction {
 			str += setFuzzySets.toMultilineString(1);
 		if (hasCaseClause())
 			str += caseClause.toMultilineString(1);
+		if (hasGenerateSection())
+			str += generateSection.toMultilineString(1);
 		if (removeDuplicates)
 			str += "\n\tREMOVE DUPLICATES";
 

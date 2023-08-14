@@ -13,7 +13,7 @@ public class LocallyClause {
 	
 	public String toString() {
 		
-		return "LOCALLY " + expression.toString() + " AS " + alias;
+		return expression.toString() + " AS " + alias;
 	}
 	
 	public String toMultilineString (int level) {

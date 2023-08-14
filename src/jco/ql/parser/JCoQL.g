@@ -27,7 +27,7 @@ options {
 
 @members{
 	public static final String version = "4.0";
-	public static final String release = "4.0.01";
+	public static final String release = "4.0.02";
  	Environment env;
 
   public JCoQLParser(JCoQLLexer lexer) {		
@@ -57,6 +57,10 @@ options {
   
   public List<String> getErrorList () {
     return env.errorList;
+  }
+
+  public List<String> getWarningList () {
+    return env.warningList;
   }
 
 
@@ -99,7 +103,7 @@ start
     | getDictionaryRule										// 16
     | lookupFromWebRule										// 17
     | createFuzzyAggregatorRule     			// 18 - Invernici
-    | createFuzzySetTypeRule							// 19 - Balicco
+    | createFuzzySetModelRule							// 19 - Balicco			FuzzySetType renamed in FuzzySetModel
     | createGenericFuzzySetOperatorRule		// 20 - Balicco
     | createJavaFunctionRule							// 21 PF news
     | test                      					// istruzione di test...
@@ -178,9 +182,14 @@ dropGeometryRule
 	
 caseClauseRule returns [CaseClause cc]
   :
-    CASE 												{ cc = new CaseClause (); }
+    ( c=CASES | c=CASE ) 						{ cc = env.newCaseClause ($c); }
 	      ( wc=whereCaseRule					{ cc.addWhereCase (wc); } )+	      
 	      ( oth=othersRule 						{ cc.setOthers (oth); }		)?
+	/* ( CASE
+			    generateSectionRule
+		|  CASES
+					whereCaseRule )
+			othersRule		*/	      
   ;
 
 
@@ -322,17 +331,41 @@ termRule returns [ExpressionTerm et]
     ( (s=MUL | s=DIV) f=factorRule 			{ et.addFactor(f, s.getText());}		)*
   ;
 
-  
+
 factorRule returns [ExpressionFactor ef]
   : 
-	  	LP op=orConditionRule RP						   		{ ef = new ExpressionFactor (op); }
+	  (	LP op=orConditionRule RP						   		{ ef = new ExpressionFactor (op); }
 	  |	fr=fieldRefRule														{ ef = new ExpressionFactor (fr); }
 	  | vl=valueRule															{	ef = new ExpressionFactor (vl);	}
 	  | x=ID LP (fp=functionParamsRule)? RP				{ ef = env.buildFunction ($x, fp); } 
-	  | e=specialFunctionRule											{	ef = e;	}
+	  | LB f=factorRule														{ ef = new ExpressionFactor (f); }
+	  		(	COMMA f=factorRule										{	ef.addArrayValue (f); }																			
+	  	)* RB
+	  | sf=specialFunctionRule										{	ef = sf; }
+	  )	
+	  (	EXP e=factorRule 													{	ef.addExp (e); } )?
   ;
 
 
+
+specialFunctionRule returns [SpecialFunctionFactor expr]
+	:
+			mt=MEMBERSHIP_TO 	LP fs=ID RP																						{	expr = env.buildMembershipTo ($mt, $fs); 	}
+		|	EXTENT 						LP fs=ID RP																						{	expr = env.buildExtent ($fs); 						}
+		| DEGREE 						LP fs=ID dg=FIELD_NAME? RP														{	expr = env.buildDegree ($fs, $dg);				}		// Balicco		
+		|	MEMBERSHIP_ARRAY 	LP																												
+			(	ALL 																																	{ expr = new MembershipArray (); }	
+			|	fuzzySet=ID FROM_ARRAY array=fieldRefRule															{ expr = env.createMembershipArray ($fuzzySet, array); }
+			| LB fuzzySet=ID  																											{ expr = env.createMembershipArray ($fuzzySet); }
+				( COMMA fuzzySet=ID																										{ env.addMembershipArray ((MembershipArray)expr, $fuzzySet); } 				)* 
+				RB
+			)	RP
+		| IF_ERROR					LP e=restrictedExpressionRule COMMA v=valueRule RP		{	expr = env.buildIfError (e, v); 					}
+		|	TRANSLATE 				LP e=restrictedExpressionRule COMMA dict=ID 
+				    							( COMMA cs=BOOLEAN 
+				    								( COMMA (d=APEX_VALUE | d=QUOTED_VALUE) )? )?	RP	{	expr = env.buildTranslate 	(e, $dict, $cs, $d); 	}	
+		| a=arrayFunctionRule 																										{ expr = a; }
+	;
 valueRule returns [Value vl]
   : 
   		n=INT           { vl = new Value (Value.INT, $n.getText()); 		}
@@ -343,16 +376,6 @@ valueRule returns [Value vl]
   ;
 
 
-specialFunctionRule returns [SpecialFunctionFactor expr]
-	:
-			f=MEMBERSHIP_TO LP mo=ID RP																							{	expr = env.buildMembershipTo ($mo); }
-		| f=DEGREE 				LP d1=ID d2=FIELD_NAME? RP															{	expr = env.buildDegree ($d1,$d2); 	}		// Balicco		
-		| f=IF_ERROR			LP e=restrictedExpressionRule COMMA v=valueRule RP			{	expr = env.buildIfError (e, v); 		}
-		|	f=TRANSLATE 		LP e=restrictedExpressionRule COMMA dict=ID 
-				    						( COMMA cs=BOOLEAN 
-				    							( COMMA (d=APEX_VALUE | d=QUOTED_VALUE) )? )?	RP		{	expr = env.buildTranslate 	(e, $dict, $cs, $d); 	}	
-		| a=arrayFunctionRule 																										{ expr = a; }
-	;
 	
 	
 arrayFunctionRule returns [ArrayFunctionFactor af]
@@ -400,11 +423,16 @@ restrictedTermRule returns [ExpressionTerm et]
   
 restrictedFactorRule returns [ExpressionFactor ef]
   : 
-	  	LP ex=restrictedExpressionRule RP					{ ef = new ExpressionFactor (ex); }
+		( LP ex=restrictedExpressionRule RP					{ ef = new ExpressionFactor (ex); }
 	  |	fr=fieldRefRule														{ ef = new ExpressionFactor (fr); }
 	  | vl=valueRule															{	ef = new ExpressionFactor (vl);	}
 	  | x=ID LP (fp=functionParamsRule)? RP				{ ef = env.buildFunction ($x, fp); } 
-	  | e = specialFunctionRule										{	ef = e;	}
+	  | LB f=restrictedFactorRule									{ ef = new ExpressionFactor (f); }
+	  		(	COMMA f=restrictedFactorRule					{	ef.addArrayValue (f); }																			
+	  	)* RB
+	  | sf = specialFunctionRule									{	ef = sf;	}
+	  )
+	  (	EXP e=restrictedFactorRule 								{	ef.addExp (e); } )?
   ;
 
   
@@ -451,28 +479,16 @@ checkForFuzzySetRule [GenerateSection gs]
 	;
 
 
-faUsingPredicateRule returns [UsingAggregatorPredicate p]
-  :
-  	id=ID							{ p = env.createUsingAggregatorPredicate($id); }
-		LP 
-		(	m=MEMBERSHIP_TO 												{ env.checkMembershipToken ($m); }
-			(	ALL 																			{ p.aggregatorType =  UsingAggregatorPredicate.ALL_MEMBERSHIP_IN_DOCUMENT;}	
-			|	fuzzySet=ID FROM_ARRAY array=FIELD_NAME		{ env.setUsingAggregateFromArray(p, $fuzzySet, $array);}
-			| LB fuzzySet=ID  													{ p.aggregatorType =  UsingAggregatorPredicate.SELECTED_FUZZY_SET_IN_DOCUMENT; env.setUsingAggregateInDocument(p, $fuzzySet);}
-				(',' fuzzySet=ID 													{ env.setUsingAggregateInDocument(p, $fuzzySet);})* RB)		
-			)
-			( COMMA exp=restrictedExpressionRule 		{ p.parameters.add(exp);} )* 
-		 RP      
-	;
-	
-/* Fine modifiche Invernici*/
-	
+
 usingOrConditionRule returns [Condition c]
   : 
     c1=usingAndConditionRule 						{ c = new ConditionOr (c1); }
 			( OR c2=usingAndConditionRule 					{ ((ConditionOr)c).addCondition (c2); } 	)*
 																		{ c = env.simplifyConditionOr ((ConditionOr)c); }
   ;
+
+/* Fine modifiche Invernici*/
+	
 
  
 usingAndConditionRule returns [Condition c]
@@ -493,9 +509,9 @@ usingNotConditionRule returns [Condition c]
 //FI modified
 usingPredicateRule returns [Predicate p]
   :
-  	LP c=usingOrConditionRule RP										{	p = new UsingPredicate (c); }
-	| x=ID (LP (fp=functionParamsRule)? RP)?					{	p = new UsingPredicate ($x.getText(), fp); }        
-	| AGGREGATE THROUGH fe=faUsingPredicateRule				{p = fe;}
+  	LP c=usingOrConditionRule RP														{	p = new UsingPredicate (c); }
+	| x=ID (LP (fp=functionParamsRule)? RP)?									{	p = new UsingPredicate ($x.getText(), fp); }        
+//	| AGGREGATE THROUGH fe=faUsingPredicateRule				{ p = fe;}
 	| IF_FAILS LP 
 			c=usingOrConditionRule COMMA n=numericRule 		{ p = new UsingPredicate (c, n); }
 		RP
@@ -625,7 +641,7 @@ saveAsRule
 
 lookupFromWebRule
 	:	
-		LOOKUP FROM WEB 					{	LookupFromWeb gfw = env.addLookupFromWeb ();	}
+		LOOKUP FROM_WEB 					{	LookupFromWeb gfw = env.addLookupFromWeb ();	}
 			(	fe=forEachRule					{	gfw.addForEach (fe);	}	)+
 		SC		
 	;
@@ -646,17 +662,20 @@ joinOfCollectionsRule
 	    (	SET GEOMETRY ( g=INTERSECTION | g=RIGHT | g=LEFT | g=ALL )				{ jc.setSetGeometry ($g.getText()); }	)?
       ( addFieldsRule [jc] 																																											)?
       ( sfs=setFuzzySetsRule																							{ jc.setSetFuzzySets (sfs);	}					)?
-	    ( cc=caseClauseRule 																								{ jc.setCaseClause (cc); }						)?	    
+	    ( cc=caseClauseRule 																								{ jc.setCaseClause (cc); }						
+	    |	gs=generateSectionRule [true]																			{	jc.setGenerateSection (gs);	}				)?
       ( REMOVE DUPLICATES 																								{	jc.setRemoveDuplicates();	}					)?  
     SC   
   ;
   
 
 filterRule 
+@init {	Filter f=null;	}
   : 
   	FILTER 
-       fc=caseClauseRule 						{ Filter f = env.addFilter (fc); }
-      ( REMOVE DUPLICATES 						{	f.setRemoveDuplicates(); }				)?  
+  		(	fc=caseClauseRule 							{ f = env.addFilter (fc); }
+  		|	gs=generateSectionRule [true]		{	f = env.addFilter (gs);	}			)
+      ( REMOVE DUPLICATES 							{	f.setRemoveDuplicates(); }		)?  
     SC
   ;
   
@@ -841,55 +860,113 @@ createFuzzyOperatorRule
 		SC
 	;  
 	
-/* Aggiunta Invernici*/
+	
+/* ********* START Invernici contribution ********* */
 
-aggSpecRule [FuzzyAggregator fa, ForAllClause fac] returns [AggregateClause ac]:	
-	(with_type=withSpec)? e=faExpressionRule [fa, fac] AS alias=ID { ac = env.createAggregateClause(with_type, e, $alias, fa, fac);}
-	;
 createFuzzyAggregatorRule
 	:	
-	CREATE FUZZY AGGREGATOR f=ID  								{ FuzzyAggregator fa = env.addFuzzyAggregator ($f); }
-	PARAMETERS 
-		p=faParameterRule [fa.getParamList()]					{ fa.parameters.add (p); }
-		( COMMA p=faParameterRule [fa.getParamList()]				{ fa.parameters.add (p);}   )* 	
-	( PRECONDITION pc=jfOrConditionRule [fa.getParamList(), false]			{ fa.preCondition = pc; }			)?
-	(SORT v=VERSUS 									{ env.setVersusFuzzyAggregator(fa,$v.getText());})?
-	fac = forAllRule[fa]								{ fa.forAll.add(fac);}
-	(COMMA fac=forAllRule [fa]							{ fa.forAll.add(fac);})*
-	EVALUATE e=faExpressionRule [fa, null] 						{ env.setEvaluateClause(fa, e); } 
-	(	POLYLINE LB
-			LP x=numericRule COMMA y=numericRule RP				{ env.addFuzzyAggregatorPolylinePoint (fa, x, y); }
-			( COMMA LP x=numericRule COMMA y=numericRule RP 		{ env.addFuzzyAggregatorPolylinePoint (fa, x, y); }		)+
-		RB )?
-	SC
+		CREATE FUZZY AGGREGATOR n=ID  																		{ FuzzyAggregator fa = env.addFuzzyAggregator ($n); }
+			PARAMETERS 
+				faParameterRule [fa]																						
+				( COMMA faParameterRule [fa]																																			)* 		
+			( PRECONDITION pc=jfOrConditionRule [fa.getParamList(), false]			{ fa.preCondition = pc; }				)?
+			( faSortRule[fa]																																										)?
+			(	f=faForAllRule[fa]																								{ fa.forAllDeriveList.add(f); }
+			| d=faDeriveRule[fa]																								{ fa.forAllDeriveList.add(d); }	)+
+			EVALUATE e=faExpressionRule [fa, null] 															{ fa.evaluate = e; } 
+			(	POLYLINE LB
+					LP x=numericRule COMMA y=numericRule RP													{ env.addFuzzyAggregatorPolylinePoint (fa, x, y); }
+					( COMMA LP x=numericRule COMMA y=numericRule RP 								{ env.addFuzzyAggregatorPolylinePoint (fa, x, y); }		)+
+				RB )?
+		SC
 	;
 
 	
-withSpec returns [String s]:
-	 WITH (x=SUM | x=PRODUCT | x=DIVISION | x=SUBTRACTION | x=MINIMUM | x=MAXIMUM) {s = $x.getText();}
+faForAllRule [FuzzyAggregator fa]returns [ForAllClause fac]
+	: 
+		FOR ALL v=ID IN ar=ID  															{ fac = env.createForAllClause($v, $ar, fa);	}
+			( LB 	x1=faExpressionRule [fa, null] 								{ fac.firstIndex = x1; }
+					COMMA	x2=faExpressionRule [fa, null] RB 				{ fac.lastIndex  = x2; }														)? 
+			( LOCALLY e=faExpressionRule [fa, fac] AS id=ID 		{ env.createLocallyClause(fac, $id, e, fa); 	} 	
+				(	COMMA e=faExpressionRule [fa, fac] AS id=ID 		{ env.createLocallyClause(fac, $id, e, fa); 	} )* 	)?
+			AGGREGATE ac=aggSpecRule [fa, fac]									{ fac.aggregate.add(ac);}
+			( COMMA ac=aggSpecRule [fa, fac]										{ fac.aggregate.add(ac);}														)*
+			
+	;
+
+
+faDeriveRule [FuzzyAggregator fa] returns [DeriveClause dc]
+	: 
+		DERIVE e=faExpressionRule [fa, null] AS id=ID 		{ dc = env.createDeriveClause($id, e, fa); 		} 
+	;
+
+
+faSortRule [FuzzyAggregator fa]
+	:
+		SORT s1=faArraySortRule[fa]				{	fa.sortList.add(s1); }
+			( COMMA s2=faArraySortRule[fa] 	{	fa.sortList.add(s2); }	)*
+	;
+
+
+faArraySortRule [FuzzyAggregator fa] returns [SortFuzzyAggregatorElement sfae]
+@init{ sfae = new SortFuzzyAggregatorElement (); }
+	:
+			faArrayIndexRule[fa, sfae] 
+				BY  faSortFieldRule[fa, sfae] 
+					( COMMA faSortFieldRule[fa, sfae] )* 
+				AS i1=ID																			{ env.setFuzzyAggregatorNewArray (fa, sfae, $i1); }
+		| LP faArrayIndexRule[fa, sfae] 
+				( COMMA faArrayIndexRule[fa, sfae]  )+ RP 
+				BY faSortFieldRule[fa, sfae] 
+					( COMMA faSortFieldRule[fa, sfae] )* 
+				AS LP i2=ID 																	{ env.setFuzzyAggregatorNewArray (fa, sfae, $i2); }
+					( COMMA i3=ID																{ env.setFuzzyAggregatorNewArray (fa, sfae, $i3); }		)+ RP
+																											{	env.checkFuzzyAggregatorSortingList (sfae); }
+	;
+
+faArrayIndexRule [FuzzyAggregator fa, SortFuzzyAggregatorElement sfae]
+	:
+		i=ID IN a=ID										{ env.addFuzzyAggregatorSortingArray (fa, sfae, $i, $a); }
+	;
+
+faSortFieldRule [FuzzyAggregator fa, SortFuzzyAggregatorElement sfae]
+	:
+		i=ID (f=fieldRefRule)?  					
+		TYPE t=ID 
+		( v=VERSUS )?											{ env.addFuzzyAggregatorSortingField (fa, sfae, $i, f, $t, $v); }
+	;
+	
+
+aggSpecRule [FuzzyAggregator fa, ForAllClause fac] returns [AggregateClause ac]
+	:	
+		( wt=withSpec )? 
+		e=faExpressionRule [fa, fac] 
+		AS a=ID 													{ ac = env.createAggregateClause(wt, e, $a, fa, fac);}
+	;
+
+withSpec returns [String s]
+	:
+		 WITH (	x=SUM 
+		 			| x=PRODUCT 
+		 			| x=MINIMUM 
+		 			| x=MAXIMUM ) 							{s = $x.getText();}
 	 ;
 	
-forAllRule [FuzzyAggregator fa]returns [ForAllClause fac]: 
-	FOR ALL array_id=ID  						{fac = env.createForAllClause($array_id, fa);}
-	(IN LP x1=faExpressionRule [fa, null] COMMA x2=faExpressionRule [fa, null] RP 	{fac.firstIndex = x1; fac.lastIndex=x2;})? 
-	(LOCALLY e=faExpressionRule [fa, fac] AS id=ID 				{env.createLocallyClause(fac, $id, e, fa);})*
-	AGGREGATE ac=aggSpecRule [fa, fac]				{ fac.aggregate.add(ac);}
-	( COMMA ac=aggSpecRule		[fa, fac]				{ fac.aggregate.add(ac);})*
-	;
 
-faParameterRule [ParamList pl] returns [Parameter p]
+faParameterRule [FuzzyAggregator fa] 
 	:	
-		v=ID										{	env.checkParameterDeclaration ($v, pl); } 
-		TYPE (t=ID|t=ARRAY)								{	p = env.createParameter ($v, $t); }
+		p=ID															
+		TYPE (t=ID | t=ARRAY)							{	env.createFAParameter (fa, $p, $t); 			}
 	;
 
-/*Fine aggiunta*/
+/* ********* END Invernici contribution ********** */
+
 
 jfOrConditionRule [ParamList pl, boolean jsCaller] returns [Condition c]
   : 
     c1=jfAndConditionRule [pl, jsCaller] 						{ c = new ConditionOr (c1); }
-			( OR c2=jfAndConditionRule [pl, jsCaller] 					{ ((ConditionOr)c).addCondition (c2); } 	)*
-																								{ c = env.simplifyConditionOr ((ConditionOr)c); }
+			( OR c2=jfAndConditionRule [pl, jsCaller] 				{ ((ConditionOr)c).addCondition (c2); } 	)*
+																							{ c = env.simplifyConditionOr ((ConditionOr)c); }
   ;
 
  
@@ -944,13 +1021,15 @@ jfTermRule [ParamList pl, boolean jsCaller] returns [ExpressionTerm et]
   
 jfFactorRule [ParamList pl, boolean jsCaller] returns [ExpressionFactor expr]
   : 
-	  	LP op=jfOrConditionRule [pl, jsCaller] RP										{ expr = new ExpressionFactor (op); }
+	  (	LP op=jfOrConditionRule [pl, jsCaller] RP										{ expr = new ExpressionFactor (op); }
 	  | v=INT																												{ expr = new ExpressionFactor (new Value(Value.INT, $v.getText())); }
 	  | v=FLOAT																											{ expr = new ExpressionFactor (new Value(Value.FLOAT, $v.getText())); }
 	  | v=APEX_VALUE																								{ expr = new ExpressionFactor (new Value(Value.APEX, $v.getText())); }
 	  | v=QUOTED_VALUE																							{ expr = new ExpressionFactor (new Value(Value.QUOTED, $v.getText())); }
 	  | x=ID 																												
-	  		(p1=LP (fp=jfFunctionParamsRule [pl, jsCaller])? RP)? 		{ expr = env.checkJFFactor($x, $p1, fp, pl, jsCaller); }        
+	  		(	p1=LP (fp=jfFunctionParamsRule [pl, jsCaller])? RP)? 		{ expr = env.checkJFFactor($x, $p1, fp, pl, jsCaller); }        
+	  ) 
+	  (	EXP e=jfFactorRule [pl, jsCaller]														{	expr.addExp (e); } )?
   ;
   
 
@@ -967,34 +1046,46 @@ jfFunctionParamsRule [ParamList pl, boolean jsCaller] returns [ArrayList<Express
 faExpressionRule [FuzzyAggregator fa, ForAllClause fac] returns [Expression expr]
 @init { expr = new Expression (); }
   : 
-  	(	t=faTermRule	[fa, fac]								{ expr.addTerm (t, null); }
-  	|	(s=ADD | s=SUB) t=faTermRule	[fa, fac]	{ expr.addTerm (t, $s.getText()); } )
-    ( (s=ADD | s=SUB) t=faTermRule  	[fa, fac]	{ expr.addTerm (t, $s.getText()); }	)*
+  	(	t=faTermRule	[fa, fac]									{ expr.addTerm (t, null); }
+  	|	(s=ADD | s=SUB) t=faTermRule [fa, fac]	{ expr.addTerm (t, $s.getText()); } )
+    ( (s=ADD | s=SUB) t=faTermRule [fa, fac]	{ expr.addTerm (t, $s.getText()); }	)*
   ;
   
 faTermRule [FuzzyAggregator fa, ForAllClause fac] returns [ExpressionTerm et]
 @init { et = new ExpressionTerm (); }
   : 
-  	f=faFactorRule 		[fa, fac]			{ et.addFactor(f, null);}
-    ( (s=MUL | s=DIV) f=faFactorRule  		[fa, fac]	{ et.addFactor(f, s.getText());}		)*
+  	f=faFactorRule 	[fa, fac]										{ et.addFactor(f, null);}
+    ( (s=MUL | s=DIV) f=faFactorRule  [fa, fac]	{ et.addFactor(f, s.getText());}		)*
   ;
   
   
 faFactorRule [FuzzyAggregator fa, ForAllClause fac] returns [ExpressionFactor expr]
   : 
-  	LP op= faExpressionRule [fa, fac] RP					{ expr = new ExpressionFactor (op); }
-	  | v=INT								{ expr = new ExpressionFactor (new Value(Value.INT, $v.getText())); }
-	  | v=FLOAT								{ expr = new ExpressionFactor (new Value(Value.FLOAT, $v.getText())); }
-	  | v=APEX_VALUE							{ expr = new ExpressionFactor (new Value(Value.APEX, $v.getText())); }
-	  | v=QUOTED_VALUE							{ expr = new ExpressionFactor (new Value(Value.QUOTED, $v.getText()));}
-	  | v=POS 								{ expr = new ExpressionFactor (new Value(Value.POS, $v.getText()));}
-	  | x=ID (ref=faArrayRefRule [x, fa])?				{ expr = env.setExprFromArrayRef(x, ref, fa, fac);}
-	  																			
-	  		/*(p1=LP (fp=jfFunctionParamsRule [pl, jsCaller])? RP)? 		{ expr = env.checkJFFactor($x, $p1, fp, pl, jsCaller); } */       
+  	(	LP op= faExpressionRule [fa, fac] RP								{ expr = new ExpressionFactor (op); }
+	  | v=INT																								{ expr = new ExpressionFactor (new Value(Value.INT, $v.getText())); }
+	  | v=FLOAT																							{ expr = new ExpressionFactor (new Value(Value.FLOAT, $v.getText())); }
+	  | v=APEX_VALUE																				{ expr = new ExpressionFactor (new Value(Value.APEX, $v.getText())); }
+	  | v=QUOTED_VALUE																			{ expr = new ExpressionFactor (new Value(Value.QUOTED, $v.getText())); }
+	  | v=POS 																							{ expr = new ExpressionFactor ($v.getText()); }
+	  | x=ID	( ref=faArrayRefRule [x, fa]
+	  				| LP fp=faFunctionParamsRule [fa, fac] RP )?	{ expr = env.setFuzzyAggregatorExprFromArrayRef($x, fp, ref, fa, fac);}
+	  )
+	  (	EXP e=faFactorRule [fa, fac]												{	expr.addExp (e); } )?
   ;
   
-faArrayRefRule [Token id, FuzzyAggregator fa] returns [ArrayReference ref]:	
-	LB (e=faExpressionRule [fa, null]) RB (f = fieldRefRule)? { ref = env.setArrayRef(id, e, f);}
+
+faFunctionParamsRule [FuzzyAggregator fa, ForAllClause fac] returns [ArrayList<Expression> params]
+  @init{ params = new ArrayList<Expression>(); }
+  : 
+  	e=faExpressionRule [fa, fac] 								{ params.add(e); }
+    	( COMMA e=faExpressionRule [fa, fac] 				{ params.add(e); }		)*
+  ;
+
+
+faArrayRefRule [Token id, FuzzyAggregator fa] returns [ArrayReference ref]
+	:	
+		LB (e=faExpressionRule [fa, null]) RB 
+		(f = fieldRefRule)? { ref = env.setArrayRef(id, e, f);}
 	;
 
 
@@ -1002,42 +1093,42 @@ faArrayRefRule [Token id, FuzzyAggregator fa] returns [ArrayReference ref]:
 ******************     START MATTEO BALICCO      ******************
 ***************************************************************** */
 
-createFuzzySetTypeRule: 
-		CREATE TYPE OF FUZZY SET	t=ID			{ FuzzySetType ft = env.addFuzzySetType ($t);	} 
-		DEGREES 		p=ID										{ env.addDegreeType(ft, $p); }
-				( COMMA p=ID									{ env.addDegreeType(ft, $p); }	)* 	 			
-		(	DERIVED DEGREES	n=ID 					{ env.checkDerivedDegree(ft, $n);  }
-			AS e=ftExpressionRule[ft.getDegreesList()]			{ env.addDerivedDegree(ft, $n, e); }
-				(	COMMA 			n=ID 														{ env.checkDerivedDegree(ft, $n);  }
-					AS e=ftExpressionRule[ft.getDegreesList()]	{ env.addDerivedDegree(ft, $n, e); }	)*
-		)?
-		( CONSTRAINT c=jfOrConditionRule	[ft.getAllDegreesList(), false]	{ ft.constraint=c; }	)?	
-		( fo=ftOperator[ft] )*
+createFuzzySetModelRule: 
+		CREATE FUZZY SET	MODEL t=ID			{ FuzzySetModel fm = env.addFuzzySetModel ($t);	} 
+			DEGREES 		p=ID										{ env.addDegreeType(fm, $p); }
+					( COMMA p=ID									{ env.addDegreeType(fm, $p); }	)* 	 			
+			(	DERIVED DEGREES	n=ID 					{ env.checkDerivedDegree(fm, $n);  }
+				AS e=ftExpressionRule[fm.getDegreesList()]			{ env.addDerivedDegree(fm, $n, e); }
+					(	COMMA 			n=ID 														{ env.checkDerivedDegree(fm, $n);  }
+						AS e=ftExpressionRule[fm.getDegreesList()]	{ env.addDerivedDegree(fm, $n, e); }	)*
+			)?
+			( CONSTRAINT c=jfOrConditionRule	[fm.getAllDegreesList(), false]		{ fm.constraint=c; }		)?	
+			( fo=fuzzyOperatorDefinitionRule[fm] )*
 		SC	
 ;
 
-ftOperator[FuzzySetType ft] returns [FuzzyOperatorDefinition defOp]
+fuzzyOperatorDefinitionRule[FuzzySetModel fm] returns [FuzzyOperatorDefinition defOp]
 @init { defOp = new FuzzyOperatorDefinition(); }:	
-	OPERATOR o=(OR|AND|NOT)						{	boolean isNot = env.setFuzzyOperatorType(defOp,o);	}	
-	(	EVALUATE x=ID AS  								{	env.checkOperatorDegree(defOp,$x,ft.getDegreesList());		}
-		exp=ftConditionExpressionRule[ft.getDegreesList(), isNot]	{	env.addOperatorDegree(defOp,$x,exp,ft.getDegreesList());	}	
-	)+	{ env.addOperatorDefinition(ft,defOp,$o); }								
+	OPERATOR o=(OR | AND | NOT)																			{	boolean isNot = env.setFuzzyOperatorType(defOp, $o);	}	
+	(	EVALUATE x=ID AS  																							{	env.checkOperatorDegree(defOp, $x, fm);	}
+		exp=ftConditionExpressionRule[fm.getDegreesList(), isNot]				{	env.addOperatorDegree(defOp, $x, exp);	}	
+	)+																															{ env.addOperatorDefinition(fm, defOp, $o); }								
 ;
 
 createGenericFuzzySetOperatorRule:
-		CREATE t=ID FUZZY OPERATOR n=ID										{ GenericFuzzyOperator fgo = env.addGenericFuzzyOperator($t, $n); }
-		PARAMETERS p=parameterRule	[fgo.getParamList()] 									{ fgo.parameters.add (p); }
-			( COMMA  p=parameterRule	[fgo.getParamList()]										{ fgo.parameters.add (p); } )*
-		( PRECONDITION pc=jfOrConditionRule [fgo.getParamList(), false]		{ fgo.precondition = pc; }	)?
+		CREATE t=ID FUZZY OPERATOR n=ID											{ GenericFuzzyOperator gfo = env.addGenericFuzzyOperator($t, $n); }
+		PARAMETERS p=parameterRule	[gfo.getParamList()] 									{ gfo.parameters.add (p); }
+			( COMMA  p=parameterRule	[gfo.getParamList()]										{ gfo.parameters.add (p); } 	)*
+		( PRECONDITION pc=jfOrConditionRule [gfo.getParamList(), false]		{ gfo.precondition = pc; }			)?
 		(	
 			EVALUATE g=ID 																				{ Parameter ev = env.createFgoParameter ($g); } 
-			AS e=jfExpressionRule [fgo.getParamList(), false]			{ FuzzyPolyline fp = env.manageEvaluate(fgo,ev,e); }
+			AS e=jfExpressionRule [gfo.getParamList(), false]			{ FuzzyPolyline fp = env.manageEvaluate(gfo, ev, e); }
 			( 	
 				POLYLINE	LB				
-					LP x=numericRule COMMA y=numericRule RP						{ env.addFuzzyPolylinePoint (fp, x, y); }
-					( COMMA LP x=numericRule COMMA y=numericRule RP 	{ env.addFuzzyPolylinePoint (fp, x, y); }	)+
+					LP x=numericRule COMMA y=numericRule RP							{ env.addFuzzyPolylinePoint (fp, x, y); }
+					( COMMA LP x=numericRule COMMA y=numericRule RP 		{ env.addFuzzyPolylinePoint (fp, x, y); }		)+
 				RB																	
-			)?			{ fgo.polylines.add(fp); }
+			)?																										{ gfo.polylines.add(fp); }
 		)+
 		SC		
 ;
@@ -1048,22 +1139,22 @@ createGenericFuzzySetOperatorRule:
 ftExpressionRule[ParamList pl] returns [Expression expr]
 @init { expr = new Expression (); }
   : 
-  	(	t=ftTermRule[pl]				{ expr.addTerm (t, null); }
+  	(	t=ftTermRule[pl]										{ expr.addTerm (t, null); }
   	|	(s=ADD | s=SUB) t=ftTermRule[pl]		{ expr.addTerm (t, $s.getText()); } )
-    ( (s=ADD | s=SUB) t=ftTermRule[pl] 			{ expr.addTerm (t, $s.getText()); }	)*
+    ( (s=ADD | s=SUB) t=ftTermRule[pl] 		{ expr.addTerm (t, $s.getText()); }	)*
   ;
 
 ftTermRule[ParamList pl] returns [ExpressionTerm et]
 @init { et = new ExpressionTerm (); }
   : 
-  	f=ftFactorRule[pl]				{ et.addFactor(f, null);}
+  	f=ftFactorRule[pl]												{ et.addFactor(f, null);}
     ( (s=MUL | s=DIV) f=ftFactorRule[pl] 			{ et.addFactor(f, s.getText());}		)*
   ;
   
 ftFactorRule[ParamList pl] returns [ExpressionFactor ef]: 
-	  	LP op=ftExpressionRule[pl] RP		{ ef = new ExpressionFactor (op); }
-	  | vl=ftValueRule				{ ef = new ExpressionFactor (vl); }
-	  |	x=ID					{ ef = env.checkDegree(pl,$x);	 }
+	  	LP op=ftExpressionRule[pl] RP										{ ef = new ExpressionFactor (op); }
+	  | vl=ftValueRule																	{ ef = new ExpressionFactor (vl); }
+	  |	x=ID																						{ ef = env.checkDegree(pl,$x);	 }
 	  | x=ID LP (fp=ftFunctionParamsRule[pl])? RP				{ ef = env.buildFunction ($x, fp); } 
 	  | e=specialFunctionRule			{ ef = e; }
 ;
@@ -1088,7 +1179,7 @@ ftConditionExpressionRule[ParamList pl, boolean isNot] returns [Expression expr]
 : 
   	(	t=ftConditionTermRule[pl,isNot]												{ expr.addTerm (t, null); }
   	|	(s=ADD | s=SUB) t=ftConditionTermRule[pl,isNot]				{ expr.addTerm (t, $s.getText()); } )
-    ( (s=ADD | s=SUB) t=ftConditionTermRule[pl,isNot] 		{ expr.addTerm (t, $s.getText()); } )*
+    ( (s=ADD | s=SUB) t=ftConditionTermRule[pl,isNot] 			{ expr.addTerm (t, $s.getText()); } )*
 ;
 
 
@@ -1101,11 +1192,11 @@ ftConditionTermRule[ParamList pl, boolean isNot] returns [ExpressionTerm et]
   
 ftConditionFactorRule[ParamList pl, boolean isNot] returns [ExpressionFactor ef]
 : 
-	  	LP op=ftConditionExpressionRule[pl,isNot] RP	{ ef = new ExpressionFactor (op); }
-	  | vl=ftConditionValueRule				{ ef = new ExpressionFactor (vl); }
-	  |	x=ID		f=FIELD_NAME							{ ef = env.makeExpDegree($x,$f,isNot,pl); }
-	  | x=ID LP (fp=ftConditionFunctionParamsRule[pl,isNot])? RP				{ ef = env.buildFunction ($x, fp); } 
-	  | e=specialFunctionRule					{ ef = e; }
+	  	LP op=ftConditionExpressionRule[pl,isNot] RP								{ ef = new ExpressionFactor (op); }
+	  | vl=ftConditionValueRule																			{ ef = new ExpressionFactor (vl); }
+	  |	x=ID	f=FIELD_NAME																					{ ef = env.makeExpDegree($x, $f, isNot, pl); }
+	  | x=ID LP (fp=ftConditionFunctionParamsRule[pl,isNot])? RP		{ ef = env.buildFunction ($x, fp); } 
+	  | e=specialFunctionRule																				{ ef = e; }
 ;	
  
   
@@ -1188,136 +1279,136 @@ OR  : 'OR';
 NOT : 'NOT';
 
 // keywords
-ADDING					: 'ADDING';
-ADD_ST  	 			: 'ADD';
-AGGREGATE 	    : 'AGGREGATE';
-AGGREGATOR			: 'AGGREGATOR';
-ALL         	  : 'ALL';
-ALPHACUT				:	'ALPHACUT';
-ARRAY   	      : 'ARRAY';
-ARRAY_FUNCTION	:	( 'MIN' | 'MAX' | 'AVG' | 'SUM') '_ARRAY';
-AS        	    : 'AS';
-BODY						:	'BODY' 							{	env.disableScannerError();	}; 
-END_BODY				:	'END' WS 'BODY' 		{	env.enableScannerError();		};
-BOOLEAN 	      : 'TRUE' | 'FALSE';
-BUILD 					: 'BUILD';
-BY          	  : 'BY';
-CALL          	: 'CALL';
-CASE          	: 'CASE';
-CHECK_FOR				: 'CHECK' WS 'FOR';
-CLASS						: 'CLASS';
-COLLECTION  	  : 'COLLECTION';
-COLLECTIONS   	: 'COLLECTIONS';
-CONSTRAINT			: 'CONSTRAINT';
-CREATE					: 'CREATE';							
-DB      	      : 'DB';
-DEFAULT					: 'DEFAULT';
-DEFUZZIFY				:	'DEFUZZIFY';
-DEGREE					: 'DEGREE';
-DEGREES					: 'DEGREES';
-DERIVED					: 'DERIVED';
-DICTIONARY			:	'DICTIONARY';
-DIRECTION				:	'DIRECTION';
-DISTANCE				:	'DISTANCE';
-DIVISION 				: 'DIVISION';
-DOCUMENTS				:	'DOCUMENTS';
-DROP  	        : 'DROP';
-DROPPING      	: 'DROPPING';
-DUPLICATES  	  : 'DUPLICATES';
-EACH						: 'EACH';
-EXPAND    	    : 'EXPAND';
-EVALUATE				:	'EVALUATE';
-FIELD						: 'FIELD';
-FIELDS					: 'FIELDS';
-FILTER    	    : 'FILTER';
-FIRST	  	      : 'FIRST';
-FOR							: 'FOR';
-FROM						: 'FROM';
-FROM_WEB 				:	 'FROM WEB';
-FROM_ARRAY			: 'FROM ARRAY';
-FUNCTION				: 'FUNCTION';
-FUZZY						: 'FUZZY';
-GENERATE				:	'GENERATE';
-GEOMETRY  	    : 'GEOMETRY';
-GET         	  : 'GET';
-GROUP         	: 'GROUP';
-GROUPING	      : 'GROUPING';
-HOWINCLUDE			:	'HOW_INCLUDE';
-HOWINTERSECT		:	'HOW_INTERSECT';
-HOWMEET					:	'HOW_MEET';
-IF_ERROR				: 'IF_ERROR';
-IF_FAILS				: 'IF_FAILS';
-IMPORT					: 'IMPORT';
-INCLUDED    	  : 'INCLUDED';
-INPUT		      	: 'INPUT';
-INRANGE		      : 'IN_RANGE';
-INTERSECT				: 'INTERSECT';
-INTERSECTION	  : 'INTERSECTION';
-IN							: 'IN';
-INTO	          : 'INTO';
-ISNULL					: 'IS' WS 'NULL';
-ISNOTNULL				: 'IS' WS 'NOT' WS 'NULL';
-JOIN      	    : 'JOIN';
-JAVA						: 'JAVA';
-JAVASCRIPT			: 'JAVASCRIPT';
-KEEP        	  : 'KEEP';
-KEEPING       	: 'KEEPING';
-KNOWN						:	'KNOWN';
-LAST  	        : 'LAST';
-LEFT    	      : 'LEFT';
-LOCALLY					: 'LOCALLY';
-LOOKUP 					:	'LOOKUP';
-MATCHING  	    : 'MATCHING';
-MAXIMUM					: 'MAXIMUM';
-MEET        	  : 'MEET';
-MEMBERSHIP_TO 	:	'MEMBERSHIP_TO' | 'MEMBERSHIP_OF' ;	
-MERGE         	: 'MERGE';
-MIN_SIMILARITY	:	'MIN' WS 'SIMILARITY';
-MINIMUM 				: 'MINIMUM';
-OF        	    : 'OF';
-ON       	  	  : 'ON';
-OPERATOR 				: 'OPERATOR';
-ORIENTATION  	  : 'ORIENTATION';
-OTHERS					: 'OTHERS';
-ORDER						: 'ORDER' | 'SORTED';
-PARAMETERS			:	'PARAMETERS';
-PARTITION 			: 'PARTITION';
-POINT						: 'POINT';
-POLYLINE				:	'POLYLINE';
-POS			: 'POS';
-PRECONDITION		:	'PRECONDITION';
-PRODUCT  	: 'PRODUCT';
-RESOLVING				:	'RESOLVING';
-RIGHT     	    : 'RIGHT';
-REMOVE      	  : 'REMOVE';
-SAVE          	: 'SAVE';
-SERVER     	  	: 'SERVER';
-SET        	  	: 'SET';
-SETS        	  : 'SETS';
-SETTING  	    	: 'SETTING';
-SORT			: 'SORT';
-SUBTRACT  	    : 'SUBTRACT';
-SUBTRACTION 	: 'SUBTRACTION';
-SUM 		: 'SUM';
-TO          	  : 'TO';
-TO_POLYLINE 	  : 'TO_POLYLINE';
-THRESHOLD 	    : 'THRESHOLD';
-THROUGH			: 'THROUGH';
-TRANSLATE				: 'TRANSLATE';
-TRAJECTORY 	  	: 'TRAJECTORY';
-TYPE						:	'TYPE';
-UNCOMPARABLE		:	'UNCOMPARABLE';
-UNKNOWN					:	'UNKNOWN';
-UNPACK	        : 'UNPACK';
-USE     	      : 'USE';
-USING     	    : 'USING';
-VERSUS      	  : 'DESC' | 'ASC';
-WEB							: 'WEB';
-WHERE	         	: 'WHERE';
-WITH  	        : 'WITH';
-WITHIN  	      : 'WITHIN';
-WITHOUT   	    : 'WITHOUT';
-WRT           	: 'WRT';
+ADDING						: 'ADDING';
+ADD_ST  		 			: 'ADD';
+AGGREGATE 		    : 'AGGREGATE';
+AGGREGATOR				: 'AGGREGATOR';
+ALL         	  	: 'ALL';
+ALPHACUT					:	'ALPHACUT';
+ARRAY   		      : 'ARRAY';
+ARRAY_FUNCTION		:	( 'MIN' | 'MAX' | 'AVG' | 'SUM') '_ARRAY';
+AS     	  	 	    : 'AS';
+BODY							:	'BODY' 							{	env.disableScannerError();	}; 
+END_BODY					:	'END' WS 'BODY' 		{	env.enableScannerError();		};
+BOOLEAN 		      : 'TRUE' | 'FALSE';
+BUILD 						: 'BUILD';
+BY          		  : 'BY';
+CALL          		: 'CALL';
+CASE 	    	     	: 'CASE';
+CASES 	         	: 'CASES';
+CHECK_FOR					: 'CHECK' WS 'FOR';
+CLASS							: 'CLASS';
+COLLECTION  		  : 'COLLECTION';
+COLLECTIONS   		: 'COLLECTIONS';
+CONSTRAINT				: 'CONSTRAINT';
+CREATE						: 'CREATE';							
+DB	      	      : 'DB';
+DEFAULT						: 'DEFAULT';
+DEFUZZIFY					:	'DEFUZZIFY';
+DEGREE						: 'DEGREE';
+DEGREES						: 'DEGREES';
+DERIVE						: 'DERIVE';
+DERIVED						: 'DERIVED';
+DICTIONARY				:	'DICTIONARY';
+DIRECTION					:	'DIRECTION';
+DISTANCE					:	'DISTANCE';
+DOCUMENTS					:	'DOCUMENTS';
+DROP  	    	    : 'DROP';
+DROPPING      		: 'DROPPING';
+DUPLICATES  	  	: 'DUPLICATES';
+EACH							: 'EACH';
+EXPAND	    	    : 'EXPAND';
+EXTENT  	  	    : 'EXTENT';
+EVALUATE					:	'EVALUATE';
+FIELD							: 'FIELD';
+FIELDS						: 'FIELDS';
+FILTER    	    	: 'FILTER';
+FIRST		  	      : 'FIRST';
+FOR								: 'FOR';
+FROM_WEB 					:	'FROM' WS 'WEB';
+FROM_ARRAY				: 'FROM' WS 'ARRAY';
+FUNCTION					: 'FUNCTION';
+FUZZY							: 'FUZZY';
+GENERATE					:	'GENERATE';
+GEOMETRY  	  	  : 'GEOMETRY';
+GET         	  	: 'GET';
+GROUP 	        	: 'GROUP';
+GROUPING		      : 'GROUPING';
+HOWINCLUDE				:	'HOW_INCLUDE';
+HOWINTERSECT			:	'HOW_INTERSECT';
+HOWMEET						:	'HOW_MEET';
+IF_ERROR					: 'IF_ERROR';
+IF_FAILS					: 'IF_FAILS';
+IMPORT						: 'IMPORT';
+INCLUDED    		  : 'INCLUDED';
+INPUT		      		: 'INPUT';
+INRANGE		      	: 'IN_RANGE';
+INTERSECT					: 'INTERSECT';
+INTERSECTION		  : 'INTERSECTION';
+IN								: 'IN';
+INTO	          	: 'INTO';
+ISNULL						: 'IS' WS 'NULL';
+ISNOTNULL					: 'IS' WS 'NOT' WS 'NULL';
+JOIN      		    : 'JOIN';
+JAVA							: 'JAVA';
+JAVASCRIPT				: 'JAVASCRIPT';
+KEEP        	  	: 'KEEP';
+KEEPING	      	 	: 'KEEPING';
+KNOWN							:	'KNOWN';
+LAST  	  		    : 'LAST';
+LEFT    	    	  : 'LEFT';
+LOCALLY						: 'LOCALLY';
+LOOKUP 						:	'LOOKUP';
+MATCHING  		    : 'MATCHING';
+MAXIMUM						: 'MAXIMUM';
+MEET        	  	: 'MEET';
+MEMBERSHIP_ARRAY 	:	'MEMBERSHIP_ARRAY';	
+MEMBERSHIP_TO	 		:	'MEMBERSHIP_TO' | 'MEMBERSHIP_OF' ;	
+MERGE         		: 'MERGE';
+MIN_SIMILARITY		:	'MIN' WS 'SIMILARITY';
+MINIMUM 					: 'MINIMUM';
+MODEL							:	'MODEL';
+OF        		    : 'OF';
+ON       	  		  : 'ON';
+OPERATOR 					: 'OPERATOR';
+ORIENTATION  		  : 'ORIENTATION';
+OTHERS						: 'OTHERS';
+ORDER							: 'ORDER' | 'SORTED';
+PARAMETERS				:	'PARAMETERS';
+PARTITION 				: 'PARTITION';
+POINT							: 'POINT';
+POLYLINE					:	'POLYLINE';
+POS								: 'POS';
+PRECONDITION			:	'PRECONDITION';
+PRODUCT  					: 'PRODUCT';
+RESOLVING					:	'RESOLVING';
+RIGHT 	    	    : 'RIGHT';
+REMOVE  	    	  : 'REMOVE';
+SAVE      	    	: 'SAVE';
+SERVER     		  	: 'SERVER';
+SET        	  		: 'SET';
+SETS        	  	: 'SETS';
+SETTING  		    	: 'SETTING';
+SORT							: 'SORT';
+SUBTRACT  		    : 'SUBTRACT';
+SUM 							: 'SUM';
+TO       		   	  : 'TO';
+TO_POLYLINE 		  : 'TO_POLYLINE';
+THRESHOLD 	  	  : 'THRESHOLD';
+TRANSLATE					: 'TRANSLATE';
+TRAJECTORY 		  	: 'TRAJECTORY';
+TYPE							:	'TYPE';
+UNCOMPARABLE			:	'UNCOMPARABLE';
+UNKNOWN						:	'UNKNOWN';
+UNPACK	  	      : 'UNPACK';
+USE     	  	    : 'USE';
+USING     	  	  : 'USING';
+VERSUS      	  	: 'DESC' | 'ASC';
+WHERE		         	: 'WHERE';
+WITH  		        : 'WITH';
+WITHIN  		      : 'WITHIN';
+WITHOUT   		    : 'WITHOUT';
+WRT           		: 'WRT';
 
 INT			: '0' | DIGIT0 DIGIT* ;
 FLOAT		: DIGIT0 DIGIT* DOT DIGIT+ | '0' DOT DIGIT+; 
@@ -1342,6 +1433,7 @@ ADD   : '+';
 SUB   : '-';
 MUL   : '*';
 DIV   : '/';
+EXP   : '^';
 COMMA : ',';
 COLON : ':';
 SC    : ';';

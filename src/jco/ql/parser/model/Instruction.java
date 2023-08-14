@@ -25,7 +25,7 @@ public abstract class Instruction {
 	public static final int GET_DICTIONARY = 16;
 	public static final int LOOKUP_FROM_WEB = 17;
 	public static final int FUZZY_AGGREGATOR_INSTRUCTION = 18; 			// added by Invernici
-	public static final int FUZZY_TYPE_INSTRUCTION = 19; 				// added by Balicco
+	public static final int FUZZY_MODEL_INSTRUCTION = 19; 				// added by Balicco
 	public static final int FUZZY_GENERAL_OPERATOR_INSTRUCTION = 20; 	// added by Balicco
 	public static final int JAVA_FUNCTION_INSTRUCTION = 21;				// PF 20.01.2023
 	

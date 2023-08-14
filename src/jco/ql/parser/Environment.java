@@ -20,19 +20,18 @@ import jco.ql.parser.model.fuzzy.FuzzySetDefinition;
 import jco.ql.parser.model.fuzzy.SetFuzzySets;
 import jco.ql.parser.model.predicate.Expression;
 import jco.ql.parser.model.predicate.ExpressionFactor;
-import jco.ql.parser.model.predicate.ExpressionTerm;
+import jco.ql.parser.model.predicate.ExtentFunction;
 import jco.ql.parser.model.predicate.FunctionFactor;
 import jco.ql.parser.model.predicate.IfErrorFunction;
 import jco.ql.parser.model.predicate.InRangePredicate;
-import jco.ql.parser.model.predicate.MembershipToFunction;
+import jco.ql.parser.model.predicate.MembershipArray;
 import jco.ql.parser.model.predicate.ArrayFunctionFactor;
 import jco.ql.parser.model.predicate.ArrayReference;
-import jco.ql.parser.model.predicate.DegreeFunction;
 import jco.ql.parser.model.predicate.EOrientation;
 import jco.ql.parser.model.predicate.NullPredicate;
 import jco.ql.parser.model.predicate.Predicate;
+import jco.ql.parser.model.predicate.SpecialFunctionFactor;
 import jco.ql.parser.model.predicate.TranslateFunction;
-import jco.ql.parser.model.predicate.UsingAggregatorPredicate;
 import jco.ql.parser.model.predicate.WUKPredicate;
 import jco.ql.parser.model.predicate.WithPredicate;
 import jco.ql.parser.model.util.*;
@@ -43,92 +42,83 @@ import jco.ql.parser.model.util.*;
  *
  */
 public class Environment {
-	public static final int UNDEFINED = -1;	
+	public static final int UNDEFINED 	= -1;	
 	public static final int TOKEN_ERROR = 0;	
 
 	public static final int WARN_MEMBERSHIP = 10;	
+	public static final int WARN_CASE 		= 20;	
 
-	public static final int ERR_ON_SYNTAX = 1;	
-	public static final int ERR_ON_FIELDNAME = 2;
-	public static final int ERR_ON_FULLFIELDNAME = 3;
-	public static final int ERR_ON_FILTERCASE = 4;
-	public static final int ERR_ON_FIELDUNKNOWN	= 10;
-	public static final int ERR_ON_MISSING_COMPARATOR = 11;
-	public static final int ERR_ON_UNEXPECTED_COMPARATOR = 12;
-	public static final int ERR_ON_MISSING_COMMA = 13;
-	public static final int ERR_ON_UNEXPECTED_COMMA = 14;
-	public static final int ERR_ON_UNEXPECTED_EXPRESSION = 15;
-	public static final int ERR_ON_MISSING_NUMBER = 16;
-	public static final int ERR_ON_MISSING_LEFT_BOUND_PAR = 17;
-	public static final int ERR_ON_MISSING_RIGHT_BOUND_PAR = 18;
-	public static final int ERR_ON_WRONG_NUMBER_FORMAT = 19;
-	public static final int ERR_ON_MISSING_FUZZYOPERATOR = 20;
-	public static final int ERR_ON_MISSING_JSF = 21;
-	public static final int ERR_ON_MISSING_PARAMETER = 22;
-	public static final int ERR_ON_MISSING_FUZZYAGGREGATOR = 23;
-	public static final int ERR_ON_MISSING_JFNAME = 24;
-	public static final int ERR_ON_MISSING_FST = 25;				// added by Balicco
-	public static final int ERR_ON_MISSING_FGO = 26;				// added by Balicco
-	public static final int ERR_ON_JS_BEGIN = 40;
-	public static final int ERR_ON_JS_PAR = 41;
-	public static final int ERR_ON_JS_NO_END = 42;
-	public static final int ERR_ON_JS_BAD_END = 43;
-	public static final int ERR_ON_JAVA_BEGIN = 44;
-	public static final int ERR_ON_JAVA_PAR = 45;
-	public static final int ERR_ON_JAVA_NO_END = 46;
-	public static final int ERR_ON_JAVA_BAD_END = 47;
-	public static final int ERR_NULL_PREDICATE = 49;
-	public static final int ERR_ON_WRONG_FIELD_TYPE = 50;
-	public static final int ERR_ON_FIELD_TYPE_UNAPPLICABLE = 51;
-	public static final int ERR_ON_MISSING_DOC_SELECTOR = 52;
-	public static final int ERR_ON_WRONG_DOC_SELECTOR = 53;
-	public static final int LAST_SYNTAX_ERROR = 100;
+	public static final int ERR_ON_SYNTAX 						= 1;	
+	public static final int ERR_ON_MISSING_COMPARATOR 			= 11;
+	public static final int ERR_ON_UNEXPECTED_COMPARATOR 		= 12;
+	public static final int ERR_ON_MISSING_COMMA 				= 13;
+	public static final int ERR_ON_UNEXPECTED_COMMA 			= 14;
+	public static final int ERR_ON_MISSING_NUMBER 				= 16;
+	public static final int ERR_ON_MISSING_LEFT_BOUND_PAR 		= 17;
+	public static final int ERR_ON_MISSING_RIGHT_BOUND_PAR	 	= 18;
+	public static final int ERR_ON_WRONG_NUMBER_FORMAT 			= 19;
+	public static final int ERR_ON_MISSING_FUZZYOPERATOR	 	= 20;
+	public static final int ERR_ON_MISSING_JSF 					= 21;
+	public static final int ERR_ON_MISSING_PARAMETER 			= 22;
+	public static final int ERR_ON_MISSING_FUZZYAGGREGATOR 		= 23;
+	public static final int ERR_ON_WRONG_TYPE 					= 24;					
+	public static final int ERR_ON_MISSING_JFNAME 				= 25;
+	public static final int ERR_ON_MISSING_FST 					= 26;				// added by Balicco
+	public static final int ERR_ON_MISSING_FGO 					= 27;				// added by Balicco
+	public static final int ERR_ON_JS_BEGIN 					= 40;
+	public static final int ERR_ON_JS_PAR 						= 41;
+	public static final int ERR_ON_JS_NO_END 					= 42;
+	public static final int ERR_ON_JS_BAD_END 					= 43;
+	public static final int ERR_ON_JAVA_BEGIN 					= 44;
+	public static final int ERR_ON_JAVA_PAR 					= 45;
+	public static final int ERR_ON_JAVA_NO_END 					= 46;
+	public static final int ERR_ON_JAVA_BAD_END 				= 47;
+	public static final int ERR_NULL_PREDICATE 					= 49;
+	public static final int ERR_ON_WRONG_FIELD_TYPE	 			= 50;
+	public static final int ERR_ON_FIELD_TYPE_UNAPPLICABLE 		= 51;
+	public static final int ERR_ON_MISSING_DOC_SELECTOR 		= 52;
+	public static final int ERR_ON_WRONG_DOC_SELECTOR 			= 53;
+	public static final int LAST_SYNTAX_ERROR 					= 100;
 
-	public static final int FIRST_SEMANTIC_ERROR = 101;
-	public static final int ERR_ON_SAME_COLLECTION	= 111;
-	public static final int ERR_ON_SAME_ALIAS = 112;
-	public static final int ERR_ON_NEED_ALIAS = 113;
-	public static final int ERR_ON_OLD_JOIN_ALIAS = 114;
-	public static final int ERR_ON_JOIN_ALIAS = 115;
-	public static final int ERR_ON_TEMPORARY_COLLECTION_NAME = 116;
-	public static final int ERR_ON_EMPTY_GENERATE = 117;
-	public static final int ERR_ON_FUZZY_OPTIONS = 118;
-	public static final int ERR_UNDEFINED_WUK = 119;
-	public static final int ERR_UNDEFINED_FUZZYSET = 120;
+	public static final int FIRST_SEMANTIC_ERROR 				= 101;
+	public static final int ERR_ON_JOIN_ALIAS 					= 115;
+	public static final int ERR_ON_TEMPORARY_COLLECTION_NAME 	= 116;
+	public static final int ERR_ON_EMPTY_GENERATE 				= 117;
+	public static final int ERR_ON_FUZZY_OPTIONS 				= 118;
+	public static final int ERR_UNDEFINED_WUK 					= 119;
+	public static final int ERR_UNDEFINED_FUZZYSET 				= 120;
 	
-	public static final int WRONG_UNIT = 121;
-	public static final int MISSING_UNIT = 122;
-	public static final int WRONG_DIRECTION = 123;
-	public static final int WRONG_TYPESELECTOR = 124;
-	public static final int ERR_ON_RANGE_VALUE = 130;
-	public static final int ERR_ON_RANGE_ORDER = 131;
-	public static final int ERR_ON_POLYLINE_Y_VALUE = 133;
-	public static final int ERR_ON_POLYLINE_ORDER = 134;
-	public static final int ERR_UNDEFINED_PREFIX_NOT = 135;				// added by Balicco
-	public static final int ERR_ALREADY_DEFINED_OPERATOR = 136;			// added by Balicco
-	public static final int ERR_ALREADY_DEFINED_DEGREE = 137;			// added by Balicco
-	public static final int ERR_WRONG_DEGREES_NUMBER = 138;				// added by Balicco
-	public static final int ERR_UNDEFINED_DEGREE = 139;					// added by Balicco
-	public static final int ERR_UNDEFINED_PREFIX = 140;					// added by Balicco
-	public static final int ERR_DEGREE_NAME_NOT_ALLOWED = 141;
-	public static final int ERR_ON_ALPHACUT_VALUE = 145;				// added by Balicco 
-	public static final int ERR_ON_FUZZY_SET_NAME = 150;
-	public static final int ERR_ON_GENERATE_COMPLEXITY = 160;
-	public static final int ERR_ON_PARAMETER_REFERENCE = 170;
-	public static final int ERR_ON_PARAMETER_REFERENCE_FOR_ALL = 171;
-	public static final int ERR_ON_PARAMETER_DECLARATION = 172;
-	public static final int ERR_NULL_FUNCTION_NAME = 173;
-	public static final int ERR_WRONG_PARAMETERS_NUMBER = 174;	
-	public static final int ERR_ON_TYPE_DECLARATION = 175;
+	public static final int WRONG_UNIT 							= 121;
+	public static final int MISSING_UNIT 						= 122;
+	public static final int WRONG_DIRECTION 					= 123;
+	public static final int WRONG_TYPESELECTOR 					= 124;
+	public static final int ERR_ON_POLYLINE_Y_VALUE 			= 131;
+	public static final int ERR_ON_POLYLINE_ORDER 				= 132;
+	public static final int ERR_UNDEFINED_PREFIX_NOT 			= 133;			// added by Balicco
+	public static final int ERR_ALREADY_DEFINED_OPERATOR 		= 134;			// added by Balicco
+	public static final int ERR_ALREADY_DEFINED_DEGREE 			= 135;			// added by Balicco
+	public static final int ERR_WRONG_DEGREES_NUMBER 			= 136;			// added by Balicco
+	public static final int ERR_UNDEFINED_DEGREE 				= 137;			// added by Balicco
+	public static final int ERR_UNDEFINED_PREFIX 				= 138;			// added by Balicco
+	public static final int ERR_DEGREE_NAME_NOT_ALLOWED 		= 139;
+	public static final int ERR_ON_ALPHACUT_VALUE 				= 140;			// added by Balicco 
+	public static final int ERR_ON_GENERATE_COMPLEXITY 			= 160;
+	public static final int ERR_ON_PARAMETER_REFERENCE 			= 170;
+	public static final int ERR_ON_PARAMETER_DECLARATION 		= 171;
+	public static final int ERR_ON_ARRAY_DECLARATION 			= 172;
+	public static final int ERR_ON_INDEX_DECLARATION 			= 173;
+	public static final int ERR_ON_UNDEFINED_ARRAY 				= 174;
+	public static final int ERR_ON_UNDEFINED_ARRAY_PARAMETER 	= 175;
+	public static final int ERR_NULL_FUNCTION_NAME 				= 176;
+	public static final int ERR_WRONG_PARAMETERS_NUMBER 		= 177;	
 	
-	public static final int ERR_ON_VERSUS_IN_FUZZY_AGGREGATOR = 180; 
-	public static final int ERR_ON_ALIAS_REFERENCE_IN_EVALUATE = 181;
-	public static final int ERR_ON_ALIAS_DEFINITION = 182;
-	public static final int ERR_ON_ARRAY_REF_IN_EXPRESSION = 183;
-	public static final int ERR_ON_ID_NOT_DECLARED = 184;
-	public static final int ERR_ON_ARRAY_REFERENCE_NOT_DECLARED = 185;
-	
-	
+	public static final int ERR_ON_VERSUS_IN_FUZZY_AGGREGATOR 	= 180; 
+	public static final int ERR_ON_ALIAS_DEFINITION 			= 181;
+	public static final int ERR_ON_ID_NOT_DECLARED 				= 182;
+	public static final int ERR_ON_WRONG_INDEX 					= 183;
+	public static final int ERR_ON_ARRAY_NUMBER					= 184;
+	public static final int ERR_ON_FA_FUNCTION 					= 185;
+
 	private String version;
 	private String release;
 	private boolean checkScannerError;
@@ -203,7 +193,9 @@ public class Environment {
 		st += " at [" + tk.getLine() + ", " + (tk.getCharPositionInLine()+1) + "]: ";
 		
 		if (code == WARN_MEMBERSHIP)
-			st += "The '" + tk.getText() + "' keyword is deprecated. Use instead 'MEMBERSHIP_TO' keyword";
+			st += "The '" + tk.getText() + "' keyword is going to be deprecated. Use instead the 'MEMBERSHIP_TO' keyword";
+		else if (code == WARN_CASE)
+			st += "The '" + tk.getText() + "' keyword is going to be deprecated. Use instead the 'CASES' keyword";
 		
 		warningList.add(st);		
 	}
@@ -225,7 +217,6 @@ public class Environment {
 
 		if (e instanceof MissingTokenException)
 		   st = st + m;		
-		//st= st + "\n"+ e.getUnexpectedType()+ "\n" + h + " \n" + m ;
 		
 		addError(st); 
 	}
@@ -266,22 +257,6 @@ public class Environment {
 		
 		if (code == TOKEN_ERROR)
 			st += "Token unrecognized '" + tk.getText() + "'";
-		if (code == ERR_ON_FIELDNAME)
-			st += "Fieldname must be without Collection Name";
-		else if (code == ERR_ON_FULLFIELDNAME)
-			st += "Fieldname needs Collection Name";
-		else if (code == ERR_ON_FILTERCASE)
-			st += "Missing valued field or WITH clause or WITHOUT clause in FilterCase";
-		else if (code == ERR_ON_FIELDUNKNOWN)
-			st += "Field not included in any Collection";
-		else if (code == ERR_ON_SAME_COLLECTION)
-			st += "Collections must be different, or have different alias";
-		else if (code == ERR_ON_SAME_ALIAS)
-			st += "Collections share the same alias";
-		else if (code == ERR_ON_NEED_ALIAS)
-			st += "Give both Collections a different alias";
-		else if (code == ERR_ON_OLD_JOIN_ALIAS)
-			st += "Collections in JOIN must have different names or aliases";
 		else if (code == ERR_ON_JOIN_ALIAS)
 			st += "Collections in JOIN must have different names or aliases";		
 		else if (code == ERR_ON_TEMPORARY_COLLECTION_NAME)
@@ -302,8 +277,6 @@ public class Environment {
 			st += "Missing comma";
 		else if (code == ERR_ON_UNEXPECTED_COMMA)
 			st += "Unexepected comma";
-		else if (code == ERR_ON_UNEXPECTED_EXPRESSION)
-			st += "Unexepcted expression";
 		else if (code == ERR_ON_MISSING_NUMBER)
 			st += "Missing number";		
 		else if (code == ERR_ON_MISSING_LEFT_BOUND_PAR)
@@ -316,6 +289,10 @@ public class Environment {
 			st += "Missing Fuzzy Operator name";
 		else if (code == ERR_ON_MISSING_FUZZYAGGREGATOR)
 			st += "Missing Fuzzy Aggregator name";
+		else if (code == ERR_ON_MISSING_FUZZYAGGREGATOR)
+			st += "Missing Fuzzy Aggregator name";
+		else if (code == ERR_ON_WRONG_TYPE)
+			st += "Parameter type not allowed";		
 		else if (code == ERR_ON_MISSING_JSF)
 			st += "Missing Javascript Function name";
 		else if (code == ERR_ON_MISSING_FST)					// added by Balicco
@@ -336,16 +313,12 @@ public class Environment {
 		else if (code == WRONG_TYPESELECTOR)
 			st += "Expecting 'SIMPLE', 'COMPLEX ', 'ARRAY', 'STRING', 'NUMBER', " + 
 						"'INTEGER', 'FLOAT' or 'GEOMETRY' as type selector";
-		else if (code == ERR_ON_RANGE_VALUE)
-			st += "Range values must be >= 0";
-		else if (code == ERR_ON_RANGE_ORDER)
-			st += "Wrong order on range values";
 		else if (code == ERR_ON_POLYLINE_Y_VALUE)
 			st += "Polyline Y values must must be within [0, 1]";
 		else if (code == ERR_ON_POLYLINE_ORDER)
 			st += "Polyline X value must be greater than the previous";
 		else if (code == ERR_UNDEFINED_PREFIX_NOT)								// added by Balicco
-			st += "All prefix must be 'x'";
+			st += "The degree prefix must be 'x'";
 		else if (code == ERR_ALREADY_DEFINED_OPERATOR)							// added by Balicco
 			st += "Fuzzy operator already defined";
 		else if (code == ERR_ALREADY_DEFINED_DEGREE)							// added by Balicco
@@ -355,7 +328,7 @@ public class Environment {
 		else if (code == ERR_UNDEFINED_DEGREE)									// added by Balicco
 			st += "Unknown degree";
 		else if (code == ERR_UNDEFINED_PREFIX)									// added by Balicco
-			st += "All prefix must be 'x' or 'y'";
+			st += "The degree prefix must be 'x' or 'y'";
 		else if (code == ERR_DEGREE_NAME_NOT_ALLOWED)							// added by Balicco
 			st += "Degree name: "+ tk.getText() + " is reserved";
 		else if (code == ERR_ON_ALPHACUT_VALUE)
@@ -386,34 +359,37 @@ public class Environment {
 			st += "Missing 'DOCUMENTS' search type selector";
 		else if (code == ERR_ON_WRONG_DOC_SELECTOR)
 			st += "Array search type selector can be only 'DOCUMENTS' or nothing";
-		else if (code == ERR_ON_FUZZY_SET_NAME)
-			st += "FuzzySetName should be in the form ID or ID.ID";
 		else if (code == ERR_ON_GENERATE_COMPLEXITY)
 			st += "The following less complex field spec must placed before";
 		else if (code == ERR_ON_PARAMETER_REFERENCE)									// modified by Balicco
 			st += "\"" + tk.getText() + "\" must be declared before";	
-		else if (code == ERR_ON_PARAMETER_REFERENCE_FOR_ALL)							// modified by Balicco
-			st += "\"" + tk.getText() + "\" must be declared of ARRAY type in PARAMETERS";
 		else if (code == ERR_ON_PARAMETER_DECLARATION)
-			st += "\"" + tk.getText() + "\" already declared in PARAMETERS";
+			st += "Parameter \"" + tk.getText() + "\" already declared or name unavailable";
+		else if (code == ERR_ON_ARRAY_DECLARATION)
+			st += "Array \"" + tk.getText() + "\" already declared or name unavailable";
+		else if (code == ERR_ON_INDEX_DECLARATION)
+			st += "Index name \"" + tk.getText() + "\" already in use";
+		else if (code == ERR_ON_UNDEFINED_ARRAY)
+			st += "Array \"" + tk.getText() + "\" undefined";
+		else if (code == ERR_ON_UNDEFINED_ARRAY_PARAMETER)
+			st += "Array \"" + tk.getText() + "\" undefined in PARAMETERS";
 		else if (code == ERR_NULL_FUNCTION_NAME)
 			st += "Missing function name";
 		else if (code == ERR_WRONG_PARAMETERS_NUMBER)
 			st += "Wrong number of parameters for predefined function " + tk.getText();
-		else if (code == ERR_ON_TYPE_DECLARATION)										// added by Balicco
-			st += "\"" + tk.getText() + "\" is not a type";		
 		else if (code == ERR_ON_VERSUS_IN_FUZZY_AGGREGATOR)
 			st += "Non acceptable type of versus selection " + tk.getText();
-		else if (code == ERR_ON_ALIAS_REFERENCE_IN_EVALUATE)
-			st += "All IDs in EVALUATE must be declared before in PARAMETERS or AGGRAGATE";
 		else if (code == ERR_ON_ALIAS_DEFINITION)
-			st += "\"" + tk.getText() + "\" has been already declared before";
-		else if (code == ERR_ON_ARRAY_REF_IN_EXPRESSION)
-			st += "Error in expression: there can't be any array references outside FOR ALL clause";
+			st += "\"" + tk.getText() + "\" has been already declared";
 		else if (code == ERR_ON_ID_NOT_DECLARED)
-			st += "Error in expression: id \"" + tk.getText() + "\" has never been defined";
-		else if (code == ERR_ON_ARRAY_REFERENCE_NOT_DECLARED)
-			st += "Error in expression: array \"" + tk.getText() + "\" has never been defined";
+			st += "Id \"" + tk.getText() + "\" not defined";
+		else if (code == ERR_ON_WRONG_INDEX)
+			st += "Index name \"" + tk.getText() + "\" undeclared";
+		else if (code == ERR_ON_FA_FUNCTION)
+			st += "Function \"" + tk.getText() + "\" not available in FUZZY AGGREGATOR";
+		else if (code == ERR_ON_ARRAY_NUMBER)
+			st += "Wrong number of sorted arrays";
+
 		else
 			st += "*** Error Code not recognized [" + code + "] ***";
 							
@@ -423,11 +399,15 @@ public class Environment {
 	// ----------------------------------------------
 	
 	void addField (Field field, Token f) {
+		if (f == null)
+			f = Token.INVALID_TOKEN;
 		field.addField(f.getText());
 	}
 
 	
 	public DbCollection addDbCollection(Token name, Token db, Token as) {
+		if (name == null)
+			name = Token.INVALID_TOKEN;
 		String collectionName = name.getText();
 		String dbName = null;
 		String alias = null;
@@ -454,6 +434,9 @@ public class Environment {
 
 
 	void addSaveAs (Token cn, Token db) {
+		if (cn == null)
+			cn = Token.INVALID_TOKEN;
+
 		if ((db == null) && cn.getText().equals("temporary"))
 			myErrorHandler(ERR_ON_TEMPORARY_COLLECTION_NAME, cn);
 		else {
@@ -500,6 +483,14 @@ public class Environment {
 		instructionList.add(f);
 		return f;
 	}
+	Filter addFilter(GenerateSection gs) {
+		Filter f = new Filter (nInstruction, gs);
+		nInstruction++;
+		instructionList.add(f);
+		return f;
+	}
+
+
 
 	Group addGroup() {
 		Group g = new Group(nInstruction);
@@ -555,6 +546,8 @@ public class Environment {
 
 	
 	public void addGetDictionary(Token name, Token db, Token as) {
+		if (name == null)
+			name = Token.INVALID_TOKEN;
 		DbCollection dbCollection = addDbCollection(name, db, as);
 		GetDictionary gd = new GetDictionary(nInstruction, dbCollection);
 		nInstruction++;
@@ -583,13 +576,13 @@ public class Environment {
 	}
 
 	// added by Balicco
-	public FuzzySetType addFuzzySetType(Token t) {
+	public FuzzySetModel addFuzzySetModel(Token t) {
 		String name = "null";
 		if (t == null) 
 			myErrorHandler(ERR_ON_MISSING_FST);
 		else
 			name = t.getText();
-		FuzzySetType ft = new FuzzySetType(nInstruction, name);
+		FuzzySetModel ft = new FuzzySetModel(nInstruction, name);
 		nInstruction++;
 		instructionList.add(ft);
 		return ft;
@@ -668,6 +661,8 @@ public class Environment {
 	}
 
 	void checkWithPredicateTypeSelector (WithPredicate wp, Token ts) {
+		if (ts == null)
+			ts = Token.INVALID_TOKEN;
 		if (ts.getText().equals("SIMPLE")) 
 			wp.setTypeSelector(WithPredicate.SIMPLE, ts.getText());
 		else if (ts.getText().equals("COMPLEX"))  
@@ -768,11 +763,6 @@ public class Environment {
 		}
 	}
 
-	// added by Balicco
-	FuzzyPolyline createFuzzyPolyline() {
-		FuzzyPolyline p = new FuzzyPolyline();
-		return p;
-	}		
 	
 	
 	void addFuzzyAggregatorPolylinePoint (FuzzyAggregator fa, String x, String y) {
@@ -795,6 +785,9 @@ public class Environment {
 	
 	
 	int addJSFbody (JavascriptFunction jsf, Token t) {
+		if (t == null)
+			t = Token.INVALID_TOKEN;
+
 		int response = jsf.addJavascriptChunck(t.getText());
 		if (response == JavascriptFunction.NO_BEGIN)
 			myErrorHandler(ERR_ON_JS_BEGIN, t);
@@ -815,7 +808,10 @@ public class Environment {
 
 
 	int addJavaBody (JavaFunction jsf, Token t) {
+		if (t == null)
+			t = Token.INVALID_TOKEN;
 		int response = jsf.addJavaChunck(t.getText());
+
 		if (response == JavascriptFunction.NO_BEGIN)
 			myErrorHandler(ERR_ON_JAVA_BEGIN, t);
 		if (response == JavaFunction.WRONG_PAR)
@@ -846,18 +842,6 @@ public class Environment {
 			myErrorHandler(ERR_ON_PARAMETER_DECLARATION, x);						
 	}
 
-/* PF Old version before Balicco
-	public void addAlphaCut(GenerateSection gs, String n, Token on) {
-		if (n != null) {
-			double nValue = Double.parseDouble(n) ;
-					
-			if (nValue < 0 || nValue > 1)
-				myErrorHandler(ERR_ON_ALPHACUT_VALUE);	
-			else
-				gs.addAlphaCut (new AlphaCut(n, on.getText()));		
-		}
-	}
-*/
 // Modified by Balicco	
 	public void addAlphaCut(GenerateSection gs, String n, Token on, Token de) {
 		if (n != null) {
@@ -873,6 +857,13 @@ public class Environment {
 		}
 	}
 
+
+	public CaseClause newCaseClause(Token c) {
+		if (c != null && c.getType() == JCoQLLexer.CASE)
+			addWarning (WARN_CASE, c);				
+		return new CaseClause();
+	}
+	
 
 	public void checkGenerate(GenerateSection gs, Token g) {
 		if (gs.isEmpty())
@@ -893,6 +884,8 @@ public class Environment {
 	}
 	
 	public WUKPredicate createWUKPredicate (Token wukType) {
+		if (wukType == null)
+			wukType = Token.INVALID_TOKEN;
 		return new WUKPredicate (wukType.getText());
 	}
 
@@ -912,22 +905,7 @@ public class Environment {
 
 		return exprFactor;
 	}
-/*	public FunctionFactor buildFunction(Token x, ArrayList<Expression> fp) {
-		FunctionFactor exprFactor = new FunctionFactor();
 
-		if (x == null) {
-			myErrorHandler(ERR_NULL_FUNCTION_NAME);
-			return exprFactor;
-		}
-		String name = x.getText();
-		exprFactor = new FunctionFactor(name, fp);
-
-		if (!exprFactor.checkParamNumber())
-				myErrorHandler(ERR_MISSING_PARAMETERS_PREDEFINED_FUNCTION, x);
-
-		return exprFactor;
-	}
-*/
 	// i riferimento a parametro nel JSCREATE o FuzzyOperator vengono passati all'engine come fieldReference
 	public ExpressionFactor getJfId (Token x, ParamList pl, boolean jsCaller) {
 		ExpressionFactor ef = null;
@@ -995,21 +973,30 @@ public class Environment {
 		}
 	}
 
-	public MembershipToFunction buildMembershipTo(Token mt) {
-		MembershipToFunction exprFactor = new MembershipToFunction("@@@@");
+	public ExtentFunction buildMembershipTo(Token mt, Token fs) {
 		if (mt != null)
-			exprFactor = new MembershipToFunction(mt.getText());
-		return exprFactor;
+			checkMembershipToken (mt);
+		if (fs == null)
+			fs = Token.INVALID_TOKEN;
+		ExtentFunction mtf = new ExtentFunction(SpecialFunctionFactor.MEMBERSHIP_TO_FUNCTION, fs.getText());
+		return mtf;
+	}
+	
+	public ExtentFunction buildExtent(Token fs) {
+		if (fs == null)
+			fs = Token.INVALID_TOKEN;
+		ExtentFunction ef = new ExtentFunction(SpecialFunctionFactor.EXTENT_FUNCTION, fs.getText());
+		return ef;
 	}
 	
 	// added by Balicco
-	public DegreeFunction buildDegree(Token t1, Token t2) {
-		DegreeFunction exprFactor = new DegreeFunction("@@@@","@@@@");
+	public ExtentFunction buildDegree(Token t1, Token t2) {
+		ExtentFunction df = new ExtentFunction("@@@@", "@@@@");
 		if (t1 != null && t2 != null)
-			exprFactor = new DegreeFunction(t1.getText(), t2.getText());
-		else if(t1 != null)
-			exprFactor = new DegreeFunction(t1.getText());
-		return exprFactor;
+			df = new ExtentFunction(t1.getText(), t2.getText());
+		if (t1 != null && t2 == null)
+			df = new ExtentFunction(t1.getText(), null);
+		return df;
 	}
 	
 	public TranslateFunction buildTranslate(Expression e, Token dict, Token cs, Token defaultValue) {
@@ -1053,11 +1040,33 @@ public class Environment {
 		if (v == null || t == null)
 			myErrorHandler(ERR_ON_MISSING_PARAMETER);
 		else
-			p = new Parameter (v.getText(), t.getText());
+			if (Parameter.knownType(t.getText()))
+				myErrorHandler(ERR_ON_WRONG_TYPE);
+			else
+				p = new Parameter (v.getText(), t.getText());
 
 		return p;
 	}
 
+
+	public void createFAParameter(FuzzyAggregator fa, Token n, Token t) {
+		if (n == null)
+			n = Token.INVALID_TOKEN;
+		if (t == null)
+			t = Token.INVALID_TOKEN;
+		
+		String par = n.getText();
+		String type = t.getText();
+
+		if (fa.isUnavailable(par))
+			myErrorHandler(ERR_ON_PARAMETER_DECLARATION, n);				
+		if (!Parameter.knownType(type))
+			myErrorHandler(ERR_ON_WRONG_TYPE, t);
+		
+		Parameter p = new Parameter (par, type);
+		fa.namespace.put(par, p);
+		fa.parameters.add(p);
+	}
 
 	public Predicate getInRangePredicate(Expression expr, Token lp, String n1, String n2, Token rp) {
 		if (lp == null)
@@ -1078,6 +1087,8 @@ public class Environment {
 
 
 	public ArrayFunctionFactor newArrayFunction(Token functionName) {
+		if (functionName == null)
+			functionName = Token.INVALID_TOKEN;
 		ArrayFunctionFactor fun = new ArrayFunctionFactor (functionName.getText());
 		return fun;
 	}
@@ -1142,28 +1153,18 @@ public class Environment {
 		return fa;
 	}
 
-	
-	public void setVersusFuzzyAggregator(FuzzyAggregator fa, String versus) {
-		if (versus == null)
-			myErrorHandler(ERR_ON_VERSUS_IN_FUZZY_AGGREGATOR);
-		else {
-			if(versus.equals("ASC"))
-				fa.versus = FuzzyAggregator.ASCENDING;
-			else
-				fa.versus = FuzzyAggregator.DESCENDING;
-		}		
-	}
-	
-	public ArrayReference setArrayRef(Token id_array, Expression e, Field field) {
-		
-		if(id_array == null)
+
+	public ArrayReference setArrayRef(Token idArray, Expression e, Field field) {
+		if(idArray == null) {
 			myErrorHandler(ERR_ON_SYNTAX);
-		ArrayReference ref = new ArrayReference(id_array.getText());
+			idArray = Token.INVALID_TOKEN;
+		}
+		ArrayReference ref = new ArrayReference(idArray.getText());
 		if(field == null)
 			ref.type = ArrayReference.ARRAY;
 		else {
 			ref.type = ArrayReference.ARRAY_FIELD;
-			ref.array_field = field;
+			ref.arrayField = field;
 		}
 		
 		if(e == null)
@@ -1174,58 +1175,54 @@ public class Environment {
 		return ref;
 	}
 	
-	public ExpressionFactor setExprFromArrayRef(Token id, ArrayReference ref, FuzzyAggregator fa, ForAllClause fac) {
-		ExpressionFactor e = null;
-		if(id == null) {
-			myErrorHandler(ERR_ON_SYNTAX);
-			e = new ExpressionFactor();
-		}
-		//If I'm not in the FOR ALL clause and I have an array ref, thers's an error
-		else if(fac == null && fa!= null && fa.hasArrayReferenceDefined(id.getText())) 
-				myErrorHandler(ERR_ON_ARRAY_REF_IN_EXPRESSION, id);
-		else if(ref == null) {			
-			if(fac!= null && fac.hasArrayReferenceDefinedInForAll(id.getText())) {		
-				ArrayReference newRef = new ArrayReference(id.getText());
-				newRef.type = ArrayReference.ARRAY;
-				ExpressionFactor exprF = new ExpressionFactor (new Value(Value.POS, "POS"));
-				ExpressionTerm exprT = new ExpressionTerm();
-				exprT.addFactor(exprF);
-				Expression pos = new Expression();
-				pos.addTerm(exprT);
-				newRef.index = pos;
-				e= new ExpressionFactor(newRef);
-			}
-			else {
-				if((fa != null && !fa.hasParameterDefined(id.getText())) && (fac != null && !fac.hasParameterDefinedInForAll(id.getText()))) {
-					myErrorHandler(ERR_ON_ID_NOT_DECLARED, id);
-				}
-				else
-					e = new ExpressionFactor(id.getText());
-			}
-		}
-		else {
-			if(fac!= null && !fac.hasArrayReferenceDefinedInForAll(id.getText()))
-				myErrorHandler(ERR_ON_ARRAY_REFERENCE_NOT_DECLARED, id);
-			e = new ExpressionFactor(ref);
-		}
+	public ExpressionFactor setFuzzyAggregatorExprFromArrayRef(Token id, ArrayList<Expression> params, ArrayReference ref, FuzzyAggregator fa, ForAllClause fac) {
+		if(id == null) 
+			id = Token.INVALID_TOKEN;
 		
+		String idStr = id.getText();
+		//default
+		ExpressionFactor e = new ExpressionFactor(idStr);
+
+		// idStr is a reference to a parameter 
+		if (params == null && ref == null) {
+			if (! (	fa.namespace.containsKey(idStr) || 
+					((fac != null) && fac.isForAllParameter(idStr)))) 
+				myErrorHandler(ERR_ON_ID_NOT_DECLARED, id);			
+		}
+		// idStr is the COUNT function (maybe expanded - the COUNT function has just 1 parameter)
+		else if (ref == null) {
+			FunctionFactor ff = new FunctionFactor(idStr, params);
+			if (!ff.checkParamNumber())
+				myErrorHandler(ERR_WRONG_PARAMETERS_NUMBER, id);				
+			e = ff;
+		}
+		// idStr is an array reference
+		else {
+			if (!fa.namespace.containsKey(idStr) || !fa.namespace.get(idStr).isArray())
+				myErrorHandler(ERR_ON_UNDEFINED_ARRAY, id);			
+			e = new ExpressionFactor (ref);				
+		}
+	
 		return e;
 	}
 	
 	public AggregateClause createAggregateClause(String withType, Expression e, Token alias, FuzzyAggregator fa, ForAllClause fac){
 		AggregateClause ac = null;
-		if(alias == null || e == null)
-			myErrorHandler(ERR_ON_SYNTAX, alias);
+		if(alias == null)
+			alias = Token.INVALID_TOKEN;
+		if(e == null)
+			alias = Token.INVALID_TOKEN;
 		
 		String n = alias.getText();
 		
 		//Verifico l'alias non sia già stato usato. Verifico nei parametri, nelle altre AGGREGATE e nelle LOCALLY dell'attuale FOR ALL
-		if(fa.hasParameterDefined(n) || fa.hasParameterDefinedInCurrentForAll(n, fac)) {
+		if (fa.namespace.containsKey(n) || ((fac != null) && fac.isForAllParameter(n))) 
 			myErrorHandler(ERR_ON_ALIAS_DEFINITION, alias);
-		}
-		
-		
-		if(withType!=null)
+
+		Parameter p = new Parameter(n,  Parameter.NUMERIC);
+		fa.namespace.put(n, p);
+				
+		if(withType != null)
 			ac = new AggregateClause(n, withType);			
 		else
 			ac = new AggregateClause(n);
@@ -1233,81 +1230,47 @@ public class Environment {
 		return ac;
 	}
 	
-	public void setUsingAggregateFromArray(UsingAggregatorPredicate p, Token fuzzySet, Token array) {
-		p.aggregatorType = UsingAggregatorPredicate.SELECTED_FUZZY_SET_FROM_ARRAY;
-		
-		if(array == null)
-			myErrorHandler(ERR_ON_SYNTAX, array);
-		
-		if(fuzzySet == null)
-			myErrorHandler(ERR_ON_SYNTAX, fuzzySet);
-		
-		p.arrayName = array.getText();
-		p.fuzzySetsSelected.add(fuzzySet.getText());
-	}
 	
-	public void setUsingAggregateInDocument(UsingAggregatorPredicate p, Token fuzzySet) {
-		if (fuzzySet == null) {
-			myErrorHandler(ERR_ON_SYNTAX, fuzzySet);
+	public ForAllClause createForAllClause(Token i, Token a, FuzzyAggregator fa) {
+		if (i == null ) 
+			i = Token.INVALID_TOKEN;
+		if (a == null)
+			a = Token.INVALID_TOKEN;
+		
+		String ndx = i.getText();
+		String array = a.getText();
+		
+		if (fa.namespace.containsKey(ndx))		
+			myErrorHandler(ERR_ON_INDEX_DECLARATION, i);
+		else {
+			Parameter p = new Parameter (ndx, Parameter.NUMERIC);
+			fa.namespace.put(ndx, p);			
 		}
-		
-		p.fuzzySetsSelected.add(fuzzySet.getText());		
-	}
 	
-	
-	public ForAllClause createForAllClause(Token id, FuzzyAggregator fa) {
-		if (id == null) {
-			myErrorHandler(ERR_ON_SYNTAX, id);
-			return new ForAllClause("");
-		}
+		if (!fa.namespace.containsKey(array) || !fa.namespace.get(array).isArray())
+			myErrorHandler(ERR_ON_UNDEFINED_ARRAY, a);
 		
-		if (!fa.hasArrayReferenceDefined(id.getText())) //Verifico che il parametro della FOR ALL sia stato dichiarato e sia un ARRAY
-			myErrorHandler(ERR_ON_PARAMETER_REFERENCE, id);
-		
-		ForAllClause clause = new ForAllClause(id.getText());
+		ForAllClause clause = new ForAllClause(ndx, array);
 		return clause;		
 	}
-	
+
 	public void createLocallyClause(ForAllClause fac, Token id, Expression e, FuzzyAggregator fa) {
 		if (id == null || e == null) {
 			myErrorHandler(ERR_ON_SYNTAX, id);
 		}
 		else {
-			if(fa.hasParameterDefinedInCurrentForAll(id.getText(), fac))
+			String var = id.getText();
+			if (fa.namespace.containsKey(var) || fac.isForAllParameter(var))
 				myErrorHandler(ERR_ON_ALIAS_DEFINITION, id);
 			
 			fac.locally.add(new LocallyClause(e, id.getText())); 
 		}
 	}
-	//TODO check here
-	public void setEvaluateClause(FuzzyAggregator fa, Expression e) {
-		/*for(ExpressionTerm et: e.terms) {
-			for(ExpressionFactor ef: et.factors){
-				if(ef.getType() == ExpressionFactor.ARRAY_REF)
-					myErrorHandler(ERR_ON_EVALUATE_ARRAY_REF_IN_EXPRESSION);
-				if(ef.getType() == ExpressionFactor.ID && !fa.hasParameterDefined(ef.idName))
-					myErrorHandler(ERR_ON_ALIAS_REFERENCE_IN_EVALUATE);
-			}
-		}*/
-		if(e != null)
-			fa.evaluate = e;
-		else
-			myErrorHandler(ERR_ON_SYNTAX);
-	}
-	
-	public UsingAggregatorPredicate createUsingAggregatorPredicate(Token id) {
-		UsingAggregatorPredicate predicate = new UsingAggregatorPredicate("");
-		if (id == null) {
-			myErrorHandler(ERR_ON_SYNTAX, id);
-		}
-		else {
-			predicate.fuzzyAggregatorName = id.getText();
-		}
-		return predicate;
-	}
+
+
 
 	// added by Balicco 
-	public void addDegreeType(FuzzySetType ft, Token t) {
+	public void addDegreeType(FuzzySetModel ft, Token t) {
 		String s = "null";
 		ParamList pl = ft.getDegreesList();
 		if (t == null || pl.contains(t.getText()))
@@ -1321,7 +1284,7 @@ public class Environment {
 	}
 	
 	// added by Balicco 
-	public void checkDerivedDegree(FuzzySetType ft,Token t) {
+	public void checkDerivedDegree(FuzzySetModel ft, Token t) {
 		ParamList pl = new ParamList(ft.degrees);
 		if(t == null) 
 			myErrorHandler(ERR_UNDEFINED_DEGREE,t);
@@ -1343,19 +1306,25 @@ public class Environment {
 
 	
 	// added by Balicco 
-	public void addDerivedDegree(FuzzySetType ft, Token t, Expression e) {
+	public void addDerivedDegree(FuzzySetModel ft, Token t, Expression e) {
+		if (t == null)
+			t = Token.INVALID_TOKEN;
 		ft.derivedDegrees.add(t.getText()); 
 		ft.derivedExpr.add(e);
 	}
 	
 	// added by Balicco 
-	public void addOperatorDegree(FuzzyOperatorDefinition defOp,Token x,Expression exp,ParamList pl) {
-		defOp.addDegree(x, exp);
+	public void addOperatorDegree(FuzzyOperatorDefinition defOp, Token x, Expression exp) {
+		if (x == null)
+			x = Token.INVALID_TOKEN;
+		defOp.addDegree(x.getText(), exp);
 	}	
 	
 	
 	// added by Balicco 
 	public boolean setFuzzyOperatorType(FuzzyOperatorDefinition defOp, Token t) {
+		if (t == null)
+			t = Token.INVALID_TOKEN;
 		defOp.type = t.getText();
 		if(t.getText().equals("NOT"))
 			return true;
@@ -1363,39 +1332,47 @@ public class Environment {
 	}
 		
 	// added by Balicco 
-	public void checkOperatorDegree(FuzzyOperatorDefinition defOp, Token t, ParamList pl) {
+	public void checkOperatorDegree(FuzzyOperatorDefinition defOp, Token t, FuzzySetModel fm) {
+		if (t == null)
+			t = Token.INVALID_TOKEN;
+
+		ParamList pl = fm.getDegreesList();
 		if (!pl.contains(t.getText()))
 			myErrorHandler(ERR_UNDEFINED_DEGREE,t);
 		for (int i = 0; i<defOp.degrees.size(); i++) {
 			if (defOp.degrees.get(i).equals(t.getText()))
-				myErrorHandler(ERR_ALREADY_DEFINED_DEGREE,t);
+				myErrorHandler(ERR_ALREADY_DEFINED_DEGREE, t);
 		}
 	}
 	
 	// added by Balicco 
-	public void addOperatorDefinition(FuzzySetType ft,FuzzyOperatorDefinition fo, Token op) {
+	public void addOperatorDefinition(FuzzySetModel ft, FuzzyOperatorDefinition fo, Token op) {
 		if (fo.type.equals("OR")) {
 			if(ft.defOr != null)
-				myErrorHandler(ERR_ALREADY_DEFINED_OPERATOR,op);
+				myErrorHandler(ERR_ALREADY_DEFINED_OPERATOR, op);
 			ft.defOr = fo;
 		}
 		if (fo.type.equals("AND")) {
 			if(ft.defAnd != null)
-				myErrorHandler(ERR_ALREADY_DEFINED_OPERATOR,op);
+				myErrorHandler(ERR_ALREADY_DEFINED_OPERATOR, op);
 			ft.defAnd = fo;
 		}
 		if (fo.type.equals("NOT")) {
 			if(ft.defNot != null)
-				myErrorHandler(ERR_ALREADY_DEFINED_OPERATOR,op);
+				myErrorHandler(ERR_ALREADY_DEFINED_OPERATOR, op);
 			ft.defNot = fo;
 		}
 		if (ft.degrees.size() > fo.degrees.size() && fo.type != "null"){
-			myErrorHandler(ERR_WRONG_DEGREES_NUMBER,op);
+			myErrorHandler(ERR_WRONG_DEGREES_NUMBER, op);
 		}
 	}
 	
 	// added by Balicco 
-	public ExpressionFactor makeExpDegree(Token x,Token f,Boolean isNot,ParamList pl) {
+	public ExpressionFactor makeExpDegree(Token x, Token f, Boolean isNot, ParamList pl) {
+		if (x == null)
+			x = Token.INVALID_TOKEN;
+		if (f == null)
+			f = Token.INVALID_TOKEN;
 		String sx = x.getText();
 		String sf = f.getText().substring(1, f.getText().length());
 		if (!pl.contains(sf))
@@ -1424,9 +1401,124 @@ public class Environment {
 	public FuzzyPolyline manageEvaluate(GenericFuzzyOperator fgo, Parameter d, Expression e) {
 		fgo.degrees.add(d);  
 		fgo.evaluate.add(e); 	
-		return createFuzzyPolyline();
+		return new FuzzyPolyline();
 	}
-	
+
+
+	// added 2023.07.13
+	public DeriveClause createDeriveClause(Token as, Expression e, FuzzyAggregator fa) {
+		if (as == null)
+			as = Token.INVALID_TOKEN;
+		String s = as.getText();
+		DeriveClause dc = new DeriveClause(s, e);
+		if (fa.isUnavailable(s))
+			myErrorHandler(ERR_ON_PARAMETER_DECLARATION, as);	
+		else {
+			Parameter p = new Parameter(s, Parameter.NUMERIC);
+			fa.namespace.put(s, p);
+		}
+		return dc;		
+	}
+
+
+	// added 2023.07.13
+	public void setFuzzyAggregatorNewArray(FuzzyAggregator fa, SortFuzzyAggregatorElement sfae, Token v) {
+		if (v == null)
+			v = Token.INVALID_TOKEN;
+		String s = v.getText();
+		sfae.targetArrayList.add(s);
+		if (fa.isUnavailable(s))
+			myErrorHandler(ERR_ON_ARRAY_DECLARATION, v);	
+		else {
+			Parameter p = new Parameter(s, Parameter.ARRAY);
+			fa.namespace.put(s, p);			
+		}
+	}
+
+	// added 2023.07.29
+	public void checkFuzzyAggregatorSortingList (SortFuzzyAggregatorElement sfae) {
+		if (sfae.sourceArrayList.size() != sfae.targetArrayList.size())
+			myErrorHandler(ERR_ON_ARRAY_NUMBER);	
+		else
+			sfae.linkSourceToTargetArray();		
+	}
+
+	// added 2023.07.13
+	public void addFuzzyAggregatorSortingArray(FuzzyAggregator fa, SortFuzzyAggregatorElement sfae, Token i, Token a) {
+		if (i == null)
+			i = Token.INVALID_TOKEN;
+		String ndx = i.getText();
+
+		if (a == null)
+			a = Token.INVALID_TOKEN;
+		String array = a.getText();
+
+		// check v is an existing array
+		Parameter p = fa.getParamList().get(array);
+		if (p == null || !p.isArray()) 
+			myErrorHandler(ERR_ON_UNDEFINED_ARRAY_PARAMETER, a);	
+			
+		// check i has never been used
+		if (fa.namespace.containsKey(ndx))
+			myErrorHandler(ERR_ON_INDEX_DECLARATION, i);
+		else {		
+			Parameter p2 = new Parameter(ndx, Parameter.ARRAY);
+			fa.namespace.put(ndx, p2);
+		}
+		sfae.sourceArrayList.add(a.getText());
+		sfae.indexList.add(i.getText());
+	}
+
+
+	public void addFuzzyAggregatorSortingField(FuzzyAggregator fa, SortFuzzyAggregatorElement sfae, 
+												Token ndx, Field subField, Token type, Token versus) {
+		if (ndx == null)
+			ndx = Token.INVALID_TOKEN;
+
+		if (!sfae.hasIndex(ndx.getText()))
+			myErrorHandler(ERR_ON_WRONG_INDEX, ndx);
+
+		if (subField == null)
+			subField = new Field();
+		subField.addHeadField(ndx.getText());
+		String typeStr = "";
+		if (type == null)
+			myErrorHandler(ERR_ON_WRONG_FIELD_TYPE);
+		else {
+			typeStr = type.getText();
+			if (!SortField.checkType(typeStr)) 
+				myErrorHandler(ERR_ON_WRONG_FIELD_TYPE);
+		}
+		SortField sf = new SortField (subField, typeStr);
+		if (versus != null)
+			sf.setVersus(versus.getText());
+		sfae.sortingFieldList.add(sf);
+	}
+
+
+	public SpecialFunctionFactor createMembershipArray(Token fuzzySet, Field array) {
+		if (fuzzySet == null)
+			fuzzySet = Token.INVALID_TOKEN;
+		
+		return new MembershipArray (fuzzySet.getText(), array);
+	}
+
+
+	public SpecialFunctionFactor createMembershipArray(Token fuzzySet) {
+		if (fuzzySet == null)
+			fuzzySet = Token.INVALID_TOKEN;
+
+		return new MembershipArray (fuzzySet.getText());
+	}
+
+
+	public void addMembershipArray(MembershipArray expr, Token fuzzySet) {
+		if (fuzzySet == null)
+			fuzzySet = Token.INVALID_TOKEN;
+		
+		expr.addFuzzyset(fuzzySet.getText());
+	}
+
 
 }
 

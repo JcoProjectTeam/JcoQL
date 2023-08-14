@@ -1,40 +1,50 @@
-USE DB testDb
-	ON SERVER MongoDB 'http://127.0.0.1:27017';
-
-CREATE JAVASCRIPT FUNCTION doubler
-	PARAMETERS
-		n1 TYPE Float
-	BODY
-	{
-		return n1*2;
-	}
-	END BODY;
-
-CREATE JAVA FUNCTION tripler
-	PARAMETERS
-		n2 TYPE Float
-	PRECONDITION
-		n2 > 0
-	CLASS Tripler
-	CLASS BODY
-	{
-		static float tripler (float n2) {
-		 return n2*4;
-		}
-	}
-	END BODY;
-
-GET COLLECTION B01@testDb;
-
+/*
 FILTER 
-	CASE
-		WHERE	
-				1 = 1 
-			GENERATE	
-				BUILD	{
-//					.js: doubler(.c), 
-//					.java: tripler(.c),
-					.c : .c
-					};
+	CASE WHERE WITH .productId
+		GENERATE 
+			CHECK FOR
+				FUZZY SET fs1
+					USING AGGREGATE THROUGH owa (MEMBERSHIP_TO ALL),
+				FUZZY SET GlobalAppeal 
+					USING AGGREGATE THROUGH owa (MEMBERSHIP_TO Appeal FROM ARRAY .evaluations.values),
+/ *				FUZZY SET GlobalCheapness
+					USING AGGREGATE THROUGH owa (MEMBERSHIP_TO Cheapness FROM ARRAY .evaluations),
+				FUZZY SET GlobalPerception
+					USING AGGREGATE THROUGH owa (MEMBERSHIP_TO Perception FROM ARRAY .evaluations),
+* /				FUZZY SET Wanted 
+					USING AGGREGATE THROUGH weigher(MEMBERSHIP_TO [	GlobalAppeal, GlobalCheapness, GlobalPerception ], [2, 3, 5]),
+				FUZZY SET  Pippo USING GlobalAppeal
+			BUILD {
+				.productId		: .productId, 
+				.productName	: .productName,
+				.maAll: MEMBERSHIP_ARRAY(ALL),
+				.maSelected: MEMBERSHIP_ARRAY(Appeal FROM ARRAY .evaluations.values),
+				.maFromArray1: MEMBERSHIP_ARRAY([	GlobalAppeal, GlobalCheapness, GlobalPerception ]),
+				.maFromArray2: MEMBERSHIP_ARRAY([	GlobalCheapness, GlobalAppeal, GlobalPerception ]),
+				.rank			: MEMBERSHIP_TO (Wanted)
+			}
+;				
+*/
 
-SAVE AS javaTest@testDb;
+
+CREATE FUZZY AGGREGATOR weigher
+	PARAMETERS 
+		M 				TYPE ARRAY, 
+		weights 		TYPE ARRAY,
+		V1 TYPE ARRAY
+	PRECONDITION COUNT (M) = COUNT (weights)
+	SORT (x1 IN M, x2 IN weights, cx IN V1) BY x1 TYPE NUMERIC, cx TYPE NUMERIC AS (M2, weight2, V2),
+				y IN M BY y TYPE NUMERIC AS M3
+	DERIVE M[3] AS plauto
+	FOR ALL 			x IN M
+		LOCALLY 		x * weights[POS] AS we,
+						-POS AS pp,
+						-x*2 AS xx,
+						-x-POS AS xxx
+		AGGREGATE 	we AS av,
+					weights[POS] AS aw,
+					WITH SUM weights[POS] AS aw1,
+					WITH PRODUCT weights[POS] AS aw2,
+					WITH MAXIMUM weights[POS] AS aw3,
+					WITH MINIMUM weights[POS] AS aw4
+	EVALUATE 		av / aw;

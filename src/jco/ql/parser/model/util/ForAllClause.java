@@ -1,20 +1,26 @@
 package jco.ql.parser.model.util;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.StringJoiner;
 
 import jco.ql.parser.model.predicate.Expression;
 
-public class ForAllClause {
+public class ForAllClause extends ForAllDeriveElement {
 	
+	public String var;
 	public String idArray;
 	public Expression firstIndex;
 	public Expression lastIndex;
 	public ArrayList<LocallyClause> locally;
 	public ArrayList<AggregateClause> aggregate;
+	public HashSet<String> namespace;
 
 	
-	public ForAllClause(String idArray){
+	public ForAllClause(String var, String idArray){
+		this.var = var;
 		this.idArray = idArray;
+		fadType = FOR_ALL_CLAUSE;
 		firstIndex = null;
 		lastIndex = null;
 		locally = new ArrayList<LocallyClause>();
@@ -30,79 +36,87 @@ public class ForAllClause {
 	}
 	
 	//Locally aliases are available only inside the for all
-	public boolean hasParameterDefinedInForAll(String name) {
-		if(name == null) return false;
-		for(LocallyClause l: locally) {
-			if(l.alias.equals(name)) return true;
-		}
-		for(AggregateClause a: aggregate) {
-			if(a.alias.equals(name)) return true;
-		}
+	public boolean isForAllParameter(String name) {
+		if(name == null) 
+			return false;
+
+		if (name.equals(var))
+			return true;
+		
+		for(LocallyClause l: locally) 
+			if(l.alias.equals(name)) 
+				return true;
+
+		for(AggregateClause a: aggregate) 
+			if(a.alias.equals(name)) 
+				return true;
 		
 		return false;	
 	}
+
 	
-	public boolean hasParameterDefinedOutsideForAll(String name) {
-		if(name == null) return false;
-		for(AggregateClause a: aggregate) {
-			
-			if(a.alias.equals(name)) return true;
-		}
-		
-		return false;	
-	}
-	
-	public boolean hasArrayReferenceDefinedInForAll(String name) {
-		if(name == null) return false;
-		if(name.equals(idArray)) return true;
-		for(LocallyClause l: locally) {
-			if(l.alias.equals(name)) return true;
-		}
-		return false;
-	}
-	
-	
-	
-	//TODO modify
 	public String toString() {
-		String str = "FOR ALL " + idArray;
+		String str = "FOR ALL " + var + " IN " + idArray;
 		if(firstIndex != null)
-			str += " IN (" + firstIndex.toString() + lastIndex.toString() + ")";
+			str += " [" + firstIndex.toString() + ", " + lastIndex.toString() + "]";
 		str += " ";
+
 		if(locally != null) {
-			for(LocallyClause lc : locally)
-				str += lc.toString() + " ";
+			if (locally.size() == 1)
+				str += "LOCALLY " + locally.get(0).toString() + " ";
+			else {
+				StringJoiner sj = new StringJoiner(", ", "LOCALLY ", " ");
+				for(LocallyClause lc : locally)
+					sj.add(lc.toString());
+				str += sj.toString();
+			}
 		}
-		str += " ";
+
 		if(aggregate != null) {
-			for(AggregateClause ac: aggregate)
-				str += ac.toString() + " ";
+			if (aggregate.size() == 1)
+				str += "AGGREGATE " + aggregate.get(0).toString() + " ";
+			else {
+				StringJoiner sj = new StringJoiner(", ", "AGGREGATE ", " ");
+				for(AggregateClause ac: aggregate)
+					sj.add(ac.toString());
+				str += sj.toString();
+			}
 		}
-		
+
 		return str;
 	}
 	
-	//TODO modify
+
 	public String toMultilineString (int level) {
 		String tabs = "\n";
 		for (int i=0; i<level; i++)
 			tabs += "\t";		
-		String str = tabs + "FOR ALL " + idArray;
+		String str = tabs + "FOR ALL " + var + " IN " + idArray;
 		if(firstIndex != null)
-			str += " IN (" + firstIndex.toString() + ", " + lastIndex.toString() + ")";
+			str += " [" + firstIndex.toString() + ", " + lastIndex.toString() + "]";
 		
 		tabs += "\t";
 		
-		if(locally != null) {
-			for(LocallyClause lc : locally)
-				str += tabs + lc.toString() ;
-		}
+		if(locally != null) 
+			if (locally.size() == 1)
+				str += tabs + "LOCALLY " + locally.get(0).toString();
+			else {
+				StringJoiner sj = new StringJoiner(", " + tabs+"\t", tabs + "LOCALLY "+tabs+"\t", "");
+				for(LocallyClause lc : locally)
+					sj.add(lc.toString());
+				str += sj.toString();
+			}
 		
-		if(aggregate != null) {
-			for(AggregateClause ac: aggregate)
-				str += tabs + ac.toString();
-		}
-		
+		if(aggregate != null) 
+			if (aggregate.size() == 1)
+				str += tabs + "AGGREGATE " + aggregate.get(0).toString();
+			else {
+				StringJoiner sj = new StringJoiner(", " + tabs+"\t", tabs + "AGGREGATE "+tabs+"\t", "");
+				for(AggregateClause ac: aggregate)
+					sj.add(ac.toString());
+				str += sj.toString();
+			}
+
 		return str;
 	}
 }

@@ -16,8 +16,11 @@ public class ExpressionTerm {
 	public ExpressionTerm () {
 		factors = new ArrayList<ExpressionFactor>();
 		operators = new ArrayList<String>();
+	}	
+	public ExpressionTerm (ExpressionFactor f) {
+		this();
+		addFactor(f);
 	}
-	
 	
 	public ExpressionFactor getFactor (int ndx) {
 		return factors.get(ndx);

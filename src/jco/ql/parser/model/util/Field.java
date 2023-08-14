@@ -22,6 +22,10 @@ public class Field {
 		fields.add(field.replace("\"", ""));
 	}
 	
+	public void addHeadField (String field) {
+		fields.add(0, field.replace("\"", ""));
+	}
+	
 	public void setValue (Value v) {
 		value = v;
 	}

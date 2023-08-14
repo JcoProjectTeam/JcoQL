@@ -1,5 +1,9 @@
 package jco.ql.parser.model.predicate;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringJoiner;
+
 import jco.ql.parser.model.condition.Condition;
 import jco.ql.parser.model.util.Field;
 import jco.ql.parser.model.util.Value;
@@ -18,7 +22,8 @@ public class ExpressionFactor {
 	public static final int FIELDNAME 				= 5;
 	public static final int FUNCTION 				= 6;
 	public static final int SPECIAL_FUNCTION 		= 7;
-	public static final int ARRAY_REF				= 8; //Fuzzy aggregation
+	public static final int ARRAY					= 9; 	
+	public static final int ARRAY_REF				= 10; 	//Fuzzy aggregation
 
 	public int type;
 	public String idName;
@@ -26,7 +31,9 @@ public class ExpressionFactor {
 	public Expression subExpression;
 	public Field field;
 	public Value value;
-	public ArrayReference reference; //new
+	public List<ExpressionFactor> array;	// PF 2023.08.08
+	public ArrayReference reference; 		//	new
+	public ExpressionFactor exp;			//	new	
 
 	
 	public ExpressionFactor () {
@@ -36,7 +43,9 @@ public class ExpressionFactor {
 		subExpression = null;
 		field = null;
 		value = null;
-		reference = null; // new
+		array = new ArrayList<ExpressionFactor> ();
+		reference = null; 	// new
+		exp = null;
 	}
 
 	public ExpressionFactor (Condition p) {
@@ -76,34 +85,57 @@ public class ExpressionFactor {
 		reference = ref;
 	}
 	
+	public ExpressionFactor(ExpressionFactor f) {
+		this ();
+		type = ARRAY;
+		array.add(f);
+	}
+	public void addArrayValue(ExpressionFactor f) {
+		array.add(f);
+	}
+
+
+	public void addExp(ExpressionFactor e) {
+		exp = e;
+	}
+
 	public int getType () {
 		return type;
+	}
+	
+	public boolean hasExponent ( ) {
+		return exp != null;
 	}
 
 
 	public String toString () {
+		String str="";
+
 		if (type == UNDEFINED)
-			return "*UNDEFINED FACTOR*";
-					
-		if (type == SUB_CONDITION)
-			return "(" + subCondition.toString() + ")";
-					
-		if (type == SUB_EXPRESSION)
-			return "(" + subExpression.toString() + ")";
+			str = "*UNDEFINED FACTOR*";
+		else if (type == SUB_CONDITION)
+			str = "(" + subCondition.toString() + ")";
+		else if (type == SUB_EXPRESSION)
+			str = "(" + subExpression.toString() + ")";
+		else if (type == VALUE)
+			str = value.toString();
+		else if (type == FIELDNAME)
+			str = field.toString();
+		else if (type == ID)
+			str = idName;
+		else if (type == ARRAY_REF)
+			str = reference.toString();
+		else if (type == ARRAY) {
+			StringJoiner jf = new StringJoiner(", ", "[", "]");
+			for (ExpressionFactor ef: array)
+				jf.add(ef.toString());
+			str = jf.toString();
+		}
 
-		if (type == VALUE)
-			return value.toString();
+		if (hasExponent())
+			str += "^" + exp.toString();
 
-		if (type == FIELDNAME)
-			return field.toString();
-		
-		if (type == ID)
-			return idName;
-		
-		if (type == ARRAY_REF)
-			return reference.toString();
-
-		return "XXXXXX";
+		return str;
 	}
 
 	
