@@ -13,6 +13,7 @@ public class SpecialFunctionFactor extends ExpressionFactor {
 	public static final int IF_ERROR_FUNCTION  		= 105;
 	public static final int MEMBERSHIP_ARRAY 		= 106;
 
+	public static final int EXTRACT_ARRAY_FUNCTION 	= 199;	// added on 2023.09.04
 	public static final int ARRAY_FUNCTION 			= 200;
 
 	int specialFuntionType;

@@ -21,6 +21,7 @@ import jco.ql.parser.model.fuzzy.SetFuzzySets;
 import jco.ql.parser.model.predicate.Expression;
 import jco.ql.parser.model.predicate.ExpressionFactor;
 import jco.ql.parser.model.predicate.ExtentFunction;
+import jco.ql.parser.model.predicate.ExtractArray;
 import jco.ql.parser.model.predicate.FunctionFactor;
 import jco.ql.parser.model.predicate.IfErrorFunction;
 import jco.ql.parser.model.predicate.InRangePredicate;
@@ -1517,6 +1518,12 @@ public class Environment {
 			fuzzySet = Token.INVALID_TOKEN;
 		
 		expr.addFuzzyset(fuzzySet.getText());
+	}
+
+	
+	// added on 2023.09.04
+	public SpecialFunctionFactor createExtractArray(Field field, Field array) {
+		return new ExtractArray (field, array);
 	}
 
 

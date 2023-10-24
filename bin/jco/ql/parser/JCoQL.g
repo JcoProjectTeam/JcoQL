@@ -350,21 +350,22 @@ factorRule returns [ExpressionFactor ef]
 
 specialFunctionRule returns [SpecialFunctionFactor expr]
 	:
-			mt=MEMBERSHIP_TO 	LP fs=ID RP																						{	expr = env.buildMembershipTo ($mt, $fs); 	}
-		|	EXTENT 						LP fs=ID RP																						{	expr = env.buildExtent ($fs); 						}
-		| DEGREE 						LP fs=ID dg=FIELD_NAME? RP														{	expr = env.buildDegree ($fs, $dg);				}		// Balicco		
+			mt=MEMBERSHIP_TO 	LP fs=ID RP																								{	expr = env.buildMembershipTo ($mt, $fs); 	}
+		|	EXTENT 						LP fs=ID RP																								{	expr = env.buildExtent ($fs); 						}
+		| DEGREE 						LP fs=ID dg=FIELD_NAME? RP																{	expr = env.buildDegree ($fs, $dg);				}		// Balicco		
 		|	MEMBERSHIP_ARRAY 	LP																												
-			(	ALL 																																	{ expr = new MembershipArray (); }	
-			|	fuzzySet=ID FROM_ARRAY array=fieldRefRule															{ expr = env.createMembershipArray ($fuzzySet, array); }
-			| LB fuzzySet=ID  																											{ expr = env.createMembershipArray ($fuzzySet); }
-				( COMMA fuzzySet=ID																										{ env.addMembershipArray ((MembershipArray)expr, $fuzzySet); } 				)* 
+			(	ALL 																																			{ expr = new MembershipArray (); }	
+			|	fuzzySet=ID FROM_ARRAY array=fieldRefRule																	{ expr = env.createMembershipArray ($fuzzySet, array); }
+			| LB fuzzySet=ID  																													{ expr = env.createMembershipArray ($fuzzySet); }
+				( COMMA fuzzySet=ID																												{ env.addMembershipArray ((MembershipArray)expr, $fuzzySet); } 				)* 
 				RB
 			)	RP
-		| IF_ERROR					LP e=restrictedExpressionRule COMMA v=valueRule RP		{	expr = env.buildIfError (e, v); 					}
+		| EXTRACT_ARRAY			LP field=fieldRefRule FROM_ARRAY array=fieldRefRule RP		{	expr = env.createExtractArray(field, array); }
+		| IF_ERROR					LP e=restrictedExpressionRule COMMA v=valueRule RP				{	expr = env.buildIfError (e, v); 					}
 		|	TRANSLATE 				LP e=restrictedExpressionRule COMMA dict=ID 
 				    							( COMMA cs=BOOLEAN 
-				    								( COMMA (d=APEX_VALUE | d=QUOTED_VALUE) )? )?	RP	{	expr = env.buildTranslate 	(e, $dict, $cs, $d); 	}	
-		| a=arrayFunctionRule 																										{ expr = a; }
+				    								( COMMA (d=APEX_VALUE | d=QUOTED_VALUE) )? )?	RP			{	expr = env.buildTranslate 	(e, $dict, $cs, $d); 	}	
+		| a=arrayFunctionRule 																												{ expr = a; }
 	;
 valueRule returns [Value vl]
   : 
@@ -911,7 +912,7 @@ faSortRule [FuzzyAggregator fa]
 faArraySortRule [FuzzyAggregator fa] returns [SortFuzzyAggregatorElement sfae]
 @init{ sfae = new SortFuzzyAggregatorElement (); }
 	:
-			faArrayIndexRule[fa, sfae] 
+		(	faArrayIndexRule[fa, sfae] 
 				BY  faSortFieldRule[fa, sfae] 
 					( COMMA faSortFieldRule[fa, sfae] )* 
 				AS i1=ID																			{ env.setFuzzyAggregatorNewArray (fa, sfae, $i1); }
@@ -921,7 +922,7 @@ faArraySortRule [FuzzyAggregator fa] returns [SortFuzzyAggregatorElement sfae]
 					( COMMA faSortFieldRule[fa, sfae] )* 
 				AS LP i2=ID 																	{ env.setFuzzyAggregatorNewArray (fa, sfae, $i2); }
 					( COMMA i3=ID																{ env.setFuzzyAggregatorNewArray (fa, sfae, $i3); }		)+ RP
-																											{	env.checkFuzzyAggregatorSortingList (sfae); }
+		)																									{	env.checkFuzzyAggregatorSortingList (sfae); }
 	;
 
 faArrayIndexRule [FuzzyAggregator fa, SortFuzzyAggregatorElement sfae]
@@ -1319,6 +1320,7 @@ DUPLICATES  	  	: 'DUPLICATES';
 EACH							: 'EACH';
 EXPAND	    	    : 'EXPAND';
 EXTENT  	  	    : 'EXTENT';
+EXTRACT_ARRAY  	  : 'EXTRACT_ARRAY';
 EVALUATE					:	'EVALUATE';
 FIELD							: 'FIELD';
 FIELDS						: 'FIELDS';

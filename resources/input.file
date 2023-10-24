@@ -1,50 +1,23 @@
-/*
 FILTER 
-	CASE WHERE WITH .productId
+	CASE WHERE WITH .rainData
 		GENERATE 
 			CHECK FOR
-				FUZZY SET fs1
-					USING AGGREGATE THROUGH owa (MEMBERSHIP_TO ALL),
-				FUZZY SET GlobalAppeal 
-					USING AGGREGATE THROUGH owa (MEMBERSHIP_TO Appeal FROM ARRAY .evaluations.values),
-/ *				FUZZY SET GlobalCheapness
-					USING AGGREGATE THROUGH owa (MEMBERSHIP_TO Cheapness FROM ARRAY .evaluations),
-				FUZZY SET GlobalPerception
-					USING AGGREGATE THROUGH owa (MEMBERSHIP_TO Perception FROM ARRAY .evaluations),
-* /				FUZZY SET Wanted 
-					USING AGGREGATE THROUGH weigher(MEMBERSHIP_TO [	GlobalAppeal, GlobalCheapness, GlobalPerception ], [2, 3, 5]),
-				FUZZY SET  Pippo USING GlobalAppeal
+				FUZZY SET SignificantRain 
+USING integrateRain(EXTRACT_ARRAY(
+.value FROM ARRAY .raidData)),
+FUZZY SET PeaksOfRain
+USING owaRain (EXTRACT_ARRAY(
+.value FROM ARRAY .raidData)),
+				FUZZY SET Wanted 
+USING weightedMemberships (MEMBERSHIP_ARRAY(
+[PeaksOfRain, SignificantRain]), [2, 1])
+			ALPHACUT 0.8 ON Wanted
 			BUILD {
-				.productId		: .productId, 
-				.productName	: .productName,
-				.maAll: MEMBERSHIP_ARRAY(ALL),
-				.maSelected: MEMBERSHIP_ARRAY(Appeal FROM ARRAY .evaluations.values),
-				.maFromArray1: MEMBERSHIP_ARRAY([	GlobalAppeal, GlobalCheapness, GlobalPerception ]),
-				.maFromArray2: MEMBERSHIP_ARRAY([	GlobalCheapness, GlobalAppeal, GlobalPerception ]),
-				.rank			: MEMBERSHIP_TO (Wanted)
-			}
-;				
-*/
-
-
-CREATE FUZZY AGGREGATOR weigher
-	PARAMETERS 
-		M 				TYPE ARRAY, 
-		weights 		TYPE ARRAY,
-		V1 TYPE ARRAY
-	PRECONDITION COUNT (M) = COUNT (weights)
-	SORT (x1 IN M, x2 IN weights, cx IN V1) BY x1 TYPE NUMERIC, cx TYPE NUMERIC AS (M2, weight2, V2),
-				y IN M BY y TYPE NUMERIC AS M3
-	DERIVE M[3] AS plauto
-	FOR ALL 			x IN M
-		LOCALLY 		x * weights[POS] AS we,
-						-POS AS pp,
-						-x*2 AS xx,
-						-x-POS AS xxx
-		AGGREGATE 	we AS av,
-					weights[POS] AS aw,
-					WITH SUM weights[POS] AS aw1,
-					WITH PRODUCT weights[POS] AS aw2,
-					WITH MAXIMUM weights[POS] AS aw3,
-					WITH MINIMUM weights[POS] AS aw4
-	EVALUATE 		av / aw;
+.city 			: .city,
+.province		:	.province,
+.sensorId		:	.sensorId,
+.dateStart	: .dateStart,
+.dateEnd		:	.dateEnd,
+.ranking		: MEMBERSHIP_TO (Wanted)
+}
+DEFUZZIFY;	
