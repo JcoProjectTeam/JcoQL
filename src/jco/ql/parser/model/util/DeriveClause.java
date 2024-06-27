@@ -3,17 +3,28 @@ package jco.ql.parser.model.util;
 import jco.ql.parser.model.predicate.Expression;
 
 public class DeriveClause extends ForAllDeriveElement {
-	
+	public static final int DERIVE_SCALAR = 1;	
+	public static final int DERIVE_ARRAY = 2;
+
 	public String alias;
 	public Expression expression;
+	public int deriveType;
 
-	public DeriveClause (String as, Expression e) {
+	public DeriveClause (String as, Expression e, int dt) {
 		fadType = DERIVE_CLAUSE;
 		alias = as;
 		expression = e;
+		deriveType = dt;
 	}
 	
 	
+	public boolean isDeriveScalar () {
+		return deriveType == DERIVE_SCALAR;				
+	}
+	public boolean isDeriveArray () {
+		return deriveType == DERIVE_ARRAY;				
+	}
+
 	public String toString () {
 		String str = "DERIVE " + expression.toString() + " AS " + alias;
 		return str;

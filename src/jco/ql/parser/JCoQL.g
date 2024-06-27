@@ -28,11 +28,11 @@ options {
 @members{
 	public static final String version = "4.0";
 	public static final String release = "4.0.02";
- 	Environment env;
+ 	JCoQLEnvironment env;
 
   public JCoQLParser(JCoQLLexer lexer) {		
 		this(new CommonTokenStream(lexer));
-		env = new Environment(input, version, release);
+		env = new JCoQLEnvironment(input, version, release);
 		lexer.setEnvironment(env);
 	}
 	// 2021.12.14 - These constructors are added to avoid to create a lexer outside the parser
@@ -40,18 +40,18 @@ options {
 		this(new CommonTokenStream(null));
 		JCoQLLexer lexer = new JCoQLLexer(new ANTLRReaderStream(fileIn)); 
 		input = new CommonTokenStream(lexer);
-		env = new Environment(input, version, release);
+		env = new JCoQLEnvironment(input, version, release);
 		lexer.setEnvironment(env);
 	}
   public JCoQLParser(String docIn) throws IOException {		
 		this(new CommonTokenStream(null));
 		JCoQLLexer lexer = new JCoQLLexer(new ANTLRReaderStream(new StringReader (docIn))); 
 		input = new CommonTokenStream(lexer);
-		env = new Environment(input, version, release);
+		env = new JCoQLEnvironment(input, version, release);
 		lexer.setEnvironment(env);
 	}
   
-  public Environment getEnvironment() {
+  public JCoQLEnvironment getEnvironment() {
     return env;
   }
   
@@ -76,9 +76,9 @@ options {
 }
 
 @lexer::members{
-  Environment env;
+  JCoQLEnvironment env;
 
-  void setEnvironment (Environment e) {
+  void setEnvironment (JCoQLEnvironment e) {
     env = e;
   }
 }
@@ -106,6 +106,7 @@ start
     | createFuzzySetModelRule							// 19 - Balicco			FuzzySetType renamed in FuzzySetModel
     | createGenericFuzzySetOperatorRule		// 20 - Balicco
     | createJavaFunctionRule							// 21 PF news
+    | createFuzzyEvaluatorRule						// 22 PF news
     | test                      					// istruzione di test...
     )* EOF
   ;
@@ -334,16 +335,16 @@ termRule returns [ExpressionTerm et]
 
 factorRule returns [ExpressionFactor ef]
   : 
-	  (	LP op=orConditionRule RP						   		{ ef = new ExpressionFactor (op); }
-	  |	fr=fieldRefRule														{ ef = new ExpressionFactor (fr); }
-	  | vl=valueRule															{	ef = new ExpressionFactor (vl);	}
-	  | x=ID LP (fp=functionParamsRule)? RP				{ ef = env.buildFunction ($x, fp); } 
-	  | LB f=factorRule														{ ef = new ExpressionFactor (f); }
+	  (	LP op=orConditionRule RP						   		{ ef = new ExpressionFactor (op); }			// sub expression between ()
+	  |	fr=fieldRefRule														{ ef = new ExpressionFactor (fr); }			//	fieldref
+	  | vl=valueRule															{	ef = new ExpressionFactor (vl);	}			//	simple value
+	  | x=ID LP (fp=functionParamsRule)? RP				{ ef = env.buildFunction ($x, fp); } 		//	normal function call...
+	  | sf=specialFunctionRule										{	ef = sf; }														// special function
+	  | LB f=factorRule														{ ef = new ExpressionFactor (f); }			//	array value
 	  		(	COMMA f=factorRule										{	ef.addArrayValue (f); }																			
 	  	)* RB
-	  | sf=specialFunctionRule										{	ef = sf; }
 	  )	
-	  (	EXP e=factorRule 													{	ef.addExp (e); } )?
+	  (	EXP e=factorRule 													{	ef.addExp (e); } )?										// exponent (when applicable)
   ;
 
 
@@ -367,13 +368,15 @@ specialFunctionRule returns [SpecialFunctionFactor expr]
 				    								( COMMA (d=APEX_VALUE | d=QUOTED_VALUE) )? )?	RP			{	expr = env.buildTranslate 	(e, $dict, $cs, $d); 	}	
 		| a=arrayFunctionRule 																												{ expr = a; }
 	;
+
+
 valueRule returns [Value vl]
   : 
   		n=INT           { vl = new Value (Value.INT, $n.getText()); 		}
 		| f=FLOAT         { vl = new Value (Value.FLOAT, $f.getText());		}
+	  | b=BOOLEAN       { vl = new Value (Value.BOOLEAN, $b.getText());	}
 	  | a=APEX_VALUE    { vl = new Value (Value.APEX, $a.getText()); 		}
 	  | q=QUOTED_VALUE  { vl = new Value (Value.QUOTED, $q.getText());	}
-	  | b=BOOLEAN       { vl = new Value (Value.BOOLEAN, $b.getText());	}
   ;
 
 
@@ -424,16 +427,16 @@ restrictedTermRule returns [ExpressionTerm et]
   
 restrictedFactorRule returns [ExpressionFactor ef]
   : 
-		( LP ex=restrictedExpressionRule RP					{ ef = new ExpressionFactor (ex); }
-	  |	fr=fieldRefRule														{ ef = new ExpressionFactor (fr); }
-	  | vl=valueRule															{	ef = new ExpressionFactor (vl);	}
-	  | x=ID LP (fp=functionParamsRule)? RP				{ ef = env.buildFunction ($x, fp); } 
-	  | LB f=restrictedFactorRule									{ ef = new ExpressionFactor (f); }
+		( LP ex=restrictedExpressionRule RP					{ ef = new ExpressionFactor (ex); }			// sub expression between ()
+	  |	fr=fieldRefRule														{ ef = new ExpressionFactor (fr); }			//	fieldref
+	  | vl=valueRule															{	ef = new ExpressionFactor (vl);	}			//	simple value
+	  | x=ID LP (fp=functionParamsRule)? RP				{ ef = env.buildFunction ($x, fp); } 		//	normal function call...
+	  | sf = specialFunctionRule									{	ef = sf;	}														//	special function
+	  | LB f=restrictedFactorRule									{ ef = new ExpressionFactor (f); }			//	array value
 	  		(	COMMA f=restrictedFactorRule					{	ef.addArrayValue (f); }																			
 	  	)* RB
-	  | sf = specialFunctionRule									{	ef = sf;	}
 	  )
-	  (	EXP e=restrictedFactorRule 								{	ef.addExp (e); } )?
+	  (	EXP e=restrictedFactorRule 								{	ef.addExp (e); } )?										//	// exponent (when applicable)	  
   ;
 
   
@@ -512,7 +515,6 @@ usingPredicateRule returns [Predicate p]
   :
   	LP c=usingOrConditionRule RP														{	p = new UsingPredicate (c); }
 	| x=ID (LP (fp=functionParamsRule)? RP)?									{	p = new UsingPredicate ($x.getText(), fp); }        
-//	| AGGREGATE THROUGH fe=faUsingPredicateRule				{ p = fe;}
 	| IF_FAILS LP 
 			c=usingOrConditionRule COMMA n=numericRule 		{ p = new UsingPredicate (c, n); }
 		RP
@@ -808,22 +810,22 @@ partitionMatchingRule  returns [PartitionMatching pt]
   
 
 
-
-parameterRule [ParamList pl] returns [Parameter p]
+// PF 05.05.2024 - params type is checked only for FO, not for Java or Javascript
+parameterRule [ParamList pl, boolean check] returns [Parameter p]
 	:	
 		v=ID										{	env.checkParameterDeclaration ($v, pl); } 
-		TYPE t=ID								{	p = env.createParameter ($v, $t); }
+		TYPE t=ID								{	p = env.createParameter (check, $v, $t); }
 	;
 
 
 createJavaScriptFunctionRule
 	:
 			CREATE JAVASCRIPT FUNCTION
-				jsfn=ID 																									{ JavascriptFunction jsf = env.addJavascriptFunction ($jsfn); }
+				jsfn=ID 																											{ JavascriptFunction jsf = env.addJavascriptFunction ($jsfn); }
 			PARAMETERS 	
-				p=parameterRule [jsf.getParamList()] 													{ jsf.parameters.add (p); }
-				( COMMA p=parameterRule [jsf.getParamList()]										{ jsf.parameters.add (p);}   )*
-			(	PRECONDITION pc=jfOrConditionRule [jsf.getParamList(), true]	{	jsf.preCondition = pc; } 		)?
+				p=parameterRule [jsf.getParamList(), false] 											{ jsf.parameters.add (p); }
+				( COMMA p=parameterRule [jsf.getParamList(), false]								{ jsf.parameters.add (p);}  	)*
+			(	PRECONDITION pc=jfOrConditionRule [jsf.getParamList(), true]			{	jsf.preCondition = pc; } 		)?
 			BODY 
 					{ // ANTLR 3.4 apparently do not support multi context, so scanning must be performed this way
 						int res = JavascriptFunction.NO_BEGIN;
@@ -850,10 +852,10 @@ createFuzzyOperatorRule
 		:		
 			CREATE FUZZY OPERATOR f=ID																			{ FuzzyOperator fo = env.addFuzzyOperator ($f); }
 			PARAMETERS 	
-				p=parameterRule [fo.getParamList()] 													{ fo.parameters.add (p); }
-				( COMMA p=parameterRule [fo.getParamList()]												{ fo.parameters.add (p);}   )*
-			( PRECONDITION pc=jfOrConditionRule [fo.getParamList(), false]	{ fo.preCondition = pc; }			)?
-			EVALUATE e=jfExpressionRule [fo.getParamList(), false]							{ fo.evaluate = e; }	
+				p=parameterRule [fo.getParamList(), true] 											{ fo.parameters.add (p); }
+				( COMMA p=parameterRule [fo.getParamList(), true]										{ fo.parameters.add (p);}   )*
+			( PRECONDITION pc=jfOrConditionRule [fo.getParamList(), false]		{ fo.preCondition = pc; }			)?
+			EVALUATE e=jfExpressionRule [fo.getParamList(), false]								{ fo.evaluate = e; }	
 			( POLYLINE 	LB
 										LP x=numericRule COMMA y=numericRule RP							{ env.addFuzzyPolylinePoint (fo, x, y); }
 										( COMMA LP x=numericRule COMMA y=numericRule RP 				{ env.addFuzzyPolylinePoint (fo, x, y); }		)+
@@ -862,87 +864,117 @@ createFuzzyOperatorRule
 	;  
 	
 	
+// PF 02.05.2024
+createFuzzyEvaluatorRule
+	:	
+		CREATE FUZZY EVALUATOR n=ID  																		{ FuzzyEvaluator fe = env.addFuzzyEvaluator ($n); }
+			PARAMETERS 
+				feParameterRule [fe]																						
+				( COMMA feParameterRule [fe]																																			)* 		
+			( PRECONDITION pc=jfOrConditionRule [fe.getParamList(), false]			{ fe.preCondition = pc; }				)?
+			( feSortRule[fe]																																										)?
+			(	f=feForAllRule[fe]																								{ fe.forAllDeriveList.add(f); }
+			| d=feDeriveRule[fe]																								{ fe.forAllDeriveList.add(d); }	)*
+			EVALUATE e=feExpressionRule [fe, null] 															{ fe.evaluate = e; } 
+			(	POLYLINE LB
+					LP x=numericRule COMMA y=numericRule RP													{ env.addFuzzyEvaluatorPolylinePoint (fe, x, y); }
+					( COMMA LP x=numericRule COMMA y=numericRule RP 								{ env.addFuzzyEvaluatorPolylinePoint (fe, x, y); }		)+
+				RB )?
+		SC
+	;
+
+
 /* ********* START Invernici contribution ********* */
 
 createFuzzyAggregatorRule
 	:	
-		CREATE FUZZY AGGREGATOR n=ID  																		{ FuzzyAggregator fa = env.addFuzzyAggregator ($n); }
+		CREATE FUZZY AGGREGATOR n=ID  																		{ FuzzyEvaluator fe = env.addFuzzyAggregator ($n); }
 			PARAMETERS 
-				faParameterRule [fa]																						
-				( COMMA faParameterRule [fa]																																			)* 		
-			( PRECONDITION pc=jfOrConditionRule [fa.getParamList(), false]			{ fa.preCondition = pc; }				)?
-			( faSortRule[fa]																																										)?
-			(	f=faForAllRule[fa]																								{ fa.forAllDeriveList.add(f); }
-			| d=faDeriveRule[fa]																								{ fa.forAllDeriveList.add(d); }	)+
-			EVALUATE e=faExpressionRule [fa, null] 															{ fa.evaluate = e; } 
+				feParameterRule [fe]																						
+				( COMMA feParameterRule [fe]																																			)* 		
+			( PRECONDITION pc=jfOrConditionRule [fe.getParamList(), false]			{ fe.preCondition = pc; }				)?
+			( feSortRule[fe]																																										)?
+			(	f=feForAllRule[fe]																								{ fe.forAllDeriveList.add(f); }
+			| d=feDeriveRule[fe]																								{ fe.forAllDeriveList.add(d); }	)+
+			EVALUATE e=feExpressionRule [fe, null] 															{ fe.evaluate = e; } 
 			(	POLYLINE LB
-					LP x=numericRule COMMA y=numericRule RP													{ env.addFuzzyAggregatorPolylinePoint (fa, x, y); }
-					( COMMA LP x=numericRule COMMA y=numericRule RP 								{ env.addFuzzyAggregatorPolylinePoint (fa, x, y); }		)+
+					LP x=numericRule COMMA y=numericRule RP													{ env.addFuzzyEvaluatorPolylinePoint (fe, x, y); }
+					( COMMA LP x=numericRule COMMA y=numericRule RP 								{ env.addFuzzyEvaluatorPolylinePoint (fe, x, y); }		)+
 				RB )?
 		SC
 	;
 
 	
-faForAllRule [FuzzyAggregator fa]returns [ForAllClause fac]
+feForAllRule [FuzzyEvaluator fe] returns [ForAllClause fac]
 	: 
-		FOR ALL v=ID IN ar=ID  															{ fac = env.createForAllClause($v, $ar, fa);	}
-			( LB 	x1=faExpressionRule [fa, null] 								{ fac.firstIndex = x1; }
-					COMMA	x2=faExpressionRule [fa, null] RB 				{ fac.lastIndex  = x2; }														)? 
-			( LOCALLY e=faExpressionRule [fa, fac] AS id=ID 		{ env.createLocallyClause(fac, $id, e, fa); 	} 	
-				(	COMMA e=faExpressionRule [fa, fac] AS id=ID 		{ env.createLocallyClause(fac, $id, e, fa); 	} )* 	)?
-			AGGREGATE ac=aggSpecRule [fa, fac]									{ fac.aggregate.add(ac);}
-			( COMMA ac=aggSpecRule [fa, fac]										{ fac.aggregate.add(ac);}														)*
+		FOR ALL v=ID IN ar=ID  															{ fac = env.createForAllClause($v, $ar, fe);	}
+			( LB 	x1=feExpressionRule [fe, null] 								{ fac.firstIndex = x1; }
+					COMMA	x2=feExpressionRule [fe, null] RB 				{ fac.lastIndex  = x2; }														)? 
+			( LOCALLY e=feExpressionRule [fe, fac] AS id=ID 		{ env.createLocallyClause(fac, $id, e, fe); 	} 	
+				(	COMMA e=feExpressionRule [fe, fac] AS id=ID 		{ env.createLocallyClause(fac, $id, e, fe); 	} )* 	)?
+			AGGREGATE ac=aggSpecRule [fe, fac]									{ fac.aggregate.add(ac);}
+			( COMMA ac=aggSpecRule [fe, fac]										{ fac.aggregate.add(ac);}														)*
 			
 	;
 
 
-faDeriveRule [FuzzyAggregator fa] returns [DeriveClause dc]
+// modified on 2024.06-24
+feDeriveRule [FuzzyEvaluator fe] returns [DeriveClause dc]
+@init {	int dt = DeriveClause.DERIVE_SCALAR; }	
 	: 
-		DERIVE e=faExpressionRule [fa, null] AS id=ID 		{ dc = env.createDeriveClause($id, e, fa); 		} 
+		DERIVE (	e=feExpressionRule [fe, null]		
+					 |	e=feCumulateRule [fe]  				{ dt = DeriveClause.DERIVE_ARRAY; } 	)
+			AS id=ID 															{ dc = env.createDeriveClause($id, e, fe, dt); 	} 
+				 
 	;
 
-
-faSortRule [FuzzyAggregator fa]
+// added on 2024.06-24
+feCumulateRule [FuzzyEvaluator fe] returns [Expression feExpr]
 	:
-		SORT s1=faArraySortRule[fa]				{	fa.sortList.add(s1); }
-			( COMMA s2=faArraySortRule[fa] 	{	fa.sortList.add(s2); }	)*
+		CUMULATE LP a=ID RP	{	feExpr = env.getCumulateArray (fe, $a); }	
 	;
 
-
-faArraySortRule [FuzzyAggregator fa] returns [SortFuzzyAggregatorElement sfae]
-@init{ sfae = new SortFuzzyAggregatorElement (); }
+feSortRule [FuzzyEvaluator fe]
 	:
-		(	faArrayIndexRule[fa, sfae] 
-				BY  faSortFieldRule[fa, sfae] 
-					( COMMA faSortFieldRule[fa, sfae] )* 
-				AS i1=ID																			{ env.setFuzzyAggregatorNewArray (fa, sfae, $i1); }
-		| LP faArrayIndexRule[fa, sfae] 
-				( COMMA faArrayIndexRule[fa, sfae]  )+ RP 
-				BY faSortFieldRule[fa, sfae] 
-					( COMMA faSortFieldRule[fa, sfae] )* 
-				AS LP i2=ID 																	{ env.setFuzzyAggregatorNewArray (fa, sfae, $i2); }
-					( COMMA i3=ID																{ env.setFuzzyAggregatorNewArray (fa, sfae, $i3); }		)+ RP
-		)																									{	env.checkFuzzyAggregatorSortingList (sfae); }
+		SORT s1=feArraySortRule[fe]				{	fe.sortList.add(s1); }
+			( COMMA s2=feArraySortRule[fe] 	{	fe.sortList.add(s2); }	)*
 	;
 
-faArrayIndexRule [FuzzyAggregator fa, SortFuzzyAggregatorElement sfae]
+
+feArraySortRule [FuzzyEvaluator fe] returns [SortFuzzyEvaluatorArray sfea]
+@init{ sfea = new SortFuzzyEvaluatorArray (); }
 	:
-		i=ID IN a=ID										{ env.addFuzzyAggregatorSortingArray (fa, sfae, $i, $a); }
+		(	feArrayIndexRule[fe, sfea] 
+				BY  feSortFieldRule[fe, sfea] 
+					( COMMA feSortFieldRule[fe, sfea] )* 
+				AS i1=ID																			{ env.setFuzzyEvaluatorNewArray (fe, sfea, $i1); }
+		| LP feArrayIndexRule[fe, sfea] 
+				( COMMA feArrayIndexRule[fe, sfea]  )+ RP 
+				BY feSortFieldRule[fe, sfea] 
+					( COMMA feSortFieldRule[fe, sfea] )* 
+				AS LP i2=ID 																	{ env.setFuzzyEvaluatorNewArray (fe, sfea, $i2); }
+					( COMMA i3=ID																{ env.setFuzzyEvaluatorNewArray (fe, sfea, $i3); }		)+ RP
+		)																									{	env.checkFuzzyEvaluatorSortingList (sfea); }
 	;
 
-faSortFieldRule [FuzzyAggregator fa, SortFuzzyAggregatorElement sfae]
+feArrayIndexRule [FuzzyEvaluator fe, SortFuzzyEvaluatorArray sfea]
+	:
+		i=ID IN a=ID										{ env.addFuzzyEvaluatorSortingArray (fe, sfea, $i, $a); }
+	;
+
+feSortFieldRule [FuzzyEvaluator fe, SortFuzzyEvaluatorArray sfea]
 	:
 		i=ID (f=fieldRefRule)?  					
 		TYPE t=ID 
-		( v=VERSUS )?											{ env.addFuzzyAggregatorSortingField (fa, sfae, $i, f, $t, $v); }
+		( v=VERSUS )?											{ env.addFuzzyEvaluatorSortingField (fe, sfea, $i, f, $t, $v); }
 	;
 	
 
-aggSpecRule [FuzzyAggregator fa, ForAllClause fac] returns [AggregateClause ac]
+aggSpecRule [FuzzyEvaluator fe, ForAllClause fac] returns [AggregateClause ac]
 	:	
 		( wt=withSpec )? 
-		e=faExpressionRule [fa, fac] 
-		AS a=ID 													{ ac = env.createAggregateClause(wt, e, $a, fa, fac);}
+		e=feExpressionRule [fe, fac] 
+		AS a=ID 													{ ac = env.createAggregateClause(wt, e, $a, fe, fac);}
 	;
 
 withSpec returns [String s]
@@ -954,10 +986,10 @@ withSpec returns [String s]
 	 ;
 	
 
-faParameterRule [FuzzyAggregator fa] 
+feParameterRule [FuzzyEvaluator fe] 
 	:	
 		p=ID															
-		TYPE (t=ID | t=ARRAY)							{	env.createFAParameter (fa, $p, $t); 			}
+		TYPE (t=ID | t=ARRAY)							{	env.createFEParameter (fe, $p, $t); 			}
 	;
 
 /* ********* END Invernici contribution ********** */
@@ -1044,48 +1076,48 @@ jfFunctionParamsRule [ParamList pl, boolean jsCaller] returns [ArrayList<Express
 
 /* Modifica Invernici: Parte espressione per la fuzzy aggregation*/
 
-faExpressionRule [FuzzyAggregator fa, ForAllClause fac] returns [Expression expr]
+feExpressionRule [FuzzyEvaluator fe, ForAllClause fac] returns [Expression expr]
 @init { expr = new Expression (); }
   : 
-  	(	t=faTermRule	[fa, fac]									{ expr.addTerm (t, null); }
-  	|	(s=ADD | s=SUB) t=faTermRule [fa, fac]	{ expr.addTerm (t, $s.getText()); } )
-    ( (s=ADD | s=SUB) t=faTermRule [fa, fac]	{ expr.addTerm (t, $s.getText()); }	)*
+  	(	t=feTermRule	[fe, fac]									{ expr.addTerm (t, null); }
+  	|	(s=ADD | s=SUB) t=feTermRule [fe, fac]	{ expr.addTerm (t, $s.getText()); } )
+    ( (s=ADD | s=SUB) t=feTermRule [fe, fac]	{ expr.addTerm (t, $s.getText()); }	)*
   ;
   
-faTermRule [FuzzyAggregator fa, ForAllClause fac] returns [ExpressionTerm et]
+feTermRule [FuzzyEvaluator fe, ForAllClause fac] returns [ExpressionTerm et]
 @init { et = new ExpressionTerm (); }
   : 
-  	f=faFactorRule 	[fa, fac]										{ et.addFactor(f, null);}
-    ( (s=MUL | s=DIV) f=faFactorRule  [fa, fac]	{ et.addFactor(f, s.getText());}		)*
-  ;
-  
-  
-faFactorRule [FuzzyAggregator fa, ForAllClause fac] returns [ExpressionFactor expr]
-  : 
-  	(	LP op= faExpressionRule [fa, fac] RP								{ expr = new ExpressionFactor (op); }
-	  | v=INT																								{ expr = new ExpressionFactor (new Value(Value.INT, $v.getText())); }
-	  | v=FLOAT																							{ expr = new ExpressionFactor (new Value(Value.FLOAT, $v.getText())); }
-	  | v=APEX_VALUE																				{ expr = new ExpressionFactor (new Value(Value.APEX, $v.getText())); }
-	  | v=QUOTED_VALUE																			{ expr = new ExpressionFactor (new Value(Value.QUOTED, $v.getText())); }
-	  | v=POS 																							{ expr = new ExpressionFactor ($v.getText()); }
-	  | x=ID	( ref=faArrayRefRule [x, fa]
-	  				| LP fp=faFunctionParamsRule [fa, fac] RP )?	{ expr = env.setFuzzyAggregatorExprFromArrayRef($x, fp, ref, fa, fac);}
-	  )
-	  (	EXP e=faFactorRule [fa, fac]												{	expr.addExp (e); } )?
+  	f=feFactorRule 	[fe, fac]										{ et.addFactor(f, null);}
+    ( (s=MUL | s=DIV) f=feFactorRule  [fe, fac]	{ et.addFactor(f, s.getText());}		)*
   ;
   
 
-faFunctionParamsRule [FuzzyAggregator fa, ForAllClause fac] returns [ArrayList<Expression> params]
+  
+feFactorRule [FuzzyEvaluator fe, ForAllClause fac] returns [ExpressionFactor expr]
+  : 
+  	(	LP op=feExpressionRule [fe, fac] RP											{ expr = new ExpressionFactor (op); 	}																				//	sub expression between ()
+	  | vl=valueRule																						{	expr = new ExpressionFactor (vl);		}																				//	simple value
+	  | p=POS 																									{ expr = env.getPosFactor (fac, $p); 	}																				//	POS - special for FuzzyEvaluator, only inside FOR ALL clause
+		| IF_ERROR 																																																															// added on 2024.06.24
+				LP e=feExpressionRule [fe, fac] COMMA v=valueRule RP	{	expr = env.buildIfError (e, v); 		}
+	  | x=ID	( ref=feArrayRefRule [x, fe, fac]																																																//	array ref
+	  				| LP fp=feFunctionParamsRule [fe, fac] RP )?			{ expr = env.setFuzzyEvaluatorExprFromArrayRef($x, fp, ref, fe, fac);}				//	function call
+	  )
+	  (	EXP exp=feFactorRule [fe, fac]														{	expr.addExp (exp); } )?																												//	exponent (when applicable)
+  ;
+  
+
+feFunctionParamsRule [FuzzyEvaluator fe, ForAllClause fac] returns [ArrayList<Expression> params]
   @init{ params = new ArrayList<Expression>(); }
   : 
-  	e=faExpressionRule [fa, fac] 								{ params.add(e); }
-    	( COMMA e=faExpressionRule [fa, fac] 				{ params.add(e); }		)*
+  	e=feExpressionRule [fe, fac] 								{ params.add(e); }
+    	( COMMA e=feExpressionRule [fe, fac] 				{ params.add(e); }		)*
   ;
 
 
-faArrayRefRule [Token id, FuzzyAggregator fa] returns [ArrayReference ref]
+feArrayRefRule [Token id, FuzzyEvaluator fe, ForAllClause fac] returns [ArrayReference ref]
 	:	
-		LB (e=faExpressionRule [fa, null]) RB 
+		LB (e=feExpressionRule [fe, fac]) RB 
 		(f = fieldRefRule)? { ref = env.setArrayRef(id, e, f);}
 	;
 
@@ -1117,19 +1149,18 @@ fuzzyOperatorDefinitionRule[FuzzySetModel fm] returns [FuzzyOperatorDefinition d
 ;
 
 createGenericFuzzySetOperatorRule:
-		CREATE t=ID FUZZY OPERATOR n=ID											{ GenericFuzzyOperator gfo = env.addGenericFuzzyOperator($t, $n); }
-		PARAMETERS p=parameterRule	[gfo.getParamList()] 									{ gfo.parameters.add (p); }
-			( COMMA  p=parameterRule	[gfo.getParamList()]										{ gfo.parameters.add (p); } 	)*
+		CREATE t=ID FUZZY OPERATOR n=ID																{ GenericFuzzyOperator gfo = env.addGenericFuzzyOperator($t, $n); }
+		PARAMETERS p=parameterRule	[gfo.getParamList(), true] 						{ gfo.parameters.add (p); }
+			( COMMA  p=parameterRule	[gfo.getParamList(), true]							{ gfo.parameters.add (p); } 	)*
 		( PRECONDITION pc=jfOrConditionRule [gfo.getParamList(), false]		{ gfo.precondition = pc; }			)?
-		(	
-			EVALUATE g=ID 																				{ Parameter ev = env.createFgoParameter ($g); } 
-			AS e=jfExpressionRule [gfo.getParamList(), false]			{ FuzzyPolyline fp = env.manageEvaluate(gfo, ev, e); }
+		(	EVALUATE g=ID 																									{ Parameter ev = env.createFgoParameter ($g); } 
+				AS e=jfExpressionRule [gfo.getParamList(), false]							{ FuzzyPolyline fp = env.manageEvaluate(gfo, ev, e); }
 			( 	
-				POLYLINE	LB				
-					LP x=numericRule COMMA y=numericRule RP							{ env.addFuzzyPolylinePoint (fp, x, y); }
-					( COMMA LP x=numericRule COMMA y=numericRule RP 		{ env.addFuzzyPolylinePoint (fp, x, y); }		)+
+				POLYLINE	LB						
+					LP x=numericRule COMMA y=numericRule RP												{ env.addFuzzyPolylinePoint (fp, x, y); }
+					( COMMA LP x=numericRule COMMA y=numericRule RP 							{ env.addFuzzyPolylinePoint (fp, x, y); }		)+
 				RB																	
-			)?																										{ gfo.polylines.add(fp); }
+			)?																															{ gfo.polylines.add(fp); }
 		)+
 		SC		
 ;
@@ -1225,13 +1256,13 @@ ftConditionFunctionParamsRule[ParamList pl, boolean isNot] returns [ArrayList<Ex
 createJavaFunctionRule
 	:
 			CREATE JAVA FUNCTION
-				jfn=ID 																									{ JavaFunction jf = env.addJavaFunction ($jfn); }
+				jfn=ID 																										{ JavaFunction jf = env.addJavaFunction ($jfn); }
 			PARAMETERS 	
-				p=parameterRule [jf.getParamList()] 												{ jf.parameters.add (p); 					}
-				( COMMA p=parameterRule [jf.getParamList()]									{ jf.parameters.add (p);					} 	)*
-			(	PRECONDITION pc=jfOrConditionRule [jf.getParamList(), true]	{	jf.preCondition = pc; 					}		)?
-			CLASS cl=ID																										{	jf.setClass ($cl.getText());		}
-			( IMPORT imp=QUOTED_VALUE 																		{	jf.setImport ($imp.getText()); 	}		)?
+				p=parameterRule [jf.getParamList(), false] 										{ jf.parameters.add (p); 					}
+				( COMMA p=parameterRule [jf.getParamList(), false]						{ jf.parameters.add (p);					} 	)*
+			(	PRECONDITION pc=jfOrConditionRule [jf.getParamList(), true]		{	jf.preCondition = pc; 					}		)?
+			CLASS cl=ID																											{	jf.setClass ($cl.getText());		}
+			( IMPORT imp=QUOTED_VALUE 																			{	jf.setImport ($imp.getText()); 	}		)?
 			CLASS BODY 
 					{ // ANTLR 3.4 apparently do not support multi context, so scanning must be performed this way
 						int res = JavaFunction.NO_BEGIN;
@@ -1303,6 +1334,7 @@ COLLECTION  		  : 'COLLECTION';
 COLLECTIONS   		: 'COLLECTIONS';
 CONSTRAINT				: 'CONSTRAINT';
 CREATE						: 'CREATE';							
+CUMULATE					: 'CUMULATE';							
 DB	      	      : 'DB';
 DEFAULT						: 'DEFAULT';
 DEFUZZIFY					:	'DEFUZZIFY';
@@ -1322,6 +1354,7 @@ EXPAND	    	    : 'EXPAND';
 EXTENT  	  	    : 'EXTENT';
 EXTRACT_ARRAY  	  : 'EXTRACT_ARRAY';
 EVALUATE					:	'EVALUATE';
+EVALUATOR					:	'EVALUATOR';
 FIELD							: 'FIELD';
 FIELDS						: 'FIELDS';
 FILTER    	    	: 'FILTER';

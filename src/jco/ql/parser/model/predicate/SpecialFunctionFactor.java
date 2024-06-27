@@ -15,6 +15,7 @@ public class SpecialFunctionFactor extends ExpressionFactor {
 
 	public static final int EXTRACT_ARRAY_FUNCTION 	= 199;	// added on 2023.09.04
 	public static final int ARRAY_FUNCTION 			= 200;
+	public static final int ARRAY_CUMULATE			= 201; 	//Fuzzy aggregation
 
 	int specialFuntionType;
 	

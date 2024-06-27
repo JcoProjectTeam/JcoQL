@@ -16,7 +16,7 @@ public class ParserTester {
 			JCoQLLexer lexer = new JCoQLLexer(new ANTLRReaderStream(new FileReader(fileIn))); 
 			parser = new JCoQLParser(lexer);
 			parser.start();
-			Environment env = parser.getEnvironment();
+			JCoQLEnvironment env = parser.getEnvironment();
 			
 			System.out.println("Parser " + env.getVersion() + 
 							" - Release " + env.getRelease() + 

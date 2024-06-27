@@ -1,23 +1,14 @@
-FILTER 
-	CASE WHERE WITH .rainData
-		GENERATE 
-			CHECK FOR
-				FUZZY SET SignificantRain 
-USING integrateRain(EXTRACT_ARRAY(
-.value FROM ARRAY .raidData)),
-FUZZY SET PeaksOfRain
-USING owaRain (EXTRACT_ARRAY(
-.value FROM ARRAY .raidData)),
-				FUZZY SET Wanted 
-USING weightedMemberships (MEMBERSHIP_ARRAY(
-[PeaksOfRain, SignificantRain]), [2, 1])
-			ALPHACUT 0.8 ON Wanted
-			BUILD {
-.city 			: .city,
-.province		:	.province,
-.sensorId		:	.sensorId,
-.dateStart	: .dateStart,
-.dateEnd		:	.dateEnd,
-.ranking		: MEMBERSHIP_TO (Wanted)
-}
-DEFUZZIFY;	
+
+
+CREATE FUZZY EVALUATOR giniFE
+	PARAMETERS		pop TYPE ARRAY,
+					gdp TYPE ARRAY
+	PRECONDITION COUNT (pop) = COUNT (gdp)
+	DERIVE CUMULATE(gdp) AS cGdp
+	DERIVE CUMULATE(pop) AS cPop
+
+	FOR ALL 		p IN cPop
+		LOCALLY		p - IF_ERROR(cPop [POS-1], 0) AS dp,
+							(cGdp[POS] + IF_ERROR(cGdp [POS-1],0))/2 AS dg
+		AGGREGATE 	dp*dg AS av
+	EVALUATE 		2*(0.5-av)/10000;

@@ -19,26 +19,22 @@ public class Parameter {
 	
 	public String name;
 	public String type;
-//	public String versus;
-//	public String versusType;
+
 	
 	public Parameter (String n, String t) {
 		name = n;
 		type = t;
-//		versus = null;
 	}
 
 	public String toString () {
 		String st = name + " TYPE " + type;
-//		if (hasVersus())
-;//			st += " " + versus; 
 		return st;
 	}
 	
 
 	public static boolean knownType (String type) {
-		if (ARRAY.equals(type) 		|| BOOLEAN.equals(type)	|| DOCUMENT.equals(type) ||	
-			NUMERIC.equals(type) 	||STRING.equals(type))
+		if (ARRAY.equals(type) 		||	BOOLEAN.equals(type)	|| DOCUMENT.equals(type) ||	
+			NUMERIC.equals(type) 	||	STRING.equals(type))
 			return true;
 		return false;
 	}
@@ -58,14 +54,5 @@ public class Parameter {
 	public boolean isString () {
 		return STRING.equals(type);
 	}
-/*
-	public boolean hasVersus () {
-		return versus != null;
-	}
-	public boolean isAscending () {
-		return ASC.equals(versus);
-	}
-	public boolean isDescending () {
-		return DESC.equals(versus);
-	}
-*/}
+
+}

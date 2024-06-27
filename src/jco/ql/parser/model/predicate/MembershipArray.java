@@ -23,8 +23,7 @@ public class MembershipArray extends SpecialFunctionFactor {
 		membershipArrayType = MA_ALL;
 		this.fuzzySet = null;
 		this.arrayName = null;
-		this.fuzzySetsSelected = new ArrayList<String>();
-		
+		this.fuzzySetsSelected = new ArrayList<String>();		
 	}
 	public MembershipArray(String fuzzyset, Field array) {
 		type = SPECIAL_FUNCTION;

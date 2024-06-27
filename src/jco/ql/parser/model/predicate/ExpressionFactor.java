@@ -84,6 +84,11 @@ public class ExpressionFactor {
 		type = ARRAY_REF;
 		reference = ref;
 	}
+	public ExpressionFactor (int t, String id) {
+		this ();
+		type = t;
+		idName = id;
+	}
 	
 	public ExpressionFactor(ExpressionFactor f) {
 		this ();

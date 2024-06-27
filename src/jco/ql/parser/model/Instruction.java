@@ -24,10 +24,11 @@ public abstract class Instruction {
 	public static final int JAVASCRIPT_FUNCTION_INSTRUCTION = 15;
 	public static final int GET_DICTIONARY = 16;
 	public static final int LOOKUP_FROM_WEB = 17;
-	public static final int FUZZY_AGGREGATOR_INSTRUCTION = 18; 			// added by Invernici
+	public static final int FUZZY_AGGREGATOR_INSTRUCTION = 18; 			// added by Invernici - PF Deprecated and replaced on 02.05.2025 by Fuzzy Evaluator
 	public static final int FUZZY_MODEL_INSTRUCTION = 19; 				// added by Balicco
 	public static final int FUZZY_GENERAL_OPERATOR_INSTRUCTION = 20; 	// added by Balicco
 	public static final int JAVA_FUNCTION_INSTRUCTION = 21;				// PF 20.01.2023
+	public static final int FUZZY_EVALUATOR_INSTRUCTION = 22; 			// PF 02.05.2024
 	
 	int id;
 	int sequence;
