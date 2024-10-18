@@ -1,5 +1,5 @@
 # JcoQL
-JCoQL Parser code  
+JCoQL Parser code.  
 The java code can be imported into your IDE as is (preferably Eclipse).  
 Include the '*antlr-3.4-complete.jar*' library into your building paths.
   
