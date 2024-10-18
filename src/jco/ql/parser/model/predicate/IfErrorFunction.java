@@ -9,14 +9,14 @@ import jco.ql.parser.model.util.Value;
  */
 public class IfErrorFunction extends SpecialFunctionFactor {
 	public Expression expression2check;
-	public Value defalutValue;
+	public Value defaultValue;
 
 	public IfErrorFunction(Expression expr, Value value) {
 		type = SPECIAL_FUNCTION;
 		specialFuntionType = IF_ERROR_FUNCTION;
 		
 		expression2check  = expr;
-		defalutValue = value;
+		defaultValue = value;
 	}
 	
 	
@@ -26,14 +26,14 @@ public class IfErrorFunction extends SpecialFunctionFactor {
 
 	
 	public Value getDefaultValue () {
-		return defalutValue;
+		return defaultValue;
 	}
 
 	
 	public String toString () {
 		String st = "IF_ERROR (";
 		st += expression2check.toString();
-		st += ", " + defalutValue.toString() + ")";
+		st += ", " + defaultValue.toString() + ")";
 		return st;
 	}
 }

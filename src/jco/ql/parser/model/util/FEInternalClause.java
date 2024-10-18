@@ -1,21 +1,22 @@
 package jco.ql.parser.model.util;
 
-public abstract class ForAllDeriveElement {
+// Container class for SORT, DERIVE and FOR ALL
+public abstract class FEInternalClause {
 	public static final int SORT_CLAUSE 	= 0;
 	public static final int DERIVE_CLAUSE 	= 1;
 	public static final int FOR_ALL_CLAUSE 	= 2;
 	
-	public int fadType;
+	public int feicType;
 
 	public abstract String toMultilineString (int level) ;
 	
 	public boolean isSortClause () {
-		return fadType == SORT_CLAUSE;
+		return feicType == SORT_CLAUSE;
 	}
 	public boolean isDeriveClause () {
-		return fadType == DERIVE_CLAUSE;
+		return feicType == DERIVE_CLAUSE;
 	}
 	public boolean isForAllClause () {
-		return fadType == FOR_ALL_CLAUSE;
+		return feicType == FOR_ALL_CLAUSE;
 	}
 }

@@ -7,10 +7,9 @@ import java.util.StringJoiner;
 
 import jco.ql.parser.model.fuzzy.FuzzyPoint;
 import jco.ql.parser.model.predicate.Expression;
-import jco.ql.parser.model.util.ForAllDeriveElement;
+import jco.ql.parser.model.util.FEInternalClause;
 import jco.ql.parser.model.util.ParamList;
 import jco.ql.parser.model.util.Parameter;
-import jco.ql.parser.model.util.SortFuzzyEvaluatorArray;
 import jco.ql.parser.model.condition.Condition;
 
 
@@ -19,8 +18,7 @@ public class FuzzyEvaluator extends Instruction{
 	public Hashtable<String, Parameter> namespace;
 	public List<Parameter> parameters;
 	public Condition preCondition;
-	public List<SortFuzzyEvaluatorArray> sortList;
-	public List<ForAllDeriveElement> forAllDeriveList;
+	public List<FEInternalClause> feInternalClauseList;
 	public Expression evaluate;
 	public List<FuzzyPoint> polyline;
 	public boolean defaultPolyline; 
@@ -36,8 +34,7 @@ public class FuzzyEvaluator extends Instruction{
 		namespace = new Hashtable<String, Parameter> (101);
 		parameters = new ArrayList<Parameter>();
 		preCondition = null;
-		sortList = new ArrayList<SortFuzzyEvaluatorArray>();
-		forAllDeriveList = new ArrayList<ForAllDeriveElement>();
+		feInternalClauseList = new ArrayList<FEInternalClause>();
 		evaluate = null;
 		polyline = new ArrayList<FuzzyPoint>();
 		polyline.add(new FuzzyPoint ("0", "0"));
@@ -84,16 +81,11 @@ public class FuzzyEvaluator extends Instruction{
 	}
 	
 	
-	public List<ForAllDeriveElement> getForAllDeriveClauses() {
-		return forAllDeriveList;
+	public List<FEInternalClause> getForAllDeriveClauses() {
+		return feInternalClauseList;
 	}
 	
-	
-	public boolean hasSortList () {
-		return sortList.size() > 0;
-	}
-
-	
+		
 	public String toString () {
 		StringJoiner sj;
 		String str = instructionName.toUpperCase() + " ";
@@ -107,15 +99,8 @@ public class FuzzyEvaluator extends Instruction{
 		if (hasPrecondition())
 			str += "PRECONDITION " + preCondition.toString() + " ";
 		
-		if (hasSortList()) {
-			sj = new StringJoiner (", ", "SORT ", " ");
-			for (int i=0; i<sortList.size(); i++) 
-				sj.add(sortList.get(i).toString());
-			str += sj.toString();
-		}
-		
-		for (int i=0; i<forAllDeriveList.size();i++)
-			str +=  forAllDeriveList.get(i).toString() + " ";	
+		for (int i=0; i<feInternalClauseList.size();i++)
+			str +=  feInternalClauseList.get(i).toString() + " ";	
 		
 		str +="EVALUATE " + evaluate.toString() + " ";
 		if(!hasDefaultPolyline()) {
@@ -132,7 +117,6 @@ public class FuzzyEvaluator extends Instruction{
 
 	@Override
 	public String toMultilineString() {
-		StringJoiner sj;
 		String str = instructionName.toUpperCase() + " ";
 		str += fuzzyEvaluatorName;
 		str += "\n\tPARAMETERS";
@@ -144,15 +128,8 @@ public class FuzzyEvaluator extends Instruction{
 		if (hasPrecondition())
 			str +="\n\tPRECONDITION " + preCondition.toString();
 
-		if (hasSortList()) {
-			sj = new StringJoiner (",\n\t\t", "\n\tSORT\n\t\t", "");
-			for (int i=0; i<sortList.size(); i++) 
-				sj.add(sortList.get(i).toString());
-			str += sj.toString();
-		}
-		
-		for (int i=0; i<forAllDeriveList.size();i++)
-			str += forAllDeriveList.get(i).toMultilineString(1);
+		for (int i=0; i<feInternalClauseList.size();i++)
+			str += feInternalClauseList.get(i).toMultilineString(1);
 
 		if(evaluate != null)
 			str +="\n\tEVALUATE " + evaluate.toString();

@@ -1200,7 +1200,7 @@ public class JCoQLEnvironment {
 		return ref;
 	}
 	
-	public ExpressionFactor setFuzzyEvaluatorExprFromArrayRef(Token id, ArrayList<Expression> params, ArrayReference ref, FuzzyEvaluator fe, ForAllClause fac) {
+	public ExpressionFactor setFuzzyEvaluatorExprFromArrayRef(Token id, ArrayList<Expression> params, ArrayReference ref, FuzzyEvaluator fe, FEForAllClause fac) {
 		if(id == null) 
 			id = Token.INVALID_TOKEN;
 		
@@ -1231,7 +1231,7 @@ public class JCoQLEnvironment {
 		return e;
 	}
 	
-	public AggregateClause createAggregateClause(String withType, Expression e, Token alias, FuzzyEvaluator fe, ForAllClause fac){
+	public AggregateClause createAggregateClause(String withType, Expression e, Token alias, FuzzyEvaluator fe, FEForAllClause fac){
 		AggregateClause ac = null;
 		if(alias == null)
 			alias = Token.INVALID_TOKEN;
@@ -1256,7 +1256,7 @@ public class JCoQLEnvironment {
 	}
 	
 	
-	public ForAllClause createForAllClause(Token i, Token a, FuzzyEvaluator fe) {
+	public FEForAllClause createForAllClause(Token i, Token a, FuzzyEvaluator fe) {
 		if (i == null ) 
 			i = Token.INVALID_TOKEN;
 		if (a == null)
@@ -1275,11 +1275,11 @@ public class JCoQLEnvironment {
 		if (!fe.namespace.containsKey(array) || !fe.namespace.get(array).isArray())
 			myErrorHandler(ERR_ON_UNDEFINED_ARRAY, a);
 		
-		ForAllClause clause = new ForAllClause(ndx, array);
+		FEForAllClause clause = new FEForAllClause(ndx, array);
 		return clause;		
 	}
 
-	public void createLocallyClause(ForAllClause fac, Token id, Expression e, FuzzyEvaluator fe) {
+	public void createLocallyClause(FEForAllClause fac, Token id, Expression e, FuzzyEvaluator fe) {
 		if (id == null || e == null) {
 			myErrorHandler(ERR_ON_SYNTAX, id);
 		}
@@ -1431,11 +1431,11 @@ public class JCoQLEnvironment {
 
 
 	// added 2023.07.13
-	public DeriveClause createDeriveClause(Token as, Expression e, FuzzyEvaluator fe, int dt) {
+	public FEDeriveClause createDeriveClause(Token as, Expression e, FuzzyEvaluator fe, int dt) {
 		if (as == null)
 			as = Token.INVALID_TOKEN;
 		String s = as.getText();
-		DeriveClause dc = new DeriveClause(s, e, dt);
+		FEDeriveClause dc = new FEDeriveClause(s, e, dt);
 
 		if (fe.isUnavailable(s))
 			myErrorHandler(ERR_ON_PARAMETER_DECLARATION, as);	
@@ -1452,7 +1452,7 @@ public class JCoQLEnvironment {
 
 
 	// added 2023.07.13
-	public void setFuzzyEvaluatorNewArray(FuzzyEvaluator fe, SortFuzzyEvaluatorArray sfea, Token v) {
+	public void setFuzzyEvaluatorNewArray(FuzzyEvaluator fe, FESortArrayClause sfea, Token v) {
 		if (v == null)
 			v = Token.INVALID_TOKEN;
 		String s = v.getText();
@@ -1466,7 +1466,7 @@ public class JCoQLEnvironment {
 	}
 
 	// added 2023.07.29
-	public void checkFuzzyEvaluatorSortingList (SortFuzzyEvaluatorArray sfea) {
+	public void checkFuzzyEvaluatorSortingList (FESortArrayClause sfea) {
 		if (sfea.sourceArrayList.size() != sfea.targetArrayList.size())
 			myErrorHandler(ERR_ON_ARRAY_NUMBER);	
 		else
@@ -1474,7 +1474,7 @@ public class JCoQLEnvironment {
 	}
 
 	// added 2023.07.13
-	public void addFuzzyEvaluatorSortingArray(FuzzyEvaluator fe, SortFuzzyEvaluatorArray sfea, Token i, Token a) {
+	public void addFuzzyEvaluatorSortingArray(FuzzyEvaluator fe, FESortArrayClause sfea, Token i, Token a) {
 		if (i == null)
 			i = Token.INVALID_TOKEN;
 		String ndx = i.getText();
@@ -1500,7 +1500,7 @@ public class JCoQLEnvironment {
 	}
 
 
-	public void addFuzzyEvaluatorSortingField(FuzzyEvaluator fe, SortFuzzyEvaluatorArray sfea, 
+	public void addFuzzyEvaluatorSortingField(FuzzyEvaluator fe, FESortArrayClause sfea, 
 												Token ndx, Field subField, Token type, Token versus) {
 		if (ndx == null)
 			ndx = Token.INVALID_TOKEN;
@@ -1557,7 +1557,7 @@ public class JCoQLEnvironment {
 
 
 	// added on 2024.06.21
-	public ExpressionFactor getPosFactor(ForAllClause fac, Token p) {
+	public ExpressionFactor getPosFactor(FEForAllClause fac, Token p) {
 		if (fac == null)
 			myErrorHandler(ERR_ON_FE_POS_REF);	
 		return new ExpressionFactor (p.getText());

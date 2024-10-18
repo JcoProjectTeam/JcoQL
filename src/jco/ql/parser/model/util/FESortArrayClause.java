@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringJoiner;
 
-public class SortFuzzyEvaluatorArray  extends ForAllDeriveElement {
+public class FESortArrayClause  extends FEInternalClause {
 	public List<String> sourceArrayList;
 	public List<String> indexList;
 	public List<SortField> sortingFieldList;
 	public List<String> targetArrayList;
 
-	public SortFuzzyEvaluatorArray () {
-		fadType = SORT_CLAUSE;
+	public FESortArrayClause () {
+		feicType = SORT_CLAUSE;
 		sourceArrayList = new ArrayList<String>() ;
 		indexList= new ArrayList<String>() ;
 		sortingFieldList = new ArrayList<SortField>() ;
