@@ -1,13 +1,17 @@
 /* ****************************************
 **** Parser JCo-QL Antlr Specification ****
-**** V. 4.0.02 - 21.12.2023            ****
+**** V. 4.0.02 - 30.04.2025            ****
 **************************************** */
 
-grammar JCoQL;
 
 /* ******************************
 **** Syntax rules definition ****
 ****************************** */
+
+grammar JCoQLBasic;
+
+
+// Rule Defintion 
 
 start
 	:
@@ -30,9 +34,11 @@ start
 		|	createFuzzySetModelRule
 		|	createGenericFuzzySetOperatorRule
 		|	createJavaFunctionRule
-		)* 
-		EOF
+		|	createFuzzyEvaluatorRule
+		|	createGenericFuzzyEvaluatorRule
+		)* EOF
 	;
+
 
 
 collectionReferenceRule
@@ -50,6 +56,8 @@ fieldRefRule
 buildActionRule
 	:
 		BUILD objectStructureRule
+	|	ADD_ST FIELDS objectStructureRule
+	|	REMOVE FIELDS LBR fieldRefRule (	COMMA fieldRefRule	)* RBR
 	;
 
 
@@ -104,7 +112,13 @@ whereCaseRule
 
 generateSectionRule
 	:
-		GENERATE (	geometricOptionRule	)? (	checkForFuzzySetRule	)? (	alphaCutRule	)? (	buildActionRule	)? (	keepDropFuzzySetsRule	)? (	dropGeometryRule	)?
+		GENERATE 
+			(	geometricOptionRule		)? 
+			(	checkForFuzzySetRule	)? 
+			(	alphaCutRule			)? 
+			(	buildActionRule			)* 
+			(	keepDropFuzzySetsRule	)? 
+			(	dropGeometryRule		)?
 	;
 
 
@@ -129,7 +143,7 @@ notConditionRule
 predicateRule
 	:
 		expressionRule (	compareRule
-		|	inRangeRule	)?
+									 |	inRangeRule	)?
 	|	nullPredicateRule
 	|	withPredicateRule
 	|	withoutPredicateRule
@@ -202,8 +216,8 @@ factorRule
 		|	fieldRefRule
 		|	valueRule
 		|	ID LP (	functionParamsRule	)? RP
-		|	LB factorRule (	COMMA factorRule	)* RB
-		|	specialFunctionRule	) (	EXP factorRule	)?
+		|	specialFunctionRule
+		|	LB factorRule (	COMMA factorRule	)* RB	) (	EXP factorRule	)?
 	;
 
 
@@ -212,10 +226,12 @@ specialFunctionRule
 		MEMBERSHIP_TO LP ID RP
 	|	EXTENT LP ID RP
 	|	DEGREE LP ID FIELD_NAME? RP
+	|	HASH_NAME FIELD_NAME?
 	|	MEMBERSHIP_ARRAY LP (	ALL
 			|	ID FROM_ARRAY fieldRefRule
 			|	LB ID (	COMMA ID	)* RB	) RP
 	|	EXTRACT_ARRAY LP fieldRefRule FROM_ARRAY fieldRefRule RP
+	|	IF LP LP orConditionRule RP COMMA restrictedExpressionRule COMMA restrictedExpressionRule RP
 	|	IF_ERROR LP restrictedExpressionRule COMMA valueRule RP
 	|	TRANSLATE LP restrictedExpressionRule COMMA ID (	COMMA BOOLEAN (	COMMA (	APEX_VALUE
 							|	QUOTED_VALUE	)	)?	)? RP
@@ -227,9 +243,9 @@ valueRule
 	:
 		INT
 	|	FLOAT
+	|	BOOLEAN
 	|	APEX_VALUE
 	|	QUOTED_VALUE
-	|	BOOLEAN
 	;
 
 
@@ -263,8 +279,8 @@ restrictedFactorRule
 		|	fieldRefRule
 		|	valueRule
 		|	ID LP (	functionParamsRule	)? RP
-		|	LB restrictedFactorRule (	COMMA restrictedFactorRule	)* RB
-		|	specialFunctionRule	) (	EXP restrictedFactorRule	)?
+		|	specialFunctionRule
+		|	LB restrictedFactorRule (	COMMA restrictedFactorRule	)* RB	) (	EXP restrictedFactorRule	)?
 	;
 
 
@@ -454,7 +470,13 @@ groupRule
 
 groupPartitionRule
 	:
-		PARTITION orConditionRule BY fieldRefRule (	COMMA fieldRefRule	)* INTO fieldRefRule (	DROP GROUPING FIELDS	)? (	ORDER BY sortingFieldRule (	COMMA sortingFieldRule	)* (	KEEP UNCOMPARABLE	)?	)? (	generateSectionRule	)?
+		PARTITION orConditionRule 
+			BY fieldRefRule (	COMMA fieldRefRule	)* 
+			INTO fieldRefRule 
+			(	DROP GROUPING FIELDS	)? 
+			(	ORDER BY sortingFieldRule (	COMMA sortingFieldRule	)* 
+					(	KEEP UNCOMPARABLE	)?	)? 
+			(	generateSectionRule	)?
 	;
 
 
@@ -539,49 +561,87 @@ createJavaScriptFunctionRule
 
 createFuzzyOperatorRule
 	:
-		CREATE FUZZY OPERATOR ID PARAMETERS parameterRule (	COMMA parameterRule	)* (	PRECONDITION jfOrConditionRule	)? EVALUATE jfExpressionRule (	POLYLINE LB LP numericRule COMMA numericRule RP (	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? SC
+		CREATE FUZZY OPERATOR ID 	
+			PARAMETERS parameterRule (	COMMA parameterRule	)* 
+			(	PRECONDITION jfOrConditionRule	)? 
+			EVALUATE jfExpressionRule 
+			(	POLYLINE LB LP numericRule COMMA numericRule RP 
+						(	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? 
+		SC
+	;
+
+
+createFuzzyEvaluatorRule
+	:
+		CREATE FUZZY EVALUATOR ID 
+			PARAMETERS feParameterRule (	COMMA feParameterRule	)* 
+			(	PRECONDITION jfOrConditionRule	)? 
+			(	feArraySortRule
+			|	feDeriveRule
+			|	feForAllRule	)* 
+			EVALUATE feExpressionRule 
+			(	POLYLINE LB LP numericRule COMMA numericRule RP 
+						(	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? 
+		SC
 	;
 
 
 createFuzzyAggregatorRule
 	:
-		CREATE FUZZY AGGREGATOR ID PARAMETERS faParameterRule (	COMMA faParameterRule	)* (	PRECONDITION jfOrConditionRule	)? (	faSortRule	)? (	faForAllRule
-		|	faDeriveRule	)+ EVALUATE faExpressionRule (	POLYLINE LB LP numericRule COMMA numericRule RP (	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? SC
+		CREATE FUZZY AGGREGATOR ID 
+			PARAMETERS feParameterRule (	COMMA feParameterRule	)* 
+			(	PRECONDITION jfOrConditionRule	)? 
+			(	feArraySortRule	)* 
+			(	feForAllRule
+			|	feDeriveRule	)+ 
+			EVALUATE feExpressionRule 
+			(	POLYLINE LB LP numericRule COMMA numericRule RP 
+						(	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? 
+		SC
 	;
 
 
-faForAllRule
+feForAllRule
 	:
-		FOR ALL ID IN ID (	LB faExpressionRule COMMA faExpressionRule RB	)? (	LOCALLY faExpressionRule AS ID (	COMMA faExpressionRule AS ID	)*	)? AGGREGATE aggSpecRule (	COMMA aggSpecRule	)*
+		FOR ALL ID IN ID 
+			(	LB feExpressionRule COMMA feExpressionRule RB	)? 
+			(	LOCALLY feExpressionRule AS ID 
+				(	COMMA feExpressionRule AS ID	)*	)? 
+			AGGREGATE aggSpecRule (	COMMA aggSpecRule	)*
 	;
 
 
-faDeriveRule
+feDeriveRule
 	:
-		DERIVE faExpressionRule AS ID
+		DERIVE 
+			(	feExpressionRule
+			|	feCumulateRule	) AS ID
 	;
 
 
-faSortRule
+feCumulateRule
 	:
-		SORT faArraySortRule (	COMMA faArraySortRule	)*
+		CUMULATE LP ID RP
 	;
 
 
-faArraySortRule
+feArraySortRule
 	:
-		(	faArrayIndexRule BY faSortFieldRule (	COMMA faSortFieldRule	)* AS ID
-		|	LP faArrayIndexRule (	COMMA faArrayIndexRule	)+ RP BY faSortFieldRule (	COMMA faSortFieldRule	)* AS LP ID (	COMMA ID	)+ RP	)
+		SORT (	feArrayIndexRule BY feSortFieldRule 
+												(	COMMA feSortFieldRule	)* AS ID
+					|	LP feArrayIndexRule (	COMMA feArrayIndexRule	)+ RP 
+								BY feSortFieldRule 
+												(	COMMA feSortFieldRule	)* AS LP ID (	COMMA ID	)+ RP	)
 	;
 
 
-faArrayIndexRule
+feArrayIndexRule
 	:
 		ID IN ID
 	;
 
 
-faSortFieldRule
+feSortFieldRule
 	:
 		ID (	fieldRefRule	)? TYPE ID (	VERSUS	)?
 	;
@@ -589,7 +649,7 @@ faSortFieldRule
 
 aggSpecRule
 	:
-		(	withSpec	)? faExpressionRule AS ID
+		(	withSpec	)? feExpressionRule AS ID
 	;
 
 
@@ -602,7 +662,7 @@ withSpec
 	;
 
 
-faParameterRule
+feParameterRule
 	:
 		ID TYPE (	ID
 		|	ARRAY	)
@@ -663,6 +723,7 @@ jfFactorRule
 		|	FLOAT
 		|	APEX_VALUE
 		|	QUOTED_VALUE
+		|	IF LP LP jfOrConditionRule RP COMMA jfExpressionRule COMMA jfExpressionRule RP
 		|	ID (	LP (	jfFunctionParamsRule	)? RP	)?	) (	EXP jfFactorRule	)?
 	;
 
@@ -673,50 +734,55 @@ jfFunctionParamsRule
 	;
 
 
-faExpressionRule
+feExpressionRule
 	:
-		(	faTermRule
+		(	feTermRule
 		|	(	ADD
-				|	SUB	) faTermRule	) (	(	ADD
-				|	SUB	) faTermRule	)*
+				|	SUB	) feTermRule	) (	(	ADD
+				|	SUB	) feTermRule	)*
 	;
 
 
-faTermRule
+feTermRule
 	:
-		faFactorRule (	(	MUL
-				|	DIV	) faFactorRule	)*
+		feFactorRule (	(	MUL
+				|	DIV	) feFactorRule	)*
 	;
 
 
-faFactorRule
+feFactorRule
 	:
-		(	LP faExpressionRule RP
-		|	INT
-		|	FLOAT
-		|	APEX_VALUE
-		|	QUOTED_VALUE
+		(	LP feExpressionRule RP
+		|	valueRule
 		|	POS
-		|	ID (	faArrayRefRule
-				|	LP faFunctionParamsRule RP	)?	) (	EXP faFactorRule	)?
+		|	IF_ERROR LP feExpressionRule COMMA valueRule RP
+		|	IF LP LP jfOrConditionRule RP COMMA feExpressionRule COMMA feExpressionRule RP
+		|	ID (	feArrayRefRule
+				|	LP feFunctionParamsRule RP	)?	) (	EXP feFactorRule	)?
 	;
 
 
-faFunctionParamsRule
+feFunctionParamsRule
 	:
-		faExpressionRule (	COMMA faExpressionRule	)*
+		feExpressionRule (	COMMA feExpressionRule	)*
 	;
 
 
-faArrayRefRule
+feArrayRefRule
 	:
-		LB (	faExpressionRule	) RB (	fieldRefRule	)?
+		LB (	feExpressionRule	) RB (	fieldRefRule	)?
 	;
 
 
 createFuzzySetModelRule
 	:
-		CREATE FUZZY SET MODEL ID DEGREES ID (	COMMA ID	)* (	DERIVED DEGREES ID AS ftExpressionRule (	COMMA ID AS ftExpressionRule	)*	)? (	CONSTRAINT jfOrConditionRule	)? (	fuzzyOperatorDefinitionRule	)* SC
+		CREATE FUZZY SET MODEL ID 
+			DEGREES ID (	COMMA ID	)* 
+			(	DERIVED DEGREES ID AS ftExpressionRule 
+			(	COMMA ID AS ftExpressionRule	)*	)? 
+			(	CONSTRAINT jfOrConditionRule	)? 
+				(	fuzzyOperatorDefinitionRule	)* 
+		SC
 	;
 
 
@@ -730,7 +796,13 @@ fuzzyOperatorDefinitionRule
 
 createGenericFuzzySetOperatorRule
 	:
-		CREATE ID FUZZY OPERATOR ID PARAMETERS parameterRule (	COMMA parameterRule	)* (	PRECONDITION jfOrConditionRule	)? (	EVALUATE ID AS jfExpressionRule (	POLYLINE LB LP numericRule COMMA numericRule RP (	COMMA LP numericRule COMMA numericRule RP	)+ RB	)?	)+ SC
+		CREATE ID FUZZY OPERATOR ID 
+			PARAMETERS parameterRule (	COMMA parameterRule	)* 
+			(	PRECONDITION jfOrConditionRule	)? 
+			(	EVALUATE ID AS jfExpressionRule 
+			(	POLYLINE LB LP numericRule COMMA numericRule RP 
+						(	COMMA LP numericRule COMMA numericRule RP	)+ RB	)?	)+ 
+		SC
 	;
 
 
@@ -773,6 +845,30 @@ ftFunctionParamsRule
 	;
 
 
+ftOrConditionRule
+	:
+		ftAndConditionRule (	OR ftAndConditionRule	)*
+	;
+
+
+ftAndConditionRule
+	:
+		ftNotConditionRule (	AND ftNotConditionRule	)*
+	;
+
+
+ftNotConditionRule
+	:
+		(	NOT	)? ftPredicateRule
+	;
+
+
+ftPredicateRule
+	:
+		ftConditionExpressionRule (	comparatorRule ftConditionExpressionRule	)?
+	;
+
+
 ftConditionExpressionRule
 	:
 		(	ftConditionTermRule
@@ -795,7 +891,7 @@ ftConditionFactorRule
 	|	ftConditionValueRule
 	|	ID FIELD_NAME
 	|	ID LP (	ftConditionFunctionParamsRule	)? RP
-	|	specialFunctionRule
+	|	ftSpecialFunctionRule
 	;
 
 
@@ -812,22 +908,52 @@ ftConditionFunctionParamsRule
 	;
 
 
+ftSpecialFunctionRule
+	:
+		IF LP LP ftOrConditionRule RP COMMA ftConditionExpressionRule COMMA ftConditionExpressionRule RP
+	;
+
+
+createGenericFuzzyEvaluatorRule
+	:
+		CREATE ID FUZZY EVALUATOR ID 
+			PARAMETERS feParameterRule (	COMMA feParameterRule	)* 
+			(	PRECONDITION jfOrConditionRule	)? 
+			(	feArraySortRule
+			|	feDeriveRule
+			|	feForAllRule	)* 
+			(	EVALUATE ID AS feExpressionRule 
+				(	POLYLINE LB LP numericRule COMMA numericRule RP 
+							(	COMMA LP numericRule COMMA numericRule RP	)+ RB	)?	
+			)+ 
+		SC
+	;
+
+
 createJavaFunctionRule
 	:
-		CREATE JAVA FUNCTION ID PARAMETERS parameterRule (	COMMA parameterRule	)* (	PRECONDITION jfOrConditionRule	)? CLASS ID (	IMPORT QUOTED_VALUE	)? CLASS BODY END_BODY SC
+		CREATE JAVA FUNCTION ID 
+			PARAMETERS parameterRule (	COMMA parameterRule	)* 
+			(	PRECONDITION jfOrConditionRule	)? 
+			CLASS ID 
+				(	IMPORT QUOTED_VALUE	)? 
+				CLASS BODY END_BODY SC
 	;
 
 
 
-// ********************
-// Token Defintion 
-// ********************
+/* ******************************
+**** Lexical rule definition ****
+******************************* */
 
-fragment LETTER     :	 'A' . . 'Z' | 'a' . . 'z';
-fragment DIGIT0     :	 '1' . . '9';
-fragment DIGIT      :	 '0' . . '9';
-fragment WS         :	 ( ' ' | '\t' | '\r' | '\n' )+;
-
+fragment
+LETTER          	:	 'A' . . 'Z' | 'a' . . 'z';
+fragment
+DIGIT0          	:	 '1' . . '9';
+fragment
+DIGIT           	:	 '0' . . '9';
+fragment
+WS              	:	 ( ' ' | '\t' | '\r' | '\n' )+;
 AND             	:	 'AND';
 OR              	:	 'OR';
 NOT             	:	 'NOT';
@@ -854,6 +980,7 @@ COLLECTION      	:	 'COLLECTION';
 COLLECTIONS     	:	 'COLLECTIONS';
 CONSTRAINT      	:	 'CONSTRAINT';
 CREATE          	:	 'CREATE';
+CUMULATE        	:	 'CUMULATE';
 DB              	:	 'DB';
 DEFAULT         	:	 'DEFAULT';
 DEFUZZIFY       	:	 'DEFUZZIFY';
@@ -873,6 +1000,7 @@ EXPAND          	:	 'EXPAND';
 EXTENT          	:	 'EXTENT';
 EXTRACT_ARRAY   	:	 'EXTRACT_ARRAY';
 EVALUATE        	:	 'EVALUATE';
+EVALUATOR       	:	 'EVALUATOR';
 FIELD           	:	 'FIELD';
 FIELDS          	:	 'FIELDS';
 FILTER          	:	 'FILTER';
@@ -890,6 +1018,7 @@ GROUPING        	:	 'GROUPING';
 HOWINCLUDE      	:	 'HOW_INCLUDE';
 HOWINTERSECT    	:	 'HOW_INTERSECT';
 HOWMEET         	:	 'HOW_MEET';
+IF              	:	 'IF';
 IF_ERROR        	:	 'IF_ERROR';
 IF_FAILS        	:	 'IF_FAILS';
 IMPORT          	:	 'IMPORT';
@@ -918,7 +1047,7 @@ MEET            	:	 'MEET';
 MEMBERSHIP_ARRAY	:	 'MEMBERSHIP_ARRAY';
 MEMBERSHIP_TO   	:	 'MEMBERSHIP_TO' | 'MEMBERSHIP_OF';
 MERGE           	:	 'MERGE';
-MIN_SIMILARITY  	:	 'MIN' WS 'SIMILARITY';
+MIN_SIMILARITY  	:	 'MIN_SIMILARITY';
 MINIMUM         	:	 'MINIMUM';
 MODEL           	:	 'MODEL';
 OF              	:	 'OF';
@@ -962,12 +1091,11 @@ WITH            	:	 'WITH';
 WITHIN          	:	 'WITHIN';
 WITHOUT         	:	 'WITHOUT';
 WRT             	:	 'WRT';
-
 INT             	:	 '0' | DIGIT0 DIGIT*;
 FLOAT           	:	 DIGIT0 DIGIT* DOT DIGIT+ | '0' DOT DIGIT+;
 ID              	:	 LETTER ( LETTER | DIGIT | '_' )*;
 FIELD_NAME      	:	 DOT ( LETTER | DIGIT | TILDE | '_' )+ | DOT '"' ( ~( '"' ) )* '"';
-
+HASH_NAME       	:	 '#' ( LETTER | DIGIT | TILDE | '_' )+ | '#' '"' ( ~( '"' ) )* '"';
 AT              	:	 '@';
 EQ              	:	 '=';
 NEQ             	:	 '!=';
@@ -993,13 +1121,10 @@ RBR             	:	 '}';
 APEX            	:	 '\'';
 QUOTE           	:	 '"';
 TILDE           	:	 '~';
-
-WHITE_SPACES    	:	 WS 								{ $channel = HIDDEN; } ;
+XXX             	:	 '###TEST***';
+WHITE_SPACES    	:	 WS;
 APEX_VALUE      	:	 '\'' ( ~( '\'' ) )* '\'';
 QUOTED_VALUE    	:	 '"' ( ~( '"' ) )* '"';
-COMMENT         	:	 '//' ~( '\n' | '\r' )* '\r'? '\n' 	{ $channel = HIDDEN; }
-					| 	 '/*' ( options : . )* '*/'			{ $channel = HIDDEN; }
-					;
-
+COMMENT         	:	 '//' ~( '\n' | '\r' )* '\r'? '\n' | '/*' ( options : . )* '*/';
 SCAN_ERROR      	:	 .;
 
