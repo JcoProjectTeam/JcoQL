@@ -29,7 +29,9 @@ public abstract class Instruction {
 	public static final int FUZZY_GENERAL_OPERATOR_INSTRUCTION = 20; 	// added by Balicco
 	public static final int JAVA_FUNCTION_INSTRUCTION = 21;				// PF 20.01.2023
 	public static final int FUZZY_EVALUATOR_INSTRUCTION = 22; 			// PF 02.05.2024
+	public static final int FUZZY_GENERIC_EVALUATOR_INSTRUCTION = 23;	// GB
 	
+			
 	int id;
 	int sequence;
 	String instructionName;

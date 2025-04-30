@@ -4,6 +4,7 @@ package jco.ql.parser.model.predicate;
  * 
  * @author Zunstraal
  * 21.06.2023 - Generalized class for EXTENT, MEMBERSHIP_TO and DEGREE special function
+ * 2025.01.09 - ZUN TODO - Riordinare i metodi nell'Environement e qui
  *
  */
 public class ExtentFunction extends SpecialFunctionFactor {
@@ -19,9 +20,14 @@ public class ExtentFunction extends SpecialFunctionFactor {
 	}
 	
 
-	public ExtentFunction (String fs, String dg) {
+	public ExtentFunction (String fs, String dg, boolean t) {
 		type = SPECIAL_FUNCTION;
-		specialFuntionType = DEGREE_FUNCTION; 
+		if (t)										// added 2025.01.09
+			specialFuntionType = DEGREE_FUNCTION; 
+		else {
+			specialFuntionType = DEGREE_SHORTCUT;
+			fs = fs.replace("#", "");
+		}
 		fuzzyset = fs;
 		degree = dg;
 	}
@@ -43,10 +49,17 @@ public class ExtentFunction extends SpecialFunctionFactor {
 			st = "EXTENT (" + fuzzyset + ")";
 		else if (specialFuntionType == MEMBERSHIP_TO_FUNCTION)
 			st = "MEMBERSHIP_TO (" + fuzzyset + ")";
-		else if (degree == null)
-			st = "DEGREE (" + fuzzyset + ")";
-		else
-			st = "DEGREE (" + fuzzyset + degree + ")";
+		else if (specialFuntionType == DEGREE_FUNCTION) {
+			if (degree == null)
+				st = "DEGREE (" + fuzzyset + ")";
+			else
+				st = "DEGREE (" + fuzzyset + degree + ")"; 
+			}
+		else {	// DEGREE_SHORTCUT
+			st = "#" + fuzzyset;
+			if (degree != null)
+				st += degree; 
+		}
 		return st;
 	}
 }

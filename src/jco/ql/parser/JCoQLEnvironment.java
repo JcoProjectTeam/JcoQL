@@ -24,10 +24,12 @@ import jco.ql.parser.model.predicate.ExtentFunction;
 import jco.ql.parser.model.predicate.ExtractArray;
 import jco.ql.parser.model.predicate.FunctionFactor;
 import jco.ql.parser.model.predicate.IfErrorFunction;
+import jco.ql.parser.model.predicate.IfFunction;
 import jco.ql.parser.model.predicate.InRangePredicate;
 import jco.ql.parser.model.predicate.MembershipArray;
 import jco.ql.parser.model.predicate.ArrayFunctionFactor;
 import jco.ql.parser.model.predicate.ArrayReference;
+import jco.ql.parser.model.predicate.ComparisonPredicate;
 import jco.ql.parser.model.predicate.CumulateArray;
 import jco.ql.parser.model.predicate.EOrientation;
 import jco.ql.parser.model.predicate.NullPredicate;
@@ -68,6 +70,7 @@ public class JCoQLEnvironment {
 	public static final int ERR_ON_MISSING_JFNAME 				= 26;
 	public static final int ERR_ON_MISSING_FST 					= 27;				// added by Balicco
 	public static final int ERR_ON_MISSING_FGO 					= 28;				// added by Balicco
+	public static final int ERR_ON_MISSING_FGE					= 29;				// GB
 	public static final int ERR_ON_JS_BEGIN 					= 40;
 	public static final int ERR_ON_JS_PAR 						= 41;
 	public static final int ERR_ON_JS_NO_END 					= 42;
@@ -309,6 +312,8 @@ public class JCoQLEnvironment {
 			st += "Missing General Fuzzy Set name";
 		else if (code == ERR_ON_MISSING_FGO)					// added by Balicco
 			st += "Missing parameter";
+		else if (code == ERR_ON_MISSING_FGE)
+			st += "Missing Evaluator";							// GB
 		else if (code == WRONG_UNIT)
 			st += "Expecting 'M', 'KM', 'ML' as distance unit";
 		else if (code == MISSING_UNIT)
@@ -326,13 +331,13 @@ public class JCoQLEnvironment {
 		else if (code == ERR_UNDEFINED_PREFIX_NOT)								// added by Balicco
 			st += "The degree prefix must be 'x'";
 		else if (code == ERR_ALREADY_DEFINED_OPERATOR)							// added by Balicco
-			st += "Fuzzy operator already defined";
+			st += "Fuzzy set model operator already defined";
 		else if (code == ERR_ALREADY_DEFINED_DEGREE)							// added by Balicco
 			st += "Fuzzy operator already defined";
 		else if (code == ERR_WRONG_DEGREES_NUMBER)								// added by Balicco
 			st += "The operator "+ tk.getText() +" must evaluate all degrees";
 		else if (code == ERR_UNDEFINED_DEGREE)									// added by Balicco
-			st += "Unknown degree";
+			st += "Unknown degree: " + tk.getText();
 		else if (code == ERR_UNDEFINED_PREFIX)									// added by Balicco
 			st += "The degree prefix must be 'x' or 'y'";
 		else if (code == ERR_DEGREE_NAME_NOT_ALLOWED)							// added by Balicco
@@ -614,6 +619,45 @@ public class JCoQLEnvironment {
 		instructionList.add(fgo);
 		return fgo;
 	}
+
+	// GB
+	public FuzzyEvaluator addGenericFuzzyEvaluator(Token t, Token n) {
+		String type = "null", name = "null";
+		if(t == null)
+			myErrorHandler(ERR_ON_MISSING_FST);
+		else
+			type = t.getText();
+		if(n == null)
+			myErrorHandler(ERR_ON_MISSING_FGE);
+		else
+			name = n.getText();
+		FuzzyEvaluator gfe = new FuzzyEvaluator(nInstruction, name, type);
+		nInstruction++;
+		instructionList.add(gfe);
+		
+		return gfe;
+	}
+	
+	// GB
+	public Parameter createGfeParameter(Token v) {
+		Parameter p = null;
+		if (v == null)
+			myErrorHandler(ERR_ON_MISSING_PARAMETER);
+		else
+			p = new Parameter (v.getText(), "FLOAT");
+		return p;
+	}
+
+	// GB
+	public FuzzyPolyline manageEvaluate(FuzzyEvaluator gfe, Parameter d, Expression e) {
+		if(gfe.fuzzyEvaluatorType != null) {
+			gfe.genericDegrees.add(d);
+			gfe.genericEvaluate.add(e);
+		}
+	
+		return new FuzzyPolyline();
+	}
+	
 	
 	// ---------------------------	
 	
@@ -784,12 +828,12 @@ public class JCoQLEnvironment {
 				myErrorHandler(ERR_ON_POLYLINE_Y_VALUE);
 			if (fe.hasDefaultPolyline()) 
 				fe.resetPolyline();
-			if (fe.polyline.size() > 0) {
-				double x0Value = Double.parseDouble(fe.polyline.get(fe.polyline.size()-1).x);
+			if (fe.polyline.getSize() > 0) {
+				double x0Value = Double.parseDouble(fe.polyline.polyline.get(fe.polyline.getSize()-1).x);
 				if (xValue <= x0Value)
 					myErrorHandler(ERR_ON_POLYLINE_ORDER);
 			}
-			fe.polyline.add(new FuzzyPoint (x, y));
+			fe.polyline.polyline.add(new FuzzyPoint (x, y));
 		}
 	} 
 	
@@ -843,7 +887,7 @@ public class JCoQLEnvironment {
 	// serve a  controllare che gli OutputFieldSpec inseriti abbiano complessità crescente all'interno di una GenerateAction
 	public void addOutputFieldSpec(ObjectStructure obj, OutputFieldSpec ofs, boolean generateActionCaller, Token t) {
 		if (!obj.addOutputFieldSpec(ofs) && generateActionCaller)
-			myErrorHandler(ERR_ON_GENERATE_COMPLEXITY, t);
+			;//ZUN 2025-03-12 myErrorHandler(ERR_ON_GENERATE_COMPLEXITY, t);
 	}
 
 	
@@ -971,10 +1015,17 @@ public class JCoQLEnvironment {
 	}
 
 	
-	public IfErrorFunction buildIfError(Expression e, Value v) {
-		IfErrorFunction exprFactor = new IfErrorFunction(e, v);
-		return exprFactor;
+	public IfFunction buildIfFunction(Condition co, Expression et, Expression ef) {
+		IfFunction iff = new IfFunction(co, et, ef);
+		return iff;
 	}
+
+
+	public IfErrorFunction buildIfError(Expression e, Value v) {
+		IfErrorFunction ief = new IfErrorFunction(e, v);
+		return ief;
+	}
+
 
 	public void checkMembershipToken (Token mt) {
 		if (mt != null) {
@@ -1000,12 +1051,12 @@ public class JCoQLEnvironment {
 	}
 	
 	// added by Balicco
-	public ExtentFunction buildDegree(Token t1, Token t2) {
-		ExtentFunction df = new ExtentFunction("@@@@", "@@@@");
+	public ExtentFunction buildDegree(Token t1, Token t2, boolean type) {
+		ExtentFunction df = new ExtentFunction("###", "###", type);		// object
 		if (t1 != null && t2 != null)
-			df = new ExtentFunction(t1.getText(), t2.getText());
+			df = new ExtentFunction(t1.getText(), t2.getText(), type);
 		if (t1 != null && t2 == null)
-			df = new ExtentFunction(t1.getText(), null);
+			df = new ExtentFunction(t1.getText(), null, type);
 		return df;
 	}
 	
@@ -1312,18 +1363,18 @@ public class JCoQLEnvironment {
 	public void checkDerivedDegree(FuzzySetModel ft, Token t) {
 		ParamList pl = new ParamList(ft.degrees);
 		if(t == null) 
-			myErrorHandler(ERR_UNDEFINED_DEGREE,t);
+			myErrorHandler(ERR_UNDEFINED_DEGREE, t);
 		if(pl.contains(t.getText())) 
-			myErrorHandler(ERR_ALREADY_DEFINED_DEGREE,t);
+			myErrorHandler(ERR_ALREADY_DEFINED_DEGREE, t);
 		if(t.getText().equals("type"))
-			myErrorHandler(ERR_DEGREE_NAME_NOT_ALLOWED,t);
+			myErrorHandler(ERR_DEGREE_NAME_NOT_ALLOWED, t);
 	}
 	
 	// added by Balicco 
 	public ExpressionFactor checkDegree(ParamList pl, Token t) {
 		String s = "null";
 		if(t == null || !pl.contains(t.getText()))
-			myErrorHandler(ERR_UNDEFINED_DEGREE,t);
+			myErrorHandler(ERR_UNDEFINED_DEGREE, t);
 		else 
 			s = t.getText();
 		return new ExpressionFactor (s);
@@ -1363,7 +1414,7 @@ public class JCoQLEnvironment {
 
 		ParamList pl = fm.getDegreesList();
 		if (!pl.contains(t.getText()))
-			myErrorHandler(ERR_UNDEFINED_DEGREE,t);
+			myErrorHandler(ERR_UNDEFINED_DEGREE, t);
 		for (int i = 0; i<defOp.degrees.size(); i++) {
 			if (defOp.degrees.get(i).equals(t.getText()))
 				myErrorHandler(ERR_ALREADY_DEFINED_DEGREE, t);
@@ -1576,6 +1627,17 @@ public class JCoQLEnvironment {
 			myErrorHandler(ERR_ON_UNDEFINED_ARRAY_PARAMETER, a);		
 		
 		return new Expression (new CumulateArray (arrayName));
+	}
+
+
+	// PF 2023.03.05 - E' una pezza.
+	public Predicate generateComparePredicate(Expression e1, Token c, Expression e2) {
+		Predicate p = e1;
+		if (c == null) 
+			myErrorHandler (ERR_ON_MISSING_COMPARATOR, c);				
+		else
+			p = new ComparisonPredicate (e1, c.getText(), e2);
+		return p;
 	}
 
 

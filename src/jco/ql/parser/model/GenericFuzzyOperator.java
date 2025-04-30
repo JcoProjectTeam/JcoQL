@@ -56,13 +56,6 @@ public class GenericFuzzyOperator extends Instruction {
 		return pl;
 	}
 
-	
-    
-	
-    
-    
-    
-	
 
 	public String toString () {
 		String str = "CREATE ";
@@ -79,13 +72,8 @@ public class GenericFuzzyOperator extends Instruction {
 		for (int i=0; i<degrees.size(); i++) {
 			str +="EVALUATE " + degrees.get(i).name + " ";
 			str +="AS " 	  + evaluate.get(i).toString() + " ";
-			if (!polylines.get(i).hasDefaultPolyline()) {
-				str +="POLYLINE ";
-				str +="[ ";				
-				for (int j=0; j<polylines.get(i).polyline.size(); j++)
-					str += ", " + polylines.get(i).polyline.toString();
-				str += " ]";
-			}
+			FuzzyPolyline fp = polylines.get(i);
+			fp.toString();
 		}
 		return cleanString(str).trim() + ";";
 	}
@@ -102,17 +90,12 @@ public class GenericFuzzyOperator extends Instruction {
 		if (parameters.size() > 0)
 			str += "\t\t" + parameters.get(parameters.size()-1).toString() + "\n";
 		if (hasPrecondition())
-			str +="\tPRECONDITION " + precondition.toString() + "\n";
+			str +="\tPRECONDITION " + precondition.toString() ;
 		for (int i=0; i<degrees.size(); i++) {
-			str +="\tEVALUATE " + degrees.get(i).name + " ";
-			str +="AS " 	  	+ evaluate.get(i).toString() + "\n";
-			if (!polylines.get(i).hasDefaultPolyline()) {
-				str +="\tPOLYLINE\n";
-				str +="\t\t[\t";				
-				for (int j=0; j<polylines.get(i).polyline.size();j++)
-					str += ",\n\t\t\t" + polylines.get(i).polyline.get(j).toString();
-				str += "\t]";
-			}
+			str +="\n\tEVALUATE " + degrees.get(i).name + " ";
+			str +="AS " 	  	+ evaluate.get(i).toString();
+			FuzzyPolyline fp = polylines.get(i);
+			str += fp.toMultilineString();
 		}
 		str = cleanString(str);
 		

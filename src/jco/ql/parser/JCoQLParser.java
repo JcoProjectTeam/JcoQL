@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g 2024-07-07 23:34:20
+// $ANTLR 3.5.1 C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g 2025-03-12 03:30:45
 
   package jco.ql.parser;
   
@@ -29,20 +29,20 @@ public class JCoQLParser extends Parser {
 		"EXP", "EXPAND", "EXTENT", "EXTRACT_ARRAY", "FIELD", "FIELDS", "FIELD_NAME", 
 		"FILTER", "FIRST", "FLOAT", "FOR", "FROM_ARRAY", "FROM_WEB", "FUNCTION", 
 		"FUZZY", "GE", "GENERATE", "GEOMETRY", "GET", "GROUP", "GROUPING", "GT", 
-		"HOWINCLUDE", "HOWINTERSECT", "HOWMEET", "ID", "IF_ERROR", "IF_FAILS", 
-		"IMPORT", "IN", "INCLUDED", "INPUT", "INRANGE", "INT", "INTERSECT", "INTERSECTION", 
-		"INTO", "ISNOTNULL", "ISNULL", "JAVA", "JAVASCRIPT", "JOIN", "KEEP", "KEEPING", 
-		"KNOWN", "LAST", "LB", "LBR", "LE", "LEFT", "LETTER", "LOCALLY", "LOOKUP", 
-		"LP", "LT", "MATCHING", "MAXIMUM", "MEET", "MEMBERSHIP_ARRAY", "MEMBERSHIP_TO", 
-		"MERGE", "MINIMUM", "MIN_SIMILARITY", "MODEL", "MUL", "NEQ", "NOT", "OF", 
-		"ON", "OPERATOR", "OR", "ORDER", "ORIENTATION", "OTHERS", "PARAMETERS", 
-		"PARTITION", "POINT", "POLYLINE", "POS", "PRECONDITION", "PRODUCT", "QUOTE", 
-		"QUOTED_VALUE", "RB", "RBR", "REMOVE", "RESOLVING", "RIGHT", "RP", "SAVE", 
-		"SC", "SCAN_ERROR", "SERVER", "SET", "SETS", "SETTING", "SORT", "SUB", 
-		"SUBTRACT", "SUM", "THRESHOLD", "TILDE", "TO", "TO_POLYLINE", "TRAJECTORY", 
-		"TRANSLATE", "TYPE", "UNCOMPARABLE", "UNKNOWN", "UNPACK", "USE", "USING", 
-		"VERSUS", "WHERE", "WHITE_SPACES", "WITH", "WITHIN", "WITHOUT", "WRT", 
-		"WS", "XXX"
+		"HASH_NAME", "HOWINCLUDE", "HOWINTERSECT", "HOWMEET", "ID", "IF", "IF_ERROR", 
+		"IF_FAILS", "IMPORT", "IN", "INCLUDED", "INPUT", "INRANGE", "INT", "INTERSECT", 
+		"INTERSECTION", "INTO", "ISNOTNULL", "ISNULL", "JAVA", "JAVASCRIPT", "JOIN", 
+		"KEEP", "KEEPING", "KNOWN", "LAST", "LB", "LBR", "LE", "LEFT", "LETTER", 
+		"LOCALLY", "LOOKUP", "LP", "LT", "MATCHING", "MAXIMUM", "MEET", "MEMBERSHIP_ARRAY", 
+		"MEMBERSHIP_TO", "MERGE", "MINIMUM", "MIN_SIMILARITY", "MODEL", "MUL", 
+		"NEQ", "NOT", "OF", "ON", "OPERATOR", "OR", "ORDER", "ORIENTATION", "OTHERS", 
+		"PARAMETERS", "PARTITION", "POINT", "POLYLINE", "POS", "PRECONDITION", 
+		"PRODUCT", "QUOTE", "QUOTED_VALUE", "RB", "RBR", "REMOVE", "RESOLVING", 
+		"RIGHT", "RP", "SAVE", "SC", "SCAN_ERROR", "SERVER", "SET", "SETS", "SETTING", 
+		"SORT", "SUB", "SUBTRACT", "SUM", "THRESHOLD", "TILDE", "TO", "TO_POLYLINE", 
+		"TRAJECTORY", "TRANSLATE", "TYPE", "UNCOMPARABLE", "UNKNOWN", "UNPACK", 
+		"USE", "USING", "VERSUS", "WHERE", "WHITE_SPACES", "WITH", "WITHIN", "WITHOUT", 
+		"WRT", "WS", "XXX"
 	};
 	public static final int EOF=-1;
 	public static final int ADD=4;
@@ -121,105 +121,107 @@ public class JCoQLParser extends Parser {
 	public static final int GROUP=77;
 	public static final int GROUPING=78;
 	public static final int GT=79;
-	public static final int HOWINCLUDE=80;
-	public static final int HOWINTERSECT=81;
-	public static final int HOWMEET=82;
-	public static final int ID=83;
-	public static final int IF_ERROR=84;
-	public static final int IF_FAILS=85;
-	public static final int IMPORT=86;
-	public static final int IN=87;
-	public static final int INCLUDED=88;
-	public static final int INPUT=89;
-	public static final int INRANGE=90;
-	public static final int INT=91;
-	public static final int INTERSECT=92;
-	public static final int INTERSECTION=93;
-	public static final int INTO=94;
-	public static final int ISNOTNULL=95;
-	public static final int ISNULL=96;
-	public static final int JAVA=97;
-	public static final int JAVASCRIPT=98;
-	public static final int JOIN=99;
-	public static final int KEEP=100;
-	public static final int KEEPING=101;
-	public static final int KNOWN=102;
-	public static final int LAST=103;
-	public static final int LB=104;
-	public static final int LBR=105;
-	public static final int LE=106;
-	public static final int LEFT=107;
-	public static final int LETTER=108;
-	public static final int LOCALLY=109;
-	public static final int LOOKUP=110;
-	public static final int LP=111;
-	public static final int LT=112;
-	public static final int MATCHING=113;
-	public static final int MAXIMUM=114;
-	public static final int MEET=115;
-	public static final int MEMBERSHIP_ARRAY=116;
-	public static final int MEMBERSHIP_TO=117;
-	public static final int MERGE=118;
-	public static final int MINIMUM=119;
-	public static final int MIN_SIMILARITY=120;
-	public static final int MODEL=121;
-	public static final int MUL=122;
-	public static final int NEQ=123;
-	public static final int NOT=124;
-	public static final int OF=125;
-	public static final int ON=126;
-	public static final int OPERATOR=127;
-	public static final int OR=128;
-	public static final int ORDER=129;
-	public static final int ORIENTATION=130;
-	public static final int OTHERS=131;
-	public static final int PARAMETERS=132;
-	public static final int PARTITION=133;
-	public static final int POINT=134;
-	public static final int POLYLINE=135;
-	public static final int POS=136;
-	public static final int PRECONDITION=137;
-	public static final int PRODUCT=138;
-	public static final int QUOTE=139;
-	public static final int QUOTED_VALUE=140;
-	public static final int RB=141;
-	public static final int RBR=142;
-	public static final int REMOVE=143;
-	public static final int RESOLVING=144;
-	public static final int RIGHT=145;
-	public static final int RP=146;
-	public static final int SAVE=147;
-	public static final int SC=148;
-	public static final int SCAN_ERROR=149;
-	public static final int SERVER=150;
-	public static final int SET=151;
-	public static final int SETS=152;
-	public static final int SETTING=153;
-	public static final int SORT=154;
-	public static final int SUB=155;
-	public static final int SUBTRACT=156;
-	public static final int SUM=157;
-	public static final int THRESHOLD=158;
-	public static final int TILDE=159;
-	public static final int TO=160;
-	public static final int TO_POLYLINE=161;
-	public static final int TRAJECTORY=162;
-	public static final int TRANSLATE=163;
-	public static final int TYPE=164;
-	public static final int UNCOMPARABLE=165;
-	public static final int UNKNOWN=166;
-	public static final int UNPACK=167;
-	public static final int USE=168;
-	public static final int USING=169;
-	public static final int VERSUS=170;
-	public static final int WHERE=171;
-	public static final int WHITE_SPACES=172;
-	public static final int WITH=173;
-	public static final int WITHIN=174;
-	public static final int WITHOUT=175;
-	public static final int WRT=176;
-	public static final int WS=177;
-	public static final int XXX=178;
+	public static final int HASH_NAME=80;
+	public static final int HOWINCLUDE=81;
+	public static final int HOWINTERSECT=82;
+	public static final int HOWMEET=83;
+	public static final int ID=84;
+	public static final int IF=85;
+	public static final int IF_ERROR=86;
+	public static final int IF_FAILS=87;
+	public static final int IMPORT=88;
+	public static final int IN=89;
+	public static final int INCLUDED=90;
+	public static final int INPUT=91;
+	public static final int INRANGE=92;
+	public static final int INT=93;
+	public static final int INTERSECT=94;
+	public static final int INTERSECTION=95;
+	public static final int INTO=96;
+	public static final int ISNOTNULL=97;
+	public static final int ISNULL=98;
+	public static final int JAVA=99;
+	public static final int JAVASCRIPT=100;
+	public static final int JOIN=101;
+	public static final int KEEP=102;
+	public static final int KEEPING=103;
+	public static final int KNOWN=104;
+	public static final int LAST=105;
+	public static final int LB=106;
+	public static final int LBR=107;
+	public static final int LE=108;
+	public static final int LEFT=109;
+	public static final int LETTER=110;
+	public static final int LOCALLY=111;
+	public static final int LOOKUP=112;
+	public static final int LP=113;
+	public static final int LT=114;
+	public static final int MATCHING=115;
+	public static final int MAXIMUM=116;
+	public static final int MEET=117;
+	public static final int MEMBERSHIP_ARRAY=118;
+	public static final int MEMBERSHIP_TO=119;
+	public static final int MERGE=120;
+	public static final int MINIMUM=121;
+	public static final int MIN_SIMILARITY=122;
+	public static final int MODEL=123;
+	public static final int MUL=124;
+	public static final int NEQ=125;
+	public static final int NOT=126;
+	public static final int OF=127;
+	public static final int ON=128;
+	public static final int OPERATOR=129;
+	public static final int OR=130;
+	public static final int ORDER=131;
+	public static final int ORIENTATION=132;
+	public static final int OTHERS=133;
+	public static final int PARAMETERS=134;
+	public static final int PARTITION=135;
+	public static final int POINT=136;
+	public static final int POLYLINE=137;
+	public static final int POS=138;
+	public static final int PRECONDITION=139;
+	public static final int PRODUCT=140;
+	public static final int QUOTE=141;
+	public static final int QUOTED_VALUE=142;
+	public static final int RB=143;
+	public static final int RBR=144;
+	public static final int REMOVE=145;
+	public static final int RESOLVING=146;
+	public static final int RIGHT=147;
+	public static final int RP=148;
+	public static final int SAVE=149;
+	public static final int SC=150;
+	public static final int SCAN_ERROR=151;
+	public static final int SERVER=152;
+	public static final int SET=153;
+	public static final int SETS=154;
+	public static final int SETTING=155;
+	public static final int SORT=156;
+	public static final int SUB=157;
+	public static final int SUBTRACT=158;
+	public static final int SUM=159;
+	public static final int THRESHOLD=160;
+	public static final int TILDE=161;
+	public static final int TO=162;
+	public static final int TO_POLYLINE=163;
+	public static final int TRAJECTORY=164;
+	public static final int TRANSLATE=165;
+	public static final int TYPE=166;
+	public static final int UNCOMPARABLE=167;
+	public static final int UNKNOWN=168;
+	public static final int UNPACK=169;
+	public static final int USE=170;
+	public static final int USING=171;
+	public static final int VERSUS=172;
+	public static final int WHERE=173;
+	public static final int WHITE_SPACES=174;
+	public static final int WITH=175;
+	public static final int WITHIN=176;
+	public static final int WITHOUT=177;
+	public static final int WRT=178;
+	public static final int WS=179;
+	public static final int XXX=180;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -241,7 +243,7 @@ public class JCoQLParser extends Parser {
 
 
 		public static final String version = "4.0";
-		public static final String release = "4.0.02";
+		public static final String release = "4.0.06";
 	 	JCoQLEnvironment env;
 
 	  public JCoQLParser(JCoQLLexer lexer) {		
@@ -291,16 +293,16 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "start"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:89:1: start : ( getCollectionRule | saveAsRule | joinOfCollectionsRule | filterRule | groupRule | expandRule | mergeCollectionsRule | intersectCollectionsRule | subtractCollectionsRule | useDbRule | trajectoryMatchingRule | createFuzzyOperatorRule | createJavaScriptFunctionRule | getDictionaryRule | lookupFromWebRule | createFuzzyAggregatorRule | createFuzzySetModelRule | createGenericFuzzySetOperatorRule | createJavaFunctionRule | createFuzzyEvaluatorRule | test )* EOF ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:94:1: start : ( getCollectionRule | saveAsRule | joinOfCollectionsRule | filterRule | groupRule | expandRule | mergeCollectionsRule | intersectCollectionsRule | subtractCollectionsRule | useDbRule | trajectoryMatchingRule | createFuzzyOperatorRule | createJavaScriptFunctionRule | getDictionaryRule | lookupFromWebRule | createFuzzyAggregatorRule | createFuzzySetModelRule | createGenericFuzzySetOperatorRule | createJavaFunctionRule | createFuzzyEvaluatorRule | createGenericFuzzyEvaluatorRule | test )* EOF ;
 	public final void start() throws RecognitionException {
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:90:3: ( ( getCollectionRule | saveAsRule | joinOfCollectionsRule | filterRule | groupRule | expandRule | mergeCollectionsRule | intersectCollectionsRule | subtractCollectionsRule | useDbRule | trajectoryMatchingRule | createFuzzyOperatorRule | createJavaScriptFunctionRule | getDictionaryRule | lookupFromWebRule | createFuzzyAggregatorRule | createFuzzySetModelRule | createGenericFuzzySetOperatorRule | createJavaFunctionRule | createFuzzyEvaluatorRule | test )* EOF )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:90:5: ( getCollectionRule | saveAsRule | joinOfCollectionsRule | filterRule | groupRule | expandRule | mergeCollectionsRule | intersectCollectionsRule | subtractCollectionsRule | useDbRule | trajectoryMatchingRule | createFuzzyOperatorRule | createJavaScriptFunctionRule | getDictionaryRule | lookupFromWebRule | createFuzzyAggregatorRule | createFuzzySetModelRule | createGenericFuzzySetOperatorRule | createJavaFunctionRule | createFuzzyEvaluatorRule | test )* EOF
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:95:3: ( ( getCollectionRule | saveAsRule | joinOfCollectionsRule | filterRule | groupRule | expandRule | mergeCollectionsRule | intersectCollectionsRule | subtractCollectionsRule | useDbRule | trajectoryMatchingRule | createFuzzyOperatorRule | createJavaScriptFunctionRule | getDictionaryRule | lookupFromWebRule | createFuzzyAggregatorRule | createFuzzySetModelRule | createGenericFuzzySetOperatorRule | createJavaFunctionRule | createFuzzyEvaluatorRule | createGenericFuzzyEvaluatorRule | test )* EOF )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:95:5: ( getCollectionRule | saveAsRule | joinOfCollectionsRule | filterRule | groupRule | expandRule | mergeCollectionsRule | intersectCollectionsRule | subtractCollectionsRule | useDbRule | trajectoryMatchingRule | createFuzzyOperatorRule | createJavaScriptFunctionRule | getDictionaryRule | lookupFromWebRule | createFuzzyAggregatorRule | createFuzzySetModelRule | createGenericFuzzySetOperatorRule | createJavaFunctionRule | createFuzzyEvaluatorRule | createGenericFuzzyEvaluatorRule | test )* EOF
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:90:5: ( getCollectionRule | saveAsRule | joinOfCollectionsRule | filterRule | groupRule | expandRule | mergeCollectionsRule | intersectCollectionsRule | subtractCollectionsRule | useDbRule | trajectoryMatchingRule | createFuzzyOperatorRule | createJavaScriptFunctionRule | getDictionaryRule | lookupFromWebRule | createFuzzyAggregatorRule | createFuzzySetModelRule | createGenericFuzzySetOperatorRule | createJavaFunctionRule | createFuzzyEvaluatorRule | test )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:95:5: ( getCollectionRule | saveAsRule | joinOfCollectionsRule | filterRule | groupRule | expandRule | mergeCollectionsRule | intersectCollectionsRule | subtractCollectionsRule | useDbRule | trajectoryMatchingRule | createFuzzyOperatorRule | createJavaScriptFunctionRule | getDictionaryRule | lookupFromWebRule | createFuzzyAggregatorRule | createFuzzySetModelRule | createGenericFuzzySetOperatorRule | createJavaFunctionRule | createFuzzyEvaluatorRule | createGenericFuzzyEvaluatorRule | test )*
 			loop1:
 			while (true) {
-				int alt1=22;
+				int alt1=23;
 				switch ( input.LA(1) ) {
 				case GET:
 					{
@@ -400,7 +402,18 @@ public class JCoQLParser extends Parser {
 						break;
 					case ID:
 						{
-						alt1=18;
+						int LA1_20 = input.LA(3);
+						if ( (LA1_20==FUZZY) ) {
+							int LA1_26 = input.LA(4);
+							if ( (LA1_26==OPERATOR) ) {
+								alt1=18;
+							}
+							else if ( (LA1_26==EVALUATOR) ) {
+								alt1=21;
+							}
+
+						}
+
 						}
 						break;
 					case JAVA:
@@ -418,195 +431,204 @@ public class JCoQLParser extends Parser {
 					break;
 				case XXX:
 					{
-					alt1=21;
+					alt1=22;
 					}
 					break;
 				}
 				switch (alt1) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:90:7: getCollectionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:95:7: getCollectionRule
 					{
-					pushFollow(FOLLOW_getCollectionRule_in_start69);
+					pushFollow(FOLLOW_getCollectionRule_in_start81);
 					getCollectionRule();
 					state._fsp--;
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:91:7: saveAsRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:96:7: saveAsRule
 					{
-					pushFollow(FOLLOW_saveAsRule_in_start95);
+					pushFollow(FOLLOW_saveAsRule_in_start107);
 					saveAsRule();
 					state._fsp--;
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:92:7: joinOfCollectionsRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:97:7: joinOfCollectionsRule
 					{
-					pushFollow(FOLLOW_joinOfCollectionsRule_in_start128);
+					pushFollow(FOLLOW_joinOfCollectionsRule_in_start140);
 					joinOfCollectionsRule();
 					state._fsp--;
 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:93:7: filterRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:98:7: filterRule
 					{
-					pushFollow(FOLLOW_filterRule_in_start150);
+					pushFollow(FOLLOW_filterRule_in_start162);
 					filterRule();
 					state._fsp--;
 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:94:7: groupRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:99:7: groupRule
 					{
-					pushFollow(FOLLOW_groupRule_in_start183);
+					pushFollow(FOLLOW_groupRule_in_start195);
 					groupRule();
 					state._fsp--;
 
 					}
 					break;
 				case 6 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:95:7: expandRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:100:7: expandRule
 					{
-					pushFollow(FOLLOW_expandRule_in_start217);
+					pushFollow(FOLLOW_expandRule_in_start229);
 					expandRule();
 					state._fsp--;
 
 					}
 					break;
 				case 7 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:96:7: mergeCollectionsRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:101:7: mergeCollectionsRule
 					{
-					pushFollow(FOLLOW_mergeCollectionsRule_in_start250);
+					pushFollow(FOLLOW_mergeCollectionsRule_in_start262);
 					mergeCollectionsRule();
 					state._fsp--;
 
 					}
 					break;
 				case 8 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:97:7: intersectCollectionsRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:102:7: intersectCollectionsRule
 					{
-					pushFollow(FOLLOW_intersectCollectionsRule_in_start273);
+					pushFollow(FOLLOW_intersectCollectionsRule_in_start285);
 					intersectCollectionsRule();
 					state._fsp--;
 
 					}
 					break;
 				case 9 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:98:7: subtractCollectionsRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:103:7: subtractCollectionsRule
 					{
-					pushFollow(FOLLOW_subtractCollectionsRule_in_start292);
+					pushFollow(FOLLOW_subtractCollectionsRule_in_start304);
 					subtractCollectionsRule();
 					state._fsp--;
 
 					}
 					break;
 				case 10 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:99:7: useDbRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:104:7: useDbRule
 					{
-					pushFollow(FOLLOW_useDbRule_in_start312);
+					pushFollow(FOLLOW_useDbRule_in_start324);
 					useDbRule();
 					state._fsp--;
 
 					}
 					break;
 				case 11 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:100:7: trajectoryMatchingRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:105:7: trajectoryMatchingRule
 					{
-					pushFollow(FOLLOW_trajectoryMatchingRule_in_start346);
+					pushFollow(FOLLOW_trajectoryMatchingRule_in_start358);
 					trajectoryMatchingRule();
 					state._fsp--;
 
 					}
 					break;
 				case 12 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:101:7: createFuzzyOperatorRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:106:7: createFuzzyOperatorRule
 					{
-					pushFollow(FOLLOW_createFuzzyOperatorRule_in_start365);
+					pushFollow(FOLLOW_createFuzzyOperatorRule_in_start377);
 					createFuzzyOperatorRule();
 					state._fsp--;
 
 					}
 					break;
 				case 13 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:102:7: createJavaScriptFunctionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:107:7: createJavaScriptFunctionRule
 					{
-					pushFollow(FOLLOW_createJavaScriptFunctionRule_in_start380);
+					pushFollow(FOLLOW_createJavaScriptFunctionRule_in_start392);
 					createJavaScriptFunctionRule();
 					state._fsp--;
 
 					}
 					break;
 				case 14 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:103:7: getDictionaryRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:108:7: getDictionaryRule
 					{
-					pushFollow(FOLLOW_getDictionaryRule_in_start392);
+					pushFollow(FOLLOW_getDictionaryRule_in_start404);
 					getDictionaryRule();
 					state._fsp--;
 
 					}
 					break;
 				case 15 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:104:7: lookupFromWebRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:109:7: lookupFromWebRule
 					{
-					pushFollow(FOLLOW_lookupFromWebRule_in_start410);
+					pushFollow(FOLLOW_lookupFromWebRule_in_start422);
 					lookupFromWebRule();
 					state._fsp--;
 
 					}
 					break;
 				case 16 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:105:7: createFuzzyAggregatorRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:110:7: createFuzzyAggregatorRule
 					{
-					pushFollow(FOLLOW_createFuzzyAggregatorRule_in_start428);
+					pushFollow(FOLLOW_createFuzzyAggregatorRule_in_start440);
 					createFuzzyAggregatorRule();
 					state._fsp--;
 
 					}
 					break;
 				case 17 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:106:7: createFuzzySetModelRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:111:7: createFuzzySetModelRule
 					{
-					pushFollow(FOLLOW_createFuzzySetModelRule_in_start444);
+					pushFollow(FOLLOW_createFuzzySetModelRule_in_start456);
 					createFuzzySetModelRule();
 					state._fsp--;
 
 					}
 					break;
 				case 18 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:107:7: createGenericFuzzySetOperatorRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:112:7: createGenericFuzzySetOperatorRule
 					{
-					pushFollow(FOLLOW_createGenericFuzzySetOperatorRule_in_start459);
+					pushFollow(FOLLOW_createGenericFuzzySetOperatorRule_in_start471);
 					createGenericFuzzySetOperatorRule();
 					state._fsp--;
 
 					}
 					break;
 				case 19 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:108:7: createJavaFunctionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:113:7: createJavaFunctionRule
 					{
-					pushFollow(FOLLOW_createJavaFunctionRule_in_start469);
+					pushFollow(FOLLOW_createJavaFunctionRule_in_start481);
 					createJavaFunctionRule();
 					state._fsp--;
 
 					}
 					break;
 				case 20 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:109:7: createFuzzyEvaluatorRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:114:7: createFuzzyEvaluatorRule
 					{
-					pushFollow(FOLLOW_createFuzzyEvaluatorRule_in_start484);
+					pushFollow(FOLLOW_createFuzzyEvaluatorRule_in_start496);
 					createFuzzyEvaluatorRule();
 					state._fsp--;
 
 					}
 					break;
 				case 21 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:110:7: test
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:115:7: createGenericFuzzyEvaluatorRule
 					{
-					pushFollow(FOLLOW_test_in_start498);
+					pushFollow(FOLLOW_createGenericFuzzyEvaluatorRule_in_start510);
+					createGenericFuzzyEvaluatorRule();
+					state._fsp--;
+
+					}
+					break;
+				case 22 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:116:7: test
+					{
+					pushFollow(FOLLOW_test_in_start523);
 					test();
 					state._fsp--;
 
@@ -618,7 +640,7 @@ public class JCoQLParser extends Parser {
 				}
 			}
 
-			match(input,EOF,FOLLOW_EOF_in_start534); 
+			match(input,EOF,FOLLOW_EOF_in_start559); 
 			}
 
 		}
@@ -635,14 +657,14 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "test"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:115:1: test : XXX SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:121:1: test : XXX SC ;
 	public final void test() throws RecognitionException {
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:115:5: ( XXX SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:115:7: XXX SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:121:5: ( XXX SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:121:7: XXX SC
 			{
-			match(input,XXX,FOLLOW_XXX_in_test545); 
-			match(input,SC,FOLLOW_SC_in_test547); 
+			match(input,XXX,FOLLOW_XXX_in_test570); 
+			match(input,SC,FOLLOW_SC_in_test572); 
 			}
 
 		}
@@ -659,7 +681,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "collectionReferenceRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:120:1: collectionReferenceRule returns [DbCollection cr] : name= ID ( AT db= ID )? ( AS alias= ID )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:126:1: collectionReferenceRule returns [DbCollection cr] : name= ID ( AT db= ID )? ( AS alias= ID )? ;
 	public final DbCollection collectionReferenceRule() throws RecognitionException {
 		DbCollection cr = null;
 
@@ -669,11 +691,11 @@ public class JCoQLParser extends Parser {
 		Token alias=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:121:3: (name= ID ( AT db= ID )? ( AS alias= ID )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:122:5: name= ID ( AT db= ID )? ( AS alias= ID )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:127:3: (name= ID ( AT db= ID )? ( AS alias= ID )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:128:5: name= ID ( AT db= ID )? ( AS alias= ID )?
 			{
-			name=(Token)match(input,ID,FOLLOW_ID_in_collectionReferenceRule571); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:123:5: ( AT db= ID )?
+			name=(Token)match(input,ID,FOLLOW_ID_in_collectionReferenceRule596); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:129:5: ( AT db= ID )?
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0==AT) ) {
@@ -681,16 +703,16 @@ public class JCoQLParser extends Parser {
 			}
 			switch (alt2) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:123:7: AT db= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:129:7: AT db= ID
 					{
-					match(input,AT,FOLLOW_AT_in_collectionReferenceRule581); 
-					db=(Token)match(input,ID,FOLLOW_ID_in_collectionReferenceRule585); 
+					match(input,AT,FOLLOW_AT_in_collectionReferenceRule606); 
+					db=(Token)match(input,ID,FOLLOW_ID_in_collectionReferenceRule610); 
 					}
 					break;
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:124:5: ( AS alias= ID )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:130:5: ( AS alias= ID )?
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0==AS) ) {
@@ -698,10 +720,10 @@ public class JCoQLParser extends Parser {
 			}
 			switch (alt3) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:124:7: AS alias= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:130:7: AS alias= ID
 					{
-					match(input,AS,FOLLOW_AS_in_collectionReferenceRule598); 
-					alias=(Token)match(input,ID,FOLLOW_ID_in_collectionReferenceRule602); 
+					match(input,AS,FOLLOW_AS_in_collectionReferenceRule623); 
+					alias=(Token)match(input,ID,FOLLOW_ID_in_collectionReferenceRule627); 
 					}
 					break;
 
@@ -725,7 +747,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "fieldRefRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:129:1: fieldRefRule returns [Field field] : (fd= FIELD_NAME )+ ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:135:1: fieldRefRule returns [Field field] : (fd= FIELD_NAME )+ ;
 	public final Field fieldRefRule() throws RecognitionException {
 		Field field = null;
 
@@ -734,10 +756,10 @@ public class JCoQLParser extends Parser {
 
 			field = new Field (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:131:3: ( (fd= FIELD_NAME )+ )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:132:5: (fd= FIELD_NAME )+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:137:3: ( (fd= FIELD_NAME )+ )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:138:5: (fd= FIELD_NAME )+
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:132:5: (fd= FIELD_NAME )+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:138:5: (fd= FIELD_NAME )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -749,9 +771,9 @@ public class JCoQLParser extends Parser {
 
 				switch (alt4) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:132:7: fd= FIELD_NAME
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:138:7: fd= FIELD_NAME
 					{
-					fd=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_fieldRefRule649); 
+					fd=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_fieldRefRule674); 
 					 env.addField (field, fd); 
 					}
 					break;
@@ -781,26 +803,106 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "buildActionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:136:1: buildActionRule returns [BuildAction ga] : BUILD os= objectStructureRule[true] ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:142:1: buildActionRule returns [BuildAction ga] : ( BUILD os= objectStructureRule[true] | ADD_ST FIELDS os= objectStructureRule[true] | REMOVE FIELDS LBR fr= fieldRefRule ( COMMA fr= fieldRefRule )* RBR );
 	public final BuildAction buildActionRule() throws RecognitionException {
 		BuildAction ga = null;
 
 
 		ObjectStructure os =null;
+		Field fr =null;
 
 		 ga = new BuildAction(); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:138:3: ( BUILD os= objectStructureRule[true] )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:139:5: BUILD os= objectStructureRule[true]
-			{
-			match(input,BUILD,FOLLOW_BUILD_in_buildActionRule689); 
-			pushFollow(FOLLOW_objectStructureRule_in_buildActionRule707);
-			os=objectStructureRule(true);
-			state._fsp--;
-
-			 ga.setObjectStructure (os); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:144:3: ( BUILD os= objectStructureRule[true] | ADD_ST FIELDS os= objectStructureRule[true] | REMOVE FIELDS LBR fr= fieldRefRule ( COMMA fr= fieldRefRule )* RBR )
+			int alt6=3;
+			switch ( input.LA(1) ) {
+			case BUILD:
+				{
+				alt6=1;
+				}
+				break;
+			case ADD_ST:
+				{
+				alt6=2;
+				}
+				break;
+			case REMOVE:
+				{
+				alt6=3;
+				}
+				break;
+			default:
+				NoViableAltException nvae =
+					new NoViableAltException("", 6, 0, input);
+				throw nvae;
 			}
+			switch (alt6) {
+				case 1 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:145:5: BUILD os= objectStructureRule[true]
+					{
+					match(input,BUILD,FOLLOW_BUILD_in_buildActionRule714); 
+					pushFollow(FOLLOW_objectStructureRule_in_buildActionRule736);
+					os=objectStructureRule(true);
+					state._fsp--;
 
+					 ga.setBuildObjectStructure (os); 
+					}
+					break;
+				case 2 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:147:4: ADD_ST FIELDS os= objectStructureRule[true]
+					{
+					match(input,ADD_ST,FOLLOW_ADD_ST_in_buildActionRule746); 
+					match(input,FIELDS,FOLLOW_FIELDS_in_buildActionRule748); 
+					pushFollow(FOLLOW_objectStructureRule_in_buildActionRule758);
+					os=objectStructureRule(true);
+					state._fsp--;
+
+					 ga.setAddObjectStructure (os); 
+					}
+					break;
+				case 3 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:149:4: REMOVE FIELDS LBR fr= fieldRefRule ( COMMA fr= fieldRefRule )* RBR
+					{
+					match(input,REMOVE,FOLLOW_REMOVE_in_buildActionRule770); 
+					match(input,FIELDS,FOLLOW_FIELDS_in_buildActionRule772); 
+					match(input,LBR,FOLLOW_LBR_in_buildActionRule777); 
+					pushFollow(FOLLOW_fieldRefRule_in_buildActionRule781);
+					fr=fieldRefRule();
+					state._fsp--;
+
+					 ga.setRemoveField (fr); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:151:5: ( COMMA fr= fieldRefRule )*
+					loop5:
+					while (true) {
+						int alt5=2;
+						int LA5_0 = input.LA(1);
+						if ( (LA5_0==COMMA) ) {
+							alt5=1;
+						}
+
+						switch (alt5) {
+						case 1 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:151:6: COMMA fr= fieldRefRule
+							{
+							match(input,COMMA,FOLLOW_COMMA_in_buildActionRule798); 
+							pushFollow(FOLLOW_fieldRefRule_in_buildActionRule802);
+							fr=fieldRefRule();
+							state._fsp--;
+
+							 ga.setRemoveField (fr); 
+							}
+							break;
+
+						default :
+							break loop5;
+						}
+					}
+
+					match(input,RBR,FOLLOW_RBR_in_buildActionRule822); 
+					}
+					break;
+
+			}
 		}
 		catch (RecognitionException re) {
 			reportError(re);
@@ -816,7 +918,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "objectStructureRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:145:1: objectStructureRule[boolean generateActionCaller] returns [ObjectStructure obj] : LBR ofs= outputFieldSpecRule (t= COMMA ofs= outputFieldSpecRule )* RBR ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:157:1: objectStructureRule[boolean generateActionCaller] returns [ObjectStructure obj] : LBR ofs= outputFieldSpecRule (t= COMMA ofs= outputFieldSpecRule )* RBR ;
 	public final ObjectStructure objectStructureRule(boolean generateActionCaller) throws RecognitionException {
 		ObjectStructure obj = null;
 
@@ -825,30 +927,30 @@ public class JCoQLParser extends Parser {
 		OutputFieldSpec ofs =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:146:3: ( LBR ofs= outputFieldSpecRule (t= COMMA ofs= outputFieldSpecRule )* RBR )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:147:5: LBR ofs= outputFieldSpecRule (t= COMMA ofs= outputFieldSpecRule )* RBR
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:158:3: ( LBR ofs= outputFieldSpecRule (t= COMMA ofs= outputFieldSpecRule )* RBR )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:159:5: LBR ofs= outputFieldSpecRule (t= COMMA ofs= outputFieldSpecRule )* RBR
 			{
-			match(input,LBR,FOLLOW_LBR_in_objectStructureRule743); 
-			pushFollow(FOLLOW_outputFieldSpecRule_in_objectStructureRule754);
+			match(input,LBR,FOLLOW_LBR_in_objectStructureRule847); 
+			pushFollow(FOLLOW_outputFieldSpecRule_in_objectStructureRule858);
 			ofs=outputFieldSpecRule();
 			state._fsp--;
 
 			 obj = new ObjectStructure (ofs); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:149:8: (t= COMMA ofs= outputFieldSpecRule )*
-			loop5:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:161:8: (t= COMMA ofs= outputFieldSpecRule )*
+			loop7:
 			while (true) {
-				int alt5=2;
-				int LA5_0 = input.LA(1);
-				if ( (LA5_0==COMMA) ) {
-					alt5=1;
+				int alt7=2;
+				int LA7_0 = input.LA(1);
+				if ( (LA7_0==COMMA) ) {
+					alt7=1;
 				}
 
-				switch (alt5) {
+				switch (alt7) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:149:10: t= COMMA ofs= outputFieldSpecRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:161:10: t= COMMA ofs= outputFieldSpecRule
 					{
-					t=(Token)match(input,COMMA,FOLLOW_COMMA_in_objectStructureRule775); 
-					pushFollow(FOLLOW_outputFieldSpecRule_in_objectStructureRule779);
+					t=(Token)match(input,COMMA,FOLLOW_COMMA_in_objectStructureRule879); 
+					pushFollow(FOLLOW_outputFieldSpecRule_in_objectStructureRule883);
 					ofs=outputFieldSpecRule();
 					state._fsp--;
 
@@ -857,11 +959,11 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop5;
+					break loop7;
 				}
 			}
 
-			match(input,RBR,FOLLOW_RBR_in_objectStructureRule795); 
+			match(input,RBR,FOLLOW_RBR_in_objectStructureRule899); 
 			}
 
 		}
@@ -879,7 +981,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "outputFieldSpecRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:155:1: outputFieldSpecRule returns [OutputFieldSpec ofs] : fr= fieldRefRule ( COLON (os= objectStructureRule[false] |f= factorRule ) )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:167:1: outputFieldSpecRule returns [OutputFieldSpec ofs] : fr= fieldRefRule ( COLON (os= objectStructureRule[false] |f= factorRule ) )? ;
 	public final OutputFieldSpec outputFieldSpecRule() throws RecognitionException {
 		OutputFieldSpec ofs = null;
 
@@ -889,46 +991,46 @@ public class JCoQLParser extends Parser {
 		ExpressionFactor f =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:156:3: (fr= fieldRefRule ( COLON (os= objectStructureRule[false] |f= factorRule ) )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:157:5: fr= fieldRefRule ( COLON (os= objectStructureRule[false] |f= factorRule ) )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:168:3: (fr= fieldRefRule ( COLON (os= objectStructureRule[false] |f= factorRule ) )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:169:5: fr= fieldRefRule ( COLON (os= objectStructureRule[false] |f= factorRule ) )?
 			{
-			pushFollow(FOLLOW_fieldRefRule_in_outputFieldSpecRule820);
+			pushFollow(FOLLOW_fieldRefRule_in_outputFieldSpecRule924);
 			fr=fieldRefRule();
 			state._fsp--;
 
 			 ofs = new OutputFieldSpec (fr); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:158:5: ( COLON (os= objectStructureRule[false] |f= factorRule ) )?
-			int alt7=2;
-			int LA7_0 = input.LA(1);
-			if ( (LA7_0==COLON) ) {
-				alt7=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:170:5: ( COLON (os= objectStructureRule[false] |f= factorRule ) )?
+			int alt9=2;
+			int LA9_0 = input.LA(1);
+			if ( (LA9_0==COLON) ) {
+				alt9=1;
 			}
-			switch (alt7) {
+			switch (alt9) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:158:7: COLON (os= objectStructureRule[false] |f= factorRule )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:170:7: COLON (os= objectStructureRule[false] |f= factorRule )
 					{
-					match(input,COLON,FOLLOW_COLON_in_outputFieldSpecRule834); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:158:13: (os= objectStructureRule[false] |f= factorRule )
-					int alt6=2;
-					int LA6_0 = input.LA(1);
-					if ( (LA6_0==LBR) ) {
-						alt6=1;
+					match(input,COLON,FOLLOW_COLON_in_outputFieldSpecRule938); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:170:13: (os= objectStructureRule[false] |f= factorRule )
+					int alt8=2;
+					int LA8_0 = input.LA(1);
+					if ( (LA8_0==LBR) ) {
+						alt8=1;
 					}
-					else if ( (LA6_0==APEX_VALUE||LA6_0==ARRAY_FUNCTION||LA6_0==BOOLEAN||LA6_0==DEGREE||(LA6_0 >= EXTENT && LA6_0 <= EXTRACT_ARRAY)||LA6_0==FIELD_NAME||LA6_0==FLOAT||(LA6_0 >= ID && LA6_0 <= IF_ERROR)||LA6_0==INT||LA6_0==LB||LA6_0==LP||(LA6_0 >= MEMBERSHIP_ARRAY && LA6_0 <= MEMBERSHIP_TO)||LA6_0==QUOTED_VALUE||LA6_0==TRANSLATE) ) {
-						alt6=2;
+					else if ( (LA8_0==APEX_VALUE||LA8_0==ARRAY_FUNCTION||LA8_0==BOOLEAN||LA8_0==DEGREE||(LA8_0 >= EXTENT && LA8_0 <= EXTRACT_ARRAY)||LA8_0==FIELD_NAME||LA8_0==FLOAT||LA8_0==HASH_NAME||(LA8_0 >= ID && LA8_0 <= IF_ERROR)||LA8_0==INT||LA8_0==LB||LA8_0==LP||(LA8_0 >= MEMBERSHIP_ARRAY && LA8_0 <= MEMBERSHIP_TO)||LA8_0==QUOTED_VALUE||LA8_0==TRANSLATE) ) {
+						alt8=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 6, 0, input);
+							new NoViableAltException("", 8, 0, input);
 						throw nvae;
 					}
 
-					switch (alt6) {
+					switch (alt8) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:158:15: os= objectStructureRule[false]
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:170:15: os= objectStructureRule[false]
 							{
-							pushFollow(FOLLOW_objectStructureRule_in_outputFieldSpecRule840);
+							pushFollow(FOLLOW_objectStructureRule_in_outputFieldSpecRule944);
 							os=objectStructureRule(false);
 							state._fsp--;
 
@@ -936,9 +1038,9 @@ public class JCoQLParser extends Parser {
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:159:11: f= factorRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:171:11: f= factorRule
 							{
-							pushFollow(FOLLOW_factorRule_in_outputFieldSpecRule879);
+							pushFollow(FOLLOW_factorRule_in_outputFieldSpecRule983);
 							f=factorRule();
 							state._fsp--;
 
@@ -970,7 +1072,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "geometricOptionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:166:1: geometricOptionRule returns [GeometricOption geo] : ( KEEPING GEOMETRY | SETTING GEOMETRY ( POINT LP lat= fieldRefRule COMMA lon= fieldRefRule RP | AGGREGATE LP afr= fieldRefRule RP |fr= fieldRefRule | TO_POLYLINE LP f= fieldRefRule RP ) );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:178:1: geometricOptionRule returns [GeometricOption geo] : ( KEEPING GEOMETRY | SETTING GEOMETRY ( POINT LP lat= fieldRefRule COMMA lon= fieldRefRule RP | AGGREGATE LP afr= fieldRefRule RP |fr= fieldRefRule | TO_POLYLINE LP f= fieldRefRule RP ) );
 	public final GeometricOption geometricOptionRule() throws RecognitionException {
 		GeometricOption geo = null;
 
@@ -983,100 +1085,100 @@ public class JCoQLParser extends Parser {
 
 		 geo = new GeometricOption (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:168:3: ( KEEPING GEOMETRY | SETTING GEOMETRY ( POINT LP lat= fieldRefRule COMMA lon= fieldRefRule RP | AGGREGATE LP afr= fieldRefRule RP |fr= fieldRefRule | TO_POLYLINE LP f= fieldRefRule RP ) )
-			int alt9=2;
-			int LA9_0 = input.LA(1);
-			if ( (LA9_0==KEEPING) ) {
-				alt9=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:180:3: ( KEEPING GEOMETRY | SETTING GEOMETRY ( POINT LP lat= fieldRefRule COMMA lon= fieldRefRule RP | AGGREGATE LP afr= fieldRefRule RP |fr= fieldRefRule | TO_POLYLINE LP f= fieldRefRule RP ) )
+			int alt11=2;
+			int LA11_0 = input.LA(1);
+			if ( (LA11_0==KEEPING) ) {
+				alt11=1;
 			}
-			else if ( (LA9_0==SETTING) ) {
-				alt9=2;
+			else if ( (LA11_0==SETTING) ) {
+				alt11=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 9, 0, input);
+					new NoViableAltException("", 11, 0, input);
 				throw nvae;
 			}
 
-			switch (alt9) {
+			switch (alt11) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:169:6: KEEPING GEOMETRY
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:181:6: KEEPING GEOMETRY
 					{
-					match(input,KEEPING,FOLLOW_KEEPING_in_geometricOptionRule969); 
-					match(input,GEOMETRY,FOLLOW_GEOMETRY_in_geometricOptionRule971); 
+					match(input,KEEPING,FOLLOW_KEEPING_in_geometricOptionRule1073); 
+					match(input,GEOMETRY,FOLLOW_GEOMETRY_in_geometricOptionRule1075); 
 					 geo.setKeeping (); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:170:6: SETTING GEOMETRY ( POINT LP lat= fieldRefRule COMMA lon= fieldRefRule RP | AGGREGATE LP afr= fieldRefRule RP |fr= fieldRefRule | TO_POLYLINE LP f= fieldRefRule RP )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:182:6: SETTING GEOMETRY ( POINT LP lat= fieldRefRule COMMA lon= fieldRefRule RP | AGGREGATE LP afr= fieldRefRule RP |fr= fieldRefRule | TO_POLYLINE LP f= fieldRefRule RP )
 					{
-					match(input,SETTING,FOLLOW_SETTING_in_geometricOptionRule1003); 
-					match(input,GEOMETRY,FOLLOW_GEOMETRY_in_geometricOptionRule1005); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:171:14: ( POINT LP lat= fieldRefRule COMMA lon= fieldRefRule RP | AGGREGATE LP afr= fieldRefRule RP |fr= fieldRefRule | TO_POLYLINE LP f= fieldRefRule RP )
-					int alt8=4;
+					match(input,SETTING,FOLLOW_SETTING_in_geometricOptionRule1107); 
+					match(input,GEOMETRY,FOLLOW_GEOMETRY_in_geometricOptionRule1109); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:183:14: ( POINT LP lat= fieldRefRule COMMA lon= fieldRefRule RP | AGGREGATE LP afr= fieldRefRule RP |fr= fieldRefRule | TO_POLYLINE LP f= fieldRefRule RP )
+					int alt10=4;
 					switch ( input.LA(1) ) {
 					case POINT:
 						{
-						alt8=1;
+						alt10=1;
 						}
 						break;
 					case AGGREGATE:
 						{
-						alt8=2;
+						alt10=2;
 						}
 						break;
 					case FIELD_NAME:
 						{
-						alt8=3;
+						alt10=3;
 						}
 						break;
 					case TO_POLYLINE:
 						{
-						alt8=4;
+						alt10=4;
 						}
 						break;
 					default:
 						NoViableAltException nvae =
-							new NoViableAltException("", 8, 0, input);
+							new NoViableAltException("", 10, 0, input);
 						throw nvae;
 					}
-					switch (alt8) {
+					switch (alt10) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:171:16: POINT LP lat= fieldRefRule COMMA lon= fieldRefRule RP
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:183:16: POINT LP lat= fieldRefRule COMMA lon= fieldRefRule RP
 							{
-							match(input,POINT,FOLLOW_POINT_in_geometricOptionRule1023); 
-							match(input,LP,FOLLOW_LP_in_geometricOptionRule1025); 
-							pushFollow(FOLLOW_fieldRefRule_in_geometricOptionRule1029);
+							match(input,POINT,FOLLOW_POINT_in_geometricOptionRule1127); 
+							match(input,LP,FOLLOW_LP_in_geometricOptionRule1129); 
+							pushFollow(FOLLOW_fieldRefRule_in_geometricOptionRule1133);
 							lat=fieldRefRule();
 							state._fsp--;
 
-							match(input,COMMA,FOLLOW_COMMA_in_geometricOptionRule1031); 
-							pushFollow(FOLLOW_fieldRefRule_in_geometricOptionRule1035);
+							match(input,COMMA,FOLLOW_COMMA_in_geometricOptionRule1135); 
+							pushFollow(FOLLOW_fieldRefRule_in_geometricOptionRule1139);
 							lon=fieldRefRule();
 							state._fsp--;
 
-							match(input,RP,FOLLOW_RP_in_geometricOptionRule1037); 
+							match(input,RP,FOLLOW_RP_in_geometricOptionRule1141); 
 							 geo.setPoint (lat, lon); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:172:16: AGGREGATE LP afr= fieldRefRule RP
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:184:16: AGGREGATE LP afr= fieldRefRule RP
 							{
-							match(input,AGGREGATE,FOLLOW_AGGREGATE_in_geometricOptionRule1057); 
-							match(input,LP,FOLLOW_LP_in_geometricOptionRule1059); 
-							pushFollow(FOLLOW_fieldRefRule_in_geometricOptionRule1063);
+							match(input,AGGREGATE,FOLLOW_AGGREGATE_in_geometricOptionRule1161); 
+							match(input,LP,FOLLOW_LP_in_geometricOptionRule1163); 
+							pushFollow(FOLLOW_fieldRefRule_in_geometricOptionRule1167);
 							afr=fieldRefRule();
 							state._fsp--;
 
-							match(input,RP,FOLLOW_RP_in_geometricOptionRule1065); 
+							match(input,RP,FOLLOW_RP_in_geometricOptionRule1169); 
 							 geo.setAggregate (afr); 
 							}
 							break;
 						case 3 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:173:16: fr= fieldRefRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:185:16: fr= fieldRefRule
 							{
-							pushFollow(FOLLOW_fieldRefRule_in_geometricOptionRule1097);
+							pushFollow(FOLLOW_fieldRefRule_in_geometricOptionRule1201);
 							fr=fieldRefRule();
 							state._fsp--;
 
@@ -1084,15 +1186,15 @@ public class JCoQLParser extends Parser {
 							}
 							break;
 						case 4 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:174:16: TO_POLYLINE LP f= fieldRefRule RP
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:186:16: TO_POLYLINE LP f= fieldRefRule RP
 							{
-							match(input,TO_POLYLINE,FOLLOW_TO_POLYLINE_in_geometricOptionRule1135); 
-							match(input,LP,FOLLOW_LP_in_geometricOptionRule1137); 
-							pushFollow(FOLLOW_fieldRefRule_in_geometricOptionRule1141);
+							match(input,TO_POLYLINE,FOLLOW_TO_POLYLINE_in_geometricOptionRule1239); 
+							match(input,LP,FOLLOW_LP_in_geometricOptionRule1241); 
+							pushFollow(FOLLOW_fieldRefRule_in_geometricOptionRule1245);
 							f=fieldRefRule();
 							state._fsp--;
 
-							match(input,RP,FOLLOW_RP_in_geometricOptionRule1143); 
+							match(input,RP,FOLLOW_RP_in_geometricOptionRule1247); 
 							 geo.setPolyline (f); 
 							}
 							break;
@@ -1118,14 +1220,14 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "dropGeometryRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:178:1: dropGeometryRule : DROPPING GEOMETRY ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:190:1: dropGeometryRule : DROPPING GEOMETRY ;
 	public final void dropGeometryRule() throws RecognitionException {
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:179:3: ( DROPPING GEOMETRY )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:180:4: DROPPING GEOMETRY
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:191:3: ( DROPPING GEOMETRY )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:192:4: DROPPING GEOMETRY
 			{
-			match(input,DROPPING,FOLLOW_DROPPING_in_dropGeometryRule1189); 
-			match(input,GEOMETRY,FOLLOW_GEOMETRY_in_dropGeometryRule1191); 
+			match(input,DROPPING,FOLLOW_DROPPING_in_dropGeometryRule1293); 
+			match(input,GEOMETRY,FOLLOW_GEOMETRY_in_dropGeometryRule1295); 
 			}
 
 		}
@@ -1142,7 +1244,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "caseClauseRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:184:1: caseClauseRule returns [CaseClause cc] : (c= CASES |c= CASE ) (wc= whereCaseRule )+ (oth= othersRule )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:196:1: caseClauseRule returns [CaseClause cc] : (c= CASES |c= CASE ) (wc= whereCaseRule )+ (oth= othersRule )? ;
 	public final CaseClause caseClauseRule() throws RecognitionException {
 		CaseClause cc = null;
 
@@ -1152,57 +1254,57 @@ public class JCoQLParser extends Parser {
 		String oth =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:185:3: ( (c= CASES |c= CASE ) (wc= whereCaseRule )+ (oth= othersRule )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:186:5: (c= CASES |c= CASE ) (wc= whereCaseRule )+ (oth= othersRule )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:197:3: ( (c= CASES |c= CASE ) (wc= whereCaseRule )+ (oth= othersRule )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:198:5: (c= CASES |c= CASE ) (wc= whereCaseRule )+ (oth= othersRule )?
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:186:5: (c= CASES |c= CASE )
-			int alt10=2;
-			int LA10_0 = input.LA(1);
-			if ( (LA10_0==CASES) ) {
-				alt10=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:198:5: (c= CASES |c= CASE )
+			int alt12=2;
+			int LA12_0 = input.LA(1);
+			if ( (LA12_0==CASES) ) {
+				alt12=1;
 			}
-			else if ( (LA10_0==CASE) ) {
-				alt10=2;
+			else if ( (LA12_0==CASE) ) {
+				alt12=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 10, 0, input);
+					new NoViableAltException("", 12, 0, input);
 				throw nvae;
 			}
 
-			switch (alt10) {
+			switch (alt12) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:186:7: c= CASES
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:198:7: c= CASES
 					{
-					c=(Token)match(input,CASES,FOLLOW_CASES_in_caseClauseRule1242); 
+					c=(Token)match(input,CASES,FOLLOW_CASES_in_caseClauseRule1346); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:186:17: c= CASE
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:198:17: c= CASE
 					{
-					c=(Token)match(input,CASE,FOLLOW_CASE_in_caseClauseRule1248); 
+					c=(Token)match(input,CASE,FOLLOW_CASE_in_caseClauseRule1352); 
 					}
 					break;
 
 			}
 
 			 cc = env.newCaseClause (c); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:187:8: (wc= whereCaseRule )+
-			int cnt11=0;
-			loop11:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:199:8: (wc= whereCaseRule )+
+			int cnt13=0;
+			loop13:
 			while (true) {
-				int alt11=2;
-				int LA11_0 = input.LA(1);
-				if ( (LA11_0==WHERE) ) {
-					alt11=1;
+				int alt13=2;
+				int LA13_0 = input.LA(1);
+				if ( (LA13_0==WHERE) ) {
+					alt13=1;
 				}
 
-				switch (alt11) {
+				switch (alt13) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:187:10: wc= whereCaseRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:199:10: wc= whereCaseRule
 					{
-					pushFollow(FOLLOW_whereCaseRule_in_caseClauseRule1271);
+					pushFollow(FOLLOW_whereCaseRule_in_caseClauseRule1375);
 					wc=whereCaseRule();
 					state._fsp--;
 
@@ -1211,24 +1313,24 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					if ( cnt11 >= 1 ) break loop11;
-					EarlyExitException eee = new EarlyExitException(11, input);
+					if ( cnt13 >= 1 ) break loop13;
+					EarlyExitException eee = new EarlyExitException(13, input);
 					throw eee;
 				}
-				cnt11++;
+				cnt13++;
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:188:8: (oth= othersRule )?
-			int alt12=2;
-			int LA12_0 = input.LA(1);
-			if ( (LA12_0==DROP||LA12_0==KEEP) ) {
-				alt12=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:200:8: (oth= othersRule )?
+			int alt14=2;
+			int LA14_0 = input.LA(1);
+			if ( (LA14_0==DROP||LA14_0==KEEP) ) {
+				alt14=1;
 			}
-			switch (alt12) {
+			switch (alt14) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:188:10: oth= othersRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:200:10: oth= othersRule
 					{
-					pushFollow(FOLLOW_othersRule_in_caseClauseRule1300);
+					pushFollow(FOLLOW_othersRule_in_caseClauseRule1404);
 					oth=othersRule();
 					state._fsp--;
 
@@ -1255,7 +1357,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "othersRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:197:1: othersRule returns [String oth] : (ot= KEEP |ot= DROP ) OTHERS ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:209:1: othersRule returns [String oth] : (ot= KEEP |ot= DROP ) OTHERS ;
 	public final String othersRule() throws RecognitionException {
 		String oth = null;
 
@@ -1263,43 +1365,43 @@ public class JCoQLParser extends Parser {
 		Token ot=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:198:3: ( (ot= KEEP |ot= DROP ) OTHERS )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:199:6: (ot= KEEP |ot= DROP ) OTHERS
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:210:3: ( (ot= KEEP |ot= DROP ) OTHERS )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:211:6: (ot= KEEP |ot= DROP ) OTHERS
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:199:6: (ot= KEEP |ot= DROP )
-			int alt13=2;
-			int LA13_0 = input.LA(1);
-			if ( (LA13_0==KEEP) ) {
-				alt13=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:211:6: (ot= KEEP |ot= DROP )
+			int alt15=2;
+			int LA15_0 = input.LA(1);
+			if ( (LA15_0==KEEP) ) {
+				alt15=1;
 			}
-			else if ( (LA13_0==DROP) ) {
-				alt13=2;
+			else if ( (LA15_0==DROP) ) {
+				alt15=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 13, 0, input);
+					new NoViableAltException("", 15, 0, input);
 				throw nvae;
 			}
 
-			switch (alt13) {
+			switch (alt15) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:199:8: ot= KEEP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:211:8: ot= KEEP
 					{
-					ot=(Token)match(input,KEEP,FOLLOW_KEEP_in_othersRule1353); 
+					ot=(Token)match(input,KEEP,FOLLOW_KEEP_in_othersRule1457); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:199:18: ot= DROP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:211:18: ot= DROP
 					{
-					ot=(Token)match(input,DROP,FOLLOW_DROP_in_othersRule1359); 
+					ot=(Token)match(input,DROP,FOLLOW_DROP_in_othersRule1463); 
 					}
 					break;
 
 			}
 
 			 oth=ot.getText(); 
-			match(input,OTHERS,FOLLOW_OTHERS_in_othersRule1370); 
+			match(input,OTHERS,FOLLOW_OTHERS_in_othersRule1474); 
 			}
 
 		}
@@ -1317,7 +1419,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "whereCaseRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:205:1: whereCaseRule returns [WhereCase wc] : WHERE c= orConditionRule (gs= generateSectionRule[true] )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:217:1: whereCaseRule returns [WhereCase wc] : WHERE c= orConditionRule (gs= generateSectionRule[true] )? ;
 	public final WhereCase whereCaseRule() throws RecognitionException {
 		WhereCase wc = null;
 
@@ -1326,26 +1428,26 @@ public class JCoQLParser extends Parser {
 		GenerateSection gs =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:206:3: ( WHERE c= orConditionRule (gs= generateSectionRule[true] )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:207:5: WHERE c= orConditionRule (gs= generateSectionRule[true] )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:218:3: ( WHERE c= orConditionRule (gs= generateSectionRule[true] )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:219:5: WHERE c= orConditionRule (gs= generateSectionRule[true] )?
 			{
-			match(input,WHERE,FOLLOW_WHERE_in_whereCaseRule1395); 
-			pushFollow(FOLLOW_orConditionRule_in_whereCaseRule1406);
+			match(input,WHERE,FOLLOW_WHERE_in_whereCaseRule1499); 
+			pushFollow(FOLLOW_orConditionRule_in_whereCaseRule1510);
 			c=orConditionRule();
 			state._fsp--;
 
 			 wc = new WhereCase (c); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:209:7: (gs= generateSectionRule[true] )?
-			int alt14=2;
-			int LA14_0 = input.LA(1);
-			if ( (LA14_0==GENERATE) ) {
-				alt14=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:221:7: (gs= generateSectionRule[true] )?
+			int alt16=2;
+			int LA16_0 = input.LA(1);
+			if ( (LA16_0==GENERATE) ) {
+				alt16=1;
 			}
-			switch (alt14) {
+			switch (alt16) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:209:9: gs= generateSectionRule[true]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:221:9: gs= generateSectionRule[true]
 					{
-					pushFollow(FOLLOW_generateSectionRule_in_whereCaseRule1424);
+					pushFollow(FOLLOW_generateSectionRule_in_whereCaseRule1528);
 					gs=generateSectionRule(true);
 					state._fsp--;
 
@@ -1372,7 +1474,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "generateSectionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:215:1: generateSectionRule[boolean complete] returns [GenerateSection gs] : g= GENERATE (go= geometricOptionRule )? (cf= checkForFuzzySetRule[gs] )? (ac= alphaCutRule[gs] )? (ga= buildActionRule )? (df= keepDropFuzzySetsRule )? ( dropGeometryRule )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:227:1: generateSectionRule[boolean complete] returns [GenerateSection gs] : g= GENERATE (go= geometricOptionRule )? (cf= checkForFuzzySetRule[gs] )? (ac= alphaCutRule[gs] )? (ga= buildActionRule )* (df= keepDropFuzzySetsRule )? ( dropGeometryRule )? ;
 	public final GenerateSection generateSectionRule(boolean complete) throws RecognitionException {
 		GenerateSection gs = null;
 
@@ -1383,28 +1485,28 @@ public class JCoQLParser extends Parser {
 		KeepingDroppingFuzzySets df =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:216:2: (g= GENERATE (go= geometricOptionRule )? (cf= checkForFuzzySetRule[gs] )? (ac= alphaCutRule[gs] )? (ga= buildActionRule )? (df= keepDropFuzzySetsRule )? ( dropGeometryRule )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:217:3: g= GENERATE (go= geometricOptionRule )? (cf= checkForFuzzySetRule[gs] )? (ac= alphaCutRule[gs] )? (ga= buildActionRule )? (df= keepDropFuzzySetsRule )? ( dropGeometryRule )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:228:2: (g= GENERATE (go= geometricOptionRule )? (cf= checkForFuzzySetRule[gs] )? (ac= alphaCutRule[gs] )? (ga= buildActionRule )* (df= keepDropFuzzySetsRule )? ( dropGeometryRule )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:229:3: g= GENERATE (go= geometricOptionRule )? (cf= checkForFuzzySetRule[gs] )? (ac= alphaCutRule[gs] )? (ga= buildActionRule )* (df= keepDropFuzzySetsRule )? ( dropGeometryRule )?
 			{
-			g=(Token)match(input,GENERATE,FOLLOW_GENERATE_in_generateSectionRule1461); 
+			g=(Token)match(input,GENERATE,FOLLOW_GENERATE_in_generateSectionRule1565); 
 				gs = new GenerateSection (complete);	
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:218:7: (go= geometricOptionRule )?
-			int alt15=2;
-			int LA15_0 = input.LA(1);
-			if ( (LA15_0==KEEPING) ) {
-				int LA15_1 = input.LA(2);
-				if ( (LA15_1==GEOMETRY) ) {
-					alt15=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:230:7: (go= geometricOptionRule )?
+			int alt17=2;
+			int LA17_0 = input.LA(1);
+			if ( (LA17_0==KEEPING) ) {
+				int LA17_1 = input.LA(2);
+				if ( (LA17_1==GEOMETRY) ) {
+					alt17=1;
 				}
 			}
-			else if ( (LA15_0==SETTING) ) {
-				alt15=1;
+			else if ( (LA17_0==SETTING) ) {
+				alt17=1;
 			}
-			switch (alt15) {
+			switch (alt17) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:218:9: go= geometricOptionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:230:9: go= geometricOptionRule
 					{
-					pushFollow(FOLLOW_geometricOptionRule_in_generateSectionRule1478);
+					pushFollow(FOLLOW_geometricOptionRule_in_generateSectionRule1582);
 					go=geometricOptionRule();
 					state._fsp--;
 
@@ -1414,17 +1516,17 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:219:4: (cf= checkForFuzzySetRule[gs] )?
-			int alt16=2;
-			int LA16_0 = input.LA(1);
-			if ( (LA16_0==CHECK_FOR) ) {
-				alt16=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:231:4: (cf= checkForFuzzySetRule[gs] )?
+			int alt18=2;
+			int LA18_0 = input.LA(1);
+			if ( (LA18_0==CHECK_FOR) ) {
+				alt18=1;
 			}
-			switch (alt16) {
+			switch (alt18) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:219:6: cf= checkForFuzzySetRule[gs]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:231:6: cf= checkForFuzzySetRule[gs]
 					{
-					pushFollow(FOLLOW_checkForFuzzySetRule_in_generateSectionRule1495);
+					pushFollow(FOLLOW_checkForFuzzySetRule_in_generateSectionRule1599);
 					checkForFuzzySetRule(gs);
 					state._fsp--;
 
@@ -1433,17 +1535,17 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:220:4: (ac= alphaCutRule[gs] )?
-			int alt17=2;
-			int LA17_0 = input.LA(1);
-			if ( (LA17_0==ALPHACUT) ) {
-				alt17=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:232:4: (ac= alphaCutRule[gs] )?
+			int alt19=2;
+			int LA19_0 = input.LA(1);
+			if ( (LA19_0==ALPHACUT) ) {
+				alt19=1;
 			}
-			switch (alt17) {
+			switch (alt19) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:220:6: ac= alphaCutRule[gs]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:232:6: ac= alphaCutRule[gs]
 					{
-					pushFollow(FOLLOW_alphaCutRule_in_generateSectionRule1526);
+					pushFollow(FOLLOW_alphaCutRule_in_generateSectionRule1630);
 					alphaCutRule(gs);
 					state._fsp--;
 
@@ -1452,17 +1554,27 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:221:7: (ga= buildActionRule )?
-			int alt18=2;
-			int LA18_0 = input.LA(1);
-			if ( (LA18_0==BUILD) ) {
-				alt18=1;
-			}
-			switch (alt18) {
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:233:7: (ga= buildActionRule )*
+			loop20:
+			while (true) {
+				int alt20=2;
+				int LA20_0 = input.LA(1);
+				if ( (LA20_0==REMOVE) ) {
+					int LA20_6 = input.LA(2);
+					if ( (LA20_6==FIELDS) ) {
+						alt20=1;
+					}
+
+				}
+				else if ( (LA20_0==ADD_ST||LA20_0==BUILD) ) {
+					alt20=1;
+				}
+
+				switch (alt20) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:221:9: ga= buildActionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:233:9: ga= buildActionRule
 					{
-					pushFollow(FOLLOW_buildActionRule_in_generateSectionRule1564);
+					pushFollow(FOLLOW_buildActionRule_in_generateSectionRule1668);
 					ga=buildActionRule();
 					state._fsp--;
 
@@ -1470,25 +1582,28 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 
-			}
-
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:222:4: (df= keepDropFuzzySetsRule )?
-			int alt19=2;
-			int LA19_0 = input.LA(1);
-			if ( (LA19_0==DEFUZZIFY||LA19_0==KEEPING) ) {
-				alt19=1;
-			}
-			else if ( (LA19_0==DROPPING) ) {
-				int LA19_2 = input.LA(2);
-				if ( (LA19_2==ALL||LA19_2==FUZZY) ) {
-					alt19=1;
+				default :
+					break loop20;
 				}
 			}
-			switch (alt19) {
+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:234:4: (df= keepDropFuzzySetsRule )?
+			int alt21=2;
+			int LA21_0 = input.LA(1);
+			if ( (LA21_0==DEFUZZIFY||LA21_0==KEEPING) ) {
+				alt21=1;
+			}
+			else if ( (LA21_0==DROPPING) ) {
+				int LA21_2 = input.LA(2);
+				if ( (LA21_2==ALL||LA21_2==FUZZY) ) {
+					alt21=1;
+				}
+			}
+			switch (alt21) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:222:6: df= keepDropFuzzySetsRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:234:6: df= keepDropFuzzySetsRule
 					{
-					pushFollow(FOLLOW_keepDropFuzzySetsRule_in_generateSectionRule1584);
+					pushFollow(FOLLOW_keepDropFuzzySetsRule_in_generateSectionRule1688);
 					df=keepDropFuzzySetsRule();
 					state._fsp--;
 
@@ -1498,17 +1613,17 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:223:7: ( dropGeometryRule )?
-			int alt20=2;
-			int LA20_0 = input.LA(1);
-			if ( (LA20_0==DROPPING) ) {
-				alt20=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:235:7: ( dropGeometryRule )?
+			int alt22=2;
+			int LA22_0 = input.LA(1);
+			if ( (LA22_0==DROPPING) ) {
+				alt22=1;
 			}
-			switch (alt20) {
+			switch (alt22) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:223:9: dropGeometryRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:235:9: dropGeometryRule
 					{
-					pushFollow(FOLLOW_dropGeometryRule_in_generateSectionRule1602);
+					pushFollow(FOLLOW_dropGeometryRule_in_generateSectionRule1706);
 					dropGeometryRule();
 					state._fsp--;
 
@@ -1536,7 +1651,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "orConditionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:231:1: orConditionRule returns [Condition c] : c1= andConditionRule ( OR c2= andConditionRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:243:1: orConditionRule returns [Condition c] : c1= andConditionRule ( OR c2= andConditionRule )* ;
 	public final Condition orConditionRule() throws RecognitionException {
 		Condition c = null;
 
@@ -1545,29 +1660,29 @@ public class JCoQLParser extends Parser {
 		Condition c2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:232:3: (c1= andConditionRule ( OR c2= andConditionRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:233:5: c1= andConditionRule ( OR c2= andConditionRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:244:3: (c1= andConditionRule ( OR c2= andConditionRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:245:5: c1= andConditionRule ( OR c2= andConditionRule )*
 			{
-			pushFollow(FOLLOW_andConditionRule_in_orConditionRule1663);
+			pushFollow(FOLLOW_andConditionRule_in_orConditionRule1767);
 			c1=andConditionRule();
 			state._fsp--;
 
 			 c = new ConditionOr (c1); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:234:4: ( OR c2= andConditionRule )*
-			loop21:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:246:4: ( OR c2= andConditionRule )*
+			loop23:
 			while (true) {
-				int alt21=2;
-				int LA21_0 = input.LA(1);
-				if ( (LA21_0==OR) ) {
-					alt21=1;
+				int alt23=2;
+				int LA23_0 = input.LA(1);
+				if ( (LA23_0==OR) ) {
+					alt23=1;
 				}
 
-				switch (alt21) {
+				switch (alt23) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:234:6: OR c2= andConditionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:246:6: OR c2= andConditionRule
 					{
-					match(input,OR,FOLLOW_OR_in_orConditionRule1678); 
-					pushFollow(FOLLOW_andConditionRule_in_orConditionRule1682);
+					match(input,OR,FOLLOW_OR_in_orConditionRule1782); 
+					pushFollow(FOLLOW_andConditionRule_in_orConditionRule1786);
 					c2=andConditionRule();
 					state._fsp--;
 
@@ -1576,7 +1691,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop21;
+					break loop23;
 				}
 			}
 
@@ -1598,7 +1713,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "andConditionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:239:1: andConditionRule returns [Condition c] : c1= notConditionRule ( AND c2= notConditionRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:251:1: andConditionRule returns [Condition c] : c1= notConditionRule ( AND c2= notConditionRule )* ;
 	public final Condition andConditionRule() throws RecognitionException {
 		Condition c = null;
 
@@ -1607,29 +1722,29 @@ public class JCoQLParser extends Parser {
 		Condition c2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:240:3: (c1= notConditionRule ( AND c2= notConditionRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:241:5: c1= notConditionRule ( AND c2= notConditionRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:252:3: (c1= notConditionRule ( AND c2= notConditionRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:253:5: c1= notConditionRule ( AND c2= notConditionRule )*
 			{
-			pushFollow(FOLLOW_notConditionRule_in_andConditionRule1739);
+			pushFollow(FOLLOW_notConditionRule_in_andConditionRule1843);
 			c1=notConditionRule();
 			state._fsp--;
 
 			 c = new ConditionAnd (c1); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:242:5: ( AND c2= notConditionRule )*
-			loop22:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:254:5: ( AND c2= notConditionRule )*
+			loop24:
 			while (true) {
-				int alt22=2;
-				int LA22_0 = input.LA(1);
-				if ( (LA22_0==AND) ) {
-					alt22=1;
+				int alt24=2;
+				int LA24_0 = input.LA(1);
+				if ( (LA24_0==AND) ) {
+					alt24=1;
 				}
 
-				switch (alt22) {
+				switch (alt24) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:242:7: AND c2= notConditionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:254:7: AND c2= notConditionRule
 					{
-					match(input,AND,FOLLOW_AND_in_andConditionRule1755); 
-					pushFollow(FOLLOW_notConditionRule_in_andConditionRule1759);
+					match(input,AND,FOLLOW_AND_in_andConditionRule1859); 
+					pushFollow(FOLLOW_notConditionRule_in_andConditionRule1863);
 					c2=notConditionRule();
 					state._fsp--;
 
@@ -1638,7 +1753,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop22;
+					break loop24;
 				}
 			}
 
@@ -1660,7 +1775,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "notConditionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:247:1: notConditionRule returns [Condition c] : (not= NOT )? p= predicateRule ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:259:1: notConditionRule returns [Condition c] : (not= NOT )? p= predicateRule ;
 	public final Condition notConditionRule() throws RecognitionException {
 		Condition c = null;
 
@@ -1669,26 +1784,26 @@ public class JCoQLParser extends Parser {
 		Predicate p =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:248:3: ( (not= NOT )? p= predicateRule )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:249:5: (not= NOT )? p= predicateRule
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:260:3: ( (not= NOT )? p= predicateRule )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:261:5: (not= NOT )? p= predicateRule
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:249:5: (not= NOT )?
-			int alt23=2;
-			int LA23_0 = input.LA(1);
-			if ( (LA23_0==NOT) ) {
-				alt23=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:261:5: (not= NOT )?
+			int alt25=2;
+			int LA25_0 = input.LA(1);
+			if ( (LA25_0==NOT) ) {
+				alt25=1;
 			}
-			switch (alt23) {
+			switch (alt25) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:249:7: not= NOT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:261:7: not= NOT
 					{
-					not=(Token)match(input,NOT,FOLLOW_NOT_in_notConditionRule1821); 
+					not=(Token)match(input,NOT,FOLLOW_NOT_in_notConditionRule1925); 
 					}
 					break;
 
 			}
 
-			pushFollow(FOLLOW_predicateRule_in_notConditionRule1833);
+			pushFollow(FOLLOW_predicateRule_in_notConditionRule1937);
 			p=predicateRule();
 			state._fsp--;
 
@@ -1710,7 +1825,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "predicateRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:256:1: predicateRule returns [Predicate p] : (e1= expressionRule (cp= compareRule[e1] |irp= inRangeRule[e1] )? |np= nullPredicateRule |wp= withPredicateRule |wop= withoutPredicateRule |fp= wukFuzzyPredicateRule );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:268:1: predicateRule returns [Predicate p] : (e1= expressionRule (cp= compareRule[e1] |irp= inRangeRule[e1] )? |np= nullPredicateRule |wp= withPredicateRule |wop= withoutPredicateRule |fp= wukFuzzyPredicateRule );
 	public final Predicate predicateRule() throws RecognitionException {
 		Predicate p = null;
 
@@ -1724,8 +1839,8 @@ public class JCoQLParser extends Parser {
 		WUKPredicate fp =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:257:3: (e1= expressionRule (cp= compareRule[e1] |irp= inRangeRule[e1] )? |np= nullPredicateRule |wp= withPredicateRule |wop= withoutPredicateRule |fp= wukFuzzyPredicateRule )
-			int alt25=5;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:269:3: (e1= expressionRule (cp= compareRule[e1] |irp= inRangeRule[e1] )? |np= nullPredicateRule |wp= withPredicateRule |wop= withoutPredicateRule |fp= wukFuzzyPredicateRule )
+			int alt27=5;
 			switch ( input.LA(1) ) {
 			case ADD:
 			case APEX_VALUE:
@@ -1736,7 +1851,9 @@ public class JCoQLParser extends Parser {
 			case EXTRACT_ARRAY:
 			case FIELD_NAME:
 			case FLOAT:
+			case HASH_NAME:
 			case ID:
+			case IF:
 			case IF_ERROR:
 			case INT:
 			case LB:
@@ -1747,59 +1864,59 @@ public class JCoQLParser extends Parser {
 			case SUB:
 			case TRANSLATE:
 				{
-				alt25=1;
+				alt27=1;
 				}
 				break;
 			case FIELD:
 				{
-				alt25=2;
+				alt27=2;
 				}
 				break;
 			case WITH:
 				{
-				alt25=3;
+				alt27=3;
 				}
 				break;
 			case WITHOUT:
 				{
-				alt25=4;
+				alt27=4;
 				}
 				break;
 			case KNOWN:
 			case UNKNOWN:
 			case WITHIN:
 				{
-				alt25=5;
+				alt27=5;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 25, 0, input);
+					new NoViableAltException("", 27, 0, input);
 				throw nvae;
 			}
-			switch (alt25) {
+			switch (alt27) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:258:7: e1= expressionRule (cp= compareRule[e1] |irp= inRangeRule[e1] )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:270:7: e1= expressionRule (cp= compareRule[e1] |irp= inRangeRule[e1] )?
 					{
-					pushFollow(FOLLOW_expressionRule_in_predicateRule1877);
+					pushFollow(FOLLOW_expressionRule_in_predicateRule1981);
 					e1=expressionRule();
 					state._fsp--;
 
 						p	=	e1; 	
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:259:8: (cp= compareRule[e1] |irp= inRangeRule[e1] )?
-					int alt24=3;
-					int LA24_0 = input.LA(1);
-					if ( (LA24_0==EQ||LA24_0==GE||LA24_0==GT||LA24_0==LE||LA24_0==LT||LA24_0==NEQ) ) {
-						alt24=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:271:8: (cp= compareRule[e1] |irp= inRangeRule[e1] )?
+					int alt26=3;
+					int LA26_0 = input.LA(1);
+					if ( (LA26_0==EQ||LA26_0==GE||LA26_0==GT||LA26_0==LE||LA26_0==LT||LA26_0==NEQ) ) {
+						alt26=1;
 					}
-					else if ( (LA24_0==INRANGE) ) {
-						alt24=2;
+					else if ( (LA26_0==INRANGE) ) {
+						alt26=2;
 					}
-					switch (alt24) {
+					switch (alt26) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:259:10: cp= compareRule[e1]
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:271:10: cp= compareRule[e1]
 							{
-							pushFollow(FOLLOW_compareRule_in_predicateRule1905);
+							pushFollow(FOLLOW_compareRule_in_predicateRule2009);
 							cp=compareRule(e1);
 							state._fsp--;
 
@@ -1807,9 +1924,9 @@ public class JCoQLParser extends Parser {
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:260:10: irp= inRangeRule[e1]
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:272:10: irp= inRangeRule[e1]
 							{
-							pushFollow(FOLLOW_inRangeRule_in_predicateRule1934);
+							pushFollow(FOLLOW_inRangeRule_in_predicateRule2038);
 							irp=inRangeRule(e1);
 							state._fsp--;
 
@@ -1822,9 +1939,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:261:7: np= nullPredicateRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:273:7: np= nullPredicateRule
 					{
-					pushFollow(FOLLOW_nullPredicateRule_in_predicateRule1966);
+					pushFollow(FOLLOW_nullPredicateRule_in_predicateRule2070);
 					np=nullPredicateRule();
 					state._fsp--;
 
@@ -1832,9 +1949,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:262:7: wp= withPredicateRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:274:7: wp= withPredicateRule
 					{
-					pushFollow(FOLLOW_withPredicateRule_in_predicateRule1989);
+					pushFollow(FOLLOW_withPredicateRule_in_predicateRule2093);
 					wp=withPredicateRule();
 					state._fsp--;
 
@@ -1842,9 +1959,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:263:7: wop= withoutPredicateRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:275:7: wop= withoutPredicateRule
 					{
-					pushFollow(FOLLOW_withoutPredicateRule_in_predicateRule2015);
+					pushFollow(FOLLOW_withoutPredicateRule_in_predicateRule2119);
 					wop=withoutPredicateRule();
 					state._fsp--;
 
@@ -1852,9 +1969,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:264:5: fp= wukFuzzyPredicateRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:276:5: fp= wukFuzzyPredicateRule
 					{
-					pushFollow(FOLLOW_wukFuzzyPredicateRule_in_predicateRule2035);
+					pushFollow(FOLLOW_wukFuzzyPredicateRule_in_predicateRule2139);
 					fp=wukFuzzyPredicateRule();
 					state._fsp--;
 
@@ -1878,7 +1995,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "compareRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:268:1: compareRule[Expression e1] returns [Predicate p] : c= comparatorRule e2= expressionRule ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:280:1: compareRule[Expression e1] returns [Predicate p] : c= comparatorRule e2= expressionRule ;
 	public final Predicate compareRule(Expression e1) throws RecognitionException {
 		Predicate p = null;
 
@@ -1887,14 +2004,14 @@ public class JCoQLParser extends Parser {
 		Expression e2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:269:2: (c= comparatorRule e2= expressionRule )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:270:5: c= comparatorRule e2= expressionRule
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:281:2: (c= comparatorRule e2= expressionRule )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:282:5: c= comparatorRule e2= expressionRule
 			{
-			pushFollow(FOLLOW_comparatorRule_in_compareRule2071);
+			pushFollow(FOLLOW_comparatorRule_in_compareRule2175);
 			c=comparatorRule();
 			state._fsp--;
 
-			pushFollow(FOLLOW_expressionRule_in_compareRule2080);
+			pushFollow(FOLLOW_expressionRule_in_compareRule2184);
 			e2=expressionRule();
 			state._fsp--;
 
@@ -1916,7 +2033,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "inRangeRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:275:1: inRangeRule[Expression expr] returns [Predicate p] : INRANGE (lp= LB |lp= LP ) n1= numericRule COMMA n2= numericRule (rp= RP |rp= RB ) ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:287:1: inRangeRule[Expression expr] returns [Predicate p] : INRANGE (lp= LB |lp= LP ) n1= numericRule COMMA n2= numericRule (rp= RP |rp= RB ) ;
 	public final Predicate inRangeRule(Expression expr) throws RecognitionException {
 		Predicate p = null;
 
@@ -1927,78 +2044,78 @@ public class JCoQLParser extends Parser {
 		String n2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:276:2: ( INRANGE (lp= LB |lp= LP ) n1= numericRule COMMA n2= numericRule (rp= RP |rp= RB ) )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:277:3: INRANGE (lp= LB |lp= LP ) n1= numericRule COMMA n2= numericRule (rp= RP |rp= RB )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:288:2: ( INRANGE (lp= LB |lp= LP ) n1= numericRule COMMA n2= numericRule (rp= RP |rp= RB ) )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:289:3: INRANGE (lp= LB |lp= LP ) n1= numericRule COMMA n2= numericRule (rp= RP |rp= RB )
 			{
-			match(input,INRANGE,FOLLOW_INRANGE_in_inRangeRule2109); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:277:11: (lp= LB |lp= LP )
-			int alt26=2;
-			int LA26_0 = input.LA(1);
-			if ( (LA26_0==LB) ) {
-				alt26=1;
+			match(input,INRANGE,FOLLOW_INRANGE_in_inRangeRule2213); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:289:11: (lp= LB |lp= LP )
+			int alt28=2;
+			int LA28_0 = input.LA(1);
+			if ( (LA28_0==LB) ) {
+				alt28=1;
 			}
-			else if ( (LA26_0==LP) ) {
-				alt26=2;
+			else if ( (LA28_0==LP) ) {
+				alt28=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 26, 0, input);
+					new NoViableAltException("", 28, 0, input);
 				throw nvae;
 			}
 
-			switch (alt26) {
+			switch (alt28) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:277:13: lp= LB
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:289:13: lp= LB
 					{
-					lp=(Token)match(input,LB,FOLLOW_LB_in_inRangeRule2115); 
+					lp=(Token)match(input,LB,FOLLOW_LB_in_inRangeRule2219); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:277:21: lp= LP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:289:21: lp= LP
 					{
-					lp=(Token)match(input,LP,FOLLOW_LP_in_inRangeRule2121); 
+					lp=(Token)match(input,LP,FOLLOW_LP_in_inRangeRule2225); 
 					}
 					break;
 
 			}
 
-			pushFollow(FOLLOW_numericRule_in_inRangeRule2131);
+			pushFollow(FOLLOW_numericRule_in_inRangeRule2235);
 			n1=numericRule();
 			state._fsp--;
 
-			match(input,COMMA,FOLLOW_COMMA_in_inRangeRule2133); 
-			pushFollow(FOLLOW_numericRule_in_inRangeRule2137);
+			match(input,COMMA,FOLLOW_COMMA_in_inRangeRule2237); 
+			pushFollow(FOLLOW_numericRule_in_inRangeRule2241);
 			n2=numericRule();
 			state._fsp--;
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:279:3: (rp= RP |rp= RB )
-			int alt27=2;
-			int LA27_0 = input.LA(1);
-			if ( (LA27_0==RP) ) {
-				alt27=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:291:3: (rp= RP |rp= RB )
+			int alt29=2;
+			int LA29_0 = input.LA(1);
+			if ( (LA29_0==RP) ) {
+				alt29=1;
 			}
-			else if ( (LA27_0==RB) ) {
-				alt27=2;
+			else if ( (LA29_0==RB) ) {
+				alt29=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 27, 0, input);
+					new NoViableAltException("", 29, 0, input);
 				throw nvae;
 			}
 
-			switch (alt27) {
+			switch (alt29) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:279:5: rp= RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:291:5: rp= RP
 					{
-					rp=(Token)match(input,RP,FOLLOW_RP_in_inRangeRule2146); 
+					rp=(Token)match(input,RP,FOLLOW_RP_in_inRangeRule2250); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:279:13: rp= RB
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:291:13: rp= RB
 					{
-					rp=(Token)match(input,RB,FOLLOW_RB_in_inRangeRule2152); 
+					rp=(Token)match(input,RB,FOLLOW_RB_in_inRangeRule2256); 
 					}
 					break;
 
@@ -2022,7 +2139,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "nullPredicateRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:283:1: nullPredicateRule returns [NullPredicate np] : FIELD f= fieldRefRule (n= ISNULL |n= ISNOTNULL ) ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:295:1: nullPredicateRule returns [NullPredicate np] : FIELD f= fieldRefRule (n= ISNULL |n= ISNOTNULL ) ;
 	public final NullPredicate nullPredicateRule() throws RecognitionException {
 		NullPredicate np = null;
 
@@ -2031,41 +2148,41 @@ public class JCoQLParser extends Parser {
 		Field f =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:284:2: ( FIELD f= fieldRefRule (n= ISNULL |n= ISNOTNULL ) )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:285:5: FIELD f= fieldRefRule (n= ISNULL |n= ISNOTNULL )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:296:2: ( FIELD f= fieldRefRule (n= ISNULL |n= ISNOTNULL ) )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:297:5: FIELD f= fieldRefRule (n= ISNULL |n= ISNOTNULL )
 			{
-			match(input,FIELD,FOLLOW_FIELD_in_nullPredicateRule2191); 
-			pushFollow(FOLLOW_fieldRefRule_in_nullPredicateRule2195);
+			match(input,FIELD,FOLLOW_FIELD_in_nullPredicateRule2295); 
+			pushFollow(FOLLOW_fieldRefRule_in_nullPredicateRule2299);
 			f=fieldRefRule();
 			state._fsp--;
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:285:26: (n= ISNULL |n= ISNOTNULL )
-			int alt28=2;
-			int LA28_0 = input.LA(1);
-			if ( (LA28_0==ISNULL) ) {
-				alt28=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:297:26: (n= ISNULL |n= ISNOTNULL )
+			int alt30=2;
+			int LA30_0 = input.LA(1);
+			if ( (LA30_0==ISNULL) ) {
+				alt30=1;
 			}
-			else if ( (LA28_0==ISNOTNULL) ) {
-				alt28=2;
+			else if ( (LA30_0==ISNOTNULL) ) {
+				alt30=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 28, 0, input);
+					new NoViableAltException("", 30, 0, input);
 				throw nvae;
 			}
 
-			switch (alt28) {
+			switch (alt30) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:285:28: n= ISNULL
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:297:28: n= ISNULL
 					{
-					n=(Token)match(input,ISNULL,FOLLOW_ISNULL_in_nullPredicateRule2201); 
+					n=(Token)match(input,ISNULL,FOLLOW_ISNULL_in_nullPredicateRule2305); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:285:39: n= ISNOTNULL
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:297:39: n= ISNOTNULL
 					{
-					n=(Token)match(input,ISNOTNULL,FOLLOW_ISNOTNULL_in_nullPredicateRule2207); 
+					n=(Token)match(input,ISNOTNULL,FOLLOW_ISNOTNULL_in_nullPredicateRule2311); 
 					}
 					break;
 
@@ -2089,7 +2206,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "wukFuzzyPredicateRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:289:1: wukFuzzyPredicateRule returns [WUKPredicate wuk] : (t= WITHIN |t= KNOWN |t= UNKNOWN ) FUZZY SETS fs= ID ( COMMA fs= ID )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:301:1: wukFuzzyPredicateRule returns [WUKPredicate wuk] : (t= WITHIN |t= KNOWN |t= UNKNOWN ) FUZZY SETS fs= ID ( COMMA fs= ID )* ;
 	public final WUKPredicate wukFuzzyPredicateRule() throws RecognitionException {
 		WUKPredicate wuk = null;
 
@@ -2098,80 +2215,80 @@ public class JCoQLParser extends Parser {
 		Token fs=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:290:2: ( (t= WITHIN |t= KNOWN |t= UNKNOWN ) FUZZY SETS fs= ID ( COMMA fs= ID )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:291:3: (t= WITHIN |t= KNOWN |t= UNKNOWN ) FUZZY SETS fs= ID ( COMMA fs= ID )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:302:2: ( (t= WITHIN |t= KNOWN |t= UNKNOWN ) FUZZY SETS fs= ID ( COMMA fs= ID )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:303:3: (t= WITHIN |t= KNOWN |t= UNKNOWN ) FUZZY SETS fs= ID ( COMMA fs= ID )*
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:291:3: (t= WITHIN |t= KNOWN |t= UNKNOWN )
-			int alt29=3;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:303:3: (t= WITHIN |t= KNOWN |t= UNKNOWN )
+			int alt31=3;
 			switch ( input.LA(1) ) {
 			case WITHIN:
 				{
-				alt29=1;
+				alt31=1;
 				}
 				break;
 			case KNOWN:
 				{
-				alt29=2;
+				alt31=2;
 				}
 				break;
 			case UNKNOWN:
 				{
-				alt29=3;
+				alt31=3;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 29, 0, input);
+					new NoViableAltException("", 31, 0, input);
 				throw nvae;
 			}
-			switch (alt29) {
+			switch (alt31) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:291:5: t= WITHIN
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:303:5: t= WITHIN
 					{
-					t=(Token)match(input,WITHIN,FOLLOW_WITHIN_in_wukFuzzyPredicateRule2281); 
+					t=(Token)match(input,WITHIN,FOLLOW_WITHIN_in_wukFuzzyPredicateRule2385); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:291:16: t= KNOWN
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:303:16: t= KNOWN
 					{
-					t=(Token)match(input,KNOWN,FOLLOW_KNOWN_in_wukFuzzyPredicateRule2287); 
+					t=(Token)match(input,KNOWN,FOLLOW_KNOWN_in_wukFuzzyPredicateRule2391); 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:291:26: t= UNKNOWN
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:303:26: t= UNKNOWN
 					{
-					t=(Token)match(input,UNKNOWN,FOLLOW_UNKNOWN_in_wukFuzzyPredicateRule2293); 
+					t=(Token)match(input,UNKNOWN,FOLLOW_UNKNOWN_in_wukFuzzyPredicateRule2397); 
 					}
 					break;
 
 			}
 
 			 wuk = env.createWUKPredicate(t); 
-			match(input,FUZZY,FOLLOW_FUZZY_in_wukFuzzyPredicateRule2314); 
-			match(input,SETS,FOLLOW_SETS_in_wukFuzzyPredicateRule2316); 
-			fs=(Token)match(input,ID,FOLLOW_ID_in_wukFuzzyPredicateRule2320); 
+			match(input,FUZZY,FOLLOW_FUZZY_in_wukFuzzyPredicateRule2418); 
+			match(input,SETS,FOLLOW_SETS_in_wukFuzzyPredicateRule2420); 
+			fs=(Token)match(input,ID,FOLLOW_ID_in_wukFuzzyPredicateRule2424); 
 			 env.addFuzzySet (wuk, fs); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:293:7: ( COMMA fs= ID )*
-			loop30:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:305:7: ( COMMA fs= ID )*
+			loop32:
 			while (true) {
-				int alt30=2;
-				int LA30_0 = input.LA(1);
-				if ( (LA30_0==COMMA) ) {
-					alt30=1;
+				int alt32=2;
+				int LA32_0 = input.LA(1);
+				if ( (LA32_0==COMMA) ) {
+					alt32=1;
 				}
 
-				switch (alt30) {
+				switch (alt32) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:293:9: COMMA fs= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:305:9: COMMA fs= ID
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_wukFuzzyPredicateRule2350); 
-					fs=(Token)match(input,ID,FOLLOW_ID_in_wukFuzzyPredicateRule2354); 
+					match(input,COMMA,FOLLOW_COMMA_in_wukFuzzyPredicateRule2454); 
+					fs=(Token)match(input,ID,FOLLOW_ID_in_wukFuzzyPredicateRule2458); 
 					 env.addFuzzySet (wuk, fs); 
 					}
 					break;
 
 				default :
-					break loop30;
+					break loop32;
 				}
 			}
 
@@ -2192,7 +2309,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "withoutPredicateRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:298:1: withoutPredicateRule returns [WithoutPredicate wp] : WITHOUT fr= fieldRefRule ( COMMA fr= fieldRefRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:310:1: withoutPredicateRule returns [WithoutPredicate wp] : WITHOUT fr= fieldRefRule ( COMMA fr= fieldRefRule )* ;
 	public final WithoutPredicate withoutPredicateRule() throws RecognitionException {
 		WithoutPredicate wp = null;
 
@@ -2201,30 +2318,30 @@ public class JCoQLParser extends Parser {
 
 		 wp = new WithoutPredicate (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:300:3: ( WITHOUT fr= fieldRefRule ( COMMA fr= fieldRefRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:301:5: WITHOUT fr= fieldRefRule ( COMMA fr= fieldRefRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:312:3: ( WITHOUT fr= fieldRefRule ( COMMA fr= fieldRefRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:313:5: WITHOUT fr= fieldRefRule ( COMMA fr= fieldRefRule )*
 			{
-			match(input,WITHOUT,FOLLOW_WITHOUT_in_withoutPredicateRule2407); 
-			pushFollow(FOLLOW_fieldRefRule_in_withoutPredicateRule2418);
+			match(input,WITHOUT,FOLLOW_WITHOUT_in_withoutPredicateRule2511); 
+			pushFollow(FOLLOW_fieldRefRule_in_withoutPredicateRule2522);
 			fr=fieldRefRule();
 			state._fsp--;
 
 			 wp.addField (fr); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:303:7: ( COMMA fr= fieldRefRule )*
-			loop31:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:315:7: ( COMMA fr= fieldRefRule )*
+			loop33:
 			while (true) {
-				int alt31=2;
-				int LA31_0 = input.LA(1);
-				if ( (LA31_0==COMMA) ) {
-					alt31=1;
+				int alt33=2;
+				int LA33_0 = input.LA(1);
+				if ( (LA33_0==COMMA) ) {
+					alt33=1;
 				}
 
-				switch (alt31) {
+				switch (alt33) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:303:9: COMMA fr= fieldRefRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:315:9: COMMA fr= fieldRefRule
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_withoutPredicateRule2436); 
-					pushFollow(FOLLOW_fieldRefRule_in_withoutPredicateRule2440);
+					match(input,COMMA,FOLLOW_COMMA_in_withoutPredicateRule2540); 
+					pushFollow(FOLLOW_fieldRefRule_in_withoutPredicateRule2544);
 					fr=fieldRefRule();
 					state._fsp--;
 
@@ -2233,7 +2350,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop31;
+					break loop33;
 				}
 			}
 
@@ -2254,7 +2371,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "withPredicateRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:308:1: withPredicateRule returns [WithPredicate wp] : WITH ( (ts= ID |ts= ARRAY |ts= GEOMETRY ) )? fr= fieldRefRule ( COMMA fr= fieldRefRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:320:1: withPredicateRule returns [WithPredicate wp] : WITH ( (ts= ID |ts= ARRAY |ts= GEOMETRY ) )? fr= fieldRefRule ( COMMA fr= fieldRefRule )* ;
 	public final WithPredicate withPredicateRule() throws RecognitionException {
 		WithPredicate wp = null;
 
@@ -2264,60 +2381,60 @@ public class JCoQLParser extends Parser {
 
 		 wp = new WithPredicate (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:310:3: ( WITH ( (ts= ID |ts= ARRAY |ts= GEOMETRY ) )? fr= fieldRefRule ( COMMA fr= fieldRefRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:311:5: WITH ( (ts= ID |ts= ARRAY |ts= GEOMETRY ) )? fr= fieldRefRule ( COMMA fr= fieldRefRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:322:3: ( WITH ( (ts= ID |ts= ARRAY |ts= GEOMETRY ) )? fr= fieldRefRule ( COMMA fr= fieldRefRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:323:5: WITH ( (ts= ID |ts= ARRAY |ts= GEOMETRY ) )? fr= fieldRefRule ( COMMA fr= fieldRefRule )*
 			{
-			match(input,WITH,FOLLOW_WITH_in_withPredicateRule2478); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:312:7: ( (ts= ID |ts= ARRAY |ts= GEOMETRY ) )?
-			int alt33=2;
-			int LA33_0 = input.LA(1);
-			if ( (LA33_0==ARRAY||LA33_0==GEOMETRY||LA33_0==ID) ) {
-				alt33=1;
+			match(input,WITH,FOLLOW_WITH_in_withPredicateRule2582); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:7: ( (ts= ID |ts= ARRAY |ts= GEOMETRY ) )?
+			int alt35=2;
+			int LA35_0 = input.LA(1);
+			if ( (LA35_0==ARRAY||LA35_0==GEOMETRY||LA35_0==ID) ) {
+				alt35=1;
 			}
-			switch (alt33) {
+			switch (alt35) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:312:9: (ts= ID |ts= ARRAY |ts= GEOMETRY )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:9: (ts= ID |ts= ARRAY |ts= GEOMETRY )
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:312:9: (ts= ID |ts= ARRAY |ts= GEOMETRY )
-					int alt32=3;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:9: (ts= ID |ts= ARRAY |ts= GEOMETRY )
+					int alt34=3;
 					switch ( input.LA(1) ) {
 					case ID:
 						{
-						alt32=1;
+						alt34=1;
 						}
 						break;
 					case ARRAY:
 						{
-						alt32=2;
+						alt34=2;
 						}
 						break;
 					case GEOMETRY:
 						{
-						alt32=3;
+						alt34=3;
 						}
 						break;
 					default:
 						NoViableAltException nvae =
-							new NoViableAltException("", 32, 0, input);
+							new NoViableAltException("", 34, 0, input);
 						throw nvae;
 					}
-					switch (alt32) {
+					switch (alt34) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:312:11: ts= ID
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:11: ts= ID
 							{
-							ts=(Token)match(input,ID,FOLLOW_ID_in_withPredicateRule2493); 
+							ts=(Token)match(input,ID,FOLLOW_ID_in_withPredicateRule2597); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:312:19: ts= ARRAY
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:19: ts= ARRAY
 							{
-							ts=(Token)match(input,ARRAY,FOLLOW_ARRAY_in_withPredicateRule2499); 
+							ts=(Token)match(input,ARRAY,FOLLOW_ARRAY_in_withPredicateRule2603); 
 							}
 							break;
 						case 3 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:312:30: ts= GEOMETRY
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:30: ts= GEOMETRY
 							{
-							ts=(Token)match(input,GEOMETRY,FOLLOW_GEOMETRY_in_withPredicateRule2505); 
+							ts=(Token)match(input,GEOMETRY,FOLLOW_GEOMETRY_in_withPredicateRule2609); 
 							}
 							break;
 
@@ -2329,26 +2446,26 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_fieldRefRule_in_withPredicateRule2526);
+			pushFollow(FOLLOW_fieldRefRule_in_withPredicateRule2630);
 			fr=fieldRefRule();
 			state._fsp--;
 
 			 wp.addField (fr); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:314:6: ( COMMA fr= fieldRefRule )*
-			loop34:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:326:6: ( COMMA fr= fieldRefRule )*
+			loop36:
 			while (true) {
-				int alt34=2;
-				int LA34_0 = input.LA(1);
-				if ( (LA34_0==COMMA) ) {
-					alt34=1;
+				int alt36=2;
+				int LA36_0 = input.LA(1);
+				if ( (LA36_0==COMMA) ) {
+					alt36=1;
 				}
 
-				switch (alt34) {
+				switch (alt36) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:314:8: COMMA fr= fieldRefRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:326:8: COMMA fr= fieldRefRule
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_withPredicateRule2549); 
-					pushFollow(FOLLOW_fieldRefRule_in_withPredicateRule2553);
+					match(input,COMMA,FOLLOW_COMMA_in_withPredicateRule2653); 
+					pushFollow(FOLLOW_fieldRefRule_in_withPredicateRule2657);
 					fr=fieldRefRule();
 					state._fsp--;
 
@@ -2357,7 +2474,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop34;
+					break loop36;
 				}
 			}
 
@@ -2378,7 +2495,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "expressionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:319:1: expressionRule returns [Expression expr] : (t= termRule | (s= ADD |s= SUB ) t= termRule ) ( (s= ADD |s= SUB ) t= termRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:331:1: expressionRule returns [Expression expr] : (t= termRule | (s= ADD |s= SUB ) t= termRule ) ( (s= ADD |s= SUB ) t= termRule )* ;
 	public final Expression expressionRule() throws RecognitionException {
 		Expression expr = null;
 
@@ -2388,30 +2505,30 @@ public class JCoQLParser extends Parser {
 
 		 expr = new Expression (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:321:3: ( (t= termRule | (s= ADD |s= SUB ) t= termRule ) ( (s= ADD |s= SUB ) t= termRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:322:4: (t= termRule | (s= ADD |s= SUB ) t= termRule ) ( (s= ADD |s= SUB ) t= termRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:333:3: ( (t= termRule | (s= ADD |s= SUB ) t= termRule ) ( (s= ADD |s= SUB ) t= termRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:334:4: (t= termRule | (s= ADD |s= SUB ) t= termRule ) ( (s= ADD |s= SUB ) t= termRule )*
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:322:4: (t= termRule | (s= ADD |s= SUB ) t= termRule )
-			int alt36=2;
-			int LA36_0 = input.LA(1);
-			if ( (LA36_0==APEX_VALUE||LA36_0==ARRAY_FUNCTION||LA36_0==BOOLEAN||LA36_0==DEGREE||(LA36_0 >= EXTENT && LA36_0 <= EXTRACT_ARRAY)||LA36_0==FIELD_NAME||LA36_0==FLOAT||(LA36_0 >= ID && LA36_0 <= IF_ERROR)||LA36_0==INT||LA36_0==LB||LA36_0==LP||(LA36_0 >= MEMBERSHIP_ARRAY && LA36_0 <= MEMBERSHIP_TO)||LA36_0==QUOTED_VALUE||LA36_0==TRANSLATE) ) {
-				alt36=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:334:4: (t= termRule | (s= ADD |s= SUB ) t= termRule )
+			int alt38=2;
+			int LA38_0 = input.LA(1);
+			if ( (LA38_0==APEX_VALUE||LA38_0==ARRAY_FUNCTION||LA38_0==BOOLEAN||LA38_0==DEGREE||(LA38_0 >= EXTENT && LA38_0 <= EXTRACT_ARRAY)||LA38_0==FIELD_NAME||LA38_0==FLOAT||LA38_0==HASH_NAME||(LA38_0 >= ID && LA38_0 <= IF_ERROR)||LA38_0==INT||LA38_0==LB||LA38_0==LP||(LA38_0 >= MEMBERSHIP_ARRAY && LA38_0 <= MEMBERSHIP_TO)||LA38_0==QUOTED_VALUE||LA38_0==TRANSLATE) ) {
+				alt38=1;
 			}
-			else if ( (LA36_0==ADD||LA36_0==SUB) ) {
-				alt36=2;
+			else if ( (LA38_0==ADD||LA38_0==SUB) ) {
+				alt38=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 36, 0, input);
+					new NoViableAltException("", 38, 0, input);
 				throw nvae;
 			}
 
-			switch (alt36) {
+			switch (alt38) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:322:6: t= termRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:334:6: t= termRule
 					{
-					pushFollow(FOLLOW_termRule_in_expressionRule2599);
+					pushFollow(FOLLOW_termRule_in_expressionRule2704);
 					t=termRule();
 					state._fsp--;
 
@@ -2419,64 +2536,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:323:6: (s= ADD |s= SUB ) t= termRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:335:6: (s= ADD |s= SUB ) t= termRule
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:323:6: (s= ADD |s= SUB )
-					int alt35=2;
-					int LA35_0 = input.LA(1);
-					if ( (LA35_0==ADD) ) {
-						alt35=1;
-					}
-					else if ( (LA35_0==SUB) ) {
-						alt35=2;
-					}
-
-					else {
-						NoViableAltException nvae =
-							new NoViableAltException("", 35, 0, input);
-						throw nvae;
-					}
-
-					switch (alt35) {
-						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:323:7: s= ADD
-							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_expressionRule2622); 
-							}
-							break;
-						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:323:15: s= SUB
-							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_expressionRule2628); 
-							}
-							break;
-
-					}
-
-					pushFollow(FOLLOW_termRule_in_expressionRule2633);
-					t=termRule();
-					state._fsp--;
-
-					 expr.addTerm (t, s.getText()); 
-					}
-					break;
-
-			}
-
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:5: ( (s= ADD |s= SUB ) t= termRule )*
-			loop38:
-			while (true) {
-				int alt38=2;
-				int LA38_0 = input.LA(1);
-				if ( (LA38_0==ADD||LA38_0==SUB) ) {
-					alt38=1;
-				}
-
-				switch (alt38) {
-				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:7: (s= ADD |s= SUB ) t= termRule
-					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:7: (s= ADD |s= SUB )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:335:6: (s= ADD |s= SUB )
 					int alt37=2;
 					int LA37_0 = input.LA(1);
 					if ( (LA37_0==ADD) ) {
@@ -2494,21 +2556,76 @@ public class JCoQLParser extends Parser {
 
 					switch (alt37) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:8: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:335:7: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_expressionRule2651); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_expressionRule2727); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:324:16: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:335:15: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_expressionRule2657); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_expressionRule2733); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_termRule_in_expressionRule2662);
+					pushFollow(FOLLOW_termRule_in_expressionRule2738);
+					t=termRule();
+					state._fsp--;
+
+					 expr.addTerm (t, s.getText()); 
+					}
+					break;
+
+			}
+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:336:5: ( (s= ADD |s= SUB ) t= termRule )*
+			loop40:
+			while (true) {
+				int alt40=2;
+				int LA40_0 = input.LA(1);
+				if ( (LA40_0==ADD||LA40_0==SUB) ) {
+					alt40=1;
+				}
+
+				switch (alt40) {
+				case 1 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:336:7: (s= ADD |s= SUB ) t= termRule
+					{
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:336:7: (s= ADD |s= SUB )
+					int alt39=2;
+					int LA39_0 = input.LA(1);
+					if ( (LA39_0==ADD) ) {
+						alt39=1;
+					}
+					else if ( (LA39_0==SUB) ) {
+						alt39=2;
+					}
+
+					else {
+						NoViableAltException nvae =
+							new NoViableAltException("", 39, 0, input);
+						throw nvae;
+					}
+
+					switch (alt39) {
+						case 1 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:336:8: s= ADD
+							{
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_expressionRule2756); 
+							}
+							break;
+						case 2 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:336:16: s= SUB
+							{
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_expressionRule2762); 
+							}
+							break;
+
+					}
+
+					pushFollow(FOLLOW_termRule_in_expressionRule2767);
 					t=termRule();
 					state._fsp--;
 
@@ -2517,7 +2634,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop38;
+					break loop40;
 				}
 			}
 
@@ -2538,7 +2655,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "termRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:328:1: termRule returns [ExpressionTerm et] : f= factorRule ( (s= MUL |s= DIV ) f= factorRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:340:1: termRule returns [ExpressionTerm et] : f= factorRule ( (s= MUL |s= DIV ) f= factorRule )* ;
 	public final ExpressionTerm termRule() throws RecognitionException {
 		ExpressionTerm et = null;
 
@@ -2548,60 +2665,60 @@ public class JCoQLParser extends Parser {
 
 		 et = new ExpressionTerm (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:330:3: (f= factorRule ( (s= MUL |s= DIV ) f= factorRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:331:4: f= factorRule ( (s= MUL |s= DIV ) f= factorRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:342:3: (f= factorRule ( (s= MUL |s= DIV ) f= factorRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:343:4: f= factorRule ( (s= MUL |s= DIV ) f= factorRule )*
 			{
-			pushFollow(FOLLOW_factorRule_in_termRule2700);
+			pushFollow(FOLLOW_factorRule_in_termRule2805);
 			f=factorRule();
 			state._fsp--;
 
 			 et.addFactor(f, null);
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:332:5: ( (s= MUL |s= DIV ) f= factorRule )*
-			loop40:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:344:5: ( (s= MUL |s= DIV ) f= factorRule )*
+			loop42:
 			while (true) {
-				int alt40=2;
-				int LA40_0 = input.LA(1);
-				if ( (LA40_0==DIV||LA40_0==MUL) ) {
-					alt40=1;
+				int alt42=2;
+				int LA42_0 = input.LA(1);
+				if ( (LA42_0==DIV||LA42_0==MUL) ) {
+					alt42=1;
 				}
 
-				switch (alt40) {
+				switch (alt42) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:332:7: (s= MUL |s= DIV ) f= factorRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:344:7: (s= MUL |s= DIV ) f= factorRule
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:332:7: (s= MUL |s= DIV )
-					int alt39=2;
-					int LA39_0 = input.LA(1);
-					if ( (LA39_0==MUL) ) {
-						alt39=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:344:7: (s= MUL |s= DIV )
+					int alt41=2;
+					int LA41_0 = input.LA(1);
+					if ( (LA41_0==MUL) ) {
+						alt41=1;
 					}
-					else if ( (LA39_0==DIV) ) {
-						alt39=2;
+					else if ( (LA41_0==DIV) ) {
+						alt41=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 39, 0, input);
+							new NoViableAltException("", 41, 0, input);
 						throw nvae;
 					}
 
-					switch (alt39) {
+					switch (alt41) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:332:8: s= MUL
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:344:8: s= MUL
 							{
-							s=(Token)match(input,MUL,FOLLOW_MUL_in_termRule2723); 
+							s=(Token)match(input,MUL,FOLLOW_MUL_in_termRule2828); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:332:16: s= DIV
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:344:16: s= DIV
 							{
-							s=(Token)match(input,DIV,FOLLOW_DIV_in_termRule2729); 
+							s=(Token)match(input,DIV,FOLLOW_DIV_in_termRule2834); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_factorRule_in_termRule2734);
+					pushFollow(FOLLOW_factorRule_in_termRule2839);
 					f=factorRule();
 					state._fsp--;
 
@@ -2610,7 +2727,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop40;
+					break loop42;
 				}
 			}
 
@@ -2631,7 +2748,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "factorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:336:1: factorRule returns [ExpressionFactor ef] : ( LP op= orConditionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= factorRule ( COMMA f= factorRule )* RB ) ( EXP e= factorRule )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:348:1: factorRule returns [ExpressionFactor ef] : ( LP op= orConditionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= factorRule ( COMMA f= factorRule )* RB ) ( EXP e= factorRule )? ;
 	public final ExpressionFactor factorRule() throws RecognitionException {
 		ExpressionFactor ef = null;
 
@@ -2646,20 +2763,20 @@ public class JCoQLParser extends Parser {
 		ExpressionFactor e =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:337:3: ( ( LP op= orConditionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= factorRule ( COMMA f= factorRule )* RB ) ( EXP e= factorRule )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:338:4: ( LP op= orConditionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= factorRule ( COMMA f= factorRule )* RB ) ( EXP e= factorRule )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:349:3: ( ( LP op= orConditionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= factorRule ( COMMA f= factorRule )* RB ) ( EXP e= factorRule )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:350:4: ( LP op= orConditionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= factorRule ( COMMA f= factorRule )* RB ) ( EXP e= factorRule )?
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:338:4: ( LP op= orConditionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= factorRule ( COMMA f= factorRule )* RB )
-			int alt43=6;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:350:4: ( LP op= orConditionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= factorRule ( COMMA f= factorRule )* RB )
+			int alt45=6;
 			switch ( input.LA(1) ) {
 			case LP:
 				{
-				alt43=1;
+				alt45=1;
 				}
 				break;
 			case FIELD_NAME:
 				{
-				alt43=2;
+				alt45=2;
 				}
 				break;
 			case APEX_VALUE:
@@ -2668,53 +2785,55 @@ public class JCoQLParser extends Parser {
 			case INT:
 			case QUOTED_VALUE:
 				{
-				alt43=3;
+				alt45=3;
 				}
 				break;
 			case ID:
 				{
-				alt43=4;
+				alt45=4;
 				}
 				break;
 			case ARRAY_FUNCTION:
 			case DEGREE:
 			case EXTENT:
 			case EXTRACT_ARRAY:
+			case HASH_NAME:
+			case IF:
 			case IF_ERROR:
 			case MEMBERSHIP_ARRAY:
 			case MEMBERSHIP_TO:
 			case TRANSLATE:
 				{
-				alt43=5;
+				alt45=5;
 				}
 				break;
 			case LB:
 				{
-				alt43=6;
+				alt45=6;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 43, 0, input);
+					new NoViableAltException("", 45, 0, input);
 				throw nvae;
 			}
-			switch (alt43) {
+			switch (alt45) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:338:6: LP op= orConditionRule RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:350:6: LP op= orConditionRule RP
 					{
-					match(input,LP,FOLLOW_LP_in_factorRule2767); 
-					pushFollow(FOLLOW_orConditionRule_in_factorRule2771);
+					match(input,LP,FOLLOW_LP_in_factorRule2872); 
+					pushFollow(FOLLOW_orConditionRule_in_factorRule2876);
 					op=orConditionRule();
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_factorRule2773); 
+					match(input,RP,FOLLOW_RP_in_factorRule2878); 
 					 ef = new ExpressionFactor (op); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:339:6: fr= fieldRefRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:351:6: fr= fieldRefRule
 					{
-					pushFollow(FOLLOW_fieldRefRule_in_factorRule2797);
+					pushFollow(FOLLOW_fieldRefRule_in_factorRule2902);
 					fr=fieldRefRule();
 					state._fsp--;
 
@@ -2722,9 +2841,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:340:6: vl= valueRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:352:6: vl= valueRule
 					{
-					pushFollow(FOLLOW_valueRule_in_factorRule2824);
+					pushFollow(FOLLOW_valueRule_in_factorRule2929);
 					vl=valueRule();
 					state._fsp--;
 
@@ -2732,21 +2851,21 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:341:6: x= ID LP (fp= functionParamsRule )? RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:353:6: x= ID LP (fp= functionParamsRule )? RP
 					{
-					x=(Token)match(input,ID,FOLLOW_ID_in_factorRule2852); 
-					match(input,LP,FOLLOW_LP_in_factorRule2854); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:341:14: (fp= functionParamsRule )?
-					int alt41=2;
-					int LA41_0 = input.LA(1);
-					if ( (LA41_0==ADD||LA41_0==APEX_VALUE||LA41_0==ARRAY_FUNCTION||LA41_0==BOOLEAN||LA41_0==DEGREE||(LA41_0 >= EXTENT && LA41_0 <= EXTRACT_ARRAY)||LA41_0==FIELD_NAME||LA41_0==FLOAT||(LA41_0 >= ID && LA41_0 <= IF_ERROR)||LA41_0==INT||LA41_0==LB||LA41_0==LP||(LA41_0 >= MEMBERSHIP_ARRAY && LA41_0 <= MEMBERSHIP_TO)||LA41_0==QUOTED_VALUE||LA41_0==SUB||LA41_0==TRANSLATE) ) {
-						alt41=1;
+					x=(Token)match(input,ID,FOLLOW_ID_in_factorRule2957); 
+					match(input,LP,FOLLOW_LP_in_factorRule2959); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:353:14: (fp= functionParamsRule )?
+					int alt43=2;
+					int LA43_0 = input.LA(1);
+					if ( (LA43_0==ADD||LA43_0==APEX_VALUE||LA43_0==ARRAY_FUNCTION||LA43_0==BOOLEAN||LA43_0==DEGREE||(LA43_0 >= EXTENT && LA43_0 <= EXTRACT_ARRAY)||LA43_0==FIELD_NAME||LA43_0==FLOAT||LA43_0==HASH_NAME||(LA43_0 >= ID && LA43_0 <= IF_ERROR)||LA43_0==INT||LA43_0==LB||LA43_0==LP||(LA43_0 >= MEMBERSHIP_ARRAY && LA43_0 <= MEMBERSHIP_TO)||LA43_0==QUOTED_VALUE||LA43_0==SUB||LA43_0==TRANSLATE) ) {
+						alt43=1;
 					}
-					switch (alt41) {
+					switch (alt43) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:341:15: fp= functionParamsRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:353:15: fp= functionParamsRule
 							{
-							pushFollow(FOLLOW_functionParamsRule_in_factorRule2859);
+							pushFollow(FOLLOW_functionParamsRule_in_factorRule2964);
 							fp=functionParamsRule();
 							state._fsp--;
 
@@ -2755,14 +2874,14 @@ public class JCoQLParser extends Parser {
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_factorRule2863); 
+					match(input,RP,FOLLOW_RP_in_factorRule2968); 
 					 ef = env.buildFunction (x, fp); 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:342:6: sf= specialFunctionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:354:6: sf= specialFunctionRule
 					{
-					pushFollow(FOLLOW_specialFunctionRule_in_factorRule2880);
+					pushFollow(FOLLOW_specialFunctionRule_in_factorRule2985);
 					sf=specialFunctionRule();
 					state._fsp--;
 
@@ -2770,29 +2889,29 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 6 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:343:6: LB f= factorRule ( COMMA f= factorRule )* RB
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:355:6: LB f= factorRule ( COMMA f= factorRule )* RB
 					{
-					match(input,LB,FOLLOW_LB_in_factorRule2912); 
-					pushFollow(FOLLOW_factorRule_in_factorRule2916);
+					match(input,LB,FOLLOW_LB_in_factorRule3017); 
+					pushFollow(FOLLOW_factorRule_in_factorRule3021);
 					f=factorRule();
 					state._fsp--;
 
 					 ef = new ExpressionFactor (f); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:344:6: ( COMMA f= factorRule )*
-					loop42:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:356:6: ( COMMA f= factorRule )*
+					loop44:
 					while (true) {
-						int alt42=2;
-						int LA42_0 = input.LA(1);
-						if ( (LA42_0==COMMA) ) {
-							alt42=1;
+						int alt44=2;
+						int LA44_0 = input.LA(1);
+						if ( (LA44_0==COMMA) ) {
+							alt44=1;
 						}
 
-						switch (alt42) {
+						switch (alt44) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:344:8: COMMA f= factorRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:356:8: COMMA f= factorRule
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_factorRule2943); 
-							pushFollow(FOLLOW_factorRule_in_factorRule2947);
+							match(input,COMMA,FOLLOW_COMMA_in_factorRule3048); 
+							pushFollow(FOLLOW_factorRule_in_factorRule3052);
 							f=factorRule();
 							state._fsp--;
 
@@ -2801,28 +2920,28 @@ public class JCoQLParser extends Parser {
 							break;
 
 						default :
-							break loop42;
+							break loop44;
 						}
 					}
 
-					match(input,RB,FOLLOW_RB_in_factorRule2986); 
+					match(input,RB,FOLLOW_RB_in_factorRule3091); 
 					}
 					break;
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:347:4: ( EXP e= factorRule )?
-			int alt44=2;
-			int LA44_0 = input.LA(1);
-			if ( (LA44_0==EXP) ) {
-				alt44=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:359:4: ( EXP e= factorRule )?
+			int alt46=2;
+			int LA46_0 = input.LA(1);
+			if ( (LA46_0==EXP) ) {
+				alt46=1;
 			}
-			switch (alt44) {
+			switch (alt46) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:347:6: EXP e= factorRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:359:6: EXP e= factorRule
 					{
-					match(input,EXP,FOLLOW_EXP_in_factorRule2999); 
-					pushFollow(FOLLOW_factorRule_in_factorRule3003);
+					match(input,EXP,FOLLOW_EXP_in_factorRule3104); 
+					pushFollow(FOLLOW_factorRule_in_factorRule3108);
 					e=factorRule();
 					state._fsp--;
 
@@ -2849,7 +2968,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "specialFunctionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:352:1: specialFunctionRule returns [SpecialFunctionFactor expr] : (mt= MEMBERSHIP_TO LP fs= ID RP | EXTENT LP fs= ID RP | DEGREE LP fs= ID (dg= FIELD_NAME )? RP | MEMBERSHIP_ARRAY LP ( ALL |fuzzySet= ID FROM_ARRAY array= fieldRefRule | LB fuzzySet= ID ( COMMA fuzzySet= ID )* RB ) RP | EXTRACT_ARRAY LP field= fieldRefRule FROM_ARRAY array= fieldRefRule RP | IF_ERROR LP e= restrictedExpressionRule COMMA v= valueRule RP | TRANSLATE LP e= restrictedExpressionRule COMMA dict= ID ( COMMA cs= BOOLEAN ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )? )? RP |a= arrayFunctionRule );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:364:1: specialFunctionRule returns [SpecialFunctionFactor expr] : (mt= MEMBERSHIP_TO LP fs= ID RP | EXTENT LP fs= ID RP | DEGREE LP fs= ID (dg= FIELD_NAME )? RP |fs= HASH_NAME (dg= FIELD_NAME )? | MEMBERSHIP_ARRAY LP ( ALL |fuzzySet= ID FROM_ARRAY array= fieldRefRule | LB fuzzySet= ID ( COMMA fuzzySet= ID )* RB ) RP | EXTRACT_ARRAY LP field= fieldRefRule FROM_ARRAY array= fieldRefRule RP | IF LP LP co= orConditionRule RP COMMA et= restrictedExpressionRule COMMA ef= restrictedExpressionRule RP | IF_ERROR LP e= restrictedExpressionRule COMMA v= valueRule RP | TRANSLATE LP e= restrictedExpressionRule COMMA dict= ID ( COMMA cs= BOOLEAN ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )? )? RP |a= arrayFunctionRule );
 	public final SpecialFunctionFactor specialFunctionRule() throws RecognitionException {
 		SpecialFunctionFactor expr = null;
 
@@ -2863,148 +2982,184 @@ public class JCoQLParser extends Parser {
 		Token d=null;
 		Field array =null;
 		Field field =null;
+		Condition co =null;
+		Expression et =null;
+		Expression ef =null;
 		Expression e =null;
 		Value v =null;
 		ArrayFunctionFactor a =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:353:2: (mt= MEMBERSHIP_TO LP fs= ID RP | EXTENT LP fs= ID RP | DEGREE LP fs= ID (dg= FIELD_NAME )? RP | MEMBERSHIP_ARRAY LP ( ALL |fuzzySet= ID FROM_ARRAY array= fieldRefRule | LB fuzzySet= ID ( COMMA fuzzySet= ID )* RB ) RP | EXTRACT_ARRAY LP field= fieldRefRule FROM_ARRAY array= fieldRefRule RP | IF_ERROR LP e= restrictedExpressionRule COMMA v= valueRule RP | TRANSLATE LP e= restrictedExpressionRule COMMA dict= ID ( COMMA cs= BOOLEAN ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )? )? RP |a= arrayFunctionRule )
-			int alt51=8;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:365:2: (mt= MEMBERSHIP_TO LP fs= ID RP | EXTENT LP fs= ID RP | DEGREE LP fs= ID (dg= FIELD_NAME )? RP |fs= HASH_NAME (dg= FIELD_NAME )? | MEMBERSHIP_ARRAY LP ( ALL |fuzzySet= ID FROM_ARRAY array= fieldRefRule | LB fuzzySet= ID ( COMMA fuzzySet= ID )* RB ) RP | EXTRACT_ARRAY LP field= fieldRefRule FROM_ARRAY array= fieldRefRule RP | IF LP LP co= orConditionRule RP COMMA et= restrictedExpressionRule COMMA ef= restrictedExpressionRule RP | IF_ERROR LP e= restrictedExpressionRule COMMA v= valueRule RP | TRANSLATE LP e= restrictedExpressionRule COMMA dict= ID ( COMMA cs= BOOLEAN ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )? )? RP |a= arrayFunctionRule )
+			int alt54=10;
 			switch ( input.LA(1) ) {
 			case MEMBERSHIP_TO:
 				{
-				alt51=1;
+				alt54=1;
 				}
 				break;
 			case EXTENT:
 				{
-				alt51=2;
+				alt54=2;
 				}
 				break;
 			case DEGREE:
 				{
-				alt51=3;
+				alt54=3;
+				}
+				break;
+			case HASH_NAME:
+				{
+				alt54=4;
 				}
 				break;
 			case MEMBERSHIP_ARRAY:
 				{
-				alt51=4;
+				alt54=5;
 				}
 				break;
 			case EXTRACT_ARRAY:
 				{
-				alt51=5;
+				alt54=6;
+				}
+				break;
+			case IF:
+				{
+				alt54=7;
 				}
 				break;
 			case IF_ERROR:
 				{
-				alt51=6;
+				alt54=8;
 				}
 				break;
 			case TRANSLATE:
 				{
-				alt51=7;
+				alt54=9;
 				}
 				break;
 			case ARRAY_FUNCTION:
 				{
-				alt51=8;
+				alt54=10;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 51, 0, input);
+					new NoViableAltException("", 54, 0, input);
 				throw nvae;
 			}
-			switch (alt51) {
+			switch (alt54) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:354:4: mt= MEMBERSHIP_TO LP fs= ID RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:366:4: mt= MEMBERSHIP_TO LP fs= ID RP
 					{
-					mt=(Token)match(input,MEMBERSHIP_TO,FOLLOW_MEMBERSHIP_TO_in_specialFunctionRule3054); 
-					match(input,LP,FOLLOW_LP_in_specialFunctionRule3057); 
-					fs=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3061); 
-					match(input,RP,FOLLOW_RP_in_specialFunctionRule3063); 
+					mt=(Token)match(input,MEMBERSHIP_TO,FOLLOW_MEMBERSHIP_TO_in_specialFunctionRule3159); 
+					match(input,LP,FOLLOW_LP_in_specialFunctionRule3162); 
+					fs=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3166); 
+					match(input,RP,FOLLOW_RP_in_specialFunctionRule3168); 
 						expr = env.buildMembershipTo (mt, fs); 	
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:355:5: EXTENT LP fs= ID RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:367:5: EXTENT LP fs= ID RP
 					{
-					match(input,EXTENT,FOLLOW_EXTENT_in_specialFunctionRule3094); 
-					match(input,LP,FOLLOW_LP_in_specialFunctionRule3102); 
-					fs=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3106); 
-					match(input,RP,FOLLOW_RP_in_specialFunctionRule3108); 
+					match(input,EXTENT,FOLLOW_EXTENT_in_specialFunctionRule3199); 
+					match(input,LP,FOLLOW_LP_in_specialFunctionRule3207); 
+					fs=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3211); 
+					match(input,RP,FOLLOW_RP_in_specialFunctionRule3213); 
 						expr = env.buildExtent (fs); 						
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:356:5: DEGREE LP fs= ID (dg= FIELD_NAME )? RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:368:5: DEGREE LP fs= ID (dg= FIELD_NAME )? RP
 					{
-					match(input,DEGREE,FOLLOW_DEGREE_in_specialFunctionRule3139); 
-					match(input,LP,FOLLOW_LP_in_specialFunctionRule3147); 
-					fs=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3151); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:356:29: (dg= FIELD_NAME )?
-					int alt45=2;
-					int LA45_0 = input.LA(1);
-					if ( (LA45_0==FIELD_NAME) ) {
-						alt45=1;
+					match(input,DEGREE,FOLLOW_DEGREE_in_specialFunctionRule3244); 
+					match(input,LP,FOLLOW_LP_in_specialFunctionRule3252); 
+					fs=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3256); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:368:29: (dg= FIELD_NAME )?
+					int alt47=2;
+					int LA47_0 = input.LA(1);
+					if ( (LA47_0==FIELD_NAME) ) {
+						alt47=1;
 					}
-					switch (alt45) {
+					switch (alt47) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:356:29: dg= FIELD_NAME
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:368:29: dg= FIELD_NAME
 							{
-							dg=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_specialFunctionRule3155); 
+							dg=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_specialFunctionRule3260); 
 							}
 							break;
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_specialFunctionRule3158); 
-						expr = env.buildDegree (fs, dg);				
+					match(input,RP,FOLLOW_RP_in_specialFunctionRule3263); 
+						expr = env.buildDegree (fs, dg, true);	
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:357:5: MEMBERSHIP_ARRAY LP ( ALL |fuzzySet= ID FROM_ARRAY array= fieldRefRule | LB fuzzySet= ID ( COMMA fuzzySet= ID )* RB ) RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:369:5: fs= HASH_NAME (dg= FIELD_NAME )?
 					{
-					match(input,MEMBERSHIP_ARRAY,FOLLOW_MEMBERSHIP_ARRAY_in_specialFunctionRule3183); 
-					match(input,LP,FOLLOW_LP_in_specialFunctionRule3186); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:358:4: ( ALL |fuzzySet= ID FROM_ARRAY array= fieldRefRule | LB fuzzySet= ID ( COMMA fuzzySet= ID )* RB )
-					int alt47=3;
+					fs=(Token)match(input,HASH_NAME,FOLLOW_HASH_NAME_in_specialFunctionRule3290); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:369:27: (dg= FIELD_NAME )?
+					int alt48=2;
+					int LA48_0 = input.LA(1);
+					if ( (LA48_0==FIELD_NAME) ) {
+						alt48=1;
+					}
+					switch (alt48) {
+						case 1 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:369:27: dg= FIELD_NAME
+							{
+							dg=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_specialFunctionRule3301); 
+							}
+							break;
+
+					}
+
+						expr = env.buildDegree (fs, dg, false);	
+					}
+					break;
+				case 5 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:370:5: MEMBERSHIP_ARRAY LP ( ALL |fuzzySet= ID FROM_ARRAY array= fieldRefRule | LB fuzzySet= ID ( COMMA fuzzySet= ID )* RB ) RP
+					{
+					match(input,MEMBERSHIP_ARRAY,FOLLOW_MEMBERSHIP_ARRAY_in_specialFunctionRule3330); 
+					match(input,LP,FOLLOW_LP_in_specialFunctionRule3333); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:371:4: ( ALL |fuzzySet= ID FROM_ARRAY array= fieldRefRule | LB fuzzySet= ID ( COMMA fuzzySet= ID )* RB )
+					int alt50=3;
 					switch ( input.LA(1) ) {
 					case ALL:
 						{
-						alt47=1;
+						alt50=1;
 						}
 						break;
 					case ID:
 						{
-						alt47=2;
+						alt50=2;
 						}
 						break;
 					case LB:
 						{
-						alt47=3;
+						alt50=3;
 						}
 						break;
 					default:
 						NoViableAltException nvae =
-							new NoViableAltException("", 47, 0, input);
+							new NoViableAltException("", 50, 0, input);
 						throw nvae;
 					}
-					switch (alt47) {
+					switch (alt50) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:358:6: ALL
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:371:6: ALL
 							{
-							match(input,ALL,FOLLOW_ALL_in_specialFunctionRule3221); 
+							match(input,ALL,FOLLOW_ALL_in_specialFunctionRule3368); 
 							 expr = new MembershipArray (); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:359:6: fuzzySet= ID FROM_ARRAY array= fieldRefRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:372:6: fuzzySet= ID FROM_ARRAY array= fieldRefRule
 							{
-							fuzzySet=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3268); 
-							match(input,FROM_ARRAY,FOLLOW_FROM_ARRAY_in_specialFunctionRule3270); 
-							pushFollow(FOLLOW_fieldRefRule_in_specialFunctionRule3274);
+							fuzzySet=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3415); 
+							match(input,FROM_ARRAY,FOLLOW_FROM_ARRAY_in_specialFunctionRule3417); 
+							pushFollow(FOLLOW_fieldRefRule_in_specialFunctionRule3421);
 							array=fieldRefRule();
 							state._fsp--;
 
@@ -3012,141 +3167,166 @@ public class JCoQLParser extends Parser {
 							}
 							break;
 						case 3 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:360:6: LB fuzzySet= ID ( COMMA fuzzySet= ID )* RB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:373:6: LB fuzzySet= ID ( COMMA fuzzySet= ID )* RB
 							{
-							match(input,LB,FOLLOW_LB_in_specialFunctionRule3299); 
-							fuzzySet=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3303); 
+							match(input,LB,FOLLOW_LB_in_specialFunctionRule3446); 
+							fuzzySet=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3450); 
 							 expr = env.createMembershipArray (fuzzySet); 
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:361:5: ( COMMA fuzzySet= ID )*
-							loop46:
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:374:5: ( COMMA fuzzySet= ID )*
+							loop49:
 							while (true) {
-								int alt46=2;
-								int LA46_0 = input.LA(1);
-								if ( (LA46_0==COMMA) ) {
-									alt46=1;
+								int alt49=2;
+								int LA49_0 = input.LA(1);
+								if ( (LA49_0==COMMA) ) {
+									alt49=1;
 								}
 
-								switch (alt46) {
+								switch (alt49) {
 								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:361:7: COMMA fuzzySet= ID
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:374:7: COMMA fuzzySet= ID
 									{
-									match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3343); 
-									fuzzySet=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3347); 
+									match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3490); 
+									fuzzySet=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3494); 
 									 env.addMembershipArray ((MembershipArray)expr, fuzzySet); 
 									}
 									break;
 
 								default :
-									break loop46;
+									break loop49;
 								}
 							}
 
-							match(input,RB,FOLLOW_RB_in_specialFunctionRule3390); 
+							match(input,RB,FOLLOW_RB_in_specialFunctionRule3537); 
 							}
 							break;
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_specialFunctionRule3397); 
-					}
-					break;
-				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:364:5: EXTRACT_ARRAY LP field= fieldRefRule FROM_ARRAY array= fieldRefRule RP
-					{
-					match(input,EXTRACT_ARRAY,FOLLOW_EXTRACT_ARRAY_in_specialFunctionRule3403); 
-					match(input,LP,FOLLOW_LP_in_specialFunctionRule3407); 
-					pushFollow(FOLLOW_fieldRefRule_in_specialFunctionRule3411);
-					field=fieldRefRule();
-					state._fsp--;
-
-					match(input,FROM_ARRAY,FOLLOW_FROM_ARRAY_in_specialFunctionRule3413); 
-					pushFollow(FOLLOW_fieldRefRule_in_specialFunctionRule3417);
-					array=fieldRefRule();
-					state._fsp--;
-
-					match(input,RP,FOLLOW_RP_in_specialFunctionRule3419); 
-						expr = env.createExtractArray(field, array); 
+					match(input,RP,FOLLOW_RP_in_specialFunctionRule3544); 
 					}
 					break;
 				case 6 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:365:5: IF_ERROR LP e= restrictedExpressionRule COMMA v= valueRule RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:377:5: EXTRACT_ARRAY LP field= fieldRefRule FROM_ARRAY array= fieldRefRule RP
 					{
-					match(input,IF_ERROR,FOLLOW_IF_ERROR_in_specialFunctionRule3428); 
-					match(input,LP,FOLLOW_LP_in_specialFunctionRule3434); 
-					pushFollow(FOLLOW_restrictedExpressionRule_in_specialFunctionRule3438);
-					e=restrictedExpressionRule();
+					match(input,EXTRACT_ARRAY,FOLLOW_EXTRACT_ARRAY_in_specialFunctionRule3550); 
+					match(input,LP,FOLLOW_LP_in_specialFunctionRule3554); 
+					pushFollow(FOLLOW_fieldRefRule_in_specialFunctionRule3558);
+					field=fieldRefRule();
 					state._fsp--;
 
-					match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3440); 
-					pushFollow(FOLLOW_valueRule_in_specialFunctionRule3444);
-					v=valueRule();
+					match(input,FROM_ARRAY,FOLLOW_FROM_ARRAY_in_specialFunctionRule3560); 
+					pushFollow(FOLLOW_fieldRefRule_in_specialFunctionRule3564);
+					array=fieldRefRule();
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_specialFunctionRule3446); 
-						expr = env.buildIfError (e, v); 					
+					match(input,RP,FOLLOW_RP_in_specialFunctionRule3566); 
+						expr = env.createExtractArray(field, array); 
 					}
 					break;
 				case 7 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:366:5: TRANSLATE LP e= restrictedExpressionRule COMMA dict= ID ( COMMA cs= BOOLEAN ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )? )? RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:378:5: IF LP LP co= orConditionRule RP COMMA et= restrictedExpressionRule COMMA ef= restrictedExpressionRule RP
 					{
-					match(input,TRANSLATE,FOLLOW_TRANSLATE_in_specialFunctionRule3457); 
-					match(input,LP,FOLLOW_LP_in_specialFunctionRule3463); 
-					pushFollow(FOLLOW_restrictedExpressionRule_in_specialFunctionRule3467);
+					match(input,IF,FOLLOW_IF_in_specialFunctionRule3575); 
+					match(input,LP,FOLLOW_LP_in_specialFunctionRule3577); 
+					match(input,LP,FOLLOW_LP_in_specialFunctionRule3579); 
+					pushFollow(FOLLOW_orConditionRule_in_specialFunctionRule3583);
+					co=orConditionRule();
+					state._fsp--;
+
+					match(input,RP,FOLLOW_RP_in_specialFunctionRule3585); 
+					match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3614); 
+					pushFollow(FOLLOW_restrictedExpressionRule_in_specialFunctionRule3618);
+					et=restrictedExpressionRule();
+					state._fsp--;
+
+					match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3624); 
+					pushFollow(FOLLOW_restrictedExpressionRule_in_specialFunctionRule3628);
+					ef=restrictedExpressionRule();
+					state._fsp--;
+
+					match(input,RP,FOLLOW_RP_in_specialFunctionRule3630); 
+						expr = env.buildIfFunction (co, et, ef); 
+					}
+					break;
+				case 8 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:381:5: IF_ERROR LP e= restrictedExpressionRule COMMA v= valueRule RP
+					{
+					match(input,IF_ERROR,FOLLOW_IF_ERROR_in_specialFunctionRule3656); 
+					match(input,LP,FOLLOW_LP_in_specialFunctionRule3662); 
+					pushFollow(FOLLOW_restrictedExpressionRule_in_specialFunctionRule3666);
 					e=restrictedExpressionRule();
 					state._fsp--;
 
-					match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3469); 
-					dict=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3473); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:367:16: ( COMMA cs= BOOLEAN ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )? )?
-					int alt50=2;
-					int LA50_0 = input.LA(1);
-					if ( (LA50_0==COMMA) ) {
-						alt50=1;
+					match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3668); 
+					pushFollow(FOLLOW_valueRule_in_specialFunctionRule3672);
+					v=valueRule();
+					state._fsp--;
+
+					match(input,RP,FOLLOW_RP_in_specialFunctionRule3674); 
+						expr = env.buildIfError (e, v); 					
 					}
-					switch (alt50) {
+					break;
+				case 9 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:382:5: TRANSLATE LP e= restrictedExpressionRule COMMA dict= ID ( COMMA cs= BOOLEAN ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )? )? RP
+					{
+					match(input,TRANSLATE,FOLLOW_TRANSLATE_in_specialFunctionRule3685); 
+					match(input,LP,FOLLOW_LP_in_specialFunctionRule3691); 
+					pushFollow(FOLLOW_restrictedExpressionRule_in_specialFunctionRule3695);
+					e=restrictedExpressionRule();
+					state._fsp--;
+
+					match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3697); 
+					dict=(Token)match(input,ID,FOLLOW_ID_in_specialFunctionRule3701); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:383:16: ( COMMA cs= BOOLEAN ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )? )?
+					int alt53=2;
+					int LA53_0 = input.LA(1);
+					if ( (LA53_0==COMMA) ) {
+						alt53=1;
+					}
+					switch (alt53) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:367:18: COMMA cs= BOOLEAN ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )?
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:383:18: COMMA cs= BOOLEAN ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )?
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3493); 
-							cs=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_specialFunctionRule3497); 
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:368:17: ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )?
-							int alt49=2;
-							int LA49_0 = input.LA(1);
-							if ( (LA49_0==COMMA) ) {
-								alt49=1;
+							match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3721); 
+							cs=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_specialFunctionRule3725); 
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:384:17: ( COMMA (d= APEX_VALUE |d= QUOTED_VALUE ) )?
+							int alt52=2;
+							int LA52_0 = input.LA(1);
+							if ( (LA52_0==COMMA) ) {
+								alt52=1;
 							}
-							switch (alt49) {
+							switch (alt52) {
 								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:368:19: COMMA (d= APEX_VALUE |d= QUOTED_VALUE )
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:384:19: COMMA (d= APEX_VALUE |d= QUOTED_VALUE )
 									{
-									match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3518); 
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:368:25: (d= APEX_VALUE |d= QUOTED_VALUE )
-									int alt48=2;
-									int LA48_0 = input.LA(1);
-									if ( (LA48_0==APEX_VALUE) ) {
-										alt48=1;
+									match(input,COMMA,FOLLOW_COMMA_in_specialFunctionRule3746); 
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:384:25: (d= APEX_VALUE |d= QUOTED_VALUE )
+									int alt51=2;
+									int LA51_0 = input.LA(1);
+									if ( (LA51_0==APEX_VALUE) ) {
+										alt51=1;
 									}
-									else if ( (LA48_0==QUOTED_VALUE) ) {
-										alt48=2;
+									else if ( (LA51_0==QUOTED_VALUE) ) {
+										alt51=2;
 									}
 
 									else {
 										NoViableAltException nvae =
-											new NoViableAltException("", 48, 0, input);
+											new NoViableAltException("", 51, 0, input);
 										throw nvae;
 									}
 
-									switch (alt48) {
+									switch (alt51) {
 										case 1 :
-											// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:368:26: d= APEX_VALUE
+											// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:384:26: d= APEX_VALUE
 											{
-											d=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_specialFunctionRule3523); 
+											d=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_specialFunctionRule3751); 
 											}
 											break;
 										case 2 :
-											// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:368:41: d= QUOTED_VALUE
+											// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:384:41: d= QUOTED_VALUE
 											{
-											d=(Token)match(input,QUOTED_VALUE,FOLLOW_QUOTED_VALUE_in_specialFunctionRule3529); 
+											d=(Token)match(input,QUOTED_VALUE,FOLLOW_QUOTED_VALUE_in_specialFunctionRule3757); 
 											}
 											break;
 
@@ -3162,14 +3342,14 @@ public class JCoQLParser extends Parser {
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_specialFunctionRule3538); 
+					match(input,RP,FOLLOW_RP_in_specialFunctionRule3766); 
 						expr = env.buildTranslate 	(e, dict, cs, d); 	
 					}
 					break;
-				case 8 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:369:5: a= arrayFunctionRule
+				case 10 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:385:5: a= arrayFunctionRule
 					{
-					pushFollow(FOLLOW_arrayFunctionRule_in_specialFunctionRule3551);
+					pushFollow(FOLLOW_arrayFunctionRule_in_specialFunctionRule3779);
 					a=arrayFunctionRule();
 					state._fsp--;
 
@@ -3193,7 +3373,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "valueRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:373:1: valueRule returns [Value vl] : (n= INT |f= FLOAT |b= BOOLEAN |a= APEX_VALUE |q= QUOTED_VALUE );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:389:1: valueRule returns [Value vl] : (n= INT |f= FLOAT |b= BOOLEAN |a= APEX_VALUE |q= QUOTED_VALUE );
 	public final Value valueRule() throws RecognitionException {
 		Value vl = null;
 
@@ -3205,72 +3385,72 @@ public class JCoQLParser extends Parser {
 		Token q=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:374:3: (n= INT |f= FLOAT |b= BOOLEAN |a= APEX_VALUE |q= QUOTED_VALUE )
-			int alt52=5;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:390:3: (n= INT |f= FLOAT |b= BOOLEAN |a= APEX_VALUE |q= QUOTED_VALUE )
+			int alt55=5;
 			switch ( input.LA(1) ) {
 			case INT:
 				{
-				alt52=1;
+				alt55=1;
 				}
 				break;
 			case FLOAT:
 				{
-				alt52=2;
+				alt55=2;
 				}
 				break;
 			case BOOLEAN:
 				{
-				alt52=3;
+				alt55=3;
 				}
 				break;
 			case APEX_VALUE:
 				{
-				alt52=4;
+				alt55=4;
 				}
 				break;
 			case QUOTED_VALUE:
 				{
-				alt52=5;
+				alt55=5;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 52, 0, input);
+					new NoViableAltException("", 55, 0, input);
 				throw nvae;
 			}
-			switch (alt52) {
+			switch (alt55) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:375:5: n= INT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:391:5: n= INT
 					{
-					n=(Token)match(input,INT,FOLLOW_INT_in_valueRule3605); 
+					n=(Token)match(input,INT,FOLLOW_INT_in_valueRule3833); 
 					 vl = new Value (Value.INT, n.getText()); 		
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:376:5: f= FLOAT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:392:5: f= FLOAT
 					{
-					f=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_valueRule3625); 
+					f=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_valueRule3853); 
 					 vl = new Value (Value.FLOAT, f.getText());		
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:377:6: b= BOOLEAN
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:393:6: b= BOOLEAN
 					{
-					b=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_valueRule3644); 
+					b=(Token)match(input,BOOLEAN,FOLLOW_BOOLEAN_in_valueRule3872); 
 					 vl = new Value (Value.BOOLEAN, b.getText());	
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:378:6: a= APEX_VALUE
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:394:6: a= APEX_VALUE
 					{
-					a=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_valueRule3661); 
+					a=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_valueRule3889); 
 					 vl = new Value (Value.APEX, a.getText()); 		
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:379:6: q= QUOTED_VALUE
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:395:6: q= QUOTED_VALUE
 					{
-					q=(Token)match(input,QUOTED_VALUE,FOLLOW_QUOTED_VALUE_in_valueRule3675); 
+					q=(Token)match(input,QUOTED_VALUE,FOLLOW_QUOTED_VALUE_in_valueRule3903); 
 					 vl = new Value (Value.QUOTED, q.getText());	
 					}
 					break;
@@ -3291,7 +3471,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "arrayFunctionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:385:1: arrayFunctionRule returns [ArrayFunctionFactor af] : (fun= ARRAY_FUNCTION ) LP (fr= fieldRefRule | LB e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* RB ) COMMA type= ID ( COMMA (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* ) )? RP ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:401:1: arrayFunctionRule returns [ArrayFunctionFactor af] : (fun= ARRAY_FUNCTION ) LP (fr= fieldRefRule | LB e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* RB ) COMMA type= ID ( COMMA (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* ) )? RP ;
 	public final ArrayFunctionFactor arrayFunctionRule() throws RecognitionException {
 		ArrayFunctionFactor af = null;
 
@@ -3304,38 +3484,38 @@ public class JCoQLParser extends Parser {
 		Field fx =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:386:2: ( (fun= ARRAY_FUNCTION ) LP (fr= fieldRefRule | LB e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* RB ) COMMA type= ID ( COMMA (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* ) )? RP )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:386:4: (fun= ARRAY_FUNCTION ) LP (fr= fieldRefRule | LB e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* RB ) COMMA type= ID ( COMMA (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* ) )? RP
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:402:2: ( (fun= ARRAY_FUNCTION ) LP (fr= fieldRefRule | LB e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* RB ) COMMA type= ID ( COMMA (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* ) )? RP )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:402:4: (fun= ARRAY_FUNCTION ) LP (fr= fieldRefRule | LB e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* RB ) COMMA type= ID ( COMMA (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* ) )? RP
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:386:4: (fun= ARRAY_FUNCTION )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:386:6: fun= ARRAY_FUNCTION
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:402:4: (fun= ARRAY_FUNCTION )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:402:6: fun= ARRAY_FUNCTION
 			{
-			fun=(Token)match(input,ARRAY_FUNCTION,FOLLOW_ARRAY_FUNCTION_in_arrayFunctionRule3703); 
+			fun=(Token)match(input,ARRAY_FUNCTION,FOLLOW_ARRAY_FUNCTION_in_arrayFunctionRule3931); 
 			}
 
 				af = env.newArrayFunction (fun);	
-			match(input,LP,FOLLOW_LP_in_arrayFunctionRule3743); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:388:4: (fr= fieldRefRule | LB e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* RB )
-			int alt54=2;
-			int LA54_0 = input.LA(1);
-			if ( (LA54_0==FIELD_NAME) ) {
-				alt54=1;
+			match(input,LP,FOLLOW_LP_in_arrayFunctionRule3971); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:404:4: (fr= fieldRefRule | LB e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* RB )
+			int alt57=2;
+			int LA57_0 = input.LA(1);
+			if ( (LA57_0==FIELD_NAME) ) {
+				alt57=1;
 			}
-			else if ( (LA54_0==LB) ) {
-				alt54=2;
+			else if ( (LA57_0==LB) ) {
+				alt57=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 54, 0, input);
+					new NoViableAltException("", 57, 0, input);
 				throw nvae;
 			}
 
-			switch (alt54) {
+			switch (alt57) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:388:6: fr= fieldRefRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:404:6: fr= fieldRefRule
 					{
-					pushFollow(FOLLOW_fieldRefRule_in_arrayFunctionRule3772);
+					pushFollow(FOLLOW_fieldRefRule_in_arrayFunctionRule4000);
 					fr=fieldRefRule();
 					state._fsp--;
 
@@ -3343,29 +3523,29 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:389:6: LB e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* RB
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:405:6: LB e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* RB
 					{
-					match(input,LB,FOLLOW_LB_in_arrayFunctionRule3793); 
-					pushFollow(FOLLOW_restrictedExpressionRule_in_arrayFunctionRule3797);
+					match(input,LB,FOLLOW_LB_in_arrayFunctionRule4021); 
+					pushFollow(FOLLOW_restrictedExpressionRule_in_arrayFunctionRule4025);
 					e=restrictedExpressionRule();
 					state._fsp--;
 
 						af.addExpressionArray (e);	
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:390:5: ( COMMA e= restrictedExpressionRule )*
-					loop53:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:406:5: ( COMMA e= restrictedExpressionRule )*
+					loop56:
 					while (true) {
-						int alt53=2;
-						int LA53_0 = input.LA(1);
-						if ( (LA53_0==COMMA) ) {
-							alt53=1;
+						int alt56=2;
+						int LA56_0 = input.LA(1);
+						if ( (LA56_0==COMMA) ) {
+							alt56=1;
 						}
 
-						switch (alt53) {
+						switch (alt56) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:390:7: COMMA e= restrictedExpressionRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:406:7: COMMA e= restrictedExpressionRule
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule3812); 
-							pushFollow(FOLLOW_restrictedExpressionRule_in_arrayFunctionRule3816);
+							match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule4040); 
+							pushFollow(FOLLOW_restrictedExpressionRule_in_arrayFunctionRule4044);
 							e=restrictedExpressionRule();
 							state._fsp--;
 
@@ -3374,70 +3554,70 @@ public class JCoQLParser extends Parser {
 							break;
 
 						default :
-							break loop53;
+							break loop56;
 						}
 					}
 
-					match(input,RB,FOLLOW_RB_in_arrayFunctionRule3840); 
+					match(input,RB,FOLLOW_RB_in_arrayFunctionRule4068); 
 					}
 					break;
 
 			}
 
-			match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule3848); 
-			type=(Token)match(input,ID,FOLLOW_ID_in_arrayFunctionRule3852); 
+			match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule4076); 
+			type=(Token)match(input,ID,FOLLOW_ID_in_arrayFunctionRule4080); 
 				env.setArrayFunctionType (af, type); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:394:4: ( COMMA (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* ) )?
-			int alt58=2;
-			int LA58_0 = input.LA(1);
-			if ( (LA58_0==COMMA) ) {
-				alt58=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:410:4: ( COMMA (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* ) )?
+			int alt61=2;
+			int LA61_0 = input.LA(1);
+			if ( (LA61_0==COMMA) ) {
+				alt61=1;
 			}
-			switch (alt58) {
+			switch (alt61) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:394:6: COMMA (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:410:6: COMMA (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* )
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule3880); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:394:12: (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* )
-					int alt57=2;
-					int LA57_0 = input.LA(1);
-					if ( (LA57_0==FIELD_NAME) ) {
-						alt57=1;
+					match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule4108); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:410:12: (fx= fieldRefRule ( COMMA fx= fieldRefRule )* |d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )* )
+					int alt60=2;
+					int LA60_0 = input.LA(1);
+					if ( (LA60_0==FIELD_NAME) ) {
+						alt60=1;
 					}
-					else if ( (LA57_0==DOCUMENTS) ) {
-						alt57=2;
+					else if ( (LA60_0==DOCUMENTS) ) {
+						alt60=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 57, 0, input);
+							new NoViableAltException("", 60, 0, input);
 						throw nvae;
 					}
 
-					switch (alt57) {
+					switch (alt60) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:394:14: fx= fieldRefRule ( COMMA fx= fieldRefRule )*
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:410:14: fx= fieldRefRule ( COMMA fx= fieldRefRule )*
 							{
-							pushFollow(FOLLOW_fieldRefRule_in_arrayFunctionRule3886);
+							pushFollow(FOLLOW_fieldRefRule_in_arrayFunctionRule4114);
 							fx=fieldRefRule();
 							state._fsp--;
 
 								af.addSearchingField (fx); 	
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:395:9: ( COMMA fx= fieldRefRule )*
-							loop55:
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:411:9: ( COMMA fx= fieldRefRule )*
+							loop58:
 							while (true) {
-								int alt55=2;
-								int LA55_0 = input.LA(1);
-								if ( (LA55_0==COMMA) ) {
-									alt55=1;
+								int alt58=2;
+								int LA58_0 = input.LA(1);
+								if ( (LA58_0==COMMA) ) {
+									alt58=1;
 								}
 
-								switch (alt55) {
+								switch (alt58) {
 								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:395:11: COMMA fx= fieldRefRule
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:411:11: COMMA fx= fieldRefRule
 									{
-									match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule3908); 
-									pushFollow(FOLLOW_fieldRefRule_in_arrayFunctionRule3912);
+									match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule4136); 
+									pushFollow(FOLLOW_fieldRefRule_in_arrayFunctionRule4140);
 									fx=fieldRefRule();
 									state._fsp--;
 
@@ -3446,38 +3626,38 @@ public class JCoQLParser extends Parser {
 									break;
 
 								default :
-									break loop55;
+									break loop58;
 								}
 							}
 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:396:10: d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )*
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:412:10: d= DOCUMENTS COMMA fx= fieldRefRule ( COMMA fx= fieldRefRule )*
 							{
-							d=(Token)match(input,DOCUMENTS,FOLLOW_DOCUMENTS_in_arrayFunctionRule3944); 
+							d=(Token)match(input,DOCUMENTS,FOLLOW_DOCUMENTS_in_arrayFunctionRule4172); 
 								env.setArrayFunctionSearcingType (af, d); 
-							match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule3967); 
-							pushFollow(FOLLOW_fieldRefRule_in_arrayFunctionRule3971);
+							match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule4195); 
+							pushFollow(FOLLOW_fieldRefRule_in_arrayFunctionRule4199);
 							fx=fieldRefRule();
 							state._fsp--;
 
 								af.addSearchingField (fx); 	
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:398:9: ( COMMA fx= fieldRefRule )*
-							loop56:
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:414:9: ( COMMA fx= fieldRefRule )*
+							loop59:
 							while (true) {
-								int alt56=2;
-								int LA56_0 = input.LA(1);
-								if ( (LA56_0==COMMA) ) {
-									alt56=1;
+								int alt59=2;
+								int LA59_0 = input.LA(1);
+								if ( (LA59_0==COMMA) ) {
+									alt59=1;
 								}
 
-								switch (alt56) {
+								switch (alt59) {
 								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:398:11: COMMA fx= fieldRefRule
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:414:11: COMMA fx= fieldRefRule
 									{
-									match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule3990); 
-									pushFollow(FOLLOW_fieldRefRule_in_arrayFunctionRule3994);
+									match(input,COMMA,FOLLOW_COMMA_in_arrayFunctionRule4218); 
+									pushFollow(FOLLOW_fieldRefRule_in_arrayFunctionRule4222);
 									fx=fieldRefRule();
 									state._fsp--;
 
@@ -3486,7 +3666,7 @@ public class JCoQLParser extends Parser {
 									break;
 
 								default :
-									break loop56;
+									break loop59;
 								}
 							}
 
@@ -3500,7 +3680,7 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,RP,FOLLOW_RP_in_arrayFunctionRule4032); 
+			match(input,RP,FOLLOW_RP_in_arrayFunctionRule4260); 
 			}
 
 		}
@@ -3518,7 +3698,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "restrictedExpressionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:411:1: restrictedExpressionRule returns [Expression expr] : (t= restrictedTermRule | (s= ADD |s= SUB ) t= restrictedTermRule ) ( (s= ADD |s= SUB ) t= restrictedTermRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:427:1: restrictedExpressionRule returns [Expression expr] : (t= restrictedTermRule | (s= ADD |s= SUB ) t= restrictedTermRule ) ( (s= ADD |s= SUB ) t= restrictedTermRule )* ;
 	public final Expression restrictedExpressionRule() throws RecognitionException {
 		Expression expr = null;
 
@@ -3528,30 +3708,30 @@ public class JCoQLParser extends Parser {
 
 		 expr = new Expression (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:413:3: ( (t= restrictedTermRule | (s= ADD |s= SUB ) t= restrictedTermRule ) ( (s= ADD |s= SUB ) t= restrictedTermRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:414:4: (t= restrictedTermRule | (s= ADD |s= SUB ) t= restrictedTermRule ) ( (s= ADD |s= SUB ) t= restrictedTermRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:429:3: ( (t= restrictedTermRule | (s= ADD |s= SUB ) t= restrictedTermRule ) ( (s= ADD |s= SUB ) t= restrictedTermRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:430:4: (t= restrictedTermRule | (s= ADD |s= SUB ) t= restrictedTermRule ) ( (s= ADD |s= SUB ) t= restrictedTermRule )*
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:414:4: (t= restrictedTermRule | (s= ADD |s= SUB ) t= restrictedTermRule )
-			int alt60=2;
-			int LA60_0 = input.LA(1);
-			if ( (LA60_0==APEX_VALUE||LA60_0==ARRAY_FUNCTION||LA60_0==BOOLEAN||LA60_0==DEGREE||(LA60_0 >= EXTENT && LA60_0 <= EXTRACT_ARRAY)||LA60_0==FIELD_NAME||LA60_0==FLOAT||(LA60_0 >= ID && LA60_0 <= IF_ERROR)||LA60_0==INT||LA60_0==LB||LA60_0==LP||(LA60_0 >= MEMBERSHIP_ARRAY && LA60_0 <= MEMBERSHIP_TO)||LA60_0==QUOTED_VALUE||LA60_0==TRANSLATE) ) {
-				alt60=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:430:4: (t= restrictedTermRule | (s= ADD |s= SUB ) t= restrictedTermRule )
+			int alt63=2;
+			int LA63_0 = input.LA(1);
+			if ( (LA63_0==APEX_VALUE||LA63_0==ARRAY_FUNCTION||LA63_0==BOOLEAN||LA63_0==DEGREE||(LA63_0 >= EXTENT && LA63_0 <= EXTRACT_ARRAY)||LA63_0==FIELD_NAME||LA63_0==FLOAT||LA63_0==HASH_NAME||(LA63_0 >= ID && LA63_0 <= IF_ERROR)||LA63_0==INT||LA63_0==LB||LA63_0==LP||(LA63_0 >= MEMBERSHIP_ARRAY && LA63_0 <= MEMBERSHIP_TO)||LA63_0==QUOTED_VALUE||LA63_0==TRANSLATE) ) {
+				alt63=1;
 			}
-			else if ( (LA60_0==ADD||LA60_0==SUB) ) {
-				alt60=2;
+			else if ( (LA63_0==ADD||LA63_0==SUB) ) {
+				alt63=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 60, 0, input);
+					new NoViableAltException("", 63, 0, input);
 				throw nvae;
 			}
 
-			switch (alt60) {
+			switch (alt63) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:414:6: t= restrictedTermRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:430:6: t= restrictedTermRule
 					{
-					pushFollow(FOLLOW_restrictedTermRule_in_restrictedExpressionRule4067);
+					pushFollow(FOLLOW_restrictedTermRule_in_restrictedExpressionRule4295);
 					t=restrictedTermRule();
 					state._fsp--;
 
@@ -3559,41 +3739,41 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:415:5: (s= ADD |s= SUB ) t= restrictedTermRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:431:5: (s= ADD |s= SUB ) t= restrictedTermRule
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:415:5: (s= ADD |s= SUB )
-					int alt59=2;
-					int LA59_0 = input.LA(1);
-					if ( (LA59_0==ADD) ) {
-						alt59=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:431:5: (s= ADD |s= SUB )
+					int alt62=2;
+					int LA62_0 = input.LA(1);
+					if ( (LA62_0==ADD) ) {
+						alt62=1;
 					}
-					else if ( (LA59_0==SUB) ) {
-						alt59=2;
+					else if ( (LA62_0==SUB) ) {
+						alt62=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 59, 0, input);
+							new NoViableAltException("", 62, 0, input);
 						throw nvae;
 					}
 
-					switch (alt59) {
+					switch (alt62) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:415:6: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:431:6: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_restrictedExpressionRule4090); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_restrictedExpressionRule4318); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:415:14: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:431:14: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_restrictedExpressionRule4096); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_restrictedExpressionRule4324); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_restrictedTermRule_in_restrictedExpressionRule4101);
+					pushFollow(FOLLOW_restrictedTermRule_in_restrictedExpressionRule4329);
 					t=restrictedTermRule();
 					state._fsp--;
 
@@ -3603,52 +3783,52 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:416:5: ( (s= ADD |s= SUB ) t= restrictedTermRule )*
-			loop62:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:432:5: ( (s= ADD |s= SUB ) t= restrictedTermRule )*
+			loop65:
 			while (true) {
-				int alt62=2;
-				int LA62_0 = input.LA(1);
-				if ( (LA62_0==ADD||LA62_0==SUB) ) {
-					alt62=1;
+				int alt65=2;
+				int LA65_0 = input.LA(1);
+				if ( (LA65_0==ADD||LA65_0==SUB) ) {
+					alt65=1;
 				}
 
-				switch (alt62) {
+				switch (alt65) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:416:7: (s= ADD |s= SUB ) t= restrictedTermRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:432:7: (s= ADD |s= SUB ) t= restrictedTermRule
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:416:7: (s= ADD |s= SUB )
-					int alt61=2;
-					int LA61_0 = input.LA(1);
-					if ( (LA61_0==ADD) ) {
-						alt61=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:432:7: (s= ADD |s= SUB )
+					int alt64=2;
+					int LA64_0 = input.LA(1);
+					if ( (LA64_0==ADD) ) {
+						alt64=1;
 					}
-					else if ( (LA61_0==SUB) ) {
-						alt61=2;
+					else if ( (LA64_0==SUB) ) {
+						alt64=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 61, 0, input);
+							new NoViableAltException("", 64, 0, input);
 						throw nvae;
 					}
 
-					switch (alt61) {
+					switch (alt64) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:416:8: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:432:8: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_restrictedExpressionRule4119); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_restrictedExpressionRule4347); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:416:16: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:432:16: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_restrictedExpressionRule4125); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_restrictedExpressionRule4353); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_restrictedTermRule_in_restrictedExpressionRule4130);
+					pushFollow(FOLLOW_restrictedTermRule_in_restrictedExpressionRule4358);
 					t=restrictedTermRule();
 					state._fsp--;
 
@@ -3657,7 +3837,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop62;
+					break loop65;
 				}
 			}
 
@@ -3678,7 +3858,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "restrictedTermRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:420:1: restrictedTermRule returns [ExpressionTerm et] : f= restrictedFactorRule ( (s= MUL |s= DIV ) f= restrictedFactorRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:436:1: restrictedTermRule returns [ExpressionTerm et] : f= restrictedFactorRule ( (s= MUL |s= DIV ) f= restrictedFactorRule )* ;
 	public final ExpressionTerm restrictedTermRule() throws RecognitionException {
 		ExpressionTerm et = null;
 
@@ -3688,60 +3868,60 @@ public class JCoQLParser extends Parser {
 
 		 et = new ExpressionTerm (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:422:3: (f= restrictedFactorRule ( (s= MUL |s= DIV ) f= restrictedFactorRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:423:4: f= restrictedFactorRule ( (s= MUL |s= DIV ) f= restrictedFactorRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:438:3: (f= restrictedFactorRule ( (s= MUL |s= DIV ) f= restrictedFactorRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:439:4: f= restrictedFactorRule ( (s= MUL |s= DIV ) f= restrictedFactorRule )*
 			{
-			pushFollow(FOLLOW_restrictedFactorRule_in_restrictedTermRule4168);
+			pushFollow(FOLLOW_restrictedFactorRule_in_restrictedTermRule4396);
 			f=restrictedFactorRule();
 			state._fsp--;
 
 			 et.addFactor(f, null);
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:424:5: ( (s= MUL |s= DIV ) f= restrictedFactorRule )*
-			loop64:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:440:5: ( (s= MUL |s= DIV ) f= restrictedFactorRule )*
+			loop67:
 			while (true) {
-				int alt64=2;
-				int LA64_0 = input.LA(1);
-				if ( (LA64_0==DIV||LA64_0==MUL) ) {
-					alt64=1;
+				int alt67=2;
+				int LA67_0 = input.LA(1);
+				if ( (LA67_0==DIV||LA67_0==MUL) ) {
+					alt67=1;
 				}
 
-				switch (alt64) {
+				switch (alt67) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:424:7: (s= MUL |s= DIV ) f= restrictedFactorRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:440:7: (s= MUL |s= DIV ) f= restrictedFactorRule
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:424:7: (s= MUL |s= DIV )
-					int alt63=2;
-					int LA63_0 = input.LA(1);
-					if ( (LA63_0==MUL) ) {
-						alt63=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:440:7: (s= MUL |s= DIV )
+					int alt66=2;
+					int LA66_0 = input.LA(1);
+					if ( (LA66_0==MUL) ) {
+						alt66=1;
 					}
-					else if ( (LA63_0==DIV) ) {
-						alt63=2;
+					else if ( (LA66_0==DIV) ) {
+						alt66=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 63, 0, input);
+							new NoViableAltException("", 66, 0, input);
 						throw nvae;
 					}
 
-					switch (alt63) {
+					switch (alt66) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:424:8: s= MUL
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:440:8: s= MUL
 							{
-							s=(Token)match(input,MUL,FOLLOW_MUL_in_restrictedTermRule4191); 
+							s=(Token)match(input,MUL,FOLLOW_MUL_in_restrictedTermRule4419); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:424:16: s= DIV
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:440:16: s= DIV
 							{
-							s=(Token)match(input,DIV,FOLLOW_DIV_in_restrictedTermRule4197); 
+							s=(Token)match(input,DIV,FOLLOW_DIV_in_restrictedTermRule4425); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_restrictedFactorRule_in_restrictedTermRule4202);
+					pushFollow(FOLLOW_restrictedFactorRule_in_restrictedTermRule4430);
 					f=restrictedFactorRule();
 					state._fsp--;
 
@@ -3750,7 +3930,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop64;
+					break loop67;
 				}
 			}
 
@@ -3771,7 +3951,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "restrictedFactorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:428:1: restrictedFactorRule returns [ExpressionFactor ef] : ( LP ex= restrictedExpressionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= restrictedFactorRule ( COMMA f= restrictedFactorRule )* RB ) ( EXP e= restrictedFactorRule )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:444:1: restrictedFactorRule returns [ExpressionFactor ef] : ( LP ex= restrictedExpressionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= restrictedFactorRule ( COMMA f= restrictedFactorRule )* RB ) ( EXP e= restrictedFactorRule )? ;
 	public final ExpressionFactor restrictedFactorRule() throws RecognitionException {
 		ExpressionFactor ef = null;
 
@@ -3786,20 +3966,20 @@ public class JCoQLParser extends Parser {
 		ExpressionFactor e =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:429:3: ( ( LP ex= restrictedExpressionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= restrictedFactorRule ( COMMA f= restrictedFactorRule )* RB ) ( EXP e= restrictedFactorRule )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:430:3: ( LP ex= restrictedExpressionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= restrictedFactorRule ( COMMA f= restrictedFactorRule )* RB ) ( EXP e= restrictedFactorRule )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:445:3: ( ( LP ex= restrictedExpressionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= restrictedFactorRule ( COMMA f= restrictedFactorRule )* RB ) ( EXP e= restrictedFactorRule )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:446:3: ( LP ex= restrictedExpressionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= restrictedFactorRule ( COMMA f= restrictedFactorRule )* RB ) ( EXP e= restrictedFactorRule )?
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:430:3: ( LP ex= restrictedExpressionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= restrictedFactorRule ( COMMA f= restrictedFactorRule )* RB )
-			int alt67=6;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:446:3: ( LP ex= restrictedExpressionRule RP |fr= fieldRefRule |vl= valueRule |x= ID LP (fp= functionParamsRule )? RP |sf= specialFunctionRule | LB f= restrictedFactorRule ( COMMA f= restrictedFactorRule )* RB )
+			int alt70=6;
 			switch ( input.LA(1) ) {
 			case LP:
 				{
-				alt67=1;
+				alt70=1;
 				}
 				break;
 			case FIELD_NAME:
 				{
-				alt67=2;
+				alt70=2;
 				}
 				break;
 			case APEX_VALUE:
@@ -3808,53 +3988,55 @@ public class JCoQLParser extends Parser {
 			case INT:
 			case QUOTED_VALUE:
 				{
-				alt67=3;
+				alt70=3;
 				}
 				break;
 			case ID:
 				{
-				alt67=4;
+				alt70=4;
 				}
 				break;
 			case ARRAY_FUNCTION:
 			case DEGREE:
 			case EXTENT:
 			case EXTRACT_ARRAY:
+			case HASH_NAME:
+			case IF:
 			case IF_ERROR:
 			case MEMBERSHIP_ARRAY:
 			case MEMBERSHIP_TO:
 			case TRANSLATE:
 				{
-				alt67=5;
+				alt70=5;
 				}
 				break;
 			case LB:
 				{
-				alt67=6;
+				alt70=6;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 67, 0, input);
+					new NoViableAltException("", 70, 0, input);
 				throw nvae;
 			}
-			switch (alt67) {
+			switch (alt70) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:430:5: LP ex= restrictedExpressionRule RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:446:5: LP ex= restrictedExpressionRule RP
 					{
-					match(input,LP,FOLLOW_LP_in_restrictedFactorRule4236); 
-					pushFollow(FOLLOW_restrictedExpressionRule_in_restrictedFactorRule4240);
+					match(input,LP,FOLLOW_LP_in_restrictedFactorRule4464); 
+					pushFollow(FOLLOW_restrictedExpressionRule_in_restrictedFactorRule4468);
 					ex=restrictedExpressionRule();
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_restrictedFactorRule4242); 
+					match(input,RP,FOLLOW_RP_in_restrictedFactorRule4470); 
 					 ef = new ExpressionFactor (ex); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:431:6: fr= fieldRefRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:447:6: fr= fieldRefRule
 					{
-					pushFollow(FOLLOW_fieldRefRule_in_restrictedFactorRule4260);
+					pushFollow(FOLLOW_fieldRefRule_in_restrictedFactorRule4488);
 					fr=fieldRefRule();
 					state._fsp--;
 
@@ -3862,9 +4044,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:432:6: vl= valueRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:448:6: vl= valueRule
 					{
-					pushFollow(FOLLOW_valueRule_in_restrictedFactorRule4287);
+					pushFollow(FOLLOW_valueRule_in_restrictedFactorRule4515);
 					vl=valueRule();
 					state._fsp--;
 
@@ -3872,21 +4054,21 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:433:6: x= ID LP (fp= functionParamsRule )? RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:449:6: x= ID LP (fp= functionParamsRule )? RP
 					{
-					x=(Token)match(input,ID,FOLLOW_ID_in_restrictedFactorRule4315); 
-					match(input,LP,FOLLOW_LP_in_restrictedFactorRule4317); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:433:14: (fp= functionParamsRule )?
-					int alt65=2;
-					int LA65_0 = input.LA(1);
-					if ( (LA65_0==ADD||LA65_0==APEX_VALUE||LA65_0==ARRAY_FUNCTION||LA65_0==BOOLEAN||LA65_0==DEGREE||(LA65_0 >= EXTENT && LA65_0 <= EXTRACT_ARRAY)||LA65_0==FIELD_NAME||LA65_0==FLOAT||(LA65_0 >= ID && LA65_0 <= IF_ERROR)||LA65_0==INT||LA65_0==LB||LA65_0==LP||(LA65_0 >= MEMBERSHIP_ARRAY && LA65_0 <= MEMBERSHIP_TO)||LA65_0==QUOTED_VALUE||LA65_0==SUB||LA65_0==TRANSLATE) ) {
-						alt65=1;
+					x=(Token)match(input,ID,FOLLOW_ID_in_restrictedFactorRule4543); 
+					match(input,LP,FOLLOW_LP_in_restrictedFactorRule4545); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:449:14: (fp= functionParamsRule )?
+					int alt68=2;
+					int LA68_0 = input.LA(1);
+					if ( (LA68_0==ADD||LA68_0==APEX_VALUE||LA68_0==ARRAY_FUNCTION||LA68_0==BOOLEAN||LA68_0==DEGREE||(LA68_0 >= EXTENT && LA68_0 <= EXTRACT_ARRAY)||LA68_0==FIELD_NAME||LA68_0==FLOAT||LA68_0==HASH_NAME||(LA68_0 >= ID && LA68_0 <= IF_ERROR)||LA68_0==INT||LA68_0==LB||LA68_0==LP||(LA68_0 >= MEMBERSHIP_ARRAY && LA68_0 <= MEMBERSHIP_TO)||LA68_0==QUOTED_VALUE||LA68_0==SUB||LA68_0==TRANSLATE) ) {
+						alt68=1;
 					}
-					switch (alt65) {
+					switch (alt68) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:433:15: fp= functionParamsRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:449:15: fp= functionParamsRule
 							{
-							pushFollow(FOLLOW_functionParamsRule_in_restrictedFactorRule4322);
+							pushFollow(FOLLOW_functionParamsRule_in_restrictedFactorRule4550);
 							fp=functionParamsRule();
 							state._fsp--;
 
@@ -3895,14 +4077,14 @@ public class JCoQLParser extends Parser {
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_restrictedFactorRule4326); 
+					match(input,RP,FOLLOW_RP_in_restrictedFactorRule4554); 
 					 ef = env.buildFunction (x, fp); 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:434:6: sf= specialFunctionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:450:6: sf= specialFunctionRule
 					{
-					pushFollow(FOLLOW_specialFunctionRule_in_restrictedFactorRule4345);
+					pushFollow(FOLLOW_specialFunctionRule_in_restrictedFactorRule4573);
 					sf=specialFunctionRule();
 					state._fsp--;
 
@@ -3910,29 +4092,29 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 6 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:435:6: LB f= restrictedFactorRule ( COMMA f= restrictedFactorRule )* RB
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:451:6: LB f= restrictedFactorRule ( COMMA f= restrictedFactorRule )* RB
 					{
-					match(input,LB,FOLLOW_LB_in_restrictedFactorRule4376); 
-					pushFollow(FOLLOW_restrictedFactorRule_in_restrictedFactorRule4380);
+					match(input,LB,FOLLOW_LB_in_restrictedFactorRule4604); 
+					pushFollow(FOLLOW_restrictedFactorRule_in_restrictedFactorRule4608);
 					f=restrictedFactorRule();
 					state._fsp--;
 
 					 ef = new ExpressionFactor (f); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:436:6: ( COMMA f= restrictedFactorRule )*
-					loop66:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:452:6: ( COMMA f= restrictedFactorRule )*
+					loop69:
 					while (true) {
-						int alt66=2;
-						int LA66_0 = input.LA(1);
-						if ( (LA66_0==COMMA) ) {
-							alt66=1;
+						int alt69=2;
+						int LA69_0 = input.LA(1);
+						if ( (LA69_0==COMMA) ) {
+							alt69=1;
 						}
 
-						switch (alt66) {
+						switch (alt69) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:436:8: COMMA f= restrictedFactorRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:452:8: COMMA f= restrictedFactorRule
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_restrictedFactorRule4402); 
-							pushFollow(FOLLOW_restrictedFactorRule_in_restrictedFactorRule4406);
+							match(input,COMMA,FOLLOW_COMMA_in_restrictedFactorRule4630); 
+							pushFollow(FOLLOW_restrictedFactorRule_in_restrictedFactorRule4634);
 							f=restrictedFactorRule();
 							state._fsp--;
 
@@ -3941,28 +4123,28 @@ public class JCoQLParser extends Parser {
 							break;
 
 						default :
-							break loop66;
+							break loop69;
 						}
 					}
 
-					match(input,RB,FOLLOW_RB_in_restrictedFactorRule4440); 
+					match(input,RB,FOLLOW_RB_in_restrictedFactorRule4668); 
 					}
 					break;
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:439:4: ( EXP e= restrictedFactorRule )?
-			int alt68=2;
-			int LA68_0 = input.LA(1);
-			if ( (LA68_0==EXP) ) {
-				alt68=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:455:4: ( EXP e= restrictedFactorRule )?
+			int alt71=2;
+			int LA71_0 = input.LA(1);
+			if ( (LA71_0==EXP) ) {
+				alt71=1;
 			}
-			switch (alt68) {
+			switch (alt71) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:439:6: EXP e= restrictedFactorRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:455:6: EXP e= restrictedFactorRule
 					{
-					match(input,EXP,FOLLOW_EXP_in_restrictedFactorRule4452); 
-					pushFollow(FOLLOW_restrictedFactorRule_in_restrictedFactorRule4456);
+					match(input,EXP,FOLLOW_EXP_in_restrictedFactorRule4680); 
+					pushFollow(FOLLOW_restrictedFactorRule_in_restrictedFactorRule4684);
 					e=restrictedFactorRule();
 					state._fsp--;
 
@@ -3989,7 +4171,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "functionParamsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:443:1: functionParamsRule returns [ArrayList<Expression> params] : e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:459:1: functionParamsRule returns [ArrayList<Expression> params] : e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* ;
 	public final ArrayList<Expression> functionParamsRule() throws RecognitionException {
 		ArrayList<Expression> params = null;
 
@@ -3998,29 +4180,29 @@ public class JCoQLParser extends Parser {
 
 		 params = new ArrayList<Expression>(); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:445:3: (e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:446:4: e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:461:3: (e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:462:4: e= restrictedExpressionRule ( COMMA e= restrictedExpressionRule )*
 			{
-			pushFollow(FOLLOW_restrictedExpressionRule_in_functionParamsRule4511);
+			pushFollow(FOLLOW_restrictedExpressionRule_in_functionParamsRule4739);
 			e=restrictedExpressionRule();
 			state._fsp--;
 
 			 params.add(e); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:447:6: ( COMMA e= restrictedExpressionRule )*
-			loop69:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:463:6: ( COMMA e= restrictedExpressionRule )*
+			loop72:
 			while (true) {
-				int alt69=2;
-				int LA69_0 = input.LA(1);
-				if ( (LA69_0==COMMA) ) {
-					alt69=1;
+				int alt72=2;
+				int LA72_0 = input.LA(1);
+				if ( (LA72_0==COMMA) ) {
+					alt72=1;
 				}
 
-				switch (alt69) {
+				switch (alt72) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:447:8: COMMA e= restrictedExpressionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:463:8: COMMA e= restrictedExpressionRule
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_functionParamsRule4529); 
-					pushFollow(FOLLOW_restrictedExpressionRule_in_functionParamsRule4533);
+					match(input,COMMA,FOLLOW_COMMA_in_functionParamsRule4757); 
+					pushFollow(FOLLOW_restrictedExpressionRule_in_functionParamsRule4761);
 					e=restrictedExpressionRule();
 					state._fsp--;
 
@@ -4029,7 +4211,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop69;
+					break loop72;
 				}
 			}
 
@@ -4050,7 +4232,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "comparatorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:455:1: comparatorRule returns [Token op] : (o= EQ |o= NEQ |o= LT |o= GT |o= LE |o= GE ) ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:471:1: comparatorRule returns [Token op] : (o= EQ |o= NEQ |o= LT |o= GT |o= LE |o= GE ) ;
 	public final Token comparatorRule() throws RecognitionException {
 		Token op = null;
 
@@ -4058,82 +4240,82 @@ public class JCoQLParser extends Parser {
 		Token o=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:456:3: ( (o= EQ |o= NEQ |o= LT |o= GT |o= LE |o= GE ) )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:457:4: (o= EQ |o= NEQ |o= LT |o= GT |o= LE |o= GE )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:472:3: ( (o= EQ |o= NEQ |o= LT |o= GT |o= LE |o= GE ) )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:473:4: (o= EQ |o= NEQ |o= LT |o= GT |o= LE |o= GE )
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:457:4: (o= EQ |o= NEQ |o= LT |o= GT |o= LE |o= GE )
-			int alt70=6;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:473:4: (o= EQ |o= NEQ |o= LT |o= GT |o= LE |o= GE )
+			int alt73=6;
 			switch ( input.LA(1) ) {
 			case EQ:
 				{
-				alt70=1;
+				alt73=1;
 				}
 				break;
 			case NEQ:
 				{
-				alt70=2;
+				alt73=2;
 				}
 				break;
 			case LT:
 				{
-				alt70=3;
+				alt73=3;
 				}
 				break;
 			case GT:
 				{
-				alt70=4;
+				alt73=4;
 				}
 				break;
 			case LE:
 				{
-				alt70=5;
+				alt73=5;
 				}
 				break;
 			case GE:
 				{
-				alt70=6;
+				alt73=6;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 70, 0, input);
+					new NoViableAltException("", 73, 0, input);
 				throw nvae;
 			}
-			switch (alt70) {
+			switch (alt73) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:457:6: o= EQ
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:473:6: o= EQ
 					{
-					o=(Token)match(input,EQ,FOLLOW_EQ_in_comparatorRule4577); 
+					o=(Token)match(input,EQ,FOLLOW_EQ_in_comparatorRule4805); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:458:7: o= NEQ
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:474:7: o= NEQ
 					{
-					o=(Token)match(input,NEQ,FOLLOW_NEQ_in_comparatorRule4587); 
+					o=(Token)match(input,NEQ,FOLLOW_NEQ_in_comparatorRule4815); 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:459:7: o= LT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:475:7: o= LT
 					{
-					o=(Token)match(input,LT,FOLLOW_LT_in_comparatorRule4597); 
+					o=(Token)match(input,LT,FOLLOW_LT_in_comparatorRule4825); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:460:7: o= GT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:476:7: o= GT
 					{
-					o=(Token)match(input,GT,FOLLOW_GT_in_comparatorRule4607); 
+					o=(Token)match(input,GT,FOLLOW_GT_in_comparatorRule4835); 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:461:7: o= LE
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:477:7: o= LE
 					{
-					o=(Token)match(input,LE,FOLLOW_LE_in_comparatorRule4617); 
+					o=(Token)match(input,LE,FOLLOW_LE_in_comparatorRule4845); 
 					}
 					break;
 				case 6 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:462:7: o= GE
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:478:7: o= GE
 					{
-					o=(Token)match(input,GE,FOLLOW_GE_in_comparatorRule4627); 
+					o=(Token)match(input,GE,FOLLOW_GE_in_comparatorRule4855); 
 					}
 					break;
 
@@ -4157,7 +4339,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "numericRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:469:1: numericRule returns [String num] : (s= ADD |s= SUB )? (n= FLOAT |n= INT ) ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:485:1: numericRule returns [String num] : (s= ADD |s= SUB )? (n= FLOAT |n= INT ) ;
 	public final String numericRule() throws RecognitionException {
 		String num = null;
 
@@ -4166,61 +4348,61 @@ public class JCoQLParser extends Parser {
 		Token n=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:470:3: ( (s= ADD |s= SUB )? (n= FLOAT |n= INT ) )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:471:4: (s= ADD |s= SUB )? (n= FLOAT |n= INT )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:486:3: ( (s= ADD |s= SUB )? (n= FLOAT |n= INT ) )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:487:4: (s= ADD |s= SUB )? (n= FLOAT |n= INT )
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:471:4: (s= ADD |s= SUB )?
-			int alt71=3;
-			int LA71_0 = input.LA(1);
-			if ( (LA71_0==ADD) ) {
-				alt71=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:487:4: (s= ADD |s= SUB )?
+			int alt74=3;
+			int LA74_0 = input.LA(1);
+			if ( (LA74_0==ADD) ) {
+				alt74=1;
 			}
-			else if ( (LA71_0==SUB) ) {
-				alt71=2;
+			else if ( (LA74_0==SUB) ) {
+				alt74=2;
 			}
-			switch (alt71) {
+			switch (alt74) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:471:6: s= ADD
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:487:6: s= ADD
 					{
-					s=(Token)match(input,ADD,FOLLOW_ADD_in_numericRule4667); 
+					s=(Token)match(input,ADD,FOLLOW_ADD_in_numericRule4895); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:471:14: s= SUB
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:487:14: s= SUB
 					{
-					s=(Token)match(input,SUB,FOLLOW_SUB_in_numericRule4673); 
+					s=(Token)match(input,SUB,FOLLOW_SUB_in_numericRule4901); 
 					}
 					break;
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:472:4: (n= FLOAT |n= INT )
-			int alt72=2;
-			int LA72_0 = input.LA(1);
-			if ( (LA72_0==FLOAT) ) {
-				alt72=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:488:4: (n= FLOAT |n= INT )
+			int alt75=2;
+			int LA75_0 = input.LA(1);
+			if ( (LA75_0==FLOAT) ) {
+				alt75=1;
 			}
-			else if ( (LA72_0==INT) ) {
-				alt72=2;
+			else if ( (LA75_0==INT) ) {
+				alt75=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 72, 0, input);
+					new NoViableAltException("", 75, 0, input);
 				throw nvae;
 			}
 
-			switch (alt72) {
+			switch (alt75) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:472:6: n= FLOAT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:488:6: n= FLOAT
 					{
-					n=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_numericRule4686); 
+					n=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_numericRule4914); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:472:16: n= INT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:488:16: n= INT
 					{
-					n=(Token)match(input,INT,FOLLOW_INT_in_numericRule4692); 
+					n=(Token)match(input,INT,FOLLOW_INT_in_numericRule4920); 
 					}
 					break;
 
@@ -4244,78 +4426,78 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "checkForFuzzySetRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:478:1: checkForFuzzySetRule[GenerateSection gs] : CHECK_FOR (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule ( COMMA (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:494:1: checkForFuzzySetRule[GenerateSection gs] : CHECK_FOR (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule ( COMMA (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule )* ;
 	public final void checkForFuzzySetRule(GenerateSection gs) throws RecognitionException {
 		Token ty=null;
 		Token fs=null;
 		Condition fe =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:479:2: ( CHECK_FOR (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule ( COMMA (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:480:3: CHECK_FOR (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule ( COMMA (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:495:2: ( CHECK_FOR (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule ( COMMA (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:496:3: CHECK_FOR (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule ( COMMA (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule )*
 			{
-			match(input,CHECK_FOR,FOLLOW_CHECK_FOR_in_checkForFuzzySetRule4721); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:480:15: (ty= ID )?
-			int alt73=2;
-			int LA73_0 = input.LA(1);
-			if ( (LA73_0==ID) ) {
-				alt73=1;
+			match(input,CHECK_FOR,FOLLOW_CHECK_FOR_in_checkForFuzzySetRule4949); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:496:15: (ty= ID )?
+			int alt76=2;
+			int LA76_0 = input.LA(1);
+			if ( (LA76_0==ID) ) {
+				alt76=1;
 			}
-			switch (alt73) {
+			switch (alt76) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:480:15: ty= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:496:15: ty= ID
 					{
-					ty=(Token)match(input,ID,FOLLOW_ID_in_checkForFuzzySetRule4725); 
+					ty=(Token)match(input,ID,FOLLOW_ID_in_checkForFuzzySetRule4953); 
 					}
 					break;
 
 			}
 
-			match(input,FUZZY,FOLLOW_FUZZY_in_checkForFuzzySetRule4728); 
-			match(input,SET,FOLLOW_SET_in_checkForFuzzySetRule4730); 
-			fs=(Token)match(input,ID,FOLLOW_ID_in_checkForFuzzySetRule4734); 
-			match(input,USING,FOLLOW_USING_in_checkForFuzzySetRule4736); 
-			pushFollow(FOLLOW_usingOrConditionRule_in_checkForFuzzySetRule4741);
+			match(input,FUZZY,FOLLOW_FUZZY_in_checkForFuzzySetRule4956); 
+			match(input,SET,FOLLOW_SET_in_checkForFuzzySetRule4958); 
+			fs=(Token)match(input,ID,FOLLOW_ID_in_checkForFuzzySetRule4962); 
+			match(input,USING,FOLLOW_USING_in_checkForFuzzySetRule4964); 
+			pushFollow(FOLLOW_usingOrConditionRule_in_checkForFuzzySetRule4969);
 			fe=usingOrConditionRule();
 			state._fsp--;
 
 			 env.addCheckForFuzzySet (gs, fs, fe, ty); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:481:4: ( COMMA (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule )*
-			loop75:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:497:4: ( COMMA (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule )*
+			loop78:
 			while (true) {
-				int alt75=2;
-				int LA75_0 = input.LA(1);
-				if ( (LA75_0==COMMA) ) {
-					alt75=1;
+				int alt78=2;
+				int LA78_0 = input.LA(1);
+				if ( (LA78_0==COMMA) ) {
+					alt78=1;
 				}
 
-				switch (alt75) {
+				switch (alt78) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:481:37: COMMA (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:497:37: COMMA (ty= ID )? FUZZY SET fs= ID USING fe= usingOrConditionRule
 					{
 						ty = null; 
-					match(input,COMMA,FOLLOW_COMMA_in_checkForFuzzySetRule4789); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:482:13: (ty= ID )?
-					int alt74=2;
-					int LA74_0 = input.LA(1);
-					if ( (LA74_0==ID) ) {
-						alt74=1;
+					match(input,COMMA,FOLLOW_COMMA_in_checkForFuzzySetRule5017); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:498:13: (ty= ID )?
+					int alt77=2;
+					int LA77_0 = input.LA(1);
+					if ( (LA77_0==ID) ) {
+						alt77=1;
 					}
-					switch (alt74) {
+					switch (alt77) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:482:13: ty= ID
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:498:13: ty= ID
 							{
-							ty=(Token)match(input,ID,FOLLOW_ID_in_checkForFuzzySetRule4793); 
+							ty=(Token)match(input,ID,FOLLOW_ID_in_checkForFuzzySetRule5021); 
 							}
 							break;
 
 					}
 
-					match(input,FUZZY,FOLLOW_FUZZY_in_checkForFuzzySetRule4796); 
-					match(input,SET,FOLLOW_SET_in_checkForFuzzySetRule4798); 
-					fs=(Token)match(input,ID,FOLLOW_ID_in_checkForFuzzySetRule4802); 
-					match(input,USING,FOLLOW_USING_in_checkForFuzzySetRule4804); 
-					pushFollow(FOLLOW_usingOrConditionRule_in_checkForFuzzySetRule4808);
+					match(input,FUZZY,FOLLOW_FUZZY_in_checkForFuzzySetRule5024); 
+					match(input,SET,FOLLOW_SET_in_checkForFuzzySetRule5026); 
+					fs=(Token)match(input,ID,FOLLOW_ID_in_checkForFuzzySetRule5030); 
+					match(input,USING,FOLLOW_USING_in_checkForFuzzySetRule5032); 
+					pushFollow(FOLLOW_usingOrConditionRule_in_checkForFuzzySetRule5036);
 					fe=usingOrConditionRule();
 					state._fsp--;
 
@@ -4324,7 +4506,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop75;
+					break loop78;
 				}
 			}
 
@@ -4344,7 +4526,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "usingOrConditionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:487:1: usingOrConditionRule returns [Condition c] : c1= usingAndConditionRule ( OR c2= usingAndConditionRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:503:1: usingOrConditionRule returns [Condition c] : c1= usingAndConditionRule ( OR c2= usingAndConditionRule )* ;
 	public final Condition usingOrConditionRule() throws RecognitionException {
 		Condition c = null;
 
@@ -4353,29 +4535,29 @@ public class JCoQLParser extends Parser {
 		Condition c2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:488:3: (c1= usingAndConditionRule ( OR c2= usingAndConditionRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:489:5: c1= usingAndConditionRule ( OR c2= usingAndConditionRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:504:3: (c1= usingAndConditionRule ( OR c2= usingAndConditionRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:505:5: c1= usingAndConditionRule ( OR c2= usingAndConditionRule )*
 			{
-			pushFollow(FOLLOW_usingAndConditionRule_in_usingOrConditionRule4840);
+			pushFollow(FOLLOW_usingAndConditionRule_in_usingOrConditionRule5068);
 			c1=usingAndConditionRule();
 			state._fsp--;
 
 			 c = new ConditionOr (c1); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:490:4: ( OR c2= usingAndConditionRule )*
-			loop76:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:506:4: ( OR c2= usingAndConditionRule )*
+			loop79:
 			while (true) {
-				int alt76=2;
-				int LA76_0 = input.LA(1);
-				if ( (LA76_0==OR) ) {
-					alt76=1;
+				int alt79=2;
+				int LA79_0 = input.LA(1);
+				if ( (LA79_0==OR) ) {
+					alt79=1;
 				}
 
-				switch (alt76) {
+				switch (alt79) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:490:6: OR c2= usingAndConditionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:506:6: OR c2= usingAndConditionRule
 					{
-					match(input,OR,FOLLOW_OR_in_usingOrConditionRule4855); 
-					pushFollow(FOLLOW_usingAndConditionRule_in_usingOrConditionRule4859);
+					match(input,OR,FOLLOW_OR_in_usingOrConditionRule5083); 
+					pushFollow(FOLLOW_usingAndConditionRule_in_usingOrConditionRule5087);
 					c2=usingAndConditionRule();
 					state._fsp--;
 
@@ -4384,7 +4566,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop76;
+					break loop79;
 				}
 			}
 
@@ -4406,7 +4588,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "usingAndConditionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:498:1: usingAndConditionRule returns [Condition c] : c1= usingNotConditionRule ( AND c2= usingNotConditionRule )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:514:1: usingAndConditionRule returns [Condition c] : c1= usingNotConditionRule ( AND c2= usingNotConditionRule )* ;
 	public final Condition usingAndConditionRule() throws RecognitionException {
 		Condition c = null;
 
@@ -4415,29 +4597,29 @@ public class JCoQLParser extends Parser {
 		Condition c2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:499:3: (c1= usingNotConditionRule ( AND c2= usingNotConditionRule )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:500:5: c1= usingNotConditionRule ( AND c2= usingNotConditionRule )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:515:3: (c1= usingNotConditionRule ( AND c2= usingNotConditionRule )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:516:5: c1= usingNotConditionRule ( AND c2= usingNotConditionRule )*
 			{
-			pushFollow(FOLLOW_usingNotConditionRule_in_usingAndConditionRule4921);
+			pushFollow(FOLLOW_usingNotConditionRule_in_usingAndConditionRule5149);
 			c1=usingNotConditionRule();
 			state._fsp--;
 
 			 c = new ConditionAnd (c1); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:501:5: ( AND c2= usingNotConditionRule )*
-			loop77:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:517:5: ( AND c2= usingNotConditionRule )*
+			loop80:
 			while (true) {
-				int alt77=2;
-				int LA77_0 = input.LA(1);
-				if ( (LA77_0==AND) ) {
-					alt77=1;
+				int alt80=2;
+				int LA80_0 = input.LA(1);
+				if ( (LA80_0==AND) ) {
+					alt80=1;
 				}
 
-				switch (alt77) {
+				switch (alt80) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:501:7: AND c2= usingNotConditionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:517:7: AND c2= usingNotConditionRule
 					{
-					match(input,AND,FOLLOW_AND_in_usingAndConditionRule4937); 
-					pushFollow(FOLLOW_usingNotConditionRule_in_usingAndConditionRule4941);
+					match(input,AND,FOLLOW_AND_in_usingAndConditionRule5165); 
+					pushFollow(FOLLOW_usingNotConditionRule_in_usingAndConditionRule5169);
 					c2=usingNotConditionRule();
 					state._fsp--;
 
@@ -4446,7 +4628,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop77;
+					break loop80;
 				}
 			}
 
@@ -4468,7 +4650,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "usingNotConditionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:506:1: usingNotConditionRule returns [Condition c] : (not= NOT )? p= usingPredicateRule ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:522:1: usingNotConditionRule returns [Condition c] : (not= NOT )? p= usingPredicateRule ;
 	public final Condition usingNotConditionRule() throws RecognitionException {
 		Condition c = null;
 
@@ -4477,26 +4659,26 @@ public class JCoQLParser extends Parser {
 		Predicate p =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:507:3: ( (not= NOT )? p= usingPredicateRule )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:508:5: (not= NOT )? p= usingPredicateRule
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:523:3: ( (not= NOT )? p= usingPredicateRule )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:524:5: (not= NOT )? p= usingPredicateRule
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:508:5: (not= NOT )?
-			int alt78=2;
-			int LA78_0 = input.LA(1);
-			if ( (LA78_0==NOT) ) {
-				alt78=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:524:5: (not= NOT )?
+			int alt81=2;
+			int LA81_0 = input.LA(1);
+			if ( (LA81_0==NOT) ) {
+				alt81=1;
 			}
-			switch (alt78) {
+			switch (alt81) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:508:7: not= NOT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:524:7: not= NOT
 					{
-					not=(Token)match(input,NOT,FOLLOW_NOT_in_usingNotConditionRule5003); 
+					not=(Token)match(input,NOT,FOLLOW_NOT_in_usingNotConditionRule5231); 
 					}
 					break;
 
 			}
 
-			pushFollow(FOLLOW_usingPredicateRule_in_usingNotConditionRule5015);
+			pushFollow(FOLLOW_usingPredicateRule_in_usingNotConditionRule5243);
 			p=usingPredicateRule();
 			state._fsp--;
 
@@ -4518,7 +4700,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "usingPredicateRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:514:1: usingPredicateRule returns [Predicate p] : ( LP c= usingOrConditionRule RP |x= ID ( LP (fp= functionParamsRule )? RP )? | IF_FAILS LP c= usingOrConditionRule COMMA n= numericRule RP );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:530:1: usingPredicateRule returns [Predicate p] : ( LP c= usingOrConditionRule RP |x= ID ( LP (fp= functionParamsRule )? RP )? | IF_FAILS LP c= usingOrConditionRule COMMA n= numericRule RP );
 	public final Predicate usingPredicateRule() throws RecognitionException {
 		Predicate p = null;
 
@@ -4529,68 +4711,68 @@ public class JCoQLParser extends Parser {
 		String n =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:515:3: ( LP c= usingOrConditionRule RP |x= ID ( LP (fp= functionParamsRule )? RP )? | IF_FAILS LP c= usingOrConditionRule COMMA n= numericRule RP )
-			int alt81=3;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:531:3: ( LP c= usingOrConditionRule RP |x= ID ( LP (fp= functionParamsRule )? RP )? | IF_FAILS LP c= usingOrConditionRule COMMA n= numericRule RP )
+			int alt84=3;
 			switch ( input.LA(1) ) {
 			case LP:
 				{
-				alt81=1;
+				alt84=1;
 				}
 				break;
 			case ID:
 				{
-				alt81=2;
+				alt84=2;
 				}
 				break;
 			case IF_FAILS:
 				{
-				alt81=3;
+				alt84=3;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 81, 0, input);
+					new NoViableAltException("", 84, 0, input);
 				throw nvae;
 			}
-			switch (alt81) {
+			switch (alt84) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:516:4: LP c= usingOrConditionRule RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:532:4: LP c= usingOrConditionRule RP
 					{
-					match(input,LP,FOLLOW_LP_in_usingPredicateRule5047); 
-					pushFollow(FOLLOW_usingOrConditionRule_in_usingPredicateRule5051);
+					match(input,LP,FOLLOW_LP_in_usingPredicateRule5275); 
+					pushFollow(FOLLOW_usingOrConditionRule_in_usingPredicateRule5279);
 					c=usingOrConditionRule();
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_usingPredicateRule5053); 
+					match(input,RP,FOLLOW_RP_in_usingPredicateRule5281); 
 						p = new UsingPredicate (c); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:517:4: x= ID ( LP (fp= functionParamsRule )? RP )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:533:4: x= ID ( LP (fp= functionParamsRule )? RP )?
 					{
-					x=(Token)match(input,ID,FOLLOW_ID_in_usingPredicateRule5075); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:517:9: ( LP (fp= functionParamsRule )? RP )?
-					int alt80=2;
-					int LA80_0 = input.LA(1);
-					if ( (LA80_0==LP) ) {
-						alt80=1;
+					x=(Token)match(input,ID,FOLLOW_ID_in_usingPredicateRule5303); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:533:9: ( LP (fp= functionParamsRule )? RP )?
+					int alt83=2;
+					int LA83_0 = input.LA(1);
+					if ( (LA83_0==LP) ) {
+						alt83=1;
 					}
-					switch (alt80) {
+					switch (alt83) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:517:10: LP (fp= functionParamsRule )? RP
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:533:10: LP (fp= functionParamsRule )? RP
 							{
-							match(input,LP,FOLLOW_LP_in_usingPredicateRule5078); 
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:517:13: (fp= functionParamsRule )?
-							int alt79=2;
-							int LA79_0 = input.LA(1);
-							if ( (LA79_0==ADD||LA79_0==APEX_VALUE||LA79_0==ARRAY_FUNCTION||LA79_0==BOOLEAN||LA79_0==DEGREE||(LA79_0 >= EXTENT && LA79_0 <= EXTRACT_ARRAY)||LA79_0==FIELD_NAME||LA79_0==FLOAT||(LA79_0 >= ID && LA79_0 <= IF_ERROR)||LA79_0==INT||LA79_0==LB||LA79_0==LP||(LA79_0 >= MEMBERSHIP_ARRAY && LA79_0 <= MEMBERSHIP_TO)||LA79_0==QUOTED_VALUE||LA79_0==SUB||LA79_0==TRANSLATE) ) {
-								alt79=1;
+							match(input,LP,FOLLOW_LP_in_usingPredicateRule5306); 
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:533:13: (fp= functionParamsRule )?
+							int alt82=2;
+							int LA82_0 = input.LA(1);
+							if ( (LA82_0==ADD||LA82_0==APEX_VALUE||LA82_0==ARRAY_FUNCTION||LA82_0==BOOLEAN||LA82_0==DEGREE||(LA82_0 >= EXTENT && LA82_0 <= EXTRACT_ARRAY)||LA82_0==FIELD_NAME||LA82_0==FLOAT||LA82_0==HASH_NAME||(LA82_0 >= ID && LA82_0 <= IF_ERROR)||LA82_0==INT||LA82_0==LB||LA82_0==LP||(LA82_0 >= MEMBERSHIP_ARRAY && LA82_0 <= MEMBERSHIP_TO)||LA82_0==QUOTED_VALUE||LA82_0==SUB||LA82_0==TRANSLATE) ) {
+								alt82=1;
 							}
-							switch (alt79) {
+							switch (alt82) {
 								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:517:14: fp= functionParamsRule
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:533:14: fp= functionParamsRule
 									{
-									pushFollow(FOLLOW_functionParamsRule_in_usingPredicateRule5083);
+									pushFollow(FOLLOW_functionParamsRule_in_usingPredicateRule5311);
 									fp=functionParamsRule();
 									state._fsp--;
 
@@ -4599,7 +4781,7 @@ public class JCoQLParser extends Parser {
 
 							}
 
-							match(input,RP,FOLLOW_RP_in_usingPredicateRule5087); 
+							match(input,RP,FOLLOW_RP_in_usingPredicateRule5315); 
 							}
 							break;
 
@@ -4609,21 +4791,21 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:518:4: IF_FAILS LP c= usingOrConditionRule COMMA n= numericRule RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:534:4: IF_FAILS LP c= usingOrConditionRule COMMA n= numericRule RP
 					{
-					match(input,IF_FAILS,FOLLOW_IF_FAILS_in_usingPredicateRule5112); 
-					match(input,LP,FOLLOW_LP_in_usingPredicateRule5114); 
-					pushFollow(FOLLOW_usingOrConditionRule_in_usingPredicateRule5122);
+					match(input,IF_FAILS,FOLLOW_IF_FAILS_in_usingPredicateRule5340); 
+					match(input,LP,FOLLOW_LP_in_usingPredicateRule5342); 
+					pushFollow(FOLLOW_usingOrConditionRule_in_usingPredicateRule5350);
 					c=usingOrConditionRule();
 					state._fsp--;
 
-					match(input,COMMA,FOLLOW_COMMA_in_usingPredicateRule5124); 
-					pushFollow(FOLLOW_numericRule_in_usingPredicateRule5128);
+					match(input,COMMA,FOLLOW_COMMA_in_usingPredicateRule5352); 
+					pushFollow(FOLLOW_numericRule_in_usingPredicateRule5356);
 					n=numericRule();
 					state._fsp--;
 
 					 p = new UsingPredicate (c, n); 
-					match(input,RP,FOLLOW_RP_in_usingPredicateRule5140); 
+					match(input,RP,FOLLOW_RP_in_usingPredicateRule5368); 
 					}
 					break;
 
@@ -4643,72 +4825,72 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "alphaCutRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:524:1: alphaCutRule[GenerateSection gs] : ALPHACUT n= numericRule ON on= ID (de= FIELD_NAME )? ( COMMA n= numericRule ON on= ID (de= FIELD_NAME )? )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:540:1: alphaCutRule[GenerateSection gs] : ALPHACUT n= numericRule ON on= ID (de= FIELD_NAME )? ( COMMA n= numericRule ON on= ID (de= FIELD_NAME )? )* ;
 	public final void alphaCutRule(GenerateSection gs) throws RecognitionException {
 		Token on=null;
 		Token de=null;
 		String n =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:525:2: ( ALPHACUT n= numericRule ON on= ID (de= FIELD_NAME )? ( COMMA n= numericRule ON on= ID (de= FIELD_NAME )? )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:526:3: ALPHACUT n= numericRule ON on= ID (de= FIELD_NAME )? ( COMMA n= numericRule ON on= ID (de= FIELD_NAME )? )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:541:2: ( ALPHACUT n= numericRule ON on= ID (de= FIELD_NAME )? ( COMMA n= numericRule ON on= ID (de= FIELD_NAME )? )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:542:3: ALPHACUT n= numericRule ON on= ID (de= FIELD_NAME )? ( COMMA n= numericRule ON on= ID (de= FIELD_NAME )? )*
 			{
-			match(input,ALPHACUT,FOLLOW_ALPHACUT_in_alphaCutRule5156); 
-			pushFollow(FOLLOW_numericRule_in_alphaCutRule5161);
+			match(input,ALPHACUT,FOLLOW_ALPHACUT_in_alphaCutRule5384); 
+			pushFollow(FOLLOW_numericRule_in_alphaCutRule5389);
 			n=numericRule();
 			state._fsp--;
 
-			match(input,ON,FOLLOW_ON_in_alphaCutRule5163); 
-			on=(Token)match(input,ID,FOLLOW_ID_in_alphaCutRule5167); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:526:38: (de= FIELD_NAME )?
-			int alt82=2;
-			int LA82_0 = input.LA(1);
-			if ( (LA82_0==FIELD_NAME) ) {
-				alt82=1;
+			match(input,ON,FOLLOW_ON_in_alphaCutRule5391); 
+			on=(Token)match(input,ID,FOLLOW_ID_in_alphaCutRule5395); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:542:38: (de= FIELD_NAME )?
+			int alt85=2;
+			int LA85_0 = input.LA(1);
+			if ( (LA85_0==FIELD_NAME) ) {
+				alt85=1;
 			}
-			switch (alt82) {
+			switch (alt85) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:526:38: de= FIELD_NAME
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:542:38: de= FIELD_NAME
 					{
-					de=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_alphaCutRule5171); 
+					de=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_alphaCutRule5399); 
 					}
 					break;
 
 			}
 
 				env.addAlphaCut (gs, n, on, de); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:527:4: ( COMMA n= numericRule ON on= ID (de= FIELD_NAME )? )*
-			loop84:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:543:4: ( COMMA n= numericRule ON on= ID (de= FIELD_NAME )? )*
+			loop87:
 			while (true) {
-				int alt84=2;
-				int LA84_0 = input.LA(1);
-				if ( (LA84_0==COMMA) ) {
-					alt84=1;
+				int alt87=2;
+				int LA87_0 = input.LA(1);
+				if ( (LA87_0==COMMA) ) {
+					alt87=1;
 				}
 
-				switch (alt84) {
+				switch (alt87) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:527:30: COMMA n= numericRule ON on= ID (de= FIELD_NAME )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:543:30: COMMA n= numericRule ON on= ID (de= FIELD_NAME )?
 					{
 					 de = null; 
-					match(input,COMMA,FOLLOW_COMMA_in_alphaCutRule5213); 
-					pushFollow(FOLLOW_numericRule_in_alphaCutRule5217);
+					match(input,COMMA,FOLLOW_COMMA_in_alphaCutRule5441); 
+					pushFollow(FOLLOW_numericRule_in_alphaCutRule5445);
 					n=numericRule();
 					state._fsp--;
 
-					match(input,ON,FOLLOW_ON_in_alphaCutRule5219); 
-					on=(Token)match(input,ID,FOLLOW_ID_in_alphaCutRule5223); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:528:36: (de= FIELD_NAME )?
-					int alt83=2;
-					int LA83_0 = input.LA(1);
-					if ( (LA83_0==FIELD_NAME) ) {
-						alt83=1;
+					match(input,ON,FOLLOW_ON_in_alphaCutRule5447); 
+					on=(Token)match(input,ID,FOLLOW_ID_in_alphaCutRule5451); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:544:36: (de= FIELD_NAME )?
+					int alt86=2;
+					int LA86_0 = input.LA(1);
+					if ( (LA86_0==FIELD_NAME) ) {
+						alt86=1;
 					}
-					switch (alt83) {
+					switch (alt86) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:528:36: de= FIELD_NAME
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:544:36: de= FIELD_NAME
 							{
-							de=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_alphaCutRule5227); 
+							de=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_alphaCutRule5455); 
 							}
 							break;
 
@@ -4719,7 +4901,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop84;
+					break loop87;
 				}
 			}
 
@@ -4739,7 +4921,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "keepDropFuzzySetsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:537:1: keepDropFuzzySetsRule returns [KeepingDroppingFuzzySets dfs] : ( DEFUZZIFY | DROPPING ALL FUZZY SETS | KEEPING ALL FUZZY SETS | DROPPING FUZZY SETS fs= ID ( COMMA fs= ID )* | KEEPING FUZZY SETS fs= ID ( COMMA fs= ID )* );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:553:1: keepDropFuzzySetsRule returns [KeepingDroppingFuzzySets dfs] : ( DEFUZZIFY | DROPPING ALL FUZZY SETS | KEEPING ALL FUZZY SETS | DROPPING FUZZY SETS fs= ID ( COMMA fs= ID )* | KEEPING FUZZY SETS fs= ID ( COMMA fs= ID )* );
 	public final KeepingDroppingFuzzySets keepDropFuzzySetsRule() throws RecognitionException {
 		KeepingDroppingFuzzySets dfs = null;
 
@@ -4748,22 +4930,22 @@ public class JCoQLParser extends Parser {
 
 		 dfs = new KeepingDroppingFuzzySets ();
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:539:2: ( DEFUZZIFY | DROPPING ALL FUZZY SETS | KEEPING ALL FUZZY SETS | DROPPING FUZZY SETS fs= ID ( COMMA fs= ID )* | KEEPING FUZZY SETS fs= ID ( COMMA fs= ID )* )
-			int alt87=5;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:555:2: ( DEFUZZIFY | DROPPING ALL FUZZY SETS | KEEPING ALL FUZZY SETS | DROPPING FUZZY SETS fs= ID ( COMMA fs= ID )* | KEEPING FUZZY SETS fs= ID ( COMMA fs= ID )* )
+			int alt90=5;
 			switch ( input.LA(1) ) {
 			case DEFUZZIFY:
 				{
-				alt87=1;
+				alt90=1;
 				}
 				break;
 			case DROPPING:
 				{
-				int LA87_2 = input.LA(2);
-				if ( (LA87_2==ALL) ) {
-					alt87=2;
+				int LA90_2 = input.LA(2);
+				if ( (LA90_2==ALL) ) {
+					alt90=2;
 				}
-				else if ( (LA87_2==FUZZY) ) {
-					alt87=4;
+				else if ( (LA90_2==FUZZY) ) {
+					alt90=4;
 				}
 
 				else {
@@ -4771,7 +4953,7 @@ public class JCoQLParser extends Parser {
 					try {
 						input.consume();
 						NoViableAltException nvae =
-							new NoViableAltException("", 87, 2, input);
+							new NoViableAltException("", 90, 2, input);
 						throw nvae;
 					} finally {
 						input.rewind(nvaeMark);
@@ -4782,12 +4964,12 @@ public class JCoQLParser extends Parser {
 				break;
 			case KEEPING:
 				{
-				int LA87_3 = input.LA(2);
-				if ( (LA87_3==ALL) ) {
-					alt87=3;
+				int LA90_3 = input.LA(2);
+				if ( (LA90_3==ALL) ) {
+					alt90=3;
 				}
-				else if ( (LA87_3==FUZZY) ) {
-					alt87=5;
+				else if ( (LA90_3==FUZZY) ) {
+					alt90=5;
 				}
 
 				else {
@@ -4795,7 +4977,7 @@ public class JCoQLParser extends Parser {
 					try {
 						input.consume();
 						NoViableAltException nvae =
-							new NoViableAltException("", 87, 3, input);
+							new NoViableAltException("", 90, 3, input);
 						throw nvae;
 					} finally {
 						input.rewind(nvaeMark);
@@ -4806,100 +4988,100 @@ public class JCoQLParser extends Parser {
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 87, 0, input);
+					new NoViableAltException("", 90, 0, input);
 				throw nvae;
 			}
-			switch (alt87) {
+			switch (alt90) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:540:4: DEFUZZIFY
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:556:4: DEFUZZIFY
 					{
-					match(input,DEFUZZIFY,FOLLOW_DEFUZZIFY_in_keepDropFuzzySetsRule5265); 
+					match(input,DEFUZZIFY,FOLLOW_DEFUZZIFY_in_keepDropFuzzySetsRule5493); 
 						dfs.setDefuzzify(); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:541:5: DROPPING ALL FUZZY SETS
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:557:5: DROPPING ALL FUZZY SETS
 					{
-					match(input,DROPPING,FOLLOW_DROPPING_in_keepDropFuzzySetsRule5284); 
-					match(input,ALL,FOLLOW_ALL_in_keepDropFuzzySetsRule5286); 
-					match(input,FUZZY,FOLLOW_FUZZY_in_keepDropFuzzySetsRule5288); 
-					match(input,SETS,FOLLOW_SETS_in_keepDropFuzzySetsRule5290); 
+					match(input,DROPPING,FOLLOW_DROPPING_in_keepDropFuzzySetsRule5512); 
+					match(input,ALL,FOLLOW_ALL_in_keepDropFuzzySetsRule5514); 
+					match(input,FUZZY,FOLLOW_FUZZY_in_keepDropFuzzySetsRule5516); 
+					match(input,SETS,FOLLOW_SETS_in_keepDropFuzzySetsRule5518); 
 						dfs.setDroppingAll(); 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:542:5: KEEPING ALL FUZZY SETS
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:558:5: KEEPING ALL FUZZY SETS
 					{
-					match(input,KEEPING,FOLLOW_KEEPING_in_keepDropFuzzySetsRule5302); 
-					match(input,ALL,FOLLOW_ALL_in_keepDropFuzzySetsRule5304); 
-					match(input,FUZZY,FOLLOW_FUZZY_in_keepDropFuzzySetsRule5306); 
-					match(input,SETS,FOLLOW_SETS_in_keepDropFuzzySetsRule5308); 
+					match(input,KEEPING,FOLLOW_KEEPING_in_keepDropFuzzySetsRule5530); 
+					match(input,ALL,FOLLOW_ALL_in_keepDropFuzzySetsRule5532); 
+					match(input,FUZZY,FOLLOW_FUZZY_in_keepDropFuzzySetsRule5534); 
+					match(input,SETS,FOLLOW_SETS_in_keepDropFuzzySetsRule5536); 
 						dfs.setKeepingAll(); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:543:5: DROPPING FUZZY SETS fs= ID ( COMMA fs= ID )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:559:5: DROPPING FUZZY SETS fs= ID ( COMMA fs= ID )*
 					{
-					match(input,DROPPING,FOLLOW_DROPPING_in_keepDropFuzzySetsRule5321); 
-					match(input,FUZZY,FOLLOW_FUZZY_in_keepDropFuzzySetsRule5323); 
-					match(input,SETS,FOLLOW_SETS_in_keepDropFuzzySetsRule5325); 
-					fs=(Token)match(input,ID,FOLLOW_ID_in_keepDropFuzzySetsRule5329); 
+					match(input,DROPPING,FOLLOW_DROPPING_in_keepDropFuzzySetsRule5549); 
+					match(input,FUZZY,FOLLOW_FUZZY_in_keepDropFuzzySetsRule5551); 
+					match(input,SETS,FOLLOW_SETS_in_keepDropFuzzySetsRule5553); 
+					fs=(Token)match(input,ID,FOLLOW_ID_in_keepDropFuzzySetsRule5557); 
 						dfs.setDropping(fs.getText()); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:544:5: ( COMMA fs= ID )*
-					loop85:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:560:5: ( COMMA fs= ID )*
+					loop88:
 					while (true) {
-						int alt85=2;
-						int LA85_0 = input.LA(1);
-						if ( (LA85_0==COMMA) ) {
-							alt85=1;
+						int alt88=2;
+						int LA88_0 = input.LA(1);
+						if ( (LA88_0==COMMA) ) {
+							alt88=1;
 						}
 
-						switch (alt85) {
+						switch (alt88) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:544:7: COMMA fs= ID
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:560:7: COMMA fs= ID
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_keepDropFuzzySetsRule5343); 
-							fs=(Token)match(input,ID,FOLLOW_ID_in_keepDropFuzzySetsRule5347); 
+							match(input,COMMA,FOLLOW_COMMA_in_keepDropFuzzySetsRule5571); 
+							fs=(Token)match(input,ID,FOLLOW_ID_in_keepDropFuzzySetsRule5575); 
 							 dfs.addFuzzySet (fs.getText()); 
 							}
 							break;
 
 						default :
-							break loop85;
+							break loop88;
 						}
 					}
 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:545:5: KEEPING FUZZY SETS fs= ID ( COMMA fs= ID )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:561:5: KEEPING FUZZY SETS fs= ID ( COMMA fs= ID )*
 					{
-					match(input,KEEPING,FOLLOW_KEEPING_in_keepDropFuzzySetsRule5372); 
-					match(input,FUZZY,FOLLOW_FUZZY_in_keepDropFuzzySetsRule5374); 
-					match(input,SETS,FOLLOW_SETS_in_keepDropFuzzySetsRule5376); 
-					fs=(Token)match(input,ID,FOLLOW_ID_in_keepDropFuzzySetsRule5380); 
+					match(input,KEEPING,FOLLOW_KEEPING_in_keepDropFuzzySetsRule5600); 
+					match(input,FUZZY,FOLLOW_FUZZY_in_keepDropFuzzySetsRule5602); 
+					match(input,SETS,FOLLOW_SETS_in_keepDropFuzzySetsRule5604); 
+					fs=(Token)match(input,ID,FOLLOW_ID_in_keepDropFuzzySetsRule5608); 
 						dfs.setKeeping(fs.getText()); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:546:5: ( COMMA fs= ID )*
-					loop86:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:562:5: ( COMMA fs= ID )*
+					loop89:
 					while (true) {
-						int alt86=2;
-						int LA86_0 = input.LA(1);
-						if ( (LA86_0==COMMA) ) {
-							alt86=1;
+						int alt89=2;
+						int LA89_0 = input.LA(1);
+						if ( (LA89_0==COMMA) ) {
+							alt89=1;
 						}
 
-						switch (alt86) {
+						switch (alt89) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:546:7: COMMA fs= ID
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:562:7: COMMA fs= ID
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_keepDropFuzzySetsRule5395); 
-							fs=(Token)match(input,ID,FOLLOW_ID_in_keepDropFuzzySetsRule5399); 
+							match(input,COMMA,FOLLOW_COMMA_in_keepDropFuzzySetsRule5623); 
+							fs=(Token)match(input,ID,FOLLOW_ID_in_keepDropFuzzySetsRule5627); 
 							 dfs.addFuzzySet (fs.getText()); 
 							}
 							break;
 
 						default :
-							break loop86;
+							break loop89;
 						}
 					}
 
@@ -4922,48 +5104,48 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "addFieldsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:551:1: addFieldsRule[JoinCollections jc] : ADD_ST FIELDS LBR f= fieldRefRule COLON af= insertFieldRule[f] ( COMMA f= fieldRefRule COLON af= insertFieldRule[f] )* RBR ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:567:1: addFieldsRule[JoinCollections jc] : ADD_ST FIELDS LBR f= fieldRefRule COLON af= insertFieldRule[f] ( COMMA f= fieldRefRule COLON af= insertFieldRule[f] )* RBR ;
 	public final void addFieldsRule(JoinCollections jc) throws RecognitionException {
 		Field f =null;
 		AddField af =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:552:2: ( ADD_ST FIELDS LBR f= fieldRefRule COLON af= insertFieldRule[f] ( COMMA f= fieldRefRule COLON af= insertFieldRule[f] )* RBR )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:553:3: ADD_ST FIELDS LBR f= fieldRefRule COLON af= insertFieldRule[f] ( COMMA f= fieldRefRule COLON af= insertFieldRule[f] )* RBR
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:568:2: ( ADD_ST FIELDS LBR f= fieldRefRule COLON af= insertFieldRule[f] ( COMMA f= fieldRefRule COLON af= insertFieldRule[f] )* RBR )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:569:3: ADD_ST FIELDS LBR f= fieldRefRule COLON af= insertFieldRule[f] ( COMMA f= fieldRefRule COLON af= insertFieldRule[f] )* RBR
 			{
-			match(input,ADD_ST,FOLLOW_ADD_ST_in_addFieldsRule5440); 
-			match(input,FIELDS,FOLLOW_FIELDS_in_addFieldsRule5442); 
-			match(input,LBR,FOLLOW_LBR_in_addFieldsRule5469); 
-			pushFollow(FOLLOW_fieldRefRule_in_addFieldsRule5477);
+			match(input,ADD_ST,FOLLOW_ADD_ST_in_addFieldsRule5668); 
+			match(input,FIELDS,FOLLOW_FIELDS_in_addFieldsRule5670); 
+			match(input,LBR,FOLLOW_LBR_in_addFieldsRule5697); 
+			pushFollow(FOLLOW_fieldRefRule_in_addFieldsRule5705);
 			f=fieldRefRule();
 			state._fsp--;
 
-			match(input,COLON,FOLLOW_COLON_in_addFieldsRule5479); 
-			pushFollow(FOLLOW_insertFieldRule_in_addFieldsRule5483);
+			match(input,COLON,FOLLOW_COLON_in_addFieldsRule5707); 
+			pushFollow(FOLLOW_insertFieldRule_in_addFieldsRule5711);
 			af=insertFieldRule(f);
 			state._fsp--;
 
 			 jc.addAddField (af); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:556:5: ( COMMA f= fieldRefRule COLON af= insertFieldRule[f] )*
-			loop88:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:572:5: ( COMMA f= fieldRefRule COLON af= insertFieldRule[f] )*
+			loop91:
 			while (true) {
-				int alt88=2;
-				int LA88_0 = input.LA(1);
-				if ( (LA88_0==COMMA) ) {
-					alt88=1;
+				int alt91=2;
+				int LA91_0 = input.LA(1);
+				if ( (LA91_0==COMMA) ) {
+					alt91=1;
 				}
 
-				switch (alt88) {
+				switch (alt91) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:556:7: COMMA f= fieldRefRule COLON af= insertFieldRule[f]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:572:7: COMMA f= fieldRefRule COLON af= insertFieldRule[f]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_addFieldsRule5502); 
-					pushFollow(FOLLOW_fieldRefRule_in_addFieldsRule5506);
+					match(input,COMMA,FOLLOW_COMMA_in_addFieldsRule5730); 
+					pushFollow(FOLLOW_fieldRefRule_in_addFieldsRule5734);
 					f=fieldRefRule();
 					state._fsp--;
 
-					match(input,COLON,FOLLOW_COLON_in_addFieldsRule5508); 
-					pushFollow(FOLLOW_insertFieldRule_in_addFieldsRule5512);
+					match(input,COLON,FOLLOW_COLON_in_addFieldsRule5736); 
+					pushFollow(FOLLOW_insertFieldRule_in_addFieldsRule5740);
 					af=insertFieldRule(f);
 					state._fsp--;
 
@@ -4972,11 +5154,11 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop88;
+					break loop91;
 				}
 			}
 
-			match(input,RBR,FOLLOW_RBR_in_addFieldsRule5530); 
+			match(input,RBR,FOLLOW_RBR_in_addFieldsRule5758); 
 			}
 
 		}
@@ -4993,7 +5175,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "insertFieldRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:561:1: insertFieldRule[Field f] returns [AddField af] : (sf= spatialFunctionRule[false] |ef= restrictedFactorRule );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:577:1: insertFieldRule[Field f] returns [AddField af] : (sf= spatialFunctionRule[false] |ef= restrictedFactorRule );
 	public final AddField insertFieldRule(Field f) throws RecognitionException {
 		AddField af = null;
 
@@ -5002,27 +5184,27 @@ public class JCoQLParser extends Parser {
 		ExpressionFactor ef =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:562:2: (sf= spatialFunctionRule[false] |ef= restrictedFactorRule )
-			int alt89=2;
-			int LA89_0 = input.LA(1);
-			if ( (LA89_0==DISTANCE||LA89_0==INCLUDED||LA89_0==INTERSECT||LA89_0==MEET||LA89_0==ORIENTATION) ) {
-				alt89=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:578:2: (sf= spatialFunctionRule[false] |ef= restrictedFactorRule )
+			int alt92=2;
+			int LA92_0 = input.LA(1);
+			if ( (LA92_0==DISTANCE||LA92_0==INCLUDED||LA92_0==INTERSECT||LA92_0==MEET||LA92_0==ORIENTATION) ) {
+				alt92=1;
 			}
-			else if ( (LA89_0==APEX_VALUE||LA89_0==ARRAY_FUNCTION||LA89_0==BOOLEAN||LA89_0==DEGREE||(LA89_0 >= EXTENT && LA89_0 <= EXTRACT_ARRAY)||LA89_0==FIELD_NAME||LA89_0==FLOAT||(LA89_0 >= ID && LA89_0 <= IF_ERROR)||LA89_0==INT||LA89_0==LB||LA89_0==LP||(LA89_0 >= MEMBERSHIP_ARRAY && LA89_0 <= MEMBERSHIP_TO)||LA89_0==QUOTED_VALUE||LA89_0==TRANSLATE) ) {
-				alt89=2;
+			else if ( (LA92_0==APEX_VALUE||LA92_0==ARRAY_FUNCTION||LA92_0==BOOLEAN||LA92_0==DEGREE||(LA92_0 >= EXTENT && LA92_0 <= EXTRACT_ARRAY)||LA92_0==FIELD_NAME||LA92_0==FLOAT||LA92_0==HASH_NAME||(LA92_0 >= ID && LA92_0 <= IF_ERROR)||LA92_0==INT||LA92_0==LB||LA92_0==LP||(LA92_0 >= MEMBERSHIP_ARRAY && LA92_0 <= MEMBERSHIP_TO)||LA92_0==QUOTED_VALUE||LA92_0==TRANSLATE) ) {
+				alt92=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 89, 0, input);
+					new NoViableAltException("", 92, 0, input);
 				throw nvae;
 			}
 
-			switch (alt89) {
+			switch (alt92) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:563:4: sf= spatialFunctionRule[false]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:579:4: sf= spatialFunctionRule[false]
 					{
-					pushFollow(FOLLOW_spatialFunctionRule_in_insertFieldRule5553);
+					pushFollow(FOLLOW_spatialFunctionRule_in_insertFieldRule5781);
 					sf=spatialFunctionRule(false);
 					state._fsp--;
 
@@ -5030,9 +5212,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:564:5: ef= restrictedFactorRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:580:5: ef= restrictedFactorRule
 					{
-					pushFollow(FOLLOW_restrictedFactorRule_in_insertFieldRule5568);
+					pushFollow(FOLLOW_restrictedFactorRule_in_insertFieldRule5796);
 					ef=restrictedFactorRule();
 					state._fsp--;
 
@@ -5056,7 +5238,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "spatialFunctionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:571:1: spatialFunctionRule[boolean joinCaller] returns [SpatialFunction sf] : ( DISTANCE LP u= ID RP (cp= comparatorRule n= numericRule )? | ORIENTATION LP (f= LEFT |f= RIGHT ) ( COMMA o= ID COLON d= numericRule )? RP | INCLUDED LP (i= LEFT |i= RIGHT ) RP | MEET | INTERSECT );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:587:1: spatialFunctionRule[boolean joinCaller] returns [SpatialFunction sf] : ( DISTANCE LP u= ID RP (cp= comparatorRule n= numericRule )? | ORIENTATION LP (f= LEFT |f= RIGHT ) ( COMMA o= ID COLON d= numericRule )? RP | INCLUDED LP (i= LEFT |i= RIGHT ) RP | MEET | INTERSECT );
 	public final SpatialFunction spatialFunctionRule(boolean joinCaller) throws RecognitionException {
 		SpatialFunction sf = null;
 
@@ -5071,62 +5253,62 @@ public class JCoQLParser extends Parser {
 
 		 sf = new SpatialFunction (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:573:3: ( DISTANCE LP u= ID RP (cp= comparatorRule n= numericRule )? | ORIENTATION LP (f= LEFT |f= RIGHT ) ( COMMA o= ID COLON d= numericRule )? RP | INCLUDED LP (i= LEFT |i= RIGHT ) RP | MEET | INTERSECT )
-			int alt94=5;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:589:3: ( DISTANCE LP u= ID RP (cp= comparatorRule n= numericRule )? | ORIENTATION LP (f= LEFT |f= RIGHT ) ( COMMA o= ID COLON d= numericRule )? RP | INCLUDED LP (i= LEFT |i= RIGHT ) RP | MEET | INTERSECT )
+			int alt97=5;
 			switch ( input.LA(1) ) {
 			case DISTANCE:
 				{
-				alt94=1;
+				alt97=1;
 				}
 				break;
 			case ORIENTATION:
 				{
-				alt94=2;
+				alt97=2;
 				}
 				break;
 			case INCLUDED:
 				{
-				alt94=3;
+				alt97=3;
 				}
 				break;
 			case MEET:
 				{
-				alt94=4;
+				alt97=4;
 				}
 				break;
 			case INTERSECT:
 				{
-				alt94=5;
+				alt97=5;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 94, 0, input);
+					new NoViableAltException("", 97, 0, input);
 				throw nvae;
 			}
-			switch (alt94) {
+			switch (alt97) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:574:5: DISTANCE LP u= ID RP (cp= comparatorRule n= numericRule )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:590:5: DISTANCE LP u= ID RP (cp= comparatorRule n= numericRule )?
 					{
-					match(input,DISTANCE,FOLLOW_DISTANCE_in_spatialFunctionRule5607); 
-					match(input,LP,FOLLOW_LP_in_spatialFunctionRule5609); 
-					u=(Token)match(input,ID,FOLLOW_ID_in_spatialFunctionRule5613); 
-					match(input,RP,FOLLOW_RP_in_spatialFunctionRule5615); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:574:25: (cp= comparatorRule n= numericRule )?
-					int alt90=2;
-					int LA90_0 = input.LA(1);
-					if ( (LA90_0==EQ||LA90_0==GE||LA90_0==GT||LA90_0==LE||LA90_0==LT||LA90_0==NEQ) ) {
-						alt90=1;
+					match(input,DISTANCE,FOLLOW_DISTANCE_in_spatialFunctionRule5835); 
+					match(input,LP,FOLLOW_LP_in_spatialFunctionRule5837); 
+					u=(Token)match(input,ID,FOLLOW_ID_in_spatialFunctionRule5841); 
+					match(input,RP,FOLLOW_RP_in_spatialFunctionRule5843); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:590:25: (cp= comparatorRule n= numericRule )?
+					int alt93=2;
+					int LA93_0 = input.LA(1);
+					if ( (LA93_0==EQ||LA93_0==GE||LA93_0==GT||LA93_0==LE||LA93_0==LT||LA93_0==NEQ) ) {
+						alt93=1;
 					}
-					switch (alt90) {
+					switch (alt93) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:574:27: cp= comparatorRule n= numericRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:590:27: cp= comparatorRule n= numericRule
 							{
-							pushFollow(FOLLOW_comparatorRule_in_spatialFunctionRule5621);
+							pushFollow(FOLLOW_comparatorRule_in_spatialFunctionRule5849);
 							cp=comparatorRule();
 							state._fsp--;
 
-							pushFollow(FOLLOW_numericRule_in_spatialFunctionRule5625);
+							pushFollow(FOLLOW_numericRule_in_spatialFunctionRule5853);
 							n=numericRule();
 							state._fsp--;
 
@@ -5139,56 +5321,56 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:575:6: ORIENTATION LP (f= LEFT |f= RIGHT ) ( COMMA o= ID COLON d= numericRule )? RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:591:6: ORIENTATION LP (f= LEFT |f= RIGHT ) ( COMMA o= ID COLON d= numericRule )? RP
 					{
-					match(input,ORIENTATION,FOLLOW_ORIENTATION_in_spatialFunctionRule5649); 
-					match(input,LP,FOLLOW_LP_in_spatialFunctionRule5651); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:575:21: (f= LEFT |f= RIGHT )
-					int alt91=2;
-					int LA91_0 = input.LA(1);
-					if ( (LA91_0==LEFT) ) {
-						alt91=1;
+					match(input,ORIENTATION,FOLLOW_ORIENTATION_in_spatialFunctionRule5877); 
+					match(input,LP,FOLLOW_LP_in_spatialFunctionRule5879); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:591:21: (f= LEFT |f= RIGHT )
+					int alt94=2;
+					int LA94_0 = input.LA(1);
+					if ( (LA94_0==LEFT) ) {
+						alt94=1;
 					}
-					else if ( (LA91_0==RIGHT) ) {
-						alt91=2;
+					else if ( (LA94_0==RIGHT) ) {
+						alt94=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 91, 0, input);
+							new NoViableAltException("", 94, 0, input);
 						throw nvae;
 					}
 
-					switch (alt91) {
+					switch (alt94) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:575:23: f= LEFT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:591:23: f= LEFT
 							{
-							f=(Token)match(input,LEFT,FOLLOW_LEFT_in_spatialFunctionRule5657); 
+							f=(Token)match(input,LEFT,FOLLOW_LEFT_in_spatialFunctionRule5885); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:575:32: f= RIGHT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:591:32: f= RIGHT
 							{
-							f=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_spatialFunctionRule5663); 
+							f=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_spatialFunctionRule5891); 
 							}
 							break;
 
 					}
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:575:42: ( COMMA o= ID COLON d= numericRule )?
-					int alt92=2;
-					int LA92_0 = input.LA(1);
-					if ( (LA92_0==COMMA) ) {
-						alt92=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:591:42: ( COMMA o= ID COLON d= numericRule )?
+					int alt95=2;
+					int LA95_0 = input.LA(1);
+					if ( (LA95_0==COMMA) ) {
+						alt95=1;
 					}
-					switch (alt92) {
+					switch (alt95) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:575:44: COMMA o= ID COLON d= numericRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:591:44: COMMA o= ID COLON d= numericRule
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_spatialFunctionRule5669); 
-							o=(Token)match(input,ID,FOLLOW_ID_in_spatialFunctionRule5674); 
-							match(input,COLON,FOLLOW_COLON_in_spatialFunctionRule5676); 
-							pushFollow(FOLLOW_numericRule_in_spatialFunctionRule5680);
+							match(input,COMMA,FOLLOW_COMMA_in_spatialFunctionRule5897); 
+							o=(Token)match(input,ID,FOLLOW_ID_in_spatialFunctionRule5902); 
+							match(input,COLON,FOLLOW_COLON_in_spatialFunctionRule5904); 
+							pushFollow(FOLLOW_numericRule_in_spatialFunctionRule5908);
 							d=numericRule();
 							state._fsp--;
 
@@ -5197,62 +5379,62 @@ public class JCoQLParser extends Parser {
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_spatialFunctionRule5685); 
+					match(input,RP,FOLLOW_RP_in_spatialFunctionRule5913); 
 					 env.setOrientation (sf, f, o, d, joinCaller);  
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:576:6: INCLUDED LP (i= LEFT |i= RIGHT ) RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:592:6: INCLUDED LP (i= LEFT |i= RIGHT ) RP
 					{
-					match(input,INCLUDED,FOLLOW_INCLUDED_in_spatialFunctionRule5697); 
-					match(input,LP,FOLLOW_LP_in_spatialFunctionRule5699); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:576:18: (i= LEFT |i= RIGHT )
-					int alt93=2;
-					int LA93_0 = input.LA(1);
-					if ( (LA93_0==LEFT) ) {
-						alt93=1;
+					match(input,INCLUDED,FOLLOW_INCLUDED_in_spatialFunctionRule5925); 
+					match(input,LP,FOLLOW_LP_in_spatialFunctionRule5927); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:592:18: (i= LEFT |i= RIGHT )
+					int alt96=2;
+					int LA96_0 = input.LA(1);
+					if ( (LA96_0==LEFT) ) {
+						alt96=1;
 					}
-					else if ( (LA93_0==RIGHT) ) {
-						alt93=2;
+					else if ( (LA96_0==RIGHT) ) {
+						alt96=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 93, 0, input);
+							new NoViableAltException("", 96, 0, input);
 						throw nvae;
 					}
 
-					switch (alt93) {
+					switch (alt96) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:576:20: i= LEFT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:592:20: i= LEFT
 							{
-							i=(Token)match(input,LEFT,FOLLOW_LEFT_in_spatialFunctionRule5705); 
+							i=(Token)match(input,LEFT,FOLLOW_LEFT_in_spatialFunctionRule5933); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:576:29: i= RIGHT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:592:29: i= RIGHT
 							{
-							i=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_spatialFunctionRule5711); 
+							i=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_spatialFunctionRule5939); 
 							}
 							break;
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_spatialFunctionRule5714); 
+					match(input,RP,FOLLOW_RP_in_spatialFunctionRule5942); 
 					 sf.setType (SpatialFunction.INCLUDED, i.getText()); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:577:6: MEET
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:593:6: MEET
 					{
-					match(input,MEET,FOLLOW_MEET_in_spatialFunctionRule5746); 
+					match(input,MEET,FOLLOW_MEET_in_spatialFunctionRule5974); 
 					 sf.setType (SpatialFunction.MEET); 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:578:6: INTERSECT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:594:6: INTERSECT
 					{
-					match(input,INTERSECT,FOLLOW_INTERSECT_in_spatialFunctionRule5793); 
+					match(input,INTERSECT,FOLLOW_INTERSECT_in_spatialFunctionRule6021); 
 					 sf.setType (SpatialFunction.INTERSECT); 
 					}
 					break;
@@ -5273,7 +5455,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "setFuzzySetsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:583:1: setFuzzySetsRule returns [SetFuzzySets sfs] : SET FUZZY SETS ( KEEP (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT ) | addFuzzySetRule[sfs] ( COMMA addFuzzySetRule[sfs] )* ( resolvingRule[sfs] )? ) ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:599:1: setFuzzySetsRule returns [SetFuzzySets sfs] : SET FUZZY SETS ( KEEP (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT ) | addFuzzySetRule[sfs] ( COMMA addFuzzySetRule[sfs] )* ( resolvingRule[sfs] )? ) ;
 	public final SetFuzzySets setFuzzySetsRule() throws RecognitionException {
 		SetFuzzySets sfs = null;
 
@@ -5282,73 +5464,73 @@ public class JCoQLParser extends Parser {
 
 		 sfs = new SetFuzzySets(); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:585:2: ( SET FUZZY SETS ( KEEP (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT ) | addFuzzySetRule[sfs] ( COMMA addFuzzySetRule[sfs] )* ( resolvingRule[sfs] )? ) )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:586:3: SET FUZZY SETS ( KEEP (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT ) | addFuzzySetRule[sfs] ( COMMA addFuzzySetRule[sfs] )* ( resolvingRule[sfs] )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:601:2: ( SET FUZZY SETS ( KEEP (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT ) | addFuzzySetRule[sfs] ( COMMA addFuzzySetRule[sfs] )* ( resolvingRule[sfs] )? ) )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:602:3: SET FUZZY SETS ( KEEP (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT ) | addFuzzySetRule[sfs] ( COMMA addFuzzySetRule[sfs] )* ( resolvingRule[sfs] )? )
 			{
-			match(input,SET,FOLLOW_SET_in_setFuzzySetsRule5856); 
-			match(input,FUZZY,FOLLOW_FUZZY_in_setFuzzySetsRule5858); 
-			match(input,SETS,FOLLOW_SETS_in_setFuzzySetsRule5860); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:587:4: ( KEEP (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT ) | addFuzzySetRule[sfs] ( COMMA addFuzzySetRule[sfs] )* ( resolvingRule[sfs] )? )
-			int alt99=2;
-			int LA99_0 = input.LA(1);
-			if ( (LA99_0==KEEP) ) {
-				alt99=1;
+			match(input,SET,FOLLOW_SET_in_setFuzzySetsRule6084); 
+			match(input,FUZZY,FOLLOW_FUZZY_in_setFuzzySetsRule6086); 
+			match(input,SETS,FOLLOW_SETS_in_setFuzzySetsRule6088); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:603:4: ( KEEP (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT ) | addFuzzySetRule[sfs] ( COMMA addFuzzySetRule[sfs] )* ( resolvingRule[sfs] )? )
+			int alt102=2;
+			int LA102_0 = input.LA(1);
+			if ( (LA102_0==KEEP) ) {
+				alt102=1;
 			}
-			else if ( ((LA99_0 >= HOWINCLUDE && LA99_0 <= HOWMEET)||LA99_0==LEFT||LA99_0==RIGHT) ) {
-				alt99=2;
+			else if ( ((LA102_0 >= HOWINCLUDE && LA102_0 <= HOWMEET)||LA102_0==LEFT||LA102_0==RIGHT) ) {
+				alt102=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 99, 0, input);
+					new NoViableAltException("", 102, 0, input);
 				throw nvae;
 			}
 
-			switch (alt99) {
+			switch (alt102) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:587:6: KEEP (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:603:6: KEEP (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT )
 					{
-					match(input,KEEP,FOLLOW_KEEP_in_setFuzzySetsRule5868); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:588:6: (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT )
-					int alt96=3;
+					match(input,KEEP,FOLLOW_KEEP_in_setFuzzySetsRule6096); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:604:6: (k= ALL ( resolvingRule[sfs] )? |k= LEFT |k= RIGHT )
+					int alt99=3;
 					switch ( input.LA(1) ) {
 					case ALL:
 						{
-						alt96=1;
+						alt99=1;
 						}
 						break;
 					case LEFT:
 						{
-						alt96=2;
+						alt99=2;
 						}
 						break;
 					case RIGHT:
 						{
-						alt96=3;
+						alt99=3;
 						}
 						break;
 					default:
 						NoViableAltException nvae =
-							new NoViableAltException("", 96, 0, input);
+							new NoViableAltException("", 99, 0, input);
 						throw nvae;
 					}
-					switch (alt96) {
+					switch (alt99) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:588:8: k= ALL ( resolvingRule[sfs] )?
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:604:8: k= ALL ( resolvingRule[sfs] )?
 							{
-							k=(Token)match(input,ALL,FOLLOW_ALL_in_setFuzzySetsRule5905); 
+							k=(Token)match(input,ALL,FOLLOW_ALL_in_setFuzzySetsRule6133); 
 								sfs.setByKeep(k.getText()); 
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:589:7: ( resolvingRule[sfs] )?
-							int alt95=2;
-							int LA95_0 = input.LA(1);
-							if ( (LA95_0==RESOLVING) ) {
-								alt95=1;
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:605:7: ( resolvingRule[sfs] )?
+							int alt98=2;
+							int LA98_0 = input.LA(1);
+							if ( (LA98_0==RESOLVING) ) {
+								alt98=1;
 							}
-							switch (alt95) {
+							switch (alt98) {
 								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:589:9: resolvingRule[sfs]
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:605:9: resolvingRule[sfs]
 									{
-									pushFollow(FOLLOW_resolvingRule_in_setFuzzySetsRule5941);
+									pushFollow(FOLLOW_resolvingRule_in_setFuzzySetsRule6169);
 									resolvingRule(sfs);
 									state._fsp--;
 
@@ -5360,16 +5542,16 @@ public class JCoQLParser extends Parser {
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:590:8: k= LEFT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:606:8: k= LEFT
 							{
-							k=(Token)match(input,LEFT,FOLLOW_LEFT_in_setFuzzySetsRule5959); 
+							k=(Token)match(input,LEFT,FOLLOW_LEFT_in_setFuzzySetsRule6187); 
 								sfs.setByKeep(k.getText()); 
 							}
 							break;
 						case 3 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:591:8: k= RIGHT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:607:8: k= RIGHT
 							{
-							k=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_setFuzzySetsRule5995); 
+							k=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_setFuzzySetsRule6223); 
 							}
 							break;
 
@@ -5379,27 +5561,27 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:592:6: addFuzzySetRule[sfs] ( COMMA addFuzzySetRule[sfs] )* ( resolvingRule[sfs] )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:608:6: addFuzzySetRule[sfs] ( COMMA addFuzzySetRule[sfs] )* ( resolvingRule[sfs] )?
 					{
-					pushFollow(FOLLOW_addFuzzySetRule_in_setFuzzySetsRule6026);
+					pushFollow(FOLLOW_addFuzzySetRule_in_setFuzzySetsRule6254);
 					addFuzzySetRule(sfs);
 					state._fsp--;
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:593:5: ( COMMA addFuzzySetRule[sfs] )*
-					loop97:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:609:5: ( COMMA addFuzzySetRule[sfs] )*
+					loop100:
 					while (true) {
-						int alt97=2;
-						int LA97_0 = input.LA(1);
-						if ( (LA97_0==COMMA) ) {
-							alt97=1;
+						int alt100=2;
+						int LA100_0 = input.LA(1);
+						if ( (LA100_0==COMMA) ) {
+							alt100=1;
 						}
 
-						switch (alt97) {
+						switch (alt100) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:593:7: COMMA addFuzzySetRule[sfs]
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:609:7: COMMA addFuzzySetRule[sfs]
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_setFuzzySetsRule6035); 
-							pushFollow(FOLLOW_addFuzzySetRule_in_setFuzzySetsRule6037);
+							match(input,COMMA,FOLLOW_COMMA_in_setFuzzySetsRule6263); 
+							pushFollow(FOLLOW_addFuzzySetRule_in_setFuzzySetsRule6265);
 							addFuzzySetRule(sfs);
 							state._fsp--;
 
@@ -5407,21 +5589,21 @@ public class JCoQLParser extends Parser {
 							break;
 
 						default :
-							break loop97;
+							break loop100;
 						}
 					}
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:594:5: ( resolvingRule[sfs] )?
-					int alt98=2;
-					int LA98_0 = input.LA(1);
-					if ( (LA98_0==RESOLVING) ) {
-						alt98=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:610:5: ( resolvingRule[sfs] )?
+					int alt101=2;
+					int LA101_0 = input.LA(1);
+					if ( (LA101_0==RESOLVING) ) {
+						alt101=1;
 					}
-					switch (alt98) {
+					switch (alt101) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:594:7: resolvingRule[sfs]
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:610:7: resolvingRule[sfs]
 							{
-							pushFollow(FOLLOW_resolvingRule_in_setFuzzySetsRule6053);
+							pushFollow(FOLLOW_resolvingRule_in_setFuzzySetsRule6281);
 							resolvingRule(sfs);
 							state._fsp--;
 
@@ -5452,67 +5634,67 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "resolvingRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:598:1: resolvingRule[SetFuzzySets sfs] : RESOLVING WITH (t= AND |t= OR |t= FIRST |t= LAST ) ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:614:1: resolvingRule[SetFuzzySets sfs] : RESOLVING WITH (t= AND |t= OR |t= FIRST |t= LAST ) ;
 	public final void resolvingRule(SetFuzzySets sfs) throws RecognitionException {
 		Token t=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:599:2: ( RESOLVING WITH (t= AND |t= OR |t= FIRST |t= LAST ) )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:600:3: RESOLVING WITH (t= AND |t= OR |t= FIRST |t= LAST )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:615:2: ( RESOLVING WITH (t= AND |t= OR |t= FIRST |t= LAST ) )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:616:3: RESOLVING WITH (t= AND |t= OR |t= FIRST |t= LAST )
 			{
-			match(input,RESOLVING,FOLLOW_RESOLVING_in_resolvingRule6080); 
-			match(input,WITH,FOLLOW_WITH_in_resolvingRule6082); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:601:6: (t= AND |t= OR |t= FIRST |t= LAST )
-			int alt100=4;
+			match(input,RESOLVING,FOLLOW_RESOLVING_in_resolvingRule6308); 
+			match(input,WITH,FOLLOW_WITH_in_resolvingRule6310); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:617:6: (t= AND |t= OR |t= FIRST |t= LAST )
+			int alt103=4;
 			switch ( input.LA(1) ) {
 			case AND:
 				{
-				alt100=1;
+				alt103=1;
 				}
 				break;
 			case OR:
 				{
-				alt100=2;
+				alt103=2;
 				}
 				break;
 			case FIRST:
 				{
-				alt100=3;
+				alt103=3;
 				}
 				break;
 			case LAST:
 				{
-				alt100=4;
+				alt103=4;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 100, 0, input);
+					new NoViableAltException("", 103, 0, input);
 				throw nvae;
 			}
-			switch (alt100) {
+			switch (alt103) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:601:7: t= AND
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:617:7: t= AND
 					{
-					t=(Token)match(input,AND,FOLLOW_AND_in_resolvingRule6094); 
+					t=(Token)match(input,AND,FOLLOW_AND_in_resolvingRule6322); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:601:15: t= OR
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:617:15: t= OR
 					{
-					t=(Token)match(input,OR,FOLLOW_OR_in_resolvingRule6100); 
+					t=(Token)match(input,OR,FOLLOW_OR_in_resolvingRule6328); 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:601:22: t= FIRST
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:617:22: t= FIRST
 					{
-					t=(Token)match(input,FIRST,FOLLOW_FIRST_in_resolvingRule6106); 
+					t=(Token)match(input,FIRST,FOLLOW_FIRST_in_resolvingRule6334); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:601:32: t= LAST
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:617:32: t= LAST
 					{
-					t=(Token)match(input,LAST,FOLLOW_LAST_in_resolvingRule6112); 
+					t=(Token)match(input,LAST,FOLLOW_LAST_in_resolvingRule6340); 
 					}
 					break;
 
@@ -5535,7 +5717,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "addFuzzySetRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:604:1: addFuzzySetRule[SetFuzzySets sfs] : ( (s= LEFT |s= RIGHT ) ( ALL |fs= ID ( AS newFs= ID )? ) |f= HOWINCLUDE LP (s= LEFT |s= RIGHT ) RP AS fs= ID |f= HOWMEET LP (s= LEFT |s= RIGHT ) RP AS fs= ID |f= HOWINTERSECT LP RP AS fs= ID );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:620:1: addFuzzySetRule[SetFuzzySets sfs] : ( (s= LEFT |s= RIGHT ) ( ALL |fs= ID ( AS newFs= ID )? ) |f= HOWINCLUDE LP (s= LEFT |s= RIGHT ) RP AS fs= ID |f= HOWMEET LP (s= LEFT |s= RIGHT ) RP AS fs= ID |f= HOWINTERSECT LP RP AS fs= ID );
 	public final void addFuzzySetRule(SetFuzzySets sfs) throws RecognitionException {
 		Token s=null;
 		Token fs=null;
@@ -5543,130 +5725,40 @@ public class JCoQLParser extends Parser {
 		Token f=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:605:2: ( (s= LEFT |s= RIGHT ) ( ALL |fs= ID ( AS newFs= ID )? ) |f= HOWINCLUDE LP (s= LEFT |s= RIGHT ) RP AS fs= ID |f= HOWMEET LP (s= LEFT |s= RIGHT ) RP AS fs= ID |f= HOWINTERSECT LP RP AS fs= ID )
-			int alt106=4;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:621:2: ( (s= LEFT |s= RIGHT ) ( ALL |fs= ID ( AS newFs= ID )? ) |f= HOWINCLUDE LP (s= LEFT |s= RIGHT ) RP AS fs= ID |f= HOWMEET LP (s= LEFT |s= RIGHT ) RP AS fs= ID |f= HOWINTERSECT LP RP AS fs= ID )
+			int alt109=4;
 			switch ( input.LA(1) ) {
 			case LEFT:
 			case RIGHT:
 				{
-				alt106=1;
+				alt109=1;
 				}
 				break;
 			case HOWINCLUDE:
 				{
-				alt106=2;
+				alt109=2;
 				}
 				break;
 			case HOWMEET:
 				{
-				alt106=3;
+				alt109=3;
 				}
 				break;
 			case HOWINTERSECT:
 				{
-				alt106=4;
+				alt109=4;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 106, 0, input);
+					new NoViableAltException("", 109, 0, input);
 				throw nvae;
 			}
-			switch (alt106) {
+			switch (alt109) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:606:3: (s= LEFT |s= RIGHT ) ( ALL |fs= ID ( AS newFs= ID )? )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:622:3: (s= LEFT |s= RIGHT ) ( ALL |fs= ID ( AS newFs= ID )? )
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:606:3: (s= LEFT |s= RIGHT )
-					int alt101=2;
-					int LA101_0 = input.LA(1);
-					if ( (LA101_0==LEFT) ) {
-						alt101=1;
-					}
-					else if ( (LA101_0==RIGHT) ) {
-						alt101=2;
-					}
-
-					else {
-						NoViableAltException nvae =
-							new NoViableAltException("", 101, 0, input);
-						throw nvae;
-					}
-
-					switch (alt101) {
-						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:606:5: s= LEFT
-							{
-							s=(Token)match(input,LEFT,FOLLOW_LEFT_in_addFuzzySetRule6144); 
-							}
-							break;
-						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:606:14: s= RIGHT
-							{
-							s=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_addFuzzySetRule6150); 
-							}
-							break;
-
-					}
-
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:607:4: ( ALL |fs= ID ( AS newFs= ID )? )
-					int alt103=2;
-					int LA103_0 = input.LA(1);
-					if ( (LA103_0==ALL) ) {
-						alt103=1;
-					}
-					else if ( (LA103_0==ID) ) {
-						alt103=2;
-					}
-
-					else {
-						NoViableAltException nvae =
-							new NoViableAltException("", 103, 0, input);
-						throw nvae;
-					}
-
-					switch (alt103) {
-						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:607:6: ALL
-							{
-							match(input,ALL,FOLLOW_ALL_in_addFuzzySetRule6161); 
-								sfs.add (s.getText()); 
-							}
-							break;
-						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:608:6: fs= ID ( AS newFs= ID )?
-							{
-							fs=(Token)match(input,ID,FOLLOW_ID_in_addFuzzySetRule6197); 
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:608:12: ( AS newFs= ID )?
-							int alt102=2;
-							int LA102_0 = input.LA(1);
-							if ( (LA102_0==AS) ) {
-								alt102=1;
-							}
-							switch (alt102) {
-								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:608:14: AS newFs= ID
-									{
-									match(input,AS,FOLLOW_AS_in_addFuzzySetRule6201); 
-									newFs=(Token)match(input,ID,FOLLOW_ID_in_addFuzzySetRule6205); 
-									}
-									break;
-
-							}
-
-								env.addSetFuzztSets (sfs, s.getText(), fs.getText(), newFs); 
-							}
-							break;
-
-					}
-
-					}
-					break;
-				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:610:4: f= HOWINCLUDE LP (s= LEFT |s= RIGHT ) RP AS fs= ID
-					{
-					f=(Token)match(input,HOWINCLUDE,FOLLOW_HOWINCLUDE_in_addFuzzySetRule6236); 
-					match(input,LP,FOLLOW_LP_in_addFuzzySetRule6240); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:610:22: (s= LEFT |s= RIGHT )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:622:3: (s= LEFT |s= RIGHT )
 					int alt104=2;
 					int LA104_0 = input.LA(1);
 					if ( (LA104_0==LEFT) ) {
@@ -5684,77 +5776,167 @@ public class JCoQLParser extends Parser {
 
 					switch (alt104) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:610:24: s= LEFT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:622:5: s= LEFT
 							{
-							s=(Token)match(input,LEFT,FOLLOW_LEFT_in_addFuzzySetRule6246); 
+							s=(Token)match(input,LEFT,FOLLOW_LEFT_in_addFuzzySetRule6372); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:610:33: s= RIGHT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:622:14: s= RIGHT
 							{
-							s=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_addFuzzySetRule6252); 
+							s=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_addFuzzySetRule6378); 
 							}
 							break;
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_addFuzzySetRule6256); 
-					match(input,AS,FOLLOW_AS_in_addFuzzySetRule6258); 
-					fs=(Token)match(input,ID,FOLLOW_ID_in_addFuzzySetRule6262); 
-						sfs.addFunction (f.getText(), s.getText(), fs.getText()); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:623:4: ( ALL |fs= ID ( AS newFs= ID )? )
+					int alt106=2;
+					int LA106_0 = input.LA(1);
+					if ( (LA106_0==ALL) ) {
+						alt106=1;
 					}
-					break;
-				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:611:4: f= HOWMEET LP (s= LEFT |s= RIGHT ) RP AS fs= ID
-					{
-					f=(Token)match(input,HOWMEET,FOLLOW_HOWMEET_in_addFuzzySetRule6275); 
-					match(input,LP,FOLLOW_LP_in_addFuzzySetRule6280); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:611:20: (s= LEFT |s= RIGHT )
-					int alt105=2;
-					int LA105_0 = input.LA(1);
-					if ( (LA105_0==LEFT) ) {
-						alt105=1;
-					}
-					else if ( (LA105_0==RIGHT) ) {
-						alt105=2;
+					else if ( (LA106_0==ID) ) {
+						alt106=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 105, 0, input);
+							new NoViableAltException("", 106, 0, input);
 						throw nvae;
 					}
 
-					switch (alt105) {
+					switch (alt106) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:611:22: s= LEFT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:623:6: ALL
 							{
-							s=(Token)match(input,LEFT,FOLLOW_LEFT_in_addFuzzySetRule6286); 
+							match(input,ALL,FOLLOW_ALL_in_addFuzzySetRule6389); 
+								sfs.add (s.getText()); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:611:31: s= RIGHT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:624:6: fs= ID ( AS newFs= ID )?
 							{
-							s=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_addFuzzySetRule6292); 
+							fs=(Token)match(input,ID,FOLLOW_ID_in_addFuzzySetRule6425); 
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:624:12: ( AS newFs= ID )?
+							int alt105=2;
+							int LA105_0 = input.LA(1);
+							if ( (LA105_0==AS) ) {
+								alt105=1;
+							}
+							switch (alt105) {
+								case 1 :
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:624:14: AS newFs= ID
+									{
+									match(input,AS,FOLLOW_AS_in_addFuzzySetRule6429); 
+									newFs=(Token)match(input,ID,FOLLOW_ID_in_addFuzzySetRule6433); 
+									}
+									break;
+
+							}
+
+								env.addSetFuzztSets (sfs, s.getText(), fs.getText(), newFs); 
 							}
 							break;
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_addFuzzySetRule6296); 
-					match(input,AS,FOLLOW_AS_in_addFuzzySetRule6299); 
-					fs=(Token)match(input,ID,FOLLOW_ID_in_addFuzzySetRule6303); 
+					}
+					break;
+				case 2 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:626:4: f= HOWINCLUDE LP (s= LEFT |s= RIGHT ) RP AS fs= ID
+					{
+					f=(Token)match(input,HOWINCLUDE,FOLLOW_HOWINCLUDE_in_addFuzzySetRule6464); 
+					match(input,LP,FOLLOW_LP_in_addFuzzySetRule6468); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:626:22: (s= LEFT |s= RIGHT )
+					int alt107=2;
+					int LA107_0 = input.LA(1);
+					if ( (LA107_0==LEFT) ) {
+						alt107=1;
+					}
+					else if ( (LA107_0==RIGHT) ) {
+						alt107=2;
+					}
+
+					else {
+						NoViableAltException nvae =
+							new NoViableAltException("", 107, 0, input);
+						throw nvae;
+					}
+
+					switch (alt107) {
+						case 1 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:626:24: s= LEFT
+							{
+							s=(Token)match(input,LEFT,FOLLOW_LEFT_in_addFuzzySetRule6474); 
+							}
+							break;
+						case 2 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:626:33: s= RIGHT
+							{
+							s=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_addFuzzySetRule6480); 
+							}
+							break;
+
+					}
+
+					match(input,RP,FOLLOW_RP_in_addFuzzySetRule6484); 
+					match(input,AS,FOLLOW_AS_in_addFuzzySetRule6486); 
+					fs=(Token)match(input,ID,FOLLOW_ID_in_addFuzzySetRule6490); 
+						sfs.addFunction (f.getText(), s.getText(), fs.getText()); 
+					}
+					break;
+				case 3 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:627:4: f= HOWMEET LP (s= LEFT |s= RIGHT ) RP AS fs= ID
+					{
+					f=(Token)match(input,HOWMEET,FOLLOW_HOWMEET_in_addFuzzySetRule6503); 
+					match(input,LP,FOLLOW_LP_in_addFuzzySetRule6508); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:627:20: (s= LEFT |s= RIGHT )
+					int alt108=2;
+					int LA108_0 = input.LA(1);
+					if ( (LA108_0==LEFT) ) {
+						alt108=1;
+					}
+					else if ( (LA108_0==RIGHT) ) {
+						alt108=2;
+					}
+
+					else {
+						NoViableAltException nvae =
+							new NoViableAltException("", 108, 0, input);
+						throw nvae;
+					}
+
+					switch (alt108) {
+						case 1 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:627:22: s= LEFT
+							{
+							s=(Token)match(input,LEFT,FOLLOW_LEFT_in_addFuzzySetRule6514); 
+							}
+							break;
+						case 2 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:627:31: s= RIGHT
+							{
+							s=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_addFuzzySetRule6520); 
+							}
+							break;
+
+					}
+
+					match(input,RP,FOLLOW_RP_in_addFuzzySetRule6524); 
+					match(input,AS,FOLLOW_AS_in_addFuzzySetRule6527); 
+					fs=(Token)match(input,ID,FOLLOW_ID_in_addFuzzySetRule6531); 
 						sfs.addFunction (f.getText(), s.getText(), fs.getText()); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:612:4: f= HOWINTERSECT LP RP AS fs= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:628:4: f= HOWINTERSECT LP RP AS fs= ID
 					{
-					f=(Token)match(input,HOWINTERSECT,FOLLOW_HOWINTERSECT_in_addFuzzySetRule6326); 
-					match(input,LP,FOLLOW_LP_in_addFuzzySetRule6329); 
-					match(input,RP,FOLLOW_RP_in_addFuzzySetRule6331); 
-					match(input,AS,FOLLOW_AS_in_addFuzzySetRule6344); 
-					fs=(Token)match(input,ID,FOLLOW_ID_in_addFuzzySetRule6348); 
+					f=(Token)match(input,HOWINTERSECT,FOLLOW_HOWINTERSECT_in_addFuzzySetRule6554); 
+					match(input,LP,FOLLOW_LP_in_addFuzzySetRule6557); 
+					match(input,RP,FOLLOW_RP_in_addFuzzySetRule6559); 
+					match(input,AS,FOLLOW_AS_in_addFuzzySetRule6572); 
+					fs=(Token)match(input,ID,FOLLOW_ID_in_addFuzzySetRule6576); 
 						sfs.addFunction (f.getText(), null, fs.getText()); 
 					}
 					break;
@@ -5774,51 +5956,51 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "getCollectionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:619:1: getCollectionRule : GET COLLECTION (name= ID ( AT db= ID )? | FROM_WEB (url= APEX_VALUE |url= QUOTED_VALUE ) ) SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:635:1: getCollectionRule : GET COLLECTION (name= ID ( AT db= ID )? | FROM_WEB (url= APEX_VALUE |url= QUOTED_VALUE ) ) SC ;
 	public final void getCollectionRule() throws RecognitionException {
 		Token name=null;
 		Token db=null;
 		Token url=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:620:3: ( GET COLLECTION (name= ID ( AT db= ID )? | FROM_WEB (url= APEX_VALUE |url= QUOTED_VALUE ) ) SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:621:4: GET COLLECTION (name= ID ( AT db= ID )? | FROM_WEB (url= APEX_VALUE |url= QUOTED_VALUE ) ) SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:636:3: ( GET COLLECTION (name= ID ( AT db= ID )? | FROM_WEB (url= APEX_VALUE |url= QUOTED_VALUE ) ) SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:637:4: GET COLLECTION (name= ID ( AT db= ID )? | FROM_WEB (url= APEX_VALUE |url= QUOTED_VALUE ) ) SC
 			{
-			match(input,GET,FOLLOW_GET_in_getCollectionRule6372); 
-			match(input,COLLECTION,FOLLOW_COLLECTION_in_getCollectionRule6374); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:622:6: (name= ID ( AT db= ID )? | FROM_WEB (url= APEX_VALUE |url= QUOTED_VALUE ) )
-			int alt109=2;
-			int LA109_0 = input.LA(1);
-			if ( (LA109_0==ID) ) {
-				alt109=1;
+			match(input,GET,FOLLOW_GET_in_getCollectionRule6600); 
+			match(input,COLLECTION,FOLLOW_COLLECTION_in_getCollectionRule6602); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:638:6: (name= ID ( AT db= ID )? | FROM_WEB (url= APEX_VALUE |url= QUOTED_VALUE ) )
+			int alt112=2;
+			int LA112_0 = input.LA(1);
+			if ( (LA112_0==ID) ) {
+				alt112=1;
 			}
-			else if ( (LA109_0==FROM_WEB) ) {
-				alt109=2;
+			else if ( (LA112_0==FROM_WEB) ) {
+				alt112=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 109, 0, input);
+					new NoViableAltException("", 112, 0, input);
 				throw nvae;
 			}
 
-			switch (alt109) {
+			switch (alt112) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:622:8: name= ID ( AT db= ID )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:638:8: name= ID ( AT db= ID )?
 					{
-					name=(Token)match(input,ID,FOLLOW_ID_in_getCollectionRule6386); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:622:16: ( AT db= ID )?
-					int alt107=2;
-					int LA107_0 = input.LA(1);
-					if ( (LA107_0==AT) ) {
-						alt107=1;
+					name=(Token)match(input,ID,FOLLOW_ID_in_getCollectionRule6614); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:638:16: ( AT db= ID )?
+					int alt110=2;
+					int LA110_0 = input.LA(1);
+					if ( (LA110_0==AT) ) {
+						alt110=1;
 					}
-					switch (alt107) {
+					switch (alt110) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:622:18: AT db= ID
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:638:18: AT db= ID
 							{
-							match(input,AT,FOLLOW_AT_in_getCollectionRule6390); 
-							db=(Token)match(input,ID,FOLLOW_ID_in_getCollectionRule6394); 
+							match(input,AT,FOLLOW_AT_in_getCollectionRule6618); 
+							db=(Token)match(input,ID,FOLLOW_ID_in_getCollectionRule6622); 
 							}
 							break;
 
@@ -5828,36 +6010,36 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:623:8: FROM_WEB (url= APEX_VALUE |url= QUOTED_VALUE )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:639:8: FROM_WEB (url= APEX_VALUE |url= QUOTED_VALUE )
 					{
-					match(input,FROM_WEB,FOLLOW_FROM_WEB_in_getCollectionRule6425); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:623:17: (url= APEX_VALUE |url= QUOTED_VALUE )
-					int alt108=2;
-					int LA108_0 = input.LA(1);
-					if ( (LA108_0==APEX_VALUE) ) {
-						alt108=1;
+					match(input,FROM_WEB,FOLLOW_FROM_WEB_in_getCollectionRule6653); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:639:17: (url= APEX_VALUE |url= QUOTED_VALUE )
+					int alt111=2;
+					int LA111_0 = input.LA(1);
+					if ( (LA111_0==APEX_VALUE) ) {
+						alt111=1;
 					}
-					else if ( (LA108_0==QUOTED_VALUE) ) {
-						alt108=2;
+					else if ( (LA111_0==QUOTED_VALUE) ) {
+						alt111=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 108, 0, input);
+							new NoViableAltException("", 111, 0, input);
 						throw nvae;
 					}
 
-					switch (alt108) {
+					switch (alt111) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:623:18: url= APEX_VALUE
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:639:18: url= APEX_VALUE
 							{
-							url=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_getCollectionRule6430); 
+							url=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_getCollectionRule6658); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:623:35: url= QUOTED_VALUE
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:639:35: url= QUOTED_VALUE
 							{
-							url=(Token)match(input,QUOTED_VALUE,FOLLOW_QUOTED_VALUE_in_getCollectionRule6436); 
+							url=(Token)match(input,QUOTED_VALUE,FOLLOW_QUOTED_VALUE_in_getCollectionRule6664); 
 							}
 							break;
 
@@ -5869,7 +6051,7 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_getCollectionRule6449); 
+			match(input,SC,FOLLOW_SC_in_getCollectionRule6677); 
 			}
 
 		}
@@ -5886,25 +6068,25 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "getDictionaryRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:628:1: getDictionaryRule : GET DICTIONARY name= ID AT db= ID AS dict= ID SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:644:1: getDictionaryRule : GET DICTIONARY name= ID AT db= ID AS dict= ID SC ;
 	public final void getDictionaryRule() throws RecognitionException {
 		Token name=null;
 		Token db=null;
 		Token dict=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:629:3: ( GET DICTIONARY name= ID AT db= ID AS dict= ID SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:630:4: GET DICTIONARY name= ID AT db= ID AS dict= ID SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:645:3: ( GET DICTIONARY name= ID AT db= ID AS dict= ID SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:646:4: GET DICTIONARY name= ID AT db= ID AS dict= ID SC
 			{
-			match(input,GET,FOLLOW_GET_in_getDictionaryRule6470); 
-			match(input,DICTIONARY,FOLLOW_DICTIONARY_in_getDictionaryRule6472); 
-			name=(Token)match(input,ID,FOLLOW_ID_in_getDictionaryRule6483); 
-			match(input,AT,FOLLOW_AT_in_getDictionaryRule6485); 
-			db=(Token)match(input,ID,FOLLOW_ID_in_getDictionaryRule6489); 
-			match(input,AS,FOLLOW_AS_in_getDictionaryRule6491); 
-			dict=(Token)match(input,ID,FOLLOW_ID_in_getDictionaryRule6495); 
+			match(input,GET,FOLLOW_GET_in_getDictionaryRule6698); 
+			match(input,DICTIONARY,FOLLOW_DICTIONARY_in_getDictionaryRule6700); 
+			name=(Token)match(input,ID,FOLLOW_ID_in_getDictionaryRule6711); 
+			match(input,AT,FOLLOW_AT_in_getDictionaryRule6713); 
+			db=(Token)match(input,ID,FOLLOW_ID_in_getDictionaryRule6717); 
+			match(input,AS,FOLLOW_AS_in_getDictionaryRule6719); 
+			dict=(Token)match(input,ID,FOLLOW_ID_in_getDictionaryRule6723); 
 			 env.addGetDictionary (name, db, dict); 
-			match(input,SC,FOLLOW_SC_in_getDictionaryRule6524); 
+			match(input,SC,FOLLOW_SC_in_getDictionaryRule6752); 
 			}
 
 		}
@@ -5921,37 +6103,37 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "saveAsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:637:1: saveAsRule : SAVE AS cn= ID ( AT db= ID )? SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:653:1: saveAsRule : SAVE AS cn= ID ( AT db= ID )? SC ;
 	public final void saveAsRule() throws RecognitionException {
 		Token cn=null;
 		Token db=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:638:3: ( SAVE AS cn= ID ( AT db= ID )? SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:639:4: SAVE AS cn= ID ( AT db= ID )? SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:654:3: ( SAVE AS cn= ID ( AT db= ID )? SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:655:4: SAVE AS cn= ID ( AT db= ID )? SC
 			{
-			match(input,SAVE,FOLLOW_SAVE_in_saveAsRule6543); 
-			match(input,AS,FOLLOW_AS_in_saveAsRule6545); 
-			cn=(Token)match(input,ID,FOLLOW_ID_in_saveAsRule6555); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:640:12: ( AT db= ID )?
-			int alt110=2;
-			int LA110_0 = input.LA(1);
-			if ( (LA110_0==AT) ) {
-				alt110=1;
+			match(input,SAVE,FOLLOW_SAVE_in_saveAsRule6771); 
+			match(input,AS,FOLLOW_AS_in_saveAsRule6773); 
+			cn=(Token)match(input,ID,FOLLOW_ID_in_saveAsRule6783); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:656:12: ( AT db= ID )?
+			int alt113=2;
+			int LA113_0 = input.LA(1);
+			if ( (LA113_0==AT) ) {
+				alt113=1;
 			}
-			switch (alt110) {
+			switch (alt113) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:640:14: AT db= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:656:14: AT db= ID
 					{
-					match(input,AT,FOLLOW_AT_in_saveAsRule6559); 
-					db=(Token)match(input,ID,FOLLOW_ID_in_saveAsRule6563); 
+					match(input,AT,FOLLOW_AT_in_saveAsRule6787); 
+					db=(Token)match(input,ID,FOLLOW_ID_in_saveAsRule6791); 
 					}
 					break;
 
 			}
 
 			 env.addSaveAs (cn, db); 
-			match(input,SC,FOLLOW_SC_in_saveAsRule6583); 
+			match(input,SC,FOLLOW_SC_in_saveAsRule6811); 
 			}
 
 		}
@@ -5968,32 +6150,32 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "lookupFromWebRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:645:1: lookupFromWebRule : LOOKUP FROM_WEB (fe= forEachRule )+ SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:661:1: lookupFromWebRule : LOOKUP FROM_WEB (fe= forEachRule )+ SC ;
 	public final void lookupFromWebRule() throws RecognitionException {
 		ForEach fe =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:646:2: ( LOOKUP FROM_WEB (fe= forEachRule )+ SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:647:3: LOOKUP FROM_WEB (fe= forEachRule )+ SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:662:2: ( LOOKUP FROM_WEB (fe= forEachRule )+ SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:663:3: LOOKUP FROM_WEB (fe= forEachRule )+ SC
 			{
-			match(input,LOOKUP,FOLLOW_LOOKUP_in_lookupFromWebRule6599); 
-			match(input,FROM_WEB,FOLLOW_FROM_WEB_in_lookupFromWebRule6601); 
+			match(input,LOOKUP,FOLLOW_LOOKUP_in_lookupFromWebRule6827); 
+			match(input,FROM_WEB,FOLLOW_FROM_WEB_in_lookupFromWebRule6829); 
 				LookupFromWeb gfw = env.addLookupFromWeb ();	
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:648:4: (fe= forEachRule )+
-			int cnt111=0;
-			loop111:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:664:4: (fe= forEachRule )+
+			int cnt114=0;
+			loop114:
 			while (true) {
-				int alt111=2;
-				int LA111_0 = input.LA(1);
-				if ( (LA111_0==FOR) ) {
-					alt111=1;
+				int alt114=2;
+				int LA114_0 = input.LA(1);
+				if ( (LA114_0==FOR) ) {
+					alt114=1;
 				}
 
-				switch (alt111) {
+				switch (alt114) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:648:6: fe= forEachRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:664:6: fe= forEachRule
 					{
-					pushFollow(FOLLOW_forEachRule_in_lookupFromWebRule6617);
+					pushFollow(FOLLOW_forEachRule_in_lookupFromWebRule6845);
 					fe=forEachRule();
 					state._fsp--;
 
@@ -6002,14 +6184,14 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					if ( cnt111 >= 1 ) break loop111;
-					EarlyExitException eee = new EarlyExitException(111, input);
+					if ( cnt114 >= 1 ) break loop114;
+					EarlyExitException eee = new EarlyExitException(114, input);
 					throw eee;
 				}
-				cnt111++;
+				cnt114++;
 			}
 
-			match(input,SC,FOLLOW_SC_in_lookupFromWebRule6630); 
+			match(input,SC,FOLLOW_SC_in_lookupFromWebRule6858); 
 			}
 
 		}
@@ -6026,7 +6208,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "forEachRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:653:1: forEachRule returns [ForEach fe] : FOR EACH c= orConditionRule CALL e= expressionRule ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:669:1: forEachRule returns [ForEach fe] : FOR EACH c= orConditionRule CALL e= expressionRule ;
 	public final ForEach forEachRule() throws RecognitionException {
 		ForEach fe = null;
 
@@ -6035,17 +6217,17 @@ public class JCoQLParser extends Parser {
 		Expression e =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:654:2: ( FOR EACH c= orConditionRule CALL e= expressionRule )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:655:3: FOR EACH c= orConditionRule CALL e= expressionRule
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:670:2: ( FOR EACH c= orConditionRule CALL e= expressionRule )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:671:3: FOR EACH c= orConditionRule CALL e= expressionRule
 			{
-			match(input,FOR,FOLLOW_FOR_in_forEachRule6650); 
-			match(input,EACH,FOLLOW_EACH_in_forEachRule6652); 
-			pushFollow(FOLLOW_orConditionRule_in_forEachRule6656);
+			match(input,FOR,FOLLOW_FOR_in_forEachRule6878); 
+			match(input,EACH,FOLLOW_EACH_in_forEachRule6880); 
+			pushFollow(FOLLOW_orConditionRule_in_forEachRule6884);
 			c=orConditionRule();
 			state._fsp--;
 
-			match(input,CALL,FOLLOW_CALL_in_forEachRule6661); 
-			pushFollow(FOLLOW_expressionRule_in_forEachRule6665);
+			match(input,CALL,FOLLOW_CALL_in_forEachRule6889); 
+			pushFollow(FOLLOW_expressionRule_in_forEachRule6893);
 			e=expressionRule();
 			state._fsp--;
 
@@ -6067,7 +6249,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "joinOfCollectionsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:660:1: joinOfCollectionsRule : JOIN OF COLLECTIONS c1= collectionReferenceRule tk= COMMA c2= collectionReferenceRule ( ON GEOMETRY nff= spatialFunctionRule[true] )? ( SET GEOMETRY (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL ) )? ( addFieldsRule[jc] )? (sfs= setFuzzySetsRule )? (cc= caseClauseRule |gs= generateSectionRule[true] )? ( REMOVE DUPLICATES )? SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:676:1: joinOfCollectionsRule : JOIN OF COLLECTIONS c1= collectionReferenceRule tk= COMMA c2= collectionReferenceRule ( ON GEOMETRY nff= spatialFunctionRule[true] )? ( SET GEOMETRY (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL ) )? ( addFieldsRule[jc] )? (sfs= setFuzzySetsRule )? (cc= caseClauseRule |gs= generateSectionRule[true] )? ( REMOVE DUPLICATES )? SC ;
 	public final void joinOfCollectionsRule() throws RecognitionException {
 		Token tk=null;
 		Token g=null;
@@ -6079,35 +6261,35 @@ public class JCoQLParser extends Parser {
 		GenerateSection gs =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:661:3: ( JOIN OF COLLECTIONS c1= collectionReferenceRule tk= COMMA c2= collectionReferenceRule ( ON GEOMETRY nff= spatialFunctionRule[true] )? ( SET GEOMETRY (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL ) )? ( addFieldsRule[jc] )? (sfs= setFuzzySetsRule )? (cc= caseClauseRule |gs= generateSectionRule[true] )? ( REMOVE DUPLICATES )? SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:662:5: JOIN OF COLLECTIONS c1= collectionReferenceRule tk= COMMA c2= collectionReferenceRule ( ON GEOMETRY nff= spatialFunctionRule[true] )? ( SET GEOMETRY (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL ) )? ( addFieldsRule[jc] )? (sfs= setFuzzySetsRule )? (cc= caseClauseRule |gs= generateSectionRule[true] )? ( REMOVE DUPLICATES )? SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:677:3: ( JOIN OF COLLECTIONS c1= collectionReferenceRule tk= COMMA c2= collectionReferenceRule ( ON GEOMETRY nff= spatialFunctionRule[true] )? ( SET GEOMETRY (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL ) )? ( addFieldsRule[jc] )? (sfs= setFuzzySetsRule )? (cc= caseClauseRule |gs= generateSectionRule[true] )? ( REMOVE DUPLICATES )? SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:678:5: JOIN OF COLLECTIONS c1= collectionReferenceRule tk= COMMA c2= collectionReferenceRule ( ON GEOMETRY nff= spatialFunctionRule[true] )? ( SET GEOMETRY (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL ) )? ( addFieldsRule[jc] )? (sfs= setFuzzySetsRule )? (cc= caseClauseRule |gs= generateSectionRule[true] )? ( REMOVE DUPLICATES )? SC
 			{
-			match(input,JOIN,FOLLOW_JOIN_in_joinOfCollectionsRule6688); 
-			match(input,OF,FOLLOW_OF_in_joinOfCollectionsRule6690); 
-			match(input,COLLECTIONS,FOLLOW_COLLECTIONS_in_joinOfCollectionsRule6692); 
-			pushFollow(FOLLOW_collectionReferenceRule_in_joinOfCollectionsRule6701);
+			match(input,JOIN,FOLLOW_JOIN_in_joinOfCollectionsRule6916); 
+			match(input,OF,FOLLOW_OF_in_joinOfCollectionsRule6918); 
+			match(input,COLLECTIONS,FOLLOW_COLLECTIONS_in_joinOfCollectionsRule6920); 
+			pushFollow(FOLLOW_collectionReferenceRule_in_joinOfCollectionsRule6929);
 			c1=collectionReferenceRule();
 			state._fsp--;
 
-			tk=(Token)match(input,COMMA,FOLLOW_COMMA_in_joinOfCollectionsRule6705); 
-			pushFollow(FOLLOW_collectionReferenceRule_in_joinOfCollectionsRule6709);
+			tk=(Token)match(input,COMMA,FOLLOW_COMMA_in_joinOfCollectionsRule6933); 
+			pushFollow(FOLLOW_collectionReferenceRule_in_joinOfCollectionsRule6937);
 			c2=collectionReferenceRule();
 			state._fsp--;
 
 			 JoinCollections jc = env.addJoin (c1, c2, tk); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:664:6: ( ON GEOMETRY nff= spatialFunctionRule[true] )?
-			int alt112=2;
-			int LA112_0 = input.LA(1);
-			if ( (LA112_0==ON) ) {
-				alt112=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:680:6: ( ON GEOMETRY nff= spatialFunctionRule[true] )?
+			int alt115=2;
+			int LA115_0 = input.LA(1);
+			if ( (LA115_0==ON) ) {
+				alt115=1;
 			}
-			switch (alt112) {
+			switch (alt115) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:664:8: ON GEOMETRY nff= spatialFunctionRule[true]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:680:8: ON GEOMETRY nff= spatialFunctionRule[true]
 					{
-					match(input,ON,FOLLOW_ON_in_joinOfCollectionsRule6721); 
-					match(input,GEOMETRY,FOLLOW_GEOMETRY_in_joinOfCollectionsRule6723); 
-					pushFollow(FOLLOW_spatialFunctionRule_in_joinOfCollectionsRule6727);
+					match(input,ON,FOLLOW_ON_in_joinOfCollectionsRule6949); 
+					match(input,GEOMETRY,FOLLOW_GEOMETRY_in_joinOfCollectionsRule6951); 
+					pushFollow(FOLLOW_spatialFunctionRule_in_joinOfCollectionsRule6955);
 					nff=spatialFunctionRule(true);
 					state._fsp--;
 
@@ -6117,72 +6299,72 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:665:6: ( SET GEOMETRY (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL ) )?
-			int alt114=2;
-			int LA114_0 = input.LA(1);
-			if ( (LA114_0==SET) ) {
-				int LA114_1 = input.LA(2);
-				if ( (LA114_1==GEOMETRY) ) {
-					alt114=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:681:6: ( SET GEOMETRY (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL ) )?
+			int alt117=2;
+			int LA117_0 = input.LA(1);
+			if ( (LA117_0==SET) ) {
+				int LA117_1 = input.LA(2);
+				if ( (LA117_1==GEOMETRY) ) {
+					alt117=1;
 				}
 			}
-			switch (alt114) {
+			switch (alt117) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:665:8: SET GEOMETRY (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:681:8: SET GEOMETRY (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL )
 					{
-					match(input,SET,FOLLOW_SET_in_joinOfCollectionsRule6759); 
-					match(input,GEOMETRY,FOLLOW_GEOMETRY_in_joinOfCollectionsRule6761); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:665:21: (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL )
-					int alt113=4;
+					match(input,SET,FOLLOW_SET_in_joinOfCollectionsRule6987); 
+					match(input,GEOMETRY,FOLLOW_GEOMETRY_in_joinOfCollectionsRule6989); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:681:21: (g= INTERSECTION |g= RIGHT |g= LEFT |g= ALL )
+					int alt116=4;
 					switch ( input.LA(1) ) {
 					case INTERSECTION:
 						{
-						alt113=1;
+						alt116=1;
 						}
 						break;
 					case RIGHT:
 						{
-						alt113=2;
+						alt116=2;
 						}
 						break;
 					case LEFT:
 						{
-						alt113=3;
+						alt116=3;
 						}
 						break;
 					case ALL:
 						{
-						alt113=4;
+						alt116=4;
 						}
 						break;
 					default:
 						NoViableAltException nvae =
-							new NoViableAltException("", 113, 0, input);
+							new NoViableAltException("", 116, 0, input);
 						throw nvae;
 					}
-					switch (alt113) {
+					switch (alt116) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:665:23: g= INTERSECTION
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:681:23: g= INTERSECTION
 							{
-							g=(Token)match(input,INTERSECTION,FOLLOW_INTERSECTION_in_joinOfCollectionsRule6767); 
+							g=(Token)match(input,INTERSECTION,FOLLOW_INTERSECTION_in_joinOfCollectionsRule6995); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:665:40: g= RIGHT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:681:40: g= RIGHT
 							{
-							g=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_joinOfCollectionsRule6773); 
+							g=(Token)match(input,RIGHT,FOLLOW_RIGHT_in_joinOfCollectionsRule7001); 
 							}
 							break;
 						case 3 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:665:50: g= LEFT
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:681:50: g= LEFT
 							{
-							g=(Token)match(input,LEFT,FOLLOW_LEFT_in_joinOfCollectionsRule6779); 
+							g=(Token)match(input,LEFT,FOLLOW_LEFT_in_joinOfCollectionsRule7007); 
 							}
 							break;
 						case 4 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:665:59: g= ALL
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:681:59: g= ALL
 							{
-							g=(Token)match(input,ALL,FOLLOW_ALL_in_joinOfCollectionsRule6785); 
+							g=(Token)match(input,ALL,FOLLOW_ALL_in_joinOfCollectionsRule7013); 
 							}
 							break;
 
@@ -6194,17 +6376,17 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:666:7: ( addFieldsRule[jc] )?
-			int alt115=2;
-			int LA115_0 = input.LA(1);
-			if ( (LA115_0==ADD_ST) ) {
-				alt115=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:682:7: ( addFieldsRule[jc] )?
+			int alt118=2;
+			int LA118_0 = input.LA(1);
+			if ( (LA118_0==ADD_ST) ) {
+				alt118=1;
 			}
-			switch (alt115) {
+			switch (alt118) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:666:9: addFieldsRule[jc]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:682:9: addFieldsRule[jc]
 					{
-					pushFollow(FOLLOW_addFieldsRule_in_joinOfCollectionsRule6805);
+					pushFollow(FOLLOW_addFieldsRule_in_joinOfCollectionsRule7033);
 					addFieldsRule(jc);
 					state._fsp--;
 
@@ -6213,17 +6395,17 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:667:7: (sfs= setFuzzySetsRule )?
-			int alt116=2;
-			int LA116_0 = input.LA(1);
-			if ( (LA116_0==SET) ) {
-				alt116=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:683:7: (sfs= setFuzzySetsRule )?
+			int alt119=2;
+			int LA119_0 = input.LA(1);
+			if ( (LA119_0==SET) ) {
+				alt119=1;
 			}
-			switch (alt116) {
+			switch (alt119) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:667:9: sfs= setFuzzySetsRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:683:9: sfs= setFuzzySetsRule
 					{
-					pushFollow(FOLLOW_setFuzzySetsRule_in_joinOfCollectionsRule6865);
+					pushFollow(FOLLOW_setFuzzySetsRule_in_joinOfCollectionsRule7093);
 					sfs=setFuzzySetsRule();
 					state._fsp--;
 
@@ -6233,20 +6415,20 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:668:6: (cc= caseClauseRule |gs= generateSectionRule[true] )?
-			int alt117=3;
-			int LA117_0 = input.LA(1);
-			if ( ((LA117_0 >= CASE && LA117_0 <= CASES)) ) {
-				alt117=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:684:6: (cc= caseClauseRule |gs= generateSectionRule[true] )?
+			int alt120=3;
+			int LA120_0 = input.LA(1);
+			if ( ((LA120_0 >= CASE && LA120_0 <= CASES)) ) {
+				alt120=1;
 			}
-			else if ( (LA117_0==GENERATE) ) {
-				alt117=2;
+			else if ( (LA120_0==GENERATE) ) {
+				alt120=2;
 			}
-			switch (alt117) {
+			switch (alt120) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:668:8: cc= caseClauseRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:684:8: cc= caseClauseRule
 					{
-					pushFollow(FOLLOW_caseClauseRule_in_joinOfCollectionsRule6907);
+					pushFollow(FOLLOW_caseClauseRule_in_joinOfCollectionsRule7135);
 					cc=caseClauseRule();
 					state._fsp--;
 
@@ -6254,9 +6436,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:669:8: gs= generateSectionRule[true]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:685:8: gs= generateSectionRule[true]
 					{
-					pushFollow(FOLLOW_generateSectionRule_in_joinOfCollectionsRule6950);
+					pushFollow(FOLLOW_generateSectionRule_in_joinOfCollectionsRule7178);
 					gs=generateSectionRule(true);
 					state._fsp--;
 
@@ -6266,25 +6448,25 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:670:7: ( REMOVE DUPLICATES )?
-			int alt118=2;
-			int LA118_0 = input.LA(1);
-			if ( (LA118_0==REMOVE) ) {
-				alt118=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:686:7: ( REMOVE DUPLICATES )?
+			int alt121=2;
+			int LA121_0 = input.LA(1);
+			if ( (LA121_0==REMOVE) ) {
+				alt121=1;
 			}
-			switch (alt118) {
+			switch (alt121) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:670:9: REMOVE DUPLICATES
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:686:9: REMOVE DUPLICATES
 					{
-					match(input,REMOVE,FOLLOW_REMOVE_in_joinOfCollectionsRule6988); 
-					match(input,DUPLICATES,FOLLOW_DUPLICATES_in_joinOfCollectionsRule6990); 
+					match(input,REMOVE,FOLLOW_REMOVE_in_joinOfCollectionsRule7216); 
+					match(input,DUPLICATES,FOLLOW_DUPLICATES_in_joinOfCollectionsRule7218); 
 						jc.setRemoveDuplicates();	
 					}
 					break;
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_joinOfCollectionsRule7031); 
+			match(input,SC,FOLLOW_SC_in_joinOfCollectionsRule7259); 
 			}
 
 		}
@@ -6301,38 +6483,38 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "filterRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:675:1: filterRule : FILTER (fc= caseClauseRule |gs= generateSectionRule[true] ) ( REMOVE DUPLICATES )? SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:691:1: filterRule : FILTER (fc= caseClauseRule |gs= generateSectionRule[true] ) ( REMOVE DUPLICATES )? SC ;
 	public final void filterRule() throws RecognitionException {
 		CaseClause fc =null;
 		GenerateSection gs =null;
 
 			Filter f=null;	
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:677:3: ( FILTER (fc= caseClauseRule |gs= generateSectionRule[true] ) ( REMOVE DUPLICATES )? SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:678:4: FILTER (fc= caseClauseRule |gs= generateSectionRule[true] ) ( REMOVE DUPLICATES )? SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:693:3: ( FILTER (fc= caseClauseRule |gs= generateSectionRule[true] ) ( REMOVE DUPLICATES )? SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:694:4: FILTER (fc= caseClauseRule |gs= generateSectionRule[true] ) ( REMOVE DUPLICATES )? SC
 			{
-			match(input,FILTER,FOLLOW_FILTER_in_filterRule7060); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:679:5: (fc= caseClauseRule |gs= generateSectionRule[true] )
-			int alt119=2;
-			int LA119_0 = input.LA(1);
-			if ( ((LA119_0 >= CASE && LA119_0 <= CASES)) ) {
-				alt119=1;
+			match(input,FILTER,FOLLOW_FILTER_in_filterRule7288); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:695:5: (fc= caseClauseRule |gs= generateSectionRule[true] )
+			int alt122=2;
+			int LA122_0 = input.LA(1);
+			if ( ((LA122_0 >= CASE && LA122_0 <= CASES)) ) {
+				alt122=1;
 			}
-			else if ( (LA119_0==GENERATE) ) {
-				alt119=2;
+			else if ( (LA122_0==GENERATE) ) {
+				alt122=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 119, 0, input);
+					new NoViableAltException("", 122, 0, input);
 				throw nvae;
 			}
 
-			switch (alt119) {
+			switch (alt122) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:679:7: fc= caseClauseRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:695:7: fc= caseClauseRule
 					{
-					pushFollow(FOLLOW_caseClauseRule_in_filterRule7071);
+					pushFollow(FOLLOW_caseClauseRule_in_filterRule7299);
 					fc=caseClauseRule();
 					state._fsp--;
 
@@ -6340,9 +6522,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:680:7: gs= generateSectionRule[true]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:696:7: gs= generateSectionRule[true]
 					{
-					pushFollow(FOLLOW_generateSectionRule_in_filterRule7090);
+					pushFollow(FOLLOW_generateSectionRule_in_filterRule7318);
 					gs=generateSectionRule(true);
 					state._fsp--;
 
@@ -6352,25 +6534,25 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:681:7: ( REMOVE DUPLICATES )?
-			int alt120=2;
-			int LA120_0 = input.LA(1);
-			if ( (LA120_0==REMOVE) ) {
-				alt120=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:697:7: ( REMOVE DUPLICATES )?
+			int alt123=2;
+			int LA123_0 = input.LA(1);
+			if ( (LA123_0==REMOVE) ) {
+				alt123=1;
 			}
-			switch (alt120) {
+			switch (alt123) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:681:9: REMOVE DUPLICATES
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:697:9: REMOVE DUPLICATES
 					{
-					match(input,REMOVE,FOLLOW_REMOVE_in_filterRule7109); 
-					match(input,DUPLICATES,FOLLOW_DUPLICATES_in_filterRule7111); 
+					match(input,REMOVE,FOLLOW_REMOVE_in_filterRule7337); 
+					match(input,DUPLICATES,FOLLOW_DUPLICATES_in_filterRule7339); 
 						f.setRemoveDuplicates(); 
 					}
 					break;
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_filterRule7132); 
+			match(input,SC,FOLLOW_SC_in_filterRule7360); 
 			}
 
 		}
@@ -6387,32 +6569,32 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "groupRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:686:1: groupRule : GROUP (p= groupPartitionRule )+ (oth= othersRule )? SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:702:1: groupRule : GROUP (p= groupPartitionRule )+ (oth= othersRule )? SC ;
 	public final void groupRule() throws RecognitionException {
 		Partition p =null;
 		String oth =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:687:3: ( GROUP (p= groupPartitionRule )+ (oth= othersRule )? SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:688:4: GROUP (p= groupPartitionRule )+ (oth= othersRule )? SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:703:3: ( GROUP (p= groupPartitionRule )+ (oth= othersRule )? SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:704:4: GROUP (p= groupPartitionRule )+ (oth= othersRule )? SC
 			{
-			match(input,GROUP,FOLLOW_GROUP_in_groupRule7153); 
+			match(input,GROUP,FOLLOW_GROUP_in_groupRule7381); 
 			 Group g = env.addGroup (); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:689:7: (p= groupPartitionRule )+
-			int cnt121=0;
-			loop121:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:705:7: (p= groupPartitionRule )+
+			int cnt124=0;
+			loop124:
 			while (true) {
-				int alt121=2;
-				int LA121_0 = input.LA(1);
-				if ( (LA121_0==PARTITION) ) {
-					alt121=1;
+				int alt124=2;
+				int LA124_0 = input.LA(1);
+				if ( (LA124_0==PARTITION) ) {
+					alt124=1;
 				}
 
-				switch (alt121) {
+				switch (alt124) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:689:9: p= groupPartitionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:705:9: p= groupPartitionRule
 					{
-					pushFollow(FOLLOW_groupPartitionRule_in_groupRule7178);
+					pushFollow(FOLLOW_groupPartitionRule_in_groupRule7406);
 					p=groupPartitionRule();
 					state._fsp--;
 
@@ -6421,24 +6603,24 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					if ( cnt121 >= 1 ) break loop121;
-					EarlyExitException eee = new EarlyExitException(121, input);
+					if ( cnt124 >= 1 ) break loop124;
+					EarlyExitException eee = new EarlyExitException(124, input);
 					throw eee;
 				}
-				cnt121++;
+				cnt124++;
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:690:7: (oth= othersRule )?
-			int alt122=2;
-			int LA122_0 = input.LA(1);
-			if ( (LA122_0==DROP||LA122_0==KEEP) ) {
-				alt122=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:706:7: (oth= othersRule )?
+			int alt125=2;
+			int LA125_0 = input.LA(1);
+			if ( (LA125_0==DROP||LA125_0==KEEP) ) {
+				alt125=1;
 			}
-			switch (alt122) {
+			switch (alt125) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:690:9: oth= othersRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:706:9: oth= othersRule
 					{
-					pushFollow(FOLLOW_othersRule_in_groupRule7204);
+					pushFollow(FOLLOW_othersRule_in_groupRule7432);
 					oth=othersRule();
 					state._fsp--;
 
@@ -6448,7 +6630,7 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_groupRule7228); 
+			match(input,SC,FOLLOW_SC_in_groupRule7456); 
 			}
 
 		}
@@ -6465,7 +6647,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "groupPartitionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:695:1: groupPartitionRule returns [Partition p] : PARTITION c= orConditionRule BY fr= fieldRefRule ( COMMA fr= fieldRefRule )* INTO fr= fieldRefRule ( DROP GROUPING FIELDS )? ( ORDER BY sf= sortingFieldRule ( COMMA sf= sortingFieldRule )* ( KEEP UNCOMPARABLE )? )? (gs= generateSectionRule[false] )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:711:1: groupPartitionRule returns [Partition p] : PARTITION c= orConditionRule BY fr= fieldRefRule ( COMMA fr= fieldRefRule )* INTO fr= fieldRefRule ( DROP GROUPING FIELDS )? ( ORDER BY sf= sortingFieldRule ( COMMA sf= sortingFieldRule )* ( KEEP UNCOMPARABLE )? )? (gs= generateSectionRule[false] )? ;
 	public final Partition groupPartitionRule() throws RecognitionException {
 		Partition p = null;
 
@@ -6476,36 +6658,36 @@ public class JCoQLParser extends Parser {
 		GenerateSection gs =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:696:3: ( PARTITION c= orConditionRule BY fr= fieldRefRule ( COMMA fr= fieldRefRule )* INTO fr= fieldRefRule ( DROP GROUPING FIELDS )? ( ORDER BY sf= sortingFieldRule ( COMMA sf= sortingFieldRule )* ( KEEP UNCOMPARABLE )? )? (gs= generateSectionRule[false] )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:697:5: PARTITION c= orConditionRule BY fr= fieldRefRule ( COMMA fr= fieldRefRule )* INTO fr= fieldRefRule ( DROP GROUPING FIELDS )? ( ORDER BY sf= sortingFieldRule ( COMMA sf= sortingFieldRule )* ( KEEP UNCOMPARABLE )? )? (gs= generateSectionRule[false] )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:712:3: ( PARTITION c= orConditionRule BY fr= fieldRefRule ( COMMA fr= fieldRefRule )* INTO fr= fieldRefRule ( DROP GROUPING FIELDS )? ( ORDER BY sf= sortingFieldRule ( COMMA sf= sortingFieldRule )* ( KEEP UNCOMPARABLE )? )? (gs= generateSectionRule[false] )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:713:5: PARTITION c= orConditionRule BY fr= fieldRefRule ( COMMA fr= fieldRefRule )* INTO fr= fieldRefRule ( DROP GROUPING FIELDS )? ( ORDER BY sf= sortingFieldRule ( COMMA sf= sortingFieldRule )* ( KEEP UNCOMPARABLE )? )? (gs= generateSectionRule[false] )?
 			{
-			match(input,PARTITION,FOLLOW_PARTITION_in_groupPartitionRule7251); 
-			pushFollow(FOLLOW_orConditionRule_in_groupPartitionRule7255);
+			match(input,PARTITION,FOLLOW_PARTITION_in_groupPartitionRule7479); 
+			pushFollow(FOLLOW_orConditionRule_in_groupPartitionRule7483);
 			c=orConditionRule();
 			state._fsp--;
 
 			 p = new Partition (c); 
-			match(input,BY,FOLLOW_BY_in_groupPartitionRule7268); 
-			pushFollow(FOLLOW_fieldRefRule_in_groupPartitionRule7272);
+			match(input,BY,FOLLOW_BY_in_groupPartitionRule7496); 
+			pushFollow(FOLLOW_fieldRefRule_in_groupPartitionRule7500);
 			fr=fieldRefRule();
 			state._fsp--;
 
 			 p.addByField (fr); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:699:10: ( COMMA fr= fieldRefRule )*
-			loop123:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:715:10: ( COMMA fr= fieldRefRule )*
+			loop126:
 			while (true) {
-				int alt123=2;
-				int LA123_0 = input.LA(1);
-				if ( (LA123_0==COMMA) ) {
-					alt123=1;
+				int alt126=2;
+				int LA126_0 = input.LA(1);
+				if ( (LA126_0==COMMA) ) {
+					alt126=1;
 				}
 
-				switch (alt123) {
+				switch (alt126) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:699:12: COMMA fr= fieldRefRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:715:12: COMMA fr= fieldRefRule
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_groupPartitionRule7297); 
-					pushFollow(FOLLOW_fieldRefRule_in_groupPartitionRule7301);
+					match(input,COMMA,FOLLOW_COMMA_in_groupPartitionRule7525); 
+					pushFollow(FOLLOW_fieldRefRule_in_groupPartitionRule7529);
 					fr=fieldRefRule();
 					state._fsp--;
 
@@ -6514,70 +6696,70 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop123;
+					break loop126;
 				}
 			}
 
-			match(input,INTO,FOLLOW_INTO_in_groupPartitionRule7323); 
-			pushFollow(FOLLOW_fieldRefRule_in_groupPartitionRule7327);
+			match(input,INTO,FOLLOW_INTO_in_groupPartitionRule7551); 
+			pushFollow(FOLLOW_fieldRefRule_in_groupPartitionRule7555);
 			fr=fieldRefRule();
 			state._fsp--;
 
 			 p.setInto (fr); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:701:8: ( DROP GROUPING FIELDS )?
-			int alt124=2;
-			int LA124_0 = input.LA(1);
-			if ( (LA124_0==DROP) ) {
-				int LA124_1 = input.LA(2);
-				if ( (LA124_1==GROUPING) ) {
-					alt124=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:717:8: ( DROP GROUPING FIELDS )?
+			int alt127=2;
+			int LA127_0 = input.LA(1);
+			if ( (LA127_0==DROP) ) {
+				int LA127_1 = input.LA(2);
+				if ( (LA127_1==GROUPING) ) {
+					alt127=1;
 				}
 			}
-			switch (alt124) {
+			switch (alt127) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:701:10: DROP GROUPING FIELDS
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:717:10: DROP GROUPING FIELDS
 					{
-					match(input,DROP,FOLLOW_DROP_in_groupPartitionRule7348); 
-					match(input,GROUPING,FOLLOW_GROUPING_in_groupPartitionRule7350); 
-					match(input,FIELDS,FOLLOW_FIELDS_in_groupPartitionRule7352); 
+					match(input,DROP,FOLLOW_DROP_in_groupPartitionRule7576); 
+					match(input,GROUPING,FOLLOW_GROUPING_in_groupPartitionRule7578); 
+					match(input,FIELDS,FOLLOW_FIELDS_in_groupPartitionRule7580); 
 						p.setDropGroupingFields (); 
 					}
 					break;
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:702:7: ( ORDER BY sf= sortingFieldRule ( COMMA sf= sortingFieldRule )* ( KEEP UNCOMPARABLE )? )?
-			int alt127=2;
-			int LA127_0 = input.LA(1);
-			if ( (LA127_0==ORDER) ) {
-				alt127=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:718:7: ( ORDER BY sf= sortingFieldRule ( COMMA sf= sortingFieldRule )* ( KEEP UNCOMPARABLE )? )?
+			int alt130=2;
+			int LA130_0 = input.LA(1);
+			if ( (LA130_0==ORDER) ) {
+				alt130=1;
 			}
-			switch (alt127) {
+			switch (alt130) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:702:9: ORDER BY sf= sortingFieldRule ( COMMA sf= sortingFieldRule )* ( KEEP UNCOMPARABLE )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:718:9: ORDER BY sf= sortingFieldRule ( COMMA sf= sortingFieldRule )* ( KEEP UNCOMPARABLE )?
 					{
-					match(input,ORDER,FOLLOW_ORDER_in_groupPartitionRule7374); 
-					match(input,BY,FOLLOW_BY_in_groupPartitionRule7376); 
-					pushFollow(FOLLOW_sortingFieldRule_in_groupPartitionRule7380);
+					match(input,ORDER,FOLLOW_ORDER_in_groupPartitionRule7602); 
+					match(input,BY,FOLLOW_BY_in_groupPartitionRule7604); 
+					pushFollow(FOLLOW_sortingFieldRule_in_groupPartitionRule7608);
 					sf=sortingFieldRule();
 					state._fsp--;
 
 					 p.addSortingField (sf); 		
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:703:9: ( COMMA sf= sortingFieldRule )*
-					loop125:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:719:9: ( COMMA sf= sortingFieldRule )*
+					loop128:
 					while (true) {
-						int alt125=2;
-						int LA125_0 = input.LA(1);
-						if ( (LA125_0==COMMA) ) {
-							alt125=1;
+						int alt128=2;
+						int LA128_0 = input.LA(1);
+						if ( (LA128_0==COMMA) ) {
+							alt128=1;
 						}
 
-						switch (alt125) {
+						switch (alt128) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:703:11: COMMA sf= sortingFieldRule
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:719:11: COMMA sf= sortingFieldRule
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_groupPartitionRule7397); 
-							pushFollow(FOLLOW_sortingFieldRule_in_groupPartitionRule7401);
+							match(input,COMMA,FOLLOW_COMMA_in_groupPartitionRule7625); 
+							pushFollow(FOLLOW_sortingFieldRule_in_groupPartitionRule7629);
 							sf=sortingFieldRule();
 							state._fsp--;
 
@@ -6586,25 +6768,25 @@ public class JCoQLParser extends Parser {
 							break;
 
 						default :
-							break loop125;
+							break loop128;
 						}
 					}
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:704:6: ( KEEP UNCOMPARABLE )?
-					int alt126=2;
-					int LA126_0 = input.LA(1);
-					if ( (LA126_0==KEEP) ) {
-						int LA126_1 = input.LA(2);
-						if ( (LA126_1==UNCOMPARABLE) ) {
-							alt126=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:720:6: ( KEEP UNCOMPARABLE )?
+					int alt129=2;
+					int LA129_0 = input.LA(1);
+					if ( (LA129_0==KEEP) ) {
+						int LA129_1 = input.LA(2);
+						if ( (LA129_1==UNCOMPARABLE) ) {
+							alt129=1;
 						}
 					}
-					switch (alt126) {
+					switch (alt129) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:704:8: KEEP UNCOMPARABLE
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:720:8: KEEP UNCOMPARABLE
 							{
-							match(input,KEEP,FOLLOW_KEEP_in_groupPartitionRule7420); 
-							match(input,UNCOMPARABLE,FOLLOW_UNCOMPARABLE_in_groupPartitionRule7422); 
+							match(input,KEEP,FOLLOW_KEEP_in_groupPartitionRule7648); 
+							match(input,UNCOMPARABLE,FOLLOW_UNCOMPARABLE_in_groupPartitionRule7650); 
 							 p.setKeepUncomparable ();		
 							}
 							break;
@@ -6616,17 +6798,17 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:706:7: (gs= generateSectionRule[false] )?
-			int alt128=2;
-			int LA128_0 = input.LA(1);
-			if ( (LA128_0==GENERATE) ) {
-				alt128=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:722:7: (gs= generateSectionRule[false] )?
+			int alt131=2;
+			int LA131_0 = input.LA(1);
+			if ( (LA131_0==GENERATE) ) {
+				alt131=1;
 			}
-			switch (alt128) {
+			switch (alt131) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:706:9: gs= generateSectionRule[false]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:722:9: gs= generateSectionRule[false]
 					{
-					pushFollow(FOLLOW_generateSectionRule_in_groupPartitionRule7453);
+					pushFollow(FOLLOW_generateSectionRule_in_groupPartitionRule7681);
 					gs=generateSectionRule(false);
 					state._fsp--;
 
@@ -6653,7 +6835,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "sortingFieldRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:710:1: sortingFieldRule returns [SortField sf] : fr= fieldRefRule TYPE t= ID (v= VERSUS )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:726:1: sortingFieldRule returns [SortField sf] : fr= fieldRefRule TYPE t= ID (v= VERSUS )? ;
 	public final SortField sortingFieldRule() throws RecognitionException {
 		SortField sf = null;
 
@@ -6663,27 +6845,27 @@ public class JCoQLParser extends Parser {
 		Field fr =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:711:2: (fr= fieldRefRule TYPE t= ID (v= VERSUS )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:712:3: fr= fieldRefRule TYPE t= ID (v= VERSUS )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:727:2: (fr= fieldRefRule TYPE t= ID (v= VERSUS )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:728:3: fr= fieldRefRule TYPE t= ID (v= VERSUS )?
 			{
-			pushFollow(FOLLOW_fieldRefRule_in_sortingFieldRule7484);
+			pushFollow(FOLLOW_fieldRefRule_in_sortingFieldRule7712);
 			fr=fieldRefRule();
 			state._fsp--;
 
-			match(input,TYPE,FOLLOW_TYPE_in_sortingFieldRule7488); 
-			t=(Token)match(input,ID,FOLLOW_ID_in_sortingFieldRule7492); 
+			match(input,TYPE,FOLLOW_TYPE_in_sortingFieldRule7716); 
+			t=(Token)match(input,ID,FOLLOW_ID_in_sortingFieldRule7720); 
 				sf = env.createSortField (fr, t); 	
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:714:3: (v= VERSUS )?
-			int alt129=2;
-			int LA129_0 = input.LA(1);
-			if ( (LA129_0==VERSUS) ) {
-				alt129=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:730:3: (v= VERSUS )?
+			int alt132=2;
+			int LA132_0 = input.LA(1);
+			if ( (LA132_0==VERSUS) ) {
+				alt132=1;
 			}
-			switch (alt129) {
+			switch (alt132) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:714:5: v= VERSUS
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:730:5: v= VERSUS
 					{
-					v=(Token)match(input,VERSUS,FOLLOW_VERSUS_in_sortingFieldRule7507); 
+					v=(Token)match(input,VERSUS,FOLLOW_VERSUS_in_sortingFieldRule7735); 
 						sf.setVersus (v.getText ());				
 					}
 					break;
@@ -6707,32 +6889,32 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "expandRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:717:1: expandRule : EXPAND (u= unpackRule )+ (oth= othersRule )? SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:733:1: expandRule : EXPAND (u= unpackRule )+ (oth= othersRule )? SC ;
 	public final void expandRule() throws RecognitionException {
 		Unpack u =null;
 		String oth =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:718:3: ( EXPAND (u= unpackRule )+ (oth= othersRule )? SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:719:5: EXPAND (u= unpackRule )+ (oth= othersRule )? SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:734:3: ( EXPAND (u= unpackRule )+ (oth= othersRule )? SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:735:5: EXPAND (u= unpackRule )+ (oth= othersRule )? SC
 			{
-			match(input,EXPAND,FOLLOW_EXPAND_in_expandRule7536); 
+			match(input,EXPAND,FOLLOW_EXPAND_in_expandRule7764); 
 			 Expand e = env.addExpand (); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:720:7: (u= unpackRule )+
-			int cnt130=0;
-			loop130:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:736:7: (u= unpackRule )+
+			int cnt133=0;
+			loop133:
 			while (true) {
-				int alt130=2;
-				int LA130_0 = input.LA(1);
-				if ( (LA130_0==UNPACK) ) {
-					alt130=1;
+				int alt133=2;
+				int LA133_0 = input.LA(1);
+				if ( (LA133_0==UNPACK) ) {
+					alt133=1;
 				}
 
-				switch (alt130) {
+				switch (alt133) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:720:9: u= unpackRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:736:9: u= unpackRule
 					{
-					pushFollow(FOLLOW_unpackRule_in_expandRule7560);
+					pushFollow(FOLLOW_unpackRule_in_expandRule7788);
 					u=unpackRule();
 					state._fsp--;
 
@@ -6741,24 +6923,24 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					if ( cnt130 >= 1 ) break loop130;
-					EarlyExitException eee = new EarlyExitException(130, input);
+					if ( cnt133 >= 1 ) break loop133;
+					EarlyExitException eee = new EarlyExitException(133, input);
 					throw eee;
 				}
-				cnt130++;
+				cnt133++;
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:721:7: (oth= othersRule )?
-			int alt131=2;
-			int LA131_0 = input.LA(1);
-			if ( (LA131_0==DROP||LA131_0==KEEP) ) {
-				alt131=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:737:7: (oth= othersRule )?
+			int alt134=2;
+			int LA134_0 = input.LA(1);
+			if ( (LA134_0==DROP||LA134_0==KEEP) ) {
+				alt134=1;
 			}
-			switch (alt131) {
+			switch (alt134) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:721:9: oth= othersRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:737:9: oth= othersRule
 					{
-					pushFollow(FOLLOW_othersRule_in_expandRule7592);
+					pushFollow(FOLLOW_othersRule_in_expandRule7820);
 					oth=othersRule();
 					state._fsp--;
 
@@ -6768,7 +6950,7 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_expandRule7616); 
+			match(input,SC,FOLLOW_SC_in_expandRule7844); 
 			}
 
 		}
@@ -6785,7 +6967,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "unpackRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:726:1: unpackRule returns [Unpack u] : UNPACK p= orConditionRule ARRAY fr1= fieldRefRule TO fr2= fieldRefRule ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:742:1: unpackRule returns [Unpack u] : UNPACK p= orConditionRule ARRAY fr1= fieldRefRule TO fr2= fieldRefRule ;
 	public final Unpack unpackRule() throws RecognitionException {
 		Unpack u = null;
 
@@ -6795,21 +6977,21 @@ public class JCoQLParser extends Parser {
 		Field fr2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:727:3: ( UNPACK p= orConditionRule ARRAY fr1= fieldRefRule TO fr2= fieldRefRule )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:728:5: UNPACK p= orConditionRule ARRAY fr1= fieldRefRule TO fr2= fieldRefRule
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:743:3: ( UNPACK p= orConditionRule ARRAY fr1= fieldRefRule TO fr2= fieldRefRule )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:744:5: UNPACK p= orConditionRule ARRAY fr1= fieldRefRule TO fr2= fieldRefRule
 			{
-			match(input,UNPACK,FOLLOW_UNPACK_in_unpackRule7638); 
-			pushFollow(FOLLOW_orConditionRule_in_unpackRule7643);
+			match(input,UNPACK,FOLLOW_UNPACK_in_unpackRule7866); 
+			pushFollow(FOLLOW_orConditionRule_in_unpackRule7871);
 			p=orConditionRule();
 			state._fsp--;
 
-			match(input,ARRAY,FOLLOW_ARRAY_in_unpackRule7650); 
-			pushFollow(FOLLOW_fieldRefRule_in_unpackRule7654);
+			match(input,ARRAY,FOLLOW_ARRAY_in_unpackRule7878); 
+			pushFollow(FOLLOW_fieldRefRule_in_unpackRule7882);
 			fr1=fieldRefRule();
 			state._fsp--;
 
-			match(input,TO,FOLLOW_TO_in_unpackRule7661); 
-			pushFollow(FOLLOW_fieldRefRule_in_unpackRule7665);
+			match(input,TO,FOLLOW_TO_in_unpackRule7889); 
+			pushFollow(FOLLOW_fieldRefRule_in_unpackRule7893);
 			fr2=fieldRefRule();
 			state._fsp--;
 
@@ -6831,37 +7013,37 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "mergeCollectionsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:734:1: mergeCollectionsRule : MERGE COLLECTIONS cr= collectionReferenceRule ( COMMA cr= collectionReferenceRule )+ ( REMOVE DUPLICATES )? SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:750:1: mergeCollectionsRule : MERGE COLLECTIONS cr= collectionReferenceRule ( COMMA cr= collectionReferenceRule )+ ( REMOVE DUPLICATES )? SC ;
 	public final void mergeCollectionsRule() throws RecognitionException {
 		DbCollection cr =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:735:3: ( MERGE COLLECTIONS cr= collectionReferenceRule ( COMMA cr= collectionReferenceRule )+ ( REMOVE DUPLICATES )? SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:736:6: MERGE COLLECTIONS cr= collectionReferenceRule ( COMMA cr= collectionReferenceRule )+ ( REMOVE DUPLICATES )? SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:751:3: ( MERGE COLLECTIONS cr= collectionReferenceRule ( COMMA cr= collectionReferenceRule )+ ( REMOVE DUPLICATES )? SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:752:6: MERGE COLLECTIONS cr= collectionReferenceRule ( COMMA cr= collectionReferenceRule )+ ( REMOVE DUPLICATES )? SC
 			{
-			match(input,MERGE,FOLLOW_MERGE_in_mergeCollectionsRule7693); 
-			match(input,COLLECTIONS,FOLLOW_COLLECTIONS_in_mergeCollectionsRule7695); 
-			pushFollow(FOLLOW_collectionReferenceRule_in_mergeCollectionsRule7709);
+			match(input,MERGE,FOLLOW_MERGE_in_mergeCollectionsRule7921); 
+			match(input,COLLECTIONS,FOLLOW_COLLECTIONS_in_mergeCollectionsRule7923); 
+			pushFollow(FOLLOW_collectionReferenceRule_in_mergeCollectionsRule7937);
 			cr=collectionReferenceRule();
 			state._fsp--;
 
 			 MergeCollections mc = env.addMergeCollections (cr); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:738:9: ( COMMA cr= collectionReferenceRule )+
-			int cnt132=0;
-			loop132:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:754:9: ( COMMA cr= collectionReferenceRule )+
+			int cnt135=0;
+			loop135:
 			while (true) {
-				int alt132=2;
-				int LA132_0 = input.LA(1);
-				if ( (LA132_0==COMMA) ) {
-					alt132=1;
+				int alt135=2;
+				int LA135_0 = input.LA(1);
+				if ( (LA135_0==COMMA) ) {
+					alt135=1;
 				}
 
-				switch (alt132) {
+				switch (alt135) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:738:11: COMMA cr= collectionReferenceRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:754:11: COMMA cr= collectionReferenceRule
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_mergeCollectionsRule7731); 
-					pushFollow(FOLLOW_collectionReferenceRule_in_mergeCollectionsRule7735);
+					match(input,COMMA,FOLLOW_COMMA_in_mergeCollectionsRule7959); 
+					pushFollow(FOLLOW_collectionReferenceRule_in_mergeCollectionsRule7963);
 					cr=collectionReferenceRule();
 					state._fsp--;
 
@@ -6870,32 +7052,32 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					if ( cnt132 >= 1 ) break loop132;
-					EarlyExitException eee = new EarlyExitException(132, input);
+					if ( cnt135 >= 1 ) break loop135;
+					EarlyExitException eee = new EarlyExitException(135, input);
 					throw eee;
 				}
-				cnt132++;
+				cnt135++;
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:739:7: ( REMOVE DUPLICATES )?
-			int alt133=2;
-			int LA133_0 = input.LA(1);
-			if ( (LA133_0==REMOVE) ) {
-				alt133=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:755:7: ( REMOVE DUPLICATES )?
+			int alt136=2;
+			int LA136_0 = input.LA(1);
+			if ( (LA136_0==REMOVE) ) {
+				alt136=1;
 			}
-			switch (alt133) {
+			switch (alt136) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:739:9: REMOVE DUPLICATES
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:755:9: REMOVE DUPLICATES
 					{
-					match(input,REMOVE,FOLLOW_REMOVE_in_mergeCollectionsRule7756); 
-					match(input,DUPLICATES,FOLLOW_DUPLICATES_in_mergeCollectionsRule7758); 
+					match(input,REMOVE,FOLLOW_REMOVE_in_mergeCollectionsRule7984); 
+					match(input,DUPLICATES,FOLLOW_DUPLICATES_in_mergeCollectionsRule7986); 
 						mc.setRemoveDuplicates(); 
 					}
 					break;
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_mergeCollectionsRule7788); 
+			match(input,SC,FOLLOW_SC_in_mergeCollectionsRule8016); 
 			}
 
 		}
@@ -6912,28 +7094,28 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "intersectCollectionsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:744:1: intersectCollectionsRule : INTERSECT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:760:1: intersectCollectionsRule : INTERSECT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC ;
 	public final void intersectCollectionsRule() throws RecognitionException {
 		DbCollection cr1 =null;
 		DbCollection cr2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:745:3: ( INTERSECT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:746:5: INTERSECT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:761:3: ( INTERSECT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:762:5: INTERSECT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC
 			{
-			match(input,INTERSECT,FOLLOW_INTERSECT_in_intersectCollectionsRule7808); 
-			match(input,COLLECTIONS,FOLLOW_COLLECTIONS_in_intersectCollectionsRule7810); 
-			pushFollow(FOLLOW_collectionReferenceRule_in_intersectCollectionsRule7820);
+			match(input,INTERSECT,FOLLOW_INTERSECT_in_intersectCollectionsRule8036); 
+			match(input,COLLECTIONS,FOLLOW_COLLECTIONS_in_intersectCollectionsRule8038); 
+			pushFollow(FOLLOW_collectionReferenceRule_in_intersectCollectionsRule8048);
 			cr1=collectionReferenceRule();
 			state._fsp--;
 
-			match(input,COMMA,FOLLOW_COMMA_in_intersectCollectionsRule7822); 
-			pushFollow(FOLLOW_collectionReferenceRule_in_intersectCollectionsRule7826);
+			match(input,COMMA,FOLLOW_COMMA_in_intersectCollectionsRule8050); 
+			pushFollow(FOLLOW_collectionReferenceRule_in_intersectCollectionsRule8054);
 			cr2=collectionReferenceRule();
 			state._fsp--;
 
 			 env.addInstersectCollections (cr1, cr2); 
-			match(input,SC,FOLLOW_SC_in_intersectCollectionsRule7838); 
+			match(input,SC,FOLLOW_SC_in_intersectCollectionsRule8066); 
 			}
 
 		}
@@ -6950,28 +7132,28 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "subtractCollectionsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:752:1: subtractCollectionsRule : SUBTRACT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:768:1: subtractCollectionsRule : SUBTRACT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC ;
 	public final void subtractCollectionsRule() throws RecognitionException {
 		DbCollection cr1 =null;
 		DbCollection cr2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:753:3: ( SUBTRACT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:754:5: SUBTRACT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:769:3: ( SUBTRACT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:770:5: SUBTRACT COLLECTIONS cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule SC
 			{
-			match(input,SUBTRACT,FOLLOW_SUBTRACT_in_subtractCollectionsRule7860); 
-			match(input,COLLECTIONS,FOLLOW_COLLECTIONS_in_subtractCollectionsRule7862); 
-			pushFollow(FOLLOW_collectionReferenceRule_in_subtractCollectionsRule7870);
+			match(input,SUBTRACT,FOLLOW_SUBTRACT_in_subtractCollectionsRule8088); 
+			match(input,COLLECTIONS,FOLLOW_COLLECTIONS_in_subtractCollectionsRule8090); 
+			pushFollow(FOLLOW_collectionReferenceRule_in_subtractCollectionsRule8098);
 			cr1=collectionReferenceRule();
 			state._fsp--;
 
-			match(input,COMMA,FOLLOW_COMMA_in_subtractCollectionsRule7872); 
-			pushFollow(FOLLOW_collectionReferenceRule_in_subtractCollectionsRule7876);
+			match(input,COMMA,FOLLOW_COMMA_in_subtractCollectionsRule8100); 
+			pushFollow(FOLLOW_collectionReferenceRule_in_subtractCollectionsRule8104);
 			cr2=collectionReferenceRule();
 			state._fsp--;
 
 			 env.addSubtractCollections (cr1, cr2); 
-			match(input,SC,FOLLOW_SC_in_subtractCollectionsRule7888); 
+			match(input,SC,FOLLOW_SC_in_subtractCollectionsRule8116); 
 			}
 
 		}
@@ -6988,90 +7170,90 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "useDbRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:760:1: useDbRule : USE DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? ( COMMA DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? )* ON ( DEFAULT SERVER | SERVER (d= ID |d= APEX_VALUE ) ( (d= ID |d= APEX_VALUE ) )? ) SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:776:1: useDbRule : USE DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? ( COMMA DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? )* ON ( DEFAULT SERVER | SERVER (d= ID |d= APEX_VALUE ) ( (d= ID |d= APEX_VALUE ) )? ) SC ;
 	public final void useDbRule() throws RecognitionException {
 		Token d=null;
 		Token a=null;
 
 		 DbName db = null; 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:762:3: ( USE DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? ( COMMA DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? )* ON ( DEFAULT SERVER | SERVER (d= ID |d= APEX_VALUE ) ( (d= ID |d= APEX_VALUE ) )? ) SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:763:5: USE DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? ( COMMA DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? )* ON ( DEFAULT SERVER | SERVER (d= ID |d= APEX_VALUE ) ( (d= ID |d= APEX_VALUE ) )? ) SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:778:3: ( USE DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? ( COMMA DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? )* ON ( DEFAULT SERVER | SERVER (d= ID |d= APEX_VALUE ) ( (d= ID |d= APEX_VALUE ) )? ) SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:779:5: USE DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? ( COMMA DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? )* ON ( DEFAULT SERVER | SERVER (d= ID |d= APEX_VALUE ) ( (d= ID |d= APEX_VALUE ) )? ) SC
 			{
-			match(input,USE,FOLLOW_USE_in_useDbRule7915); 
+			match(input,USE,FOLLOW_USE_in_useDbRule8143); 
 			 UseDb ud = env.addUseDb (); 
-			match(input,DB,FOLLOW_DB_in_useDbRule7925); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:764:10: (d= ID |d= APEX_VALUE )
-			int alt134=2;
-			int LA134_0 = input.LA(1);
-			if ( (LA134_0==ID) ) {
-				alt134=1;
+			match(input,DB,FOLLOW_DB_in_useDbRule8153); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:780:10: (d= ID |d= APEX_VALUE )
+			int alt137=2;
+			int LA137_0 = input.LA(1);
+			if ( (LA137_0==ID) ) {
+				alt137=1;
 			}
-			else if ( (LA134_0==APEX_VALUE) ) {
-				alt134=2;
+			else if ( (LA137_0==APEX_VALUE) ) {
+				alt137=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 134, 0, input);
+					new NoViableAltException("", 137, 0, input);
 				throw nvae;
 			}
 
-			switch (alt134) {
+			switch (alt137) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:764:11: d= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:780:11: d= ID
 					{
-					d=(Token)match(input,ID,FOLLOW_ID_in_useDbRule7930); 
+					d=(Token)match(input,ID,FOLLOW_ID_in_useDbRule8158); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:764:18: d= APEX_VALUE
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:780:18: d= APEX_VALUE
 					{
-					d=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule7936); 
+					d=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule8164); 
 					}
 					break;
 
 			}
 
 			 db = new DbName (d.getText()); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:765:9: ( AS (a= ID |a= APEX_VALUE ) )?
-			int alt136=2;
-			int LA136_0 = input.LA(1);
-			if ( (LA136_0==AS) ) {
-				alt136=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:781:9: ( AS (a= ID |a= APEX_VALUE ) )?
+			int alt139=2;
+			int LA139_0 = input.LA(1);
+			if ( (LA139_0==AS) ) {
+				alt139=1;
 			}
-			switch (alt136) {
+			switch (alt139) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:765:10: AS (a= ID |a= APEX_VALUE )
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:781:10: AS (a= ID |a= APEX_VALUE )
 					{
-					match(input,AS,FOLLOW_AS_in_useDbRule7960); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:765:13: (a= ID |a= APEX_VALUE )
-					int alt135=2;
-					int LA135_0 = input.LA(1);
-					if ( (LA135_0==ID) ) {
-						alt135=1;
+					match(input,AS,FOLLOW_AS_in_useDbRule8188); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:781:13: (a= ID |a= APEX_VALUE )
+					int alt138=2;
+					int LA138_0 = input.LA(1);
+					if ( (LA138_0==ID) ) {
+						alt138=1;
 					}
-					else if ( (LA135_0==APEX_VALUE) ) {
-						alt135=2;
+					else if ( (LA138_0==APEX_VALUE) ) {
+						alt138=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 135, 0, input);
+							new NoViableAltException("", 138, 0, input);
 						throw nvae;
 					}
 
-					switch (alt135) {
+					switch (alt138) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:765:14: a= ID
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:781:14: a= ID
 							{
-							a=(Token)match(input,ID,FOLLOW_ID_in_useDbRule7965); 
+							a=(Token)match(input,ID,FOLLOW_ID_in_useDbRule8193); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:765:21: a= APEX_VALUE
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:781:21: a= APEX_VALUE
 							{
-							a=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule7971); 
+							a=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule8199); 
 							}
 							break;
 
@@ -7084,92 +7266,92 @@ public class JCoQLParser extends Parser {
 			}
 
 			 ud.addDb (db); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:768:9: ( COMMA DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? )*
-			loop140:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:784:9: ( COMMA DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )? )*
+			loop143:
 			while (true) {
-				int alt140=2;
-				int LA140_0 = input.LA(1);
-				if ( (LA140_0==COMMA) ) {
-					alt140=1;
+				int alt143=2;
+				int LA143_0 = input.LA(1);
+				if ( (LA143_0==COMMA) ) {
+					alt143=1;
 				}
 
-				switch (alt140) {
+				switch (alt143) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:768:11: COMMA DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:784:11: COMMA DB (d= ID |d= APEX_VALUE ) ( AS (a= ID |a= APEX_VALUE ) )?
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_useDbRule8052); 
-					match(input,DB,FOLLOW_DB_in_useDbRule8054); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:768:20: (d= ID |d= APEX_VALUE )
-					int alt137=2;
-					int LA137_0 = input.LA(1);
-					if ( (LA137_0==ID) ) {
-						alt137=1;
+					match(input,COMMA,FOLLOW_COMMA_in_useDbRule8280); 
+					match(input,DB,FOLLOW_DB_in_useDbRule8282); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:784:20: (d= ID |d= APEX_VALUE )
+					int alt140=2;
+					int LA140_0 = input.LA(1);
+					if ( (LA140_0==ID) ) {
+						alt140=1;
 					}
-					else if ( (LA137_0==APEX_VALUE) ) {
-						alt137=2;
+					else if ( (LA140_0==APEX_VALUE) ) {
+						alt140=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 137, 0, input);
+							new NoViableAltException("", 140, 0, input);
 						throw nvae;
 					}
 
-					switch (alt137) {
+					switch (alt140) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:768:21: d= ID
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:784:21: d= ID
 							{
-							d=(Token)match(input,ID,FOLLOW_ID_in_useDbRule8059); 
+							d=(Token)match(input,ID,FOLLOW_ID_in_useDbRule8287); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:768:28: d= APEX_VALUE
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:784:28: d= APEX_VALUE
 							{
-							d=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule8065); 
+							d=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule8293); 
 							}
 							break;
 
 					}
 
 					 db = new DbName (d.getText()); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:769:16: ( AS (a= ID |a= APEX_VALUE ) )?
-					int alt139=2;
-					int LA139_0 = input.LA(1);
-					if ( (LA139_0==AS) ) {
-						alt139=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:785:16: ( AS (a= ID |a= APEX_VALUE ) )?
+					int alt142=2;
+					int LA142_0 = input.LA(1);
+					if ( (LA142_0==AS) ) {
+						alt142=1;
 					}
-					switch (alt139) {
+					switch (alt142) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:769:18: AS (a= ID |a= APEX_VALUE )
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:785:18: AS (a= ID |a= APEX_VALUE )
 							{
-							match(input,AS,FOLLOW_AS_in_useDbRule8088); 
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:769:21: (a= ID |a= APEX_VALUE )
-							int alt138=2;
-							int LA138_0 = input.LA(1);
-							if ( (LA138_0==ID) ) {
-								alt138=1;
+							match(input,AS,FOLLOW_AS_in_useDbRule8316); 
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:785:21: (a= ID |a= APEX_VALUE )
+							int alt141=2;
+							int LA141_0 = input.LA(1);
+							if ( (LA141_0==ID) ) {
+								alt141=1;
 							}
-							else if ( (LA138_0==APEX_VALUE) ) {
-								alt138=2;
+							else if ( (LA141_0==APEX_VALUE) ) {
+								alt141=2;
 							}
 
 							else {
 								NoViableAltException nvae =
-									new NoViableAltException("", 138, 0, input);
+									new NoViableAltException("", 141, 0, input);
 								throw nvae;
 							}
 
-							switch (alt138) {
+							switch (alt141) {
 								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:769:22: a= ID
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:785:22: a= ID
 									{
-									a=(Token)match(input,ID,FOLLOW_ID_in_useDbRule8093); 
+									a=(Token)match(input,ID,FOLLOW_ID_in_useDbRule8321); 
 									}
 									break;
 								case 2 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:769:29: a= APEX_VALUE
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:785:29: a= APEX_VALUE
 									{
-									a=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule8099); 
+									a=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule8327); 
 									}
 									break;
 
@@ -7186,109 +7368,109 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop140;
+					break loop143;
 				}
 			}
 
-			match(input,ON,FOLLOW_ON_in_useDbRule8177); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:773:8: ( DEFAULT SERVER | SERVER (d= ID |d= APEX_VALUE ) ( (d= ID |d= APEX_VALUE ) )? )
-			int alt144=2;
-			int LA144_0 = input.LA(1);
-			if ( (LA144_0==DEFAULT) ) {
-				alt144=1;
+			match(input,ON,FOLLOW_ON_in_useDbRule8405); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:789:8: ( DEFAULT SERVER | SERVER (d= ID |d= APEX_VALUE ) ( (d= ID |d= APEX_VALUE ) )? )
+			int alt147=2;
+			int LA147_0 = input.LA(1);
+			if ( (LA147_0==DEFAULT) ) {
+				alt147=1;
 			}
-			else if ( (LA144_0==SERVER) ) {
-				alt144=2;
+			else if ( (LA147_0==SERVER) ) {
+				alt147=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 144, 0, input);
+					new NoViableAltException("", 147, 0, input);
 				throw nvae;
 			}
 
-			switch (alt144) {
+			switch (alt147) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:773:10: DEFAULT SERVER
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:789:10: DEFAULT SERVER
 					{
-					match(input,DEFAULT,FOLLOW_DEFAULT_in_useDbRule8189); 
-					match(input,SERVER,FOLLOW_SERVER_in_useDbRule8191); 
+					match(input,DEFAULT,FOLLOW_DEFAULT_in_useDbRule8417); 
+					match(input,SERVER,FOLLOW_SERVER_in_useDbRule8419); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:774:10: SERVER (d= ID |d= APEX_VALUE ) ( (d= ID |d= APEX_VALUE ) )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:790:10: SERVER (d= ID |d= APEX_VALUE ) ( (d= ID |d= APEX_VALUE ) )?
 					{
-					match(input,SERVER,FOLLOW_SERVER_in_useDbRule8203); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:775:10: (d= ID |d= APEX_VALUE )
-					int alt141=2;
-					int LA141_0 = input.LA(1);
-					if ( (LA141_0==ID) ) {
-						alt141=1;
+					match(input,SERVER,FOLLOW_SERVER_in_useDbRule8431); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:791:10: (d= ID |d= APEX_VALUE )
+					int alt144=2;
+					int LA144_0 = input.LA(1);
+					if ( (LA144_0==ID) ) {
+						alt144=1;
 					}
-					else if ( (LA141_0==APEX_VALUE) ) {
-						alt141=2;
+					else if ( (LA144_0==APEX_VALUE) ) {
+						alt144=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 141, 0, input);
+							new NoViableAltException("", 144, 0, input);
 						throw nvae;
 					}
 
-					switch (alt141) {
+					switch (alt144) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:775:11: d= ID
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:791:11: d= ID
 							{
-							d=(Token)match(input,ID,FOLLOW_ID_in_useDbRule8218); 
+							d=(Token)match(input,ID,FOLLOW_ID_in_useDbRule8446); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:775:18: d= APEX_VALUE
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:791:18: d= APEX_VALUE
 							{
-							d=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule8224); 
+							d=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule8452); 
 							}
 							break;
 
 					}
 
 					 ud.setServer (d.getText()); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:776:10: ( (d= ID |d= APEX_VALUE ) )?
-					int alt143=2;
-					int LA143_0 = input.LA(1);
-					if ( (LA143_0==APEX_VALUE||LA143_0==ID) ) {
-						alt143=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:792:10: ( (d= ID |d= APEX_VALUE ) )?
+					int alt146=2;
+					int LA146_0 = input.LA(1);
+					if ( (LA146_0==APEX_VALUE||LA146_0==ID) ) {
+						alt146=1;
 					}
-					switch (alt143) {
+					switch (alt146) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:776:12: (d= ID |d= APEX_VALUE )
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:792:12: (d= ID |d= APEX_VALUE )
 							{
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:776:12: (d= ID |d= APEX_VALUE )
-							int alt142=2;
-							int LA142_0 = input.LA(1);
-							if ( (LA142_0==ID) ) {
-								alt142=1;
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:792:12: (d= ID |d= APEX_VALUE )
+							int alt145=2;
+							int LA145_0 = input.LA(1);
+							if ( (LA145_0==ID) ) {
+								alt145=1;
 							}
-							else if ( (LA142_0==APEX_VALUE) ) {
-								alt142=2;
+							else if ( (LA145_0==APEX_VALUE) ) {
+								alt145=2;
 							}
 
 							else {
 								NoViableAltException nvae =
-									new NoViableAltException("", 142, 0, input);
+									new NoViableAltException("", 145, 0, input);
 								throw nvae;
 							}
 
-							switch (alt142) {
+							switch (alt145) {
 								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:776:13: d= ID
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:792:13: d= ID
 									{
-									d=(Token)match(input,ID,FOLLOW_ID_in_useDbRule8248); 
+									d=(Token)match(input,ID,FOLLOW_ID_in_useDbRule8476); 
 									}
 									break;
 								case 2 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:776:20: d= APEX_VALUE
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:792:20: d= APEX_VALUE
 									{
-									d=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule8254); 
+									d=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_useDbRule8482); 
 									}
 									break;
 
@@ -7305,7 +7487,7 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_useDbRule8279); 
+			match(input,SC,FOLLOW_SC_in_useDbRule8507); 
 			}
 
 		}
@@ -7322,7 +7504,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "trajectoryMatchingRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:782:1: trajectoryMatchingRule : TRAJECTORY MATCHING cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule (tp= trajectoryPartitionRule )+ (oth= othersRule )? SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:798:1: trajectoryMatchingRule : TRAJECTORY MATCHING cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule (tp= trajectoryPartitionRule )+ (oth= othersRule )? SC ;
 	public final void trajectoryMatchingRule() throws RecognitionException {
 		DbCollection cr1 =null;
 		DbCollection cr2 =null;
@@ -7330,36 +7512,36 @@ public class JCoQLParser extends Parser {
 		String oth =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:783:3: ( TRAJECTORY MATCHING cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule (tp= trajectoryPartitionRule )+ (oth= othersRule )? SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:784:5: TRAJECTORY MATCHING cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule (tp= trajectoryPartitionRule )+ (oth= othersRule )? SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:799:3: ( TRAJECTORY MATCHING cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule (tp= trajectoryPartitionRule )+ (oth= othersRule )? SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:800:5: TRAJECTORY MATCHING cr1= collectionReferenceRule COMMA cr2= collectionReferenceRule (tp= trajectoryPartitionRule )+ (oth= othersRule )? SC
 			{
-			match(input,TRAJECTORY,FOLLOW_TRAJECTORY_in_trajectoryMatchingRule8304); 
-			match(input,MATCHING,FOLLOW_MATCHING_in_trajectoryMatchingRule8306); 
-			pushFollow(FOLLOW_collectionReferenceRule_in_trajectoryMatchingRule8316);
+			match(input,TRAJECTORY,FOLLOW_TRAJECTORY_in_trajectoryMatchingRule8532); 
+			match(input,MATCHING,FOLLOW_MATCHING_in_trajectoryMatchingRule8534); 
+			pushFollow(FOLLOW_collectionReferenceRule_in_trajectoryMatchingRule8544);
 			cr1=collectionReferenceRule();
 			state._fsp--;
 
-			match(input,COMMA,FOLLOW_COMMA_in_trajectoryMatchingRule8318); 
-			pushFollow(FOLLOW_collectionReferenceRule_in_trajectoryMatchingRule8322);
+			match(input,COMMA,FOLLOW_COMMA_in_trajectoryMatchingRule8546); 
+			pushFollow(FOLLOW_collectionReferenceRule_in_trajectoryMatchingRule8550);
 			cr2=collectionReferenceRule();
 			state._fsp--;
 
 			 TrajectoryMatching tm = env.addTrajectoryMatching (cr1, cr2); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:786:7: (tp= trajectoryPartitionRule )+
-			int cnt145=0;
-			loop145:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:802:7: (tp= trajectoryPartitionRule )+
+			int cnt148=0;
+			loop148:
 			while (true) {
-				int alt145=2;
-				int LA145_0 = input.LA(1);
-				if ( (LA145_0==PARTITION) ) {
-					alt145=1;
+				int alt148=2;
+				int LA148_0 = input.LA(1);
+				if ( (LA148_0==PARTITION) ) {
+					alt148=1;
 				}
 
-				switch (alt145) {
+				switch (alt148) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:786:9: tp= trajectoryPartitionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:802:9: tp= trajectoryPartitionRule
 					{
-					pushFollow(FOLLOW_trajectoryPartitionRule_in_trajectoryMatchingRule8338);
+					pushFollow(FOLLOW_trajectoryPartitionRule_in_trajectoryMatchingRule8566);
 					tp=trajectoryPartitionRule();
 					state._fsp--;
 
@@ -7368,24 +7550,24 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					if ( cnt145 >= 1 ) break loop145;
-					EarlyExitException eee = new EarlyExitException(145, input);
+					if ( cnt148 >= 1 ) break loop148;
+					EarlyExitException eee = new EarlyExitException(148, input);
 					throw eee;
 				}
-				cnt145++;
+				cnt148++;
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:787:7: (oth= othersRule )?
-			int alt146=2;
-			int LA146_0 = input.LA(1);
-			if ( (LA146_0==DROP||LA146_0==KEEP) ) {
-				alt146=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:803:7: (oth= othersRule )?
+			int alt149=2;
+			int LA149_0 = input.LA(1);
+			if ( (LA149_0==DROP||LA149_0==KEEP) ) {
+				alt149=1;
 			}
-			switch (alt146) {
+			switch (alt149) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:787:9: oth= othersRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:803:9: oth= othersRule
 					{
-					pushFollow(FOLLOW_othersRule_in_trajectoryMatchingRule8378);
+					pushFollow(FOLLOW_othersRule_in_trajectoryMatchingRule8606);
 					oth=othersRule();
 					state._fsp--;
 
@@ -7395,7 +7577,7 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_trajectoryMatchingRule8420); 
+			match(input,SC,FOLLOW_SC_in_trajectoryMatchingRule8648); 
 			}
 
 		}
@@ -7412,7 +7594,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "trajectoryPartitionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:792:1: trajectoryPartitionRule returns [TrajectoryPartition tp] : PARTITION c= orConditionRule (tpm= partitionMatchingRule )+ ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:808:1: trajectoryPartitionRule returns [TrajectoryPartition tp] : PARTITION c= orConditionRule (tpm= partitionMatchingRule )+ ;
 	public final TrajectoryPartition trajectoryPartitionRule() throws RecognitionException {
 		TrajectoryPartition tp = null;
 
@@ -7421,30 +7603,30 @@ public class JCoQLParser extends Parser {
 		PartitionMatching tpm =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:793:3: ( PARTITION c= orConditionRule (tpm= partitionMatchingRule )+ )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:794:5: PARTITION c= orConditionRule (tpm= partitionMatchingRule )+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:809:3: ( PARTITION c= orConditionRule (tpm= partitionMatchingRule )+ )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:810:5: PARTITION c= orConditionRule (tpm= partitionMatchingRule )+
 			{
-			match(input,PARTITION,FOLLOW_PARTITION_in_trajectoryPartitionRule8448); 
-			pushFollow(FOLLOW_orConditionRule_in_trajectoryPartitionRule8458);
+			match(input,PARTITION,FOLLOW_PARTITION_in_trajectoryPartitionRule8676); 
+			pushFollow(FOLLOW_orConditionRule_in_trajectoryPartitionRule8686);
 			c=orConditionRule();
 			state._fsp--;
 
 			 tp = new TrajectoryPartition (c); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:796:6: (tpm= partitionMatchingRule )+
-			int cnt147=0;
-			loop147:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:812:6: (tpm= partitionMatchingRule )+
+			int cnt150=0;
+			loop150:
 			while (true) {
-				int alt147=2;
-				int LA147_0 = input.LA(1);
-				if ( (LA147_0==MATCHING) ) {
-					alt147=1;
+				int alt150=2;
+				int LA150_0 = input.LA(1);
+				if ( (LA150_0==MATCHING) ) {
+					alt150=1;
 				}
 
-				switch (alt147) {
+				switch (alt150) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:796:8: tpm= partitionMatchingRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:812:8: tpm= partitionMatchingRule
 					{
-					pushFollow(FOLLOW_partitionMatchingRule_in_trajectoryPartitionRule8479);
+					pushFollow(FOLLOW_partitionMatchingRule_in_trajectoryPartitionRule8707);
 					tpm=partitionMatchingRule();
 					state._fsp--;
 
@@ -7453,11 +7635,11 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					if ( cnt147 >= 1 ) break loop147;
-					EarlyExitException eee = new EarlyExitException(147, input);
+					if ( cnt150 >= 1 ) break loop150;
+					EarlyExitException eee = new EarlyExitException(150, input);
 					throw eee;
 				}
-				cnt147++;
+				cnt150++;
 			}
 
 			}
@@ -7477,7 +7659,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "partitionMatchingRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:800:1: partitionMatchingRule returns [PartitionMatching pt] : MATCHING fr1= fieldRefRule WRT fr2= fieldRefRule THRESHOLD LP u= ID RP v= numericRule ( WHERE wc= orConditionRule )? INTO fr3= fieldRefRule ( ADDING fr4= fieldRefRule TO INPUT )? ( MIN_SIMILARITY n= numericRule )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:816:1: partitionMatchingRule returns [PartitionMatching pt] : MATCHING fr1= fieldRefRule WRT fr2= fieldRefRule THRESHOLD LP u= ID RP v= numericRule ( WHERE wc= orConditionRule )? INTO fr3= fieldRefRule ( ADDING fr4= fieldRefRule TO INPUT )? ( MIN_SIMILARITY n= numericRule )? ;
 	public final PartitionMatching partitionMatchingRule() throws RecognitionException {
 		PartitionMatching pt = null;
 
@@ -7492,40 +7674,40 @@ public class JCoQLParser extends Parser {
 		String n =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:801:3: ( MATCHING fr1= fieldRefRule WRT fr2= fieldRefRule THRESHOLD LP u= ID RP v= numericRule ( WHERE wc= orConditionRule )? INTO fr3= fieldRefRule ( ADDING fr4= fieldRefRule TO INPUT )? ( MIN_SIMILARITY n= numericRule )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:802:5: MATCHING fr1= fieldRefRule WRT fr2= fieldRefRule THRESHOLD LP u= ID RP v= numericRule ( WHERE wc= orConditionRule )? INTO fr3= fieldRefRule ( ADDING fr4= fieldRefRule TO INPUT )? ( MIN_SIMILARITY n= numericRule )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:817:3: ( MATCHING fr1= fieldRefRule WRT fr2= fieldRefRule THRESHOLD LP u= ID RP v= numericRule ( WHERE wc= orConditionRule )? INTO fr3= fieldRefRule ( ADDING fr4= fieldRefRule TO INPUT )? ( MIN_SIMILARITY n= numericRule )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:818:5: MATCHING fr1= fieldRefRule WRT fr2= fieldRefRule THRESHOLD LP u= ID RP v= numericRule ( WHERE wc= orConditionRule )? INTO fr3= fieldRefRule ( ADDING fr4= fieldRefRule TO INPUT )? ( MIN_SIMILARITY n= numericRule )?
 			{
-			match(input,MATCHING,FOLLOW_MATCHING_in_partitionMatchingRule8516); 
-			pushFollow(FOLLOW_fieldRefRule_in_partitionMatchingRule8520);
+			match(input,MATCHING,FOLLOW_MATCHING_in_partitionMatchingRule8744); 
+			pushFollow(FOLLOW_fieldRefRule_in_partitionMatchingRule8748);
 			fr1=fieldRefRule();
 			state._fsp--;
 
-			match(input,WRT,FOLLOW_WRT_in_partitionMatchingRule8527); 
-			pushFollow(FOLLOW_fieldRefRule_in_partitionMatchingRule8531);
+			match(input,WRT,FOLLOW_WRT_in_partitionMatchingRule8755); 
+			pushFollow(FOLLOW_fieldRefRule_in_partitionMatchingRule8759);
 			fr2=fieldRefRule();
 			state._fsp--;
 
-			match(input,THRESHOLD,FOLLOW_THRESHOLD_in_partitionMatchingRule8538); 
-			match(input,LP,FOLLOW_LP_in_partitionMatchingRule8540); 
-			u=(Token)match(input,ID,FOLLOW_ID_in_partitionMatchingRule8544); 
-			match(input,RP,FOLLOW_RP_in_partitionMatchingRule8547); 
-			pushFollow(FOLLOW_numericRule_in_partitionMatchingRule8551);
+			match(input,THRESHOLD,FOLLOW_THRESHOLD_in_partitionMatchingRule8766); 
+			match(input,LP,FOLLOW_LP_in_partitionMatchingRule8768); 
+			u=(Token)match(input,ID,FOLLOW_ID_in_partitionMatchingRule8772); 
+			match(input,RP,FOLLOW_RP_in_partitionMatchingRule8775); 
+			pushFollow(FOLLOW_numericRule_in_partitionMatchingRule8779);
 			v=numericRule();
 			state._fsp--;
 
 			 pt = env.setThreshold (fr1, fr2, u, v); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:805:6: ( WHERE wc= orConditionRule )?
-			int alt148=2;
-			int LA148_0 = input.LA(1);
-			if ( (LA148_0==WHERE) ) {
-				alt148=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:821:6: ( WHERE wc= orConditionRule )?
+			int alt151=2;
+			int LA151_0 = input.LA(1);
+			if ( (LA151_0==WHERE) ) {
+				alt151=1;
 			}
-			switch (alt148) {
+			switch (alt151) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:805:8: WHERE wc= orConditionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:821:8: WHERE wc= orConditionRule
 					{
-					match(input,WHERE,FOLLOW_WHERE_in_partitionMatchingRule8566); 
-					pushFollow(FOLLOW_orConditionRule_in_partitionMatchingRule8570);
+					match(input,WHERE,FOLLOW_WHERE_in_partitionMatchingRule8794); 
+					pushFollow(FOLLOW_orConditionRule_in_partitionMatchingRule8798);
 					wc=orConditionRule();
 					state._fsp--;
 
@@ -7535,47 +7717,47 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,INTO,FOLLOW_INTO_in_partitionMatchingRule8594); 
-			pushFollow(FOLLOW_fieldRefRule_in_partitionMatchingRule8598);
+			match(input,INTO,FOLLOW_INTO_in_partitionMatchingRule8822); 
+			pushFollow(FOLLOW_fieldRefRule_in_partitionMatchingRule8826);
 			fr3=fieldRefRule();
 			state._fsp--;
 
 			 pt.setInto (fr3); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:807:6: ( ADDING fr4= fieldRefRule TO INPUT )?
-			int alt149=2;
-			int LA149_0 = input.LA(1);
-			if ( (LA149_0==ADDING) ) {
-				alt149=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:823:6: ( ADDING fr4= fieldRefRule TO INPUT )?
+			int alt152=2;
+			int LA152_0 = input.LA(1);
+			if ( (LA152_0==ADDING) ) {
+				alt152=1;
 			}
-			switch (alt149) {
+			switch (alt152) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:807:8: ADDING fr4= fieldRefRule TO INPUT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:823:8: ADDING fr4= fieldRefRule TO INPUT
 					{
-					match(input,ADDING,FOLLOW_ADDING_in_partitionMatchingRule8621); 
-					pushFollow(FOLLOW_fieldRefRule_in_partitionMatchingRule8625);
+					match(input,ADDING,FOLLOW_ADDING_in_partitionMatchingRule8849); 
+					pushFollow(FOLLOW_fieldRefRule_in_partitionMatchingRule8853);
 					fr4=fieldRefRule();
 					state._fsp--;
 
-					match(input,TO,FOLLOW_TO_in_partitionMatchingRule8627); 
-					match(input,INPUT,FOLLOW_INPUT_in_partitionMatchingRule8629); 
+					match(input,TO,FOLLOW_TO_in_partitionMatchingRule8855); 
+					match(input,INPUT,FOLLOW_INPUT_in_partitionMatchingRule8857); 
 					 pt.setPathToInput (fr4);	
 					}
 					break;
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:808:6: ( MIN_SIMILARITY n= numericRule )?
-			int alt150=2;
-			int LA150_0 = input.LA(1);
-			if ( (LA150_0==MIN_SIMILARITY) ) {
-				alt150=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:824:6: ( MIN_SIMILARITY n= numericRule )?
+			int alt153=2;
+			int LA153_0 = input.LA(1);
+			if ( (LA153_0==MIN_SIMILARITY) ) {
+				alt153=1;
 			}
-			switch (alt150) {
+			switch (alt153) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:808:8: MIN_SIMILARITY n= numericRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:824:8: MIN_SIMILARITY n= numericRule
 					{
-					match(input,MIN_SIMILARITY,FOLLOW_MIN_SIMILARITY_in_partitionMatchingRule8651); 
-					pushFollow(FOLLOW_numericRule_in_partitionMatchingRule8655);
+					match(input,MIN_SIMILARITY,FOLLOW_MIN_SIMILARITY_in_partitionMatchingRule8879); 
+					pushFollow(FOLLOW_numericRule_in_partitionMatchingRule8883);
 					n=numericRule();
 					state._fsp--;
 
@@ -7602,7 +7784,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "parameterRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:814:1: parameterRule[ParamList pl, boolean check] returns [Parameter p] : v= ID TYPE t= ID ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:830:1: parameterRule[ParamList pl, boolean check] returns [Parameter p] : v= ID TYPE t= ID ;
 	public final Parameter parameterRule(ParamList pl, boolean check) throws RecognitionException {
 		Parameter p = null;
 
@@ -7611,13 +7793,13 @@ public class JCoQLParser extends Parser {
 		Token t=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:815:2: (v= ID TYPE t= ID )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:816:3: v= ID TYPE t= ID
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:831:2: (v= ID TYPE t= ID )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:832:3: v= ID TYPE t= ID
 			{
-			v=(Token)match(input,ID,FOLLOW_ID_in_parameterRule8703); 
+			v=(Token)match(input,ID,FOLLOW_ID_in_parameterRule8931); 
 				env.checkParameterDeclaration (v, pl); 
-			match(input,TYPE,FOLLOW_TYPE_in_parameterRule8719); 
-			t=(Token)match(input,ID,FOLLOW_ID_in_parameterRule8723); 
+			match(input,TYPE,FOLLOW_TYPE_in_parameterRule8947); 
+			t=(Token)match(input,ID,FOLLOW_ID_in_parameterRule8951); 
 				p = env.createParameter (check, v, t); 
 			}
 
@@ -7636,42 +7818,42 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "createJavaScriptFunctionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:821:1: createJavaScriptFunctionRule : CREATE JAVASCRIPT FUNCTION jsfn= ID PARAMETERS p= parameterRule[jsf.getParamList(), false] ( COMMA p= parameterRule[jsf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jsf.getParamList(), true] )? BODY END_BODY SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:837:1: createJavaScriptFunctionRule : CREATE JAVASCRIPT FUNCTION jsfn= ID PARAMETERS p= parameterRule[jsf.getParamList(), false] ( COMMA p= parameterRule[jsf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jsf.getParamList(), true] )? BODY END_BODY SC ;
 	public final void createJavaScriptFunctionRule() throws RecognitionException {
 		Token jsfn=null;
 		Parameter p =null;
 		Condition pc =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:822:2: ( CREATE JAVASCRIPT FUNCTION jsfn= ID PARAMETERS p= parameterRule[jsf.getParamList(), false] ( COMMA p= parameterRule[jsf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jsf.getParamList(), true] )? BODY END_BODY SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:823:4: CREATE JAVASCRIPT FUNCTION jsfn= ID PARAMETERS p= parameterRule[jsf.getParamList(), false] ( COMMA p= parameterRule[jsf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jsf.getParamList(), true] )? BODY END_BODY SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:838:2: ( CREATE JAVASCRIPT FUNCTION jsfn= ID PARAMETERS p= parameterRule[jsf.getParamList(), false] ( COMMA p= parameterRule[jsf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jsf.getParamList(), true] )? BODY END_BODY SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:839:4: CREATE JAVASCRIPT FUNCTION jsfn= ID PARAMETERS p= parameterRule[jsf.getParamList(), false] ( COMMA p= parameterRule[jsf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jsf.getParamList(), true] )? BODY END_BODY SC
 			{
-			match(input,CREATE,FOLLOW_CREATE_in_createJavaScriptFunctionRule8747); 
-			match(input,JAVASCRIPT,FOLLOW_JAVASCRIPT_in_createJavaScriptFunctionRule8749); 
-			match(input,FUNCTION,FOLLOW_FUNCTION_in_createJavaScriptFunctionRule8751); 
-			jsfn=(Token)match(input,ID,FOLLOW_ID_in_createJavaScriptFunctionRule8759); 
+			match(input,CREATE,FOLLOW_CREATE_in_createJavaScriptFunctionRule8975); 
+			match(input,JAVASCRIPT,FOLLOW_JAVASCRIPT_in_createJavaScriptFunctionRule8977); 
+			match(input,FUNCTION,FOLLOW_FUNCTION_in_createJavaScriptFunctionRule8979); 
+			jsfn=(Token)match(input,ID,FOLLOW_ID_in_createJavaScriptFunctionRule8987); 
 			 JavascriptFunction jsf = env.addJavascriptFunction (jsfn); 
-			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createJavaScriptFunctionRule8793); 
-			pushFollow(FOLLOW_parameterRule_in_createJavaScriptFunctionRule8803);
+			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createJavaScriptFunctionRule9021); 
+			pushFollow(FOLLOW_parameterRule_in_createJavaScriptFunctionRule9031);
 			p=parameterRule(jsf.getParamList(), false);
 			state._fsp--;
 
 			 jsf.parameters.add (p); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:827:5: ( COMMA p= parameterRule[jsf.getParamList(), false] )*
-			loop151:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:843:5: ( COMMA p= parameterRule[jsf.getParamList(), false] )*
+			loop154:
 			while (true) {
-				int alt151=2;
-				int LA151_0 = input.LA(1);
-				if ( (LA151_0==COMMA) ) {
-					alt151=1;
+				int alt154=2;
+				int LA154_0 = input.LA(1);
+				if ( (LA154_0==COMMA) ) {
+					alt154=1;
 				}
 
-				switch (alt151) {
+				switch (alt154) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:827:7: COMMA p= parameterRule[jsf.getParamList(), false]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:843:7: COMMA p= parameterRule[jsf.getParamList(), false]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_createJavaScriptFunctionRule8826); 
-					pushFollow(FOLLOW_parameterRule_in_createJavaScriptFunctionRule8830);
+					match(input,COMMA,FOLLOW_COMMA_in_createJavaScriptFunctionRule9054); 
+					pushFollow(FOLLOW_parameterRule_in_createJavaScriptFunctionRule9058);
 					p=parameterRule(jsf.getParamList(), false);
 					state._fsp--;
 
@@ -7680,22 +7862,22 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop151;
+					break loop154;
 				}
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:828:4: ( PRECONDITION pc= jfOrConditionRule[jsf.getParamList(), true] )?
-			int alt152=2;
-			int LA152_0 = input.LA(1);
-			if ( (LA152_0==PRECONDITION) ) {
-				alt152=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:844:4: ( PRECONDITION pc= jfOrConditionRule[jsf.getParamList(), true] )?
+			int alt155=2;
+			int LA155_0 = input.LA(1);
+			if ( (LA155_0==PRECONDITION) ) {
+				alt155=1;
 			}
-			switch (alt152) {
+			switch (alt155) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:828:6: PRECONDITION pc= jfOrConditionRule[jsf.getParamList(), true]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:844:6: PRECONDITION pc= jfOrConditionRule[jsf.getParamList(), true]
 					{
-					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createJavaScriptFunctionRule8853); 
-					pushFollow(FOLLOW_jfOrConditionRule_in_createJavaScriptFunctionRule8857);
+					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createJavaScriptFunctionRule9081); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_createJavaScriptFunctionRule9085);
 					pc=jfOrConditionRule(jsf.getParamList(), true);
 					state._fsp--;
 
@@ -7705,7 +7887,7 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,BODY,FOLLOW_BODY_in_createJavaScriptFunctionRule8873); 
+			match(input,BODY,FOLLOW_BODY_in_createJavaScriptFunctionRule9101); 
 			 // ANTLR 3.4 apparently do not support multi context, so scanning must be performed this way
 									int res = JavascriptFunction.NO_BEGIN;
 									Token myToken = null;
@@ -7722,8 +7904,8 @@ public class JCoQLParser extends Parser {
 									}
 									env.checkJSFbody (res, myToken);		
 								
-			match(input,END_BODY,FOLLOW_END_BODY_in_createJavaScriptFunctionRule8886); 
-			match(input,SC,FOLLOW_SC_in_createJavaScriptFunctionRule8892); 
+			match(input,END_BODY,FOLLOW_END_BODY_in_createJavaScriptFunctionRule9114); 
+			match(input,SC,FOLLOW_SC_in_createJavaScriptFunctionRule9120); 
 			}
 
 		}
@@ -7740,7 +7922,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "createFuzzyOperatorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:851:1: createFuzzyOperatorRule : CREATE FUZZY OPERATOR f= ID PARAMETERS p= parameterRule[fo.getParamList(), true] ( COMMA p= parameterRule[fo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[fo.getParamList(), false] )? EVALUATE e= jfExpressionRule[fo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:868:1: createFuzzyOperatorRule : CREATE FUZZY OPERATOR f= ID PARAMETERS p= parameterRule[fo.getParamList(), true] ( COMMA p= parameterRule[fo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[fo.getParamList(), false] )? EVALUATE e= jfExpressionRule[fo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC ;
 	public final void createFuzzyOperatorRule() throws RecognitionException {
 		Token f=null;
 		Parameter p =null;
@@ -7750,35 +7932,35 @@ public class JCoQLParser extends Parser {
 		String y =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:852:3: ( CREATE FUZZY OPERATOR f= ID PARAMETERS p= parameterRule[fo.getParamList(), true] ( COMMA p= parameterRule[fo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[fo.getParamList(), false] )? EVALUATE e= jfExpressionRule[fo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:853:4: CREATE FUZZY OPERATOR f= ID PARAMETERS p= parameterRule[fo.getParamList(), true] ( COMMA p= parameterRule[fo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[fo.getParamList(), false] )? EVALUATE e= jfExpressionRule[fo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:869:3: ( CREATE FUZZY OPERATOR f= ID PARAMETERS p= parameterRule[fo.getParamList(), true] ( COMMA p= parameterRule[fo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[fo.getParamList(), false] )? EVALUATE e= jfExpressionRule[fo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:870:4: CREATE FUZZY OPERATOR f= ID PARAMETERS p= parameterRule[fo.getParamList(), true] ( COMMA p= parameterRule[fo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[fo.getParamList(), false] )? EVALUATE e= jfExpressionRule[fo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC
 			{
-			match(input,CREATE,FOLLOW_CREATE_in_createFuzzyOperatorRule8914); 
-			match(input,FUZZY,FOLLOW_FUZZY_in_createFuzzyOperatorRule8916); 
-			match(input,OPERATOR,FOLLOW_OPERATOR_in_createFuzzyOperatorRule8918); 
-			f=(Token)match(input,ID,FOLLOW_ID_in_createFuzzyOperatorRule8922); 
+			match(input,CREATE,FOLLOW_CREATE_in_createFuzzyOperatorRule9142); 
+			match(input,FUZZY,FOLLOW_FUZZY_in_createFuzzyOperatorRule9144); 
+			match(input,OPERATOR,FOLLOW_OPERATOR_in_createFuzzyOperatorRule9146); 
+			f=(Token)match(input,ID,FOLLOW_ID_in_createFuzzyOperatorRule9150); 
 			 FuzzyOperator fo = env.addFuzzyOperator (f); 
-			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createFuzzyOperatorRule8947); 
-			pushFollow(FOLLOW_parameterRule_in_createFuzzyOperatorRule8957);
+			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createFuzzyOperatorRule9175); 
+			pushFollow(FOLLOW_parameterRule_in_createFuzzyOperatorRule9185);
 			p=parameterRule(fo.getParamList(), true);
 			state._fsp--;
 
 			 fo.parameters.add (p); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:856:5: ( COMMA p= parameterRule[fo.getParamList(), true] )*
-			loop153:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:873:5: ( COMMA p= parameterRule[fo.getParamList(), true] )*
+			loop156:
 			while (true) {
-				int alt153=2;
-				int LA153_0 = input.LA(1);
-				if ( (LA153_0==COMMA) ) {
-					alt153=1;
+				int alt156=2;
+				int LA156_0 = input.LA(1);
+				if ( (LA156_0==COMMA) ) {
+					alt156=1;
 				}
 
-				switch (alt153) {
+				switch (alt156) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:856:7: COMMA p= parameterRule[fo.getParamList(), true]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:873:7: COMMA p= parameterRule[fo.getParamList(), true]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyOperatorRule8980); 
-					pushFollow(FOLLOW_parameterRule_in_createFuzzyOperatorRule8984);
+					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyOperatorRule9208); 
+					pushFollow(FOLLOW_parameterRule_in_createFuzzyOperatorRule9212);
 					p=parameterRule(fo.getParamList(), true);
 					state._fsp--;
 
@@ -7787,22 +7969,22 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop153;
+					break loop156;
 				}
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:857:4: ( PRECONDITION pc= jfOrConditionRule[fo.getParamList(), false] )?
-			int alt154=2;
-			int LA154_0 = input.LA(1);
-			if ( (LA154_0==PRECONDITION) ) {
-				alt154=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:874:4: ( PRECONDITION pc= jfOrConditionRule[fo.getParamList(), false] )?
+			int alt157=2;
+			int LA157_0 = input.LA(1);
+			if ( (LA157_0==PRECONDITION) ) {
+				alt157=1;
 			}
-			switch (alt154) {
+			switch (alt157) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:857:6: PRECONDITION pc= jfOrConditionRule[fo.getParamList(), false]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:874:6: PRECONDITION pc= jfOrConditionRule[fo.getParamList(), false]
 					{
-					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createFuzzyOperatorRule9009); 
-					pushFollow(FOLLOW_jfOrConditionRule_in_createFuzzyOperatorRule9013);
+					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createFuzzyOperatorRule9237); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_createFuzzyOperatorRule9241);
 					pc=jfOrConditionRule(fo.getParamList(), false);
 					state._fsp--;
 
@@ -7812,81 +7994,81 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,EVALUATE,FOLLOW_EVALUATE_in_createFuzzyOperatorRule9028); 
-			pushFollow(FOLLOW_jfExpressionRule_in_createFuzzyOperatorRule9032);
+			match(input,EVALUATE,FOLLOW_EVALUATE_in_createFuzzyOperatorRule9256); 
+			pushFollow(FOLLOW_jfExpressionRule_in_createFuzzyOperatorRule9260);
 			e=jfExpressionRule(fo.getParamList(), false);
 			state._fsp--;
 
 			 fo.evaluate = e; 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:859:4: ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
-			int alt156=2;
-			int LA156_0 = input.LA(1);
-			if ( (LA156_0==POLYLINE) ) {
-				alt156=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:876:4: ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
+			int alt159=2;
+			int LA159_0 = input.LA(1);
+			if ( (LA159_0==POLYLINE) ) {
+				alt159=1;
 			}
-			switch (alt156) {
+			switch (alt159) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:859:6: POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:876:6: POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB
 					{
-					match(input,POLYLINE,FOLLOW_POLYLINE_in_createFuzzyOperatorRule9051); 
-					match(input,LB,FOLLOW_LB_in_createFuzzyOperatorRule9054); 
-					match(input,LP,FOLLOW_LP_in_createFuzzyOperatorRule9066); 
-					pushFollow(FOLLOW_numericRule_in_createFuzzyOperatorRule9070);
+					match(input,POLYLINE,FOLLOW_POLYLINE_in_createFuzzyOperatorRule9279); 
+					match(input,LB,FOLLOW_LB_in_createFuzzyOperatorRule9282); 
+					match(input,LP,FOLLOW_LP_in_createFuzzyOperatorRule9294); 
+					pushFollow(FOLLOW_numericRule_in_createFuzzyOperatorRule9298);
 					x=numericRule();
 					state._fsp--;
 
-					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyOperatorRule9072); 
-					pushFollow(FOLLOW_numericRule_in_createFuzzyOperatorRule9076);
+					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyOperatorRule9300); 
+					pushFollow(FOLLOW_numericRule_in_createFuzzyOperatorRule9304);
 					y=numericRule();
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_createFuzzyOperatorRule9078); 
+					match(input,RP,FOLLOW_RP_in_createFuzzyOperatorRule9306); 
 					 env.addFuzzyPolylinePoint (fo, x, y); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:861:11: ( COMMA LP x= numericRule COMMA y= numericRule RP )+
-					int cnt155=0;
-					loop155:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:878:11: ( COMMA LP x= numericRule COMMA y= numericRule RP )+
+					int cnt158=0;
+					loop158:
 					while (true) {
-						int alt155=2;
-						int LA155_0 = input.LA(1);
-						if ( (LA155_0==COMMA) ) {
-							alt155=1;
+						int alt158=2;
+						int LA158_0 = input.LA(1);
+						if ( (LA158_0==COMMA) ) {
+							alt158=1;
 						}
 
-						switch (alt155) {
+						switch (alt158) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:861:13: COMMA LP x= numericRule COMMA y= numericRule RP
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:878:13: COMMA LP x= numericRule COMMA y= numericRule RP
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyOperatorRule9100); 
-							match(input,LP,FOLLOW_LP_in_createFuzzyOperatorRule9102); 
-							pushFollow(FOLLOW_numericRule_in_createFuzzyOperatorRule9106);
+							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyOperatorRule9328); 
+							match(input,LP,FOLLOW_LP_in_createFuzzyOperatorRule9330); 
+							pushFollow(FOLLOW_numericRule_in_createFuzzyOperatorRule9334);
 							x=numericRule();
 							state._fsp--;
 
-							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyOperatorRule9108); 
-							pushFollow(FOLLOW_numericRule_in_createFuzzyOperatorRule9112);
+							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyOperatorRule9336); 
+							pushFollow(FOLLOW_numericRule_in_createFuzzyOperatorRule9340);
 							y=numericRule();
 							state._fsp--;
 
-							match(input,RP,FOLLOW_RP_in_createFuzzyOperatorRule9114); 
+							match(input,RP,FOLLOW_RP_in_createFuzzyOperatorRule9342); 
 							 env.addFuzzyPolylinePoint (fo, x, y); 
 							}
 							break;
 
 						default :
-							if ( cnt155 >= 1 ) break loop155;
-							EarlyExitException eee = new EarlyExitException(155, input);
+							if ( cnt158 >= 1 ) break loop158;
+							EarlyExitException eee = new EarlyExitException(158, input);
 							throw eee;
 						}
-						cnt155++;
+						cnt158++;
 					}
 
-					match(input,RB,FOLLOW_RB_in_createFuzzyOperatorRule9135); 
+					match(input,RB,FOLLOW_RB_in_createFuzzyOperatorRule9363); 
 					}
 					break;
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_createFuzzyOperatorRule9142); 
+			match(input,SC,FOLLOW_SC_in_createFuzzyOperatorRule9370); 
 			}
 
 		}
@@ -7903,7 +8085,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "createFuzzyEvaluatorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:868:1: createFuzzyEvaluatorRule : CREATE FUZZY EVALUATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), true] )? (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )* EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:885:1: createFuzzyEvaluatorRule : CREATE FUZZY EVALUATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), true] )? (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )* EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC ;
 	public final void createFuzzyEvaluatorRule() throws RecognitionException {
 		Token n=null;
 		Condition pc =null;
@@ -7915,34 +8097,34 @@ public class JCoQLParser extends Parser {
 		String y =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:869:2: ( CREATE FUZZY EVALUATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), true] )? (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )* EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:870:3: CREATE FUZZY EVALUATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), true] )? (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )* EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:886:2: ( CREATE FUZZY EVALUATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), true] )? (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )* EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:887:3: CREATE FUZZY EVALUATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), true] )? (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )* EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC
 			{
-			match(input,CREATE,FOLLOW_CREATE_in_createFuzzyEvaluatorRule9162); 
-			match(input,FUZZY,FOLLOW_FUZZY_in_createFuzzyEvaluatorRule9164); 
-			match(input,EVALUATOR,FOLLOW_EVALUATOR_in_createFuzzyEvaluatorRule9166); 
-			n=(Token)match(input,ID,FOLLOW_ID_in_createFuzzyEvaluatorRule9170); 
+			match(input,CREATE,FOLLOW_CREATE_in_createFuzzyEvaluatorRule9390); 
+			match(input,FUZZY,FOLLOW_FUZZY_in_createFuzzyEvaluatorRule9392); 
+			match(input,EVALUATOR,FOLLOW_EVALUATOR_in_createFuzzyEvaluatorRule9394); 
+			n=(Token)match(input,ID,FOLLOW_ID_in_createFuzzyEvaluatorRule9398); 
 			 FuzzyEvaluator fe = env.addFuzzyEvaluator (n); 
-			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createFuzzyEvaluatorRule9196); 
-			pushFollow(FOLLOW_feParameterRule_in_createFuzzyEvaluatorRule9203);
+			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createFuzzyEvaluatorRule9424); 
+			pushFollow(FOLLOW_feParameterRule_in_createFuzzyEvaluatorRule9431);
 			feParameterRule(fe);
 			state._fsp--;
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:873:5: ( COMMA feParameterRule[fe] )*
-			loop157:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:890:5: ( COMMA feParameterRule[fe] )*
+			loop160:
 			while (true) {
-				int alt157=2;
-				int LA157_0 = input.LA(1);
-				if ( (LA157_0==COMMA) ) {
-					alt157=1;
+				int alt160=2;
+				int LA160_0 = input.LA(1);
+				if ( (LA160_0==COMMA) ) {
+					alt160=1;
 				}
 
-				switch (alt157) {
+				switch (alt160) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:873:7: COMMA feParameterRule[fe]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:890:7: COMMA feParameterRule[fe]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyEvaluatorRule9235); 
-					pushFollow(FOLLOW_feParameterRule_in_createFuzzyEvaluatorRule9237);
+					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyEvaluatorRule9463); 
+					pushFollow(FOLLOW_feParameterRule_in_createFuzzyEvaluatorRule9465);
 					feParameterRule(fe);
 					state._fsp--;
 
@@ -7950,22 +8132,22 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop157;
+					break loop160;
 				}
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:874:4: ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), true] )?
-			int alt158=2;
-			int LA158_0 = input.LA(1);
-			if ( (LA158_0==PRECONDITION) ) {
-				alt158=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:891:4: ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), true] )?
+			int alt161=2;
+			int LA161_0 = input.LA(1);
+			if ( (LA161_0==PRECONDITION) ) {
+				alt161=1;
 			}
-			switch (alt158) {
+			switch (alt161) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:874:6: PRECONDITION pc= jfOrConditionRule[fe.getParamList(), true]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:891:6: PRECONDITION pc= jfOrConditionRule[fe.getParamList(), true]
 					{
-					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createFuzzyEvaluatorRule9288); 
-					pushFollow(FOLLOW_jfOrConditionRule_in_createFuzzyEvaluatorRule9292);
+					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createFuzzyEvaluatorRule9516); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_createFuzzyEvaluatorRule9520);
 					pc=jfOrConditionRule(fe.getParamList(), true);
 					state._fsp--;
 
@@ -7975,32 +8157,32 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:875:4: (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )*
-			loop159:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:892:4: (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )*
+			loop162:
 			while (true) {
-				int alt159=4;
+				int alt162=4;
 				switch ( input.LA(1) ) {
 				case SORT:
 					{
-					alt159=1;
+					alt162=1;
 					}
 					break;
 				case DERIVE:
 					{
-					alt159=2;
+					alt162=2;
 					}
 					break;
 				case FOR:
 					{
-					alt159=3;
+					alt162=3;
 					}
 					break;
 				}
-				switch (alt159) {
+				switch (alt162) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:875:6: s= feArraySortRule[fe]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:892:6: s= feArraySortRule[fe]
 					{
-					pushFollow(FOLLOW_feArraySortRule_in_createFuzzyEvaluatorRule9316);
+					pushFollow(FOLLOW_feArraySortRule_in_createFuzzyEvaluatorRule9544);
 					s=feArraySortRule(fe);
 					state._fsp--;
 
@@ -8008,9 +8190,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:876:6: d= feDeriveRule[fe]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:893:6: d= feDeriveRule[fe]
 					{
-					pushFollow(FOLLOW_feDeriveRule_in_createFuzzyEvaluatorRule9351);
+					pushFollow(FOLLOW_feDeriveRule_in_createFuzzyEvaluatorRule9579);
 					d=feDeriveRule(fe);
 					state._fsp--;
 
@@ -8018,9 +8200,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:877:6: f= feForAllRule[fe]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:894:6: f= feForAllRule[fe]
 					{
-					pushFollow(FOLLOW_feForAllRule_in_createFuzzyEvaluatorRule9387);
+					pushFollow(FOLLOW_feForAllRule_in_createFuzzyEvaluatorRule9615);
 					f=feForAllRule(fe);
 					state._fsp--;
 
@@ -8029,85 +8211,85 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop159;
+					break loop162;
 				}
 			}
 
-			match(input,EVALUATE,FOLLOW_EVALUATE_in_createFuzzyEvaluatorRule9421); 
-			pushFollow(FOLLOW_feExpressionRule_in_createFuzzyEvaluatorRule9425);
+			match(input,EVALUATE,FOLLOW_EVALUATE_in_createFuzzyEvaluatorRule9649); 
+			pushFollow(FOLLOW_feExpressionRule_in_createFuzzyEvaluatorRule9653);
 			e=feExpressionRule(fe, null);
 			state._fsp--;
 
 			 fe.evaluate = e;								
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:879:4: ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
-			int alt161=2;
-			int LA161_0 = input.LA(1);
-			if ( (LA161_0==POLYLINE) ) {
-				alt161=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:896:4: ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
+			int alt164=2;
+			int LA164_0 = input.LA(1);
+			if ( (LA164_0==POLYLINE) ) {
+				alt164=1;
 			}
-			switch (alt161) {
+			switch (alt164) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:879:6: POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:896:6: POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB
 					{
-					match(input,POLYLINE,FOLLOW_POLYLINE_in_createFuzzyEvaluatorRule9452); 
-					match(input,LB,FOLLOW_LB_in_createFuzzyEvaluatorRule9454); 
-					match(input,LP,FOLLOW_LP_in_createFuzzyEvaluatorRule9461); 
-					pushFollow(FOLLOW_numericRule_in_createFuzzyEvaluatorRule9465);
+					match(input,POLYLINE,FOLLOW_POLYLINE_in_createFuzzyEvaluatorRule9680); 
+					match(input,LB,FOLLOW_LB_in_createFuzzyEvaluatorRule9682); 
+					match(input,LP,FOLLOW_LP_in_createFuzzyEvaluatorRule9689); 
+					pushFollow(FOLLOW_numericRule_in_createFuzzyEvaluatorRule9693);
 					x=numericRule();
 					state._fsp--;
 
-					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyEvaluatorRule9467); 
-					pushFollow(FOLLOW_numericRule_in_createFuzzyEvaluatorRule9471);
+					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyEvaluatorRule9695); 
+					pushFollow(FOLLOW_numericRule_in_createFuzzyEvaluatorRule9699);
 					y=numericRule();
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_createFuzzyEvaluatorRule9473); 
+					match(input,RP,FOLLOW_RP_in_createFuzzyEvaluatorRule9701); 
 					 env.addFuzzyEvaluatorPolylinePoint (fe, x, y); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:881:6: ( COMMA LP x= numericRule COMMA y= numericRule RP )+
-					int cnt160=0;
-					loop160:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:898:6: ( COMMA LP x= numericRule COMMA y= numericRule RP )+
+					int cnt163=0;
+					loop163:
 					while (true) {
-						int alt160=2;
-						int LA160_0 = input.LA(1);
-						if ( (LA160_0==COMMA) ) {
-							alt160=1;
+						int alt163=2;
+						int LA163_0 = input.LA(1);
+						if ( (LA163_0==COMMA) ) {
+							alt163=1;
 						}
 
-						switch (alt160) {
+						switch (alt163) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:881:8: COMMA LP x= numericRule COMMA y= numericRule RP
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:898:8: COMMA LP x= numericRule COMMA y= numericRule RP
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyEvaluatorRule9496); 
-							match(input,LP,FOLLOW_LP_in_createFuzzyEvaluatorRule9498); 
-							pushFollow(FOLLOW_numericRule_in_createFuzzyEvaluatorRule9502);
+							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyEvaluatorRule9724); 
+							match(input,LP,FOLLOW_LP_in_createFuzzyEvaluatorRule9726); 
+							pushFollow(FOLLOW_numericRule_in_createFuzzyEvaluatorRule9730);
 							x=numericRule();
 							state._fsp--;
 
-							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyEvaluatorRule9504); 
-							pushFollow(FOLLOW_numericRule_in_createFuzzyEvaluatorRule9508);
+							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyEvaluatorRule9732); 
+							pushFollow(FOLLOW_numericRule_in_createFuzzyEvaluatorRule9736);
 							y=numericRule();
 							state._fsp--;
 
-							match(input,RP,FOLLOW_RP_in_createFuzzyEvaluatorRule9510); 
+							match(input,RP,FOLLOW_RP_in_createFuzzyEvaluatorRule9738); 
 							 env.addFuzzyEvaluatorPolylinePoint (fe, x, y); 
 							}
 							break;
 
 						default :
-							if ( cnt160 >= 1 ) break loop160;
-							EarlyExitException eee = new EarlyExitException(160, input);
+							if ( cnt163 >= 1 ) break loop163;
+							EarlyExitException eee = new EarlyExitException(163, input);
 							throw eee;
 						}
-						cnt160++;
+						cnt163++;
 					}
 
-					match(input,RB,FOLLOW_RB_in_createFuzzyEvaluatorRule9530); 
+					match(input,RB,FOLLOW_RB_in_createFuzzyEvaluatorRule9758); 
 					}
 					break;
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_createFuzzyEvaluatorRule9537); 
+			match(input,SC,FOLLOW_SC_in_createFuzzyEvaluatorRule9765); 
 			}
 
 		}
@@ -8124,7 +8306,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "createFuzzyAggregatorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:889:1: createFuzzyAggregatorRule : CREATE FUZZY AGGREGATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )? (s= feArraySortRule[fe] )* (f= feForAllRule[fe] |d= feDeriveRule[fe] )+ EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:907:1: createFuzzyAggregatorRule : CREATE FUZZY AGGREGATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )? (s= feArraySortRule[fe] )* (f= feForAllRule[fe] |d= feDeriveRule[fe] )+ EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC ;
 	public final void createFuzzyAggregatorRule() throws RecognitionException {
 		Token n=null;
 		Condition pc =null;
@@ -8136,34 +8318,34 @@ public class JCoQLParser extends Parser {
 		String y =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:890:2: ( CREATE FUZZY AGGREGATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )? (s= feArraySortRule[fe] )* (f= feForAllRule[fe] |d= feDeriveRule[fe] )+ EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:891:3: CREATE FUZZY AGGREGATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )? (s= feArraySortRule[fe] )* (f= feForAllRule[fe] |d= feDeriveRule[fe] )+ EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:908:2: ( CREATE FUZZY AGGREGATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )? (s= feArraySortRule[fe] )* (f= feForAllRule[fe] |d= feDeriveRule[fe] )+ EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:909:3: CREATE FUZZY AGGREGATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )? (s= feArraySortRule[fe] )* (f= feForAllRule[fe] |d= feDeriveRule[fe] )+ EVALUATE e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? SC
 			{
-			match(input,CREATE,FOLLOW_CREATE_in_createFuzzyAggregatorRule9555); 
-			match(input,FUZZY,FOLLOW_FUZZY_in_createFuzzyAggregatorRule9557); 
-			match(input,AGGREGATOR,FOLLOW_AGGREGATOR_in_createFuzzyAggregatorRule9559); 
-			n=(Token)match(input,ID,FOLLOW_ID_in_createFuzzyAggregatorRule9563); 
+			match(input,CREATE,FOLLOW_CREATE_in_createFuzzyAggregatorRule9784); 
+			match(input,FUZZY,FOLLOW_FUZZY_in_createFuzzyAggregatorRule9786); 
+			match(input,AGGREGATOR,FOLLOW_AGGREGATOR_in_createFuzzyAggregatorRule9788); 
+			n=(Token)match(input,ID,FOLLOW_ID_in_createFuzzyAggregatorRule9792); 
 			 FuzzyEvaluator fe = env.addFuzzyAggregator (n); 
-			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createFuzzyAggregatorRule9589); 
-			pushFollow(FOLLOW_feParameterRule_in_createFuzzyAggregatorRule9596);
+			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createFuzzyAggregatorRule9818); 
+			pushFollow(FOLLOW_feParameterRule_in_createFuzzyAggregatorRule9825);
 			feParameterRule(fe);
 			state._fsp--;
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:894:5: ( COMMA feParameterRule[fe] )*
-			loop162:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:912:5: ( COMMA feParameterRule[fe] )*
+			loop165:
 			while (true) {
-				int alt162=2;
-				int LA162_0 = input.LA(1);
-				if ( (LA162_0==COMMA) ) {
-					alt162=1;
+				int alt165=2;
+				int LA165_0 = input.LA(1);
+				if ( (LA165_0==COMMA) ) {
+					alt165=1;
 				}
 
-				switch (alt162) {
+				switch (alt165) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:894:7: COMMA feParameterRule[fe]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:912:7: COMMA feParameterRule[fe]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyAggregatorRule9628); 
-					pushFollow(FOLLOW_feParameterRule_in_createFuzzyAggregatorRule9630);
+					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyAggregatorRule9857); 
+					pushFollow(FOLLOW_feParameterRule_in_createFuzzyAggregatorRule9859);
 					feParameterRule(fe);
 					state._fsp--;
 
@@ -8171,22 +8353,22 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop162;
+					break loop165;
 				}
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:895:4: ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )?
-			int alt163=2;
-			int LA163_0 = input.LA(1);
-			if ( (LA163_0==PRECONDITION) ) {
-				alt163=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:913:4: ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )?
+			int alt166=2;
+			int LA166_0 = input.LA(1);
+			if ( (LA166_0==PRECONDITION) ) {
+				alt166=1;
 			}
-			switch (alt163) {
+			switch (alt166) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:895:6: PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:913:6: PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false]
 					{
-					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createFuzzyAggregatorRule9681); 
-					pushFollow(FOLLOW_jfOrConditionRule_in_createFuzzyAggregatorRule9685);
+					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createFuzzyAggregatorRule9910); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_createFuzzyAggregatorRule9914);
 					pc=jfOrConditionRule(fe.getParamList(), false);
 					state._fsp--;
 
@@ -8196,20 +8378,20 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:896:4: (s= feArraySortRule[fe] )*
-			loop164:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:914:4: (s= feArraySortRule[fe] )*
+			loop167:
 			while (true) {
-				int alt164=2;
-				int LA164_0 = input.LA(1);
-				if ( (LA164_0==SORT) ) {
-					alt164=1;
+				int alt167=2;
+				int LA167_0 = input.LA(1);
+				if ( (LA167_0==SORT) ) {
+					alt167=1;
 				}
 
-				switch (alt164) {
+				switch (alt167) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:896:6: s= feArraySortRule[fe]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:914:6: s= feArraySortRule[fe]
 					{
-					pushFollow(FOLLOW_feArraySortRule_in_createFuzzyAggregatorRule9708);
+					pushFollow(FOLLOW_feArraySortRule_in_createFuzzyAggregatorRule9937);
 					s=feArraySortRule(fe);
 					state._fsp--;
 
@@ -8218,28 +8400,28 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop164;
+					break loop167;
 				}
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:897:4: (f= feForAllRule[fe] |d= feDeriveRule[fe] )+
-			int cnt165=0;
-			loop165:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:915:4: (f= feForAllRule[fe] |d= feDeriveRule[fe] )+
+			int cnt168=0;
+			loop168:
 			while (true) {
-				int alt165=3;
-				int LA165_0 = input.LA(1);
-				if ( (LA165_0==FOR) ) {
-					alt165=1;
+				int alt168=3;
+				int LA168_0 = input.LA(1);
+				if ( (LA168_0==FOR) ) {
+					alt168=1;
 				}
-				else if ( (LA165_0==DERIVE) ) {
-					alt165=2;
+				else if ( (LA168_0==DERIVE) ) {
+					alt168=2;
 				}
 
-				switch (alt165) {
+				switch (alt168) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:897:6: f= feForAllRule[fe]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:915:6: f= feForAllRule[fe]
 					{
-					pushFollow(FOLLOW_feForAllRule_in_createFuzzyAggregatorRule9745);
+					pushFollow(FOLLOW_feForAllRule_in_createFuzzyAggregatorRule9974);
 					f=feForAllRule(fe);
 					state._fsp--;
 
@@ -8247,9 +8429,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:898:6: d= feDeriveRule[fe]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:916:6: d= feDeriveRule[fe]
 					{
-					pushFollow(FOLLOW_feDeriveRule_in_createFuzzyAggregatorRule9780);
+					pushFollow(FOLLOW_feDeriveRule_in_createFuzzyAggregatorRule10009);
 					d=feDeriveRule(fe);
 					state._fsp--;
 
@@ -8258,88 +8440,88 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					if ( cnt165 >= 1 ) break loop165;
-					EarlyExitException eee = new EarlyExitException(165, input);
+					if ( cnt168 >= 1 ) break loop168;
+					EarlyExitException eee = new EarlyExitException(168, input);
 					throw eee;
 				}
-				cnt165++;
+				cnt168++;
 			}
 
-			match(input,EVALUATE,FOLLOW_EVALUATE_in_createFuzzyAggregatorRule9814); 
-			pushFollow(FOLLOW_feExpressionRule_in_createFuzzyAggregatorRule9818);
+			match(input,EVALUATE,FOLLOW_EVALUATE_in_createFuzzyAggregatorRule10043); 
+			pushFollow(FOLLOW_feExpressionRule_in_createFuzzyAggregatorRule10047);
 			e=feExpressionRule(fe, null);
 			state._fsp--;
 
 			 fe.evaluate = e; 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:900:4: ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
-			int alt167=2;
-			int LA167_0 = input.LA(1);
-			if ( (LA167_0==POLYLINE) ) {
-				alt167=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:918:4: ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
+			int alt170=2;
+			int LA170_0 = input.LA(1);
+			if ( (LA170_0==POLYLINE) ) {
+				alt170=1;
 			}
-			switch (alt167) {
+			switch (alt170) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:900:6: POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:918:6: POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB
 					{
-					match(input,POLYLINE,FOLLOW_POLYLINE_in_createFuzzyAggregatorRule9845); 
-					match(input,LB,FOLLOW_LB_in_createFuzzyAggregatorRule9847); 
-					match(input,LP,FOLLOW_LP_in_createFuzzyAggregatorRule9854); 
-					pushFollow(FOLLOW_numericRule_in_createFuzzyAggregatorRule9858);
+					match(input,POLYLINE,FOLLOW_POLYLINE_in_createFuzzyAggregatorRule10074); 
+					match(input,LB,FOLLOW_LB_in_createFuzzyAggregatorRule10076); 
+					match(input,LP,FOLLOW_LP_in_createFuzzyAggregatorRule10083); 
+					pushFollow(FOLLOW_numericRule_in_createFuzzyAggregatorRule10087);
 					x=numericRule();
 					state._fsp--;
 
-					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyAggregatorRule9860); 
-					pushFollow(FOLLOW_numericRule_in_createFuzzyAggregatorRule9864);
+					match(input,COMMA,FOLLOW_COMMA_in_createFuzzyAggregatorRule10089); 
+					pushFollow(FOLLOW_numericRule_in_createFuzzyAggregatorRule10093);
 					y=numericRule();
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_createFuzzyAggregatorRule9866); 
+					match(input,RP,FOLLOW_RP_in_createFuzzyAggregatorRule10095); 
 					 env.addFuzzyEvaluatorPolylinePoint (fe, x, y); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:902:6: ( COMMA LP x= numericRule COMMA y= numericRule RP )+
-					int cnt166=0;
-					loop166:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:920:6: ( COMMA LP x= numericRule COMMA y= numericRule RP )+
+					int cnt169=0;
+					loop169:
 					while (true) {
-						int alt166=2;
-						int LA166_0 = input.LA(1);
-						if ( (LA166_0==COMMA) ) {
-							alt166=1;
+						int alt169=2;
+						int LA169_0 = input.LA(1);
+						if ( (LA169_0==COMMA) ) {
+							alt169=1;
 						}
 
-						switch (alt166) {
+						switch (alt169) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:902:8: COMMA LP x= numericRule COMMA y= numericRule RP
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:920:8: COMMA LP x= numericRule COMMA y= numericRule RP
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyAggregatorRule9889); 
-							match(input,LP,FOLLOW_LP_in_createFuzzyAggregatorRule9891); 
-							pushFollow(FOLLOW_numericRule_in_createFuzzyAggregatorRule9895);
+							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyAggregatorRule10118); 
+							match(input,LP,FOLLOW_LP_in_createFuzzyAggregatorRule10120); 
+							pushFollow(FOLLOW_numericRule_in_createFuzzyAggregatorRule10124);
 							x=numericRule();
 							state._fsp--;
 
-							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyAggregatorRule9897); 
-							pushFollow(FOLLOW_numericRule_in_createFuzzyAggregatorRule9901);
+							match(input,COMMA,FOLLOW_COMMA_in_createFuzzyAggregatorRule10126); 
+							pushFollow(FOLLOW_numericRule_in_createFuzzyAggregatorRule10130);
 							y=numericRule();
 							state._fsp--;
 
-							match(input,RP,FOLLOW_RP_in_createFuzzyAggregatorRule9903); 
+							match(input,RP,FOLLOW_RP_in_createFuzzyAggregatorRule10132); 
 							 env.addFuzzyEvaluatorPolylinePoint (fe, x, y); 
 							}
 							break;
 
 						default :
-							if ( cnt166 >= 1 ) break loop166;
-							EarlyExitException eee = new EarlyExitException(166, input);
+							if ( cnt169 >= 1 ) break loop169;
+							EarlyExitException eee = new EarlyExitException(169, input);
 							throw eee;
 						}
-						cnt166++;
+						cnt169++;
 					}
 
-					match(input,RB,FOLLOW_RB_in_createFuzzyAggregatorRule9923); 
+					match(input,RB,FOLLOW_RB_in_createFuzzyAggregatorRule10152); 
 					}
 					break;
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_createFuzzyAggregatorRule9930); 
+			match(input,SC,FOLLOW_SC_in_createFuzzyAggregatorRule10159); 
 			}
 
 		}
@@ -8356,7 +8538,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feForAllRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:908:1: feForAllRule[FuzzyEvaluator fe] returns [FEForAllClause fac] : FOR ALL v= ID IN ar= ID ( LB x1= feExpressionRule[fe, null] COMMA x2= feExpressionRule[fe, null] RB )? ( LOCALLY e= feExpressionRule[fe, fac] AS id= ID ( COMMA e= feExpressionRule[fe, fac] AS id= ID )* )? AGGREGATE ac= aggSpecRule[fe, fac] ( COMMA ac= aggSpecRule[fe, fac] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:926:1: feForAllRule[FuzzyEvaluator fe] returns [FEForAllClause fac] : FOR ALL v= ID IN ar= ID ( LB x1= feExpressionRule[fe, null] COMMA x2= feExpressionRule[fe, null] RB )? ( LOCALLY e= feExpressionRule[fe, fac] AS id= ID ( COMMA e= feExpressionRule[fe, fac] AS id= ID )* )? AGGREGATE ac= aggSpecRule[fe, fac] ( COMMA ac= aggSpecRule[fe, fac] )* ;
 	public final FEForAllClause feForAllRule(FuzzyEvaluator fe) throws RecognitionException {
 		FEForAllClause fac = null;
 
@@ -8370,87 +8552,87 @@ public class JCoQLParser extends Parser {
 		AggregateClause ac =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:909:2: ( FOR ALL v= ID IN ar= ID ( LB x1= feExpressionRule[fe, null] COMMA x2= feExpressionRule[fe, null] RB )? ( LOCALLY e= feExpressionRule[fe, fac] AS id= ID ( COMMA e= feExpressionRule[fe, fac] AS id= ID )* )? AGGREGATE ac= aggSpecRule[fe, fac] ( COMMA ac= aggSpecRule[fe, fac] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:910:3: FOR ALL v= ID IN ar= ID ( LB x1= feExpressionRule[fe, null] COMMA x2= feExpressionRule[fe, null] RB )? ( LOCALLY e= feExpressionRule[fe, fac] AS id= ID ( COMMA e= feExpressionRule[fe, fac] AS id= ID )* )? AGGREGATE ac= aggSpecRule[fe, fac] ( COMMA ac= aggSpecRule[fe, fac] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:927:2: ( FOR ALL v= ID IN ar= ID ( LB x1= feExpressionRule[fe, null] COMMA x2= feExpressionRule[fe, null] RB )? ( LOCALLY e= feExpressionRule[fe, fac] AS id= ID ( COMMA e= feExpressionRule[fe, fac] AS id= ID )* )? AGGREGATE ac= aggSpecRule[fe, fac] ( COMMA ac= aggSpecRule[fe, fac] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:928:3: FOR ALL v= ID IN ar= ID ( LB x1= feExpressionRule[fe, null] COMMA x2= feExpressionRule[fe, null] RB )? ( LOCALLY e= feExpressionRule[fe, fac] AS id= ID ( COMMA e= feExpressionRule[fe, fac] AS id= ID )* )? AGGREGATE ac= aggSpecRule[fe, fac] ( COMMA ac= aggSpecRule[fe, fac] )*
 			{
-			match(input,FOR,FOLLOW_FOR_in_feForAllRule9952); 
-			match(input,ALL,FOLLOW_ALL_in_feForAllRule9954); 
-			v=(Token)match(input,ID,FOLLOW_ID_in_feForAllRule9958); 
-			match(input,IN,FOLLOW_IN_in_feForAllRule9960); 
-			ar=(Token)match(input,ID,FOLLOW_ID_in_feForAllRule9964); 
+			match(input,FOR,FOLLOW_FOR_in_feForAllRule10181); 
+			match(input,ALL,FOLLOW_ALL_in_feForAllRule10183); 
+			v=(Token)match(input,ID,FOLLOW_ID_in_feForAllRule10187); 
+			match(input,IN,FOLLOW_IN_in_feForAllRule10189); 
+			ar=(Token)match(input,ID,FOLLOW_ID_in_feForAllRule10193); 
 			 fac = env.createForAllClause(v, ar, fe);	
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:911:4: ( LB x1= feExpressionRule[fe, null] COMMA x2= feExpressionRule[fe, null] RB )?
-			int alt168=2;
-			int LA168_0 = input.LA(1);
-			if ( (LA168_0==LB) ) {
-				alt168=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:929:4: ( LB x1= feExpressionRule[fe, null] COMMA x2= feExpressionRule[fe, null] RB )?
+			int alt171=2;
+			int LA171_0 = input.LA(1);
+			if ( (LA171_0==LB) ) {
+				alt171=1;
 			}
-			switch (alt168) {
+			switch (alt171) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:911:6: LB x1= feExpressionRule[fe, null] COMMA x2= feExpressionRule[fe, null] RB
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:929:6: LB x1= feExpressionRule[fe, null] COMMA x2= feExpressionRule[fe, null] RB
 					{
-					match(input,LB,FOLLOW_LB_in_feForAllRule9989); 
-					pushFollow(FOLLOW_feExpressionRule_in_feForAllRule9994);
+					match(input,LB,FOLLOW_LB_in_feForAllRule10218); 
+					pushFollow(FOLLOW_feExpressionRule_in_feForAllRule10223);
 					x1=feExpressionRule(fe, null);
 					state._fsp--;
 
 					 fac.firstIndex = x1; 
-					match(input,COMMA,FOLLOW_COMMA_in_feForAllRule10013); 
-					pushFollow(FOLLOW_feExpressionRule_in_feForAllRule10017);
+					match(input,COMMA,FOLLOW_COMMA_in_feForAllRule10242); 
+					pushFollow(FOLLOW_feExpressionRule_in_feForAllRule10246);
 					x2=feExpressionRule(fe, null);
 					state._fsp--;
 
-					match(input,RB,FOLLOW_RB_in_feForAllRule10021); 
+					match(input,RB,FOLLOW_RB_in_feForAllRule10250); 
 					 fac.lastIndex  = x2; 
 					}
 					break;
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:913:4: ( LOCALLY e= feExpressionRule[fe, fac] AS id= ID ( COMMA e= feExpressionRule[fe, fac] AS id= ID )* )?
-			int alt170=2;
-			int LA170_0 = input.LA(1);
-			if ( (LA170_0==LOCALLY) ) {
-				alt170=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:931:4: ( LOCALLY e= feExpressionRule[fe, fac] AS id= ID ( COMMA e= feExpressionRule[fe, fac] AS id= ID )* )?
+			int alt173=2;
+			int LA173_0 = input.LA(1);
+			if ( (LA173_0==LOCALLY) ) {
+				alt173=1;
 			}
-			switch (alt170) {
+			switch (alt173) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:913:6: LOCALLY e= feExpressionRule[fe, fac] AS id= ID ( COMMA e= feExpressionRule[fe, fac] AS id= ID )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:931:6: LOCALLY e= feExpressionRule[fe, fac] AS id= ID ( COMMA e= feExpressionRule[fe, fac] AS id= ID )*
 					{
-					match(input,LOCALLY,FOLLOW_LOCALLY_in_feForAllRule10051); 
-					pushFollow(FOLLOW_feExpressionRule_in_feForAllRule10055);
+					match(input,LOCALLY,FOLLOW_LOCALLY_in_feForAllRule10280); 
+					pushFollow(FOLLOW_feExpressionRule_in_feForAllRule10284);
 					e=feExpressionRule(fe, fac);
 					state._fsp--;
 
-					match(input,AS,FOLLOW_AS_in_feForAllRule10059); 
-					id=(Token)match(input,ID,FOLLOW_ID_in_feForAllRule10063); 
+					match(input,AS,FOLLOW_AS_in_feForAllRule10288); 
+					id=(Token)match(input,ID,FOLLOW_ID_in_feForAllRule10292); 
 					 env.createLocallyClause(fac, id, e, fe); 	
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:914:5: ( COMMA e= feExpressionRule[fe, fac] AS id= ID )*
-					loop169:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:932:5: ( COMMA e= feExpressionRule[fe, fac] AS id= ID )*
+					loop172:
 					while (true) {
-						int alt169=2;
-						int LA169_0 = input.LA(1);
-						if ( (LA169_0==COMMA) ) {
-							alt169=1;
+						int alt172=2;
+						int LA172_0 = input.LA(1);
+						if ( (LA172_0==COMMA) ) {
+							alt172=1;
 						}
 
-						switch (alt169) {
+						switch (alt172) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:914:7: COMMA e= feExpressionRule[fe, fac] AS id= ID
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:932:7: COMMA e= feExpressionRule[fe, fac] AS id= ID
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_feForAllRule10077); 
-							pushFollow(FOLLOW_feExpressionRule_in_feForAllRule10081);
+							match(input,COMMA,FOLLOW_COMMA_in_feForAllRule10306); 
+							pushFollow(FOLLOW_feExpressionRule_in_feForAllRule10310);
 							e=feExpressionRule(fe, fac);
 							state._fsp--;
 
-							match(input,AS,FOLLOW_AS_in_feForAllRule10085); 
-							id=(Token)match(input,ID,FOLLOW_ID_in_feForAllRule10089); 
+							match(input,AS,FOLLOW_AS_in_feForAllRule10314); 
+							id=(Token)match(input,ID,FOLLOW_ID_in_feForAllRule10318); 
 							 env.createLocallyClause(fac, id, e, fe); 	
 							}
 							break;
 
 						default :
-							break loop169;
+							break loop172;
 						}
 					}
 
@@ -8459,27 +8641,27 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,AGGREGATE,FOLLOW_AGGREGATE_in_feForAllRule10105); 
-			pushFollow(FOLLOW_aggSpecRule_in_feForAllRule10109);
+			match(input,AGGREGATE,FOLLOW_AGGREGATE_in_feForAllRule10334); 
+			pushFollow(FOLLOW_aggSpecRule_in_feForAllRule10338);
 			ac=aggSpecRule(fe, fac);
 			state._fsp--;
 
 			 fac.aggregate.add(ac);
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:916:4: ( COMMA ac= aggSpecRule[fe, fac] )*
-			loop171:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:934:4: ( COMMA ac= aggSpecRule[fe, fac] )*
+			loop174:
 			while (true) {
-				int alt171=2;
-				int LA171_0 = input.LA(1);
-				if ( (LA171_0==COMMA) ) {
-					alt171=1;
+				int alt174=2;
+				int LA174_0 = input.LA(1);
+				if ( (LA174_0==COMMA) ) {
+					alt174=1;
 				}
 
-				switch (alt171) {
+				switch (alt174) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:916:6: COMMA ac= aggSpecRule[fe, fac]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:934:6: COMMA ac= aggSpecRule[fe, fac]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_feForAllRule10128); 
-					pushFollow(FOLLOW_aggSpecRule_in_feForAllRule10132);
+					match(input,COMMA,FOLLOW_COMMA_in_feForAllRule10357); 
+					pushFollow(FOLLOW_aggSpecRule_in_feForAllRule10361);
 					ac=aggSpecRule(fe, fac);
 					state._fsp--;
 
@@ -8488,7 +8670,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop171;
+					break loop174;
 				}
 			}
 
@@ -8509,7 +8691,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feDeriveRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:922:1: feDeriveRule[FuzzyEvaluator fe] returns [FEDeriveClause dc] : DERIVE (e= feExpressionRule[fe, null] |e= feCumulateRule[fe] ) AS id= ID ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:940:1: feDeriveRule[FuzzyEvaluator fe] returns [FEDeriveClause dc] : DERIVE (e= feExpressionRule[fe, null] |e= feCumulateRule[fe] ) AS id= ID ;
 	public final FEDeriveClause feDeriveRule(FuzzyEvaluator fe) throws RecognitionException {
 		FEDeriveClause dc = null;
 
@@ -8519,40 +8701,40 @@ public class JCoQLParser extends Parser {
 
 			int dt = FEDeriveClause.DERIVE_SCALAR; 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:924:2: ( DERIVE (e= feExpressionRule[fe, null] |e= feCumulateRule[fe] ) AS id= ID )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:925:3: DERIVE (e= feExpressionRule[fe, null] |e= feCumulateRule[fe] ) AS id= ID
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:942:2: ( DERIVE (e= feExpressionRule[fe, null] |e= feCumulateRule[fe] ) AS id= ID )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:943:3: DERIVE (e= feExpressionRule[fe, null] |e= feCumulateRule[fe] ) AS id= ID
 			{
-			match(input,DERIVE,FOLLOW_DERIVE_in_feDeriveRule10193); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:925:10: (e= feExpressionRule[fe, null] |e= feCumulateRule[fe] )
-			int alt172=2;
-			int LA172_0 = input.LA(1);
-			if ( (LA172_0==ADD||LA172_0==APEX_VALUE||LA172_0==BOOLEAN||LA172_0==FLOAT||(LA172_0 >= ID && LA172_0 <= IF_ERROR)||LA172_0==INT||LA172_0==LP||LA172_0==POS||LA172_0==QUOTED_VALUE||LA172_0==SUB) ) {
-				alt172=1;
+			match(input,DERIVE,FOLLOW_DERIVE_in_feDeriveRule10422); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:943:10: (e= feExpressionRule[fe, null] |e= feCumulateRule[fe] )
+			int alt175=2;
+			int LA175_0 = input.LA(1);
+			if ( (LA175_0==ADD||LA175_0==APEX_VALUE||LA175_0==BOOLEAN||LA175_0==FLOAT||(LA175_0 >= ID && LA175_0 <= IF_ERROR)||LA175_0==INT||LA175_0==LP||LA175_0==POS||LA175_0==QUOTED_VALUE||LA175_0==SUB) ) {
+				alt175=1;
 			}
-			else if ( (LA172_0==CUMULATE) ) {
-				alt172=2;
+			else if ( (LA175_0==CUMULATE) ) {
+				alt175=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 172, 0, input);
+					new NoViableAltException("", 175, 0, input);
 				throw nvae;
 			}
 
-			switch (alt172) {
+			switch (alt175) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:925:12: e= feExpressionRule[fe, null]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:943:12: e= feExpressionRule[fe, null]
 					{
-					pushFollow(FOLLOW_feExpressionRule_in_feDeriveRule10199);
+					pushFollow(FOLLOW_feExpressionRule_in_feDeriveRule10428);
 					e=feExpressionRule(fe, null);
 					state._fsp--;
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:926:9: e= feCumulateRule[fe]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:944:9: e= feCumulateRule[fe]
 					{
-					pushFollow(FOLLOW_feCumulateRule_in_feDeriveRule10215);
+					pushFollow(FOLLOW_feCumulateRule_in_feDeriveRule10444);
 					e=feCumulateRule(fe);
 					state._fsp--;
 
@@ -8562,8 +8744,8 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,AS,FOLLOW_AS_in_feDeriveRule10232); 
-			id=(Token)match(input,ID,FOLLOW_ID_in_feDeriveRule10236); 
+			match(input,AS,FOLLOW_AS_in_feDeriveRule10461); 
+			id=(Token)match(input,ID,FOLLOW_ID_in_feDeriveRule10465); 
 			 dc = env.createDeriveClause(id, e, fe, dt); 	
 			}
 
@@ -8582,7 +8764,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feCumulateRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:932:1: feCumulateRule[FuzzyEvaluator fe] returns [Expression feExpr] : CUMULATE LP a= ID RP ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:950:1: feCumulateRule[FuzzyEvaluator fe] returns [Expression feExpr] : CUMULATE LP a= ID RP ;
 	public final Expression feCumulateRule(FuzzyEvaluator fe) throws RecognitionException {
 		Expression feExpr = null;
 
@@ -8590,13 +8772,13 @@ public class JCoQLParser extends Parser {
 		Token a=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:933:2: ( CUMULATE LP a= ID RP )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:934:3: CUMULATE LP a= ID RP
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:951:2: ( CUMULATE LP a= ID RP )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:952:3: CUMULATE LP a= ID RP
 			{
-			match(input,CUMULATE,FOLLOW_CUMULATE_in_feCumulateRule10280); 
-			match(input,LP,FOLLOW_LP_in_feCumulateRule10282); 
-			a=(Token)match(input,ID,FOLLOW_ID_in_feCumulateRule10286); 
-			match(input,RP,FOLLOW_RP_in_feCumulateRule10288); 
+			match(input,CUMULATE,FOLLOW_CUMULATE_in_feCumulateRule10509); 
+			match(input,LP,FOLLOW_LP_in_feCumulateRule10511); 
+			a=(Token)match(input,ID,FOLLOW_ID_in_feCumulateRule10515); 
+			match(input,RP,FOLLOW_RP_in_feCumulateRule10517); 
 				feExpr = env.getCumulateArray (fe, a); 
 			}
 
@@ -8615,7 +8797,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feArraySortRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:938:1: feArraySortRule[FuzzyEvaluator fe] returns [FESortArrayClause sac] : SORT ( feArrayIndexRule[fe, sac] BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS i1= ID | LP feArrayIndexRule[fe, sac] ( COMMA feArrayIndexRule[fe, sac] )+ RP BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS LP i2= ID ( COMMA i3= ID )+ RP ) ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:956:1: feArraySortRule[FuzzyEvaluator fe] returns [FESortArrayClause sac] : SORT ( feArrayIndexRule[fe, sac] BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS i1= ID | LP feArrayIndexRule[fe, sac] ( COMMA feArrayIndexRule[fe, sac] )+ RP BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS LP i2= ID ( COMMA i3= ID )+ RP ) ;
 	public final FESortArrayClause feArraySortRule(FuzzyEvaluator fe) throws RecognitionException {
 		FESortArrayClause sac = null;
 
@@ -8626,146 +8808,40 @@ public class JCoQLParser extends Parser {
 
 		 sac = new FESortArrayClause (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:940:2: ( SORT ( feArrayIndexRule[fe, sac] BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS i1= ID | LP feArrayIndexRule[fe, sac] ( COMMA feArrayIndexRule[fe, sac] )+ RP BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS LP i2= ID ( COMMA i3= ID )+ RP ) )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:940:4: SORT ( feArrayIndexRule[fe, sac] BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS i1= ID | LP feArrayIndexRule[fe, sac] ( COMMA feArrayIndexRule[fe, sac] )+ RP BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS LP i2= ID ( COMMA i3= ID )+ RP )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:958:2: ( SORT ( feArrayIndexRule[fe, sac] BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS i1= ID | LP feArrayIndexRule[fe, sac] ( COMMA feArrayIndexRule[fe, sac] )+ RP BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS LP i2= ID ( COMMA i3= ID )+ RP ) )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:958:4: SORT ( feArrayIndexRule[fe, sac] BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS i1= ID | LP feArrayIndexRule[fe, sac] ( COMMA feArrayIndexRule[fe, sac] )+ RP BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS LP i2= ID ( COMMA i3= ID )+ RP )
 			{
-			match(input,SORT,FOLLOW_SORT_in_feArraySortRule10313); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:941:3: ( feArrayIndexRule[fe, sac] BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS i1= ID | LP feArrayIndexRule[fe, sac] ( COMMA feArrayIndexRule[fe, sac] )+ RP BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS LP i2= ID ( COMMA i3= ID )+ RP )
-			int alt177=2;
-			int LA177_0 = input.LA(1);
-			if ( (LA177_0==ID) ) {
-				alt177=1;
+			match(input,SORT,FOLLOW_SORT_in_feArraySortRule10542); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:959:3: ( feArrayIndexRule[fe, sac] BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS i1= ID | LP feArrayIndexRule[fe, sac] ( COMMA feArrayIndexRule[fe, sac] )+ RP BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS LP i2= ID ( COMMA i3= ID )+ RP )
+			int alt180=2;
+			int LA180_0 = input.LA(1);
+			if ( (LA180_0==ID) ) {
+				alt180=1;
 			}
-			else if ( (LA177_0==LP) ) {
-				alt177=2;
+			else if ( (LA180_0==LP) ) {
+				alt180=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 177, 0, input);
+					new NoViableAltException("", 180, 0, input);
 				throw nvae;
 			}
 
-			switch (alt177) {
+			switch (alt180) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:941:5: feArrayIndexRule[fe, sac] BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS i1= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:959:5: feArrayIndexRule[fe, sac] BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS i1= ID
 					{
-					pushFollow(FOLLOW_feArrayIndexRule_in_feArraySortRule10319);
+					pushFollow(FOLLOW_feArrayIndexRule_in_feArraySortRule10548);
 					feArrayIndexRule(fe, sac);
 					state._fsp--;
 
-					match(input,BY,FOLLOW_BY_in_feArraySortRule10327); 
-					pushFollow(FOLLOW_feSortFieldRule_in_feArraySortRule10330);
+					match(input,BY,FOLLOW_BY_in_feArraySortRule10556); 
+					pushFollow(FOLLOW_feSortFieldRule_in_feArraySortRule10559);
 					feSortFieldRule(fe, sac);
 					state._fsp--;
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:943:6: ( COMMA feSortFieldRule[fe, sac] )*
-					loop173:
-					while (true) {
-						int alt173=2;
-						int LA173_0 = input.LA(1);
-						if ( (LA173_0==COMMA) ) {
-							alt173=1;
-						}
-
-						switch (alt173) {
-						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:943:8: COMMA feSortFieldRule[fe, sac]
-							{
-							match(input,COMMA,FOLLOW_COMMA_in_feArraySortRule10341); 
-							pushFollow(FOLLOW_feSortFieldRule_in_feArraySortRule10343);
-							feSortFieldRule(fe, sac);
-							state._fsp--;
-
-							}
-							break;
-
-						default :
-							break loop173;
-						}
-					}
-
-					match(input,AS,FOLLOW_AS_in_feArraySortRule10354); 
-					i1=(Token)match(input,ID,FOLLOW_ID_in_feArraySortRule10358); 
-					 env.setFuzzyEvaluatorNewArray (fe, sac, i1); 
-					}
-					break;
-				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:945:5: LP feArrayIndexRule[fe, sac] ( COMMA feArrayIndexRule[fe, sac] )+ RP BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS LP i2= ID ( COMMA i3= ID )+ RP
-					{
-					match(input,LP,FOLLOW_LP_in_feArraySortRule10384); 
-					pushFollow(FOLLOW_feArrayIndexRule_in_feArraySortRule10386);
-					feArrayIndexRule(fe, sac);
-					state._fsp--;
-
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:946:5: ( COMMA feArrayIndexRule[fe, sac] )+
-					int cnt174=0;
-					loop174:
-					while (true) {
-						int alt174=2;
-						int LA174_0 = input.LA(1);
-						if ( (LA174_0==COMMA) ) {
-							alt174=1;
-						}
-
-						switch (alt174) {
-						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:946:7: COMMA feArrayIndexRule[fe, sac]
-							{
-							match(input,COMMA,FOLLOW_COMMA_in_feArraySortRule10396); 
-							pushFollow(FOLLOW_feArrayIndexRule_in_feArraySortRule10398);
-							feArrayIndexRule(fe, sac);
-							state._fsp--;
-
-							}
-							break;
-
-						default :
-							if ( cnt174 >= 1 ) break loop174;
-							EarlyExitException eee = new EarlyExitException(174, input);
-							throw eee;
-						}
-						cnt174++;
-					}
-
-					match(input,RP,FOLLOW_RP_in_feArraySortRule10405); 
-					match(input,BY,FOLLOW_BY_in_feArraySortRule10412); 
-					pushFollow(FOLLOW_feSortFieldRule_in_feArraySortRule10414);
-					feSortFieldRule(fe, sac);
-					state._fsp--;
-
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:948:6: ( COMMA feSortFieldRule[fe, sac] )*
-					loop175:
-					while (true) {
-						int alt175=2;
-						int LA175_0 = input.LA(1);
-						if ( (LA175_0==COMMA) ) {
-							alt175=1;
-						}
-
-						switch (alt175) {
-						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:948:8: COMMA feSortFieldRule[fe, sac]
-							{
-							match(input,COMMA,FOLLOW_COMMA_in_feArraySortRule10425); 
-							pushFollow(FOLLOW_feSortFieldRule_in_feArraySortRule10427);
-							feSortFieldRule(fe, sac);
-							state._fsp--;
-
-							}
-							break;
-
-						default :
-							break loop175;
-						}
-					}
-
-					match(input,AS,FOLLOW_AS_in_feArraySortRule10438); 
-					match(input,LP,FOLLOW_LP_in_feArraySortRule10440); 
-					i2=(Token)match(input,ID,FOLLOW_ID_in_feArraySortRule10444); 
-					 env.setFuzzyEvaluatorNewArray (fe, sac, i2); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:950:6: ( COMMA i3= ID )+
-					int cnt176=0;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:961:6: ( COMMA feSortFieldRule[fe, sac] )*
 					loop176:
 					while (true) {
 						int alt176=2;
@@ -8776,23 +8852,129 @@ public class JCoQLParser extends Parser {
 
 						switch (alt176) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:950:8: COMMA i3= ID
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:961:8: COMMA feSortFieldRule[fe, sac]
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_feArraySortRule10472); 
-							i3=(Token)match(input,ID,FOLLOW_ID_in_feArraySortRule10476); 
+							match(input,COMMA,FOLLOW_COMMA_in_feArraySortRule10570); 
+							pushFollow(FOLLOW_feSortFieldRule_in_feArraySortRule10572);
+							feSortFieldRule(fe, sac);
+							state._fsp--;
+
+							}
+							break;
+
+						default :
+							break loop176;
+						}
+					}
+
+					match(input,AS,FOLLOW_AS_in_feArraySortRule10583); 
+					i1=(Token)match(input,ID,FOLLOW_ID_in_feArraySortRule10587); 
+					 env.setFuzzyEvaluatorNewArray (fe, sac, i1); 
+					}
+					break;
+				case 2 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:963:5: LP feArrayIndexRule[fe, sac] ( COMMA feArrayIndexRule[fe, sac] )+ RP BY feSortFieldRule[fe, sac] ( COMMA feSortFieldRule[fe, sac] )* AS LP i2= ID ( COMMA i3= ID )+ RP
+					{
+					match(input,LP,FOLLOW_LP_in_feArraySortRule10613); 
+					pushFollow(FOLLOW_feArrayIndexRule_in_feArraySortRule10615);
+					feArrayIndexRule(fe, sac);
+					state._fsp--;
+
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:964:5: ( COMMA feArrayIndexRule[fe, sac] )+
+					int cnt177=0;
+					loop177:
+					while (true) {
+						int alt177=2;
+						int LA177_0 = input.LA(1);
+						if ( (LA177_0==COMMA) ) {
+							alt177=1;
+						}
+
+						switch (alt177) {
+						case 1 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:964:7: COMMA feArrayIndexRule[fe, sac]
+							{
+							match(input,COMMA,FOLLOW_COMMA_in_feArraySortRule10625); 
+							pushFollow(FOLLOW_feArrayIndexRule_in_feArraySortRule10627);
+							feArrayIndexRule(fe, sac);
+							state._fsp--;
+
+							}
+							break;
+
+						default :
+							if ( cnt177 >= 1 ) break loop177;
+							EarlyExitException eee = new EarlyExitException(177, input);
+							throw eee;
+						}
+						cnt177++;
+					}
+
+					match(input,RP,FOLLOW_RP_in_feArraySortRule10634); 
+					match(input,BY,FOLLOW_BY_in_feArraySortRule10641); 
+					pushFollow(FOLLOW_feSortFieldRule_in_feArraySortRule10643);
+					feSortFieldRule(fe, sac);
+					state._fsp--;
+
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:966:6: ( COMMA feSortFieldRule[fe, sac] )*
+					loop178:
+					while (true) {
+						int alt178=2;
+						int LA178_0 = input.LA(1);
+						if ( (LA178_0==COMMA) ) {
+							alt178=1;
+						}
+
+						switch (alt178) {
+						case 1 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:966:8: COMMA feSortFieldRule[fe, sac]
+							{
+							match(input,COMMA,FOLLOW_COMMA_in_feArraySortRule10654); 
+							pushFollow(FOLLOW_feSortFieldRule_in_feArraySortRule10656);
+							feSortFieldRule(fe, sac);
+							state._fsp--;
+
+							}
+							break;
+
+						default :
+							break loop178;
+						}
+					}
+
+					match(input,AS,FOLLOW_AS_in_feArraySortRule10667); 
+					match(input,LP,FOLLOW_LP_in_feArraySortRule10669); 
+					i2=(Token)match(input,ID,FOLLOW_ID_in_feArraySortRule10673); 
+					 env.setFuzzyEvaluatorNewArray (fe, sac, i2); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:968:6: ( COMMA i3= ID )+
+					int cnt179=0;
+					loop179:
+					while (true) {
+						int alt179=2;
+						int LA179_0 = input.LA(1);
+						if ( (LA179_0==COMMA) ) {
+							alt179=1;
+						}
+
+						switch (alt179) {
+						case 1 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:968:8: COMMA i3= ID
+							{
+							match(input,COMMA,FOLLOW_COMMA_in_feArraySortRule10701); 
+							i3=(Token)match(input,ID,FOLLOW_ID_in_feArraySortRule10705); 
 							 env.setFuzzyEvaluatorNewArray (fe, sac, i3); 
 							}
 							break;
 
 						default :
-							if ( cnt176 >= 1 ) break loop176;
-							EarlyExitException eee = new EarlyExitException(176, input);
+							if ( cnt179 >= 1 ) break loop179;
+							EarlyExitException eee = new EarlyExitException(179, input);
 							throw eee;
 						}
-						cnt176++;
+						cnt179++;
 					}
 
-					match(input,RP,FOLLOW_RP_in_feArraySortRule10499); 
+					match(input,RP,FOLLOW_RP_in_feArraySortRule10728); 
 					}
 					break;
 
@@ -8816,18 +8998,18 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feArrayIndexRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:954:1: feArrayIndexRule[FuzzyEvaluator fe, FESortArrayClause sac] : i= ID IN a= ID ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:972:1: feArrayIndexRule[FuzzyEvaluator fe, FESortArrayClause sac] : i= ID IN a= ID ;
 	public final void feArrayIndexRule(FuzzyEvaluator fe, FESortArrayClause sac) throws RecognitionException {
 		Token i=null;
 		Token a=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:955:2: (i= ID IN a= ID )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:956:3: i= ID IN a= ID
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:973:2: (i= ID IN a= ID )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:974:3: i= ID IN a= ID
 			{
-			i=(Token)match(input,ID,FOLLOW_ID_in_feArrayIndexRule10546); 
-			match(input,IN,FOLLOW_IN_in_feArrayIndexRule10548); 
-			a=(Token)match(input,ID,FOLLOW_ID_in_feArrayIndexRule10552); 
+			i=(Token)match(input,ID,FOLLOW_ID_in_feArrayIndexRule10775); 
+			match(input,IN,FOLLOW_IN_in_feArrayIndexRule10777); 
+			a=(Token)match(input,ID,FOLLOW_ID_in_feArrayIndexRule10781); 
 			 env.addFuzzyEvaluatorSortingArray (fe, sac, i, a); 
 			}
 
@@ -8845,7 +9027,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feSortFieldRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:959:1: feSortFieldRule[FuzzyEvaluator fe, FESortArrayClause sac] : i= ID (f= fieldRefRule )? TYPE t= ID (v= VERSUS )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:977:1: feSortFieldRule[FuzzyEvaluator fe, FESortArrayClause sac] : i= ID (f= fieldRefRule )? TYPE t= ID (v= VERSUS )? ;
 	public final void feSortFieldRule(FuzzyEvaluator fe, FESortArrayClause sac) throws RecognitionException {
 		Token i=null;
 		Token t=null;
@@ -8853,21 +9035,21 @@ public class JCoQLParser extends Parser {
 		Field f =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:960:2: (i= ID (f= fieldRefRule )? TYPE t= ID (v= VERSUS )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:961:3: i= ID (f= fieldRefRule )? TYPE t= ID (v= VERSUS )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:978:2: (i= ID (f= fieldRefRule )? TYPE t= ID (v= VERSUS )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:979:3: i= ID (f= fieldRefRule )? TYPE t= ID (v= VERSUS )?
 			{
-			i=(Token)match(input,ID,FOLLOW_ID_in_feSortFieldRule10580); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:961:8: (f= fieldRefRule )?
-			int alt178=2;
-			int LA178_0 = input.LA(1);
-			if ( (LA178_0==FIELD_NAME) ) {
-				alt178=1;
+			i=(Token)match(input,ID,FOLLOW_ID_in_feSortFieldRule10809); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:979:8: (f= fieldRefRule )?
+			int alt181=2;
+			int LA181_0 = input.LA(1);
+			if ( (LA181_0==FIELD_NAME) ) {
+				alt181=1;
 			}
-			switch (alt178) {
+			switch (alt181) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:961:9: f= fieldRefRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:979:9: f= fieldRefRule
 					{
-					pushFollow(FOLLOW_fieldRefRule_in_feSortFieldRule10585);
+					pushFollow(FOLLOW_fieldRefRule_in_feSortFieldRule10814);
 					f=fieldRefRule();
 					state._fsp--;
 
@@ -8876,19 +9058,19 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,TYPE,FOLLOW_TYPE_in_feSortFieldRule10598); 
-			t=(Token)match(input,ID,FOLLOW_ID_in_feSortFieldRule10602); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:963:3: (v= VERSUS )?
-			int alt179=2;
-			int LA179_0 = input.LA(1);
-			if ( (LA179_0==VERSUS) ) {
-				alt179=1;
+			match(input,TYPE,FOLLOW_TYPE_in_feSortFieldRule10827); 
+			t=(Token)match(input,ID,FOLLOW_ID_in_feSortFieldRule10831); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:981:3: (v= VERSUS )?
+			int alt182=2;
+			int LA182_0 = input.LA(1);
+			if ( (LA182_0==VERSUS) ) {
+				alt182=1;
 			}
-			switch (alt179) {
+			switch (alt182) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:963:5: v= VERSUS
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:981:5: v= VERSUS
 					{
-					v=(Token)match(input,VERSUS,FOLLOW_VERSUS_in_feSortFieldRule10611); 
+					v=(Token)match(input,VERSUS,FOLLOW_VERSUS_in_feSortFieldRule10840); 
 					}
 					break;
 
@@ -8911,7 +9093,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "aggSpecRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:967:1: aggSpecRule[FuzzyEvaluator fe, FEForAllClause fac] returns [AggregateClause ac] : (wt= withSpec )? e= feExpressionRule[fe, fac] AS a= ID ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:985:1: aggSpecRule[FuzzyEvaluator fe, FEForAllClause fac] returns [AggregateClause ac] : (wt= withSpec )? e= feExpressionRule[fe, fac] AS a= ID ;
 	public final AggregateClause aggSpecRule(FuzzyEvaluator fe, FEForAllClause fac) throws RecognitionException {
 		AggregateClause ac = null;
 
@@ -8921,20 +9103,20 @@ public class JCoQLParser extends Parser {
 		Expression e =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:968:2: ( (wt= withSpec )? e= feExpressionRule[fe, fac] AS a= ID )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:969:3: (wt= withSpec )? e= feExpressionRule[fe, fac] AS a= ID
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:986:2: ( (wt= withSpec )? e= feExpressionRule[fe, fac] AS a= ID )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:987:3: (wt= withSpec )? e= feExpressionRule[fe, fac] AS a= ID
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:969:3: (wt= withSpec )?
-			int alt180=2;
-			int LA180_0 = input.LA(1);
-			if ( (LA180_0==WITH) ) {
-				alt180=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:987:3: (wt= withSpec )?
+			int alt183=2;
+			int LA183_0 = input.LA(1);
+			if ( (LA183_0==WITH) ) {
+				alt183=1;
 			}
-			switch (alt180) {
+			switch (alt183) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:969:5: wt= withSpec
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:987:5: wt= withSpec
 					{
-					pushFollow(FOLLOW_withSpec_in_aggSpecRule10652);
+					pushFollow(FOLLOW_withSpec_in_aggSpecRule10881);
 					wt=withSpec();
 					state._fsp--;
 
@@ -8943,12 +9125,12 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_feExpressionRule_in_aggSpecRule10662);
+			pushFollow(FOLLOW_feExpressionRule_in_aggSpecRule10891);
 			e=feExpressionRule(fe, fac);
 			state._fsp--;
 
-			match(input,AS,FOLLOW_AS_in_aggSpecRule10669); 
-			a=(Token)match(input,ID,FOLLOW_ID_in_aggSpecRule10673); 
+			match(input,AS,FOLLOW_AS_in_aggSpecRule10898); 
+			a=(Token)match(input,ID,FOLLOW_ID_in_aggSpecRule10902); 
 			 ac = env.createAggregateClause(wt, e, a, fe, fac);
 			}
 
@@ -8967,7 +9149,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "withSpec"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:974:1: withSpec returns [String s] : WITH (x= SUM |x= PRODUCT |x= MINIMUM |x= MAXIMUM ) ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:992:1: withSpec returns [String s] : WITH (x= SUM |x= PRODUCT |x= MINIMUM |x= MAXIMUM ) ;
 	public final String withSpec() throws RecognitionException {
 		String s = null;
 
@@ -8975,61 +9157,61 @@ public class JCoQLParser extends Parser {
 		Token x=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:975:2: ( WITH (x= SUM |x= PRODUCT |x= MINIMUM |x= MAXIMUM ) )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:976:4: WITH (x= SUM |x= PRODUCT |x= MINIMUM |x= MAXIMUM )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:993:2: ( WITH (x= SUM |x= PRODUCT |x= MINIMUM |x= MAXIMUM ) )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:994:4: WITH (x= SUM |x= PRODUCT |x= MINIMUM |x= MAXIMUM )
 			{
-			match(input,WITH,FOLLOW_WITH_in_withSpec10706); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:976:9: (x= SUM |x= PRODUCT |x= MINIMUM |x= MAXIMUM )
-			int alt181=4;
+			match(input,WITH,FOLLOW_WITH_in_withSpec10935); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:994:9: (x= SUM |x= PRODUCT |x= MINIMUM |x= MAXIMUM )
+			int alt184=4;
 			switch ( input.LA(1) ) {
 			case SUM:
 				{
-				alt181=1;
+				alt184=1;
 				}
 				break;
 			case PRODUCT:
 				{
-				alt181=2;
+				alt184=2;
 				}
 				break;
 			case MINIMUM:
 				{
-				alt181=3;
+				alt184=3;
 				}
 				break;
 			case MAXIMUM:
 				{
-				alt181=4;
+				alt184=4;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 181, 0, input);
+					new NoViableAltException("", 184, 0, input);
 				throw nvae;
 			}
-			switch (alt181) {
+			switch (alt184) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:976:11: x= SUM
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:994:11: x= SUM
 					{
-					x=(Token)match(input,SUM,FOLLOW_SUM_in_withSpec10712); 
+					x=(Token)match(input,SUM,FOLLOW_SUM_in_withSpec10941); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:977:9: x= PRODUCT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:995:9: x= PRODUCT
 					{
-					x=(Token)match(input,PRODUCT,FOLLOW_PRODUCT_in_withSpec10725); 
+					x=(Token)match(input,PRODUCT,FOLLOW_PRODUCT_in_withSpec10954); 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:978:9: x= MINIMUM
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:996:9: x= MINIMUM
 					{
-					x=(Token)match(input,MINIMUM,FOLLOW_MINIMUM_in_withSpec10738); 
+					x=(Token)match(input,MINIMUM,FOLLOW_MINIMUM_in_withSpec10967); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:979:9: x= MAXIMUM
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:997:9: x= MAXIMUM
 					{
-					x=(Token)match(input,MAXIMUM,FOLLOW_MAXIMUM_in_withSpec10751); 
+					x=(Token)match(input,MAXIMUM,FOLLOW_MAXIMUM_in_withSpec10980); 
 					}
 					break;
 
@@ -9053,44 +9235,44 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feParameterRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:983:1: feParameterRule[FuzzyEvaluator fe] : p= ID TYPE (t= ID |t= ARRAY ) ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1001:1: feParameterRule[FuzzyEvaluator fe] : p= ID TYPE (t= ID |t= ARRAY ) ;
 	public final void feParameterRule(FuzzyEvaluator fe) throws RecognitionException {
 		Token p=null;
 		Token t=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:984:2: (p= ID TYPE (t= ID |t= ARRAY ) )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:985:3: p= ID TYPE (t= ID |t= ARRAY )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1002:2: (p= ID TYPE (t= ID |t= ARRAY ) )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1003:3: p= ID TYPE (t= ID |t= ARRAY )
 			{
-			p=(Token)match(input,ID,FOLLOW_ID_in_feParameterRule10784); 
-			match(input,TYPE,FOLLOW_TYPE_in_feParameterRule10803); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:986:8: (t= ID |t= ARRAY )
-			int alt182=2;
-			int LA182_0 = input.LA(1);
-			if ( (LA182_0==ID) ) {
-				alt182=1;
+			p=(Token)match(input,ID,FOLLOW_ID_in_feParameterRule11013); 
+			match(input,TYPE,FOLLOW_TYPE_in_feParameterRule11032); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1004:8: (t= ID |t= ARRAY )
+			int alt185=2;
+			int LA185_0 = input.LA(1);
+			if ( (LA185_0==ID) ) {
+				alt185=1;
 			}
-			else if ( (LA182_0==ARRAY) ) {
-				alt182=2;
+			else if ( (LA185_0==ARRAY) ) {
+				alt185=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 182, 0, input);
+					new NoViableAltException("", 185, 0, input);
 				throw nvae;
 			}
 
-			switch (alt182) {
+			switch (alt185) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:986:9: t= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1004:9: t= ID
 					{
-					t=(Token)match(input,ID,FOLLOW_ID_in_feParameterRule10808); 
+					t=(Token)match(input,ID,FOLLOW_ID_in_feParameterRule11037); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:986:16: t= ARRAY
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1004:16: t= ARRAY
 					{
-					t=(Token)match(input,ARRAY,FOLLOW_ARRAY_in_feParameterRule10814); 
+					t=(Token)match(input,ARRAY,FOLLOW_ARRAY_in_feParameterRule11043); 
 					}
 					break;
 
@@ -9113,7 +9295,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "jfOrConditionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:992:1: jfOrConditionRule[ParamList pl, boolean jsCaller] returns [Condition c] : c1= jfAndConditionRule[pl, jsCaller] ( OR c2= jfAndConditionRule[pl, jsCaller] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1010:1: jfOrConditionRule[ParamList pl, boolean jsCaller] returns [Condition c] : c1= jfAndConditionRule[pl, jsCaller] ( OR c2= jfAndConditionRule[pl, jsCaller] )* ;
 	public final Condition jfOrConditionRule(ParamList pl, boolean jsCaller) throws RecognitionException {
 		Condition c = null;
 
@@ -9122,29 +9304,29 @@ public class JCoQLParser extends Parser {
 		Condition c2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:993:3: (c1= jfAndConditionRule[pl, jsCaller] ( OR c2= jfAndConditionRule[pl, jsCaller] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:994:5: c1= jfAndConditionRule[pl, jsCaller] ( OR c2= jfAndConditionRule[pl, jsCaller] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1011:3: (c1= jfAndConditionRule[pl, jsCaller] ( OR c2= jfAndConditionRule[pl, jsCaller] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1012:5: c1= jfAndConditionRule[pl, jsCaller] ( OR c2= jfAndConditionRule[pl, jsCaller] )*
 			{
-			pushFollow(FOLLOW_jfAndConditionRule_in_jfOrConditionRule10852);
+			pushFollow(FOLLOW_jfAndConditionRule_in_jfOrConditionRule11081);
 			c1=jfAndConditionRule(pl, jsCaller);
 			state._fsp--;
 
 			 c = new ConditionOr (c1); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:995:4: ( OR c2= jfAndConditionRule[pl, jsCaller] )*
-			loop183:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1013:4: ( OR c2= jfAndConditionRule[pl, jsCaller] )*
+			loop186:
 			while (true) {
-				int alt183=2;
-				int LA183_0 = input.LA(1);
-				if ( (LA183_0==OR) ) {
-					alt183=1;
+				int alt186=2;
+				int LA186_0 = input.LA(1);
+				if ( (LA186_0==OR) ) {
+					alt186=1;
 				}
 
-				switch (alt183) {
+				switch (alt186) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:995:6: OR c2= jfAndConditionRule[pl, jsCaller]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1013:6: OR c2= jfAndConditionRule[pl, jsCaller]
 					{
-					match(input,OR,FOLLOW_OR_in_jfOrConditionRule10869); 
-					pushFollow(FOLLOW_jfAndConditionRule_in_jfOrConditionRule10873);
+					match(input,OR,FOLLOW_OR_in_jfOrConditionRule11098); 
+					pushFollow(FOLLOW_jfAndConditionRule_in_jfOrConditionRule11102);
 					c2=jfAndConditionRule(pl, jsCaller);
 					state._fsp--;
 
@@ -9153,7 +9335,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop183;
+					break loop186;
 				}
 			}
 
@@ -9175,7 +9357,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "jfAndConditionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1001:1: jfAndConditionRule[ParamList pl, boolean jsCaller] returns [Condition c] : c1= jfNotConditionRule[pl, jsCaller] ( AND c2= jfNotConditionRule[pl, jsCaller] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1019:1: jfAndConditionRule[ParamList pl, boolean jsCaller] returns [Condition c] : c1= jfNotConditionRule[pl, jsCaller] ( AND c2= jfNotConditionRule[pl, jsCaller] )* ;
 	public final Condition jfAndConditionRule(ParamList pl, boolean jsCaller) throws RecognitionException {
 		Condition c = null;
 
@@ -9184,29 +9366,29 @@ public class JCoQLParser extends Parser {
 		Condition c2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1002:3: (c1= jfNotConditionRule[pl, jsCaller] ( AND c2= jfNotConditionRule[pl, jsCaller] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1003:5: c1= jfNotConditionRule[pl, jsCaller] ( AND c2= jfNotConditionRule[pl, jsCaller] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1020:3: (c1= jfNotConditionRule[pl, jsCaller] ( AND c2= jfNotConditionRule[pl, jsCaller] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1021:5: c1= jfNotConditionRule[pl, jsCaller] ( AND c2= jfNotConditionRule[pl, jsCaller] )*
 			{
-			pushFollow(FOLLOW_jfNotConditionRule_in_jfAndConditionRule10939);
+			pushFollow(FOLLOW_jfNotConditionRule_in_jfAndConditionRule11168);
 			c1=jfNotConditionRule(pl, jsCaller);
 			state._fsp--;
 
 			 c = new ConditionAnd (c1); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1004:5: ( AND c2= jfNotConditionRule[pl, jsCaller] )*
-			loop184:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1022:5: ( AND c2= jfNotConditionRule[pl, jsCaller] )*
+			loop187:
 			while (true) {
-				int alt184=2;
-				int LA184_0 = input.LA(1);
-				if ( (LA184_0==AND) ) {
-					alt184=1;
+				int alt187=2;
+				int LA187_0 = input.LA(1);
+				if ( (LA187_0==AND) ) {
+					alt187=1;
 				}
 
-				switch (alt184) {
+				switch (alt187) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1004:7: AND c2= jfNotConditionRule[pl, jsCaller]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1022:7: AND c2= jfNotConditionRule[pl, jsCaller]
 					{
-					match(input,AND,FOLLOW_AND_in_jfAndConditionRule10957); 
-					pushFollow(FOLLOW_jfNotConditionRule_in_jfAndConditionRule10961);
+					match(input,AND,FOLLOW_AND_in_jfAndConditionRule11186); 
+					pushFollow(FOLLOW_jfNotConditionRule_in_jfAndConditionRule11190);
 					c2=jfNotConditionRule(pl, jsCaller);
 					state._fsp--;
 
@@ -9215,7 +9397,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop184;
+					break loop187;
 				}
 			}
 
@@ -9237,7 +9419,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "jfNotConditionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1009:1: jfNotConditionRule[ParamList pl, boolean jsCaller] returns [Condition c] : (not= NOT )? p= jsfPredicateRule[pl, jsCaller] ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1027:1: jfNotConditionRule[ParamList pl, boolean jsCaller] returns [Condition c] : (not= NOT )? p= jsfPredicateRule[pl, jsCaller] ;
 	public final Condition jfNotConditionRule(ParamList pl, boolean jsCaller) throws RecognitionException {
 		Condition c = null;
 
@@ -9246,26 +9428,26 @@ public class JCoQLParser extends Parser {
 		Predicate p =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1010:3: ( (not= NOT )? p= jsfPredicateRule[pl, jsCaller] )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1011:5: (not= NOT )? p= jsfPredicateRule[pl, jsCaller]
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1028:3: ( (not= NOT )? p= jsfPredicateRule[pl, jsCaller] )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1029:5: (not= NOT )? p= jsfPredicateRule[pl, jsCaller]
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1011:5: (not= NOT )?
-			int alt185=2;
-			int LA185_0 = input.LA(1);
-			if ( (LA185_0==NOT) ) {
-				alt185=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1029:5: (not= NOT )?
+			int alt188=2;
+			int LA188_0 = input.LA(1);
+			if ( (LA188_0==NOT) ) {
+				alt188=1;
 			}
-			switch (alt185) {
+			switch (alt188) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1011:7: not= NOT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1029:7: not= NOT
 					{
-					not=(Token)match(input,NOT,FOLLOW_NOT_in_jfNotConditionRule11029); 
+					not=(Token)match(input,NOT,FOLLOW_NOT_in_jfNotConditionRule11258); 
 					}
 					break;
 
 			}
 
-			pushFollow(FOLLOW_jsfPredicateRule_in_jfNotConditionRule11040);
+			pushFollow(FOLLOW_jsfPredicateRule_in_jfNotConditionRule11269);
 			p=jsfPredicateRule(pl, jsCaller);
 			state._fsp--;
 
@@ -9287,7 +9469,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "jsfPredicateRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1017:1: jsfPredicateRule[ParamList pl, boolean jsCaller] returns [Predicate p] : e1= jfExpressionRule[pl, jsCaller] (cp= jfCompareRule[e1, pl, jsCaller] |irp= inRangeRule[e1] )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1035:1: jsfPredicateRule[ParamList pl, boolean jsCaller] returns [Predicate p] : e1= jfExpressionRule[pl, jsCaller] (cp= jfCompareRule[e1, pl, jsCaller] |irp= inRangeRule[e1] )? ;
 	public final Predicate jsfPredicateRule(ParamList pl, boolean jsCaller) throws RecognitionException {
 		Predicate p = null;
 
@@ -9297,28 +9479,28 @@ public class JCoQLParser extends Parser {
 		Predicate irp =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1018:3: (e1= jfExpressionRule[pl, jsCaller] (cp= jfCompareRule[e1, pl, jsCaller] |irp= inRangeRule[e1] )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1019:4: e1= jfExpressionRule[pl, jsCaller] (cp= jfCompareRule[e1, pl, jsCaller] |irp= inRangeRule[e1] )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1036:3: (e1= jfExpressionRule[pl, jsCaller] (cp= jfCompareRule[e1, pl, jsCaller] |irp= inRangeRule[e1] )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1037:4: e1= jfExpressionRule[pl, jsCaller] (cp= jfCompareRule[e1, pl, jsCaller] |irp= inRangeRule[e1] )?
 			{
-			pushFollow(FOLLOW_jfExpressionRule_in_jsfPredicateRule11078);
+			pushFollow(FOLLOW_jfExpressionRule_in_jsfPredicateRule11307);
 			e1=jfExpressionRule(pl, jsCaller);
 			state._fsp--;
 
 				p	=	e1; 	
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1020:6: (cp= jfCompareRule[e1, pl, jsCaller] |irp= inRangeRule[e1] )?
-			int alt186=3;
-			int LA186_0 = input.LA(1);
-			if ( (LA186_0==EQ||LA186_0==GE||LA186_0==GT||LA186_0==LE||LA186_0==LT||LA186_0==NEQ) ) {
-				alt186=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1038:6: (cp= jfCompareRule[e1, pl, jsCaller] |irp= inRangeRule[e1] )?
+			int alt189=3;
+			int LA189_0 = input.LA(1);
+			if ( (LA189_0==EQ||LA189_0==GE||LA189_0==GT||LA189_0==LE||LA189_0==LT||LA189_0==NEQ) ) {
+				alt189=1;
 			}
-			else if ( (LA186_0==INRANGE) ) {
-				alt186=2;
+			else if ( (LA189_0==INRANGE) ) {
+				alt189=2;
 			}
-			switch (alt186) {
+			switch (alt189) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1020:8: cp= jfCompareRule[e1, pl, jsCaller]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1038:8: cp= jfCompareRule[e1, pl, jsCaller]
 					{
-					pushFollow(FOLLOW_jfCompareRule_in_jsfPredicateRule11098);
+					pushFollow(FOLLOW_jfCompareRule_in_jsfPredicateRule11327);
 					cp=jfCompareRule(e1, pl, jsCaller);
 					state._fsp--;
 
@@ -9326,9 +9508,9 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1021:9: irp= inRangeRule[e1]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1039:9: irp= inRangeRule[e1]
 					{
-					pushFollow(FOLLOW_inRangeRule_in_jsfPredicateRule11118);
+					pushFollow(FOLLOW_inRangeRule_in_jsfPredicateRule11347);
 					irp=inRangeRule(e1);
 					state._fsp--;
 
@@ -9355,7 +9537,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "jfCompareRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1025:1: jfCompareRule[Expression e1, ParamList pl, boolean jsCaller] returns [Predicate p] : c= comparatorRule e2= jfExpressionRule[pl, jsCaller] ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1043:1: jfCompareRule[Expression e1, ParamList pl, boolean jsCaller] returns [Predicate p] : c= comparatorRule e2= jfExpressionRule[pl, jsCaller] ;
 	public final Predicate jfCompareRule(Expression e1, ParamList pl, boolean jsCaller) throws RecognitionException {
 		Predicate p = null;
 
@@ -9364,14 +9546,14 @@ public class JCoQLParser extends Parser {
 		Expression e2 =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1026:2: (c= comparatorRule e2= jfExpressionRule[pl, jsCaller] )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1027:5: c= comparatorRule e2= jfExpressionRule[pl, jsCaller]
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1044:2: (c= comparatorRule e2= jfExpressionRule[pl, jsCaller] )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1045:5: c= comparatorRule e2= jfExpressionRule[pl, jsCaller]
 			{
-			pushFollow(FOLLOW_comparatorRule_in_jfCompareRule11165);
+			pushFollow(FOLLOW_comparatorRule_in_jfCompareRule11394);
 			c=comparatorRule();
 			state._fsp--;
 
-			pushFollow(FOLLOW_jfExpressionRule_in_jfCompareRule11174);
+			pushFollow(FOLLOW_jfExpressionRule_in_jfCompareRule11403);
 			e2=jfExpressionRule(pl, jsCaller);
 			state._fsp--;
 
@@ -9393,7 +9575,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "jfExpressionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1032:1: jfExpressionRule[ParamList pl, boolean jsCaller] returns [Expression expr] : (t= jfTermRule[pl, jsCaller] | (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] ) ( (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1050:1: jfExpressionRule[ParamList pl, boolean jsCaller] returns [Expression expr] : (t= jfTermRule[pl, jsCaller] | (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] ) ( (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] )* ;
 	public final Expression jfExpressionRule(ParamList pl, boolean jsCaller) throws RecognitionException {
 		Expression expr = null;
 
@@ -9403,30 +9585,30 @@ public class JCoQLParser extends Parser {
 
 		 expr = new Expression (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1034:3: ( (t= jfTermRule[pl, jsCaller] | (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] ) ( (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1035:4: (t= jfTermRule[pl, jsCaller] | (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] ) ( (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1052:3: ( (t= jfTermRule[pl, jsCaller] | (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] ) ( (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1053:4: (t= jfTermRule[pl, jsCaller] | (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] ) ( (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] )*
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1035:4: (t= jfTermRule[pl, jsCaller] | (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] )
-			int alt188=2;
-			int LA188_0 = input.LA(1);
-			if ( (LA188_0==APEX_VALUE||LA188_0==FLOAT||LA188_0==ID||LA188_0==INT||LA188_0==LP||LA188_0==QUOTED_VALUE) ) {
-				alt188=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1053:4: (t= jfTermRule[pl, jsCaller] | (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] )
+			int alt191=2;
+			int LA191_0 = input.LA(1);
+			if ( (LA191_0==APEX_VALUE||LA191_0==FLOAT||(LA191_0 >= ID && LA191_0 <= IF)||LA191_0==INT||LA191_0==LP||LA191_0==QUOTED_VALUE) ) {
+				alt191=1;
 			}
-			else if ( (LA188_0==ADD||LA188_0==SUB) ) {
-				alt188=2;
+			else if ( (LA191_0==ADD||LA191_0==SUB) ) {
+				alt191=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 188, 0, input);
+					new NoViableAltException("", 191, 0, input);
 				throw nvae;
 			}
 
-			switch (alt188) {
+			switch (alt191) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1035:6: t= jfTermRule[pl, jsCaller]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1053:6: t= jfTermRule[pl, jsCaller]
 					{
-					pushFollow(FOLLOW_jfTermRule_in_jfExpressionRule11216);
+					pushFollow(FOLLOW_jfTermRule_in_jfExpressionRule11445);
 					t=jfTermRule(pl, jsCaller);
 					state._fsp--;
 
@@ -9434,41 +9616,41 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1036:6: (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1054:6: (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1036:6: (s= ADD |s= SUB )
-					int alt187=2;
-					int LA187_0 = input.LA(1);
-					if ( (LA187_0==ADD) ) {
-						alt187=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1054:6: (s= ADD |s= SUB )
+					int alt190=2;
+					int LA190_0 = input.LA(1);
+					if ( (LA190_0==ADD) ) {
+						alt190=1;
 					}
-					else if ( (LA187_0==SUB) ) {
-						alt187=2;
+					else if ( (LA190_0==SUB) ) {
+						alt190=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 187, 0, input);
+							new NoViableAltException("", 190, 0, input);
 						throw nvae;
 					}
 
-					switch (alt187) {
+					switch (alt190) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1036:7: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1054:7: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_jfExpressionRule11239); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_jfExpressionRule11468); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1036:15: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1054:15: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_jfExpressionRule11245); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_jfExpressionRule11474); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_jfTermRule_in_jfExpressionRule11250);
+					pushFollow(FOLLOW_jfTermRule_in_jfExpressionRule11479);
 					t=jfTermRule(pl, jsCaller);
 					state._fsp--;
 
@@ -9478,52 +9660,52 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1037:5: ( (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] )*
-			loop190:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1055:5: ( (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller] )*
+			loop193:
 			while (true) {
-				int alt190=2;
-				int LA190_0 = input.LA(1);
-				if ( (LA190_0==ADD||LA190_0==SUB) ) {
-					alt190=1;
+				int alt193=2;
+				int LA193_0 = input.LA(1);
+				if ( (LA193_0==ADD||LA193_0==SUB) ) {
+					alt193=1;
 				}
 
-				switch (alt190) {
+				switch (alt193) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1037:7: (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1055:7: (s= ADD |s= SUB ) t= jfTermRule[pl, jsCaller]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1037:7: (s= ADD |s= SUB )
-					int alt189=2;
-					int LA189_0 = input.LA(1);
-					if ( (LA189_0==ADD) ) {
-						alt189=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1055:7: (s= ADD |s= SUB )
+					int alt192=2;
+					int LA192_0 = input.LA(1);
+					if ( (LA192_0==ADD) ) {
+						alt192=1;
 					}
-					else if ( (LA189_0==SUB) ) {
-						alt189=2;
+					else if ( (LA192_0==SUB) ) {
+						alt192=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 189, 0, input);
+							new NoViableAltException("", 192, 0, input);
 						throw nvae;
 					}
 
-					switch (alt189) {
+					switch (alt192) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1037:8: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1055:8: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_jfExpressionRule11268); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_jfExpressionRule11497); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1037:16: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1055:16: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_jfExpressionRule11274); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_jfExpressionRule11503); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_jfTermRule_in_jfExpressionRule11279);
+					pushFollow(FOLLOW_jfTermRule_in_jfExpressionRule11508);
 					t=jfTermRule(pl, jsCaller);
 					state._fsp--;
 
@@ -9532,7 +9714,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop190;
+					break loop193;
 				}
 			}
 
@@ -9553,7 +9735,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "jfTermRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1041:1: jfTermRule[ParamList pl, boolean jsCaller] returns [ExpressionTerm et] : f= jfFactorRule[pl, jsCaller] ( (s= MUL |s= DIV ) f= jfFactorRule[pl, jsCaller] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1059:1: jfTermRule[ParamList pl, boolean jsCaller] returns [ExpressionTerm et] : f= jfFactorRule[pl, jsCaller] ( (s= MUL |s= DIV ) f= jfFactorRule[pl, jsCaller] )* ;
 	public final ExpressionTerm jfTermRule(ParamList pl, boolean jsCaller) throws RecognitionException {
 		ExpressionTerm et = null;
 
@@ -9563,60 +9745,60 @@ public class JCoQLParser extends Parser {
 
 		 et = new ExpressionTerm (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1043:3: (f= jfFactorRule[pl, jsCaller] ( (s= MUL |s= DIV ) f= jfFactorRule[pl, jsCaller] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1044:4: f= jfFactorRule[pl, jsCaller] ( (s= MUL |s= DIV ) f= jfFactorRule[pl, jsCaller] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1061:3: (f= jfFactorRule[pl, jsCaller] ( (s= MUL |s= DIV ) f= jfFactorRule[pl, jsCaller] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1062:4: f= jfFactorRule[pl, jsCaller] ( (s= MUL |s= DIV ) f= jfFactorRule[pl, jsCaller] )*
 			{
-			pushFollow(FOLLOW_jfFactorRule_in_jfTermRule11319);
+			pushFollow(FOLLOW_jfFactorRule_in_jfTermRule11548);
 			f=jfFactorRule(pl, jsCaller);
 			state._fsp--;
 
 			 et.addFactor(f, null);
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1045:5: ( (s= MUL |s= DIV ) f= jfFactorRule[pl, jsCaller] )*
-			loop192:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1063:5: ( (s= MUL |s= DIV ) f= jfFactorRule[pl, jsCaller] )*
+			loop195:
 			while (true) {
-				int alt192=2;
-				int LA192_0 = input.LA(1);
-				if ( (LA192_0==DIV||LA192_0==MUL) ) {
-					alt192=1;
+				int alt195=2;
+				int LA195_0 = input.LA(1);
+				if ( (LA195_0==DIV||LA195_0==MUL) ) {
+					alt195=1;
 				}
 
-				switch (alt192) {
+				switch (alt195) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1045:7: (s= MUL |s= DIV ) f= jfFactorRule[pl, jsCaller]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1063:7: (s= MUL |s= DIV ) f= jfFactorRule[pl, jsCaller]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1045:7: (s= MUL |s= DIV )
-					int alt191=2;
-					int LA191_0 = input.LA(1);
-					if ( (LA191_0==MUL) ) {
-						alt191=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1063:7: (s= MUL |s= DIV )
+					int alt194=2;
+					int LA194_0 = input.LA(1);
+					if ( (LA194_0==MUL) ) {
+						alt194=1;
 					}
-					else if ( (LA191_0==DIV) ) {
-						alt191=2;
+					else if ( (LA194_0==DIV) ) {
+						alt194=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 191, 0, input);
+							new NoViableAltException("", 194, 0, input);
 						throw nvae;
 					}
 
-					switch (alt191) {
+					switch (alt194) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1045:8: s= MUL
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1063:8: s= MUL
 							{
-							s=(Token)match(input,MUL,FOLLOW_MUL_in_jfTermRule11344); 
+							s=(Token)match(input,MUL,FOLLOW_MUL_in_jfTermRule11573); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1045:16: s= DIV
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1063:16: s= DIV
 							{
-							s=(Token)match(input,DIV,FOLLOW_DIV_in_jfTermRule11350); 
+							s=(Token)match(input,DIV,FOLLOW_DIV_in_jfTermRule11579); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_jfFactorRule_in_jfTermRule11355);
+					pushFollow(FOLLOW_jfFactorRule_in_jfTermRule11584);
 					f=jfFactorRule(pl, jsCaller);
 					state._fsp--;
 
@@ -9625,7 +9807,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop192;
+					break loop195;
 				}
 			}
 
@@ -9646,7 +9828,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "jfFactorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1049:1: jfFactorRule[ParamList pl, boolean jsCaller] returns [ExpressionFactor expr] : ( LP op= jfOrConditionRule[pl, jsCaller] RP |v= INT |v= FLOAT |v= APEX_VALUE |v= QUOTED_VALUE |x= ID (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )? ) ( EXP e= jfFactorRule[pl, jsCaller] )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1067:1: jfFactorRule[ParamList pl, boolean jsCaller] returns [ExpressionFactor expr] : ( LP op= jfOrConditionRule[pl, jsCaller] RP |v= INT |v= FLOAT |v= APEX_VALUE |v= QUOTED_VALUE | IF LP LP co= jfOrConditionRule[pl, jsCaller] RP COMMA et= jfExpressionRule[pl, jsCaller] COMMA ef= jfExpressionRule[pl, jsCaller] RP |x= ID (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )? ) ( EXP e= jfFactorRule[pl, jsCaller] )? ;
 	public final ExpressionFactor jfFactorRule(ParamList pl, boolean jsCaller) throws RecognitionException {
 		ExpressionFactor expr = null;
 
@@ -9655,118 +9837,151 @@ public class JCoQLParser extends Parser {
 		Token x=null;
 		Token p1=null;
 		Condition op =null;
+		Condition co =null;
+		Expression et =null;
+		Expression ef =null;
 		ArrayList<Expression> fp =null;
 		ExpressionFactor e =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1050:3: ( ( LP op= jfOrConditionRule[pl, jsCaller] RP |v= INT |v= FLOAT |v= APEX_VALUE |v= QUOTED_VALUE |x= ID (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )? ) ( EXP e= jfFactorRule[pl, jsCaller] )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1051:4: ( LP op= jfOrConditionRule[pl, jsCaller] RP |v= INT |v= FLOAT |v= APEX_VALUE |v= QUOTED_VALUE |x= ID (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )? ) ( EXP e= jfFactorRule[pl, jsCaller] )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1068:3: ( ( LP op= jfOrConditionRule[pl, jsCaller] RP |v= INT |v= FLOAT |v= APEX_VALUE |v= QUOTED_VALUE | IF LP LP co= jfOrConditionRule[pl, jsCaller] RP COMMA et= jfExpressionRule[pl, jsCaller] COMMA ef= jfExpressionRule[pl, jsCaller] RP |x= ID (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )? ) ( EXP e= jfFactorRule[pl, jsCaller] )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1069:4: ( LP op= jfOrConditionRule[pl, jsCaller] RP |v= INT |v= FLOAT |v= APEX_VALUE |v= QUOTED_VALUE | IF LP LP co= jfOrConditionRule[pl, jsCaller] RP COMMA et= jfExpressionRule[pl, jsCaller] COMMA ef= jfExpressionRule[pl, jsCaller] RP |x= ID (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )? ) ( EXP e= jfFactorRule[pl, jsCaller] )?
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1051:4: ( LP op= jfOrConditionRule[pl, jsCaller] RP |v= INT |v= FLOAT |v= APEX_VALUE |v= QUOTED_VALUE |x= ID (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )? )
-			int alt195=6;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1069:4: ( LP op= jfOrConditionRule[pl, jsCaller] RP |v= INT |v= FLOAT |v= APEX_VALUE |v= QUOTED_VALUE | IF LP LP co= jfOrConditionRule[pl, jsCaller] RP COMMA et= jfExpressionRule[pl, jsCaller] COMMA ef= jfExpressionRule[pl, jsCaller] RP |x= ID (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )? )
+			int alt198=7;
 			switch ( input.LA(1) ) {
 			case LP:
 				{
-				alt195=1;
+				alt198=1;
 				}
 				break;
 			case INT:
 				{
-				alt195=2;
+				alt198=2;
 				}
 				break;
 			case FLOAT:
 				{
-				alt195=3;
+				alt198=3;
 				}
 				break;
 			case APEX_VALUE:
 				{
-				alt195=4;
+				alt198=4;
 				}
 				break;
 			case QUOTED_VALUE:
 				{
-				alt195=5;
+				alt198=5;
+				}
+				break;
+			case IF:
+				{
+				alt198=6;
 				}
 				break;
 			case ID:
 				{
-				alt195=6;
+				alt198=7;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 195, 0, input);
+					new NoViableAltException("", 198, 0, input);
 				throw nvae;
 			}
-			switch (alt195) {
+			switch (alt198) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1051:6: LP op= jfOrConditionRule[pl, jsCaller] RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1069:6: LP op= jfOrConditionRule[pl, jsCaller] RP
 					{
-					match(input,LP,FOLLOW_LP_in_jfFactorRule11396); 
-					pushFollow(FOLLOW_jfOrConditionRule_in_jfFactorRule11400);
+					match(input,LP,FOLLOW_LP_in_jfFactorRule11625); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_jfFactorRule11629);
 					op=jfOrConditionRule(pl, jsCaller);
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_jfFactorRule11404); 
+					match(input,RP,FOLLOW_RP_in_jfFactorRule11633); 
 					 expr = new ExpressionFactor (op); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1052:6: v= INT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1070:6: v= INT
 					{
-					v=(Token)match(input,INT,FOLLOW_INT_in_jfFactorRule11424); 
+					v=(Token)match(input,INT,FOLLOW_INT_in_jfFactorRule11653); 
 					 expr = new ExpressionFactor (new Value(Value.INT, v.getText())); 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1053:6: v= FLOAT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1071:6: v= FLOAT
 					{
-					v=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_jfFactorRule11462); 
+					v=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_jfFactorRule11691); 
 					 expr = new ExpressionFactor (new Value(Value.FLOAT, v.getText())); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1054:6: v= APEX_VALUE
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1072:6: v= APEX_VALUE
 					{
-					v=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_jfFactorRule11499); 
+					v=(Token)match(input,APEX_VALUE,FOLLOW_APEX_VALUE_in_jfFactorRule11728); 
 					 expr = new ExpressionFactor (new Value(Value.APEX, v.getText())); 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1055:6: v= QUOTED_VALUE
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1073:6: v= QUOTED_VALUE
 					{
-					v=(Token)match(input,QUOTED_VALUE,FOLLOW_QUOTED_VALUE_in_jfFactorRule11533); 
+					v=(Token)match(input,QUOTED_VALUE,FOLLOW_QUOTED_VALUE_in_jfFactorRule11762); 
 					 expr = new ExpressionFactor (new Value(Value.QUOTED, v.getText())); 
 					}
 					break;
 				case 6 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1056:6: x= ID (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1074:5: IF LP LP co= jfOrConditionRule[pl, jsCaller] RP COMMA et= jfExpressionRule[pl, jsCaller] COMMA ef= jfExpressionRule[pl, jsCaller] RP
 					{
-					x=(Token)match(input,ID,FOLLOW_ID_in_jfFactorRule11566); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1057:6: (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )?
-					int alt194=2;
-					int LA194_0 = input.LA(1);
-					if ( (LA194_0==LP) ) {
-						alt194=1;
+					match(input,IF,FOLLOW_IF_in_jfFactorRule11792); 
+					match(input,LP,FOLLOW_LP_in_jfFactorRule11794); 
+					match(input,LP,FOLLOW_LP_in_jfFactorRule11796); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_jfFactorRule11800);
+					co=jfOrConditionRule(pl, jsCaller);
+					state._fsp--;
+
+					match(input,RP,FOLLOW_RP_in_jfFactorRule11804); 
+					match(input,COMMA,FOLLOW_COMMA_in_jfFactorRule11817); 
+					pushFollow(FOLLOW_jfExpressionRule_in_jfFactorRule11821);
+					et=jfExpressionRule(pl, jsCaller);
+					state._fsp--;
+
+					match(input,COMMA,FOLLOW_COMMA_in_jfFactorRule11830); 
+					pushFollow(FOLLOW_jfExpressionRule_in_jfFactorRule11834);
+					ef=jfExpressionRule(pl, jsCaller);
+					state._fsp--;
+
+					match(input,RP,FOLLOW_RP_in_jfFactorRule11838); 
+						expr = env.buildIfFunction (co, et, ef); 
 					}
-					switch (alt194) {
+					break;
+				case 7 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1077:6: x= ID (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )?
+					{
+					x=(Token)match(input,ID,FOLLOW_ID_in_jfFactorRule11856); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1078:6: (p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP )?
+					int alt197=2;
+					int LA197_0 = input.LA(1);
+					if ( (LA197_0==LP) ) {
+						alt197=1;
+					}
+					switch (alt197) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1057:8: p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1078:8: p1= LP (fp= jfFunctionParamsRule[pl, jsCaller] )? RP
 							{
-							p1=(Token)match(input,LP,FOLLOW_LP_in_jfFactorRule11606); 
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1057:14: (fp= jfFunctionParamsRule[pl, jsCaller] )?
-							int alt193=2;
-							int LA193_0 = input.LA(1);
-							if ( (LA193_0==ADD||LA193_0==APEX_VALUE||LA193_0==FLOAT||LA193_0==ID||LA193_0==INT||LA193_0==LP||LA193_0==QUOTED_VALUE||LA193_0==SUB) ) {
-								alt193=1;
+							p1=(Token)match(input,LP,FOLLOW_LP_in_jfFactorRule11896); 
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1078:14: (fp= jfFunctionParamsRule[pl, jsCaller] )?
+							int alt196=2;
+							int LA196_0 = input.LA(1);
+							if ( (LA196_0==ADD||LA196_0==APEX_VALUE||LA196_0==FLOAT||(LA196_0 >= ID && LA196_0 <= IF)||LA196_0==INT||LA196_0==LP||LA196_0==QUOTED_VALUE||LA196_0==SUB) ) {
+								alt196=1;
 							}
-							switch (alt193) {
+							switch (alt196) {
 								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1057:15: fp= jfFunctionParamsRule[pl, jsCaller]
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1078:15: fp= jfFunctionParamsRule[pl, jsCaller]
 									{
-									pushFollow(FOLLOW_jfFunctionParamsRule_in_jfFactorRule11611);
+									pushFollow(FOLLOW_jfFunctionParamsRule_in_jfFactorRule11901);
 									fp=jfFunctionParamsRule(pl, jsCaller);
 									state._fsp--;
 
@@ -9775,7 +9990,7 @@ public class JCoQLParser extends Parser {
 
 							}
 
-							match(input,RP,FOLLOW_RP_in_jfFactorRule11617); 
+							match(input,RP,FOLLOW_RP_in_jfFactorRule11907); 
 							}
 							break;
 
@@ -9787,18 +10002,18 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1059:4: ( EXP e= jfFactorRule[pl, jsCaller] )?
-			int alt196=2;
-			int LA196_0 = input.LA(1);
-			if ( (LA196_0==EXP) ) {
-				alt196=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1080:4: ( EXP e= jfFactorRule[pl, jsCaller] )?
+			int alt199=2;
+			int LA199_0 = input.LA(1);
+			if ( (LA199_0==EXP) ) {
+				alt199=1;
 			}
-			switch (alt196) {
+			switch (alt199) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1059:6: EXP e= jfFactorRule[pl, jsCaller]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1080:6: EXP e= jfFactorRule[pl, jsCaller]
 					{
-					match(input,EXP,FOLLOW_EXP_in_jfFactorRule11644); 
-					pushFollow(FOLLOW_jfFactorRule_in_jfFactorRule11648);
+					match(input,EXP,FOLLOW_EXP_in_jfFactorRule11934); 
+					pushFollow(FOLLOW_jfFactorRule_in_jfFactorRule11938);
 					e=jfFactorRule(pl, jsCaller);
 					state._fsp--;
 
@@ -9825,7 +10040,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "jfFunctionParamsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1063:1: jfFunctionParamsRule[ParamList pl, boolean jsCaller] returns [ArrayList<Expression> params] : e= jfExpressionRule[pl, jsCaller] ( COMMA e= jfExpressionRule[pl, jsCaller] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1084:1: jfFunctionParamsRule[ParamList pl, boolean jsCaller] returns [ArrayList<Expression> params] : e= jfExpressionRule[pl, jsCaller] ( COMMA e= jfExpressionRule[pl, jsCaller] )* ;
 	public final ArrayList<Expression> jfFunctionParamsRule(ParamList pl, boolean jsCaller) throws RecognitionException {
 		ArrayList<Expression> params = null;
 
@@ -9834,29 +10049,29 @@ public class JCoQLParser extends Parser {
 
 		 params = new ArrayList<Expression>(); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1065:3: (e= jfExpressionRule[pl, jsCaller] ( COMMA e= jfExpressionRule[pl, jsCaller] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1066:4: e= jfExpressionRule[pl, jsCaller] ( COMMA e= jfExpressionRule[pl, jsCaller] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1086:3: (e= jfExpressionRule[pl, jsCaller] ( COMMA e= jfExpressionRule[pl, jsCaller] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1087:4: e= jfExpressionRule[pl, jsCaller] ( COMMA e= jfExpressionRule[pl, jsCaller] )*
 			{
-			pushFollow(FOLLOW_jfExpressionRule_in_jfFunctionParamsRule11702);
+			pushFollow(FOLLOW_jfExpressionRule_in_jfFunctionParamsRule11992);
 			e=jfExpressionRule(pl, jsCaller);
 			state._fsp--;
 
 			 params.add(e); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1067:6: ( COMMA e= jfExpressionRule[pl, jsCaller] )*
-			loop197:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1088:6: ( COMMA e= jfExpressionRule[pl, jsCaller] )*
+			loop200:
 			while (true) {
-				int alt197=2;
-				int LA197_0 = input.LA(1);
-				if ( (LA197_0==COMMA) ) {
-					alt197=1;
+				int alt200=2;
+				int LA200_0 = input.LA(1);
+				if ( (LA200_0==COMMA) ) {
+					alt200=1;
 				}
 
-				switch (alt197) {
+				switch (alt200) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1067:8: COMMA e= jfExpressionRule[pl, jsCaller]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1088:8: COMMA e= jfExpressionRule[pl, jsCaller]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_jfFunctionParamsRule11722); 
-					pushFollow(FOLLOW_jfExpressionRule_in_jfFunctionParamsRule11726);
+					match(input,COMMA,FOLLOW_COMMA_in_jfFunctionParamsRule12012); 
+					pushFollow(FOLLOW_jfExpressionRule_in_jfFunctionParamsRule12016);
 					e=jfExpressionRule(pl, jsCaller);
 					state._fsp--;
 
@@ -9865,7 +10080,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop197;
+					break loop200;
 				}
 			}
 
@@ -9886,7 +10101,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feExpressionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1073:1: feExpressionRule[FuzzyEvaluator fe, FEForAllClause fac] returns [Expression expr] : (t= feTermRule[fe, fac] | (s= ADD |s= SUB ) t= feTermRule[fe, fac] ) ( (s= ADD |s= SUB ) t= feTermRule[fe, fac] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1094:1: feExpressionRule[FuzzyEvaluator fe, FEForAllClause fac] returns [Expression expr] : (t= feTermRule[fe, fac] | (s= ADD |s= SUB ) t= feTermRule[fe, fac] ) ( (s= ADD |s= SUB ) t= feTermRule[fe, fac] )* ;
 	public final Expression feExpressionRule(FuzzyEvaluator fe, FEForAllClause fac) throws RecognitionException {
 		Expression expr = null;
 
@@ -9896,30 +10111,30 @@ public class JCoQLParser extends Parser {
 
 		 expr = new Expression (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1075:3: ( (t= feTermRule[fe, fac] | (s= ADD |s= SUB ) t= feTermRule[fe, fac] ) ( (s= ADD |s= SUB ) t= feTermRule[fe, fac] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1076:4: (t= feTermRule[fe, fac] | (s= ADD |s= SUB ) t= feTermRule[fe, fac] ) ( (s= ADD |s= SUB ) t= feTermRule[fe, fac] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1096:3: ( (t= feTermRule[fe, fac] | (s= ADD |s= SUB ) t= feTermRule[fe, fac] ) ( (s= ADD |s= SUB ) t= feTermRule[fe, fac] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1097:4: (t= feTermRule[fe, fac] | (s= ADD |s= SUB ) t= feTermRule[fe, fac] ) ( (s= ADD |s= SUB ) t= feTermRule[fe, fac] )*
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1076:4: (t= feTermRule[fe, fac] | (s= ADD |s= SUB ) t= feTermRule[fe, fac] )
-			int alt199=2;
-			int LA199_0 = input.LA(1);
-			if ( (LA199_0==APEX_VALUE||LA199_0==BOOLEAN||LA199_0==FLOAT||(LA199_0 >= ID && LA199_0 <= IF_ERROR)||LA199_0==INT||LA199_0==LP||LA199_0==POS||LA199_0==QUOTED_VALUE) ) {
-				alt199=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1097:4: (t= feTermRule[fe, fac] | (s= ADD |s= SUB ) t= feTermRule[fe, fac] )
+			int alt202=2;
+			int LA202_0 = input.LA(1);
+			if ( (LA202_0==APEX_VALUE||LA202_0==BOOLEAN||LA202_0==FLOAT||(LA202_0 >= ID && LA202_0 <= IF_ERROR)||LA202_0==INT||LA202_0==LP||LA202_0==POS||LA202_0==QUOTED_VALUE) ) {
+				alt202=1;
 			}
-			else if ( (LA199_0==ADD||LA199_0==SUB) ) {
-				alt199=2;
+			else if ( (LA202_0==ADD||LA202_0==SUB) ) {
+				alt202=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 199, 0, input);
+					new NoViableAltException("", 202, 0, input);
 				throw nvae;
 			}
 
-			switch (alt199) {
+			switch (alt202) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1076:6: t= feTermRule[fe, fac]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1097:6: t= feTermRule[fe, fac]
 					{
-					pushFollow(FOLLOW_feTermRule_in_feExpressionRule11774);
+					pushFollow(FOLLOW_feTermRule_in_feExpressionRule12064);
 					t=feTermRule(fe, fac);
 					state._fsp--;
 
@@ -9927,41 +10142,41 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1077:6: (s= ADD |s= SUB ) t= feTermRule[fe, fac]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1098:6: (s= ADD |s= SUB ) t= feTermRule[fe, fac]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1077:6: (s= ADD |s= SUB )
-					int alt198=2;
-					int LA198_0 = input.LA(1);
-					if ( (LA198_0==ADD) ) {
-						alt198=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1098:6: (s= ADD |s= SUB )
+					int alt201=2;
+					int LA201_0 = input.LA(1);
+					if ( (LA201_0==ADD) ) {
+						alt201=1;
 					}
-					else if ( (LA198_0==SUB) ) {
-						alt198=2;
+					else if ( (LA201_0==SUB) ) {
+						alt201=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 198, 0, input);
+							new NoViableAltException("", 201, 0, input);
 						throw nvae;
 					}
 
-					switch (alt198) {
+					switch (alt201) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1077:7: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1098:7: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_feExpressionRule11796); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_feExpressionRule12086); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1077:15: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1098:15: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_feExpressionRule11802); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_feExpressionRule12092); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_feTermRule_in_feExpressionRule11807);
+					pushFollow(FOLLOW_feTermRule_in_feExpressionRule12097);
 					t=feTermRule(fe, fac);
 					state._fsp--;
 
@@ -9971,52 +10186,52 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1078:5: ( (s= ADD |s= SUB ) t= feTermRule[fe, fac] )*
-			loop201:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1099:5: ( (s= ADD |s= SUB ) t= feTermRule[fe, fac] )*
+			loop204:
 			while (true) {
-				int alt201=2;
-				int LA201_0 = input.LA(1);
-				if ( (LA201_0==ADD||LA201_0==SUB) ) {
-					alt201=1;
+				int alt204=2;
+				int LA204_0 = input.LA(1);
+				if ( (LA204_0==ADD||LA204_0==SUB) ) {
+					alt204=1;
 				}
 
-				switch (alt201) {
+				switch (alt204) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1078:7: (s= ADD |s= SUB ) t= feTermRule[fe, fac]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1099:7: (s= ADD |s= SUB ) t= feTermRule[fe, fac]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1078:7: (s= ADD |s= SUB )
-					int alt200=2;
-					int LA200_0 = input.LA(1);
-					if ( (LA200_0==ADD) ) {
-						alt200=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1099:7: (s= ADD |s= SUB )
+					int alt203=2;
+					int LA203_0 = input.LA(1);
+					if ( (LA203_0==ADD) ) {
+						alt203=1;
 					}
-					else if ( (LA200_0==SUB) ) {
-						alt200=2;
+					else if ( (LA203_0==SUB) ) {
+						alt203=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 200, 0, input);
+							new NoViableAltException("", 203, 0, input);
 						throw nvae;
 					}
 
-					switch (alt200) {
+					switch (alt203) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1078:8: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1099:8: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_feExpressionRule11824); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_feExpressionRule12114); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1078:16: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1099:16: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_feExpressionRule11830); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_feExpressionRule12120); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_feTermRule_in_feExpressionRule11835);
+					pushFollow(FOLLOW_feTermRule_in_feExpressionRule12125);
 					t=feTermRule(fe, fac);
 					state._fsp--;
 
@@ -10025,7 +10240,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop201;
+					break loop204;
 				}
 			}
 
@@ -10046,7 +10261,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feTermRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1081:1: feTermRule[FuzzyEvaluator fe, FEForAllClause fac] returns [ExpressionTerm et] : f= feFactorRule[fe, fac] ( (s= MUL |s= DIV ) f= feFactorRule[fe, fac] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1102:1: feTermRule[FuzzyEvaluator fe, FEForAllClause fac] returns [ExpressionTerm et] : f= feFactorRule[fe, fac] ( (s= MUL |s= DIV ) f= feFactorRule[fe, fac] )* ;
 	public final ExpressionTerm feTermRule(FuzzyEvaluator fe, FEForAllClause fac) throws RecognitionException {
 		ExpressionTerm et = null;
 
@@ -10056,60 +10271,60 @@ public class JCoQLParser extends Parser {
 
 		 et = new ExpressionTerm (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1083:3: (f= feFactorRule[fe, fac] ( (s= MUL |s= DIV ) f= feFactorRule[fe, fac] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1084:4: f= feFactorRule[fe, fac] ( (s= MUL |s= DIV ) f= feFactorRule[fe, fac] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1104:3: (f= feFactorRule[fe, fac] ( (s= MUL |s= DIV ) f= feFactorRule[fe, fac] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1105:4: f= feFactorRule[fe, fac] ( (s= MUL |s= DIV ) f= feFactorRule[fe, fac] )*
 			{
-			pushFollow(FOLLOW_feFactorRule_in_feTermRule11874);
+			pushFollow(FOLLOW_feFactorRule_in_feTermRule12164);
 			f=feFactorRule(fe, fac);
 			state._fsp--;
 
 			 et.addFactor(f, null);
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1085:5: ( (s= MUL |s= DIV ) f= feFactorRule[fe, fac] )*
-			loop203:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1106:5: ( (s= MUL |s= DIV ) f= feFactorRule[fe, fac] )*
+			loop206:
 			while (true) {
-				int alt203=2;
-				int LA203_0 = input.LA(1);
-				if ( (LA203_0==DIV||LA203_0==MUL) ) {
-					alt203=1;
+				int alt206=2;
+				int LA206_0 = input.LA(1);
+				if ( (LA206_0==DIV||LA206_0==MUL) ) {
+					alt206=1;
 				}
 
-				switch (alt203) {
+				switch (alt206) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1085:7: (s= MUL |s= DIV ) f= feFactorRule[fe, fac]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1106:7: (s= MUL |s= DIV ) f= feFactorRule[fe, fac]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1085:7: (s= MUL |s= DIV )
-					int alt202=2;
-					int LA202_0 = input.LA(1);
-					if ( (LA202_0==MUL) ) {
-						alt202=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1106:7: (s= MUL |s= DIV )
+					int alt205=2;
+					int LA205_0 = input.LA(1);
+					if ( (LA205_0==MUL) ) {
+						alt205=1;
 					}
-					else if ( (LA202_0==DIV) ) {
-						alt202=2;
+					else if ( (LA205_0==DIV) ) {
+						alt205=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 202, 0, input);
+							new NoViableAltException("", 205, 0, input);
 						throw nvae;
 					}
 
-					switch (alt202) {
+					switch (alt205) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1085:8: s= MUL
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1106:8: s= MUL
 							{
-							s=(Token)match(input,MUL,FOLLOW_MUL_in_feTermRule11899); 
+							s=(Token)match(input,MUL,FOLLOW_MUL_in_feTermRule12189); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1085:16: s= DIV
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1106:16: s= DIV
 							{
-							s=(Token)match(input,DIV,FOLLOW_DIV_in_feTermRule11905); 
+							s=(Token)match(input,DIV,FOLLOW_DIV_in_feTermRule12195); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_feFactorRule_in_feTermRule11910);
+					pushFollow(FOLLOW_feFactorRule_in_feTermRule12200);
 					f=feFactorRule(fe, fac);
 					state._fsp--;
 
@@ -10118,7 +10333,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop203;
+					break loop206;
 				}
 			}
 
@@ -10139,31 +10354,33 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feFactorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1090:1: feFactorRule[FuzzyEvaluator fe, FEForAllClause fac] returns [ExpressionFactor expr] : ( LP op= feExpressionRule[fe, fac] RP |vl= valueRule |p= POS | IF_ERROR LP e= feExpressionRule[fe, fac] COMMA v= valueRule RP |x= ID (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )? ) ( EXP exp= feFactorRule[fe, fac] )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1111:1: feFactorRule[FuzzyEvaluator fe, FEForAllClause fac] returns [ExpressionFactor expr] : ( LP e= feExpressionRule[fe, fac] RP |vl= valueRule |p= POS | IF_ERROR LP e= feExpressionRule[fe, fac] COMMA v= valueRule RP | IF LP LP co= jfOrConditionRule[fe.getParamList(), true] RP COMMA et= feExpressionRule[fe, fac] COMMA ef= feExpressionRule[fe, fac] RP |x= ID (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )? ) ( EXP exp= feFactorRule[fe, fac] )? ;
 	public final ExpressionFactor feFactorRule(FuzzyEvaluator fe, FEForAllClause fac) throws RecognitionException {
 		ExpressionFactor expr = null;
 
 
 		Token p=null;
 		Token x=null;
-		Expression op =null;
-		Value vl =null;
 		Expression e =null;
+		Value vl =null;
 		Value v =null;
+		Condition co =null;
+		Expression et =null;
+		Expression ef =null;
 		ArrayReference ref =null;
 		ArrayList<Expression> fp =null;
 		ExpressionFactor exp =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1091:3: ( ( LP op= feExpressionRule[fe, fac] RP |vl= valueRule |p= POS | IF_ERROR LP e= feExpressionRule[fe, fac] COMMA v= valueRule RP |x= ID (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )? ) ( EXP exp= feFactorRule[fe, fac] )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1092:4: ( LP op= feExpressionRule[fe, fac] RP |vl= valueRule |p= POS | IF_ERROR LP e= feExpressionRule[fe, fac] COMMA v= valueRule RP |x= ID (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )? ) ( EXP exp= feFactorRule[fe, fac] )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1112:3: ( ( LP e= feExpressionRule[fe, fac] RP |vl= valueRule |p= POS | IF_ERROR LP e= feExpressionRule[fe, fac] COMMA v= valueRule RP | IF LP LP co= jfOrConditionRule[fe.getParamList(), true] RP COMMA et= feExpressionRule[fe, fac] COMMA ef= feExpressionRule[fe, fac] RP |x= ID (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )? ) ( EXP exp= feFactorRule[fe, fac] )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1113:4: ( LP e= feExpressionRule[fe, fac] RP |vl= valueRule |p= POS | IF_ERROR LP e= feExpressionRule[fe, fac] COMMA v= valueRule RP | IF LP LP co= jfOrConditionRule[fe.getParamList(), true] RP COMMA et= feExpressionRule[fe, fac] COMMA ef= feExpressionRule[fe, fac] RP |x= ID (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )? ) ( EXP exp= feFactorRule[fe, fac] )?
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1092:4: ( LP op= feExpressionRule[fe, fac] RP |vl= valueRule |p= POS | IF_ERROR LP e= feExpressionRule[fe, fac] COMMA v= valueRule RP |x= ID (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )? )
-			int alt205=5;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1113:4: ( LP e= feExpressionRule[fe, fac] RP |vl= valueRule |p= POS | IF_ERROR LP e= feExpressionRule[fe, fac] COMMA v= valueRule RP | IF LP LP co= jfOrConditionRule[fe.getParamList(), true] RP COMMA et= feExpressionRule[fe, fac] COMMA ef= feExpressionRule[fe, fac] RP |x= ID (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )? )
+			int alt208=6;
 			switch ( input.LA(1) ) {
 			case LP:
 				{
-				alt205=1;
+				alt208=1;
 				}
 				break;
 			case APEX_VALUE:
@@ -10172,46 +10389,51 @@ public class JCoQLParser extends Parser {
 			case INT:
 			case QUOTED_VALUE:
 				{
-				alt205=2;
+				alt208=2;
 				}
 				break;
 			case POS:
 				{
-				alt205=3;
+				alt208=3;
 				}
 				break;
 			case IF_ERROR:
 				{
-				alt205=4;
+				alt208=4;
+				}
+				break;
+			case IF:
+				{
+				alt208=5;
 				}
 				break;
 			case ID:
 				{
-				alt205=5;
+				alt208=6;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 205, 0, input);
+					new NoViableAltException("", 208, 0, input);
 				throw nvae;
 			}
-			switch (alt205) {
+			switch (alt208) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1092:6: LP op= feExpressionRule[fe, fac] RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1113:6: LP e= feExpressionRule[fe, fac] RP
 					{
-					match(input,LP,FOLLOW_LP_in_feFactorRule11950); 
-					pushFollow(FOLLOW_feExpressionRule_in_feFactorRule11954);
-					op=feExpressionRule(fe, fac);
+					match(input,LP,FOLLOW_LP_in_feFactorRule12240); 
+					pushFollow(FOLLOW_feExpressionRule_in_feFactorRule12244);
+					e=feExpressionRule(fe, fac);
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_feFactorRule11958); 
-					 expr = new ExpressionFactor (op); 	
+					match(input,RP,FOLLOW_RP_in_feFactorRule12248); 
+					 expr = new ExpressionFactor (e); 	
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1093:6: vl= valueRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1114:6: vl= valueRule
 					{
-					pushFollow(FOLLOW_valueRule_in_feFactorRule11999);
+					pushFollow(FOLLOW_valueRule_in_feFactorRule12290);
 					vl=valueRule();
 					state._fsp--;
 
@@ -10219,62 +10441,87 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1094:6: p= POS
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1115:6: p= POS
 					{
-					p=(Token)match(input,POS,FOLLOW_POS_in_feFactorRule12051); 
+					p=(Token)match(input,POS,FOLLOW_POS_in_feFactorRule12342); 
 					 expr = env.getPosFactor (fac, p); 	
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1095:5: IF_ERROR LP e= feExpressionRule[fe, fac] COMMA v= valueRule RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1116:5: IF_ERROR LP e= feExpressionRule[fe, fac] COMMA v= valueRule RP
 					{
-					match(input,IF_ERROR,FOLLOW_IF_ERROR_in_feFactorRule12104); 
-					match(input,LP,FOLLOW_LP_in_feFactorRule12174); 
-					pushFollow(FOLLOW_feExpressionRule_in_feFactorRule12178);
+					match(input,IF_ERROR,FOLLOW_IF_ERROR_in_feFactorRule12395); 
+					match(input,LP,FOLLOW_LP_in_feFactorRule12465); 
+					pushFollow(FOLLOW_feExpressionRule_in_feFactorRule12469);
 					e=feExpressionRule(fe, fac);
 					state._fsp--;
 
-					match(input,COMMA,FOLLOW_COMMA_in_feFactorRule12182); 
-					pushFollow(FOLLOW_valueRule_in_feFactorRule12186);
+					match(input,COMMA,FOLLOW_COMMA_in_feFactorRule12473); 
+					pushFollow(FOLLOW_valueRule_in_feFactorRule12477);
 					v=valueRule();
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_feFactorRule12188); 
+					match(input,RP,FOLLOW_RP_in_feFactorRule12479); 
 						expr = env.buildIfError (e, v); 		
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1097:6: x= ID (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1118:5: IF LP LP co= jfOrConditionRule[fe.getParamList(), true] RP COMMA et= feExpressionRule[fe, fac] COMMA ef= feExpressionRule[fe, fac] RP
 					{
-					x=(Token)match(input,ID,FOLLOW_ID_in_feFactorRule12199); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1097:11: (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )?
-					int alt204=3;
-					int LA204_0 = input.LA(1);
-					if ( (LA204_0==LB) ) {
-						alt204=1;
+					match(input,IF,FOLLOW_IF_in_feFactorRule12487); 
+					match(input,LP,FOLLOW_LP_in_feFactorRule12489); 
+					match(input,LP,FOLLOW_LP_in_feFactorRule12491); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_feFactorRule12495);
+					co=jfOrConditionRule(fe.getParamList(), true);
+					state._fsp--;
+
+					match(input,RP,FOLLOW_RP_in_feFactorRule12499); 
+					match(input,COMMA,FOLLOW_COMMA_in_feFactorRule12543); 
+					pushFollow(FOLLOW_feExpressionRule_in_feFactorRule12547);
+					et=feExpressionRule(fe, fac);
+					state._fsp--;
+
+					match(input,COMMA,FOLLOW_COMMA_in_feFactorRule12556); 
+					pushFollow(FOLLOW_feExpressionRule_in_feFactorRule12560);
+					ef=feExpressionRule(fe, fac);
+					state._fsp--;
+
+					match(input,RP,FOLLOW_RP_in_feFactorRule12564); 
+						expr = env.buildIfFunction (co, et, ef); 
 					}
-					else if ( (LA204_0==LP) ) {
-						alt204=2;
+					break;
+				case 6 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1121:6: x= ID (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )?
+					{
+					x=(Token)match(input,ID,FOLLOW_ID_in_feFactorRule12582); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1121:11: (ref= feArrayRefRule[x, fe, fac] | LP fp= feFunctionParamsRule[fe, fac] RP )?
+					int alt207=3;
+					int LA207_0 = input.LA(1);
+					if ( (LA207_0==LB) ) {
+						alt207=1;
 					}
-					switch (alt204) {
+					else if ( (LA207_0==LP) ) {
+						alt207=2;
+					}
+					switch (alt207) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1097:13: ref= feArrayRefRule[x, fe, fac]
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1121:13: ref= feArrayRefRule[x, fe, fac]
 							{
-							pushFollow(FOLLOW_feArrayRefRule_in_feFactorRule12205);
+							pushFollow(FOLLOW_feArrayRefRule_in_feFactorRule12588);
 							ref=feArrayRefRule(x, fe, fac);
 							state._fsp--;
 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1098:10: LP fp= feFunctionParamsRule[fe, fac] RP
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1122:10: LP fp= feFunctionParamsRule[fe, fac] RP
 							{
-							match(input,LP,FOLLOW_LP_in_feFactorRule12266); 
-							pushFollow(FOLLOW_feFunctionParamsRule_in_feFactorRule12270);
+							match(input,LP,FOLLOW_LP_in_feFactorRule12649); 
+							pushFollow(FOLLOW_feFunctionParamsRule_in_feFactorRule12653);
 							fp=feFunctionParamsRule(fe, fac);
 							state._fsp--;
 
-							match(input,RP,FOLLOW_RP_in_feFactorRule12274); 
+							match(input,RP,FOLLOW_RP_in_feFactorRule12657); 
 							}
 							break;
 
@@ -10286,18 +10533,18 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1100:4: ( EXP exp= feFactorRule[fe, fac] )?
-			int alt206=2;
-			int LA206_0 = input.LA(1);
-			if ( (LA206_0==EXP) ) {
-				alt206=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1124:4: ( EXP exp= feFactorRule[fe, fac] )?
+			int alt209=2;
+			int LA209_0 = input.LA(1);
+			if ( (LA209_0==EXP) ) {
+				alt209=1;
 			}
-			switch (alt206) {
+			switch (alt209) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1100:6: EXP exp= feFactorRule[fe, fac]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1124:6: EXP exp= feFactorRule[fe, fac]
 					{
-					match(input,EXP,FOLLOW_EXP_in_feFactorRule12297); 
-					pushFollow(FOLLOW_feFactorRule_in_feFactorRule12301);
+					match(input,EXP,FOLLOW_EXP_in_feFactorRule12680); 
+					pushFollow(FOLLOW_feFactorRule_in_feFactorRule12684);
 					exp=feFactorRule(fe, fac);
 					state._fsp--;
 
@@ -10324,7 +10571,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feFunctionParamsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1104:1: feFunctionParamsRule[FuzzyEvaluator fe, FEForAllClause fac] returns [ArrayList<Expression> params] : e= feExpressionRule[fe, fac] ( COMMA e= feExpressionRule[fe, fac] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1128:1: feFunctionParamsRule[FuzzyEvaluator fe, FEForAllClause fac] returns [ArrayList<Expression> params] : e= feExpressionRule[fe, fac] ( COMMA e= feExpressionRule[fe, fac] )* ;
 	public final ArrayList<Expression> feFunctionParamsRule(FuzzyEvaluator fe, FEForAllClause fac) throws RecognitionException {
 		ArrayList<Expression> params = null;
 
@@ -10333,29 +10580,29 @@ public class JCoQLParser extends Parser {
 
 		 params = new ArrayList<Expression>(); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1106:3: (e= feExpressionRule[fe, fac] ( COMMA e= feExpressionRule[fe, fac] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1107:4: e= feExpressionRule[fe, fac] ( COMMA e= feExpressionRule[fe, fac] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1130:3: (e= feExpressionRule[fe, fac] ( COMMA e= feExpressionRule[fe, fac] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1131:4: e= feExpressionRule[fe, fac] ( COMMA e= feExpressionRule[fe, fac] )*
 			{
-			pushFollow(FOLLOW_feExpressionRule_in_feFunctionParamsRule12383);
+			pushFollow(FOLLOW_feExpressionRule_in_feFunctionParamsRule12766);
 			e=feExpressionRule(fe, fac);
 			state._fsp--;
 
 			 params.add(e); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1108:6: ( COMMA e= feExpressionRule[fe, fac] )*
-			loop207:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1132:6: ( COMMA e= feExpressionRule[fe, fac] )*
+			loop210:
 			while (true) {
-				int alt207=2;
-				int LA207_0 = input.LA(1);
-				if ( (LA207_0==COMMA) ) {
-					alt207=1;
+				int alt210=2;
+				int LA210_0 = input.LA(1);
+				if ( (LA210_0==COMMA) ) {
+					alt210=1;
 				}
 
-				switch (alt207) {
+				switch (alt210) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1108:8: COMMA e= feExpressionRule[fe, fac]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1132:8: COMMA e= feExpressionRule[fe, fac]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_feFunctionParamsRule12404); 
-					pushFollow(FOLLOW_feExpressionRule_in_feFunctionParamsRule12408);
+					match(input,COMMA,FOLLOW_COMMA_in_feFunctionParamsRule12787); 
+					pushFollow(FOLLOW_feExpressionRule_in_feFunctionParamsRule12791);
 					e=feExpressionRule(fe, fac);
 					state._fsp--;
 
@@ -10364,7 +10611,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop207;
+					break loop210;
 				}
 			}
 
@@ -10385,7 +10632,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "feArrayRefRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1112:1: feArrayRefRule[Token id, FuzzyEvaluator fe, FEForAllClause fac] returns [ArrayReference ref] : LB (e= feExpressionRule[fe, fac] ) RB (f= fieldRefRule )? ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1136:1: feArrayRefRule[Token id, FuzzyEvaluator fe, FEForAllClause fac] returns [ArrayReference ref] : LB (e= feExpressionRule[fe, fac] ) RB (f= fieldRefRule )? ;
 	public final ArrayReference feArrayRefRule(Token id, FuzzyEvaluator fe, FEForAllClause fac) throws RecognitionException {
 		ArrayReference ref = null;
 
@@ -10394,31 +10641,31 @@ public class JCoQLParser extends Parser {
 		Field f =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1113:2: ( LB (e= feExpressionRule[fe, fac] ) RB (f= fieldRefRule )? )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1114:3: LB (e= feExpressionRule[fe, fac] ) RB (f= fieldRefRule )?
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1137:2: ( LB (e= feExpressionRule[fe, fac] ) RB (f= fieldRefRule )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1138:3: LB (e= feExpressionRule[fe, fac] ) RB (f= fieldRefRule )?
 			{
-			match(input,LB,FOLLOW_LB_in_feArrayRefRule12442); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1114:6: (e= feExpressionRule[fe, fac] )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1114:7: e= feExpressionRule[fe, fac]
+			match(input,LB,FOLLOW_LB_in_feArrayRefRule12825); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1138:6: (e= feExpressionRule[fe, fac] )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1138:7: e= feExpressionRule[fe, fac]
 			{
-			pushFollow(FOLLOW_feExpressionRule_in_feArrayRefRule12447);
+			pushFollow(FOLLOW_feExpressionRule_in_feArrayRefRule12830);
 			e=feExpressionRule(fe, fac);
 			state._fsp--;
 
 			}
 
-			match(input,RB,FOLLOW_RB_in_feArrayRefRule12452); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1115:3: (f= fieldRefRule )?
-			int alt208=2;
-			int LA208_0 = input.LA(1);
-			if ( (LA208_0==FIELD_NAME) ) {
-				alt208=1;
+			match(input,RB,FOLLOW_RB_in_feArrayRefRule12835); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1139:3: (f= fieldRefRule )?
+			int alt211=2;
+			int LA211_0 = input.LA(1);
+			if ( (LA211_0==FIELD_NAME) ) {
+				alt211=1;
 			}
-			switch (alt208) {
+			switch (alt211) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1115:4: f= fieldRefRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1139:4: f= fieldRefRule
 					{
-					pushFollow(FOLLOW_fieldRefRule_in_feArrayRefRule12462);
+					pushFollow(FOLLOW_fieldRefRule_in_feArrayRefRule12845);
 					f=fieldRefRule();
 					state._fsp--;
 
@@ -10445,7 +10692,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "createFuzzySetModelRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1123:1: createFuzzySetModelRule : CREATE FUZZY SET MODEL t= ID DEGREES p= ID ( COMMA p= ID )* ( DERIVED DEGREES n= ID AS e= ftExpressionRule[fm.getDegreesList()] ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )* )? ( CONSTRAINT c= jfOrConditionRule[fm.getAllDegreesList(), false] )? (fo= fuzzyOperatorDefinitionRule[fm] )* SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1147:1: createFuzzySetModelRule : CREATE FUZZY SET MODEL t= ID DEGREES p= ID ( COMMA p= ID )* ( DERIVED DEGREES n= ID AS e= ftExpressionRule[fm.getDegreesList()] ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )* )? ( CONSTRAINT c= jfOrConditionRule[fm.getAllDegreesList(), false] )? (fo= fuzzyOperatorDefinitionRule[fm] )* SC ;
 	public final void createFuzzySetModelRule() throws RecognitionException {
 		Token t=null;
 		Token p=null;
@@ -10455,80 +10702,80 @@ public class JCoQLParser extends Parser {
 		FuzzyOperatorDefinition fo =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1123:24: ( CREATE FUZZY SET MODEL t= ID DEGREES p= ID ( COMMA p= ID )* ( DERIVED DEGREES n= ID AS e= ftExpressionRule[fm.getDegreesList()] ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )* )? ( CONSTRAINT c= jfOrConditionRule[fm.getAllDegreesList(), false] )? (fo= fuzzyOperatorDefinitionRule[fm] )* SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1124:3: CREATE FUZZY SET MODEL t= ID DEGREES p= ID ( COMMA p= ID )* ( DERIVED DEGREES n= ID AS e= ftExpressionRule[fm.getDegreesList()] ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )* )? ( CONSTRAINT c= jfOrConditionRule[fm.getAllDegreesList(), false] )? (fo= fuzzyOperatorDefinitionRule[fm] )* SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1147:24: ( CREATE FUZZY SET MODEL t= ID DEGREES p= ID ( COMMA p= ID )* ( DERIVED DEGREES n= ID AS e= ftExpressionRule[fm.getDegreesList()] ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )* )? ( CONSTRAINT c= jfOrConditionRule[fm.getAllDegreesList(), false] )? (fo= fuzzyOperatorDefinitionRule[fm] )* SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1148:3: CREATE FUZZY SET MODEL t= ID DEGREES p= ID ( COMMA p= ID )* ( DERIVED DEGREES n= ID AS e= ftExpressionRule[fm.getDegreesList()] ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )* )? ( CONSTRAINT c= jfOrConditionRule[fm.getAllDegreesList(), false] )? (fo= fuzzyOperatorDefinitionRule[fm] )* SC
 			{
-			match(input,CREATE,FOLLOW_CREATE_in_createFuzzySetModelRule12482); 
-			match(input,FUZZY,FOLLOW_FUZZY_in_createFuzzySetModelRule12484); 
-			match(input,SET,FOLLOW_SET_in_createFuzzySetModelRule12486); 
-			match(input,MODEL,FOLLOW_MODEL_in_createFuzzySetModelRule12488); 
-			t=(Token)match(input,ID,FOLLOW_ID_in_createFuzzySetModelRule12492); 
+			match(input,CREATE,FOLLOW_CREATE_in_createFuzzySetModelRule12865); 
+			match(input,FUZZY,FOLLOW_FUZZY_in_createFuzzySetModelRule12867); 
+			match(input,SET,FOLLOW_SET_in_createFuzzySetModelRule12869); 
+			match(input,MODEL,FOLLOW_MODEL_in_createFuzzySetModelRule12871); 
+			t=(Token)match(input,ID,FOLLOW_ID_in_createFuzzySetModelRule12875); 
 			 FuzzySetModel fm = env.addFuzzySetModel (t);	
-			match(input,DEGREES,FOLLOW_DEGREES_in_createFuzzySetModelRule12502); 
-			p=(Token)match(input,ID,FOLLOW_ID_in_createFuzzySetModelRule12508); 
+			match(input,DEGREES,FOLLOW_DEGREES_in_createFuzzySetModelRule12885); 
+			p=(Token)match(input,ID,FOLLOW_ID_in_createFuzzySetModelRule12891); 
 			 env.addDegreeType(fm, p); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1126:6: ( COMMA p= ID )*
-			loop209:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1150:6: ( COMMA p= ID )*
+			loop212:
 			while (true) {
-				int alt209=2;
-				int LA209_0 = input.LA(1);
-				if ( (LA209_0==COMMA) ) {
-					alt209=1;
+				int alt212=2;
+				int LA212_0 = input.LA(1);
+				if ( (LA212_0==COMMA) ) {
+					alt212=1;
 				}
 
-				switch (alt209) {
+				switch (alt212) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1126:8: COMMA p= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1150:8: COMMA p= ID
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_createFuzzySetModelRule12528); 
-					p=(Token)match(input,ID,FOLLOW_ID_in_createFuzzySetModelRule12532); 
+					match(input,COMMA,FOLLOW_COMMA_in_createFuzzySetModelRule12911); 
+					p=(Token)match(input,ID,FOLLOW_ID_in_createFuzzySetModelRule12915); 
 					 env.addDegreeType(fm, p); 
 					}
 					break;
 
 				default :
-					break loop209;
+					break loop212;
 				}
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1127:4: ( DERIVED DEGREES n= ID AS e= ftExpressionRule[fm.getDegreesList()] ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )* )?
-			int alt211=2;
-			int LA211_0 = input.LA(1);
-			if ( (LA211_0==DERIVED) ) {
-				alt211=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1151:4: ( DERIVED DEGREES n= ID AS e= ftExpressionRule[fm.getDegreesList()] ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )* )?
+			int alt214=2;
+			int LA214_0 = input.LA(1);
+			if ( (LA214_0==DERIVED) ) {
+				alt214=1;
 			}
-			switch (alt211) {
+			switch (alt214) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1127:6: DERIVED DEGREES n= ID AS e= ftExpressionRule[fm.getDegreesList()] ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1151:6: DERIVED DEGREES n= ID AS e= ftExpressionRule[fm.getDegreesList()] ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )*
 					{
-					match(input,DERIVED,FOLLOW_DERIVED_in_createFuzzySetModelRule12558); 
-					match(input,DEGREES,FOLLOW_DEGREES_in_createFuzzySetModelRule12560); 
-					n=(Token)match(input,ID,FOLLOW_ID_in_createFuzzySetModelRule12564); 
+					match(input,DERIVED,FOLLOW_DERIVED_in_createFuzzySetModelRule12941); 
+					match(input,DEGREES,FOLLOW_DEGREES_in_createFuzzySetModelRule12943); 
+					n=(Token)match(input,ID,FOLLOW_ID_in_createFuzzySetModelRule12947); 
 					 env.checkDerivedDegree(fm, n);  
-					match(input,AS,FOLLOW_AS_in_createFuzzySetModelRule12577); 
-					pushFollow(FOLLOW_ftExpressionRule_in_createFuzzySetModelRule12581);
+					match(input,AS,FOLLOW_AS_in_createFuzzySetModelRule12960); 
+					pushFollow(FOLLOW_ftExpressionRule_in_createFuzzySetModelRule12964);
 					e=ftExpressionRule(fm.getDegreesList());
 					state._fsp--;
 
 					 env.addDerivedDegree(fm, n, e); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1129:6: ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )*
-					loop210:
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1153:6: ( COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()] )*
+					loop213:
 					while (true) {
-						int alt210=2;
-						int LA210_0 = input.LA(1);
-						if ( (LA210_0==COMMA) ) {
-							alt210=1;
+						int alt213=2;
+						int LA213_0 = input.LA(1);
+						if ( (LA213_0==COMMA) ) {
+							alt213=1;
 						}
 
-						switch (alt210) {
+						switch (alt213) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1129:8: COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()]
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1153:8: COMMA n= ID AS e= ftExpressionRule[fm.getDegreesList()]
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_createFuzzySetModelRule12595); 
-							n=(Token)match(input,ID,FOLLOW_ID_in_createFuzzySetModelRule12602); 
+							match(input,COMMA,FOLLOW_COMMA_in_createFuzzySetModelRule12978); 
+							n=(Token)match(input,ID,FOLLOW_ID_in_createFuzzySetModelRule12985); 
 							 env.checkDerivedDegree(fm, n);  
-							match(input,AS,FOLLOW_AS_in_createFuzzySetModelRule12626); 
-							pushFollow(FOLLOW_ftExpressionRule_in_createFuzzySetModelRule12630);
+							match(input,AS,FOLLOW_AS_in_createFuzzySetModelRule13009); 
+							pushFollow(FOLLOW_ftExpressionRule_in_createFuzzySetModelRule13013);
 							e=ftExpressionRule(fm.getDegreesList());
 							state._fsp--;
 
@@ -10537,7 +10784,7 @@ public class JCoQLParser extends Parser {
 							break;
 
 						default :
-							break loop210;
+							break loop213;
 						}
 					}
 
@@ -10546,18 +10793,18 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1132:4: ( CONSTRAINT c= jfOrConditionRule[fm.getAllDegreesList(), false] )?
-			int alt212=2;
-			int LA212_0 = input.LA(1);
-			if ( (LA212_0==CONSTRAINT) ) {
-				alt212=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1156:4: ( CONSTRAINT c= jfOrConditionRule[fm.getAllDegreesList(), false] )?
+			int alt215=2;
+			int LA215_0 = input.LA(1);
+			if ( (LA215_0==CONSTRAINT) ) {
+				alt215=1;
 			}
-			switch (alt212) {
+			switch (alt215) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1132:6: CONSTRAINT c= jfOrConditionRule[fm.getAllDegreesList(), false]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1156:6: CONSTRAINT c= jfOrConditionRule[fm.getAllDegreesList(), false]
 					{
-					match(input,CONSTRAINT,FOLLOW_CONSTRAINT_in_createFuzzySetModelRule12649); 
-					pushFollow(FOLLOW_jfOrConditionRule_in_createFuzzySetModelRule12653);
+					match(input,CONSTRAINT,FOLLOW_CONSTRAINT_in_createFuzzySetModelRule13032); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_createFuzzySetModelRule13036);
 					c=jfOrConditionRule(fm.getAllDegreesList(), false);
 					state._fsp--;
 
@@ -10567,20 +10814,20 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1133:4: (fo= fuzzyOperatorDefinitionRule[fm] )*
-			loop213:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1157:4: (fo= fuzzyOperatorDefinitionRule[fm] )*
+			loop216:
 			while (true) {
-				int alt213=2;
-				int LA213_0 = input.LA(1);
-				if ( (LA213_0==OPERATOR) ) {
-					alt213=1;
+				int alt216=2;
+				int LA216_0 = input.LA(1);
+				if ( (LA216_0==OPERATOR) ) {
+					alt216=1;
 				}
 
-				switch (alt213) {
+				switch (alt216) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1133:6: fo= fuzzyOperatorDefinitionRule[fm]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1157:6: fo= fuzzyOperatorDefinitionRule[fm]
 					{
-					pushFollow(FOLLOW_fuzzyOperatorDefinitionRule_in_createFuzzySetModelRule12672);
+					pushFollow(FOLLOW_fuzzyOperatorDefinitionRule_in_createFuzzySetModelRule13055);
 					fo=fuzzyOperatorDefinitionRule(fm);
 					state._fsp--;
 
@@ -10588,11 +10835,11 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop213;
+					break loop216;
 				}
 			}
 
-			match(input,SC,FOLLOW_SC_in_createFuzzySetModelRule12680); 
+			match(input,SC,FOLLOW_SC_in_createFuzzySetModelRule13063); 
 			}
 
 		}
@@ -10609,7 +10856,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "fuzzyOperatorDefinitionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1137:1: fuzzyOperatorDefinitionRule[FuzzySetModel fm] returns [FuzzyOperatorDefinition defOp] : OPERATOR o= ( OR | AND | NOT ) ( EVALUATE x= ID AS exp= ftConditionExpressionRule[fm.getDegreesList(), isNot] )+ ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1162:1: fuzzyOperatorDefinitionRule[FuzzySetModel fm] returns [FuzzyOperatorDefinition defOp] : OPERATOR o= ( OR | AND | NOT ) ( EVALUATE x= ID AS exp= ftConditionExpressionRule[fm.getDegreesList(), isNot] )+ ;
 	public final FuzzyOperatorDefinition fuzzyOperatorDefinitionRule(FuzzySetModel fm) throws RecognitionException {
 		FuzzyOperatorDefinition defOp = null;
 
@@ -10620,10 +10867,10 @@ public class JCoQLParser extends Parser {
 
 		 defOp = new FuzzyOperatorDefinition(); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1138:49: ( OPERATOR o= ( OR | AND | NOT ) ( EVALUATE x= ID AS exp= ftConditionExpressionRule[fm.getDegreesList(), isNot] )+ )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1139:2: OPERATOR o= ( OR | AND | NOT ) ( EVALUATE x= ID AS exp= ftConditionExpressionRule[fm.getDegreesList(), isNot] )+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1163:49: ( OPERATOR o= ( OR | AND | NOT ) ( EVALUATE x= ID AS exp= ftConditionExpressionRule[fm.getDegreesList(), isNot] )+ )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1164:2: OPERATOR o= ( OR | AND | NOT ) ( EVALUATE x= ID AS exp= ftConditionExpressionRule[fm.getDegreesList(), isNot] )+
 			{
-			match(input,OPERATOR,FOLLOW_OPERATOR_in_fuzzyOperatorDefinitionRule12701); 
+			match(input,OPERATOR,FOLLOW_OPERATOR_in_fuzzyOperatorDefinitionRule13085); 
 			o=input.LT(1);
 			if ( input.LA(1)==AND||input.LA(1)==NOT||input.LA(1)==OR ) {
 				input.consume();
@@ -10634,25 +10881,25 @@ public class JCoQLParser extends Parser {
 				throw mse;
 			}
 				boolean isNot = env.setFuzzyOperatorType(defOp, o);	
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1140:2: ( EVALUATE x= ID AS exp= ftConditionExpressionRule[fm.getDegreesList(), isNot] )+
-			int cnt214=0;
-			loop214:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1165:2: ( EVALUATE x= ID AS exp= ftConditionExpressionRule[fm.getDegreesList(), isNot] )+
+			int cnt217=0;
+			loop217:
 			while (true) {
-				int alt214=2;
-				int LA214_0 = input.LA(1);
-				if ( (LA214_0==EVALUATE) ) {
-					alt214=1;
+				int alt217=2;
+				int LA217_0 = input.LA(1);
+				if ( (LA217_0==EVALUATE) ) {
+					alt217=1;
 				}
 
-				switch (alt214) {
+				switch (alt217) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1140:4: EVALUATE x= ID AS exp= ftConditionExpressionRule[fm.getDegreesList(), isNot]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1165:4: EVALUATE x= ID AS exp= ftConditionExpressionRule[fm.getDegreesList(), isNot]
 					{
-					match(input,EVALUATE,FOLLOW_EVALUATE_in_fuzzyOperatorDefinitionRule12741); 
-					x=(Token)match(input,ID,FOLLOW_ID_in_fuzzyOperatorDefinitionRule12745); 
-					match(input,AS,FOLLOW_AS_in_fuzzyOperatorDefinitionRule12747); 
+					match(input,EVALUATE,FOLLOW_EVALUATE_in_fuzzyOperatorDefinitionRule13125); 
+					x=(Token)match(input,ID,FOLLOW_ID_in_fuzzyOperatorDefinitionRule13129); 
+					match(input,AS,FOLLOW_AS_in_fuzzyOperatorDefinitionRule13131); 
 						env.checkOperatorDegree(defOp, x, fm);	
-					pushFollow(FOLLOW_ftConditionExpressionRule_in_fuzzyOperatorDefinitionRule12779);
+					pushFollow(FOLLOW_ftConditionExpressionRule_in_fuzzyOperatorDefinitionRule13163);
 					exp=ftConditionExpressionRule(fm.getDegreesList(), isNot);
 					state._fsp--;
 
@@ -10661,11 +10908,11 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					if ( cnt214 >= 1 ) break loop214;
-					EarlyExitException eee = new EarlyExitException(214, input);
+					if ( cnt217 >= 1 ) break loop217;
+					EarlyExitException eee = new EarlyExitException(217, input);
 					throw eee;
 				}
-				cnt214++;
+				cnt217++;
 			}
 
 			 env.addOperatorDefinition(fm, defOp, o); 
@@ -10686,7 +10933,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "createGenericFuzzySetOperatorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1145:1: createGenericFuzzySetOperatorRule : CREATE t= ID FUZZY OPERATOR n= ID PARAMETERS p= parameterRule[gfo.getParamList(), true] ( COMMA p= parameterRule[gfo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[gfo.getParamList(), false] )? ( EVALUATE g= ID AS e= jfExpressionRule[gfo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+ SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1172:1: createGenericFuzzySetOperatorRule : CREATE t= ID FUZZY OPERATOR n= ID PARAMETERS p= parameterRule[gfo.getParamList(), true] ( COMMA p= parameterRule[gfo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[gfo.getParamList(), false] )? ( EVALUATE g= ID AS e= jfExpressionRule[gfo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+ SC ;
 	public final void createGenericFuzzySetOperatorRule() throws RecognitionException {
 		Token t=null;
 		Token n=null;
@@ -10698,36 +10945,36 @@ public class JCoQLParser extends Parser {
 		String y =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1145:34: ( CREATE t= ID FUZZY OPERATOR n= ID PARAMETERS p= parameterRule[gfo.getParamList(), true] ( COMMA p= parameterRule[gfo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[gfo.getParamList(), false] )? ( EVALUATE g= ID AS e= jfExpressionRule[gfo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+ SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1146:3: CREATE t= ID FUZZY OPERATOR n= ID PARAMETERS p= parameterRule[gfo.getParamList(), true] ( COMMA p= parameterRule[gfo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[gfo.getParamList(), false] )? ( EVALUATE g= ID AS e= jfExpressionRule[gfo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+ SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1172:34: ( CREATE t= ID FUZZY OPERATOR n= ID PARAMETERS p= parameterRule[gfo.getParamList(), true] ( COMMA p= parameterRule[gfo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[gfo.getParamList(), false] )? ( EVALUATE g= ID AS e= jfExpressionRule[gfo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+ SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1173:3: CREATE t= ID FUZZY OPERATOR n= ID PARAMETERS p= parameterRule[gfo.getParamList(), true] ( COMMA p= parameterRule[gfo.getParamList(), true] )* ( PRECONDITION pc= jfOrConditionRule[gfo.getParamList(), false] )? ( EVALUATE g= ID AS e= jfExpressionRule[gfo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+ SC
 			{
-			match(input,CREATE,FOLLOW_CREATE_in_createGenericFuzzySetOperatorRule12840); 
-			t=(Token)match(input,ID,FOLLOW_ID_in_createGenericFuzzySetOperatorRule12844); 
-			match(input,FUZZY,FOLLOW_FUZZY_in_createGenericFuzzySetOperatorRule12846); 
-			match(input,OPERATOR,FOLLOW_OPERATOR_in_createGenericFuzzySetOperatorRule12848); 
-			n=(Token)match(input,ID,FOLLOW_ID_in_createGenericFuzzySetOperatorRule12852); 
+			match(input,CREATE,FOLLOW_CREATE_in_createGenericFuzzySetOperatorRule13226); 
+			t=(Token)match(input,ID,FOLLOW_ID_in_createGenericFuzzySetOperatorRule13230); 
+			match(input,FUZZY,FOLLOW_FUZZY_in_createGenericFuzzySetOperatorRule13232); 
+			match(input,OPERATOR,FOLLOW_OPERATOR_in_createGenericFuzzySetOperatorRule13234); 
+			n=(Token)match(input,ID,FOLLOW_ID_in_createGenericFuzzySetOperatorRule13238); 
 			 GenericFuzzyOperator gfo = env.addGenericFuzzyOperator(t, n); 
-			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createGenericFuzzySetOperatorRule12873); 
-			pushFollow(FOLLOW_parameterRule_in_createGenericFuzzySetOperatorRule12877);
+			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createGenericFuzzySetOperatorRule13259); 
+			pushFollow(FOLLOW_parameterRule_in_createGenericFuzzySetOperatorRule13263);
 			p=parameterRule(gfo.getParamList(), true);
 			state._fsp--;
 
 			 gfo.parameters.add (p); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1148:4: ( COMMA p= parameterRule[gfo.getParamList(), true] )*
-			loop215:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1175:4: ( COMMA p= parameterRule[gfo.getParamList(), true] )*
+			loop218:
 			while (true) {
-				int alt215=2;
-				int LA215_0 = input.LA(1);
-				if ( (LA215_0==COMMA) ) {
-					alt215=1;
+				int alt218=2;
+				int LA218_0 = input.LA(1);
+				if ( (LA218_0==COMMA) ) {
+					alt218=1;
 				}
 
-				switch (alt215) {
+				switch (alt218) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1148:6: COMMA p= parameterRule[gfo.getParamList(), true]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1175:6: COMMA p= parameterRule[gfo.getParamList(), true]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule12894); 
-					pushFollow(FOLLOW_parameterRule_in_createGenericFuzzySetOperatorRule12899);
+					match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13280); 
+					pushFollow(FOLLOW_parameterRule_in_createGenericFuzzySetOperatorRule13285);
 					p=parameterRule(gfo.getParamList(), true);
 					state._fsp--;
 
@@ -10736,22 +10983,22 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop215;
+					break loop218;
 				}
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1149:3: ( PRECONDITION pc= jfOrConditionRule[gfo.getParamList(), false] )?
-			int alt216=2;
-			int LA216_0 = input.LA(1);
-			if ( (LA216_0==PRECONDITION) ) {
-				alt216=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1176:3: ( PRECONDITION pc= jfOrConditionRule[gfo.getParamList(), false] )?
+			int alt219=2;
+			int LA219_0 = input.LA(1);
+			if ( (LA219_0==PRECONDITION) ) {
+				alt219=1;
 			}
-			switch (alt216) {
+			switch (alt219) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1149:5: PRECONDITION pc= jfOrConditionRule[gfo.getParamList(), false]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1176:5: PRECONDITION pc= jfOrConditionRule[gfo.getParamList(), false]
 					{
-					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createGenericFuzzySetOperatorRule12919); 
-					pushFollow(FOLLOW_jfOrConditionRule_in_createGenericFuzzySetOperatorRule12923);
+					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createGenericFuzzySetOperatorRule13305); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_createGenericFuzzySetOperatorRule13309);
 					pc=jfOrConditionRule(gfo.getParamList(), false);
 					state._fsp--;
 
@@ -10761,92 +11008,92 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1150:3: ( EVALUATE g= ID AS e= jfExpressionRule[gfo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+
-			int cnt219=0;
-			loop219:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1177:3: ( EVALUATE g= ID AS e= jfExpressionRule[gfo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+
+			int cnt222=0;
+			loop222:
 			while (true) {
-				int alt219=2;
-				int LA219_0 = input.LA(1);
-				if ( (LA219_0==EVALUATE) ) {
-					alt219=1;
+				int alt222=2;
+				int LA222_0 = input.LA(1);
+				if ( (LA222_0==EVALUATE) ) {
+					alt222=1;
 				}
 
-				switch (alt219) {
+				switch (alt222) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1150:5: EVALUATE g= ID AS e= jfExpressionRule[gfo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1177:5: EVALUATE g= ID AS e= jfExpressionRule[gfo.getParamList(), false] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
 					{
-					match(input,EVALUATE,FOLLOW_EVALUATE_in_createGenericFuzzySetOperatorRule12939); 
-					g=(Token)match(input,ID,FOLLOW_ID_in_createGenericFuzzySetOperatorRule12943); 
+					match(input,EVALUATE,FOLLOW_EVALUATE_in_createGenericFuzzySetOperatorRule13325); 
+					g=(Token)match(input,ID,FOLLOW_ID_in_createGenericFuzzySetOperatorRule13329); 
 					 Parameter ev = env.createFgoParameter (g); 
-					match(input,AS,FOLLOW_AS_in_createGenericFuzzySetOperatorRule12977); 
-					pushFollow(FOLLOW_jfExpressionRule_in_createGenericFuzzySetOperatorRule12981);
+					match(input,AS,FOLLOW_AS_in_createGenericFuzzySetOperatorRule13363); 
+					pushFollow(FOLLOW_jfExpressionRule_in_createGenericFuzzySetOperatorRule13367);
 					e=jfExpressionRule(gfo.getParamList(), false);
 					state._fsp--;
 
 					 FuzzyPolyline fp = env.manageEvaluate(gfo, ev, e); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1152:4: ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
-					int alt218=2;
-					int LA218_0 = input.LA(1);
-					if ( (LA218_0==POLYLINE) ) {
-						alt218=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1179:4: ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
+					int alt221=2;
+					int LA221_0 = input.LA(1);
+					if ( (LA221_0==POLYLINE) ) {
+						alt221=1;
 					}
-					switch (alt218) {
+					switch (alt221) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1153:5: POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1180:5: POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB
 							{
-							match(input,POLYLINE,FOLLOW_POLYLINE_in_createGenericFuzzySetOperatorRule13004); 
-							match(input,LB,FOLLOW_LB_in_createGenericFuzzySetOperatorRule13006); 
-							match(input,LP,FOLLOW_LP_in_createGenericFuzzySetOperatorRule13019); 
-							pushFollow(FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13023);
+							match(input,POLYLINE,FOLLOW_POLYLINE_in_createGenericFuzzySetOperatorRule13390); 
+							match(input,LB,FOLLOW_LB_in_createGenericFuzzySetOperatorRule13392); 
+							match(input,LP,FOLLOW_LP_in_createGenericFuzzySetOperatorRule13405); 
+							pushFollow(FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13409);
 							x=numericRule();
 							state._fsp--;
 
-							match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13025); 
-							pushFollow(FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13029);
+							match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13411); 
+							pushFollow(FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13415);
 							y=numericRule();
 							state._fsp--;
 
-							match(input,RP,FOLLOW_RP_in_createGenericFuzzySetOperatorRule13031); 
+							match(input,RP,FOLLOW_RP_in_createGenericFuzzySetOperatorRule13417); 
 							 env.addFuzzyPolylinePoint (fp, x, y); 
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1155:6: ( COMMA LP x= numericRule COMMA y= numericRule RP )+
-							int cnt217=0;
-							loop217:
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1182:6: ( COMMA LP x= numericRule COMMA y= numericRule RP )+
+							int cnt220=0;
+							loop220:
 							while (true) {
-								int alt217=2;
-								int LA217_0 = input.LA(1);
-								if ( (LA217_0==COMMA) ) {
-									alt217=1;
+								int alt220=2;
+								int LA220_0 = input.LA(1);
+								if ( (LA220_0==COMMA) ) {
+									alt220=1;
 								}
 
-								switch (alt217) {
+								switch (alt220) {
 								case 1 :
-									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1155:8: COMMA LP x= numericRule COMMA y= numericRule RP
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1182:8: COMMA LP x= numericRule COMMA y= numericRule RP
 									{
-									match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13053); 
-									match(input,LP,FOLLOW_LP_in_createGenericFuzzySetOperatorRule13055); 
-									pushFollow(FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13059);
+									match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13439); 
+									match(input,LP,FOLLOW_LP_in_createGenericFuzzySetOperatorRule13441); 
+									pushFollow(FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13445);
 									x=numericRule();
 									state._fsp--;
 
-									match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13061); 
-									pushFollow(FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13065);
+									match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13447); 
+									pushFollow(FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13451);
 									y=numericRule();
 									state._fsp--;
 
-									match(input,RP,FOLLOW_RP_in_createGenericFuzzySetOperatorRule13067); 
+									match(input,RP,FOLLOW_RP_in_createGenericFuzzySetOperatorRule13453); 
 									 env.addFuzzyPolylinePoint (fp, x, y); 
 									}
 									break;
 
 								default :
-									if ( cnt217 >= 1 ) break loop217;
-									EarlyExitException eee = new EarlyExitException(217, input);
+									if ( cnt220 >= 1 ) break loop220;
+									EarlyExitException eee = new EarlyExitException(220, input);
 									throw eee;
 								}
-								cnt217++;
+								cnt220++;
 							}
 
-							match(input,RB,FOLLOW_RB_in_createGenericFuzzySetOperatorRule13086); 
+							match(input,RB,FOLLOW_RB_in_createGenericFuzzySetOperatorRule13472); 
 							}
 							break;
 
@@ -10857,14 +11104,14 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					if ( cnt219 >= 1 ) break loop219;
-					EarlyExitException eee = new EarlyExitException(219, input);
+					if ( cnt222 >= 1 ) break loop222;
+					EarlyExitException eee = new EarlyExitException(222, input);
 					throw eee;
 				}
-				cnt219++;
+				cnt222++;
 			}
 
-			match(input,SC,FOLLOW_SC_in_createGenericFuzzySetOperatorRule13150); 
+			match(input,SC,FOLLOW_SC_in_createGenericFuzzySetOperatorRule13536); 
 			}
 
 		}
@@ -10881,7 +11128,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "ftExpressionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1165:1: ftExpressionRule[ParamList pl] returns [Expression expr] : (t= ftTermRule[pl] | (s= ADD |s= SUB ) t= ftTermRule[pl] ) ( (s= ADD |s= SUB ) t= ftTermRule[pl] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1192:1: ftExpressionRule[ParamList pl] returns [Expression expr] : (t= ftTermRule[pl] | (s= ADD |s= SUB ) t= ftTermRule[pl] ) ( (s= ADD |s= SUB ) t= ftTermRule[pl] )* ;
 	public final Expression ftExpressionRule(ParamList pl) throws RecognitionException {
 		Expression expr = null;
 
@@ -10891,30 +11138,30 @@ public class JCoQLParser extends Parser {
 
 		 expr = new Expression (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1167:3: ( (t= ftTermRule[pl] | (s= ADD |s= SUB ) t= ftTermRule[pl] ) ( (s= ADD |s= SUB ) t= ftTermRule[pl] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1168:4: (t= ftTermRule[pl] | (s= ADD |s= SUB ) t= ftTermRule[pl] ) ( (s= ADD |s= SUB ) t= ftTermRule[pl] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1194:3: ( (t= ftTermRule[pl] | (s= ADD |s= SUB ) t= ftTermRule[pl] ) ( (s= ADD |s= SUB ) t= ftTermRule[pl] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1195:4: (t= ftTermRule[pl] | (s= ADD |s= SUB ) t= ftTermRule[pl] ) ( (s= ADD |s= SUB ) t= ftTermRule[pl] )*
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1168:4: (t= ftTermRule[pl] | (s= ADD |s= SUB ) t= ftTermRule[pl] )
-			int alt221=2;
-			int LA221_0 = input.LA(1);
-			if ( (LA221_0==ARRAY_FUNCTION||LA221_0==DEGREE||(LA221_0 >= EXTENT && LA221_0 <= EXTRACT_ARRAY)||LA221_0==FLOAT||(LA221_0 >= ID && LA221_0 <= IF_ERROR)||LA221_0==INT||LA221_0==LP||(LA221_0 >= MEMBERSHIP_ARRAY && LA221_0 <= MEMBERSHIP_TO)||LA221_0==TRANSLATE) ) {
-				alt221=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1195:4: (t= ftTermRule[pl] | (s= ADD |s= SUB ) t= ftTermRule[pl] )
+			int alt224=2;
+			int LA224_0 = input.LA(1);
+			if ( (LA224_0==ARRAY_FUNCTION||LA224_0==DEGREE||(LA224_0 >= EXTENT && LA224_0 <= EXTRACT_ARRAY)||LA224_0==FLOAT||LA224_0==HASH_NAME||(LA224_0 >= ID && LA224_0 <= IF_ERROR)||LA224_0==INT||LA224_0==LP||(LA224_0 >= MEMBERSHIP_ARRAY && LA224_0 <= MEMBERSHIP_TO)||LA224_0==TRANSLATE) ) {
+				alt224=1;
 			}
-			else if ( (LA221_0==ADD||LA221_0==SUB) ) {
-				alt221=2;
+			else if ( (LA224_0==ADD||LA224_0==SUB) ) {
+				alt224=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 221, 0, input);
+					new NoViableAltException("", 224, 0, input);
 				throw nvae;
 			}
 
-			switch (alt221) {
+			switch (alt224) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1168:6: t= ftTermRule[pl]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1195:6: t= ftTermRule[pl]
 					{
-					pushFollow(FOLLOW_ftTermRule_in_ftExpressionRule13184);
+					pushFollow(FOLLOW_ftTermRule_in_ftExpressionRule13570);
 					t=ftTermRule(pl);
 					state._fsp--;
 
@@ -10922,41 +11169,41 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1169:6: (s= ADD |s= SUB ) t= ftTermRule[pl]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1196:6: (s= ADD |s= SUB ) t= ftTermRule[pl]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1169:6: (s= ADD |s= SUB )
-					int alt220=2;
-					int LA220_0 = input.LA(1);
-					if ( (LA220_0==ADD) ) {
-						alt220=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1196:6: (s= ADD |s= SUB )
+					int alt223=2;
+					int LA223_0 = input.LA(1);
+					if ( (LA223_0==ADD) ) {
+						alt223=1;
 					}
-					else if ( (LA220_0==SUB) ) {
-						alt220=2;
+					else if ( (LA223_0==SUB) ) {
+						alt223=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 220, 0, input);
+							new NoViableAltException("", 223, 0, input);
 						throw nvae;
 					}
 
-					switch (alt220) {
+					switch (alt223) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1169:7: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1196:7: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_ftExpressionRule13206); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_ftExpressionRule13592); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1169:15: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1196:15: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_ftExpressionRule13212); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_ftExpressionRule13598); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_ftTermRule_in_ftExpressionRule13217);
+					pushFollow(FOLLOW_ftTermRule_in_ftExpressionRule13603);
 					t=ftTermRule(pl);
 					state._fsp--;
 
@@ -10966,52 +11213,52 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1170:5: ( (s= ADD |s= SUB ) t= ftTermRule[pl] )*
-			loop223:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1197:5: ( (s= ADD |s= SUB ) t= ftTermRule[pl] )*
+			loop226:
 			while (true) {
-				int alt223=2;
-				int LA223_0 = input.LA(1);
-				if ( (LA223_0==ADD||LA223_0==SUB) ) {
-					alt223=1;
+				int alt226=2;
+				int LA226_0 = input.LA(1);
+				if ( (LA226_0==ADD||LA226_0==SUB) ) {
+					alt226=1;
 				}
 
-				switch (alt223) {
+				switch (alt226) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1170:7: (s= ADD |s= SUB ) t= ftTermRule[pl]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1197:7: (s= ADD |s= SUB ) t= ftTermRule[pl]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1170:7: (s= ADD |s= SUB )
-					int alt222=2;
-					int LA222_0 = input.LA(1);
-					if ( (LA222_0==ADD) ) {
-						alt222=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1197:7: (s= ADD |s= SUB )
+					int alt225=2;
+					int LA225_0 = input.LA(1);
+					if ( (LA225_0==ADD) ) {
+						alt225=1;
 					}
-					else if ( (LA222_0==SUB) ) {
-						alt222=2;
+					else if ( (LA225_0==SUB) ) {
+						alt225=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 222, 0, input);
+							new NoViableAltException("", 225, 0, input);
 						throw nvae;
 					}
 
-					switch (alt222) {
+					switch (alt225) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1170:8: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1197:8: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_ftExpressionRule13234); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_ftExpressionRule13620); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1170:16: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1197:16: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_ftExpressionRule13240); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_ftExpressionRule13626); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_ftTermRule_in_ftExpressionRule13245);
+					pushFollow(FOLLOW_ftTermRule_in_ftExpressionRule13631);
 					t=ftTermRule(pl);
 					state._fsp--;
 
@@ -11020,7 +11267,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop223;
+					break loop226;
 				}
 			}
 
@@ -11041,7 +11288,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "ftTermRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1173:1: ftTermRule[ParamList pl] returns [ExpressionTerm et] : f= ftFactorRule[pl] ( (s= MUL |s= DIV ) f= ftFactorRule[pl] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1200:1: ftTermRule[ParamList pl] returns [ExpressionTerm et] : f= ftFactorRule[pl] ( (s= MUL |s= DIV ) f= ftFactorRule[pl] )* ;
 	public final ExpressionTerm ftTermRule(ParamList pl) throws RecognitionException {
 		ExpressionTerm et = null;
 
@@ -11051,60 +11298,60 @@ public class JCoQLParser extends Parser {
 
 		 et = new ExpressionTerm (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1175:3: (f= ftFactorRule[pl] ( (s= MUL |s= DIV ) f= ftFactorRule[pl] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1176:4: f= ftFactorRule[pl] ( (s= MUL |s= DIV ) f= ftFactorRule[pl] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1202:3: (f= ftFactorRule[pl] ( (s= MUL |s= DIV ) f= ftFactorRule[pl] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1203:4: f= ftFactorRule[pl] ( (s= MUL |s= DIV ) f= ftFactorRule[pl] )*
 			{
-			pushFollow(FOLLOW_ftFactorRule_in_ftTermRule13282);
+			pushFollow(FOLLOW_ftFactorRule_in_ftTermRule13668);
 			f=ftFactorRule(pl);
 			state._fsp--;
 
 			 et.addFactor(f, null);
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1177:5: ( (s= MUL |s= DIV ) f= ftFactorRule[pl] )*
-			loop225:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1204:5: ( (s= MUL |s= DIV ) f= ftFactorRule[pl] )*
+			loop228:
 			while (true) {
-				int alt225=2;
-				int LA225_0 = input.LA(1);
-				if ( (LA225_0==DIV||LA225_0==MUL) ) {
-					alt225=1;
+				int alt228=2;
+				int LA228_0 = input.LA(1);
+				if ( (LA228_0==DIV||LA228_0==MUL) ) {
+					alt228=1;
 				}
 
-				switch (alt225) {
+				switch (alt228) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1177:7: (s= MUL |s= DIV ) f= ftFactorRule[pl]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1204:7: (s= MUL |s= DIV ) f= ftFactorRule[pl]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1177:7: (s= MUL |s= DIV )
-					int alt224=2;
-					int LA224_0 = input.LA(1);
-					if ( (LA224_0==MUL) ) {
-						alt224=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1204:7: (s= MUL |s= DIV )
+					int alt227=2;
+					int LA227_0 = input.LA(1);
+					if ( (LA227_0==MUL) ) {
+						alt227=1;
 					}
-					else if ( (LA224_0==DIV) ) {
-						alt224=2;
+					else if ( (LA227_0==DIV) ) {
+						alt227=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 224, 0, input);
+							new NoViableAltException("", 227, 0, input);
 						throw nvae;
 					}
 
-					switch (alt224) {
+					switch (alt227) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1177:8: s= MUL
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1204:8: s= MUL
 							{
-							s=(Token)match(input,MUL,FOLLOW_MUL_in_ftTermRule13307); 
+							s=(Token)match(input,MUL,FOLLOW_MUL_in_ftTermRule13693); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1177:16: s= DIV
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1204:16: s= DIV
 							{
-							s=(Token)match(input,DIV,FOLLOW_DIV_in_ftTermRule13313); 
+							s=(Token)match(input,DIV,FOLLOW_DIV_in_ftTermRule13699); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_ftFactorRule_in_ftTermRule13318);
+					pushFollow(FOLLOW_ftFactorRule_in_ftTermRule13704);
 					f=ftFactorRule(pl);
 					state._fsp--;
 
@@ -11113,7 +11360,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop225;
+					break loop228;
 				}
 			}
 
@@ -11134,7 +11381,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "ftFactorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1180:1: ftFactorRule[ParamList pl] returns [ExpressionFactor ef] : ( LP op= ftExpressionRule[pl] RP |vl= ftValueRule |x= ID |x= ID LP (fp= ftFunctionParamsRule[pl] )? RP |e= specialFunctionRule );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1207:1: ftFactorRule[ParamList pl] returns [ExpressionFactor ef] : ( LP op= ftExpressionRule[pl] RP |vl= ftValueRule |x= ID |x= ID LP (fp= ftFunctionParamsRule[pl] )? RP |e= specialFunctionRule );
 	public final ExpressionFactor ftFactorRule(ParamList pl) throws RecognitionException {
 		ExpressionFactor ef = null;
 
@@ -11146,28 +11393,28 @@ public class JCoQLParser extends Parser {
 		SpecialFunctionFactor e =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1180:57: ( LP op= ftExpressionRule[pl] RP |vl= ftValueRule |x= ID |x= ID LP (fp= ftFunctionParamsRule[pl] )? RP |e= specialFunctionRule )
-			int alt227=5;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1207:57: ( LP op= ftExpressionRule[pl] RP |vl= ftValueRule |x= ID |x= ID LP (fp= ftFunctionParamsRule[pl] )? RP |e= specialFunctionRule )
+			int alt230=5;
 			switch ( input.LA(1) ) {
 			case LP:
 				{
-				alt227=1;
+				alt230=1;
 				}
 				break;
 			case FLOAT:
 			case INT:
 				{
-				alt227=2;
+				alt230=2;
 				}
 				break;
 			case ID:
 				{
-				int LA227_4 = input.LA(2);
-				if ( (LA227_4==LP) ) {
-					alt227=4;
+				int LA230_4 = input.LA(2);
+				if ( (LA230_4==LP) ) {
+					alt230=4;
 				}
-				else if ( (LA227_4==ADD||LA227_4==COMMA||LA227_4==CONSTRAINT||LA227_4==DIV||LA227_4==MUL||LA227_4==OPERATOR||LA227_4==RP||LA227_4==SC||LA227_4==SUB) ) {
-					alt227=3;
+				else if ( (LA230_4==ADD||LA230_4==COMMA||LA230_4==CONSTRAINT||LA230_4==DIV||LA230_4==MUL||LA230_4==OPERATOR||LA230_4==RP||LA230_4==SC||LA230_4==SUB) ) {
+					alt230=3;
 				}
 
 				else {
@@ -11175,7 +11422,7 @@ public class JCoQLParser extends Parser {
 					try {
 						input.consume();
 						NoViableAltException nvae =
-							new NoViableAltException("", 227, 4, input);
+							new NoViableAltException("", 230, 4, input);
 						throw nvae;
 					} finally {
 						input.rewind(nvaeMark);
@@ -11188,36 +11435,38 @@ public class JCoQLParser extends Parser {
 			case DEGREE:
 			case EXTENT:
 			case EXTRACT_ARRAY:
+			case HASH_NAME:
+			case IF:
 			case IF_ERROR:
 			case MEMBERSHIP_ARRAY:
 			case MEMBERSHIP_TO:
 			case TRANSLATE:
 				{
-				alt227=5;
+				alt230=5;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 227, 0, input);
+					new NoViableAltException("", 230, 0, input);
 				throw nvae;
 			}
-			switch (alt227) {
+			switch (alt230) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1181:5: LP op= ftExpressionRule[pl] RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1208:5: LP op= ftExpressionRule[pl] RP
 					{
-					match(input,LP,FOLLOW_LP_in_ftFactorRule13350); 
-					pushFollow(FOLLOW_ftExpressionRule_in_ftFactorRule13354);
+					match(input,LP,FOLLOW_LP_in_ftFactorRule13736); 
+					pushFollow(FOLLOW_ftExpressionRule_in_ftFactorRule13740);
 					op=ftExpressionRule(pl);
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_ftFactorRule13357); 
+					match(input,RP,FOLLOW_RP_in_ftFactorRule13743); 
 					 ef = new ExpressionFactor (op); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1182:6: vl= ftValueRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1209:6: vl= ftValueRule
 					{
-					pushFollow(FOLLOW_ftValueRule_in_ftFactorRule13377);
+					pushFollow(FOLLOW_ftValueRule_in_ftFactorRule13763);
 					vl=ftValueRule();
 					state._fsp--;
 
@@ -11225,28 +11474,28 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1183:6: x= ID
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1210:6: x= ID
 					{
-					x=(Token)match(input,ID,FOLLOW_ID_in_ftFactorRule13404); 
+					x=(Token)match(input,ID,FOLLOW_ID_in_ftFactorRule13790); 
 					 ef = env.checkDegree(pl,x);	 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1184:6: x= ID LP (fp= ftFunctionParamsRule[pl] )? RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1211:6: x= ID LP (fp= ftFunctionParamsRule[pl] )? RP
 					{
-					x=(Token)match(input,ID,FOLLOW_ID_in_ftFactorRule13436); 
-					match(input,LP,FOLLOW_LP_in_ftFactorRule13438); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1184:14: (fp= ftFunctionParamsRule[pl] )?
-					int alt226=2;
-					int LA226_0 = input.LA(1);
-					if ( (LA226_0==ADD||LA226_0==ARRAY_FUNCTION||LA226_0==DEGREE||(LA226_0 >= EXTENT && LA226_0 <= EXTRACT_ARRAY)||LA226_0==FLOAT||(LA226_0 >= ID && LA226_0 <= IF_ERROR)||LA226_0==INT||LA226_0==LP||(LA226_0 >= MEMBERSHIP_ARRAY && LA226_0 <= MEMBERSHIP_TO)||LA226_0==SUB||LA226_0==TRANSLATE) ) {
-						alt226=1;
+					x=(Token)match(input,ID,FOLLOW_ID_in_ftFactorRule13822); 
+					match(input,LP,FOLLOW_LP_in_ftFactorRule13824); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1211:14: (fp= ftFunctionParamsRule[pl] )?
+					int alt229=2;
+					int LA229_0 = input.LA(1);
+					if ( (LA229_0==ADD||LA229_0==ARRAY_FUNCTION||LA229_0==DEGREE||(LA229_0 >= EXTENT && LA229_0 <= EXTRACT_ARRAY)||LA229_0==FLOAT||LA229_0==HASH_NAME||(LA229_0 >= ID && LA229_0 <= IF_ERROR)||LA229_0==INT||LA229_0==LP||(LA229_0 >= MEMBERSHIP_ARRAY && LA229_0 <= MEMBERSHIP_TO)||LA229_0==SUB||LA229_0==TRANSLATE) ) {
+						alt229=1;
 					}
-					switch (alt226) {
+					switch (alt229) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1184:15: fp= ftFunctionParamsRule[pl]
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1211:15: fp= ftFunctionParamsRule[pl]
 							{
-							pushFollow(FOLLOW_ftFunctionParamsRule_in_ftFactorRule13443);
+							pushFollow(FOLLOW_ftFunctionParamsRule_in_ftFactorRule13829);
 							fp=ftFunctionParamsRule(pl);
 							state._fsp--;
 
@@ -11255,14 +11504,14 @@ public class JCoQLParser extends Parser {
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_ftFactorRule13448); 
+					match(input,RP,FOLLOW_RP_in_ftFactorRule13834); 
 					 ef = env.buildFunction (x, fp); 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1185:6: e= specialFunctionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1212:6: e= specialFunctionRule
 					{
-					pushFollow(FOLLOW_specialFunctionRule_in_ftFactorRule13463);
+					pushFollow(FOLLOW_specialFunctionRule_in_ftFactorRule13849);
 					e=specialFunctionRule();
 					state._fsp--;
 
@@ -11286,7 +11535,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "ftValueRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1188:1: ftValueRule returns [Value vl] : (n= INT |f= FLOAT );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1215:1: ftValueRule returns [Value vl] : (n= INT |f= FLOAT );
 	public final Value ftValueRule() throws RecognitionException {
 		Value vl = null;
 
@@ -11295,34 +11544,34 @@ public class JCoQLParser extends Parser {
 		Token f=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1188:31: (n= INT |f= FLOAT )
-			int alt228=2;
-			int LA228_0 = input.LA(1);
-			if ( (LA228_0==INT) ) {
-				alt228=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1215:31: (n= INT |f= FLOAT )
+			int alt231=2;
+			int LA231_0 = input.LA(1);
+			if ( (LA231_0==INT) ) {
+				alt231=1;
 			}
-			else if ( (LA228_0==FLOAT) ) {
-				alt228=2;
+			else if ( (LA231_0==FLOAT) ) {
+				alt231=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 228, 0, input);
+					new NoViableAltException("", 231, 0, input);
 				throw nvae;
 			}
 
-			switch (alt228) {
+			switch (alt231) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1189:5: n= INT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1216:5: n= INT
 					{
-					n=(Token)match(input,INT,FOLLOW_INT_in_ftValueRule13488); 
+					n=(Token)match(input,INT,FOLLOW_INT_in_ftValueRule13874); 
 					 vl = new Value (Value.INT, n.getText());   
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1190:5: f= FLOAT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1217:5: f= FLOAT
 					{
-					f=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_ftValueRule13508); 
+					f=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_ftValueRule13894); 
 					 vl = new Value (Value.FLOAT, f.getText()); 
 					}
 					break;
@@ -11343,7 +11592,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "ftFunctionParamsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1193:1: ftFunctionParamsRule[ParamList pl] returns [ArrayList<Expression> params] : e= ftExpressionRule[pl] ( COMMA e= ftExpressionRule[pl] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1220:1: ftFunctionParamsRule[ParamList pl] returns [ArrayList<Expression> params] : e= ftExpressionRule[pl] ( COMMA e= ftExpressionRule[pl] )* ;
 	public final ArrayList<Expression> ftFunctionParamsRule(ParamList pl) throws RecognitionException {
 		ArrayList<Expression> params = null;
 
@@ -11352,29 +11601,29 @@ public class JCoQLParser extends Parser {
 
 		 params = new ArrayList<Expression>(); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1195:3: (e= ftExpressionRule[pl] ( COMMA e= ftExpressionRule[pl] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1196:4: e= ftExpressionRule[pl] ( COMMA e= ftExpressionRule[pl] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1222:3: (e= ftExpressionRule[pl] ( COMMA e= ftExpressionRule[pl] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1223:4: e= ftExpressionRule[pl] ( COMMA e= ftExpressionRule[pl] )*
 			{
-			pushFollow(FOLLOW_ftExpressionRule_in_ftFunctionParamsRule13544);
+			pushFollow(FOLLOW_ftExpressionRule_in_ftFunctionParamsRule13930);
 			e=ftExpressionRule(pl);
 			state._fsp--;
 
 			 params.add(e); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1197:6: ( COMMA e= ftExpressionRule[pl] )*
-			loop229:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1224:6: ( COMMA e= ftExpressionRule[pl] )*
+			loop232:
 			while (true) {
-				int alt229=2;
-				int LA229_0 = input.LA(1);
-				if ( (LA229_0==COMMA) ) {
-					alt229=1;
+				int alt232=2;
+				int LA232_0 = input.LA(1);
+				if ( (LA232_0==COMMA) ) {
+					alt232=1;
 				}
 
-				switch (alt229) {
+				switch (alt232) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1197:8: COMMA e= ftExpressionRule[pl]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1224:8: COMMA e= ftExpressionRule[pl]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_ftFunctionParamsRule13565); 
-					pushFollow(FOLLOW_ftExpressionRule_in_ftFunctionParamsRule13569);
+					match(input,COMMA,FOLLOW_COMMA_in_ftFunctionParamsRule13951); 
+					pushFollow(FOLLOW_ftExpressionRule_in_ftFunctionParamsRule13955);
 					e=ftExpressionRule(pl);
 					state._fsp--;
 
@@ -11383,7 +11632,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop229;
+					break loop232;
 				}
 			}
 
@@ -11403,8 +11652,241 @@ public class JCoQLParser extends Parser {
 
 
 
+	// $ANTLR start "ftOrConditionRule"
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1229:1: ftOrConditionRule[ParamList pl, boolean isNot] returns [Condition c] : c1= ftAndConditionRule[pl,isNot] ( OR c2= ftAndConditionRule[pl,isNot] )* ;
+	public final Condition ftOrConditionRule(ParamList pl, boolean isNot) throws RecognitionException {
+		Condition c = null;
+
+
+		Condition c1 =null;
+		Condition c2 =null;
+
+		try {
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1230:3: (c1= ftAndConditionRule[pl,isNot] ( OR c2= ftAndConditionRule[pl,isNot] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1231:5: c1= ftAndConditionRule[pl,isNot] ( OR c2= ftAndConditionRule[pl,isNot] )*
+			{
+			pushFollow(FOLLOW_ftAndConditionRule_in_ftOrConditionRule13999);
+			c1=ftAndConditionRule(pl, isNot);
+			state._fsp--;
+
+			 c = new ConditionOr (c1); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1232:4: ( OR c2= ftAndConditionRule[pl,isNot] )*
+			loop233:
+			while (true) {
+				int alt233=2;
+				int LA233_0 = input.LA(1);
+				if ( (LA233_0==OR) ) {
+					alt233=1;
+				}
+
+				switch (alt233) {
+				case 1 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1232:6: OR c2= ftAndConditionRule[pl,isNot]
+					{
+					match(input,OR,FOLLOW_OR_in_ftOrConditionRule14015); 
+					pushFollow(FOLLOW_ftAndConditionRule_in_ftOrConditionRule14019);
+					c2=ftAndConditionRule(pl, isNot);
+					state._fsp--;
+
+					 ((ConditionOr)c).addCondition (c2); 
+					}
+					break;
+
+				default :
+					break loop233;
+				}
+			}
+
+			 c = env.simplifyConditionOr ((ConditionOr)c); 
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return c;
+	}
+	// $ANTLR end "ftOrConditionRule"
+
+
+
+	// $ANTLR start "ftAndConditionRule"
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1237:1: ftAndConditionRule[ParamList pl, boolean isNot] returns [Condition c] : c1= ftNotConditionRule[pl,isNot] ( AND c2= ftNotConditionRule[pl,isNot] )* ;
+	public final Condition ftAndConditionRule(ParamList pl, boolean isNot) throws RecognitionException {
+		Condition c = null;
+
+
+		Condition c1 =null;
+		Condition c2 =null;
+
+		try {
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1238:3: (c1= ftNotConditionRule[pl,isNot] ( AND c2= ftNotConditionRule[pl,isNot] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1239:5: c1= ftNotConditionRule[pl,isNot] ( AND c2= ftNotConditionRule[pl,isNot] )*
+			{
+			pushFollow(FOLLOW_ftNotConditionRule_in_ftAndConditionRule14084);
+			c1=ftNotConditionRule(pl, isNot);
+			state._fsp--;
+
+			 c = new ConditionAnd (c1); 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1240:5: ( AND c2= ftNotConditionRule[pl,isNot] )*
+			loop234:
+			while (true) {
+				int alt234=2;
+				int LA234_0 = input.LA(1);
+				if ( (LA234_0==AND) ) {
+					alt234=1;
+				}
+
+				switch (alt234) {
+				case 1 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1240:7: AND c2= ftNotConditionRule[pl,isNot]
+					{
+					match(input,AND,FOLLOW_AND_in_ftAndConditionRule14101); 
+					pushFollow(FOLLOW_ftNotConditionRule_in_ftAndConditionRule14105);
+					c2=ftNotConditionRule(pl, isNot);
+					state._fsp--;
+
+					 ((ConditionAnd)c).addCondition (c2); 
+					}
+					break;
+
+				default :
+					break loop234;
+				}
+			}
+
+			 c = env.simplifyConditionAnd ((ConditionAnd)c); 
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return c;
+	}
+	// $ANTLR end "ftAndConditionRule"
+
+
+
+	// $ANTLR start "ftNotConditionRule"
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1245:1: ftNotConditionRule[ParamList pl, boolean isNot] returns [Condition c] : (not= NOT )? p= ftPredicateRule[pl,isNot] ;
+	public final Condition ftNotConditionRule(ParamList pl, boolean isNot) throws RecognitionException {
+		Condition c = null;
+
+
+		Token not=null;
+		Predicate p =null;
+
+		try {
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1246:3: ( (not= NOT )? p= ftPredicateRule[pl,isNot] )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1247:5: (not= NOT )? p= ftPredicateRule[pl,isNot]
+			{
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1247:5: (not= NOT )?
+			int alt235=2;
+			int LA235_0 = input.LA(1);
+			if ( (LA235_0==NOT) ) {
+				alt235=1;
+			}
+			switch (alt235) {
+				case 1 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1247:7: not= NOT
+					{
+					not=(Token)match(input,NOT,FOLLOW_NOT_in_ftNotConditionRule14175); 
+					}
+					break;
+
+			}
+
+			pushFollow(FOLLOW_ftPredicateRule_in_ftNotConditionRule14187);
+			p=ftPredicateRule(pl, isNot);
+			state._fsp--;
+
+			 c = env.createCondition (not, p); 
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return c;
+	}
+	// $ANTLR end "ftNotConditionRule"
+
+
+
+	// $ANTLR start "ftPredicateRule"
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1254:1: ftPredicateRule[ParamList pl, boolean isNot] returns [Predicate p] : e1= ftConditionExpressionRule[pl,isNot] (c= comparatorRule e2= ftConditionExpressionRule[pl,isNot] )? ;
+	public final Predicate ftPredicateRule(ParamList pl, boolean isNot) throws RecognitionException {
+		Predicate p = null;
+
+
+		Expression e1 =null;
+		Token c =null;
+		Expression e2 =null;
+
+		try {
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1255:3: (e1= ftConditionExpressionRule[pl,isNot] (c= comparatorRule e2= ftConditionExpressionRule[pl,isNot] )? )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1256:3: e1= ftConditionExpressionRule[pl,isNot] (c= comparatorRule e2= ftConditionExpressionRule[pl,isNot] )?
+			{
+			pushFollow(FOLLOW_ftConditionExpressionRule_in_ftPredicateRule14229);
+			e1=ftConditionExpressionRule(pl, isNot);
+			state._fsp--;
+
+			 p = e1; 
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1257:3: (c= comparatorRule e2= ftConditionExpressionRule[pl,isNot] )?
+			int alt236=2;
+			int LA236_0 = input.LA(1);
+			if ( (LA236_0==EQ||LA236_0==GE||LA236_0==GT||LA236_0==LE||LA236_0==LT||LA236_0==NEQ) ) {
+				alt236=1;
+			}
+			switch (alt236) {
+				case 1 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1257:5: c= comparatorRule e2= ftConditionExpressionRule[pl,isNot]
+					{
+					pushFollow(FOLLOW_comparatorRule_in_ftPredicateRule14245);
+					c=comparatorRule();
+					state._fsp--;
+
+					pushFollow(FOLLOW_ftConditionExpressionRule_in_ftPredicateRule14255);
+					e2=ftConditionExpressionRule(pl, isNot);
+					state._fsp--;
+
+					 p = env.generateComparePredicate (e1, c, e2); 
+					}
+					break;
+
+			}
+
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return p;
+	}
+	// $ANTLR end "ftPredicateRule"
+
+
+
 	// $ANTLR start "ftConditionExpressionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1203:1: ftConditionExpressionRule[ParamList pl, boolean isNot] returns [Expression expr] : (t= ftConditionTermRule[pl,isNot] | (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] ) ( (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1262:1: ftConditionExpressionRule[ParamList pl, boolean isNot] returns [Expression expr] : (t= ftConditionTermRule[pl,isNot] | (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] ) ( (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] )* ;
 	public final Expression ftConditionExpressionRule(ParamList pl, boolean isNot) throws RecognitionException {
 		Expression expr = null;
 
@@ -11414,30 +11896,30 @@ public class JCoQLParser extends Parser {
 
 		 expr = new Expression (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1205:4: ( (t= ftConditionTermRule[pl,isNot] | (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] ) ( (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1206:4: (t= ftConditionTermRule[pl,isNot] | (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] ) ( (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1264:2: ( (t= ftConditionTermRule[pl,isNot] | (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] ) ( (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1265:4: (t= ftConditionTermRule[pl,isNot] | (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] ) ( (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] )*
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1206:4: (t= ftConditionTermRule[pl,isNot] | (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] )
-			int alt231=2;
-			int LA231_0 = input.LA(1);
-			if ( (LA231_0==ARRAY_FUNCTION||LA231_0==DEGREE||(LA231_0 >= EXTENT && LA231_0 <= EXTRACT_ARRAY)||LA231_0==FLOAT||(LA231_0 >= ID && LA231_0 <= IF_ERROR)||LA231_0==INT||LA231_0==LP||(LA231_0 >= MEMBERSHIP_ARRAY && LA231_0 <= MEMBERSHIP_TO)||LA231_0==TRANSLATE) ) {
-				alt231=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1265:4: (t= ftConditionTermRule[pl,isNot] | (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] )
+			int alt238=2;
+			int LA238_0 = input.LA(1);
+			if ( (LA238_0==FLOAT||(LA238_0 >= ID && LA238_0 <= IF)||LA238_0==INT||LA238_0==LP) ) {
+				alt238=1;
 			}
-			else if ( (LA231_0==ADD||LA231_0==SUB) ) {
-				alt231=2;
+			else if ( (LA238_0==ADD||LA238_0==SUB) ) {
+				alt238=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 231, 0, input);
+					new NoViableAltException("", 238, 0, input);
 				throw nvae;
 			}
 
-			switch (alt231) {
+			switch (alt238) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1206:6: t= ftConditionTermRule[pl,isNot]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1265:6: t= ftConditionTermRule[pl,isNot]
 					{
-					pushFollow(FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule13619);
+					pushFollow(FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule14299);
 					t=ftConditionTermRule(pl, isNot);
 					state._fsp--;
 
@@ -11445,41 +11927,41 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1207:6: (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1266:6: (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1207:6: (s= ADD |s= SUB )
-					int alt230=2;
-					int LA230_0 = input.LA(1);
-					if ( (LA230_0==ADD) ) {
-						alt230=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1266:6: (s= ADD |s= SUB )
+					int alt237=2;
+					int LA237_0 = input.LA(1);
+					if ( (LA237_0==ADD) ) {
+						alt237=1;
 					}
-					else if ( (LA230_0==SUB) ) {
-						alt230=2;
+					else if ( (LA237_0==SUB) ) {
+						alt237=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 230, 0, input);
+							new NoViableAltException("", 237, 0, input);
 						throw nvae;
 					}
 
-					switch (alt230) {
+					switch (alt237) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1207:7: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1266:7: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_ftConditionExpressionRule13643); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_ftConditionExpressionRule14323); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1207:15: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1266:15: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_ftConditionExpressionRule13649); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_ftConditionExpressionRule14329); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule13654);
+					pushFollow(FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule14334);
 					t=ftConditionTermRule(pl, isNot);
 					state._fsp--;
 
@@ -11489,52 +11971,52 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1208:5: ( (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] )*
-			loop233:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1267:5: ( (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot] )*
+			loop240:
 			while (true) {
-				int alt233=2;
-				int LA233_0 = input.LA(1);
-				if ( (LA233_0==ADD||LA233_0==SUB) ) {
-					alt233=1;
+				int alt240=2;
+				int LA240_0 = input.LA(1);
+				if ( (LA240_0==ADD||LA240_0==SUB) ) {
+					alt240=1;
 				}
 
-				switch (alt233) {
+				switch (alt240) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1208:7: (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1267:7: (s= ADD |s= SUB ) t= ftConditionTermRule[pl,isNot]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1208:7: (s= ADD |s= SUB )
-					int alt232=2;
-					int LA232_0 = input.LA(1);
-					if ( (LA232_0==ADD) ) {
-						alt232=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1267:7: (s= ADD |s= SUB )
+					int alt239=2;
+					int LA239_0 = input.LA(1);
+					if ( (LA239_0==ADD) ) {
+						alt239=1;
 					}
-					else if ( (LA232_0==SUB) ) {
-						alt232=2;
+					else if ( (LA239_0==SUB) ) {
+						alt239=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 232, 0, input);
+							new NoViableAltException("", 239, 0, input);
 						throw nvae;
 					}
 
-					switch (alt232) {
+					switch (alt239) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1208:8: s= ADD
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1267:8: s= ADD
 							{
-							s=(Token)match(input,ADD,FOLLOW_ADD_in_ftConditionExpressionRule13673); 
+							s=(Token)match(input,ADD,FOLLOW_ADD_in_ftConditionExpressionRule14353); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1208:16: s= SUB
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1267:16: s= SUB
 							{
-							s=(Token)match(input,SUB,FOLLOW_SUB_in_ftConditionExpressionRule13679); 
+							s=(Token)match(input,SUB,FOLLOW_SUB_in_ftConditionExpressionRule14359); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule13684);
+					pushFollow(FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule14364);
 					t=ftConditionTermRule(pl, isNot);
 					state._fsp--;
 
@@ -11543,7 +12025,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop233;
+					break loop240;
 				}
 			}
 
@@ -11564,7 +12046,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "ftConditionTermRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1212:1: ftConditionTermRule[ParamList pl, boolean isNot] returns [ExpressionTerm et] : f= ftConditionFactorRule[pl,isNot] ( (s= MUL |s= DIV ) f= ftConditionFactorRule[pl,isNot] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1271:1: ftConditionTermRule[ParamList pl, boolean isNot] returns [ExpressionTerm et] : f= ftConditionFactorRule[pl,isNot] ( (s= MUL |s= DIV ) f= ftConditionFactorRule[pl,isNot] )* ;
 	public final ExpressionTerm ftConditionTermRule(ParamList pl, boolean isNot) throws RecognitionException {
 		ExpressionTerm et = null;
 
@@ -11574,60 +12056,60 @@ public class JCoQLParser extends Parser {
 
 		 et = new ExpressionTerm (); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1214:4: (f= ftConditionFactorRule[pl,isNot] ( (s= MUL |s= DIV ) f= ftConditionFactorRule[pl,isNot] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1215:4: f= ftConditionFactorRule[pl,isNot] ( (s= MUL |s= DIV ) f= ftConditionFactorRule[pl,isNot] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1273:4: (f= ftConditionFactorRule[pl,isNot] ( (s= MUL |s= DIV ) f= ftConditionFactorRule[pl,isNot] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1274:4: f= ftConditionFactorRule[pl,isNot] ( (s= MUL |s= DIV ) f= ftConditionFactorRule[pl,isNot] )*
 			{
-			pushFollow(FOLLOW_ftConditionFactorRule_in_ftConditionTermRule13719);
+			pushFollow(FOLLOW_ftConditionFactorRule_in_ftConditionTermRule14400);
 			f=ftConditionFactorRule(pl, isNot);
 			state._fsp--;
 
 			 et.addFactor(f, null);
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1216:5: ( (s= MUL |s= DIV ) f= ftConditionFactorRule[pl,isNot] )*
-			loop235:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1275:5: ( (s= MUL |s= DIV ) f= ftConditionFactorRule[pl,isNot] )*
+			loop242:
 			while (true) {
-				int alt235=2;
-				int LA235_0 = input.LA(1);
-				if ( (LA235_0==DIV||LA235_0==MUL) ) {
-					alt235=1;
+				int alt242=2;
+				int LA242_0 = input.LA(1);
+				if ( (LA242_0==DIV||LA242_0==MUL) ) {
+					alt242=1;
 				}
 
-				switch (alt235) {
+				switch (alt242) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1216:7: (s= MUL |s= DIV ) f= ftConditionFactorRule[pl,isNot]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1275:7: (s= MUL |s= DIV ) f= ftConditionFactorRule[pl,isNot]
 					{
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1216:7: (s= MUL |s= DIV )
-					int alt234=2;
-					int LA234_0 = input.LA(1);
-					if ( (LA234_0==MUL) ) {
-						alt234=1;
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1275:7: (s= MUL |s= DIV )
+					int alt241=2;
+					int LA241_0 = input.LA(1);
+					if ( (LA241_0==MUL) ) {
+						alt241=1;
 					}
-					else if ( (LA234_0==DIV) ) {
-						alt234=2;
+					else if ( (LA241_0==DIV) ) {
+						alt241=2;
 					}
 
 					else {
 						NoViableAltException nvae =
-							new NoViableAltException("", 234, 0, input);
+							new NoViableAltException("", 241, 0, input);
 						throw nvae;
 					}
 
-					switch (alt234) {
+					switch (alt241) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1216:8: s= MUL
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1275:8: s= MUL
 							{
-							s=(Token)match(input,MUL,FOLLOW_MUL_in_ftConditionTermRule13736); 
+							s=(Token)match(input,MUL,FOLLOW_MUL_in_ftConditionTermRule14417); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1216:16: s= DIV
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1275:16: s= DIV
 							{
-							s=(Token)match(input,DIV,FOLLOW_DIV_in_ftConditionTermRule13742); 
+							s=(Token)match(input,DIV,FOLLOW_DIV_in_ftConditionTermRule14423); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_ftConditionFactorRule_in_ftConditionTermRule13747);
+					pushFollow(FOLLOW_ftConditionFactorRule_in_ftConditionTermRule14428);
 					f=ftConditionFactorRule(pl, isNot);
 					state._fsp--;
 
@@ -11636,7 +12118,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop235;
+					break loop242;
 				}
 			}
 
@@ -11657,7 +12139,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "ftConditionFactorRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1219:1: ftConditionFactorRule[ParamList pl, boolean isNot] returns [ExpressionFactor ef] : ( LP op= ftConditionExpressionRule[pl,isNot] RP |vl= ftConditionValueRule |x= ID f= FIELD_NAME |x= ID LP (fp= ftConditionFunctionParamsRule[pl,isNot] )? RP |e= specialFunctionRule );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1278:1: ftConditionFactorRule[ParamList pl, boolean isNot] returns [ExpressionFactor ef] : ( LP op= ftConditionExpressionRule[pl,isNot] RP |vl= ftConditionValueRule |x= ID f= FIELD_NAME |x= ID LP (fp= ftConditionFunctionParamsRule[pl,isNot] )? RP |e= ftSpecialFunctionRule[pl,isNot] );
 	public final ExpressionFactor ftConditionFactorRule(ParamList pl, boolean isNot) throws RecognitionException {
 		ExpressionFactor ef = null;
 
@@ -11670,28 +12152,28 @@ public class JCoQLParser extends Parser {
 		SpecialFunctionFactor e =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1220:5: ( LP op= ftConditionExpressionRule[pl,isNot] RP |vl= ftConditionValueRule |x= ID f= FIELD_NAME |x= ID LP (fp= ftConditionFunctionParamsRule[pl,isNot] )? RP |e= specialFunctionRule )
-			int alt237=5;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1279:5: ( LP op= ftConditionExpressionRule[pl,isNot] RP |vl= ftConditionValueRule |x= ID f= FIELD_NAME |x= ID LP (fp= ftConditionFunctionParamsRule[pl,isNot] )? RP |e= ftSpecialFunctionRule[pl,isNot] )
+			int alt244=5;
 			switch ( input.LA(1) ) {
 			case LP:
 				{
-				alt237=1;
+				alt244=1;
 				}
 				break;
 			case FLOAT:
 			case INT:
 				{
-				alt237=2;
+				alt244=2;
 				}
 				break;
 			case ID:
 				{
-				int LA237_4 = input.LA(2);
-				if ( (LA237_4==FIELD_NAME) ) {
-					alt237=3;
+				int LA244_4 = input.LA(2);
+				if ( (LA244_4==FIELD_NAME) ) {
+					alt244=3;
 				}
-				else if ( (LA237_4==LP) ) {
-					alt237=4;
+				else if ( (LA244_4==LP) ) {
+					alt244=4;
 				}
 
 				else {
@@ -11699,7 +12181,7 @@ public class JCoQLParser extends Parser {
 					try {
 						input.consume();
 						NoViableAltException nvae =
-							new NoViableAltException("", 237, 4, input);
+							new NoViableAltException("", 244, 4, input);
 						throw nvae;
 					} finally {
 						input.rewind(nvaeMark);
@@ -11708,40 +12190,33 @@ public class JCoQLParser extends Parser {
 
 				}
 				break;
-			case ARRAY_FUNCTION:
-			case DEGREE:
-			case EXTENT:
-			case EXTRACT_ARRAY:
-			case IF_ERROR:
-			case MEMBERSHIP_ARRAY:
-			case MEMBERSHIP_TO:
-			case TRANSLATE:
+			case IF:
 				{
-				alt237=5;
+				alt244=5;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 237, 0, input);
+					new NoViableAltException("", 244, 0, input);
 				throw nvae;
 			}
-			switch (alt237) {
+			switch (alt244) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1221:5: LP op= ftConditionExpressionRule[pl,isNot] RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1280:5: LP op= ftConditionExpressionRule[pl,isNot] RP
 					{
-					match(input,LP,FOLLOW_LP_in_ftConditionFactorRule13777); 
-					pushFollow(FOLLOW_ftConditionExpressionRule_in_ftConditionFactorRule13781);
+					match(input,LP,FOLLOW_LP_in_ftConditionFactorRule14458); 
+					pushFollow(FOLLOW_ftConditionExpressionRule_in_ftConditionFactorRule14462);
 					op=ftConditionExpressionRule(pl, isNot);
 					state._fsp--;
 
-					match(input,RP,FOLLOW_RP_in_ftConditionFactorRule13784); 
+					match(input,RP,FOLLOW_RP_in_ftConditionFactorRule14465); 
 					 ef = new ExpressionFactor (op); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1222:6: vl= ftConditionValueRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1281:6: vl= ftConditionValueRule
 					{
-					pushFollow(FOLLOW_ftConditionValueRule_in_ftConditionFactorRule13802);
+					pushFollow(FOLLOW_ftConditionValueRule_in_ftConditionFactorRule14483);
 					vl=ftConditionValueRule();
 					state._fsp--;
 
@@ -11749,29 +12224,29 @@ public class JCoQLParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1223:6: x= ID f= FIELD_NAME
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1282:6: x= ID f= FIELD_NAME
 					{
-					x=(Token)match(input,ID,FOLLOW_ID_in_ftConditionFactorRule13831); 
-					f=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_ftConditionFactorRule13835); 
+					x=(Token)match(input,ID,FOLLOW_ID_in_ftConditionFactorRule14512); 
+					f=(Token)match(input,FIELD_NAME,FOLLOW_FIELD_NAME_in_ftConditionFactorRule14516); 
 					 ef = env.makeExpDegree(x, f, isNot, pl); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1224:6: x= ID LP (fp= ftConditionFunctionParamsRule[pl,isNot] )? RP
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1283:6: x= ID LP (fp= ftConditionFunctionParamsRule[pl,isNot] )? RP
 					{
-					x=(Token)match(input,ID,FOLLOW_ID_in_ftConditionFactorRule13866); 
-					match(input,LP,FOLLOW_LP_in_ftConditionFactorRule13868); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1224:14: (fp= ftConditionFunctionParamsRule[pl,isNot] )?
-					int alt236=2;
-					int LA236_0 = input.LA(1);
-					if ( (LA236_0==ADD||LA236_0==ARRAY_FUNCTION||LA236_0==DEGREE||(LA236_0 >= EXTENT && LA236_0 <= EXTRACT_ARRAY)||LA236_0==FLOAT||(LA236_0 >= ID && LA236_0 <= IF_ERROR)||LA236_0==INT||LA236_0==LP||(LA236_0 >= MEMBERSHIP_ARRAY && LA236_0 <= MEMBERSHIP_TO)||LA236_0==SUB||LA236_0==TRANSLATE) ) {
-						alt236=1;
+					x=(Token)match(input,ID,FOLLOW_ID_in_ftConditionFactorRule14547); 
+					match(input,LP,FOLLOW_LP_in_ftConditionFactorRule14549); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1283:14: (fp= ftConditionFunctionParamsRule[pl,isNot] )?
+					int alt243=2;
+					int LA243_0 = input.LA(1);
+					if ( (LA243_0==ADD||LA243_0==FLOAT||(LA243_0 >= ID && LA243_0 <= IF)||LA243_0==INT||LA243_0==LP||LA243_0==SUB) ) {
+						alt243=1;
 					}
-					switch (alt236) {
+					switch (alt243) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1224:15: fp= ftConditionFunctionParamsRule[pl,isNot]
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1283:15: fp= ftConditionFunctionParamsRule[pl,isNot]
 							{
-							pushFollow(FOLLOW_ftConditionFunctionParamsRule_in_ftConditionFactorRule13873);
+							pushFollow(FOLLOW_ftConditionFunctionParamsRule_in_ftConditionFactorRule14554);
 							fp=ftConditionFunctionParamsRule(pl, isNot);
 							state._fsp--;
 
@@ -11780,15 +12255,15 @@ public class JCoQLParser extends Parser {
 
 					}
 
-					match(input,RP,FOLLOW_RP_in_ftConditionFactorRule13878); 
+					match(input,RP,FOLLOW_RP_in_ftConditionFactorRule14559); 
 					 ef = env.buildFunction (x, fp); 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1225:6: e= specialFunctionRule
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1284:6: e= ftSpecialFunctionRule[pl,isNot]
 					{
-					pushFollow(FOLLOW_specialFunctionRule_in_ftConditionFactorRule13891);
-					e=specialFunctionRule();
+					pushFollow(FOLLOW_ftSpecialFunctionRule_in_ftConditionFactorRule14572);
+					e=ftSpecialFunctionRule(pl, isNot);
 					state._fsp--;
 
 					 ef = e; 
@@ -11811,7 +12286,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "ftConditionValueRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1229:1: ftConditionValueRule returns [Value vl] : (n= INT |f= FLOAT );
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1288:1: ftConditionValueRule returns [Value vl] : (n= INT |f= FLOAT );
 	public final Value ftConditionValueRule() throws RecognitionException {
 		Value vl = null;
 
@@ -11820,34 +12295,34 @@ public class JCoQLParser extends Parser {
 		Token f=null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1230:5: (n= INT |f= FLOAT )
-			int alt238=2;
-			int LA238_0 = input.LA(1);
-			if ( (LA238_0==INT) ) {
-				alt238=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1289:5: (n= INT |f= FLOAT )
+			int alt245=2;
+			int LA245_0 = input.LA(1);
+			if ( (LA245_0==INT) ) {
+				alt245=1;
 			}
-			else if ( (LA238_0==FLOAT) ) {
-				alt238=2;
+			else if ( (LA245_0==FLOAT) ) {
+				alt245=2;
 			}
 
 			else {
 				NoViableAltException nvae =
-					new NoViableAltException("", 238, 0, input);
+					new NoViableAltException("", 245, 0, input);
 				throw nvae;
 			}
 
-			switch (alt238) {
+			switch (alt245) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1231:5: n= INT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1290:5: n= INT
 					{
-					n=(Token)match(input,INT,FOLLOW_INT_in_ftConditionValueRule13937); 
+					n=(Token)match(input,INT,FOLLOW_INT_in_ftConditionValueRule14621); 
 					 vl = new Value (Value.INT, n.getText()); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1232:5: f= FLOAT
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1291:5: f= FLOAT
 					{
-					f=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_ftConditionValueRule13957); 
+					f=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_ftConditionValueRule14641); 
 					 vl = new Value (Value.FLOAT, f.getText()); 
 					}
 					break;
@@ -11868,7 +12343,7 @@ public class JCoQLParser extends Parser {
 
 
 	// $ANTLR start "ftConditionFunctionParamsRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1235:1: ftConditionFunctionParamsRule[ParamList pl, boolean isNot] returns [ArrayList<Expression> params] : e= ftConditionExpressionRule[pl,isNot] ( COMMA e= ftConditionExpressionRule[pl,isNot] )* ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1294:1: ftConditionFunctionParamsRule[ParamList pl, boolean isNot] returns [ArrayList<Expression> params] : e= ftConditionExpressionRule[pl,isNot] ( COMMA e= ftConditionExpressionRule[pl,isNot] )* ;
 	public final ArrayList<Expression> ftConditionFunctionParamsRule(ParamList pl, boolean isNot) throws RecognitionException {
 		ArrayList<Expression> params = null;
 
@@ -11877,29 +12352,29 @@ public class JCoQLParser extends Parser {
 
 		 params = new ArrayList<Expression>(); 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1237:3: (e= ftConditionExpressionRule[pl,isNot] ( COMMA e= ftConditionExpressionRule[pl,isNot] )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1238:4: e= ftConditionExpressionRule[pl,isNot] ( COMMA e= ftConditionExpressionRule[pl,isNot] )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1296:3: (e= ftConditionExpressionRule[pl,isNot] ( COMMA e= ftConditionExpressionRule[pl,isNot] )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1297:4: e= ftConditionExpressionRule[pl,isNot] ( COMMA e= ftConditionExpressionRule[pl,isNot] )*
 			{
-			pushFollow(FOLLOW_ftConditionExpressionRule_in_ftConditionFunctionParamsRule13995);
+			pushFollow(FOLLOW_ftConditionExpressionRule_in_ftConditionFunctionParamsRule14679);
 			e=ftConditionExpressionRule(pl, isNot);
 			state._fsp--;
 
 			 params.add(e); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1239:6: ( COMMA e= ftConditionExpressionRule[pl,isNot] )*
-			loop239:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1298:6: ( COMMA e= ftConditionExpressionRule[pl,isNot] )*
+			loop246:
 			while (true) {
-				int alt239=2;
-				int LA239_0 = input.LA(1);
-				if ( (LA239_0==COMMA) ) {
-					alt239=1;
+				int alt246=2;
+				int LA246_0 = input.LA(1);
+				if ( (LA246_0==COMMA) ) {
+					alt246=1;
 				}
 
-				switch (alt239) {
+				switch (alt246) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1239:8: COMMA e= ftConditionExpressionRule[pl,isNot]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1298:8: COMMA e= ftConditionExpressionRule[pl,isNot]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_ftConditionFunctionParamsRule14014); 
-					pushFollow(FOLLOW_ftConditionExpressionRule_in_ftConditionFunctionParamsRule14018);
+					match(input,COMMA,FOLLOW_COMMA_in_ftConditionFunctionParamsRule14698); 
+					pushFollow(FOLLOW_ftConditionExpressionRule_in_ftConditionFunctionParamsRule14702);
 					e=ftConditionExpressionRule(pl, isNot);
 					state._fsp--;
 
@@ -11908,7 +12383,7 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop239;
+					break loop246;
 				}
 			}
 
@@ -11928,8 +12403,311 @@ public class JCoQLParser extends Parser {
 
 
 
+	// $ANTLR start "ftSpecialFunctionRule"
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1303:1: ftSpecialFunctionRule[ParamList pl, boolean isNot] returns [SpecialFunctionFactor expr] : IF LP LP co= ftOrConditionRule[pl,isNot] RP COMMA et= ftConditionExpressionRule[pl,isNot] COMMA ef= ftConditionExpressionRule[pl,isNot] RP ;
+	public final SpecialFunctionFactor ftSpecialFunctionRule(ParamList pl, boolean isNot) throws RecognitionException {
+		SpecialFunctionFactor expr = null;
+
+
+		Condition co =null;
+		Expression et =null;
+		Expression ef =null;
+
+		try {
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1304:2: ( IF LP LP co= ftOrConditionRule[pl,isNot] RP COMMA et= ftConditionExpressionRule[pl,isNot] COMMA ef= ftConditionExpressionRule[pl,isNot] RP )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1305:4: IF LP LP co= ftOrConditionRule[pl,isNot] RP COMMA et= ftConditionExpressionRule[pl,isNot] COMMA ef= ftConditionExpressionRule[pl,isNot] RP
+			{
+			match(input,IF,FOLLOW_IF_in_ftSpecialFunctionRule14736); 
+			match(input,LP,FOLLOW_LP_in_ftSpecialFunctionRule14738); 
+			match(input,LP,FOLLOW_LP_in_ftSpecialFunctionRule14740); 
+			pushFollow(FOLLOW_ftOrConditionRule_in_ftSpecialFunctionRule14744);
+			co=ftOrConditionRule(pl, isNot);
+			state._fsp--;
+
+			match(input,RP,FOLLOW_RP_in_ftSpecialFunctionRule14747); 
+			match(input,COMMA,FOLLOW_COMMA_in_ftSpecialFunctionRule14756); 
+			pushFollow(FOLLOW_ftConditionExpressionRule_in_ftSpecialFunctionRule14760);
+			et=ftConditionExpressionRule(pl, isNot);
+			state._fsp--;
+
+			match(input,COMMA,FOLLOW_COMMA_in_ftSpecialFunctionRule14767); 
+			pushFollow(FOLLOW_ftConditionExpressionRule_in_ftSpecialFunctionRule14771);
+			ef=ftConditionExpressionRule(pl, isNot);
+			state._fsp--;
+
+			match(input,RP,FOLLOW_RP_in_ftSpecialFunctionRule14774); 
+				expr = env.buildIfFunction (co, et, ef); 
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return expr;
+	}
+	// $ANTLR end "ftSpecialFunctionRule"
+
+
+
+	// $ANTLR start "createGenericFuzzyEvaluatorRule"
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1321:1: createGenericFuzzyEvaluatorRule : CREATE t= ID FUZZY EVALUATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )? (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )* ( EVALUATE g= ID AS e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+ SC ;
+	public final void createGenericFuzzyEvaluatorRule() throws RecognitionException {
+		Token t=null;
+		Token n=null;
+		Token g=null;
+		Condition pc =null;
+		FESortArrayClause s =null;
+		FEDeriveClause d =null;
+		FEForAllClause f =null;
+		Expression e =null;
+		String x =null;
+		String y =null;
+
+		try {
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1322:3: ( CREATE t= ID FUZZY EVALUATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )? (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )* ( EVALUATE g= ID AS e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+ SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1323:2: CREATE t= ID FUZZY EVALUATOR n= ID PARAMETERS feParameterRule[fe] ( COMMA feParameterRule[fe] )* ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )? (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )* ( EVALUATE g= ID AS e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+ SC
+			{
+			match(input,CREATE,FOLLOW_CREATE_in_createGenericFuzzyEvaluatorRule14825); 
+			t=(Token)match(input,ID,FOLLOW_ID_in_createGenericFuzzyEvaluatorRule14829); 
+			match(input,FUZZY,FOLLOW_FUZZY_in_createGenericFuzzyEvaluatorRule14831); 
+			match(input,EVALUATOR,FOLLOW_EVALUATOR_in_createGenericFuzzyEvaluatorRule14833); 
+			n=(Token)match(input,ID,FOLLOW_ID_in_createGenericFuzzyEvaluatorRule14837); 
+			 FuzzyEvaluator fe = env.addGenericFuzzyEvaluator(t, n);
+			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createGenericFuzzyEvaluatorRule14859); 
+			pushFollow(FOLLOW_feParameterRule_in_createGenericFuzzyEvaluatorRule14861);
+			feParameterRule(fe);
+			state._fsp--;
+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1325:4: ( COMMA feParameterRule[fe] )*
+			loop247:
+			while (true) {
+				int alt247=2;
+				int LA247_0 = input.LA(1);
+				if ( (LA247_0==COMMA) ) {
+					alt247=1;
+				}
+
+				switch (alt247) {
+				case 1 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1325:6: COMMA feParameterRule[fe]
+					{
+					match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzyEvaluatorRule14871); 
+					pushFollow(FOLLOW_feParameterRule_in_createGenericFuzzyEvaluatorRule14873);
+					feParameterRule(fe);
+					state._fsp--;
+
+					}
+					break;
+
+				default :
+					break loop247;
+				}
+			}
+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1326:3: ( PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false] )?
+			int alt248=2;
+			int LA248_0 = input.LA(1);
+			if ( (LA248_0==PRECONDITION) ) {
+				alt248=1;
+			}
+			switch (alt248) {
+				case 1 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1326:5: PRECONDITION pc= jfOrConditionRule[fe.getParamList(), false]
+					{
+					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createGenericFuzzyEvaluatorRule14889); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_createGenericFuzzyEvaluatorRule14893);
+					pc=jfOrConditionRule(fe.getParamList(), false);
+					state._fsp--;
+
+					 fe.preCondition = pc; 
+					}
+					break;
+
+			}
+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1327:3: (s= feArraySortRule[fe] |d= feDeriveRule[fe] |f= feForAllRule[fe] )*
+			loop249:
+			while (true) {
+				int alt249=4;
+				switch ( input.LA(1) ) {
+				case SORT:
+					{
+					alt249=1;
+					}
+					break;
+				case DERIVE:
+					{
+					alt249=2;
+					}
+					break;
+				case FOR:
+					{
+					alt249=3;
+					}
+					break;
+				}
+				switch (alt249) {
+				case 1 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1327:5: s= feArraySortRule[fe]
+					{
+					pushFollow(FOLLOW_feArraySortRule_in_createGenericFuzzyEvaluatorRule14915);
+					s=feArraySortRule(fe);
+					state._fsp--;
+
+					 fe.feInternalClauseList.add(s); 
+					}
+					break;
+				case 2 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1328:12: d= feDeriveRule[fe]
+					{
+					pushFollow(FOLLOW_feDeriveRule_in_createGenericFuzzyEvaluatorRule14954);
+					d=feDeriveRule(fe);
+					state._fsp--;
+
+					 fe.feInternalClauseList.add(d); 
+					}
+					break;
+				case 3 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1329:12: f= feForAllRule[fe]
+					{
+					pushFollow(FOLLOW_feForAllRule_in_createGenericFuzzyEvaluatorRule14990);
+					f=feForAllRule(fe);
+					state._fsp--;
+
+					 fe.feInternalClauseList.add(f); 
+					}
+					break;
+
+				default :
+					break loop249;
+				}
+			}
+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1332:3: ( EVALUATE g= ID AS e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )? )+
+			int cnt252=0;
+			loop252:
+			while (true) {
+				int alt252=2;
+				int LA252_0 = input.LA(1);
+				if ( (LA252_0==EVALUATE) ) {
+					alt252=1;
+				}
+
+				switch (alt252) {
+				case 1 :
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1332:5: EVALUATE g= ID AS e= feExpressionRule[fe, null] ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
+					{
+					match(input,EVALUATE,FOLLOW_EVALUATE_in_createGenericFuzzyEvaluatorRule15025); 
+					g=(Token)match(input,ID,FOLLOW_ID_in_createGenericFuzzyEvaluatorRule15029); 
+					 Parameter ev = env.createGfeParameter(g); 
+					match(input,AS,FOLLOW_AS_in_createGenericFuzzyEvaluatorRule15062); 
+					pushFollow(FOLLOW_feExpressionRule_in_createGenericFuzzyEvaluatorRule15066);
+					e=feExpressionRule(fe, null);
+					state._fsp--;
+
+					 FuzzyPolyline fp = env.manageEvaluate(fe, ev, e); 
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1334:4: ( POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB )?
+					int alt251=2;
+					int LA251_0 = input.LA(1);
+					if ( (LA251_0==POLYLINE) ) {
+						alt251=1;
+					}
+					switch (alt251) {
+						case 1 :
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1335:5: POLYLINE LB LP x= numericRule COMMA y= numericRule RP ( COMMA LP x= numericRule COMMA y= numericRule RP )+ RB
+							{
+							match(input,POLYLINE,FOLLOW_POLYLINE_in_createGenericFuzzyEvaluatorRule15096); 
+							match(input,LB,FOLLOW_LB_in_createGenericFuzzyEvaluatorRule15098); 
+							match(input,LP,FOLLOW_LP_in_createGenericFuzzyEvaluatorRule15104); 
+							pushFollow(FOLLOW_numericRule_in_createGenericFuzzyEvaluatorRule15108);
+							x=numericRule();
+							state._fsp--;
+
+							match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzyEvaluatorRule15110); 
+							pushFollow(FOLLOW_numericRule_in_createGenericFuzzyEvaluatorRule15114);
+							y=numericRule();
+							state._fsp--;
+
+							match(input,RP,FOLLOW_RP_in_createGenericFuzzyEvaluatorRule15116); 
+							 env.addFuzzyPolylinePoint(fp, x, y); 
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1337:5: ( COMMA LP x= numericRule COMMA y= numericRule RP )+
+							int cnt250=0;
+							loop250:
+							while (true) {
+								int alt250=2;
+								int LA250_0 = input.LA(1);
+								if ( (LA250_0==COMMA) ) {
+									alt250=1;
+								}
+
+								switch (alt250) {
+								case 1 :
+									// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1337:7: COMMA LP x= numericRule COMMA y= numericRule RP
+									{
+									match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzyEvaluatorRule15138); 
+									match(input,LP,FOLLOW_LP_in_createGenericFuzzyEvaluatorRule15140); 
+									pushFollow(FOLLOW_numericRule_in_createGenericFuzzyEvaluatorRule15144);
+									x=numericRule();
+									state._fsp--;
+
+									match(input,COMMA,FOLLOW_COMMA_in_createGenericFuzzyEvaluatorRule15146); 
+									pushFollow(FOLLOW_numericRule_in_createGenericFuzzyEvaluatorRule15150);
+									y=numericRule();
+									state._fsp--;
+
+									match(input,RP,FOLLOW_RP_in_createGenericFuzzyEvaluatorRule15152); 
+									 env.addFuzzyPolylinePoint(fp, x, y); 
+									}
+									break;
+
+								default :
+									if ( cnt250 >= 1 ) break loop250;
+									EarlyExitException eee = new EarlyExitException(250, input);
+									throw eee;
+								}
+								cnt250++;
+							}
+
+							match(input,RB,FOLLOW_RB_in_createGenericFuzzyEvaluatorRule15173); 
+							}
+							break;
+
+					}
+
+					 fe.genericPolylines.add(fp); 
+					}
+					break;
+
+				default :
+					if ( cnt252 >= 1 ) break loop252;
+					EarlyExitException eee = new EarlyExitException(252, input);
+					throw eee;
+				}
+				cnt252++;
+			}
+
+			match(input,SC,FOLLOW_SC_in_createGenericFuzzyEvaluatorRule15220); 
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "createGenericFuzzyEvaluatorRule"
+
+
+
 	// $ANTLR start "createJavaFunctionRule"
-	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1250:1: createJavaFunctionRule : CREATE JAVA FUNCTION jfn= ID PARAMETERS p= parameterRule[jf.getParamList(), false] ( COMMA p= parameterRule[jf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jf.getParamList(), true] )? CLASS cl= ID ( IMPORT imp= QUOTED_VALUE )? CLASS BODY END_BODY SC ;
+	// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1352:1: createJavaFunctionRule : CREATE JAVA FUNCTION jfn= ID PARAMETERS p= parameterRule[jf.getParamList(), false] ( COMMA p= parameterRule[jf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jf.getParamList(), true] )? CLASS cl= ID ( IMPORT imp= QUOTED_VALUE )? CLASS BODY END_BODY SC ;
 	public final void createJavaFunctionRule() throws RecognitionException {
 		Token jfn=null;
 		Token cl=null;
@@ -11938,35 +12716,35 @@ public class JCoQLParser extends Parser {
 		Condition pc =null;
 
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1251:2: ( CREATE JAVA FUNCTION jfn= ID PARAMETERS p= parameterRule[jf.getParamList(), false] ( COMMA p= parameterRule[jf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jf.getParamList(), true] )? CLASS cl= ID ( IMPORT imp= QUOTED_VALUE )? CLASS BODY END_BODY SC )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1252:4: CREATE JAVA FUNCTION jfn= ID PARAMETERS p= parameterRule[jf.getParamList(), false] ( COMMA p= parameterRule[jf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jf.getParamList(), true] )? CLASS cl= ID ( IMPORT imp= QUOTED_VALUE )? CLASS BODY END_BODY SC
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1353:2: ( CREATE JAVA FUNCTION jfn= ID PARAMETERS p= parameterRule[jf.getParamList(), false] ( COMMA p= parameterRule[jf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jf.getParamList(), true] )? CLASS cl= ID ( IMPORT imp= QUOTED_VALUE )? CLASS BODY END_BODY SC )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1354:4: CREATE JAVA FUNCTION jfn= ID PARAMETERS p= parameterRule[jf.getParamList(), false] ( COMMA p= parameterRule[jf.getParamList(), false] )* ( PRECONDITION pc= jfOrConditionRule[jf.getParamList(), true] )? CLASS cl= ID ( IMPORT imp= QUOTED_VALUE )? CLASS BODY END_BODY SC
 			{
-			match(input,CREATE,FOLLOW_CREATE_in_createJavaFunctionRule14054); 
-			match(input,JAVA,FOLLOW_JAVA_in_createJavaFunctionRule14056); 
-			match(input,FUNCTION,FOLLOW_FUNCTION_in_createJavaFunctionRule14058); 
-			jfn=(Token)match(input,ID,FOLLOW_ID_in_createJavaFunctionRule14066); 
+			match(input,CREATE,FOLLOW_CREATE_in_createJavaFunctionRule15246); 
+			match(input,JAVA,FOLLOW_JAVA_in_createJavaFunctionRule15248); 
+			match(input,FUNCTION,FOLLOW_FUNCTION_in_createJavaFunctionRule15250); 
+			jfn=(Token)match(input,ID,FOLLOW_ID_in_createJavaFunctionRule15258); 
 			 JavaFunction jf = env.addJavaFunction (jfn); 
-			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createJavaFunctionRule14099); 
-			pushFollow(FOLLOW_parameterRule_in_createJavaFunctionRule14109);
+			match(input,PARAMETERS,FOLLOW_PARAMETERS_in_createJavaFunctionRule15291); 
+			pushFollow(FOLLOW_parameterRule_in_createJavaFunctionRule15301);
 			p=parameterRule(jf.getParamList(), false);
 			state._fsp--;
 
 			 jf.parameters.add (p); 					
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1256:5: ( COMMA p= parameterRule[jf.getParamList(), false] )*
-			loop240:
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1358:5: ( COMMA p= parameterRule[jf.getParamList(), false] )*
+			loop253:
 			while (true) {
-				int alt240=2;
-				int LA240_0 = input.LA(1);
-				if ( (LA240_0==COMMA) ) {
-					alt240=1;
+				int alt253=2;
+				int LA253_0 = input.LA(1);
+				if ( (LA253_0==COMMA) ) {
+					alt253=1;
 				}
 
-				switch (alt240) {
+				switch (alt253) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1256:7: COMMA p= parameterRule[jf.getParamList(), false]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1358:7: COMMA p= parameterRule[jf.getParamList(), false]
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_createJavaFunctionRule14131); 
-					pushFollow(FOLLOW_parameterRule_in_createJavaFunctionRule14135);
+					match(input,COMMA,FOLLOW_COMMA_in_createJavaFunctionRule15323); 
+					pushFollow(FOLLOW_parameterRule_in_createJavaFunctionRule15327);
 					p=parameterRule(jf.getParamList(), false);
 					state._fsp--;
 
@@ -11975,22 +12753,22 @@ public class JCoQLParser extends Parser {
 					break;
 
 				default :
-					break loop240;
+					break loop253;
 				}
 			}
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1257:4: ( PRECONDITION pc= jfOrConditionRule[jf.getParamList(), true] )?
-			int alt241=2;
-			int LA241_0 = input.LA(1);
-			if ( (LA241_0==PRECONDITION) ) {
-				alt241=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1359:4: ( PRECONDITION pc= jfOrConditionRule[jf.getParamList(), true] )?
+			int alt254=2;
+			int LA254_0 = input.LA(1);
+			if ( (LA254_0==PRECONDITION) ) {
+				alt254=1;
 			}
-			switch (alt241) {
+			switch (alt254) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1257:6: PRECONDITION pc= jfOrConditionRule[jf.getParamList(), true]
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1359:6: PRECONDITION pc= jfOrConditionRule[jf.getParamList(), true]
 					{
-					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createJavaFunctionRule14155); 
-					pushFollow(FOLLOW_jfOrConditionRule_in_createJavaFunctionRule14159);
+					match(input,PRECONDITION,FOLLOW_PRECONDITION_in_createJavaFunctionRule15347); 
+					pushFollow(FOLLOW_jfOrConditionRule_in_createJavaFunctionRule15351);
 					pc=jfOrConditionRule(jf.getParamList(), true);
 					state._fsp--;
 
@@ -12000,29 +12778,29 @@ public class JCoQLParser extends Parser {
 
 			}
 
-			match(input,CLASS,FOLLOW_CLASS_in_createJavaFunctionRule14173); 
-			cl=(Token)match(input,ID,FOLLOW_ID_in_createJavaFunctionRule14177); 
+			match(input,CLASS,FOLLOW_CLASS_in_createJavaFunctionRule15365); 
+			cl=(Token)match(input,ID,FOLLOW_ID_in_createJavaFunctionRule15369); 
 				jf.setClass (cl.getText());		
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1259:4: ( IMPORT imp= QUOTED_VALUE )?
-			int alt242=2;
-			int LA242_0 = input.LA(1);
-			if ( (LA242_0==IMPORT) ) {
-				alt242=1;
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1361:4: ( IMPORT imp= QUOTED_VALUE )?
+			int alt255=2;
+			int LA255_0 = input.LA(1);
+			if ( (LA255_0==IMPORT) ) {
+				alt255=1;
 			}
-			switch (alt242) {
+			switch (alt255) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1259:6: IMPORT imp= QUOTED_VALUE
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1361:6: IMPORT imp= QUOTED_VALUE
 					{
-					match(input,IMPORT,FOLLOW_IMPORT_in_createJavaFunctionRule14212); 
-					imp=(Token)match(input,QUOTED_VALUE,FOLLOW_QUOTED_VALUE_in_createJavaFunctionRule14216); 
+					match(input,IMPORT,FOLLOW_IMPORT_in_createJavaFunctionRule15404); 
+					imp=(Token)match(input,QUOTED_VALUE,FOLLOW_QUOTED_VALUE_in_createJavaFunctionRule15408); 
 						jf.setImport (imp.getText()); 	
 					}
 					break;
 
 			}
 
-			match(input,CLASS,FOLLOW_CLASS_in_createJavaFunctionRule14246); 
-			match(input,BODY,FOLLOW_BODY_in_createJavaFunctionRule14248); 
+			match(input,CLASS,FOLLOW_CLASS_in_createJavaFunctionRule15438); 
+			match(input,BODY,FOLLOW_BODY_in_createJavaFunctionRule15440); 
 			 // ANTLR 3.4 apparently do not support multi context, so scanning must be performed this way
 									int res = JavaFunction.NO_BEGIN;
 									Token myToken = null;
@@ -12039,8 +12817,8 @@ public class JCoQLParser extends Parser {
 									}
 									env.checkJavaBody (res, myToken);		
 								
-			match(input,END_BODY,FOLLOW_END_BODY_in_createJavaFunctionRule14261); 
-			match(input,SC,FOLLOW_SC_in_createJavaFunctionRule14267); 
+			match(input,END_BODY,FOLLOW_END_BODY_in_createJavaFunctionRule15453); 
+			match(input,SC,FOLLOW_SC_in_createJavaFunctionRule15459); 
 			}
 
 		}
@@ -12058,971 +12836,1068 @@ public class JCoQLParser extends Parser {
 
 
 
-	public static final BitSet FOLLOW_getCollectionRule_in_start69 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_saveAsRule_in_start95 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_joinOfCollectionsRule_in_start128 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_filterRule_in_start150 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_groupRule_in_start183 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_expandRule_in_start217 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_mergeCollectionsRule_in_start250 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_intersectCollectionsRule_in_start273 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_subtractCollectionsRule_in_start292 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_useDbRule_in_start312 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_trajectoryMatchingRule_in_start346 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_createFuzzyOperatorRule_in_start365 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_createJavaScriptFunctionRule_in_start380 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_getDictionaryRule_in_start392 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_lookupFromWebRule_in_start410 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_createFuzzyAggregatorRule_in_start428 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_createFuzzySetModelRule_in_start444 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_createGenericFuzzySetOperatorRule_in_start459 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_createJavaFunctionRule_in_start469 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_createFuzzyEvaluatorRule_in_start484 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_test_in_start498 = new BitSet(new long[]{0x0800000200000000L,0x0040400810003002L,0x0004010410080000L});
-	public static final BitSet FOLLOW_EOF_in_start534 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_XXX_in_test545 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_test547 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_collectionReferenceRule571 = new BitSet(new long[]{0x0000000000030002L});
-	public static final BitSet FOLLOW_AT_in_collectionReferenceRule581 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_collectionReferenceRule585 = new BitSet(new long[]{0x0000000000010002L});
-	public static final BitSet FOLLOW_AS_in_collectionReferenceRule598 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_collectionReferenceRule602 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FIELD_NAME_in_fieldRefRule649 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-	public static final BitSet FOLLOW_BUILD_in_buildActionRule689 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-	public static final BitSet FOLLOW_objectStructureRule_in_buildActionRule707 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LBR_in_objectStructureRule743 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_outputFieldSpecRule_in_objectStructureRule754 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000004000L});
-	public static final BitSet FOLLOW_COMMA_in_objectStructureRule775 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_outputFieldSpecRule_in_objectStructureRule779 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000004000L});
-	public static final BitSet FOLLOW_RBR_in_objectStructureRule795 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_fieldRefRule_in_outputFieldSpecRule820 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_COLON_in_outputFieldSpecRule834 = new BitSet(new long[]{0x300000400008A000L,0x0030830008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_objectStructureRule_in_outputFieldSpecRule840 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_factorRule_in_outputFieldSpecRule879 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KEEPING_in_geometricOptionRule969 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-	public static final BitSet FOLLOW_GEOMETRY_in_geometricOptionRule971 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SETTING_in_geometricOptionRule1003 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-	public static final BitSet FOLLOW_GEOMETRY_in_geometricOptionRule1005 = new BitSet(new long[]{0x0000000000000080L,0x0000000000000001L,0x0000000200000040L});
-	public static final BitSet FOLLOW_POINT_in_geometricOptionRule1023 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_geometricOptionRule1025 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_geometricOptionRule1029 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_geometricOptionRule1031 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_geometricOptionRule1035 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_geometricOptionRule1037 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_AGGREGATE_in_geometricOptionRule1057 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_geometricOptionRule1059 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_geometricOptionRule1063 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_geometricOptionRule1065 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_fieldRefRule_in_geometricOptionRule1097 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TO_POLYLINE_in_geometricOptionRule1135 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_geometricOptionRule1137 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_geometricOptionRule1141 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_geometricOptionRule1143 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DROPPING_in_dropGeometryRule1189 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-	public static final BitSet FOLLOW_GEOMETRY_in_dropGeometryRule1191 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CASES_in_caseClauseRule1242 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000080000000000L});
-	public static final BitSet FOLLOW_CASE_in_caseClauseRule1248 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000080000000000L});
-	public static final BitSet FOLLOW_whereCaseRule_in_caseClauseRule1271 = new BitSet(new long[]{0x0004000000000002L,0x0000001000000000L,0x0000080000000000L});
-	public static final BitSet FOLLOW_othersRule_in_caseClauseRule1300 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KEEP_in_othersRule1353 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000008L});
-	public static final BitSet FOLLOW_DROP_in_othersRule1359 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000008L});
-	public static final BitSet FOLLOW_OTHERS_in_othersRule1370 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_WHERE_in_whereCaseRule1395 = new BitSet(new long[]{0x700000400008A010L,0x1030814008180009L,0x0000E04808001000L});
-	public static final BitSet FOLLOW_orConditionRule_in_whereCaseRule1406 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L});
-	public static final BitSet FOLLOW_generateSectionRule_in_whereCaseRule1424 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_GENERATE_in_generateSectionRule1461 = new BitSet(new long[]{0x0008002002100402L,0x0000002000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_geometricOptionRule_in_generateSectionRule1478 = new BitSet(new long[]{0x0008002002100402L,0x0000002000000000L});
-	public static final BitSet FOLLOW_checkForFuzzySetRule_in_generateSectionRule1495 = new BitSet(new long[]{0x0008002000100402L,0x0000002000000000L});
-	public static final BitSet FOLLOW_alphaCutRule_in_generateSectionRule1526 = new BitSet(new long[]{0x0008002000100002L,0x0000002000000000L});
-	public static final BitSet FOLLOW_buildActionRule_in_generateSectionRule1564 = new BitSet(new long[]{0x0008002000000002L,0x0000002000000000L});
-	public static final BitSet FOLLOW_keepDropFuzzySetsRule_in_generateSectionRule1584 = new BitSet(new long[]{0x0008000000000002L});
-	public static final BitSet FOLLOW_dropGeometryRule_in_generateSectionRule1602 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_andConditionRule_in_orConditionRule1663 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_OR_in_orConditionRule1678 = new BitSet(new long[]{0x700000400008A010L,0x1030814008180009L,0x0000E04808001000L});
-	public static final BitSet FOLLOW_andConditionRule_in_orConditionRule1682 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_notConditionRule_in_andConditionRule1739 = new BitSet(new long[]{0x0000000000000802L});
-	public static final BitSet FOLLOW_AND_in_andConditionRule1755 = new BitSet(new long[]{0x700000400008A010L,0x1030814008180009L,0x0000E04808001000L});
-	public static final BitSet FOLLOW_notConditionRule_in_andConditionRule1759 = new BitSet(new long[]{0x0000000000000802L});
-	public static final BitSet FOLLOW_NOT_in_notConditionRule1821 = new BitSet(new long[]{0x700000400008A010L,0x0030814008180009L,0x0000E04808001000L});
-	public static final BitSet FOLLOW_predicateRule_in_notConditionRule1833 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expressionRule_in_predicateRule1877 = new BitSet(new long[]{0x0080000000000002L,0x0801040004008200L});
-	public static final BitSet FOLLOW_compareRule_in_predicateRule1905 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_inRangeRule_in_predicateRule1934 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_nullPredicateRule_in_predicateRule1966 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_withPredicateRule_in_predicateRule1989 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_withoutPredicateRule_in_predicateRule2015 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_wukFuzzyPredicateRule_in_predicateRule2035 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_comparatorRule_in_compareRule2071 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808001000L});
-	public static final BitSet FOLLOW_expressionRule_in_compareRule2080 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INRANGE_in_inRangeRule2109 = new BitSet(new long[]{0x0000000000000000L,0x0000810000000000L});
-	public static final BitSet FOLLOW_LB_in_inRangeRule2115 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_LP_in_inRangeRule2121 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_inRangeRule2131 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_inRangeRule2133 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_inRangeRule2137 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000042000L});
-	public static final BitSet FOLLOW_RP_in_inRangeRule2146 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_RB_in_inRangeRule2152 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FIELD_in_nullPredicateRule2191 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_nullPredicateRule2195 = new BitSet(new long[]{0x0000000000000000L,0x0000000180000000L});
-	public static final BitSet FOLLOW_ISNULL_in_nullPredicateRule2201 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ISNOTNULL_in_nullPredicateRule2207 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_WITHIN_in_wukFuzzyPredicateRule2281 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_KNOWN_in_wukFuzzyPredicateRule2287 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_UNKNOWN_in_wukFuzzyPredicateRule2293 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_wukFuzzyPredicateRule2314 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
-	public static final BitSet FOLLOW_SETS_in_wukFuzzyPredicateRule2316 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_wukFuzzyPredicateRule2320 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_wukFuzzyPredicateRule2350 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_wukFuzzyPredicateRule2354 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_WITHOUT_in_withoutPredicateRule2407 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_withoutPredicateRule2418 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_withoutPredicateRule2436 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_withoutPredicateRule2440 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_WITH_in_withPredicateRule2478 = new BitSet(new long[]{0x0000000000004000L,0x0000000000080801L});
-	public static final BitSet FOLLOW_ID_in_withPredicateRule2493 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_ARRAY_in_withPredicateRule2499 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_GEOMETRY_in_withPredicateRule2505 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_withPredicateRule2526 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_withPredicateRule2549 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_withPredicateRule2553 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_termRule_in_expressionRule2599 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_expressionRule2622 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_SUB_in_expressionRule2628 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_termRule_in_expressionRule2633 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_expressionRule2651 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_SUB_in_expressionRule2657 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_termRule_in_expressionRule2662 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_factorRule_in_termRule2700 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_MUL_in_termRule2723 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_DIV_in_termRule2729 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_factorRule_in_termRule2734 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_LP_in_factorRule2767 = new BitSet(new long[]{0x700000400008A010L,0x1030814008180009L,0x0000E04808001000L});
-	public static final BitSet FOLLOW_orConditionRule_in_factorRule2771 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_factorRule2773 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_fieldRefRule_in_factorRule2797 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_valueRule_in_factorRule2824 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_ID_in_factorRule2852 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_factorRule2854 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808041000L});
-	public static final BitSet FOLLOW_functionParamsRule_in_factorRule2859 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_factorRule2863 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_specialFunctionRule_in_factorRule2880 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_LB_in_factorRule2912 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_factorRule_in_factorRule2916 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_COMMA_in_factorRule2943 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_factorRule_in_factorRule2947 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_RB_in_factorRule2986 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_EXP_in_factorRule2999 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_factorRule_in_factorRule3003 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_MEMBERSHIP_TO_in_specialFunctionRule3054 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_specialFunctionRule3057 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_specialFunctionRule3061 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_specialFunctionRule3063 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EXTENT_in_specialFunctionRule3094 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_specialFunctionRule3102 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_specialFunctionRule3106 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_specialFunctionRule3108 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DEGREE_in_specialFunctionRule3139 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_specialFunctionRule3147 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_specialFunctionRule3151 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L,0x0000000000040000L});
-	public static final BitSet FOLLOW_FIELD_NAME_in_specialFunctionRule3155 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_specialFunctionRule3158 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_MEMBERSHIP_ARRAY_in_specialFunctionRule3183 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_specialFunctionRule3186 = new BitSet(new long[]{0x0000000000000200L,0x0000010000080000L});
-	public static final BitSet FOLLOW_ALL_in_specialFunctionRule3221 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_ID_in_specialFunctionRule3268 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-	public static final BitSet FOLLOW_FROM_ARRAY_in_specialFunctionRule3270 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_specialFunctionRule3274 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_LB_in_specialFunctionRule3299 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_specialFunctionRule3303 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3343 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_specialFunctionRule3347 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_RB_in_specialFunctionRule3390 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_specialFunctionRule3397 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EXTRACT_ARRAY_in_specialFunctionRule3403 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_specialFunctionRule3407 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_specialFunctionRule3411 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-	public static final BitSet FOLLOW_FROM_ARRAY_in_specialFunctionRule3413 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_specialFunctionRule3417 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_specialFunctionRule3419 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IF_ERROR_in_specialFunctionRule3428 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_specialFunctionRule3434 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808001000L});
-	public static final BitSet FOLLOW_restrictedExpressionRule_in_specialFunctionRule3438 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3440 = new BitSet(new long[]{0x0000000000082000L,0x0000000008000008L,0x0000000000001000L});
-	public static final BitSet FOLLOW_valueRule_in_specialFunctionRule3444 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_specialFunctionRule3446 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TRANSLATE_in_specialFunctionRule3457 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_specialFunctionRule3463 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808001000L});
-	public static final BitSet FOLLOW_restrictedExpressionRule_in_specialFunctionRule3467 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3469 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_specialFunctionRule3473 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3493 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_BOOLEAN_in_specialFunctionRule3497 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3518 = new BitSet(new long[]{0x0000000000002000L,0x0000000000000000L,0x0000000000001000L});
-	public static final BitSet FOLLOW_APEX_VALUE_in_specialFunctionRule3523 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_QUOTED_VALUE_in_specialFunctionRule3529 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_specialFunctionRule3538 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_arrayFunctionRule_in_specialFunctionRule3551 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_valueRule3605 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FLOAT_in_valueRule3625 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_BOOLEAN_in_valueRule3644 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_APEX_VALUE_in_valueRule3661 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_QUOTED_VALUE_in_valueRule3675 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ARRAY_FUNCTION_in_arrayFunctionRule3703 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_arrayFunctionRule3743 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_arrayFunctionRule3772 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_LB_in_arrayFunctionRule3793 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808001000L});
-	public static final BitSet FOLLOW_restrictedExpressionRule_in_arrayFunctionRule3797 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule3812 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808001000L});
-	public static final BitSet FOLLOW_restrictedExpressionRule_in_arrayFunctionRule3816 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_RB_in_arrayFunctionRule3840 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule3848 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_arrayFunctionRule3852 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule3880 = new BitSet(new long[]{0x0001000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_arrayFunctionRule3886 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule3908 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_arrayFunctionRule3912 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_DOCUMENTS_in_arrayFunctionRule3944 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule3967 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_arrayFunctionRule3971 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule3990 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_arrayFunctionRule3994 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_arrayFunctionRule4032 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_restrictedTermRule_in_restrictedExpressionRule4067 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_restrictedExpressionRule4090 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_SUB_in_restrictedExpressionRule4096 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_restrictedTermRule_in_restrictedExpressionRule4101 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_restrictedExpressionRule4119 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_SUB_in_restrictedExpressionRule4125 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_restrictedTermRule_in_restrictedExpressionRule4130 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_restrictedFactorRule_in_restrictedTermRule4168 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_MUL_in_restrictedTermRule4191 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_DIV_in_restrictedTermRule4197 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_restrictedFactorRule_in_restrictedTermRule4202 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_LP_in_restrictedFactorRule4236 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808001000L});
-	public static final BitSet FOLLOW_restrictedExpressionRule_in_restrictedFactorRule4240 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_restrictedFactorRule4242 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_fieldRefRule_in_restrictedFactorRule4260 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_valueRule_in_restrictedFactorRule4287 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_ID_in_restrictedFactorRule4315 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_restrictedFactorRule4317 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808041000L});
-	public static final BitSet FOLLOW_functionParamsRule_in_restrictedFactorRule4322 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_restrictedFactorRule4326 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_specialFunctionRule_in_restrictedFactorRule4345 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_LB_in_restrictedFactorRule4376 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_restrictedFactorRule_in_restrictedFactorRule4380 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_COMMA_in_restrictedFactorRule4402 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_restrictedFactorRule_in_restrictedFactorRule4406 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_RB_in_restrictedFactorRule4440 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_EXP_in_restrictedFactorRule4452 = new BitSet(new long[]{0x300000400008A000L,0x0030810008180009L,0x0000000800001000L});
-	public static final BitSet FOLLOW_restrictedFactorRule_in_restrictedFactorRule4456 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_restrictedExpressionRule_in_functionParamsRule4511 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_functionParamsRule4529 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808001000L});
-	public static final BitSet FOLLOW_restrictedExpressionRule_in_functionParamsRule4533 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_EQ_in_comparatorRule4577 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_NEQ_in_comparatorRule4587 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LT_in_comparatorRule4597 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_GT_in_comparatorRule4607 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LE_in_comparatorRule4617 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_GE_in_comparatorRule4627 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ADD_in_numericRule4667 = new BitSet(new long[]{0x0000000000000000L,0x0000000008000008L});
-	public static final BitSet FOLLOW_SUB_in_numericRule4673 = new BitSet(new long[]{0x0000000000000000L,0x0000000008000008L});
-	public static final BitSet FOLLOW_FLOAT_in_numericRule4686 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_numericRule4692 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CHECK_FOR_in_checkForFuzzySetRule4721 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080100L});
-	public static final BitSet FOLLOW_ID_in_checkForFuzzySetRule4725 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_checkForFuzzySetRule4728 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000800000L});
-	public static final BitSet FOLLOW_SET_in_checkForFuzzySetRule4730 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_checkForFuzzySetRule4734 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000020000000000L});
-	public static final BitSet FOLLOW_USING_in_checkForFuzzySetRule4736 = new BitSet(new long[]{0x0000000000000000L,0x1000800000280000L});
-	public static final BitSet FOLLOW_usingOrConditionRule_in_checkForFuzzySetRule4741 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_checkForFuzzySetRule4789 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080100L});
-	public static final BitSet FOLLOW_ID_in_checkForFuzzySetRule4793 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_checkForFuzzySetRule4796 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000800000L});
-	public static final BitSet FOLLOW_SET_in_checkForFuzzySetRule4798 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_checkForFuzzySetRule4802 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000020000000000L});
-	public static final BitSet FOLLOW_USING_in_checkForFuzzySetRule4804 = new BitSet(new long[]{0x0000000000000000L,0x1000800000280000L});
-	public static final BitSet FOLLOW_usingOrConditionRule_in_checkForFuzzySetRule4808 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_usingAndConditionRule_in_usingOrConditionRule4840 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_OR_in_usingOrConditionRule4855 = new BitSet(new long[]{0x0000000000000000L,0x1000800000280000L});
-	public static final BitSet FOLLOW_usingAndConditionRule_in_usingOrConditionRule4859 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_usingNotConditionRule_in_usingAndConditionRule4921 = new BitSet(new long[]{0x0000000000000802L});
-	public static final BitSet FOLLOW_AND_in_usingAndConditionRule4937 = new BitSet(new long[]{0x0000000000000000L,0x1000800000280000L});
-	public static final BitSet FOLLOW_usingNotConditionRule_in_usingAndConditionRule4941 = new BitSet(new long[]{0x0000000000000802L});
-	public static final BitSet FOLLOW_NOT_in_usingNotConditionRule5003 = new BitSet(new long[]{0x0000000000000000L,0x0000800000280000L});
-	public static final BitSet FOLLOW_usingPredicateRule_in_usingNotConditionRule5015 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LP_in_usingPredicateRule5047 = new BitSet(new long[]{0x0000000000000000L,0x1000800000280000L});
-	public static final BitSet FOLLOW_usingOrConditionRule_in_usingPredicateRule5051 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_usingPredicateRule5053 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_usingPredicateRule5075 = new BitSet(new long[]{0x0000000000000002L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_usingPredicateRule5078 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808041000L});
-	public static final BitSet FOLLOW_functionParamsRule_in_usingPredicateRule5083 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_usingPredicateRule5087 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IF_FAILS_in_usingPredicateRule5112 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_usingPredicateRule5114 = new BitSet(new long[]{0x0000000000000000L,0x1000800000280000L});
-	public static final BitSet FOLLOW_usingOrConditionRule_in_usingPredicateRule5122 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_usingPredicateRule5124 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_usingPredicateRule5128 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_usingPredicateRule5140 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ALPHACUT_in_alphaCutRule5156 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_alphaCutRule5161 = new BitSet(new long[]{0x0000000000000000L,0x4000000000000000L});
-	public static final BitSet FOLLOW_ON_in_alphaCutRule5163 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_alphaCutRule5167 = new BitSet(new long[]{0x0000000040000002L,0x0000000000000001L});
-	public static final BitSet FOLLOW_FIELD_NAME_in_alphaCutRule5171 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_alphaCutRule5213 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_alphaCutRule5217 = new BitSet(new long[]{0x0000000000000000L,0x4000000000000000L});
-	public static final BitSet FOLLOW_ON_in_alphaCutRule5219 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_alphaCutRule5223 = new BitSet(new long[]{0x0000000040000002L,0x0000000000000001L});
-	public static final BitSet FOLLOW_FIELD_NAME_in_alphaCutRule5227 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_DEFUZZIFY_in_keepDropFuzzySetsRule5265 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DROPPING_in_keepDropFuzzySetsRule5284 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_ALL_in_keepDropFuzzySetsRule5286 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_keepDropFuzzySetsRule5288 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
-	public static final BitSet FOLLOW_SETS_in_keepDropFuzzySetsRule5290 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KEEPING_in_keepDropFuzzySetsRule5302 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_ALL_in_keepDropFuzzySetsRule5304 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_keepDropFuzzySetsRule5306 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
-	public static final BitSet FOLLOW_SETS_in_keepDropFuzzySetsRule5308 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DROPPING_in_keepDropFuzzySetsRule5321 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_keepDropFuzzySetsRule5323 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
-	public static final BitSet FOLLOW_SETS_in_keepDropFuzzySetsRule5325 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_keepDropFuzzySetsRule5329 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_keepDropFuzzySetsRule5343 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_keepDropFuzzySetsRule5347 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_KEEPING_in_keepDropFuzzySetsRule5372 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_keepDropFuzzySetsRule5374 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
-	public static final BitSet FOLLOW_SETS_in_keepDropFuzzySetsRule5376 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_keepDropFuzzySetsRule5380 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_keepDropFuzzySetsRule5395 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_keepDropFuzzySetsRule5399 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_ADD_ST_in_addFieldsRule5440 = new BitSet(new long[]{0x8000000000000000L});
-	public static final BitSet FOLLOW_FIELDS_in_addFieldsRule5442 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-	public static final BitSet FOLLOW_LBR_in_addFieldsRule5469 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_addFieldsRule5477 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_COLON_in_addFieldsRule5479 = new BitSet(new long[]{0x300040400008A000L,0x0038810019180009L,0x0000000800001004L});
-	public static final BitSet FOLLOW_insertFieldRule_in_addFieldsRule5483 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000004000L});
-	public static final BitSet FOLLOW_COMMA_in_addFieldsRule5502 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_addFieldsRule5506 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_COLON_in_addFieldsRule5508 = new BitSet(new long[]{0x300040400008A000L,0x0038810019180009L,0x0000000800001004L});
-	public static final BitSet FOLLOW_insertFieldRule_in_addFieldsRule5512 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000004000L});
-	public static final BitSet FOLLOW_RBR_in_addFieldsRule5530 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_spatialFunctionRule_in_insertFieldRule5553 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_restrictedFactorRule_in_insertFieldRule5568 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DISTANCE_in_spatialFunctionRule5607 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_spatialFunctionRule5609 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_spatialFunctionRule5613 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_spatialFunctionRule5615 = new BitSet(new long[]{0x0080000000000002L,0x0801040000008200L});
-	public static final BitSet FOLLOW_comparatorRule_in_spatialFunctionRule5621 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_spatialFunctionRule5625 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ORIENTATION_in_spatialFunctionRule5649 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_spatialFunctionRule5651 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_LEFT_in_spatialFunctionRule5657 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RIGHT_in_spatialFunctionRule5663 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_COMMA_in_spatialFunctionRule5669 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_spatialFunctionRule5674 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_COLON_in_spatialFunctionRule5676 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_spatialFunctionRule5680 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_spatialFunctionRule5685 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INCLUDED_in_spatialFunctionRule5697 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_spatialFunctionRule5699 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_LEFT_in_spatialFunctionRule5705 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RIGHT_in_spatialFunctionRule5711 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_spatialFunctionRule5714 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_MEET_in_spatialFunctionRule5746 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INTERSECT_in_spatialFunctionRule5793 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SET_in_setFuzzySetsRule5856 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_setFuzzySetsRule5858 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
-	public static final BitSet FOLLOW_SETS_in_setFuzzySetsRule5860 = new BitSet(new long[]{0x0000000000000000L,0x0000081000070000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_KEEP_in_setFuzzySetsRule5868 = new BitSet(new long[]{0x0000000000000200L,0x0000080000000000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_ALL_in_setFuzzySetsRule5905 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000010000L});
-	public static final BitSet FOLLOW_resolvingRule_in_setFuzzySetsRule5941 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LEFT_in_setFuzzySetsRule5959 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_RIGHT_in_setFuzzySetsRule5995 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_addFuzzySetRule_in_setFuzzySetsRule6026 = new BitSet(new long[]{0x0000000040000002L,0x0000000000000000L,0x0000000000010000L});
-	public static final BitSet FOLLOW_COMMA_in_setFuzzySetsRule6035 = new BitSet(new long[]{0x0000000000000000L,0x0000080000070000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_addFuzzySetRule_in_setFuzzySetsRule6037 = new BitSet(new long[]{0x0000000040000002L,0x0000000000000000L,0x0000000000010000L});
-	public static final BitSet FOLLOW_resolvingRule_in_setFuzzySetsRule6053 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_RESOLVING_in_resolvingRule6080 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000200000000000L});
-	public static final BitSet FOLLOW_WITH_in_resolvingRule6082 = new BitSet(new long[]{0x0000000000000800L,0x0000008000000004L,0x0000000000000001L});
-	public static final BitSet FOLLOW_AND_in_resolvingRule6094 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_OR_in_resolvingRule6100 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FIRST_in_resolvingRule6106 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LAST_in_resolvingRule6112 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LEFT_in_addFuzzySetRule6144 = new BitSet(new long[]{0x0000000000000200L,0x0000000000080000L});
-	public static final BitSet FOLLOW_RIGHT_in_addFuzzySetRule6150 = new BitSet(new long[]{0x0000000000000200L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ALL_in_addFuzzySetRule6161 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_addFuzzySetRule6197 = new BitSet(new long[]{0x0000000000010002L});
-	public static final BitSet FOLLOW_AS_in_addFuzzySetRule6201 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_addFuzzySetRule6205 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_HOWINCLUDE_in_addFuzzySetRule6236 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_addFuzzySetRule6240 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_LEFT_in_addFuzzySetRule6246 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RIGHT_in_addFuzzySetRule6252 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_addFuzzySetRule6256 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_addFuzzySetRule6258 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_addFuzzySetRule6262 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_HOWMEET_in_addFuzzySetRule6275 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_addFuzzySetRule6280 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_LEFT_in_addFuzzySetRule6286 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RIGHT_in_addFuzzySetRule6292 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_addFuzzySetRule6296 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_addFuzzySetRule6299 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_addFuzzySetRule6303 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_HOWINTERSECT_in_addFuzzySetRule6326 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_addFuzzySetRule6329 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_addFuzzySetRule6331 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_addFuzzySetRule6344 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_addFuzzySetRule6348 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_GET_in_getCollectionRule6372 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_COLLECTION_in_getCollectionRule6374 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080040L});
-	public static final BitSet FOLLOW_ID_in_getCollectionRule6386 = new BitSet(new long[]{0x0000000000020000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_AT_in_getCollectionRule6390 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_getCollectionRule6394 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_FROM_WEB_in_getCollectionRule6425 = new BitSet(new long[]{0x0000000000002000L,0x0000000000000000L,0x0000000000001000L});
-	public static final BitSet FOLLOW_APEX_VALUE_in_getCollectionRule6430 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_QUOTED_VALUE_in_getCollectionRule6436 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_getCollectionRule6449 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_GET_in_getDictionaryRule6470 = new BitSet(new long[]{0x0000040000000000L});
-	public static final BitSet FOLLOW_DICTIONARY_in_getDictionaryRule6472 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_getDictionaryRule6483 = new BitSet(new long[]{0x0000000000020000L});
-	public static final BitSet FOLLOW_AT_in_getDictionaryRule6485 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_getDictionaryRule6489 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_getDictionaryRule6491 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_getDictionaryRule6495 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_getDictionaryRule6524 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SAVE_in_saveAsRule6543 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_saveAsRule6545 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_saveAsRule6555 = new BitSet(new long[]{0x0000000000020000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_AT_in_saveAsRule6559 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_saveAsRule6563 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_saveAsRule6583 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LOOKUP_in_lookupFromWebRule6599 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
-	public static final BitSet FOLLOW_FROM_WEB_in_lookupFromWebRule6601 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-	public static final BitSet FOLLOW_forEachRule_in_lookupFromWebRule6617 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_lookupFromWebRule6630 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FOR_in_forEachRule6650 = new BitSet(new long[]{0x0020000000000000L});
-	public static final BitSet FOLLOW_EACH_in_forEachRule6652 = new BitSet(new long[]{0x700000400008A010L,0x1030814008180009L,0x0000E04808001000L});
-	public static final BitSet FOLLOW_orConditionRule_in_forEachRule6656 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_CALL_in_forEachRule6661 = new BitSet(new long[]{0x300000400008A010L,0x0030810008180009L,0x0000000808001000L});
-	public static final BitSet FOLLOW_expressionRule_in_forEachRule6665 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_JOIN_in_joinOfCollectionsRule6688 = new BitSet(new long[]{0x0000000000000000L,0x2000000000000000L});
-	public static final BitSet FOLLOW_OF_in_joinOfCollectionsRule6690 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_COLLECTIONS_in_joinOfCollectionsRule6692 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_collectionReferenceRule_in_joinOfCollectionsRule6701 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_joinOfCollectionsRule6705 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_collectionReferenceRule_in_joinOfCollectionsRule6709 = new BitSet(new long[]{0x0000000001800040L,0x4000000000000400L,0x0000000000908000L});
-	public static final BitSet FOLLOW_ON_in_joinOfCollectionsRule6721 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-	public static final BitSet FOLLOW_GEOMETRY_in_joinOfCollectionsRule6723 = new BitSet(new long[]{0x0000400000000000L,0x0008000011000000L,0x0000000000000004L});
-	public static final BitSet FOLLOW_spatialFunctionRule_in_joinOfCollectionsRule6727 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000000908000L});
-	public static final BitSet FOLLOW_SET_in_joinOfCollectionsRule6759 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-	public static final BitSet FOLLOW_GEOMETRY_in_joinOfCollectionsRule6761 = new BitSet(new long[]{0x0000000000000200L,0x0000080020000000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_INTERSECTION_in_joinOfCollectionsRule6767 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000000908000L});
-	public static final BitSet FOLLOW_RIGHT_in_joinOfCollectionsRule6773 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000000908000L});
-	public static final BitSet FOLLOW_LEFT_in_joinOfCollectionsRule6779 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000000908000L});
-	public static final BitSet FOLLOW_ALL_in_joinOfCollectionsRule6785 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000000908000L});
-	public static final BitSet FOLLOW_addFieldsRule_in_joinOfCollectionsRule6805 = new BitSet(new long[]{0x0000000001800000L,0x0000000000000400L,0x0000000000908000L});
-	public static final BitSet FOLLOW_setFuzzySetsRule_in_joinOfCollectionsRule6865 = new BitSet(new long[]{0x0000000001800000L,0x0000000000000400L,0x0000000000108000L});
-	public static final BitSet FOLLOW_caseClauseRule_in_joinOfCollectionsRule6907 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000108000L});
-	public static final BitSet FOLLOW_generateSectionRule_in_joinOfCollectionsRule6950 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000108000L});
-	public static final BitSet FOLLOW_REMOVE_in_joinOfCollectionsRule6988 = new BitSet(new long[]{0x0010000000000000L});
-	public static final BitSet FOLLOW_DUPLICATES_in_joinOfCollectionsRule6990 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_joinOfCollectionsRule7031 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FILTER_in_filterRule7060 = new BitSet(new long[]{0x0000000001800000L,0x0000000000000400L});
-	public static final BitSet FOLLOW_caseClauseRule_in_filterRule7071 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000108000L});
-	public static final BitSet FOLLOW_generateSectionRule_in_filterRule7090 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000108000L});
-	public static final BitSet FOLLOW_REMOVE_in_filterRule7109 = new BitSet(new long[]{0x0010000000000000L});
-	public static final BitSet FOLLOW_DUPLICATES_in_filterRule7111 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_filterRule7132 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_GROUP_in_groupRule7153 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000020L});
-	public static final BitSet FOLLOW_groupPartitionRule_in_groupRule7178 = new BitSet(new long[]{0x0004000000000000L,0x0000001000000000L,0x0000000000100020L});
-	public static final BitSet FOLLOW_othersRule_in_groupRule7204 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_groupRule7228 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_PARTITION_in_groupPartitionRule7251 = new BitSet(new long[]{0x700000400008A010L,0x1030814008180009L,0x0000E04808001000L});
-	public static final BitSet FOLLOW_orConditionRule_in_groupPartitionRule7255 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_BY_in_groupPartitionRule7268 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_groupPartitionRule7272 = new BitSet(new long[]{0x0000000040000000L,0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_groupPartitionRule7297 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_groupPartitionRule7301 = new BitSet(new long[]{0x0000000040000000L,0x0000000040000000L});
-	public static final BitSet FOLLOW_INTO_in_groupPartitionRule7323 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_groupPartitionRule7327 = new BitSet(new long[]{0x0004000000000002L,0x0000000000000400L,0x0000000000000002L});
-	public static final BitSet FOLLOW_DROP_in_groupPartitionRule7348 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
-	public static final BitSet FOLLOW_GROUPING_in_groupPartitionRule7350 = new BitSet(new long[]{0x8000000000000000L});
-	public static final BitSet FOLLOW_FIELDS_in_groupPartitionRule7352 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L,0x0000000000000002L});
-	public static final BitSet FOLLOW_ORDER_in_groupPartitionRule7374 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_BY_in_groupPartitionRule7376 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_sortingFieldRule_in_groupPartitionRule7380 = new BitSet(new long[]{0x0000000040000002L,0x0000001000000400L});
-	public static final BitSet FOLLOW_COMMA_in_groupPartitionRule7397 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_sortingFieldRule_in_groupPartitionRule7401 = new BitSet(new long[]{0x0000000040000002L,0x0000001000000400L});
-	public static final BitSet FOLLOW_KEEP_in_groupPartitionRule7420 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
-	public static final BitSet FOLLOW_UNCOMPARABLE_in_groupPartitionRule7422 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L});
-	public static final BitSet FOLLOW_generateSectionRule_in_groupPartitionRule7453 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_fieldRefRule_in_sortingFieldRule7484 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-	public static final BitSet FOLLOW_TYPE_in_sortingFieldRule7488 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_sortingFieldRule7492 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000040000000000L});
-	public static final BitSet FOLLOW_VERSUS_in_sortingFieldRule7507 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EXPAND_in_expandRule7536 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000008000000000L});
-	public static final BitSet FOLLOW_unpackRule_in_expandRule7560 = new BitSet(new long[]{0x0004000000000000L,0x0000001000000000L,0x0000008000100000L});
-	public static final BitSet FOLLOW_othersRule_in_expandRule7592 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_expandRule7616 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_UNPACK_in_unpackRule7638 = new BitSet(new long[]{0x700000400008A010L,0x1030814008180009L,0x0000E04808001000L});
-	public static final BitSet FOLLOW_orConditionRule_in_unpackRule7643 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_ARRAY_in_unpackRule7650 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_unpackRule7654 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000100000000L});
-	public static final BitSet FOLLOW_TO_in_unpackRule7661 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_unpackRule7665 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_MERGE_in_mergeCollectionsRule7693 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_COLLECTIONS_in_mergeCollectionsRule7695 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_collectionReferenceRule_in_mergeCollectionsRule7709 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_mergeCollectionsRule7731 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_collectionReferenceRule_in_mergeCollectionsRule7735 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000108000L});
-	public static final BitSet FOLLOW_REMOVE_in_mergeCollectionsRule7756 = new BitSet(new long[]{0x0010000000000000L});
-	public static final BitSet FOLLOW_DUPLICATES_in_mergeCollectionsRule7758 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_mergeCollectionsRule7788 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INTERSECT_in_intersectCollectionsRule7808 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_COLLECTIONS_in_intersectCollectionsRule7810 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_collectionReferenceRule_in_intersectCollectionsRule7820 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_intersectCollectionsRule7822 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_collectionReferenceRule_in_intersectCollectionsRule7826 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_intersectCollectionsRule7838 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SUBTRACT_in_subtractCollectionsRule7860 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_COLLECTIONS_in_subtractCollectionsRule7862 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_collectionReferenceRule_in_subtractCollectionsRule7870 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_subtractCollectionsRule7872 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_collectionReferenceRule_in_subtractCollectionsRule7876 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_subtractCollectionsRule7888 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_USE_in_useDbRule7915 = new BitSet(new long[]{0x0000000800000000L});
-	public static final BitSet FOLLOW_DB_in_useDbRule7925 = new BitSet(new long[]{0x0000000000002000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_useDbRule7930 = new BitSet(new long[]{0x0000000040010000L,0x4000000000000000L});
-	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule7936 = new BitSet(new long[]{0x0000000040010000L,0x4000000000000000L});
-	public static final BitSet FOLLOW_AS_in_useDbRule7960 = new BitSet(new long[]{0x0000000000002000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_useDbRule7965 = new BitSet(new long[]{0x0000000040000000L,0x4000000000000000L});
-	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule7971 = new BitSet(new long[]{0x0000000040000000L,0x4000000000000000L});
-	public static final BitSet FOLLOW_COMMA_in_useDbRule8052 = new BitSet(new long[]{0x0000000800000000L});
-	public static final BitSet FOLLOW_DB_in_useDbRule8054 = new BitSet(new long[]{0x0000000000002000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_useDbRule8059 = new BitSet(new long[]{0x0000000040010000L,0x4000000000000000L});
-	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule8065 = new BitSet(new long[]{0x0000000040010000L,0x4000000000000000L});
-	public static final BitSet FOLLOW_AS_in_useDbRule8088 = new BitSet(new long[]{0x0000000000002000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_useDbRule8093 = new BitSet(new long[]{0x0000000040000000L,0x4000000000000000L});
-	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule8099 = new BitSet(new long[]{0x0000000040000000L,0x4000000000000000L});
-	public static final BitSet FOLLOW_ON_in_useDbRule8177 = new BitSet(new long[]{0x0000001000000000L,0x0000000000000000L,0x0000000000400000L});
-	public static final BitSet FOLLOW_DEFAULT_in_useDbRule8189 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
-	public static final BitSet FOLLOW_SERVER_in_useDbRule8191 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SERVER_in_useDbRule8203 = new BitSet(new long[]{0x0000000000002000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_useDbRule8218 = new BitSet(new long[]{0x0000000000002000L,0x0000000000080000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule8224 = new BitSet(new long[]{0x0000000000002000L,0x0000000000080000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_ID_in_useDbRule8248 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule8254 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_useDbRule8279 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TRAJECTORY_in_trajectoryMatchingRule8304 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
-	public static final BitSet FOLLOW_MATCHING_in_trajectoryMatchingRule8306 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_collectionReferenceRule_in_trajectoryMatchingRule8316 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_trajectoryMatchingRule8318 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_collectionReferenceRule_in_trajectoryMatchingRule8322 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000020L});
-	public static final BitSet FOLLOW_trajectoryPartitionRule_in_trajectoryMatchingRule8338 = new BitSet(new long[]{0x0004000000000000L,0x0000001000000000L,0x0000000000100020L});
-	public static final BitSet FOLLOW_othersRule_in_trajectoryMatchingRule8378 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_trajectoryMatchingRule8420 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_PARTITION_in_trajectoryPartitionRule8448 = new BitSet(new long[]{0x700000400008A010L,0x1030814008180009L,0x0000E04808001000L});
-	public static final BitSet FOLLOW_orConditionRule_in_trajectoryPartitionRule8458 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
-	public static final BitSet FOLLOW_partitionMatchingRule_in_trajectoryPartitionRule8479 = new BitSet(new long[]{0x0000000000000002L,0x0002000000000000L});
-	public static final BitSet FOLLOW_MATCHING_in_partitionMatchingRule8516 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_partitionMatchingRule8520 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0001000000000000L});
-	public static final BitSet FOLLOW_WRT_in_partitionMatchingRule8527 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_partitionMatchingRule8531 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000040000000L});
-	public static final BitSet FOLLOW_THRESHOLD_in_partitionMatchingRule8538 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_partitionMatchingRule8540 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_partitionMatchingRule8544 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_partitionMatchingRule8547 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_partitionMatchingRule8551 = new BitSet(new long[]{0x0000000000000000L,0x0000000040000000L,0x0000080000000000L});
-	public static final BitSet FOLLOW_WHERE_in_partitionMatchingRule8566 = new BitSet(new long[]{0x700000400008A010L,0x1030814008180009L,0x0000E04808001000L});
-	public static final BitSet FOLLOW_orConditionRule_in_partitionMatchingRule8570 = new BitSet(new long[]{0x0000000000000000L,0x0000000040000000L});
-	public static final BitSet FOLLOW_INTO_in_partitionMatchingRule8594 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_partitionMatchingRule8598 = new BitSet(new long[]{0x0000000000000022L,0x0100000000000000L});
-	public static final BitSet FOLLOW_ADDING_in_partitionMatchingRule8621 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_partitionMatchingRule8625 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000100000000L});
-	public static final BitSet FOLLOW_TO_in_partitionMatchingRule8627 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_INPUT_in_partitionMatchingRule8629 = new BitSet(new long[]{0x0000000000000002L,0x0100000000000000L});
-	public static final BitSet FOLLOW_MIN_SIMILARITY_in_partitionMatchingRule8651 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_partitionMatchingRule8655 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_parameterRule8703 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-	public static final BitSet FOLLOW_TYPE_in_parameterRule8719 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_parameterRule8723 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CREATE_in_createJavaScriptFunctionRule8747 = new BitSet(new long[]{0x0000000000000000L,0x0000000400000000L});
-	public static final BitSet FOLLOW_JAVASCRIPT_in_createJavaScriptFunctionRule8749 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-	public static final BitSet FOLLOW_FUNCTION_in_createJavaScriptFunctionRule8751 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createJavaScriptFunctionRule8759 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
-	public static final BitSet FOLLOW_PARAMETERS_in_createJavaScriptFunctionRule8793 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_parameterRule_in_createJavaScriptFunctionRule8803 = new BitSet(new long[]{0x0000000040040000L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_COMMA_in_createJavaScriptFunctionRule8826 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_parameterRule_in_createJavaScriptFunctionRule8830 = new BitSet(new long[]{0x0000000040040000L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_PRECONDITION_in_createJavaScriptFunctionRule8853 = new BitSet(new long[]{0x0000000000002010L,0x1000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfOrConditionRule_in_createJavaScriptFunctionRule8857 = new BitSet(new long[]{0x0000000000040000L});
-	public static final BitSet FOLLOW_BODY_in_createJavaScriptFunctionRule8873 = new BitSet(new long[]{0x0040000000000000L});
-	public static final BitSet FOLLOW_END_BODY_in_createJavaScriptFunctionRule8886 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_createJavaScriptFunctionRule8892 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CREATE_in_createFuzzyOperatorRule8914 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_createFuzzyOperatorRule8916 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L});
-	public static final BitSet FOLLOW_OPERATOR_in_createFuzzyOperatorRule8918 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createFuzzyOperatorRule8922 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
-	public static final BitSet FOLLOW_PARAMETERS_in_createFuzzyOperatorRule8947 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_parameterRule_in_createFuzzyOperatorRule8957 = new BitSet(new long[]{0x0100000040000000L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyOperatorRule8980 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_parameterRule_in_createFuzzyOperatorRule8984 = new BitSet(new long[]{0x0100000040000000L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_PRECONDITION_in_createFuzzyOperatorRule9009 = new BitSet(new long[]{0x0000000000002010L,0x1000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfOrConditionRule_in_createFuzzyOperatorRule9013 = new BitSet(new long[]{0x0100000000000000L});
-	public static final BitSet FOLLOW_EVALUATE_in_createFuzzyOperatorRule9028 = new BitSet(new long[]{0x0000000000002010L,0x0000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfExpressionRule_in_createFuzzyOperatorRule9032 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100080L});
-	public static final BitSet FOLLOW_POLYLINE_in_createFuzzyOperatorRule9051 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000000L});
-	public static final BitSet FOLLOW_LB_in_createFuzzyOperatorRule9054 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_createFuzzyOperatorRule9066 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyOperatorRule9070 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyOperatorRule9072 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyOperatorRule9076 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_createFuzzyOperatorRule9078 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyOperatorRule9100 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_createFuzzyOperatorRule9102 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyOperatorRule9106 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyOperatorRule9108 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyOperatorRule9112 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_createFuzzyOperatorRule9114 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_RB_in_createFuzzyOperatorRule9135 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_createFuzzyOperatorRule9142 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CREATE_in_createFuzzyEvaluatorRule9162 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_createFuzzyEvaluatorRule9164 = new BitSet(new long[]{0x0200000000000000L});
-	public static final BitSet FOLLOW_EVALUATOR_in_createFuzzyEvaluatorRule9166 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createFuzzyEvaluatorRule9170 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
-	public static final BitSet FOLLOW_PARAMETERS_in_createFuzzyEvaluatorRule9196 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_feParameterRule_in_createFuzzyEvaluatorRule9203 = new BitSet(new long[]{0x0100010040000000L,0x0000000000000010L,0x0000000004000200L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyEvaluatorRule9235 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_feParameterRule_in_createFuzzyEvaluatorRule9237 = new BitSet(new long[]{0x0100010040000000L,0x0000000000000010L,0x0000000004000200L});
-	public static final BitSet FOLLOW_PRECONDITION_in_createFuzzyEvaluatorRule9288 = new BitSet(new long[]{0x0000000000002010L,0x1000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfOrConditionRule_in_createFuzzyEvaluatorRule9292 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000004000000L});
-	public static final BitSet FOLLOW_feArraySortRule_in_createFuzzyEvaluatorRule9316 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000004000000L});
-	public static final BitSet FOLLOW_feDeriveRule_in_createFuzzyEvaluatorRule9351 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000004000000L});
-	public static final BitSet FOLLOW_feForAllRule_in_createFuzzyEvaluatorRule9387 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000004000000L});
-	public static final BitSet FOLLOW_EVALUATE_in_createFuzzyEvaluatorRule9421 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_createFuzzyEvaluatorRule9425 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100080L});
-	public static final BitSet FOLLOW_POLYLINE_in_createFuzzyEvaluatorRule9452 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000000L});
-	public static final BitSet FOLLOW_LB_in_createFuzzyEvaluatorRule9454 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_createFuzzyEvaluatorRule9461 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyEvaluatorRule9465 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyEvaluatorRule9467 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyEvaluatorRule9471 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_createFuzzyEvaluatorRule9473 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyEvaluatorRule9496 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_createFuzzyEvaluatorRule9498 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyEvaluatorRule9502 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyEvaluatorRule9504 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyEvaluatorRule9508 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_createFuzzyEvaluatorRule9510 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_RB_in_createFuzzyEvaluatorRule9530 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_createFuzzyEvaluatorRule9537 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CREATE_in_createFuzzyAggregatorRule9555 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_createFuzzyAggregatorRule9557 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_AGGREGATOR_in_createFuzzyAggregatorRule9559 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createFuzzyAggregatorRule9563 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
-	public static final BitSet FOLLOW_PARAMETERS_in_createFuzzyAggregatorRule9589 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_feParameterRule_in_createFuzzyAggregatorRule9596 = new BitSet(new long[]{0x0000010040000000L,0x0000000000000010L,0x0000000004000200L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyAggregatorRule9628 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_feParameterRule_in_createFuzzyAggregatorRule9630 = new BitSet(new long[]{0x0000010040000000L,0x0000000000000010L,0x0000000004000200L});
-	public static final BitSet FOLLOW_PRECONDITION_in_createFuzzyAggregatorRule9681 = new BitSet(new long[]{0x0000000000002010L,0x1000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfOrConditionRule_in_createFuzzyAggregatorRule9685 = new BitSet(new long[]{0x0000010000000000L,0x0000000000000010L,0x0000000004000000L});
-	public static final BitSet FOLLOW_feArraySortRule_in_createFuzzyAggregatorRule9708 = new BitSet(new long[]{0x0000010000000000L,0x0000000000000010L,0x0000000004000000L});
-	public static final BitSet FOLLOW_feForAllRule_in_createFuzzyAggregatorRule9745 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L});
-	public static final BitSet FOLLOW_feDeriveRule_in_createFuzzyAggregatorRule9780 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L});
-	public static final BitSet FOLLOW_EVALUATE_in_createFuzzyAggregatorRule9814 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_createFuzzyAggregatorRule9818 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100080L});
-	public static final BitSet FOLLOW_POLYLINE_in_createFuzzyAggregatorRule9845 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000000L});
-	public static final BitSet FOLLOW_LB_in_createFuzzyAggregatorRule9847 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_createFuzzyAggregatorRule9854 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyAggregatorRule9858 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyAggregatorRule9860 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyAggregatorRule9864 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_createFuzzyAggregatorRule9866 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyAggregatorRule9889 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_createFuzzyAggregatorRule9891 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyAggregatorRule9895 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzyAggregatorRule9897 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createFuzzyAggregatorRule9901 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_createFuzzyAggregatorRule9903 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_RB_in_createFuzzyAggregatorRule9923 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_createFuzzyAggregatorRule9930 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FOR_in_feForAllRule9952 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_ALL_in_feForAllRule9954 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feForAllRule9958 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-	public static final BitSet FOLLOW_IN_in_feForAllRule9960 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feForAllRule9964 = new BitSet(new long[]{0x0000000000000080L,0x0000210000000000L});
-	public static final BitSet FOLLOW_LB_in_feForAllRule9989 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_feForAllRule9994 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_feForAllRule10013 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_feForAllRule10017 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_RB_in_feForAllRule10021 = new BitSet(new long[]{0x0000000000000080L,0x0000200000000000L});
-	public static final BitSet FOLLOW_LOCALLY_in_feForAllRule10051 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_feForAllRule10055 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_feForAllRule10059 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feForAllRule10063 = new BitSet(new long[]{0x0000000040000080L});
-	public static final BitSet FOLLOW_COMMA_in_feForAllRule10077 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_feForAllRule10081 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_feForAllRule10085 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feForAllRule10089 = new BitSet(new long[]{0x0000000040000080L});
-	public static final BitSet FOLLOW_AGGREGATE_in_feForAllRule10105 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000200008001100L});
-	public static final BitSet FOLLOW_aggSpecRule_in_feForAllRule10109 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_feForAllRule10128 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000200008001100L});
-	public static final BitSet FOLLOW_aggSpecRule_in_feForAllRule10132 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_DERIVE_in_feDeriveRule10193 = new BitSet(new long[]{0x0000000400082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_feDeriveRule10199 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_feCumulateRule_in_feDeriveRule10215 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_feDeriveRule10232 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feDeriveRule10236 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CUMULATE_in_feCumulateRule10280 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_feCumulateRule10282 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feCumulateRule10286 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_feCumulateRule10288 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SORT_in_feArraySortRule10313 = new BitSet(new long[]{0x0000000000000000L,0x0000800000080000L});
-	public static final BitSet FOLLOW_feArrayIndexRule_in_feArraySortRule10319 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_BY_in_feArraySortRule10327 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_feSortFieldRule_in_feArraySortRule10330 = new BitSet(new long[]{0x0000000040010000L});
-	public static final BitSet FOLLOW_COMMA_in_feArraySortRule10341 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_feSortFieldRule_in_feArraySortRule10343 = new BitSet(new long[]{0x0000000040010000L});
-	public static final BitSet FOLLOW_AS_in_feArraySortRule10354 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feArraySortRule10358 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LP_in_feArraySortRule10384 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_feArrayIndexRule_in_feArraySortRule10386 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_feArraySortRule10396 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_feArrayIndexRule_in_feArraySortRule10398 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_feArraySortRule10405 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_BY_in_feArraySortRule10412 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_feSortFieldRule_in_feArraySortRule10414 = new BitSet(new long[]{0x0000000040010000L});
-	public static final BitSet FOLLOW_COMMA_in_feArraySortRule10425 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_feSortFieldRule_in_feArraySortRule10427 = new BitSet(new long[]{0x0000000040010000L});
-	public static final BitSet FOLLOW_AS_in_feArraySortRule10438 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_feArraySortRule10440 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feArraySortRule10444 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_feArraySortRule10472 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feArraySortRule10476 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_feArraySortRule10499 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_feArrayIndexRule10546 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-	public static final BitSet FOLLOW_IN_in_feArrayIndexRule10548 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feArrayIndexRule10552 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_feSortFieldRule10580 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L,0x0000001000000000L});
-	public static final BitSet FOLLOW_fieldRefRule_in_feSortFieldRule10585 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-	public static final BitSet FOLLOW_TYPE_in_feSortFieldRule10598 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feSortFieldRule10602 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000040000000000L});
-	public static final BitSet FOLLOW_VERSUS_in_feSortFieldRule10611 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_withSpec_in_aggSpecRule10652 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_aggSpecRule10662 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_aggSpecRule10669 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_aggSpecRule10673 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_WITH_in_withSpec10706 = new BitSet(new long[]{0x0000000000000000L,0x0084000000000000L,0x0000000020000400L});
-	public static final BitSet FOLLOW_SUM_in_withSpec10712 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_PRODUCT_in_withSpec10725 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_MINIMUM_in_withSpec10738 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_MAXIMUM_in_withSpec10751 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_feParameterRule10784 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-	public static final BitSet FOLLOW_TYPE_in_feParameterRule10803 = new BitSet(new long[]{0x0000000000004000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_feParameterRule10808 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ARRAY_in_feParameterRule10814 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_jfAndConditionRule_in_jfOrConditionRule10852 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_OR_in_jfOrConditionRule10869 = new BitSet(new long[]{0x0000000000002010L,0x1000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfAndConditionRule_in_jfOrConditionRule10873 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_jfNotConditionRule_in_jfAndConditionRule10939 = new BitSet(new long[]{0x0000000000000802L});
-	public static final BitSet FOLLOW_AND_in_jfAndConditionRule10957 = new BitSet(new long[]{0x0000000000002010L,0x1000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfNotConditionRule_in_jfAndConditionRule10961 = new BitSet(new long[]{0x0000000000000802L});
-	public static final BitSet FOLLOW_NOT_in_jfNotConditionRule11029 = new BitSet(new long[]{0x0000000000002010L,0x0000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jsfPredicateRule_in_jfNotConditionRule11040 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_jfExpressionRule_in_jsfPredicateRule11078 = new BitSet(new long[]{0x0080000000000002L,0x0801040004008200L});
-	public static final BitSet FOLLOW_jfCompareRule_in_jsfPredicateRule11098 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_inRangeRule_in_jsfPredicateRule11118 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_comparatorRule_in_jfCompareRule11165 = new BitSet(new long[]{0x0000000000002010L,0x0000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfExpressionRule_in_jfCompareRule11174 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_jfTermRule_in_jfExpressionRule11216 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_jfExpressionRule11239 = new BitSet(new long[]{0x0000000000002000L,0x0000800008080008L,0x0000000000001000L});
-	public static final BitSet FOLLOW_SUB_in_jfExpressionRule11245 = new BitSet(new long[]{0x0000000000002000L,0x0000800008080008L,0x0000000000001000L});
-	public static final BitSet FOLLOW_jfTermRule_in_jfExpressionRule11250 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_jfExpressionRule11268 = new BitSet(new long[]{0x0000000000002000L,0x0000800008080008L,0x0000000000001000L});
-	public static final BitSet FOLLOW_SUB_in_jfExpressionRule11274 = new BitSet(new long[]{0x0000000000002000L,0x0000800008080008L,0x0000000000001000L});
-	public static final BitSet FOLLOW_jfTermRule_in_jfExpressionRule11279 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_jfFactorRule_in_jfTermRule11319 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_MUL_in_jfTermRule11344 = new BitSet(new long[]{0x0000000000002000L,0x0000800008080008L,0x0000000000001000L});
-	public static final BitSet FOLLOW_DIV_in_jfTermRule11350 = new BitSet(new long[]{0x0000000000002000L,0x0000800008080008L,0x0000000000001000L});
-	public static final BitSet FOLLOW_jfFactorRule_in_jfTermRule11355 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_LP_in_jfFactorRule11396 = new BitSet(new long[]{0x0000000000002010L,0x1000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfOrConditionRule_in_jfFactorRule11400 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_jfFactorRule11404 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_INT_in_jfFactorRule11424 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_FLOAT_in_jfFactorRule11462 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_APEX_VALUE_in_jfFactorRule11499 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_QUOTED_VALUE_in_jfFactorRule11533 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_ID_in_jfFactorRule11566 = new BitSet(new long[]{0x0400000000000002L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_jfFactorRule11606 = new BitSet(new long[]{0x0000000000002010L,0x0000800008080008L,0x0000000008041000L});
-	public static final BitSet FOLLOW_jfFunctionParamsRule_in_jfFactorRule11611 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_jfFactorRule11617 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_EXP_in_jfFactorRule11644 = new BitSet(new long[]{0x0000000000002000L,0x0000800008080008L,0x0000000000001000L});
-	public static final BitSet FOLLOW_jfFactorRule_in_jfFactorRule11648 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_jfExpressionRule_in_jfFunctionParamsRule11702 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_jfFunctionParamsRule11722 = new BitSet(new long[]{0x0000000000002010L,0x0000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfExpressionRule_in_jfFunctionParamsRule11726 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_feTermRule_in_feExpressionRule11774 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_feExpressionRule11796 = new BitSet(new long[]{0x0000000000082000L,0x0000800008180008L,0x0000000000001100L});
-	public static final BitSet FOLLOW_SUB_in_feExpressionRule11802 = new BitSet(new long[]{0x0000000000082000L,0x0000800008180008L,0x0000000000001100L});
-	public static final BitSet FOLLOW_feTermRule_in_feExpressionRule11807 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_feExpressionRule11824 = new BitSet(new long[]{0x0000000000082000L,0x0000800008180008L,0x0000000000001100L});
-	public static final BitSet FOLLOW_SUB_in_feExpressionRule11830 = new BitSet(new long[]{0x0000000000082000L,0x0000800008180008L,0x0000000000001100L});
-	public static final BitSet FOLLOW_feTermRule_in_feExpressionRule11835 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_feFactorRule_in_feTermRule11874 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_MUL_in_feTermRule11899 = new BitSet(new long[]{0x0000000000082000L,0x0000800008180008L,0x0000000000001100L});
-	public static final BitSet FOLLOW_DIV_in_feTermRule11905 = new BitSet(new long[]{0x0000000000082000L,0x0000800008180008L,0x0000000000001100L});
-	public static final BitSet FOLLOW_feFactorRule_in_feTermRule11910 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_LP_in_feFactorRule11950 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_feFactorRule11954 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_feFactorRule11958 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_valueRule_in_feFactorRule11999 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_POS_in_feFactorRule12051 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_IF_ERROR_in_feFactorRule12104 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_feFactorRule12174 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_feFactorRule12178 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_feFactorRule12182 = new BitSet(new long[]{0x0000000000082000L,0x0000000008000008L,0x0000000000001000L});
-	public static final BitSet FOLLOW_valueRule_in_feFactorRule12186 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_feFactorRule12188 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_ID_in_feFactorRule12199 = new BitSet(new long[]{0x0400000000000002L,0x0000810000000000L});
-	public static final BitSet FOLLOW_feArrayRefRule_in_feFactorRule12205 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_LP_in_feFactorRule12266 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feFunctionParamsRule_in_feFactorRule12270 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_feFactorRule12274 = new BitSet(new long[]{0x0400000000000002L});
-	public static final BitSet FOLLOW_EXP_in_feFactorRule12297 = new BitSet(new long[]{0x0000000000082000L,0x0000800008180008L,0x0000000000001100L});
-	public static final BitSet FOLLOW_feFactorRule_in_feFactorRule12301 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_feExpressionRule_in_feFunctionParamsRule12383 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_feFunctionParamsRule12404 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_feFunctionParamsRule12408 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_LB_in_feArrayRefRule12442 = new BitSet(new long[]{0x0000000000082010L,0x0000800008180008L,0x0000000008001100L});
-	public static final BitSet FOLLOW_feExpressionRule_in_feArrayRefRule12447 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_RB_in_feArrayRefRule12452 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-	public static final BitSet FOLLOW_fieldRefRule_in_feArrayRefRule12462 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CREATE_in_createFuzzySetModelRule12482 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_createFuzzySetModelRule12484 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000800000L});
-	public static final BitSet FOLLOW_SET_in_createFuzzySetModelRule12486 = new BitSet(new long[]{0x0000000000000000L,0x0200000000000000L});
-	public static final BitSet FOLLOW_MODEL_in_createFuzzySetModelRule12488 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createFuzzySetModelRule12492 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_DEGREES_in_createFuzzySetModelRule12502 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createFuzzySetModelRule12508 = new BitSet(new long[]{0x0000020140000000L,0x8000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzySetModelRule12528 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createFuzzySetModelRule12532 = new BitSet(new long[]{0x0000020140000000L,0x8000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_DERIVED_in_createFuzzySetModelRule12558 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_DEGREES_in_createFuzzySetModelRule12560 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createFuzzySetModelRule12564 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_createFuzzySetModelRule12577 = new BitSet(new long[]{0x3000004000008010L,0x0030800008180008L,0x0000000808000000L});
-	public static final BitSet FOLLOW_ftExpressionRule_in_createFuzzySetModelRule12581 = new BitSet(new long[]{0x0000000140000000L,0x8000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_COMMA_in_createFuzzySetModelRule12595 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createFuzzySetModelRule12602 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_createFuzzySetModelRule12626 = new BitSet(new long[]{0x3000004000008010L,0x0030800008180008L,0x0000000808000000L});
-	public static final BitSet FOLLOW_ftExpressionRule_in_createFuzzySetModelRule12630 = new BitSet(new long[]{0x0000000140000000L,0x8000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_CONSTRAINT_in_createFuzzySetModelRule12649 = new BitSet(new long[]{0x0000000000002010L,0x1000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfOrConditionRule_in_createFuzzySetModelRule12653 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_fuzzyOperatorDefinitionRule_in_createFuzzySetModelRule12672 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_createFuzzySetModelRule12680 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_OPERATOR_in_fuzzyOperatorDefinitionRule12701 = new BitSet(new long[]{0x0000000000000800L,0x1000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_set_in_fuzzyOperatorDefinitionRule12705 = new BitSet(new long[]{0x0100000000000000L});
-	public static final BitSet FOLLOW_EVALUATE_in_fuzzyOperatorDefinitionRule12741 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_fuzzyOperatorDefinitionRule12745 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_fuzzyOperatorDefinitionRule12747 = new BitSet(new long[]{0x3000004000008010L,0x0030800008180008L,0x0000000808000000L});
-	public static final BitSet FOLLOW_ftConditionExpressionRule_in_fuzzyOperatorDefinitionRule12779 = new BitSet(new long[]{0x0100000000000002L});
-	public static final BitSet FOLLOW_CREATE_in_createGenericFuzzySetOperatorRule12840 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createGenericFuzzySetOperatorRule12844 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
-	public static final BitSet FOLLOW_FUZZY_in_createGenericFuzzySetOperatorRule12846 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L});
-	public static final BitSet FOLLOW_OPERATOR_in_createGenericFuzzySetOperatorRule12848 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createGenericFuzzySetOperatorRule12852 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
-	public static final BitSet FOLLOW_PARAMETERS_in_createGenericFuzzySetOperatorRule12873 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_parameterRule_in_createGenericFuzzySetOperatorRule12877 = new BitSet(new long[]{0x0100000040000000L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule12894 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_parameterRule_in_createGenericFuzzySetOperatorRule12899 = new BitSet(new long[]{0x0100000040000000L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_PRECONDITION_in_createGenericFuzzySetOperatorRule12919 = new BitSet(new long[]{0x0000000000002010L,0x1000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfOrConditionRule_in_createGenericFuzzySetOperatorRule12923 = new BitSet(new long[]{0x0100000000000000L});
-	public static final BitSet FOLLOW_EVALUATE_in_createGenericFuzzySetOperatorRule12939 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createGenericFuzzySetOperatorRule12943 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_AS_in_createGenericFuzzySetOperatorRule12977 = new BitSet(new long[]{0x0000000000002010L,0x0000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfExpressionRule_in_createGenericFuzzySetOperatorRule12981 = new BitSet(new long[]{0x0100000000000000L,0x0000000000000000L,0x0000000000100080L});
-	public static final BitSet FOLLOW_POLYLINE_in_createGenericFuzzySetOperatorRule13004 = new BitSet(new long[]{0x0000000000000000L,0x0000010000000000L});
-	public static final BitSet FOLLOW_LB_in_createGenericFuzzySetOperatorRule13006 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_createGenericFuzzySetOperatorRule13019 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13023 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13025 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13029 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_createGenericFuzzySetOperatorRule13031 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13053 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_createGenericFuzzySetOperatorRule13055 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13059 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13061 = new BitSet(new long[]{0x0000000000000010L,0x0000000008000008L,0x0000000008000000L});
-	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13065 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_createGenericFuzzySetOperatorRule13067 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_RB_in_createGenericFuzzySetOperatorRule13086 = new BitSet(new long[]{0x0100000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_createGenericFuzzySetOperatorRule13150 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ftTermRule_in_ftExpressionRule13184 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_ftExpressionRule13206 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_SUB_in_ftExpressionRule13212 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_ftTermRule_in_ftExpressionRule13217 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_ftExpressionRule13234 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_SUB_in_ftExpressionRule13240 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_ftTermRule_in_ftExpressionRule13245 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ftFactorRule_in_ftTermRule13282 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_MUL_in_ftTermRule13307 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_DIV_in_ftTermRule13313 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_ftFactorRule_in_ftTermRule13318 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_LP_in_ftFactorRule13350 = new BitSet(new long[]{0x3000004000008010L,0x0030800008180008L,0x0000000808000000L});
-	public static final BitSet FOLLOW_ftExpressionRule_in_ftFactorRule13354 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_ftFactorRule13357 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ftValueRule_in_ftFactorRule13377 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_ftFactorRule13404 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_ftFactorRule13436 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_ftFactorRule13438 = new BitSet(new long[]{0x3000004000008010L,0x0030800008180008L,0x0000000808040000L});
-	public static final BitSet FOLLOW_ftFunctionParamsRule_in_ftFactorRule13443 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_ftFactorRule13448 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_specialFunctionRule_in_ftFactorRule13463 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_ftValueRule13488 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FLOAT_in_ftValueRule13508 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ftExpressionRule_in_ftFunctionParamsRule13544 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_ftFunctionParamsRule13565 = new BitSet(new long[]{0x3000004000008010L,0x0030800008180008L,0x0000000808000000L});
-	public static final BitSet FOLLOW_ftExpressionRule_in_ftFunctionParamsRule13569 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule13619 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_ftConditionExpressionRule13643 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_SUB_in_ftConditionExpressionRule13649 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule13654 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ADD_in_ftConditionExpressionRule13673 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_SUB_in_ftConditionExpressionRule13679 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule13684 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000008000000L});
-	public static final BitSet FOLLOW_ftConditionFactorRule_in_ftConditionTermRule13719 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_MUL_in_ftConditionTermRule13736 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_DIV_in_ftConditionTermRule13742 = new BitSet(new long[]{0x3000004000008000L,0x0030800008180008L,0x0000000800000000L});
-	public static final BitSet FOLLOW_ftConditionFactorRule_in_ftConditionTermRule13747 = new BitSet(new long[]{0x0000800000000002L,0x0400000000000000L});
-	public static final BitSet FOLLOW_LP_in_ftConditionFactorRule13777 = new BitSet(new long[]{0x3000004000008010L,0x0030800008180008L,0x0000000808000000L});
-	public static final BitSet FOLLOW_ftConditionExpressionRule_in_ftConditionFactorRule13781 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_ftConditionFactorRule13784 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ftConditionValueRule_in_ftConditionFactorRule13802 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_ftConditionFactorRule13831 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-	public static final BitSet FOLLOW_FIELD_NAME_in_ftConditionFactorRule13835 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_ftConditionFactorRule13866 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_LP_in_ftConditionFactorRule13868 = new BitSet(new long[]{0x3000004000008010L,0x0030800008180008L,0x0000000808040000L});
-	public static final BitSet FOLLOW_ftConditionFunctionParamsRule_in_ftConditionFactorRule13873 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RP_in_ftConditionFactorRule13878 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_specialFunctionRule_in_ftConditionFactorRule13891 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_ftConditionValueRule13937 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FLOAT_in_ftConditionValueRule13957 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ftConditionExpressionRule_in_ftConditionFunctionParamsRule13995 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_COMMA_in_ftConditionFunctionParamsRule14014 = new BitSet(new long[]{0x3000004000008010L,0x0030800008180008L,0x0000000808000000L});
-	public static final BitSet FOLLOW_ftConditionExpressionRule_in_ftConditionFunctionParamsRule14018 = new BitSet(new long[]{0x0000000040000002L});
-	public static final BitSet FOLLOW_CREATE_in_createJavaFunctionRule14054 = new BitSet(new long[]{0x0000000000000000L,0x0000000200000000L});
-	public static final BitSet FOLLOW_JAVA_in_createJavaFunctionRule14056 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-	public static final BitSet FOLLOW_FUNCTION_in_createJavaFunctionRule14058 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createJavaFunctionRule14066 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
-	public static final BitSet FOLLOW_PARAMETERS_in_createJavaFunctionRule14099 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_parameterRule_in_createJavaFunctionRule14109 = new BitSet(new long[]{0x0000000044000000L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_COMMA_in_createJavaFunctionRule14131 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_parameterRule_in_createJavaFunctionRule14135 = new BitSet(new long[]{0x0000000044000000L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_PRECONDITION_in_createJavaFunctionRule14155 = new BitSet(new long[]{0x0000000000002010L,0x1000800008080008L,0x0000000008001000L});
-	public static final BitSet FOLLOW_jfOrConditionRule_in_createJavaFunctionRule14159 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_CLASS_in_createJavaFunctionRule14173 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-	public static final BitSet FOLLOW_ID_in_createJavaFunctionRule14177 = new BitSet(new long[]{0x0000000004000000L,0x0000000000400000L});
-	public static final BitSet FOLLOW_IMPORT_in_createJavaFunctionRule14212 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000001000L});
-	public static final BitSet FOLLOW_QUOTED_VALUE_in_createJavaFunctionRule14216 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_CLASS_in_createJavaFunctionRule14246 = new BitSet(new long[]{0x0000000000040000L});
-	public static final BitSet FOLLOW_BODY_in_createJavaFunctionRule14248 = new BitSet(new long[]{0x0040000000000000L});
-	public static final BitSet FOLLOW_END_BODY_in_createJavaFunctionRule14261 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_SC_in_createJavaFunctionRule14267 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_getCollectionRule_in_start81 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_saveAsRule_in_start107 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_joinOfCollectionsRule_in_start140 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_filterRule_in_start162 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_groupRule_in_start195 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_expandRule_in_start229 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_mergeCollectionsRule_in_start262 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_intersectCollectionsRule_in_start285 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_subtractCollectionsRule_in_start304 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_useDbRule_in_start324 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_trajectoryMatchingRule_in_start358 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_createFuzzyOperatorRule_in_start377 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_createJavaScriptFunctionRule_in_start392 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_getDictionaryRule_in_start404 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_lookupFromWebRule_in_start422 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_createFuzzyAggregatorRule_in_start440 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_createFuzzySetModelRule_in_start456 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_createGenericFuzzySetOperatorRule_in_start471 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_createJavaFunctionRule_in_start481 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_createFuzzyEvaluatorRule_in_start496 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_createGenericFuzzyEvaluatorRule_in_start510 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_test_in_start523 = new BitSet(new long[]{0x0800000200000000L,0x0101002040003002L,0x0010041040200000L});
+	public static final BitSet FOLLOW_EOF_in_start559 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_XXX_in_test570 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_test572 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_collectionReferenceRule596 = new BitSet(new long[]{0x0000000000030002L});
+	public static final BitSet FOLLOW_AT_in_collectionReferenceRule606 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_collectionReferenceRule610 = new BitSet(new long[]{0x0000000000010002L});
+	public static final BitSet FOLLOW_AS_in_collectionReferenceRule623 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_collectionReferenceRule627 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FIELD_NAME_in_fieldRefRule674 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+	public static final BitSet FOLLOW_BUILD_in_buildActionRule714 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
+	public static final BitSet FOLLOW_objectStructureRule_in_buildActionRule736 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ADD_ST_in_buildActionRule746 = new BitSet(new long[]{0x8000000000000000L});
+	public static final BitSet FOLLOW_FIELDS_in_buildActionRule748 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
+	public static final BitSet FOLLOW_objectStructureRule_in_buildActionRule758 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_REMOVE_in_buildActionRule770 = new BitSet(new long[]{0x8000000000000000L});
+	public static final BitSet FOLLOW_FIELDS_in_buildActionRule772 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
+	public static final BitSet FOLLOW_LBR_in_buildActionRule777 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_buildActionRule781 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000010000L});
+	public static final BitSet FOLLOW_COMMA_in_buildActionRule798 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_buildActionRule802 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000010000L});
+	public static final BitSet FOLLOW_RBR_in_buildActionRule822 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LBR_in_objectStructureRule847 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_outputFieldSpecRule_in_objectStructureRule858 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000010000L});
+	public static final BitSet FOLLOW_COMMA_in_objectStructureRule879 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_outputFieldSpecRule_in_objectStructureRule883 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000010000L});
+	public static final BitSet FOLLOW_RBR_in_objectStructureRule899 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_fieldRefRule_in_outputFieldSpecRule924 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_COLON_in_outputFieldSpecRule938 = new BitSet(new long[]{0x300000400008A000L,0x00C20C0020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_objectStructureRule_in_outputFieldSpecRule944 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_factorRule_in_outputFieldSpecRule983 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KEEPING_in_geometricOptionRule1073 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_GEOMETRY_in_geometricOptionRule1075 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SETTING_in_geometricOptionRule1107 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_GEOMETRY_in_geometricOptionRule1109 = new BitSet(new long[]{0x0000000000000080L,0x0000000000000001L,0x0000000800000100L});
+	public static final BitSet FOLLOW_POINT_in_geometricOptionRule1127 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_geometricOptionRule1129 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_geometricOptionRule1133 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_geometricOptionRule1135 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_geometricOptionRule1139 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_geometricOptionRule1141 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_AGGREGATE_in_geometricOptionRule1161 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_geometricOptionRule1163 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_geometricOptionRule1167 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_geometricOptionRule1169 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_fieldRefRule_in_geometricOptionRule1201 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TO_POLYLINE_in_geometricOptionRule1239 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_geometricOptionRule1241 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_geometricOptionRule1245 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_geometricOptionRule1247 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DROPPING_in_dropGeometryRule1293 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_GEOMETRY_in_dropGeometryRule1295 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CASES_in_caseClauseRule1346 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000200000000000L});
+	public static final BitSet FOLLOW_CASE_in_caseClauseRule1352 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000200000000000L});
+	public static final BitSet FOLLOW_whereCaseRule_in_caseClauseRule1375 = new BitSet(new long[]{0x0004000000000002L,0x0000004000000000L,0x0000200000000000L});
+	public static final BitSet FOLLOW_othersRule_in_caseClauseRule1404 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KEEP_in_othersRule1457 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000020L});
+	public static final BitSet FOLLOW_DROP_in_othersRule1463 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000020L});
+	public static final BitSet FOLLOW_OTHERS_in_othersRule1474 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_WHERE_in_whereCaseRule1499 = new BitSet(new long[]{0x700000400008A010L,0x40C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_orConditionRule_in_whereCaseRule1510 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L});
+	public static final BitSet FOLLOW_generateSectionRule_in_whereCaseRule1528 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_GENERATE_in_generateSectionRule1565 = new BitSet(new long[]{0x0008002002100442L,0x0000008000000000L,0x0000000008020000L});
+	public static final BitSet FOLLOW_geometricOptionRule_in_generateSectionRule1582 = new BitSet(new long[]{0x0008002002100442L,0x0000008000000000L,0x0000000000020000L});
+	public static final BitSet FOLLOW_checkForFuzzySetRule_in_generateSectionRule1599 = new BitSet(new long[]{0x0008002000100442L,0x0000008000000000L,0x0000000000020000L});
+	public static final BitSet FOLLOW_alphaCutRule_in_generateSectionRule1630 = new BitSet(new long[]{0x0008002000100042L,0x0000008000000000L,0x0000000000020000L});
+	public static final BitSet FOLLOW_buildActionRule_in_generateSectionRule1668 = new BitSet(new long[]{0x0008002000100042L,0x0000008000000000L,0x0000000000020000L});
+	public static final BitSet FOLLOW_keepDropFuzzySetsRule_in_generateSectionRule1688 = new BitSet(new long[]{0x0008000000000002L});
+	public static final BitSet FOLLOW_dropGeometryRule_in_generateSectionRule1706 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_andConditionRule_in_orConditionRule1767 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_OR_in_orConditionRule1782 = new BitSet(new long[]{0x700000400008A010L,0x40C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_andConditionRule_in_orConditionRule1786 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_notConditionRule_in_andConditionRule1843 = new BitSet(new long[]{0x0000000000000802L});
+	public static final BitSet FOLLOW_AND_in_andConditionRule1859 = new BitSet(new long[]{0x700000400008A010L,0x40C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_notConditionRule_in_andConditionRule1863 = new BitSet(new long[]{0x0000000000000802L});
+	public static final BitSet FOLLOW_NOT_in_notConditionRule1925 = new BitSet(new long[]{0x700000400008A010L,0x00C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_predicateRule_in_notConditionRule1937 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expressionRule_in_predicateRule1981 = new BitSet(new long[]{0x0080000000000002L,0x2004100010008200L});
+	public static final BitSet FOLLOW_compareRule_in_predicateRule2009 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_inRangeRule_in_predicateRule2038 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_nullPredicateRule_in_predicateRule2070 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_withPredicateRule_in_predicateRule2093 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_withoutPredicateRule_in_predicateRule2119 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_wukFuzzyPredicateRule_in_predicateRule2139 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_comparatorRule_in_compareRule2175 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020004000L});
+	public static final BitSet FOLLOW_expressionRule_in_compareRule2184 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INRANGE_in_inRangeRule2213 = new BitSet(new long[]{0x0000000000000000L,0x0002040000000000L});
+	public static final BitSet FOLLOW_LB_in_inRangeRule2219 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_LP_in_inRangeRule2225 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_inRangeRule2235 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_inRangeRule2237 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_inRangeRule2241 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000108000L});
+	public static final BitSet FOLLOW_RP_in_inRangeRule2250 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_RB_in_inRangeRule2256 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FIELD_in_nullPredicateRule2295 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_nullPredicateRule2299 = new BitSet(new long[]{0x0000000000000000L,0x0000000600000000L});
+	public static final BitSet FOLLOW_ISNULL_in_nullPredicateRule2305 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ISNOTNULL_in_nullPredicateRule2311 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_WITHIN_in_wukFuzzyPredicateRule2385 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_KNOWN_in_wukFuzzyPredicateRule2391 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_UNKNOWN_in_wukFuzzyPredicateRule2397 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_wukFuzzyPredicateRule2418 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
+	public static final BitSet FOLLOW_SETS_in_wukFuzzyPredicateRule2420 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_wukFuzzyPredicateRule2424 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_wukFuzzyPredicateRule2454 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_wukFuzzyPredicateRule2458 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_WITHOUT_in_withoutPredicateRule2511 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_withoutPredicateRule2522 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_withoutPredicateRule2540 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_withoutPredicateRule2544 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_WITH_in_withPredicateRule2582 = new BitSet(new long[]{0x0000000000004000L,0x0000000000100801L});
+	public static final BitSet FOLLOW_ID_in_withPredicateRule2597 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_ARRAY_in_withPredicateRule2603 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_GEOMETRY_in_withPredicateRule2609 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_withPredicateRule2630 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_withPredicateRule2653 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_withPredicateRule2657 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_termRule_in_expressionRule2704 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_expressionRule2727 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_SUB_in_expressionRule2733 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_termRule_in_expressionRule2738 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_expressionRule2756 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_SUB_in_expressionRule2762 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_termRule_in_expressionRule2767 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_factorRule_in_termRule2805 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_MUL_in_termRule2828 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_DIV_in_termRule2834 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_factorRule_in_termRule2839 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_LP_in_factorRule2872 = new BitSet(new long[]{0x700000400008A010L,0x40C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_orConditionRule_in_factorRule2876 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_factorRule2878 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_fieldRefRule_in_factorRule2902 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_valueRule_in_factorRule2929 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_ID_in_factorRule2957 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_factorRule2959 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020104000L});
+	public static final BitSet FOLLOW_functionParamsRule_in_factorRule2964 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_factorRule2968 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_specialFunctionRule_in_factorRule2985 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_LB_in_factorRule3017 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_factorRule_in_factorRule3021 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_COMMA_in_factorRule3048 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_factorRule_in_factorRule3052 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_factorRule3091 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_EXP_in_factorRule3104 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_factorRule_in_factorRule3108 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_MEMBERSHIP_TO_in_specialFunctionRule3159 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_specialFunctionRule3162 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_specialFunctionRule3166 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_specialFunctionRule3168 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EXTENT_in_specialFunctionRule3199 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_specialFunctionRule3207 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_specialFunctionRule3211 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_specialFunctionRule3213 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DEGREE_in_specialFunctionRule3244 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_specialFunctionRule3252 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_specialFunctionRule3256 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L,0x0000000000100000L});
+	public static final BitSet FOLLOW_FIELD_NAME_in_specialFunctionRule3260 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_specialFunctionRule3263 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_HASH_NAME_in_specialFunctionRule3290 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+	public static final BitSet FOLLOW_FIELD_NAME_in_specialFunctionRule3301 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_MEMBERSHIP_ARRAY_in_specialFunctionRule3330 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_specialFunctionRule3333 = new BitSet(new long[]{0x0000000000000200L,0x0000040000100000L});
+	public static final BitSet FOLLOW_ALL_in_specialFunctionRule3368 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_specialFunctionRule3415 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+	public static final BitSet FOLLOW_FROM_ARRAY_in_specialFunctionRule3417 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_specialFunctionRule3421 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_LB_in_specialFunctionRule3446 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_specialFunctionRule3450 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3490 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_specialFunctionRule3494 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_specialFunctionRule3537 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_specialFunctionRule3544 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EXTRACT_ARRAY_in_specialFunctionRule3550 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_specialFunctionRule3554 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_specialFunctionRule3558 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+	public static final BitSet FOLLOW_FROM_ARRAY_in_specialFunctionRule3560 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_specialFunctionRule3564 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_specialFunctionRule3566 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IF_in_specialFunctionRule3575 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_specialFunctionRule3577 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_specialFunctionRule3579 = new BitSet(new long[]{0x700000400008A010L,0x40C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_orConditionRule_in_specialFunctionRule3583 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_specialFunctionRule3585 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3614 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020004000L});
+	public static final BitSet FOLLOW_restrictedExpressionRule_in_specialFunctionRule3618 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3624 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020004000L});
+	public static final BitSet FOLLOW_restrictedExpressionRule_in_specialFunctionRule3628 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_specialFunctionRule3630 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IF_ERROR_in_specialFunctionRule3656 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_specialFunctionRule3662 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020004000L});
+	public static final BitSet FOLLOW_restrictedExpressionRule_in_specialFunctionRule3666 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3668 = new BitSet(new long[]{0x0000000000082000L,0x0000000020000008L,0x0000000000004000L});
+	public static final BitSet FOLLOW_valueRule_in_specialFunctionRule3672 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_specialFunctionRule3674 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TRANSLATE_in_specialFunctionRule3685 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_specialFunctionRule3691 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020004000L});
+	public static final BitSet FOLLOW_restrictedExpressionRule_in_specialFunctionRule3695 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3697 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_specialFunctionRule3701 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3721 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_BOOLEAN_in_specialFunctionRule3725 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_COMMA_in_specialFunctionRule3746 = new BitSet(new long[]{0x0000000000002000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_APEX_VALUE_in_specialFunctionRule3751 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_QUOTED_VALUE_in_specialFunctionRule3757 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_specialFunctionRule3766 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_arrayFunctionRule_in_specialFunctionRule3779 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_valueRule3833 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FLOAT_in_valueRule3853 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_BOOLEAN_in_valueRule3872 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_APEX_VALUE_in_valueRule3889 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_QUOTED_VALUE_in_valueRule3903 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ARRAY_FUNCTION_in_arrayFunctionRule3931 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_arrayFunctionRule3971 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_arrayFunctionRule4000 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_LB_in_arrayFunctionRule4021 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020004000L});
+	public static final BitSet FOLLOW_restrictedExpressionRule_in_arrayFunctionRule4025 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule4040 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020004000L});
+	public static final BitSet FOLLOW_restrictedExpressionRule_in_arrayFunctionRule4044 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_arrayFunctionRule4068 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule4076 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_arrayFunctionRule4080 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule4108 = new BitSet(new long[]{0x0001000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_arrayFunctionRule4114 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule4136 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_arrayFunctionRule4140 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_DOCUMENTS_in_arrayFunctionRule4172 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule4195 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_arrayFunctionRule4199 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_COMMA_in_arrayFunctionRule4218 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_arrayFunctionRule4222 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_arrayFunctionRule4260 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_restrictedTermRule_in_restrictedExpressionRule4295 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_restrictedExpressionRule4318 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_SUB_in_restrictedExpressionRule4324 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_restrictedTermRule_in_restrictedExpressionRule4329 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_restrictedExpressionRule4347 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_SUB_in_restrictedExpressionRule4353 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_restrictedTermRule_in_restrictedExpressionRule4358 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_restrictedFactorRule_in_restrictedTermRule4396 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_MUL_in_restrictedTermRule4419 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_DIV_in_restrictedTermRule4425 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_restrictedFactorRule_in_restrictedTermRule4430 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_LP_in_restrictedFactorRule4464 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020004000L});
+	public static final BitSet FOLLOW_restrictedExpressionRule_in_restrictedFactorRule4468 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_restrictedFactorRule4470 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_fieldRefRule_in_restrictedFactorRule4488 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_valueRule_in_restrictedFactorRule4515 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_ID_in_restrictedFactorRule4543 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_restrictedFactorRule4545 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020104000L});
+	public static final BitSet FOLLOW_functionParamsRule_in_restrictedFactorRule4550 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_restrictedFactorRule4554 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_specialFunctionRule_in_restrictedFactorRule4573 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_LB_in_restrictedFactorRule4604 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_restrictedFactorRule_in_restrictedFactorRule4608 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_COMMA_in_restrictedFactorRule4630 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_restrictedFactorRule_in_restrictedFactorRule4634 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_restrictedFactorRule4668 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_EXP_in_restrictedFactorRule4680 = new BitSet(new long[]{0x300000400008A000L,0x00C2040020710009L,0x0000002000004000L});
+	public static final BitSet FOLLOW_restrictedFactorRule_in_restrictedFactorRule4684 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_restrictedExpressionRule_in_functionParamsRule4739 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_functionParamsRule4757 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020004000L});
+	public static final BitSet FOLLOW_restrictedExpressionRule_in_functionParamsRule4761 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_EQ_in_comparatorRule4805 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_NEQ_in_comparatorRule4815 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LT_in_comparatorRule4825 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_GT_in_comparatorRule4835 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LE_in_comparatorRule4845 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_GE_in_comparatorRule4855 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ADD_in_numericRule4895 = new BitSet(new long[]{0x0000000000000000L,0x0000000020000008L});
+	public static final BitSet FOLLOW_SUB_in_numericRule4901 = new BitSet(new long[]{0x0000000000000000L,0x0000000020000008L});
+	public static final BitSet FOLLOW_FLOAT_in_numericRule4914 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_numericRule4920 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CHECK_FOR_in_checkForFuzzySetRule4949 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100100L});
+	public static final BitSet FOLLOW_ID_in_checkForFuzzySetRule4953 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_checkForFuzzySetRule4956 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_SET_in_checkForFuzzySetRule4958 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_checkForFuzzySetRule4962 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000080000000000L});
+	public static final BitSet FOLLOW_USING_in_checkForFuzzySetRule4964 = new BitSet(new long[]{0x0000000000000000L,0x4002000000900000L});
+	public static final BitSet FOLLOW_usingOrConditionRule_in_checkForFuzzySetRule4969 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_checkForFuzzySetRule5017 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100100L});
+	public static final BitSet FOLLOW_ID_in_checkForFuzzySetRule5021 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_checkForFuzzySetRule5024 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_SET_in_checkForFuzzySetRule5026 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_checkForFuzzySetRule5030 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000080000000000L});
+	public static final BitSet FOLLOW_USING_in_checkForFuzzySetRule5032 = new BitSet(new long[]{0x0000000000000000L,0x4002000000900000L});
+	public static final BitSet FOLLOW_usingOrConditionRule_in_checkForFuzzySetRule5036 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_usingAndConditionRule_in_usingOrConditionRule5068 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_OR_in_usingOrConditionRule5083 = new BitSet(new long[]{0x0000000000000000L,0x4002000000900000L});
+	public static final BitSet FOLLOW_usingAndConditionRule_in_usingOrConditionRule5087 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_usingNotConditionRule_in_usingAndConditionRule5149 = new BitSet(new long[]{0x0000000000000802L});
+	public static final BitSet FOLLOW_AND_in_usingAndConditionRule5165 = new BitSet(new long[]{0x0000000000000000L,0x4002000000900000L});
+	public static final BitSet FOLLOW_usingNotConditionRule_in_usingAndConditionRule5169 = new BitSet(new long[]{0x0000000000000802L});
+	public static final BitSet FOLLOW_NOT_in_usingNotConditionRule5231 = new BitSet(new long[]{0x0000000000000000L,0x0002000000900000L});
+	public static final BitSet FOLLOW_usingPredicateRule_in_usingNotConditionRule5243 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LP_in_usingPredicateRule5275 = new BitSet(new long[]{0x0000000000000000L,0x4002000000900000L});
+	public static final BitSet FOLLOW_usingOrConditionRule_in_usingPredicateRule5279 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_usingPredicateRule5281 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_usingPredicateRule5303 = new BitSet(new long[]{0x0000000000000002L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_usingPredicateRule5306 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020104000L});
+	public static final BitSet FOLLOW_functionParamsRule_in_usingPredicateRule5311 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_usingPredicateRule5315 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IF_FAILS_in_usingPredicateRule5340 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_usingPredicateRule5342 = new BitSet(new long[]{0x0000000000000000L,0x4002000000900000L});
+	public static final BitSet FOLLOW_usingOrConditionRule_in_usingPredicateRule5350 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_usingPredicateRule5352 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_usingPredicateRule5356 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_usingPredicateRule5368 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ALPHACUT_in_alphaCutRule5384 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_alphaCutRule5389 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_ON_in_alphaCutRule5391 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_alphaCutRule5395 = new BitSet(new long[]{0x0000000040000002L,0x0000000000000001L});
+	public static final BitSet FOLLOW_FIELD_NAME_in_alphaCutRule5399 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_alphaCutRule5441 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_alphaCutRule5445 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_ON_in_alphaCutRule5447 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_alphaCutRule5451 = new BitSet(new long[]{0x0000000040000002L,0x0000000000000001L});
+	public static final BitSet FOLLOW_FIELD_NAME_in_alphaCutRule5455 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_DEFUZZIFY_in_keepDropFuzzySetsRule5493 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DROPPING_in_keepDropFuzzySetsRule5512 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_ALL_in_keepDropFuzzySetsRule5514 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_keepDropFuzzySetsRule5516 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
+	public static final BitSet FOLLOW_SETS_in_keepDropFuzzySetsRule5518 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KEEPING_in_keepDropFuzzySetsRule5530 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_ALL_in_keepDropFuzzySetsRule5532 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_keepDropFuzzySetsRule5534 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
+	public static final BitSet FOLLOW_SETS_in_keepDropFuzzySetsRule5536 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DROPPING_in_keepDropFuzzySetsRule5549 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_keepDropFuzzySetsRule5551 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
+	public static final BitSet FOLLOW_SETS_in_keepDropFuzzySetsRule5553 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_keepDropFuzzySetsRule5557 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_keepDropFuzzySetsRule5571 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_keepDropFuzzySetsRule5575 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_KEEPING_in_keepDropFuzzySetsRule5600 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_keepDropFuzzySetsRule5602 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
+	public static final BitSet FOLLOW_SETS_in_keepDropFuzzySetsRule5604 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_keepDropFuzzySetsRule5608 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_keepDropFuzzySetsRule5623 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_keepDropFuzzySetsRule5627 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_ADD_ST_in_addFieldsRule5668 = new BitSet(new long[]{0x8000000000000000L});
+	public static final BitSet FOLLOW_FIELDS_in_addFieldsRule5670 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
+	public static final BitSet FOLLOW_LBR_in_addFieldsRule5697 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_addFieldsRule5705 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_COLON_in_addFieldsRule5707 = new BitSet(new long[]{0x300040400008A000L,0x00E2040064710009L,0x0000002000004010L});
+	public static final BitSet FOLLOW_insertFieldRule_in_addFieldsRule5711 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000010000L});
+	public static final BitSet FOLLOW_COMMA_in_addFieldsRule5730 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_addFieldsRule5734 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_COLON_in_addFieldsRule5736 = new BitSet(new long[]{0x300040400008A000L,0x00E2040064710009L,0x0000002000004010L});
+	public static final BitSet FOLLOW_insertFieldRule_in_addFieldsRule5740 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000010000L});
+	public static final BitSet FOLLOW_RBR_in_addFieldsRule5758 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_spatialFunctionRule_in_insertFieldRule5781 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_restrictedFactorRule_in_insertFieldRule5796 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DISTANCE_in_spatialFunctionRule5835 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_spatialFunctionRule5837 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_spatialFunctionRule5841 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_spatialFunctionRule5843 = new BitSet(new long[]{0x0080000000000002L,0x2004100000008200L});
+	public static final BitSet FOLLOW_comparatorRule_in_spatialFunctionRule5849 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_spatialFunctionRule5853 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ORIENTATION_in_spatialFunctionRule5877 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_spatialFunctionRule5879 = new BitSet(new long[]{0x0000000000000000L,0x0000200000000000L,0x0000000000080000L});
+	public static final BitSet FOLLOW_LEFT_in_spatialFunctionRule5885 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RIGHT_in_spatialFunctionRule5891 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_COMMA_in_spatialFunctionRule5897 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_spatialFunctionRule5902 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_COLON_in_spatialFunctionRule5904 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_spatialFunctionRule5908 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_spatialFunctionRule5913 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INCLUDED_in_spatialFunctionRule5925 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_spatialFunctionRule5927 = new BitSet(new long[]{0x0000000000000000L,0x0000200000000000L,0x0000000000080000L});
+	public static final BitSet FOLLOW_LEFT_in_spatialFunctionRule5933 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RIGHT_in_spatialFunctionRule5939 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_spatialFunctionRule5942 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_MEET_in_spatialFunctionRule5974 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INTERSECT_in_spatialFunctionRule6021 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SET_in_setFuzzySetsRule6084 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_setFuzzySetsRule6086 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
+	public static final BitSet FOLLOW_SETS_in_setFuzzySetsRule6088 = new BitSet(new long[]{0x0000000000000000L,0x00002040000E0000L,0x0000000000080000L});
+	public static final BitSet FOLLOW_KEEP_in_setFuzzySetsRule6096 = new BitSet(new long[]{0x0000000000000200L,0x0000200000000000L,0x0000000000080000L});
+	public static final BitSet FOLLOW_ALL_in_setFuzzySetsRule6133 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000040000L});
+	public static final BitSet FOLLOW_resolvingRule_in_setFuzzySetsRule6169 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LEFT_in_setFuzzySetsRule6187 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_RIGHT_in_setFuzzySetsRule6223 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_addFuzzySetRule_in_setFuzzySetsRule6254 = new BitSet(new long[]{0x0000000040000002L,0x0000000000000000L,0x0000000000040000L});
+	public static final BitSet FOLLOW_COMMA_in_setFuzzySetsRule6263 = new BitSet(new long[]{0x0000000000000000L,0x00002000000E0000L,0x0000000000080000L});
+	public static final BitSet FOLLOW_addFuzzySetRule_in_setFuzzySetsRule6265 = new BitSet(new long[]{0x0000000040000002L,0x0000000000000000L,0x0000000000040000L});
+	public static final BitSet FOLLOW_resolvingRule_in_setFuzzySetsRule6281 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_RESOLVING_in_resolvingRule6308 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000800000000000L});
+	public static final BitSet FOLLOW_WITH_in_resolvingRule6310 = new BitSet(new long[]{0x0000000000000800L,0x0000020000000004L,0x0000000000000004L});
+	public static final BitSet FOLLOW_AND_in_resolvingRule6322 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_OR_in_resolvingRule6328 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FIRST_in_resolvingRule6334 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LAST_in_resolvingRule6340 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LEFT_in_addFuzzySetRule6372 = new BitSet(new long[]{0x0000000000000200L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RIGHT_in_addFuzzySetRule6378 = new BitSet(new long[]{0x0000000000000200L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ALL_in_addFuzzySetRule6389 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_addFuzzySetRule6425 = new BitSet(new long[]{0x0000000000010002L});
+	public static final BitSet FOLLOW_AS_in_addFuzzySetRule6429 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_addFuzzySetRule6433 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_HOWINCLUDE_in_addFuzzySetRule6464 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_addFuzzySetRule6468 = new BitSet(new long[]{0x0000000000000000L,0x0000200000000000L,0x0000000000080000L});
+	public static final BitSet FOLLOW_LEFT_in_addFuzzySetRule6474 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RIGHT_in_addFuzzySetRule6480 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_addFuzzySetRule6484 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_addFuzzySetRule6486 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_addFuzzySetRule6490 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_HOWMEET_in_addFuzzySetRule6503 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_addFuzzySetRule6508 = new BitSet(new long[]{0x0000000000000000L,0x0000200000000000L,0x0000000000080000L});
+	public static final BitSet FOLLOW_LEFT_in_addFuzzySetRule6514 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RIGHT_in_addFuzzySetRule6520 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_addFuzzySetRule6524 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_addFuzzySetRule6527 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_addFuzzySetRule6531 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_HOWINTERSECT_in_addFuzzySetRule6554 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_addFuzzySetRule6557 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_addFuzzySetRule6559 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_addFuzzySetRule6572 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_addFuzzySetRule6576 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_GET_in_getCollectionRule6600 = new BitSet(new long[]{0x0000000008000000L});
+	public static final BitSet FOLLOW_COLLECTION_in_getCollectionRule6602 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100040L});
+	public static final BitSet FOLLOW_ID_in_getCollectionRule6614 = new BitSet(new long[]{0x0000000000020000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_AT_in_getCollectionRule6618 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_getCollectionRule6622 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_FROM_WEB_in_getCollectionRule6653 = new BitSet(new long[]{0x0000000000002000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_APEX_VALUE_in_getCollectionRule6658 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_QUOTED_VALUE_in_getCollectionRule6664 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_getCollectionRule6677 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_GET_in_getDictionaryRule6698 = new BitSet(new long[]{0x0000040000000000L});
+	public static final BitSet FOLLOW_DICTIONARY_in_getDictionaryRule6700 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_getDictionaryRule6711 = new BitSet(new long[]{0x0000000000020000L});
+	public static final BitSet FOLLOW_AT_in_getDictionaryRule6713 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_getDictionaryRule6717 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_getDictionaryRule6719 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_getDictionaryRule6723 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_getDictionaryRule6752 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SAVE_in_saveAsRule6771 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_saveAsRule6773 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_saveAsRule6783 = new BitSet(new long[]{0x0000000000020000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_AT_in_saveAsRule6787 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_saveAsRule6791 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_saveAsRule6811 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LOOKUP_in_lookupFromWebRule6827 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_FROM_WEB_in_lookupFromWebRule6829 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+	public static final BitSet FOLLOW_forEachRule_in_lookupFromWebRule6845 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_lookupFromWebRule6858 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FOR_in_forEachRule6878 = new BitSet(new long[]{0x0020000000000000L});
+	public static final BitSet FOLLOW_EACH_in_forEachRule6880 = new BitSet(new long[]{0x700000400008A010L,0x40C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_orConditionRule_in_forEachRule6884 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_CALL_in_forEachRule6889 = new BitSet(new long[]{0x300000400008A010L,0x00C2040020710009L,0x0000002020004000L});
+	public static final BitSet FOLLOW_expressionRule_in_forEachRule6893 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_JOIN_in_joinOfCollectionsRule6916 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L});
+	public static final BitSet FOLLOW_OF_in_joinOfCollectionsRule6918 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_COLLECTIONS_in_joinOfCollectionsRule6920 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_collectionReferenceRule_in_joinOfCollectionsRule6929 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_joinOfCollectionsRule6933 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_collectionReferenceRule_in_joinOfCollectionsRule6937 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000002420001L});
+	public static final BitSet FOLLOW_ON_in_joinOfCollectionsRule6949 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_GEOMETRY_in_joinOfCollectionsRule6951 = new BitSet(new long[]{0x0000400000000000L,0x0020000044000000L,0x0000000000000010L});
+	public static final BitSet FOLLOW_spatialFunctionRule_in_joinOfCollectionsRule6955 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000002420000L});
+	public static final BitSet FOLLOW_SET_in_joinOfCollectionsRule6987 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_GEOMETRY_in_joinOfCollectionsRule6989 = new BitSet(new long[]{0x0000000000000200L,0x0000200080000000L,0x0000000000080000L});
+	public static final BitSet FOLLOW_INTERSECTION_in_joinOfCollectionsRule6995 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000002420000L});
+	public static final BitSet FOLLOW_RIGHT_in_joinOfCollectionsRule7001 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000002420000L});
+	public static final BitSet FOLLOW_LEFT_in_joinOfCollectionsRule7007 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000002420000L});
+	public static final BitSet FOLLOW_ALL_in_joinOfCollectionsRule7013 = new BitSet(new long[]{0x0000000001800040L,0x0000000000000400L,0x0000000002420000L});
+	public static final BitSet FOLLOW_addFieldsRule_in_joinOfCollectionsRule7033 = new BitSet(new long[]{0x0000000001800000L,0x0000000000000400L,0x0000000002420000L});
+	public static final BitSet FOLLOW_setFuzzySetsRule_in_joinOfCollectionsRule7093 = new BitSet(new long[]{0x0000000001800000L,0x0000000000000400L,0x0000000000420000L});
+	public static final BitSet FOLLOW_caseClauseRule_in_joinOfCollectionsRule7135 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000420000L});
+	public static final BitSet FOLLOW_generateSectionRule_in_joinOfCollectionsRule7178 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000420000L});
+	public static final BitSet FOLLOW_REMOVE_in_joinOfCollectionsRule7216 = new BitSet(new long[]{0x0010000000000000L});
+	public static final BitSet FOLLOW_DUPLICATES_in_joinOfCollectionsRule7218 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_joinOfCollectionsRule7259 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FILTER_in_filterRule7288 = new BitSet(new long[]{0x0000000001800000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_caseClauseRule_in_filterRule7299 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000420000L});
+	public static final BitSet FOLLOW_generateSectionRule_in_filterRule7318 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000420000L});
+	public static final BitSet FOLLOW_REMOVE_in_filterRule7337 = new BitSet(new long[]{0x0010000000000000L});
+	public static final BitSet FOLLOW_DUPLICATES_in_filterRule7339 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_filterRule7360 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_GROUP_in_groupRule7381 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000080L});
+	public static final BitSet FOLLOW_groupPartitionRule_in_groupRule7406 = new BitSet(new long[]{0x0004000000000000L,0x0000004000000000L,0x0000000000400080L});
+	public static final BitSet FOLLOW_othersRule_in_groupRule7432 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_groupRule7456 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_PARTITION_in_groupPartitionRule7479 = new BitSet(new long[]{0x700000400008A010L,0x40C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_orConditionRule_in_groupPartitionRule7483 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_BY_in_groupPartitionRule7496 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_groupPartitionRule7500 = new BitSet(new long[]{0x0000000040000000L,0x0000000100000000L});
+	public static final BitSet FOLLOW_COMMA_in_groupPartitionRule7525 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_groupPartitionRule7529 = new BitSet(new long[]{0x0000000040000000L,0x0000000100000000L});
+	public static final BitSet FOLLOW_INTO_in_groupPartitionRule7551 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_groupPartitionRule7555 = new BitSet(new long[]{0x0004000000000002L,0x0000000000000400L,0x0000000000000008L});
+	public static final BitSet FOLLOW_DROP_in_groupPartitionRule7576 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_GROUPING_in_groupPartitionRule7578 = new BitSet(new long[]{0x8000000000000000L});
+	public static final BitSet FOLLOW_FIELDS_in_groupPartitionRule7580 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L,0x0000000000000008L});
+	public static final BitSet FOLLOW_ORDER_in_groupPartitionRule7602 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_BY_in_groupPartitionRule7604 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_sortingFieldRule_in_groupPartitionRule7608 = new BitSet(new long[]{0x0000000040000002L,0x0000004000000400L});
+	public static final BitSet FOLLOW_COMMA_in_groupPartitionRule7625 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_sortingFieldRule_in_groupPartitionRule7629 = new BitSet(new long[]{0x0000000040000002L,0x0000004000000400L});
+	public static final BitSet FOLLOW_KEEP_in_groupPartitionRule7648 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000008000000000L});
+	public static final BitSet FOLLOW_UNCOMPARABLE_in_groupPartitionRule7650 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000400L});
+	public static final BitSet FOLLOW_generateSectionRule_in_groupPartitionRule7681 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_fieldRefRule_in_sortingFieldRule7712 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000004000000000L});
+	public static final BitSet FOLLOW_TYPE_in_sortingFieldRule7716 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_sortingFieldRule7720 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000100000000000L});
+	public static final BitSet FOLLOW_VERSUS_in_sortingFieldRule7735 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EXPAND_in_expandRule7764 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000020000000000L});
+	public static final BitSet FOLLOW_unpackRule_in_expandRule7788 = new BitSet(new long[]{0x0004000000000000L,0x0000004000000000L,0x0000020000400000L});
+	public static final BitSet FOLLOW_othersRule_in_expandRule7820 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_expandRule7844 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_UNPACK_in_unpackRule7866 = new BitSet(new long[]{0x700000400008A010L,0x40C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_orConditionRule_in_unpackRule7871 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_ARRAY_in_unpackRule7878 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_unpackRule7882 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000400000000L});
+	public static final BitSet FOLLOW_TO_in_unpackRule7889 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_unpackRule7893 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_MERGE_in_mergeCollectionsRule7921 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_COLLECTIONS_in_mergeCollectionsRule7923 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_collectionReferenceRule_in_mergeCollectionsRule7937 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_mergeCollectionsRule7959 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_collectionReferenceRule_in_mergeCollectionsRule7963 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000420000L});
+	public static final BitSet FOLLOW_REMOVE_in_mergeCollectionsRule7984 = new BitSet(new long[]{0x0010000000000000L});
+	public static final BitSet FOLLOW_DUPLICATES_in_mergeCollectionsRule7986 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_mergeCollectionsRule8016 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INTERSECT_in_intersectCollectionsRule8036 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_COLLECTIONS_in_intersectCollectionsRule8038 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_collectionReferenceRule_in_intersectCollectionsRule8048 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_intersectCollectionsRule8050 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_collectionReferenceRule_in_intersectCollectionsRule8054 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_intersectCollectionsRule8066 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SUBTRACT_in_subtractCollectionsRule8088 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_COLLECTIONS_in_subtractCollectionsRule8090 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_collectionReferenceRule_in_subtractCollectionsRule8098 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_subtractCollectionsRule8100 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_collectionReferenceRule_in_subtractCollectionsRule8104 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_subtractCollectionsRule8116 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_USE_in_useDbRule8143 = new BitSet(new long[]{0x0000000800000000L});
+	public static final BitSet FOLLOW_DB_in_useDbRule8153 = new BitSet(new long[]{0x0000000000002000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_useDbRule8158 = new BitSet(new long[]{0x0000000040010000L,0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule8164 = new BitSet(new long[]{0x0000000040010000L,0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_AS_in_useDbRule8188 = new BitSet(new long[]{0x0000000000002000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_useDbRule8193 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule8199 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_COMMA_in_useDbRule8280 = new BitSet(new long[]{0x0000000800000000L});
+	public static final BitSet FOLLOW_DB_in_useDbRule8282 = new BitSet(new long[]{0x0000000000002000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_useDbRule8287 = new BitSet(new long[]{0x0000000040010000L,0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule8293 = new BitSet(new long[]{0x0000000040010000L,0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_AS_in_useDbRule8316 = new BitSet(new long[]{0x0000000000002000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_useDbRule8321 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule8327 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_ON_in_useDbRule8405 = new BitSet(new long[]{0x0000001000000000L,0x0000000000000000L,0x0000000001000000L});
+	public static final BitSet FOLLOW_DEFAULT_in_useDbRule8417 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
+	public static final BitSet FOLLOW_SERVER_in_useDbRule8419 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SERVER_in_useDbRule8431 = new BitSet(new long[]{0x0000000000002000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_useDbRule8446 = new BitSet(new long[]{0x0000000000002000L,0x0000000000100000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule8452 = new BitSet(new long[]{0x0000000000002000L,0x0000000000100000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_ID_in_useDbRule8476 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_APEX_VALUE_in_useDbRule8482 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_useDbRule8507 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TRAJECTORY_in_trajectoryMatchingRule8532 = new BitSet(new long[]{0x0000000000000000L,0x0008000000000000L});
+	public static final BitSet FOLLOW_MATCHING_in_trajectoryMatchingRule8534 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_collectionReferenceRule_in_trajectoryMatchingRule8544 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_trajectoryMatchingRule8546 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_collectionReferenceRule_in_trajectoryMatchingRule8550 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000080L});
+	public static final BitSet FOLLOW_trajectoryPartitionRule_in_trajectoryMatchingRule8566 = new BitSet(new long[]{0x0004000000000000L,0x0000004000000000L,0x0000000000400080L});
+	public static final BitSet FOLLOW_othersRule_in_trajectoryMatchingRule8606 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_trajectoryMatchingRule8648 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_PARTITION_in_trajectoryPartitionRule8676 = new BitSet(new long[]{0x700000400008A010L,0x40C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_orConditionRule_in_trajectoryPartitionRule8686 = new BitSet(new long[]{0x0000000000000000L,0x0008000000000000L});
+	public static final BitSet FOLLOW_partitionMatchingRule_in_trajectoryPartitionRule8707 = new BitSet(new long[]{0x0000000000000002L,0x0008000000000000L});
+	public static final BitSet FOLLOW_MATCHING_in_partitionMatchingRule8744 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_partitionMatchingRule8748 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0004000000000000L});
+	public static final BitSet FOLLOW_WRT_in_partitionMatchingRule8755 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_partitionMatchingRule8759 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000100000000L});
+	public static final BitSet FOLLOW_THRESHOLD_in_partitionMatchingRule8766 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_partitionMatchingRule8768 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_partitionMatchingRule8772 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_partitionMatchingRule8775 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_partitionMatchingRule8779 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L,0x0000200000000000L});
+	public static final BitSet FOLLOW_WHERE_in_partitionMatchingRule8794 = new BitSet(new long[]{0x700000400008A010L,0x40C2050020710009L,0x0003812020004000L});
+	public static final BitSet FOLLOW_orConditionRule_in_partitionMatchingRule8798 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
+	public static final BitSet FOLLOW_INTO_in_partitionMatchingRule8822 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_partitionMatchingRule8826 = new BitSet(new long[]{0x0000000000000022L,0x0400000000000000L});
+	public static final BitSet FOLLOW_ADDING_in_partitionMatchingRule8849 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_partitionMatchingRule8853 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000400000000L});
+	public static final BitSet FOLLOW_TO_in_partitionMatchingRule8855 = new BitSet(new long[]{0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_INPUT_in_partitionMatchingRule8857 = new BitSet(new long[]{0x0000000000000002L,0x0400000000000000L});
+	public static final BitSet FOLLOW_MIN_SIMILARITY_in_partitionMatchingRule8879 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_partitionMatchingRule8883 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_parameterRule8931 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000004000000000L});
+	public static final BitSet FOLLOW_TYPE_in_parameterRule8947 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_parameterRule8951 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CREATE_in_createJavaScriptFunctionRule8975 = new BitSet(new long[]{0x0000000000000000L,0x0000001000000000L});
+	public static final BitSet FOLLOW_JAVASCRIPT_in_createJavaScriptFunctionRule8977 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+	public static final BitSet FOLLOW_FUNCTION_in_createJavaScriptFunctionRule8979 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createJavaScriptFunctionRule8987 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_PARAMETERS_in_createJavaScriptFunctionRule9021 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_parameterRule_in_createJavaScriptFunctionRule9031 = new BitSet(new long[]{0x0000000040040000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_COMMA_in_createJavaScriptFunctionRule9054 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_parameterRule_in_createJavaScriptFunctionRule9058 = new BitSet(new long[]{0x0000000040040000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_PRECONDITION_in_createJavaScriptFunctionRule9081 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_createJavaScriptFunctionRule9085 = new BitSet(new long[]{0x0000000000040000L});
+	public static final BitSet FOLLOW_BODY_in_createJavaScriptFunctionRule9101 = new BitSet(new long[]{0x0040000000000000L});
+	public static final BitSet FOLLOW_END_BODY_in_createJavaScriptFunctionRule9114 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_createJavaScriptFunctionRule9120 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CREATE_in_createFuzzyOperatorRule9142 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_createFuzzyOperatorRule9144 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
+	public static final BitSet FOLLOW_OPERATOR_in_createFuzzyOperatorRule9146 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createFuzzyOperatorRule9150 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_PARAMETERS_in_createFuzzyOperatorRule9175 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_parameterRule_in_createFuzzyOperatorRule9185 = new BitSet(new long[]{0x0100000040000000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyOperatorRule9208 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_parameterRule_in_createFuzzyOperatorRule9212 = new BitSet(new long[]{0x0100000040000000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_PRECONDITION_in_createFuzzyOperatorRule9237 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_createFuzzyOperatorRule9241 = new BitSet(new long[]{0x0100000000000000L});
+	public static final BitSet FOLLOW_EVALUATE_in_createFuzzyOperatorRule9256 = new BitSet(new long[]{0x0000000000002010L,0x0002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfExpressionRule_in_createFuzzyOperatorRule9260 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400200L});
+	public static final BitSet FOLLOW_POLYLINE_in_createFuzzyOperatorRule9279 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+	public static final BitSet FOLLOW_LB_in_createFuzzyOperatorRule9282 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_createFuzzyOperatorRule9294 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyOperatorRule9298 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyOperatorRule9300 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyOperatorRule9304 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_createFuzzyOperatorRule9306 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyOperatorRule9328 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_createFuzzyOperatorRule9330 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyOperatorRule9334 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyOperatorRule9336 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyOperatorRule9340 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_createFuzzyOperatorRule9342 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_createFuzzyOperatorRule9363 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_createFuzzyOperatorRule9370 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CREATE_in_createFuzzyEvaluatorRule9390 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_createFuzzyEvaluatorRule9392 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_EVALUATOR_in_createFuzzyEvaluatorRule9394 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createFuzzyEvaluatorRule9398 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_PARAMETERS_in_createFuzzyEvaluatorRule9424 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feParameterRule_in_createFuzzyEvaluatorRule9431 = new BitSet(new long[]{0x0100010040000000L,0x0000000000000010L,0x0000000010000800L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyEvaluatorRule9463 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feParameterRule_in_createFuzzyEvaluatorRule9465 = new BitSet(new long[]{0x0100010040000000L,0x0000000000000010L,0x0000000010000800L});
+	public static final BitSet FOLLOW_PRECONDITION_in_createFuzzyEvaluatorRule9516 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_createFuzzyEvaluatorRule9520 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000010000000L});
+	public static final BitSet FOLLOW_feArraySortRule_in_createFuzzyEvaluatorRule9544 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000010000000L});
+	public static final BitSet FOLLOW_feDeriveRule_in_createFuzzyEvaluatorRule9579 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000010000000L});
+	public static final BitSet FOLLOW_feForAllRule_in_createFuzzyEvaluatorRule9615 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000010000000L});
+	public static final BitSet FOLLOW_EVALUATE_in_createFuzzyEvaluatorRule9649 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_createFuzzyEvaluatorRule9653 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400200L});
+	public static final BitSet FOLLOW_POLYLINE_in_createFuzzyEvaluatorRule9680 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+	public static final BitSet FOLLOW_LB_in_createFuzzyEvaluatorRule9682 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_createFuzzyEvaluatorRule9689 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyEvaluatorRule9693 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyEvaluatorRule9695 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyEvaluatorRule9699 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_createFuzzyEvaluatorRule9701 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyEvaluatorRule9724 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_createFuzzyEvaluatorRule9726 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyEvaluatorRule9730 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyEvaluatorRule9732 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyEvaluatorRule9736 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_createFuzzyEvaluatorRule9738 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_createFuzzyEvaluatorRule9758 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_createFuzzyEvaluatorRule9765 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CREATE_in_createFuzzyAggregatorRule9784 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_createFuzzyAggregatorRule9786 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_AGGREGATOR_in_createFuzzyAggregatorRule9788 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createFuzzyAggregatorRule9792 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_PARAMETERS_in_createFuzzyAggregatorRule9818 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feParameterRule_in_createFuzzyAggregatorRule9825 = new BitSet(new long[]{0x0000010040000000L,0x0000000000000010L,0x0000000010000800L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyAggregatorRule9857 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feParameterRule_in_createFuzzyAggregatorRule9859 = new BitSet(new long[]{0x0000010040000000L,0x0000000000000010L,0x0000000010000800L});
+	public static final BitSet FOLLOW_PRECONDITION_in_createFuzzyAggregatorRule9910 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_createFuzzyAggregatorRule9914 = new BitSet(new long[]{0x0000010000000000L,0x0000000000000010L,0x0000000010000000L});
+	public static final BitSet FOLLOW_feArraySortRule_in_createFuzzyAggregatorRule9937 = new BitSet(new long[]{0x0000010000000000L,0x0000000000000010L,0x0000000010000000L});
+	public static final BitSet FOLLOW_feForAllRule_in_createFuzzyAggregatorRule9974 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L});
+	public static final BitSet FOLLOW_feDeriveRule_in_createFuzzyAggregatorRule10009 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L});
+	public static final BitSet FOLLOW_EVALUATE_in_createFuzzyAggregatorRule10043 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_createFuzzyAggregatorRule10047 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400200L});
+	public static final BitSet FOLLOW_POLYLINE_in_createFuzzyAggregatorRule10074 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+	public static final BitSet FOLLOW_LB_in_createFuzzyAggregatorRule10076 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_createFuzzyAggregatorRule10083 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyAggregatorRule10087 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyAggregatorRule10089 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyAggregatorRule10093 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_createFuzzyAggregatorRule10095 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyAggregatorRule10118 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_createFuzzyAggregatorRule10120 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyAggregatorRule10124 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzyAggregatorRule10126 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createFuzzyAggregatorRule10130 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_createFuzzyAggregatorRule10132 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_createFuzzyAggregatorRule10152 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_createFuzzyAggregatorRule10159 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FOR_in_feForAllRule10181 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_ALL_in_feForAllRule10183 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feForAllRule10187 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_IN_in_feForAllRule10189 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feForAllRule10193 = new BitSet(new long[]{0x0000000000000080L,0x0000840000000000L});
+	public static final BitSet FOLLOW_LB_in_feForAllRule10218 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feForAllRule10223 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_feForAllRule10242 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feForAllRule10246 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_feForAllRule10250 = new BitSet(new long[]{0x0000000000000080L,0x0000800000000000L});
+	public static final BitSet FOLLOW_LOCALLY_in_feForAllRule10280 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feForAllRule10284 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_feForAllRule10288 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feForAllRule10292 = new BitSet(new long[]{0x0000000040000080L});
+	public static final BitSet FOLLOW_COMMA_in_feForAllRule10306 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feForAllRule10310 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_feForAllRule10314 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feForAllRule10318 = new BitSet(new long[]{0x0000000040000080L});
+	public static final BitSet FOLLOW_AGGREGATE_in_feForAllRule10334 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000800020004400L});
+	public static final BitSet FOLLOW_aggSpecRule_in_feForAllRule10338 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_feForAllRule10357 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000800020004400L});
+	public static final BitSet FOLLOW_aggSpecRule_in_feForAllRule10361 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_DERIVE_in_feDeriveRule10422 = new BitSet(new long[]{0x0000000400082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feDeriveRule10428 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_feCumulateRule_in_feDeriveRule10444 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_feDeriveRule10461 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feDeriveRule10465 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CUMULATE_in_feCumulateRule10509 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_feCumulateRule10511 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feCumulateRule10515 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_feCumulateRule10517 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SORT_in_feArraySortRule10542 = new BitSet(new long[]{0x0000000000000000L,0x0002000000100000L});
+	public static final BitSet FOLLOW_feArrayIndexRule_in_feArraySortRule10548 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_BY_in_feArraySortRule10556 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feSortFieldRule_in_feArraySortRule10559 = new BitSet(new long[]{0x0000000040010000L});
+	public static final BitSet FOLLOW_COMMA_in_feArraySortRule10570 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feSortFieldRule_in_feArraySortRule10572 = new BitSet(new long[]{0x0000000040010000L});
+	public static final BitSet FOLLOW_AS_in_feArraySortRule10583 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feArraySortRule10587 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LP_in_feArraySortRule10613 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feArrayIndexRule_in_feArraySortRule10615 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_feArraySortRule10625 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feArrayIndexRule_in_feArraySortRule10627 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_feArraySortRule10634 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_BY_in_feArraySortRule10641 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feSortFieldRule_in_feArraySortRule10643 = new BitSet(new long[]{0x0000000040010000L});
+	public static final BitSet FOLLOW_COMMA_in_feArraySortRule10654 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feSortFieldRule_in_feArraySortRule10656 = new BitSet(new long[]{0x0000000040010000L});
+	public static final BitSet FOLLOW_AS_in_feArraySortRule10667 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_feArraySortRule10669 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feArraySortRule10673 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_feArraySortRule10701 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feArraySortRule10705 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_feArraySortRule10728 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_feArrayIndexRule10775 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_IN_in_feArrayIndexRule10777 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feArrayIndexRule10781 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_feSortFieldRule10809 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L,0x0000004000000000L});
+	public static final BitSet FOLLOW_fieldRefRule_in_feSortFieldRule10814 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000004000000000L});
+	public static final BitSet FOLLOW_TYPE_in_feSortFieldRule10827 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feSortFieldRule10831 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000100000000000L});
+	public static final BitSet FOLLOW_VERSUS_in_feSortFieldRule10840 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_withSpec_in_aggSpecRule10881 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_aggSpecRule10891 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_aggSpecRule10898 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_aggSpecRule10902 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_WITH_in_withSpec10935 = new BitSet(new long[]{0x0000000000000000L,0x0210000000000000L,0x0000000080001000L});
+	public static final BitSet FOLLOW_SUM_in_withSpec10941 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_PRODUCT_in_withSpec10954 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_MINIMUM_in_withSpec10967 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_MAXIMUM_in_withSpec10980 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_feParameterRule11013 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000004000000000L});
+	public static final BitSet FOLLOW_TYPE_in_feParameterRule11032 = new BitSet(new long[]{0x0000000000004000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_feParameterRule11037 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ARRAY_in_feParameterRule11043 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_jfAndConditionRule_in_jfOrConditionRule11081 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_OR_in_jfOrConditionRule11098 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfAndConditionRule_in_jfOrConditionRule11102 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_jfNotConditionRule_in_jfAndConditionRule11168 = new BitSet(new long[]{0x0000000000000802L});
+	public static final BitSet FOLLOW_AND_in_jfAndConditionRule11186 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfNotConditionRule_in_jfAndConditionRule11190 = new BitSet(new long[]{0x0000000000000802L});
+	public static final BitSet FOLLOW_NOT_in_jfNotConditionRule11258 = new BitSet(new long[]{0x0000000000002010L,0x0002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jsfPredicateRule_in_jfNotConditionRule11269 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_jfExpressionRule_in_jsfPredicateRule11307 = new BitSet(new long[]{0x0080000000000002L,0x2004100010008200L});
+	public static final BitSet FOLLOW_jfCompareRule_in_jsfPredicateRule11327 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_inRangeRule_in_jsfPredicateRule11347 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_comparatorRule_in_jfCompareRule11394 = new BitSet(new long[]{0x0000000000002010L,0x0002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfExpressionRule_in_jfCompareRule11403 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_jfTermRule_in_jfExpressionRule11445 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_jfExpressionRule11468 = new BitSet(new long[]{0x0000000000002000L,0x0002000020300008L,0x0000000000004000L});
+	public static final BitSet FOLLOW_SUB_in_jfExpressionRule11474 = new BitSet(new long[]{0x0000000000002000L,0x0002000020300008L,0x0000000000004000L});
+	public static final BitSet FOLLOW_jfTermRule_in_jfExpressionRule11479 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_jfExpressionRule11497 = new BitSet(new long[]{0x0000000000002000L,0x0002000020300008L,0x0000000000004000L});
+	public static final BitSet FOLLOW_SUB_in_jfExpressionRule11503 = new BitSet(new long[]{0x0000000000002000L,0x0002000020300008L,0x0000000000004000L});
+	public static final BitSet FOLLOW_jfTermRule_in_jfExpressionRule11508 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_jfFactorRule_in_jfTermRule11548 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_MUL_in_jfTermRule11573 = new BitSet(new long[]{0x0000000000002000L,0x0002000020300008L,0x0000000000004000L});
+	public static final BitSet FOLLOW_DIV_in_jfTermRule11579 = new BitSet(new long[]{0x0000000000002000L,0x0002000020300008L,0x0000000000004000L});
+	public static final BitSet FOLLOW_jfFactorRule_in_jfTermRule11584 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_LP_in_jfFactorRule11625 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_jfFactorRule11629 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_jfFactorRule11633 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_INT_in_jfFactorRule11653 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_FLOAT_in_jfFactorRule11691 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_APEX_VALUE_in_jfFactorRule11728 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_QUOTED_VALUE_in_jfFactorRule11762 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_IF_in_jfFactorRule11792 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_jfFactorRule11794 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_jfFactorRule11796 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_jfFactorRule11800 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_jfFactorRule11804 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_jfFactorRule11817 = new BitSet(new long[]{0x0000000000002010L,0x0002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfExpressionRule_in_jfFactorRule11821 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_jfFactorRule11830 = new BitSet(new long[]{0x0000000000002010L,0x0002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfExpressionRule_in_jfFactorRule11834 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_jfFactorRule11838 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_ID_in_jfFactorRule11856 = new BitSet(new long[]{0x0400000000000002L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_jfFactorRule11896 = new BitSet(new long[]{0x0000000000002010L,0x0002000020300008L,0x0000000020104000L});
+	public static final BitSet FOLLOW_jfFunctionParamsRule_in_jfFactorRule11901 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_jfFactorRule11907 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_EXP_in_jfFactorRule11934 = new BitSet(new long[]{0x0000000000002000L,0x0002000020300008L,0x0000000000004000L});
+	public static final BitSet FOLLOW_jfFactorRule_in_jfFactorRule11938 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_jfExpressionRule_in_jfFunctionParamsRule11992 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_jfFunctionParamsRule12012 = new BitSet(new long[]{0x0000000000002010L,0x0002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfExpressionRule_in_jfFunctionParamsRule12016 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_feTermRule_in_feExpressionRule12064 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_feExpressionRule12086 = new BitSet(new long[]{0x0000000000082000L,0x0002000020700008L,0x0000000000004400L});
+	public static final BitSet FOLLOW_SUB_in_feExpressionRule12092 = new BitSet(new long[]{0x0000000000082000L,0x0002000020700008L,0x0000000000004400L});
+	public static final BitSet FOLLOW_feTermRule_in_feExpressionRule12097 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_feExpressionRule12114 = new BitSet(new long[]{0x0000000000082000L,0x0002000020700008L,0x0000000000004400L});
+	public static final BitSet FOLLOW_SUB_in_feExpressionRule12120 = new BitSet(new long[]{0x0000000000082000L,0x0002000020700008L,0x0000000000004400L});
+	public static final BitSet FOLLOW_feTermRule_in_feExpressionRule12125 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_feFactorRule_in_feTermRule12164 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_MUL_in_feTermRule12189 = new BitSet(new long[]{0x0000000000082000L,0x0002000020700008L,0x0000000000004400L});
+	public static final BitSet FOLLOW_DIV_in_feTermRule12195 = new BitSet(new long[]{0x0000000000082000L,0x0002000020700008L,0x0000000000004400L});
+	public static final BitSet FOLLOW_feFactorRule_in_feTermRule12200 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_LP_in_feFactorRule12240 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feFactorRule12244 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_feFactorRule12248 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_valueRule_in_feFactorRule12290 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_POS_in_feFactorRule12342 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_IF_ERROR_in_feFactorRule12395 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_feFactorRule12465 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feFactorRule12469 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_feFactorRule12473 = new BitSet(new long[]{0x0000000000082000L,0x0000000020000008L,0x0000000000004000L});
+	public static final BitSet FOLLOW_valueRule_in_feFactorRule12477 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_feFactorRule12479 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_IF_in_feFactorRule12487 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_feFactorRule12489 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_feFactorRule12491 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_feFactorRule12495 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_feFactorRule12499 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_feFactorRule12543 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feFactorRule12547 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_feFactorRule12556 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feFactorRule12560 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_feFactorRule12564 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_ID_in_feFactorRule12582 = new BitSet(new long[]{0x0400000000000002L,0x0002040000000000L});
+	public static final BitSet FOLLOW_feArrayRefRule_in_feFactorRule12588 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_LP_in_feFactorRule12649 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feFunctionParamsRule_in_feFactorRule12653 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_feFactorRule12657 = new BitSet(new long[]{0x0400000000000002L});
+	public static final BitSet FOLLOW_EXP_in_feFactorRule12680 = new BitSet(new long[]{0x0000000000082000L,0x0002000020700008L,0x0000000000004400L});
+	public static final BitSet FOLLOW_feFactorRule_in_feFactorRule12684 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feFunctionParamsRule12766 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_feFunctionParamsRule12787 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feFunctionParamsRule12791 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_LB_in_feArrayRefRule12825 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_feArrayRefRule12830 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_feArrayRefRule12835 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+	public static final BitSet FOLLOW_fieldRefRule_in_feArrayRefRule12845 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CREATE_in_createFuzzySetModelRule12865 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_createFuzzySetModelRule12867 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_SET_in_createFuzzySetModelRule12869 = new BitSet(new long[]{0x0000000000000000L,0x0800000000000000L});
+	public static final BitSet FOLLOW_MODEL_in_createFuzzySetModelRule12871 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createFuzzySetModelRule12875 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_DEGREES_in_createFuzzySetModelRule12885 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createFuzzySetModelRule12891 = new BitSet(new long[]{0x0000020140000000L,0x0000000000000000L,0x0000000000400002L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzySetModelRule12911 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createFuzzySetModelRule12915 = new BitSet(new long[]{0x0000020140000000L,0x0000000000000000L,0x0000000000400002L});
+	public static final BitSet FOLLOW_DERIVED_in_createFuzzySetModelRule12941 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_DEGREES_in_createFuzzySetModelRule12943 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createFuzzySetModelRule12947 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_createFuzzySetModelRule12960 = new BitSet(new long[]{0x3000004000008010L,0x00C2000020710008L,0x0000002020000000L});
+	public static final BitSet FOLLOW_ftExpressionRule_in_createFuzzySetModelRule12964 = new BitSet(new long[]{0x0000000140000000L,0x0000000000000000L,0x0000000000400002L});
+	public static final BitSet FOLLOW_COMMA_in_createFuzzySetModelRule12978 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createFuzzySetModelRule12985 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_createFuzzySetModelRule13009 = new BitSet(new long[]{0x3000004000008010L,0x00C2000020710008L,0x0000002020000000L});
+	public static final BitSet FOLLOW_ftExpressionRule_in_createFuzzySetModelRule13013 = new BitSet(new long[]{0x0000000140000000L,0x0000000000000000L,0x0000000000400002L});
+	public static final BitSet FOLLOW_CONSTRAINT_in_createFuzzySetModelRule13032 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_createFuzzySetModelRule13036 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400002L});
+	public static final BitSet FOLLOW_fuzzyOperatorDefinitionRule_in_createFuzzySetModelRule13055 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400002L});
+	public static final BitSet FOLLOW_SC_in_createFuzzySetModelRule13063 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_OPERATOR_in_fuzzyOperatorDefinitionRule13085 = new BitSet(new long[]{0x0000000000000800L,0x4000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_set_in_fuzzyOperatorDefinitionRule13089 = new BitSet(new long[]{0x0100000000000000L});
+	public static final BitSet FOLLOW_EVALUATE_in_fuzzyOperatorDefinitionRule13125 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_fuzzyOperatorDefinitionRule13129 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_fuzzyOperatorDefinitionRule13131 = new BitSet(new long[]{0x0000000000000010L,0x0002000020300008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftConditionExpressionRule_in_fuzzyOperatorDefinitionRule13163 = new BitSet(new long[]{0x0100000000000002L});
+	public static final BitSet FOLLOW_CREATE_in_createGenericFuzzySetOperatorRule13226 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createGenericFuzzySetOperatorRule13230 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_createGenericFuzzySetOperatorRule13232 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
+	public static final BitSet FOLLOW_OPERATOR_in_createGenericFuzzySetOperatorRule13234 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createGenericFuzzySetOperatorRule13238 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_PARAMETERS_in_createGenericFuzzySetOperatorRule13259 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_parameterRule_in_createGenericFuzzySetOperatorRule13263 = new BitSet(new long[]{0x0100000040000000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13280 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_parameterRule_in_createGenericFuzzySetOperatorRule13285 = new BitSet(new long[]{0x0100000040000000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_PRECONDITION_in_createGenericFuzzySetOperatorRule13305 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_createGenericFuzzySetOperatorRule13309 = new BitSet(new long[]{0x0100000000000000L});
+	public static final BitSet FOLLOW_EVALUATE_in_createGenericFuzzySetOperatorRule13325 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createGenericFuzzySetOperatorRule13329 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_createGenericFuzzySetOperatorRule13363 = new BitSet(new long[]{0x0000000000002010L,0x0002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfExpressionRule_in_createGenericFuzzySetOperatorRule13367 = new BitSet(new long[]{0x0100000000000000L,0x0000000000000000L,0x0000000000400200L});
+	public static final BitSet FOLLOW_POLYLINE_in_createGenericFuzzySetOperatorRule13390 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+	public static final BitSet FOLLOW_LB_in_createGenericFuzzySetOperatorRule13392 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_createGenericFuzzySetOperatorRule13405 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13409 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13411 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13415 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_createGenericFuzzySetOperatorRule13417 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13439 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_createGenericFuzzySetOperatorRule13441 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13445 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzySetOperatorRule13447 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzySetOperatorRule13451 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_createGenericFuzzySetOperatorRule13453 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_createGenericFuzzySetOperatorRule13472 = new BitSet(new long[]{0x0100000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_createGenericFuzzySetOperatorRule13536 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ftTermRule_in_ftExpressionRule13570 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_ftExpressionRule13592 = new BitSet(new long[]{0x3000004000008000L,0x00C2000020710008L,0x0000002000000000L});
+	public static final BitSet FOLLOW_SUB_in_ftExpressionRule13598 = new BitSet(new long[]{0x3000004000008000L,0x00C2000020710008L,0x0000002000000000L});
+	public static final BitSet FOLLOW_ftTermRule_in_ftExpressionRule13603 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_ftExpressionRule13620 = new BitSet(new long[]{0x3000004000008000L,0x00C2000020710008L,0x0000002000000000L});
+	public static final BitSet FOLLOW_SUB_in_ftExpressionRule13626 = new BitSet(new long[]{0x3000004000008000L,0x00C2000020710008L,0x0000002000000000L});
+	public static final BitSet FOLLOW_ftTermRule_in_ftExpressionRule13631 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftFactorRule_in_ftTermRule13668 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_MUL_in_ftTermRule13693 = new BitSet(new long[]{0x3000004000008000L,0x00C2000020710008L,0x0000002000000000L});
+	public static final BitSet FOLLOW_DIV_in_ftTermRule13699 = new BitSet(new long[]{0x3000004000008000L,0x00C2000020710008L,0x0000002000000000L});
+	public static final BitSet FOLLOW_ftFactorRule_in_ftTermRule13704 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_LP_in_ftFactorRule13736 = new BitSet(new long[]{0x3000004000008010L,0x00C2000020710008L,0x0000002020000000L});
+	public static final BitSet FOLLOW_ftExpressionRule_in_ftFactorRule13740 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_ftFactorRule13743 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ftValueRule_in_ftFactorRule13763 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_ftFactorRule13790 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_ftFactorRule13822 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_ftFactorRule13824 = new BitSet(new long[]{0x3000004000008010L,0x00C2000020710008L,0x0000002020100000L});
+	public static final BitSet FOLLOW_ftFunctionParamsRule_in_ftFactorRule13829 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_ftFactorRule13834 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_specialFunctionRule_in_ftFactorRule13849 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_ftValueRule13874 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FLOAT_in_ftValueRule13894 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ftExpressionRule_in_ftFunctionParamsRule13930 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_ftFunctionParamsRule13951 = new BitSet(new long[]{0x3000004000008010L,0x00C2000020710008L,0x0000002020000000L});
+	public static final BitSet FOLLOW_ftExpressionRule_in_ftFunctionParamsRule13955 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_ftAndConditionRule_in_ftOrConditionRule13999 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_OR_in_ftOrConditionRule14015 = new BitSet(new long[]{0x0000000000000010L,0x4002000020300008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftAndConditionRule_in_ftOrConditionRule14019 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_ftNotConditionRule_in_ftAndConditionRule14084 = new BitSet(new long[]{0x0000000000000802L});
+	public static final BitSet FOLLOW_AND_in_ftAndConditionRule14101 = new BitSet(new long[]{0x0000000000000010L,0x4002000020300008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftNotConditionRule_in_ftAndConditionRule14105 = new BitSet(new long[]{0x0000000000000802L});
+	public static final BitSet FOLLOW_NOT_in_ftNotConditionRule14175 = new BitSet(new long[]{0x0000000000000010L,0x0002000020300008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftPredicateRule_in_ftNotConditionRule14187 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ftConditionExpressionRule_in_ftPredicateRule14229 = new BitSet(new long[]{0x0080000000000002L,0x2004100000008200L});
+	public static final BitSet FOLLOW_comparatorRule_in_ftPredicateRule14245 = new BitSet(new long[]{0x0000000000000010L,0x0002000020300008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftConditionExpressionRule_in_ftPredicateRule14255 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule14299 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_ftConditionExpressionRule14323 = new BitSet(new long[]{0x0000000000000000L,0x0002000020300008L});
+	public static final BitSet FOLLOW_SUB_in_ftConditionExpressionRule14329 = new BitSet(new long[]{0x0000000000000000L,0x0002000020300008L});
+	public static final BitSet FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule14334 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ADD_in_ftConditionExpressionRule14353 = new BitSet(new long[]{0x0000000000000000L,0x0002000020300008L});
+	public static final BitSet FOLLOW_SUB_in_ftConditionExpressionRule14359 = new BitSet(new long[]{0x0000000000000000L,0x0002000020300008L});
+	public static final BitSet FOLLOW_ftConditionTermRule_in_ftConditionExpressionRule14364 = new BitSet(new long[]{0x0000000000000012L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftConditionFactorRule_in_ftConditionTermRule14400 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_MUL_in_ftConditionTermRule14417 = new BitSet(new long[]{0x0000000000000000L,0x0002000020300008L});
+	public static final BitSet FOLLOW_DIV_in_ftConditionTermRule14423 = new BitSet(new long[]{0x0000000000000000L,0x0002000020300008L});
+	public static final BitSet FOLLOW_ftConditionFactorRule_in_ftConditionTermRule14428 = new BitSet(new long[]{0x0000800000000002L,0x1000000000000000L});
+	public static final BitSet FOLLOW_LP_in_ftConditionFactorRule14458 = new BitSet(new long[]{0x0000000000000010L,0x0002000020300008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftConditionExpressionRule_in_ftConditionFactorRule14462 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_ftConditionFactorRule14465 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ftConditionValueRule_in_ftConditionFactorRule14483 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_ftConditionFactorRule14512 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_FIELD_NAME_in_ftConditionFactorRule14516 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_ftConditionFactorRule14547 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_ftConditionFactorRule14549 = new BitSet(new long[]{0x0000000000000010L,0x0002000020300008L,0x0000000020100000L});
+	public static final BitSet FOLLOW_ftConditionFunctionParamsRule_in_ftConditionFactorRule14554 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_ftConditionFactorRule14559 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ftSpecialFunctionRule_in_ftConditionFactorRule14572 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_ftConditionValueRule14621 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FLOAT_in_ftConditionValueRule14641 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ftConditionExpressionRule_in_ftConditionFunctionParamsRule14679 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_COMMA_in_ftConditionFunctionParamsRule14698 = new BitSet(new long[]{0x0000000000000010L,0x0002000020300008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftConditionExpressionRule_in_ftConditionFunctionParamsRule14702 = new BitSet(new long[]{0x0000000040000002L});
+	public static final BitSet FOLLOW_IF_in_ftSpecialFunctionRule14736 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_ftSpecialFunctionRule14738 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_ftSpecialFunctionRule14740 = new BitSet(new long[]{0x0000000000000010L,0x4002000020300008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftOrConditionRule_in_ftSpecialFunctionRule14744 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_ftSpecialFunctionRule14747 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_ftSpecialFunctionRule14756 = new BitSet(new long[]{0x0000000000000010L,0x0002000020300008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftConditionExpressionRule_in_ftSpecialFunctionRule14760 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_ftSpecialFunctionRule14767 = new BitSet(new long[]{0x0000000000000010L,0x0002000020300008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_ftConditionExpressionRule_in_ftSpecialFunctionRule14771 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_ftSpecialFunctionRule14774 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CREATE_in_createGenericFuzzyEvaluatorRule14825 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createGenericFuzzyEvaluatorRule14829 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+	public static final BitSet FOLLOW_FUZZY_in_createGenericFuzzyEvaluatorRule14831 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_EVALUATOR_in_createGenericFuzzyEvaluatorRule14833 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createGenericFuzzyEvaluatorRule14837 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_PARAMETERS_in_createGenericFuzzyEvaluatorRule14859 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feParameterRule_in_createGenericFuzzyEvaluatorRule14861 = new BitSet(new long[]{0x0100010040000000L,0x0000000000000010L,0x0000000010000800L});
+	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzyEvaluatorRule14871 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_feParameterRule_in_createGenericFuzzyEvaluatorRule14873 = new BitSet(new long[]{0x0100010040000000L,0x0000000000000010L,0x0000000010000800L});
+	public static final BitSet FOLLOW_PRECONDITION_in_createGenericFuzzyEvaluatorRule14889 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_createGenericFuzzyEvaluatorRule14893 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000010000000L});
+	public static final BitSet FOLLOW_feArraySortRule_in_createGenericFuzzyEvaluatorRule14915 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000010000000L});
+	public static final BitSet FOLLOW_feDeriveRule_in_createGenericFuzzyEvaluatorRule14954 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000010000000L});
+	public static final BitSet FOLLOW_feForAllRule_in_createGenericFuzzyEvaluatorRule14990 = new BitSet(new long[]{0x0100010000000000L,0x0000000000000010L,0x0000000010000000L});
+	public static final BitSet FOLLOW_EVALUATE_in_createGenericFuzzyEvaluatorRule15025 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createGenericFuzzyEvaluatorRule15029 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_AS_in_createGenericFuzzyEvaluatorRule15062 = new BitSet(new long[]{0x0000000000082010L,0x0002000020700008L,0x0000000020004400L});
+	public static final BitSet FOLLOW_feExpressionRule_in_createGenericFuzzyEvaluatorRule15066 = new BitSet(new long[]{0x0100000000000000L,0x0000000000000000L,0x0000000000400200L});
+	public static final BitSet FOLLOW_POLYLINE_in_createGenericFuzzyEvaluatorRule15096 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+	public static final BitSet FOLLOW_LB_in_createGenericFuzzyEvaluatorRule15098 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_createGenericFuzzyEvaluatorRule15104 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzyEvaluatorRule15108 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzyEvaluatorRule15110 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzyEvaluatorRule15114 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_createGenericFuzzyEvaluatorRule15116 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzyEvaluatorRule15138 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+	public static final BitSet FOLLOW_LP_in_createGenericFuzzyEvaluatorRule15140 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzyEvaluatorRule15144 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_COMMA_in_createGenericFuzzyEvaluatorRule15146 = new BitSet(new long[]{0x0000000000000010L,0x0000000020000008L,0x0000000020000000L});
+	public static final BitSet FOLLOW_numericRule_in_createGenericFuzzyEvaluatorRule15150 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_createGenericFuzzyEvaluatorRule15152 = new BitSet(new long[]{0x0000000040000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_RB_in_createGenericFuzzyEvaluatorRule15173 = new BitSet(new long[]{0x0100000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_createGenericFuzzyEvaluatorRule15220 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CREATE_in_createJavaFunctionRule15246 = new BitSet(new long[]{0x0000000000000000L,0x0000000800000000L});
+	public static final BitSet FOLLOW_JAVA_in_createJavaFunctionRule15248 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+	public static final BitSet FOLLOW_FUNCTION_in_createJavaFunctionRule15250 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createJavaFunctionRule15258 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_PARAMETERS_in_createJavaFunctionRule15291 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_parameterRule_in_createJavaFunctionRule15301 = new BitSet(new long[]{0x0000000044000000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_COMMA_in_createJavaFunctionRule15323 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_parameterRule_in_createJavaFunctionRule15327 = new BitSet(new long[]{0x0000000044000000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_PRECONDITION_in_createJavaFunctionRule15347 = new BitSet(new long[]{0x0000000000002010L,0x4002000020300008L,0x0000000020004000L});
+	public static final BitSet FOLLOW_jfOrConditionRule_in_createJavaFunctionRule15351 = new BitSet(new long[]{0x0000000004000000L});
+	public static final BitSet FOLLOW_CLASS_in_createJavaFunctionRule15365 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_createJavaFunctionRule15369 = new BitSet(new long[]{0x0000000004000000L,0x0000000001000000L});
+	public static final BitSet FOLLOW_IMPORT_in_createJavaFunctionRule15404 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_QUOTED_VALUE_in_createJavaFunctionRule15408 = new BitSet(new long[]{0x0000000004000000L});
+	public static final BitSet FOLLOW_CLASS_in_createJavaFunctionRule15438 = new BitSet(new long[]{0x0000000000040000L});
+	public static final BitSet FOLLOW_BODY_in_createJavaFunctionRule15440 = new BitSet(new long[]{0x0040000000000000L});
+	public static final BitSet FOLLOW_END_BODY_in_createJavaFunctionRule15453 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_createJavaFunctionRule15459 = new BitSet(new long[]{0x0000000000000002L});
 }

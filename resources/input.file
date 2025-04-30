@@ -1,13 +1,32 @@
-CREATE FUZZY EVALUATOR pNormSimilarityFE
-	PARAMETERS 
-		p			TYPE NUMERIC,
-		weights		TYPE ARRAY,
-		memberships	TYPE ARRAY 
-	PRECONDITION 	p >= 1 
-			AND		COUNT (memberships) = COUNT (weights)
-	FOR ALL 		m IN memberships
-		LOCALLY 	(1 -  m)^(p) AS x,
-							weights[POS]^p AS w
-		AGGREGATE 	w*x AS numeratore,
-							w AS denominatore
-	EVALUATE 		(numeratore / denominatore)^(1/p);
+FILTER GENERATE ADD FIELDS { .a: .a, .b: .b, .c.a: "picco" } BUILD { .c: .c, .d: .d, .f.e: (2+3) } REMOVE FIELDS {.g, .d.e} ADD FIELDS { .a: .a, .b: .b, .c.a: "picco" } BUILD { .c: .c, .d: .d, .f.e: (2+3) } REMOVE FIELDS {.g, .d.e} ADD FIELDS { .a: .a, .b: .b, .c.a: "picco" } ADD FIELDS { .a: .a, .b: .b, .c.a: "picco" };
+
+
+FILTER 
+	GENERATE	
+		ADD FIELDS	{
+			.a.c.d: .a, 
+			.b: .b, 
+			.c.a: "picco"	}
+		BUILD	{
+			.c: .c, 
+			.d: .d, 
+			.f.e: (2+3)	}
+		REMOVE FIELDS {.g, .d.e}
+		ADD FIELDS	{
+			.a: .a, 
+			.b: .b, 
+			.c.a: "picco"	}
+		BUILD	{
+			.c: .c, 
+			.d: .d, 
+			.f.e: (2+3)	}
+		REMOVE FIELDS {.g, .d.e}
+		ADD FIELDS	{
+			.a: .a, 
+			.b: .b, 
+			.c.a: "picco"	}
+		ADD FIELDS	{
+			.a: .a, 
+			.b: .b, 
+			.c.a: "picco"	};
+

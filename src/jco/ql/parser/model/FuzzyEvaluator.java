@@ -5,7 +5,7 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.StringJoiner;
 
-import jco.ql.parser.model.fuzzy.FuzzyPoint;
+import jco.ql.parser.model.fuzzy.FuzzyPolyline;
 import jco.ql.parser.model.predicate.Expression;
 import jco.ql.parser.model.util.FEInternalClause;
 import jco.ql.parser.model.util.ParamList;
@@ -20,14 +20,19 @@ public class FuzzyEvaluator extends Instruction{
 	public Condition preCondition;
 	public List<FEInternalClause> feInternalClauseList;
 	public Expression evaluate;
-	public List<FuzzyPoint> polyline;
-	public boolean defaultPolyline; 
+	public FuzzyPolyline polyline;
 	public boolean isFuzzyAggregator;
 	
+	//GB Gestione dei valutatori generici:
+	public String fuzzyEvaluatorType;
+	public List<Expression> genericEvaluate;
+	public List<FuzzyPolyline> genericPolylines;
+	public List<Parameter> genericDegrees;
+
 	
 	public FuzzyEvaluator (int seq, String fe)  {
 		id = FUZZY_EVALUATOR_INSTRUCTION;
-		instructionName = "Create Fuzzy Evaluator";
+		instructionName = "CREATE FUZZY EVALUATOR";
 		fuzzyEvaluatorName = fe;
 		isFuzzyAggregator = false;
 		sequence = seq;
@@ -36,18 +41,44 @@ public class FuzzyEvaluator extends Instruction{
 		preCondition = null;
 		feInternalClauseList = new ArrayList<FEInternalClause>();
 		evaluate = null;
-		polyline = new ArrayList<FuzzyPoint>();
-		polyline.add(new FuzzyPoint ("0", "0"));
-		polyline.add(new FuzzyPoint ("1", "1"));
-		defaultPolyline = true;
+		polyline = new FuzzyPolyline ();
+
+		fuzzyEvaluatorType = null; 	// GB serve per diversificarlo dai generici
+		genericEvaluate = null;		// GB
+		genericPolylines = null;	// GB
+		genericDegrees = null;
 	}
 	public FuzzyEvaluator (int seq, String fe, boolean isFA)  {
 		this (seq, fe);
 		if (isFA) {
 			id = FUZZY_AGGREGATOR_INSTRUCTION;
-			instructionName = "Create Fuzzy Aggregator";
+			instructionName = "CREATE FUZZY AGGREGATOR";
 			isFuzzyAggregator = isFA;
 		}		
+	}
+
+	
+	//GB costruttore per valutatore generico
+	public FuzzyEvaluator(int seq, String gfe, String type) {
+		id = FUZZY_GENERIC_EVALUATOR_INSTRUCTION;
+		sequence = seq;
+		instructionName = "CREATE " + type + " FUZZY EVALUATOR";
+		
+		fuzzyEvaluatorName = gfe;
+		fuzzyEvaluatorType = type;
+		
+		parameters = new ArrayList<Parameter>();
+		preCondition = null;
+		genericEvaluate = new ArrayList<Expression>();
+		genericPolylines = new ArrayList<FuzzyPolyline>();
+		genericDegrees = new ArrayList<Parameter>();
+		isFuzzyAggregator = false;
+		
+		namespace = new Hashtable<String, Parameter> (101);
+		feInternalClauseList = new ArrayList<FEInternalClause>();
+		
+		evaluate = null;
+		polyline = null;
 	}
 	
 	
@@ -71,13 +102,12 @@ public class FuzzyEvaluator extends Instruction{
 	
 	
 	public void resetPolyline() {
-		defaultPolyline = false;
-		polyline = new ArrayList<FuzzyPoint>();
+		polyline = new FuzzyPolyline();
 	}
 	
 
 	public boolean hasDefaultPolyline() {
-		return defaultPolyline;
+		return polyline.defaultPolyline;
 	}
 	
 	
@@ -88,7 +118,7 @@ public class FuzzyEvaluator extends Instruction{
 		
 	public String toString () {
 		StringJoiner sj;
-		String str = instructionName.toUpperCase() + " ";
+		String str = instructionName + " ";
 		str += fuzzyEvaluatorName + " ";
 		
 		sj = new StringJoiner (", ", "PARAMETERS ", " ");
@@ -102,13 +132,21 @@ public class FuzzyEvaluator extends Instruction{
 		for (int i=0; i<feInternalClauseList.size();i++)
 			str +=  feInternalClauseList.get(i).toString() + " ";	
 		
-		str +="EVALUATE " + evaluate.toString() + " ";
-		if(!hasDefaultPolyline()) {
-			str +="POLYLINE ";
-			str +="[ " + polyline.get(0).toString();				
-			for (int i=1; i<polyline.size();i++)
-				str += ", " + polyline.get(i).toString();
-			str += " ]";
+		if(fuzzyEvaluatorType == null) {						// GB
+			str +="EVALUATE " + evaluate.toString() + " ";
+			
+			if(!hasDefaultPolyline()) 
+				polyline.toString();
+		}
+		else {
+			for(int i = 0; i < genericDegrees.size(); i++) {
+				str += "EVALUATE " + genericDegrees.get(i).name + " ";
+				str += "AS " + genericEvaluate.get(i).toString();
+				
+				FuzzyPolyline fp = genericPolylines.get(i);
+				if(!genericPolylines.get(i).hasDefaultPolyline()) 
+					str += fp.toString();
+			}
 		}
 		
 		return str.trim() + ";";
@@ -117,7 +155,7 @@ public class FuzzyEvaluator extends Instruction{
 
 	@Override
 	public String toMultilineString() {
-		String str = instructionName.toUpperCase() + " ";
+		String str = instructionName + " ";
 		str += fuzzyEvaluatorName;
 		str += "\n\tPARAMETERS";
 		for (int i=0; i<parameters.size()-1;i++)
@@ -131,15 +169,23 @@ public class FuzzyEvaluator extends Instruction{
 		for (int i=0; i<feInternalClauseList.size();i++)
 			str += feInternalClauseList.get(i).toMultilineString(1);
 
-		if(evaluate != null)
-			str +="\n\tEVALUATE " + evaluate.toString();
-
-		if(!hasDefaultPolyline()) {
-			str +="\n\tPOLYLINE ";
-			str +="\t\t[\t" + polyline.get(0).toString();				
-			for (int i=1; i<polyline.size();i++)
-				str += ",\n\t\t\t" + polyline.get(i).toString();
-			str += "\t]";
+		// GB differenziazione tra valutatore classico e valutatore generico
+		if(fuzzyEvaluatorType == null) {
+			if(evaluate != null)
+				str +="\n\tEVALUATE " + evaluate.toString();
+			
+			if(!hasDefaultPolyline()) 
+				str += polyline.toMultilineString();
+		}
+		else {
+			for(int i = 0; i < genericDegrees.size(); i++) {
+				str += "\n\tEVALUATE " + genericDegrees.get(i).name;
+				str += " AS " + genericEvaluate.get(i).toString();
+				
+				FuzzyPolyline fp = genericPolylines.get(i);
+				if(!fp.hasDefaultPolyline()) 
+					str += fp.toMultilineString();
+			}
 		}
 		
 		return str.trim() + ";\n";

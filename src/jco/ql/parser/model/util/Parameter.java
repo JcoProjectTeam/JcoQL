@@ -32,12 +32,17 @@ public class Parameter {
 	}
 	
 
+	// 2025.03.02 - Since the advent of fuzzyset type model, 
+	//	**** --> 	the type control should demanded to the engine
 	public static boolean knownType (String type) {
-		if (ARRAY.equals(type) 		||	BOOLEAN.equals(type)	|| DOCUMENT.equals(type) ||	
+		return true;
+/*		if (ARRAY.equals(type) 		||	BOOLEAN.equals(type)	|| DOCUMENT.equals(type) ||	
 			NUMERIC.equals(type) 	||	STRING.equals(type))
 			return true;
 		return false;
+*/
 	}
+
 	
 	public boolean isArray () {
 		return ARRAY.equals(type);

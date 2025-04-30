@@ -78,12 +78,12 @@ public class FuzzySetModel extends Instruction  {
 			str +="CONSTRAINT " + constraint.toString() + " ";
 		str = cleanString(str);
 		
-		if(defOr != null)
-			str += defOr;
-		if(defAnd != null)
-			str += defAnd;
 		if(defNot != null)
 			str += defNot;
+		if(defAnd != null)
+			str += defAnd;
+		if(defOr != null)
+			str += defOr;
 			
 		//return cleanString(str).trim() + ";";
 		return str.trim() + ";";
@@ -113,12 +113,12 @@ public class FuzzySetModel extends Instruction  {
 			str +="\tCONSTRAINT " + constraint.toString() + "\n";
 		str = cleanString(str);
 		
-		if(defOr != null)
-			str += defOr.toMultilineString();
-		if(defAnd != null)
-			str += defAnd.toMultilineString();
 		if(defNot != null)
 			str += defNot.toMultilineString();
+		if(defAnd != null)
+			str += defAnd.toMultilineString();
+		if(defOr != null)
+			str += defOr.toMultilineString();
 		
 		return str.trim() + ";\n";
 	}
