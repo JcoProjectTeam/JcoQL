@@ -1,6 +1,6 @@
 /* ****************************************
 **** Parser JCo-QL Antlr Specification ****
-**** V. 4.0.02 - 30.04.2025            ****
+**** V. 4.0.10 - 12.05.2025            ****
 **************************************** */
 
 
@@ -8,37 +8,36 @@
 **** Syntax rules definition ****
 ****************************** */
 
-grammar JCoQLBasic;
+grammar JCoQL;
 
 
 // Rule Defintion 
 
 start
 	:
-		(	getCollectionRule
+		(	useDbRule
+		|	getCollectionRule
+		|	getDictionaryRule
+		|	lookupFromWebRule
 		|	saveAsRule
-		|	joinOfCollectionsRule
-		|	filterRule
-		|	groupRule
-		|	expandRule
 		|	mergeCollectionsRule
 		|	intersectCollectionsRule
 		|	subtractCollectionsRule
-		|	useDbRule
+		|	filterRule
+		|	joinOfCollectionsRule
 		|	trajectoryMatchingRule
-		|	createFuzzyOperatorRule
+		|	groupRule
+		|	expandRule
 		|	createJavaScriptFunctionRule
-		|	getDictionaryRule
-		|	lookupFromWebRule
+		|	createJavaFunctionRule
+		|	createFuzzyOperatorRule
 		|	createFuzzyAggregatorRule
+		|	createFuzzyEvaluatorRule
 		|	createFuzzySetModelRule
 		|	createGenericFuzzySetOperatorRule
-		|	createJavaFunctionRule
-		|	createFuzzyEvaluatorRule
 		|	createGenericFuzzyEvaluatorRule
 		)* EOF
 	;
-
 
 
 collectionReferenceRule
@@ -77,10 +76,12 @@ outputFieldSpecRule
 geometricOptionRule
 	:
 		KEEPING GEOMETRY
-	|	SETTING GEOMETRY (	POINT LP fieldRefRule COMMA fieldRefRule RP
+	|	SETTING GEOMETRY 
+			(	POINT LP fieldRefRule COMMA fieldRefRule RP
 			|	AGGREGATE LP fieldRefRule RP
 			|	fieldRefRule
-			|	TO_POLYLINE LP fieldRefRule RP	)
+			|	TO_POLYLINE LP fieldRefRule RP	
+			)
 	;
 
 
@@ -92,58 +93,62 @@ dropGeometryRule
 
 caseClauseRule
 	:
-		(	CASES
-		|	CASE	) (	whereCaseRule	)+ (	othersRule	)?
+		(	CASES |	CASE	) 
+		(	whereCaseRule	)+ 
+		(	othersRule	)?
 	;
 
 
 othersRule
 	:
-		(	KEEP
-		|	DROP	) OTHERS
+		(	KEEP |	DROP	) 
+		OTHERS
 	;
 
 
 whereCaseRule
 	:
-		WHERE orConditionRule (	generateSectionRule	)?
+		WHERE orConditionRule 
+			(	generateSectionRule	)?
 	;
 
 
 generateSectionRule
 	:
 		GENERATE 
-			(	geometricOptionRule		)? 
+			(	geometricOptionRule	)? 
 			(	checkForFuzzySetRule	)? 
-			(	alphaCutRule			)? 
-			(	buildActionRule			)* 
+			(	alphaCutRule	)? 
+			(	buildActionRule	)* 
 			(	keepDropFuzzySetsRule	)? 
-			(	dropGeometryRule		)?
+			(	dropGeometryRule	)?
 	;
 
 
 orConditionRule
 	:
-		andConditionRule (	OR andConditionRule	)*
+		andConditionRule 
+			(	OR andConditionRule	)*
 	;
 
 
 andConditionRule
 	:
-		notConditionRule (	AND notConditionRule	)*
+		notConditionRule 
+			(	AND notConditionRule	)*
 	;
 
 
 notConditionRule
 	:
-		(	NOT	)? predicateRule
+		(	NOT	)? 
+		predicateRule
 	;
 
 
 predicateRule
 	:
-		expressionRule (	compareRule
-									 |	inRangeRule	)?
+		expressionRule ( compareRule |	inRangeRule	)?
 	|	nullPredicateRule
 	|	withPredicateRule
 	|	withoutPredicateRule
@@ -159,16 +164,17 @@ compareRule
 
 inRangeRule
 	:
-		INRANGE (	LB
-		|	LP	) numericRule COMMA numericRule (	RP
-		|	RB	)
+		INRANGE 
+			(	LB |	LP	) 
+				numericRule COMMA numericRule 
+			(	RP |	RB	)
 	;
 
 
 nullPredicateRule
 	:
-		FIELD fieldRefRule (	ISNULL
-		|	ISNOTNULL	)
+		FIELD fieldRefRule 
+			(	ISNULL |	ISNOTNULL	)
 	;
 
 
@@ -182,31 +188,32 @@ wukFuzzyPredicateRule
 
 withoutPredicateRule
 	:
-		WITHOUT fieldRefRule (	COMMA fieldRefRule	)*
+		WITHOUT fieldRefRule 
+			(	COMMA fieldRefRule	)*
 	;
 
 
 withPredicateRule
 	:
 		WITH (	(	ID
-				|	ARRAY
-				|	GEOMETRY	)	)? fieldRefRule (	COMMA fieldRefRule	)*
+						|	ARRAY
+						|	GEOMETRY	)	)? 
+			fieldRefRule 
+				(	COMMA fieldRefRule	)*
 	;
 
 
 expressionRule
 	:
-		(	termRule
-		|	(	ADD
-				|	SUB	) termRule	) (	(	ADD
-				|	SUB	) termRule	)*
+		(	termRule	|	(	ADD |	SUB	) termRule	) 
+			(	(	ADD |	SUB	) termRule	)*
 	;
 
 
 termRule
 	:
-		factorRule (	(	MUL
-				|	DIV	) factorRule	)*
+		factorRule 
+			(	(	MUL	|	DIV	) factorRule	)*
 	;
 
 
@@ -470,13 +477,7 @@ groupRule
 
 groupPartitionRule
 	:
-		PARTITION orConditionRule 
-			BY fieldRefRule (	COMMA fieldRefRule	)* 
-			INTO fieldRefRule 
-			(	DROP GROUPING FIELDS	)? 
-			(	ORDER BY sortingFieldRule (	COMMA sortingFieldRule	)* 
-					(	KEEP UNCOMPARABLE	)?	)? 
-			(	generateSectionRule	)?
+		PARTITION orConditionRule BY fieldRefRule (	COMMA fieldRefRule	)* INTO fieldRefRule (	DROP GROUPING FIELDS	)? (	ORDER BY sortingFieldRule (	COMMA sortingFieldRule	)* (	KEEP UNCOMPARABLE	)?	)? (	generateSectionRule	)?
 	;
 
 
@@ -561,61 +562,35 @@ createJavaScriptFunctionRule
 
 createFuzzyOperatorRule
 	:
-		CREATE FUZZY OPERATOR ID 	
-			PARAMETERS parameterRule (	COMMA parameterRule	)* 
-			(	PRECONDITION jfOrConditionRule	)? 
-			EVALUATE jfExpressionRule 
-			(	POLYLINE LB LP numericRule COMMA numericRule RP 
-						(	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? 
-		SC
+		CREATE FUZZY OPERATOR ID PARAMETERS parameterRule (	COMMA parameterRule	)* (	PRECONDITION jfOrConditionRule	)? EVALUATE jfExpressionRule (	POLYLINE LB LP numericRule COMMA numericRule RP (	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? SC
 	;
 
 
 createFuzzyEvaluatorRule
 	:
-		CREATE FUZZY EVALUATOR ID 
-			PARAMETERS feParameterRule (	COMMA feParameterRule	)* 
-			(	PRECONDITION jfOrConditionRule	)? 
-			(	feArraySortRule
-			|	feDeriveRule
-			|	feForAllRule	)* 
-			EVALUATE feExpressionRule 
-			(	POLYLINE LB LP numericRule COMMA numericRule RP 
-						(	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? 
-		SC
+		CREATE FUZZY EVALUATOR ID PARAMETERS feParameterRule (	COMMA feParameterRule	)* (	PRECONDITION jfOrConditionRule	)? (	feArraySortRule
+		|	feDeriveRule
+		|	feForAllRule	)* EVALUATE feExpressionRule (	POLYLINE LB LP numericRule COMMA numericRule RP (	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? SC
 	;
 
 
 createFuzzyAggregatorRule
 	:
-		CREATE FUZZY AGGREGATOR ID 
-			PARAMETERS feParameterRule (	COMMA feParameterRule	)* 
-			(	PRECONDITION jfOrConditionRule	)? 
-			(	feArraySortRule	)* 
-			(	feForAllRule
-			|	feDeriveRule	)+ 
-			EVALUATE feExpressionRule 
-			(	POLYLINE LB LP numericRule COMMA numericRule RP 
-						(	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? 
-		SC
+		CREATE FUZZY AGGREGATOR ID PARAMETERS feParameterRule (	COMMA feParameterRule	)* (	PRECONDITION jfOrConditionRule	)? (	feArraySortRule	)* (	feForAllRule
+		|	feDeriveRule	)+ EVALUATE feExpressionRule (	POLYLINE LB LP numericRule COMMA numericRule RP (	COMMA LP numericRule COMMA numericRule RP	)+ RB	)? SC
 	;
 
 
 feForAllRule
 	:
-		FOR ALL ID IN ID 
-			(	LB feExpressionRule COMMA feExpressionRule RB	)? 
-			(	LOCALLY feExpressionRule AS ID 
-				(	COMMA feExpressionRule AS ID	)*	)? 
-			AGGREGATE aggSpecRule (	COMMA aggSpecRule	)*
+		FOR ALL ID IN ID (	LB feExpressionRule COMMA feExpressionRule RB	)? (	LOCALLY feExpressionRule AS ID (	COMMA feExpressionRule AS ID	)*	)? AGGREGATE aggSpecRule (	COMMA aggSpecRule	)*
 	;
 
 
 feDeriveRule
 	:
-		DERIVE 
-			(	feExpressionRule
-			|	feCumulateRule	) AS ID
+		DERIVE (	feExpressionRule
+		|	feCumulateRule	) AS ID
 	;
 
 
@@ -627,11 +602,8 @@ feCumulateRule
 
 feArraySortRule
 	:
-		SORT (	feArrayIndexRule BY feSortFieldRule 
-												(	COMMA feSortFieldRule	)* AS ID
-					|	LP feArrayIndexRule (	COMMA feArrayIndexRule	)+ RP 
-								BY feSortFieldRule 
-												(	COMMA feSortFieldRule	)* AS LP ID (	COMMA ID	)+ RP	)
+		SORT (	feArrayIndexRule BY feSortFieldRule (	COMMA feSortFieldRule	)* AS ID
+		|	LP feArrayIndexRule (	COMMA feArrayIndexRule	)+ RP BY feSortFieldRule (	COMMA feSortFieldRule	)* AS LP ID (	COMMA ID	)+ RP	)
 	;
 
 
@@ -776,13 +748,7 @@ feArrayRefRule
 
 createFuzzySetModelRule
 	:
-		CREATE FUZZY SET MODEL ID 
-			DEGREES ID (	COMMA ID	)* 
-			(	DERIVED DEGREES ID AS ftExpressionRule 
-			(	COMMA ID AS ftExpressionRule	)*	)? 
-			(	CONSTRAINT jfOrConditionRule	)? 
-				(	fuzzyOperatorDefinitionRule	)* 
-		SC
+		CREATE FUZZY SET MODEL ID DEGREES ID (	COMMA ID	)* (	DERIVED DEGREES ID AS ftExpressionRule (	COMMA ID AS ftExpressionRule	)*	)? (	CONSTRAINT jfOrConditionRule	)? (	fuzzyOperatorDefinitionRule	)* SC
 	;
 
 
@@ -796,13 +762,7 @@ fuzzyOperatorDefinitionRule
 
 createGenericFuzzySetOperatorRule
 	:
-		CREATE ID FUZZY OPERATOR ID 
-			PARAMETERS parameterRule (	COMMA parameterRule	)* 
-			(	PRECONDITION jfOrConditionRule	)? 
-			(	EVALUATE ID AS jfExpressionRule 
-			(	POLYLINE LB LP numericRule COMMA numericRule RP 
-						(	COMMA LP numericRule COMMA numericRule RP	)+ RB	)?	)+ 
-		SC
+		CREATE ID FUZZY OPERATOR ID PARAMETERS parameterRule (	COMMA parameterRule	)* (	PRECONDITION jfOrConditionRule	)? (	EVALUATE ID AS jfExpressionRule (	POLYLINE LB LP numericRule COMMA numericRule RP (	COMMA LP numericRule COMMA numericRule RP	)+ RB	)?	)+ SC
 	;
 
 
@@ -916,44 +876,41 @@ ftSpecialFunctionRule
 
 createGenericFuzzyEvaluatorRule
 	:
-		CREATE ID FUZZY EVALUATOR ID 
-			PARAMETERS feParameterRule (	COMMA feParameterRule	)* 
-			(	PRECONDITION jfOrConditionRule	)? 
-			(	feArraySortRule
-			|	feDeriveRule
-			|	feForAllRule	)* 
-			(	EVALUATE ID AS feExpressionRule 
-				(	POLYLINE LB LP numericRule COMMA numericRule RP 
-							(	COMMA LP numericRule COMMA numericRule RP	)+ RB	)?	
-			)+ 
-		SC
+		CREATE ID FUZZY EVALUATOR ID PARAMETERS feParameterRule (	COMMA feParameterRule	)* (	PRECONDITION jfOrConditionRule	)? (	feArraySortRule
+		|	feDeriveRule
+		|	feForAllRule	)* (	EVALUATE ID AS feExpressionRule (	POLYLINE LB LP numericRule COMMA numericRule RP (	COMMA LP numericRule COMMA numericRule RP	)+ RB	)?	)+ SC
 	;
 
 
 createJavaFunctionRule
 	:
 		CREATE JAVA FUNCTION ID 
-			PARAMETERS parameterRule (	COMMA parameterRule	)* 
+			PARAMETERS parameterRule 
+				(	COMMA parameterRule	)* 
 			(	PRECONDITION jfOrConditionRule	)? 
 			CLASS ID 
 				(	IMPORT QUOTED_VALUE	)? 
-				CLASS BODY END_BODY SC
+			CLASS BODY 
+			/* java code */
+			END_BODY SC
 	;
 
 
 
-/* ******************************
-**** Lexical rule definition ****
-******************************* */
+// Token Definition 
 
 fragment
 LETTER          	:	 'A' . . 'Z' | 'a' . . 'z';
+
 fragment
 DIGIT0          	:	 '1' . . '9';
+
 fragment
 DIGIT           	:	 '0' . . '9';
+
 fragment
 WS              	:	 ( ' ' | '\t' | '\r' | '\n' )+;
+
 AND             	:	 'AND';
 OR              	:	 'OR';
 NOT             	:	 'NOT';
@@ -1121,10 +1078,8 @@ RBR             	:	 '}';
 APEX            	:	 '\'';
 QUOTE           	:	 '"';
 TILDE           	:	 '~';
-XXX             	:	 '###TEST***';
 WHITE_SPACES    	:	 WS;
 APEX_VALUE      	:	 '\'' ( ~( '\'' ) )* '\'';
 QUOTED_VALUE    	:	 '"' ( ~( '"' ) )* '"';
 COMMENT         	:	 '//' ~( '\n' | '\r' )* '\r'? '\n' | '/*' ( options : . )* '*/';
 SCAN_ERROR      	:	 .;
-

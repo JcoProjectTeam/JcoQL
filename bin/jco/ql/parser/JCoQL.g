@@ -30,7 +30,7 @@ options {
 
 @members{
 	public static final String version = "4.0";
-	public static final String release = "4.0.06";
+	public static final String release = "4.0.10";
  	JCoQLEnvironment env;
 
   public JCoQLParser(JCoQLLexer lexer) {		
@@ -92,27 +92,34 @@ options {
 
 // Start Symbol
 start 
-  : ( getCollectionRule             	    // 1
+  : ( useDbRule                     	    // 12
+    |	getCollectionRule             	    // 1
+    | getDictionaryRule										// 16
+    | lookupFromWebRule										// 17
     | saveAsRule                    	    // 3
-    | joinOfCollectionsRule         	    // 4
-    | filterRule                    	    // 6
-    | groupRule                     	    // 7
-    | expandRule                    	    // 8
+
     | mergeCollectionsRule          	    // 9
     | intersectCollectionsRule      	    // 10
     | subtractCollectionsRule       	    // 11
-    | useDbRule                     	    // 12
+// 
+    | filterRule                    	    // 6
+    | joinOfCollectionsRule         	    // 4
     | trajectoryMatchingRule    			    // 13
-    |	createFuzzyOperatorRule							// 14
+
+    | groupRule                     	    // 7
+    | expandRule                    	    // 8
+
     | createJavaScriptFunctionRule				// 15
-    | getDictionaryRule										// 16
-    | lookupFromWebRule										// 17
+    | createJavaFunctionRule							// 21 PF news
+
+    |	createFuzzyOperatorRule							// 14
     | createFuzzyAggregatorRule     			// 18 - Invernici
+    | createFuzzyEvaluatorRule						// 22 PF news
+
     | createFuzzySetModelRule							// 19 - Balicco			FuzzySetType renamed in FuzzySetModel
     | createGenericFuzzySetOperatorRule		// 20 - Balicco
-    | createJavaFunctionRule							// 21 PF news
-    | createFuzzyEvaluatorRule						// 22 PF news
     | createGenericFuzzyEvaluatorRule	    // 23 Bressanelli
+
     | test                      					// istruzione di test...
     )* EOF
   ;
@@ -198,11 +205,6 @@ caseClauseRule returns [CaseClause cc]
     ( c=CASES | c=CASE ) 						{ cc = env.newCaseClause ($c); }
 	      ( wc=whereCaseRule					{ cc.addWhereCase (wc); } )+	      
 	      ( oth=othersRule 						{ cc.setOthers (oth); }		)?
-	/* ( CASE
-			    generateSectionRule
-		|  CASES
-					whereCaseRule )
-			othersRule		*/	      
   ;
 
 
@@ -660,8 +662,8 @@ saveAsRule
 
 lookupFromWebRule
 	:	
-		LOOKUP FROM_WEB 					{	LookupFromWeb gfw = env.addLookupFromWeb ();	}
-			(	fe=forEachRule					{	gfw.addForEach (fe);	}	)+
+		LOOKUP FROM_WEB 					{	LookupFromWeb lfw = env.addLookupFromWeb ();	}
+			(	fe=forEachRule					{	lfw.addForEach (fe);	}	)+
 		SC		
 	;
 
@@ -749,7 +751,7 @@ unpackRule returns [Unpack u]
  
 mergeCollectionsRule
   :
-     MERGE COLLECTIONS 		
+    MERGE COLLECTIONS 		
      		cr=collectionReferenceRule 								{ MergeCollections mc = env.addMergeCollections (cr); }
 		      ( COMMA cr=collectionReferenceRule					{ mc.addCollection (cr); }			)+
 		    ( REMOVE DUPLICATES 													{	mc.setRemoveDuplicates(); }		 		)?  

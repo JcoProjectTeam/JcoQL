@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g 2025-03-12 03:30:45
+// $ANTLR 3.5.1 C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g 2025-05-12 22:56:30
 
   package jco.ql.parser;
 
@@ -214,7 +214,7 @@ public class JCoQLLexer extends Lexer {
 	// $ANTLR start "LETTER"
 	public final void mLETTER() throws RecognitionException {
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1391:17: ( 'A' .. 'Z' | 'a' .. 'z' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1393:17: ( 'A' .. 'Z' | 'a' .. 'z' )
 			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
@@ -237,7 +237,7 @@ public class JCoQLLexer extends Lexer {
 	// $ANTLR start "DIGIT0"
 	public final void mDIGIT0() throws RecognitionException {
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1392:17: ( '1' .. '9' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1394:17: ( '1' .. '9' )
 			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:
 			{
 			if ( (input.LA(1) >= '1' && input.LA(1) <= '9') ) {
@@ -260,7 +260,7 @@ public class JCoQLLexer extends Lexer {
 	// $ANTLR start "DIGIT"
 	public final void mDIGIT() throws RecognitionException {
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1393:17: ( '0' .. '9' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1395:17: ( '0' .. '9' )
 			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
@@ -283,10 +283,10 @@ public class JCoQLLexer extends Lexer {
 	// $ANTLR start "WS"
 	public final void mWS() throws RecognitionException {
 		try {
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1395:3: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1395:7: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1397:3: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1397:7: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1395:7: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1397:7: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -333,8 +333,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = AND;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1405:5: ( 'AND' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1405:7: 'AND'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1407:5: ( 'AND' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1407:7: 'AND'
 			{
 			match("AND"); 
 
@@ -354,8 +354,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = OR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1406:5: ( 'OR' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1406:7: 'OR'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1408:5: ( 'OR' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1408:7: 'OR'
 			{
 			match("OR"); 
 
@@ -375,8 +375,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = NOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1407:5: ( 'NOT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1407:7: 'NOT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1409:5: ( 'NOT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1409:7: 'NOT'
 			{
 			match("NOT"); 
 
@@ -396,8 +396,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ADDING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1410:13: ( 'ADDING' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1410:15: 'ADDING'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1412:13: ( 'ADDING' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1412:15: 'ADDING'
 			{
 			match("ADDING"); 
 
@@ -417,8 +417,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ADD_ST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1411:15: ( 'ADD' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1411:17: 'ADD'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1413:15: ( 'ADD' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1413:17: 'ADD'
 			{
 			match("ADD"); 
 
@@ -438,8 +438,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = AGGREGATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1412:17: ( 'AGGREGATE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1412:19: 'AGGREGATE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1414:17: ( 'AGGREGATE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1414:19: 'AGGREGATE'
 			{
 			match("AGGREGATE"); 
 
@@ -459,8 +459,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = AGGREGATOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1413:15: ( 'AGGREGATOR' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1413:17: 'AGGREGATOR'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1415:15: ( 'AGGREGATOR' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1415:17: 'AGGREGATOR'
 			{
 			match("AGGREGATOR"); 
 
@@ -480,8 +480,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ALL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1414:17: ( 'ALL' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1414:19: 'ALL'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1416:17: ( 'ALL' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1416:19: 'ALL'
 			{
 			match("ALL"); 
 
@@ -501,8 +501,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ALPHACUT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1415:14: ( 'ALPHACUT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1415:16: 'ALPHACUT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1417:14: ( 'ALPHACUT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1417:16: 'ALPHACUT'
 			{
 			match("ALPHACUT"); 
 
@@ -522,8 +522,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ARRAY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1416:17: ( 'ARRAY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1416:19: 'ARRAY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1418:17: ( 'ARRAY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1418:19: 'ARRAY'
 			{
 			match("ARRAY"); 
 
@@ -543,10 +543,10 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ARRAY_FUNCTION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1417:17: ( ( 'MIN' | 'MAX' | 'AVG' | 'SUM' ) '_ARRAY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1417:19: ( 'MIN' | 'MAX' | 'AVG' | 'SUM' ) '_ARRAY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1419:17: ( ( 'MIN' | 'MAX' | 'AVG' | 'SUM' ) '_ARRAY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1419:19: ( 'MIN' | 'MAX' | 'AVG' | 'SUM' ) '_ARRAY'
 			{
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1417:19: ( 'MIN' | 'MAX' | 'AVG' | 'SUM' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1419:19: ( 'MIN' | 'MAX' | 'AVG' | 'SUM' )
 			int alt2=4;
 			switch ( input.LA(1) ) {
 			case 'M':
@@ -590,28 +590,28 @@ public class JCoQLLexer extends Lexer {
 			}
 			switch (alt2) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1417:21: 'MIN'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1419:21: 'MIN'
 					{
 					match("MIN"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1417:29: 'MAX'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1419:29: 'MAX'
 					{
 					match("MAX"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1417:37: 'AVG'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1419:37: 'AVG'
 					{
 					match("AVG"); 
 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1417:45: 'SUM'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1419:45: 'SUM'
 					{
 					match("SUM"); 
 
@@ -638,8 +638,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = AS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1418:18: ( 'AS' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1418:20: 'AS'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1420:18: ( 'AS' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1420:20: 'AS'
 			{
 			match("AS"); 
 
@@ -659,8 +659,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = BODY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1419:12: ( 'BODY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1419:14: 'BODY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1421:12: ( 'BODY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1421:14: 'BODY'
 			{
 			match("BODY"); 
 
@@ -681,8 +681,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = END_BODY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1420:14: ( 'END' WS 'BODY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1420:16: 'END' WS 'BODY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1422:14: ( 'END' WS 'BODY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1422:16: 'END' WS 'BODY'
 			{
 			match("END"); 
 
@@ -707,7 +707,7 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = BOOLEAN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1421:17: ( 'TRUE' | 'FALSE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1423:17: ( 'TRUE' | 'FALSE' )
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0=='T') ) {
@@ -725,14 +725,14 @@ public class JCoQLLexer extends Lexer {
 
 			switch (alt3) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1421:19: 'TRUE'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1423:19: 'TRUE'
 					{
 					match("TRUE"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1421:28: 'FALSE'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1423:28: 'FALSE'
 					{
 					match("FALSE"); 
 
@@ -754,8 +754,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = BUILD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1422:13: ( 'BUILD' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1422:15: 'BUILD'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1424:13: ( 'BUILD' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1424:15: 'BUILD'
 			{
 			match("BUILD"); 
 
@@ -775,8 +775,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = BY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1423:17: ( 'BY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1423:19: 'BY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1425:17: ( 'BY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1425:19: 'BY'
 			{
 			match("BY"); 
 
@@ -796,8 +796,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = CALL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1424:17: ( 'CALL' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1424:19: 'CALL'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1426:17: ( 'CALL' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1426:19: 'CALL'
 			{
 			match("CALL"); 
 
@@ -817,8 +817,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = CASE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1425:18: ( 'CASE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1425:20: 'CASE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1427:18: ( 'CASE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1427:20: 'CASE'
 			{
 			match("CASE"); 
 
@@ -838,8 +838,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = CASES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1426:18: ( 'CASES' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1426:20: 'CASES'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1428:18: ( 'CASES' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1428:20: 'CASES'
 			{
 			match("CASES"); 
 
@@ -859,8 +859,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = CHECK_FOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1427:15: ( 'CHECK' WS 'FOR' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1427:17: 'CHECK' WS 'FOR'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1429:15: ( 'CHECK' WS 'FOR' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1429:17: 'CHECK' WS 'FOR'
 			{
 			match("CHECK"); 
 
@@ -884,8 +884,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = CLASS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1428:13: ( 'CLASS' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1428:15: 'CLASS'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1430:13: ( 'CLASS' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1430:15: 'CLASS'
 			{
 			match("CLASS"); 
 
@@ -905,8 +905,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = COLLECTION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1429:17: ( 'COLLECTION' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1429:19: 'COLLECTION'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1431:17: ( 'COLLECTION' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1431:19: 'COLLECTION'
 			{
 			match("COLLECTION"); 
 
@@ -926,8 +926,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = COLLECTIONS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1430:17: ( 'COLLECTIONS' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1430:19: 'COLLECTIONS'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1432:17: ( 'COLLECTIONS' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1432:19: 'COLLECTIONS'
 			{
 			match("COLLECTIONS"); 
 
@@ -947,8 +947,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = CONSTRAINT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1431:15: ( 'CONSTRAINT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1431:17: 'CONSTRAINT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1433:15: ( 'CONSTRAINT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1433:17: 'CONSTRAINT'
 			{
 			match("CONSTRAINT"); 
 
@@ -968,8 +968,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = CREATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1432:13: ( 'CREATE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1432:15: 'CREATE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1434:13: ( 'CREATE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1434:15: 'CREATE'
 			{
 			match("CREATE"); 
 
@@ -989,8 +989,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = CUMULATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1433:14: ( 'CUMULATE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1433:16: 'CUMULATE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1435:14: ( 'CUMULATE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1435:16: 'CUMULATE'
 			{
 			match("CUMULATE"); 
 
@@ -1010,8 +1010,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1434:17: ( 'DB' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1434:19: 'DB'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1436:17: ( 'DB' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1436:19: 'DB'
 			{
 			match("DB"); 
 
@@ -1031,8 +1031,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DEFAULT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1435:14: ( 'DEFAULT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1435:16: 'DEFAULT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1437:14: ( 'DEFAULT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1437:16: 'DEFAULT'
 			{
 			match("DEFAULT"); 
 
@@ -1052,8 +1052,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DEFUZZIFY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1436:15: ( 'DEFUZZIFY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1436:17: 'DEFUZZIFY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1438:15: ( 'DEFUZZIFY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1438:17: 'DEFUZZIFY'
 			{
 			match("DEFUZZIFY"); 
 
@@ -1073,8 +1073,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DEGREE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1437:13: ( 'DEGREE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1437:15: 'DEGREE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1439:13: ( 'DEGREE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1439:15: 'DEGREE'
 			{
 			match("DEGREE"); 
 
@@ -1094,8 +1094,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DEGREES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1438:14: ( 'DEGREES' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1438:16: 'DEGREES'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1440:14: ( 'DEGREES' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1440:16: 'DEGREES'
 			{
 			match("DEGREES"); 
 
@@ -1115,8 +1115,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DERIVE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1439:13: ( 'DERIVE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1439:15: 'DERIVE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1441:13: ( 'DERIVE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1441:15: 'DERIVE'
 			{
 			match("DERIVE"); 
 
@@ -1136,8 +1136,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DERIVED;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1440:14: ( 'DERIVED' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1440:16: 'DERIVED'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1442:14: ( 'DERIVED' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1442:16: 'DERIVED'
 			{
 			match("DERIVED"); 
 
@@ -1157,8 +1157,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DICTIONARY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1441:15: ( 'DICTIONARY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1441:17: 'DICTIONARY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1443:15: ( 'DICTIONARY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1443:17: 'DICTIONARY'
 			{
 			match("DICTIONARY"); 
 
@@ -1178,8 +1178,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DIRECTION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1442:15: ( 'DIRECTION' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1442:17: 'DIRECTION'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1444:15: ( 'DIRECTION' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1444:17: 'DIRECTION'
 			{
 			match("DIRECTION"); 
 
@@ -1199,8 +1199,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DISTANCE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1443:14: ( 'DISTANCE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1443:16: 'DISTANCE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1445:14: ( 'DISTANCE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1445:16: 'DISTANCE'
 			{
 			match("DISTANCE"); 
 
@@ -1220,8 +1220,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DOCUMENTS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1444:15: ( 'DOCUMENTS' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1444:17: 'DOCUMENTS'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1446:15: ( 'DOCUMENTS' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1446:17: 'DOCUMENTS'
 			{
 			match("DOCUMENTS"); 
 
@@ -1241,8 +1241,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DROP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1445:17: ( 'DROP' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1445:19: 'DROP'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1447:17: ( 'DROP' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1447:19: 'DROP'
 			{
 			match("DROP"); 
 
@@ -1262,8 +1262,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DROPPING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1446:17: ( 'DROPPING' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1446:19: 'DROPPING'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1448:17: ( 'DROPPING' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1448:19: 'DROPPING'
 			{
 			match("DROPPING"); 
 
@@ -1283,8 +1283,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DUPLICATES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1447:17: ( 'DUPLICATES' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1447:19: 'DUPLICATES'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1449:17: ( 'DUPLICATES' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1449:19: 'DUPLICATES'
 			{
 			match("DUPLICATES"); 
 
@@ -1304,8 +1304,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = EACH;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1448:12: ( 'EACH' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1448:14: 'EACH'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1450:12: ( 'EACH' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1450:14: 'EACH'
 			{
 			match("EACH"); 
 
@@ -1325,8 +1325,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = EXPAND;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1449:17: ( 'EXPAND' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1449:19: 'EXPAND'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1451:17: ( 'EXPAND' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1451:19: 'EXPAND'
 			{
 			match("EXPAND"); 
 
@@ -1346,8 +1346,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = EXTENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1450:17: ( 'EXTENT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1450:19: 'EXTENT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1452:17: ( 'EXTENT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1452:19: 'EXTENT'
 			{
 			match("EXTENT"); 
 
@@ -1367,8 +1367,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = EXTRACT_ARRAY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1451:19: ( 'EXTRACT_ARRAY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1451:21: 'EXTRACT_ARRAY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1453:19: ( 'EXTRACT_ARRAY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1453:21: 'EXTRACT_ARRAY'
 			{
 			match("EXTRACT_ARRAY"); 
 
@@ -1388,8 +1388,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = EVALUATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1452:14: ( 'EVALUATE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1452:16: 'EVALUATE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1454:14: ( 'EVALUATE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1454:16: 'EVALUATE'
 			{
 			match("EVALUATE"); 
 
@@ -1409,8 +1409,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = EVALUATOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1453:15: ( 'EVALUATOR' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1453:17: 'EVALUATOR'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1455:15: ( 'EVALUATOR' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1455:17: 'EVALUATOR'
 			{
 			match("EVALUATOR"); 
 
@@ -1430,8 +1430,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FIELD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1454:13: ( 'FIELD' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1454:15: 'FIELD'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1456:13: ( 'FIELD' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1456:15: 'FIELD'
 			{
 			match("FIELD"); 
 
@@ -1451,8 +1451,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FIELDS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1455:13: ( 'FIELDS' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1455:15: 'FIELDS'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1457:13: ( 'FIELDS' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1457:15: 'FIELDS'
 			{
 			match("FIELDS"); 
 
@@ -1472,8 +1472,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FILTER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1456:17: ( 'FILTER' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1456:19: 'FILTER'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1458:17: ( 'FILTER' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1458:19: 'FILTER'
 			{
 			match("FILTER"); 
 
@@ -1493,8 +1493,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FIRST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1457:17: ( 'FIRST' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1457:19: 'FIRST'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1459:17: ( 'FIRST' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1459:19: 'FIRST'
 			{
 			match("FIRST"); 
 
@@ -1514,8 +1514,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1458:12: ( 'FOR' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1458:14: 'FOR'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1460:12: ( 'FOR' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1460:14: 'FOR'
 			{
 			match("FOR"); 
 
@@ -1535,8 +1535,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FROM_WEB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1459:15: ( 'FROM' WS 'WEB' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1459:17: 'FROM' WS 'WEB'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1461:15: ( 'FROM' WS 'WEB' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1461:17: 'FROM' WS 'WEB'
 			{
 			match("FROM"); 
 
@@ -1560,8 +1560,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FROM_ARRAY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1460:15: ( 'FROM' WS 'ARRAY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1460:17: 'FROM' WS 'ARRAY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1462:15: ( 'FROM' WS 'ARRAY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1462:17: 'FROM' WS 'ARRAY'
 			{
 			match("FROM"); 
 
@@ -1585,8 +1585,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FUNCTION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1461:14: ( 'FUNCTION' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1461:16: 'FUNCTION'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1463:14: ( 'FUNCTION' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1463:16: 'FUNCTION'
 			{
 			match("FUNCTION"); 
 
@@ -1606,8 +1606,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FUZZY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1462:13: ( 'FUZZY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1462:15: 'FUZZY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1464:13: ( 'FUZZY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1464:15: 'FUZZY'
 			{
 			match("FUZZY"); 
 
@@ -1627,8 +1627,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = GENERATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1463:14: ( 'GENERATE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1463:16: 'GENERATE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1465:14: ( 'GENERATE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1465:16: 'GENERATE'
 			{
 			match("GENERATE"); 
 
@@ -1648,8 +1648,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = GEOMETRY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1464:17: ( 'GEOMETRY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1464:19: 'GEOMETRY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1466:17: ( 'GEOMETRY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1466:19: 'GEOMETRY'
 			{
 			match("GEOMETRY"); 
 
@@ -1669,8 +1669,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = GET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1465:17: ( 'GET' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1465:19: 'GET'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1467:17: ( 'GET' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1467:19: 'GET'
 			{
 			match("GET"); 
 
@@ -1690,8 +1690,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = GROUP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1466:17: ( 'GROUP' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1466:19: 'GROUP'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1468:17: ( 'GROUP' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1468:19: 'GROUP'
 			{
 			match("GROUP"); 
 
@@ -1711,8 +1711,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = GROUPING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1467:17: ( 'GROUPING' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1467:19: 'GROUPING'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1469:17: ( 'GROUPING' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1469:19: 'GROUPING'
 			{
 			match("GROUPING"); 
 
@@ -1732,8 +1732,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = HOWINCLUDE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1468:15: ( 'HOW_INCLUDE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1468:17: 'HOW_INCLUDE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1470:15: ( 'HOW_INCLUDE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1470:17: 'HOW_INCLUDE'
 			{
 			match("HOW_INCLUDE"); 
 
@@ -1753,8 +1753,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = HOWINTERSECT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1469:16: ( 'HOW_INTERSECT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1469:18: 'HOW_INTERSECT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1471:16: ( 'HOW_INTERSECT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1471:18: 'HOW_INTERSECT'
 			{
 			match("HOW_INTERSECT"); 
 
@@ -1774,8 +1774,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = HOWMEET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1470:14: ( 'HOW_MEET' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1470:16: 'HOW_MEET'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1472:14: ( 'HOW_MEET' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1472:16: 'HOW_MEET'
 			{
 			match("HOW_MEET"); 
 
@@ -1795,8 +1795,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1471:11: ( 'IF' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1471:13: 'IF'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1473:11: ( 'IF' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1473:13: 'IF'
 			{
 			match("IF"); 
 
@@ -1816,8 +1816,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = IF_ERROR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1472:14: ( 'IF_ERROR' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1472:16: 'IF_ERROR'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1474:14: ( 'IF_ERROR' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1474:16: 'IF_ERROR'
 			{
 			match("IF_ERROR"); 
 
@@ -1837,8 +1837,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = IF_FAILS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1473:14: ( 'IF_FAILS' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1473:16: 'IF_FAILS'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1475:14: ( 'IF_FAILS' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1475:16: 'IF_FAILS'
 			{
 			match("IF_FAILS"); 
 
@@ -1858,8 +1858,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = IMPORT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1474:13: ( 'IMPORT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1474:15: 'IMPORT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1476:13: ( 'IMPORT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1476:15: 'IMPORT'
 			{
 			match("IMPORT"); 
 
@@ -1879,8 +1879,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = INCLUDED;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1475:17: ( 'INCLUDED' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1475:19: 'INCLUDED'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1477:17: ( 'INCLUDED' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1477:19: 'INCLUDED'
 			{
 			match("INCLUDED"); 
 
@@ -1900,8 +1900,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = INPUT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1476:16: ( 'INPUT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1476:18: 'INPUT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1478:16: ( 'INPUT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1478:18: 'INPUT'
 			{
 			match("INPUT"); 
 
@@ -1921,8 +1921,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = INRANGE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1477:17: ( 'IN_RANGE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1477:19: 'IN_RANGE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1479:17: ( 'IN_RANGE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1479:19: 'IN_RANGE'
 			{
 			match("IN_RANGE"); 
 
@@ -1942,8 +1942,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = INTERSECT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1478:15: ( 'INTERSECT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1478:17: 'INTERSECT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1480:15: ( 'INTERSECT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1480:17: 'INTERSECT'
 			{
 			match("INTERSECT"); 
 
@@ -1963,8 +1963,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = INTERSECTION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1479:17: ( 'INTERSECTION' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1479:19: 'INTERSECTION'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1481:17: ( 'INTERSECTION' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1481:19: 'INTERSECTION'
 			{
 			match("INTERSECTION"); 
 
@@ -1984,8 +1984,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = IN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1480:11: ( 'IN' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1480:13: 'IN'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1482:11: ( 'IN' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1482:13: 'IN'
 			{
 			match("IN"); 
 
@@ -2005,8 +2005,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = INTO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1481:17: ( 'INTO' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1481:19: 'INTO'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1483:17: ( 'INTO' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1483:19: 'INTO'
 			{
 			match("INTO"); 
 
@@ -2026,8 +2026,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ISNULL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1482:13: ( 'IS' WS 'NULL' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1482:15: 'IS' WS 'NULL'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1484:13: ( 'IS' WS 'NULL' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1484:15: 'IS' WS 'NULL'
 			{
 			match("IS"); 
 
@@ -2051,8 +2051,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ISNOTNULL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1483:15: ( 'IS' WS 'NOT' WS 'NULL' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1483:17: 'IS' WS 'NOT' WS 'NULL'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1485:15: ( 'IS' WS 'NOT' WS 'NULL' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1485:17: 'IS' WS 'NOT' WS 'NULL'
 			{
 			match("IS"); 
 
@@ -2080,8 +2080,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = JOIN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1484:17: ( 'JOIN' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1484:19: 'JOIN'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1486:17: ( 'JOIN' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1486:19: 'JOIN'
 			{
 			match("JOIN"); 
 
@@ -2101,8 +2101,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = JAVA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1485:12: ( 'JAVA' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1485:14: 'JAVA'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1487:12: ( 'JAVA' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1487:14: 'JAVA'
 			{
 			match("JAVA"); 
 
@@ -2122,8 +2122,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = JAVASCRIPT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1486:15: ( 'JAVASCRIPT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1486:17: 'JAVASCRIPT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1488:15: ( 'JAVASCRIPT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1488:17: 'JAVASCRIPT'
 			{
 			match("JAVASCRIPT"); 
 
@@ -2143,8 +2143,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = KEEP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1487:17: ( 'KEEP' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1487:19: 'KEEP'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1489:17: ( 'KEEP' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1489:19: 'KEEP'
 			{
 			match("KEEP"); 
 
@@ -2164,8 +2164,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = KEEPING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1488:18: ( 'KEEPING' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1488:20: 'KEEPING'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1490:18: ( 'KEEPING' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1490:20: 'KEEPING'
 			{
 			match("KEEPING"); 
 
@@ -2185,8 +2185,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = KNOWN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1489:13: ( 'KNOWN' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1489:15: 'KNOWN'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1491:13: ( 'KNOWN' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1491:15: 'KNOWN'
 			{
 			match("KNOWN"); 
 
@@ -2206,8 +2206,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = LAST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1490:16: ( 'LAST' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1490:18: 'LAST'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1492:16: ( 'LAST' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1492:18: 'LAST'
 			{
 			match("LAST"); 
 
@@ -2227,8 +2227,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = LEFT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1491:17: ( 'LEFT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1491:19: 'LEFT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1493:17: ( 'LEFT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1493:19: 'LEFT'
 			{
 			match("LEFT"); 
 
@@ -2248,8 +2248,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = LOCALLY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1492:14: ( 'LOCALLY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1492:16: 'LOCALLY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1494:14: ( 'LOCALLY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1494:16: 'LOCALLY'
 			{
 			match("LOCALLY"); 
 
@@ -2269,8 +2269,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = LOOKUP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1493:14: ( 'LOOKUP' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1493:16: 'LOOKUP'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1495:14: ( 'LOOKUP' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1495:16: 'LOOKUP'
 			{
 			match("LOOKUP"); 
 
@@ -2290,8 +2290,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = MATCHING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1494:17: ( 'MATCHING' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1494:19: 'MATCHING'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1496:17: ( 'MATCHING' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1496:19: 'MATCHING'
 			{
 			match("MATCHING"); 
 
@@ -2311,8 +2311,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = MAXIMUM;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1495:14: ( 'MAXIMUM' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1495:16: 'MAXIMUM'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1497:14: ( 'MAXIMUM' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1497:16: 'MAXIMUM'
 			{
 			match("MAXIMUM"); 
 
@@ -2332,8 +2332,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = MEET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1496:17: ( 'MEET' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1496:19: 'MEET'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1498:17: ( 'MEET' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1498:19: 'MEET'
 			{
 			match("MEET"); 
 
@@ -2353,8 +2353,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = MEMBERSHIP_ARRAY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1497:19: ( 'MEMBERSHIP_ARRAY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1497:21: 'MEMBERSHIP_ARRAY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1499:19: ( 'MEMBERSHIP_ARRAY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1499:21: 'MEMBERSHIP_ARRAY'
 			{
 			match("MEMBERSHIP_ARRAY"); 
 
@@ -2374,7 +2374,7 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = MEMBERSHIP_TO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1498:18: ( 'MEMBERSHIP_TO' | 'MEMBERSHIP_OF' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1500:18: ( 'MEMBERSHIP_TO' | 'MEMBERSHIP_OF' )
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0=='M') ) {
@@ -2588,14 +2588,14 @@ public class JCoQLLexer extends Lexer {
 
 			switch (alt4) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1498:20: 'MEMBERSHIP_TO'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1500:20: 'MEMBERSHIP_TO'
 					{
 					match("MEMBERSHIP_TO"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1498:38: 'MEMBERSHIP_OF'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1500:38: 'MEMBERSHIP_OF'
 					{
 					match("MEMBERSHIP_OF"); 
 
@@ -2617,8 +2617,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = MERGE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1499:17: ( 'MERGE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1499:19: 'MERGE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1501:17: ( 'MERGE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1501:19: 'MERGE'
 			{
 			match("MERGE"); 
 
@@ -2638,8 +2638,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = MIN_SIMILARITY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1500:17: ( 'MIN_SIMILARITY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1500:19: 'MIN_SIMILARITY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1502:17: ( 'MIN_SIMILARITY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1502:19: 'MIN_SIMILARITY'
 			{
 			match("MIN_SIMILARITY"); 
 
@@ -2659,8 +2659,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = MINIMUM;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1501:14: ( 'MINIMUM' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1501:16: 'MINIMUM'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1503:14: ( 'MINIMUM' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1503:16: 'MINIMUM'
 			{
 			match("MINIMUM"); 
 
@@ -2680,8 +2680,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = MODEL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1502:13: ( 'MODEL' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1502:15: 'MODEL'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1504:13: ( 'MODEL' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1504:15: 'MODEL'
 			{
 			match("MODEL"); 
 
@@ -2701,8 +2701,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = OF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1503:17: ( 'OF' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1503:19: 'OF'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1505:17: ( 'OF' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1505:19: 'OF'
 			{
 			match("OF"); 
 
@@ -2722,8 +2722,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ON;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1504:17: ( 'ON' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1504:19: 'ON'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1506:17: ( 'ON' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1506:19: 'ON'
 			{
 			match("ON"); 
 
@@ -2743,8 +2743,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = OPERATOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1505:15: ( 'OPERATOR' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1505:17: 'OPERATOR'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1507:15: ( 'OPERATOR' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1507:17: 'OPERATOR'
 			{
 			match("OPERATOR"); 
 
@@ -2764,8 +2764,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ORIENTATION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1506:18: ( 'ORIENTATION' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1506:20: 'ORIENTATION'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1508:18: ( 'ORIENTATION' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1508:20: 'ORIENTATION'
 			{
 			match("ORIENTATION"); 
 
@@ -2785,8 +2785,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = OTHERS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1507:13: ( 'OTHERS' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1507:15: 'OTHERS'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1509:13: ( 'OTHERS' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1509:15: 'OTHERS'
 			{
 			match("OTHERS"); 
 
@@ -2806,7 +2806,7 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ORDER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1508:13: ( 'ORDER' | 'SORTED' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1510:13: ( 'ORDER' | 'SORTED' )
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0=='O') ) {
@@ -2824,14 +2824,14 @@ public class JCoQLLexer extends Lexer {
 
 			switch (alt5) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1508:15: 'ORDER'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1510:15: 'ORDER'
 					{
 					match("ORDER"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1508:25: 'SORTED'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1510:25: 'SORTED'
 					{
 					match("SORTED"); 
 
@@ -2853,8 +2853,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = PARAMETERS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1509:15: ( 'PARAMETERS' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1509:17: 'PARAMETERS'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1511:15: ( 'PARAMETERS' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1511:17: 'PARAMETERS'
 			{
 			match("PARAMETERS"); 
 
@@ -2874,8 +2874,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = PARTITION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1510:15: ( 'PARTITION' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1510:17: 'PARTITION'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1512:15: ( 'PARTITION' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1512:17: 'PARTITION'
 			{
 			match("PARTITION"); 
 
@@ -2895,8 +2895,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = POINT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1511:13: ( 'POINT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1511:15: 'POINT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1513:13: ( 'POINT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1513:15: 'POINT'
 			{
 			match("POINT"); 
 
@@ -2916,8 +2916,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = POLYLINE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1512:14: ( 'POLYLINE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1512:16: 'POLYLINE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1514:14: ( 'POLYLINE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1514:16: 'POLYLINE'
 			{
 			match("POLYLINE"); 
 
@@ -2937,8 +2937,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = POS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1513:12: ( 'POS' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1513:14: 'POS'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1515:12: ( 'POS' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1515:14: 'POS'
 			{
 			match("POS"); 
 
@@ -2958,8 +2958,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = PRECONDITION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1514:16: ( 'PRECONDITION' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1514:18: 'PRECONDITION'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1516:16: ( 'PRECONDITION' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1516:18: 'PRECONDITION'
 			{
 			match("PRECONDITION"); 
 
@@ -2979,8 +2979,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = PRODUCT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1515:15: ( 'PRODUCT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1515:17: 'PRODUCT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1517:15: ( 'PRODUCT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1517:17: 'PRODUCT'
 			{
 			match("PRODUCT"); 
 
@@ -3000,8 +3000,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = RESOLVING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1516:15: ( 'RESOLVING' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1516:17: 'RESOLVING'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1518:15: ( 'RESOLVING' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1518:17: 'RESOLVING'
 			{
 			match("RESOLVING"); 
 
@@ -3021,8 +3021,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = RIGHT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1517:17: ( 'RIGHT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1517:19: 'RIGHT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1519:17: ( 'RIGHT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1519:19: 'RIGHT'
 			{
 			match("RIGHT"); 
 
@@ -3042,8 +3042,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = REMOVE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1518:17: ( 'REMOVE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1518:19: 'REMOVE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1520:17: ( 'REMOVE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1520:19: 'REMOVE'
 			{
 			match("REMOVE"); 
 
@@ -3063,8 +3063,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SAVE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1519:17: ( 'SAVE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1519:19: 'SAVE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1521:17: ( 'SAVE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1521:19: 'SAVE'
 			{
 			match("SAVE"); 
 
@@ -3084,8 +3084,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SERVER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1520:17: ( 'SERVER' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1520:19: 'SERVER'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1522:17: ( 'SERVER' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1522:19: 'SERVER'
 			{
 			match("SERVER"); 
 
@@ -3105,8 +3105,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1521:17: ( 'SET' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1521:19: 'SET'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1523:17: ( 'SET' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1523:19: 'SET'
 			{
 			match("SET"); 
 
@@ -3126,8 +3126,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SETS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1522:17: ( 'SETS' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1522:19: 'SETS'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1524:17: ( 'SETS' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1524:19: 'SETS'
 			{
 			match("SETS"); 
 
@@ -3147,8 +3147,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SETTING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1523:17: ( 'SETTING' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1523:19: 'SETTING'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1525:17: ( 'SETTING' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1525:19: 'SETTING'
 			{
 			match("SETTING"); 
 
@@ -3168,8 +3168,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SORT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1524:12: ( 'SORT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1524:14: 'SORT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1526:12: ( 'SORT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1526:14: 'SORT'
 			{
 			match("SORT"); 
 
@@ -3189,8 +3189,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SUBTRACT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1525:17: ( 'SUBTRACT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1525:19: 'SUBTRACT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1527:17: ( 'SUBTRACT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1527:19: 'SUBTRACT'
 			{
 			match("SUBTRACT"); 
 
@@ -3210,8 +3210,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SUM;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1526:12: ( 'SUM' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1526:14: 'SUM'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1528:12: ( 'SUM' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1528:14: 'SUM'
 			{
 			match("SUM"); 
 
@@ -3231,8 +3231,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = TO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1527:18: ( 'TO' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1527:20: 'TO'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1529:18: ( 'TO' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1529:20: 'TO'
 			{
 			match("TO"); 
 
@@ -3252,8 +3252,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = TO_POLYLINE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1528:17: ( 'TO_POLYLINE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1528:19: 'TO_POLYLINE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1530:17: ( 'TO_POLYLINE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1530:19: 'TO_POLYLINE'
 			{
 			match("TO_POLYLINE"); 
 
@@ -3273,8 +3273,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = THRESHOLD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1529:17: ( 'THRESHOLD' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1529:19: 'THRESHOLD'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1531:17: ( 'THRESHOLD' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1531:19: 'THRESHOLD'
 			{
 			match("THRESHOLD"); 
 
@@ -3294,8 +3294,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = TRANSLATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1530:15: ( 'TRANSLATE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1530:17: 'TRANSLATE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1532:15: ( 'TRANSLATE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1532:17: 'TRANSLATE'
 			{
 			match("TRANSLATE"); 
 
@@ -3315,8 +3315,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = TRAJECTORY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1531:17: ( 'TRAJECTORY' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1531:19: 'TRAJECTORY'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1533:17: ( 'TRAJECTORY' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1533:19: 'TRAJECTORY'
 			{
 			match("TRAJECTORY"); 
 
@@ -3336,8 +3336,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = TYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1532:12: ( 'TYPE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1532:14: 'TYPE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1534:12: ( 'TYPE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1534:14: 'TYPE'
 			{
 			match("TYPE"); 
 
@@ -3357,8 +3357,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = UNCOMPARABLE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1533:16: ( 'UNCOMPARABLE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1533:18: 'UNCOMPARABLE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1535:16: ( 'UNCOMPARABLE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1535:18: 'UNCOMPARABLE'
 			{
 			match("UNCOMPARABLE"); 
 
@@ -3378,8 +3378,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = UNKNOWN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1534:14: ( 'UNKNOWN' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1534:16: 'UNKNOWN'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1536:14: ( 'UNKNOWN' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1536:16: 'UNKNOWN'
 			{
 			match("UNKNOWN"); 
 
@@ -3399,8 +3399,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = UNPACK;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1535:17: ( 'UNPACK' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1535:19: 'UNPACK'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1537:17: ( 'UNPACK' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1537:19: 'UNPACK'
 			{
 			match("UNPACK"); 
 
@@ -3420,8 +3420,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = USE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1536:17: ( 'USE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1536:19: 'USE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1538:17: ( 'USE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1538:19: 'USE'
 			{
 			match("USE"); 
 
@@ -3441,8 +3441,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = USING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1537:17: ( 'USING' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1537:19: 'USING'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1539:17: ( 'USING' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1539:19: 'USING'
 			{
 			match("USING"); 
 
@@ -3462,7 +3462,7 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = VERSUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1538:17: ( 'DESC' | 'ASC' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1540:17: ( 'DESC' | 'ASC' )
 			int alt6=2;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0=='D') ) {
@@ -3480,14 +3480,14 @@ public class JCoQLLexer extends Lexer {
 
 			switch (alt6) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1538:19: 'DESC'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1540:19: 'DESC'
 					{
 					match("DESC"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1538:28: 'ASC'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1540:28: 'ASC'
 					{
 					match("ASC"); 
 
@@ -3509,8 +3509,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = WHERE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1539:18: ( 'WHERE' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1539:20: 'WHERE'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1541:18: ( 'WHERE' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1541:20: 'WHERE'
 			{
 			match("WHERE"); 
 
@@ -3530,8 +3530,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = WITH;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1540:17: ( 'WITH' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1540:19: 'WITH'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1542:17: ( 'WITH' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1542:19: 'WITH'
 			{
 			match("WITH"); 
 
@@ -3551,8 +3551,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = WITHIN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1541:17: ( 'WITHIN' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1541:19: 'WITHIN'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1543:17: ( 'WITHIN' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1543:19: 'WITHIN'
 			{
 			match("WITHIN"); 
 
@@ -3572,8 +3572,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = WITHOUT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1542:17: ( 'WITHOUT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1542:19: 'WITHOUT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1544:17: ( 'WITHOUT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1544:19: 'WITHOUT'
 			{
 			match("WITHOUT"); 
 
@@ -3593,8 +3593,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = WRT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1543:17: ( 'WRT' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1543:19: 'WRT'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1545:17: ( 'WRT' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1545:19: 'WRT'
 			{
 			match("WRT"); 
 
@@ -3614,7 +3614,7 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1545:7: ( '0' | DIGIT0 ( DIGIT )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1547:7: ( '0' | DIGIT0 ( DIGIT )* )
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0=='0') ) {
@@ -3632,17 +3632,17 @@ public class JCoQLLexer extends Lexer {
 
 			switch (alt8) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1545:9: '0'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1547:9: '0'
 					{
 					match('0'); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1545:15: DIGIT0 ( DIGIT )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1547:15: DIGIT0 ( DIGIT )*
 					{
 					mDIGIT0(); 
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1545:22: ( DIGIT )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1547:22: ( DIGIT )*
 					loop7:
 					while (true) {
 						int alt7=2;
@@ -3689,7 +3689,7 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1546:8: ( DIGIT0 ( DIGIT )* DOT ( DIGIT )+ | '0' DOT ( DIGIT )+ )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1548:8: ( DIGIT0 ( DIGIT )* DOT ( DIGIT )+ | '0' DOT ( DIGIT )+ )
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( ((LA12_0 >= '1' && LA12_0 <= '9')) ) {
@@ -3707,11 +3707,11 @@ public class JCoQLLexer extends Lexer {
 
 			switch (alt12) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1546:10: DIGIT0 ( DIGIT )* DOT ( DIGIT )+
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1548:10: DIGIT0 ( DIGIT )* DOT ( DIGIT )+
 					{
 					mDIGIT0(); 
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1546:17: ( DIGIT )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1548:17: ( DIGIT )*
 					loop9:
 					while (true) {
 						int alt9=2;
@@ -3742,7 +3742,7 @@ public class JCoQLLexer extends Lexer {
 
 					mDOT(); 
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1546:28: ( DIGIT )+
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1548:28: ( DIGIT )+
 					int cnt10=0;
 					loop10:
 					while (true) {
@@ -3778,12 +3778,12 @@ public class JCoQLLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1546:37: '0' DOT ( DIGIT )+
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1548:37: '0' DOT ( DIGIT )+
 					{
 					match('0'); 
 					mDOT(); 
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1546:45: ( DIGIT )+
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1548:45: ( DIGIT )+
 					int cnt11=0;
 					loop11:
 					while (true) {
@@ -3834,12 +3834,12 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1548:6: ( LETTER ( LETTER | DIGIT | '_' )* )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1548:8: LETTER ( LETTER | DIGIT | '_' )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1550:6: ( LETTER ( LETTER | DIGIT | '_' )* )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1550:8: LETTER ( LETTER | DIGIT | '_' )*
 			{
 			mLETTER(); 
 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1548:15: ( LETTER | DIGIT | '_' )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1550:15: ( LETTER | DIGIT | '_' )*
 			loop13:
 			while (true) {
 				int alt13=2;
@@ -3884,7 +3884,7 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = FIELD_NAME;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1550:12: ( DOT ( LETTER | DIGIT | TILDE | '_' )+ | DOT '\"' (~ ( '\"' ) )* '\"' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1552:12: ( DOT ( LETTER | DIGIT | TILDE | '_' )+ | DOT '\"' (~ ( '\"' ) )* '\"' )
 			int alt16=2;
 			int LA16_0 = input.LA(1);
 			if ( (LA16_0=='.') ) {
@@ -3918,11 +3918,11 @@ public class JCoQLLexer extends Lexer {
 
 			switch (alt16) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1550:14: DOT ( LETTER | DIGIT | TILDE | '_' )+
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1552:14: DOT ( LETTER | DIGIT | TILDE | '_' )+
 					{
 					mDOT(); 
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1550:18: ( LETTER | DIGIT | TILDE | '_' )+
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1552:18: ( LETTER | DIGIT | TILDE | '_' )+
 					int cnt14=0;
 					loop14:
 					while (true) {
@@ -3958,12 +3958,12 @@ public class JCoQLLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1551:14: DOT '\"' (~ ( '\"' ) )* '\"'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1553:14: DOT '\"' (~ ( '\"' ) )* '\"'
 					{
 					mDOT(); 
 
 					match('\"'); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1551:22: (~ ( '\"' ) )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1553:22: (~ ( '\"' ) )*
 					loop15:
 					while (true) {
 						int alt15=2;
@@ -4011,7 +4011,7 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = HASH_NAME;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1553:12: ( '#' ( LETTER | DIGIT | TILDE | '_' )+ | '#' '\"' (~ ( '\"' ) )* '\"' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1555:12: ( '#' ( LETTER | DIGIT | TILDE | '_' )+ | '#' '\"' (~ ( '\"' ) )* '\"' )
 			int alt19=2;
 			int LA19_0 = input.LA(1);
 			if ( (LA19_0=='#') ) {
@@ -4045,10 +4045,10 @@ public class JCoQLLexer extends Lexer {
 
 			switch (alt19) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1553:14: '#' ( LETTER | DIGIT | TILDE | '_' )+
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1555:14: '#' ( LETTER | DIGIT | TILDE | '_' )+
 					{
 					match('#'); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1553:18: ( LETTER | DIGIT | TILDE | '_' )+
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1555:18: ( LETTER | DIGIT | TILDE | '_' )+
 					int cnt17=0;
 					loop17:
 					while (true) {
@@ -4084,11 +4084,11 @@ public class JCoQLLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1554:14: '#' '\"' (~ ( '\"' ) )* '\"'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1556:14: '#' '\"' (~ ( '\"' ) )* '\"'
 					{
 					match('#'); 
 					match('\"'); 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1554:22: (~ ( '\"' ) )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1556:22: (~ ( '\"' ) )*
 					loop18:
 					while (true) {
 						int alt18=2;
@@ -4136,8 +4136,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = AT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1559:7: ( '@' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1559:9: '@'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1561:7: ( '@' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1561:9: '@'
 			{
 			match('@'); 
 			}
@@ -4156,8 +4156,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1560:7: ( '=' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1560:9: '='
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1562:7: ( '=' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1562:9: '='
 			{
 			match('='); 
 			}
@@ -4176,8 +4176,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = NEQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1561:7: ( '!=' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1561:9: '!='
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1563:7: ( '!=' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1563:9: '!='
 			{
 			match("!="); 
 
@@ -4197,8 +4197,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = LE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1562:7: ( '<=' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1562:9: '<='
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1564:7: ( '<=' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1564:9: '<='
 			{
 			match("<="); 
 
@@ -4218,8 +4218,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = GE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1563:7: ( '>=' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1563:9: '>='
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1565:7: ( '>=' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1565:9: '>='
 			{
 			match(">="); 
 
@@ -4239,8 +4239,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = LT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1564:7: ( '<' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1564:9: '<'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1566:7: ( '<' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1566:9: '<'
 			{
 			match('<'); 
 			}
@@ -4259,8 +4259,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = GT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1565:7: ( '>' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1565:9: '>'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1567:7: ( '>' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1567:9: '>'
 			{
 			match('>'); 
 			}
@@ -4279,8 +4279,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1566:7: ( '.' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1566:9: '.'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1568:7: ( '.' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1568:9: '.'
 			{
 			match('.'); 
 			}
@@ -4299,8 +4299,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = ADD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1567:7: ( '+' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1567:9: '+'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1569:7: ( '+' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1569:9: '+'
 			{
 			match('+'); 
 			}
@@ -4319,8 +4319,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SUB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1568:7: ( '-' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1568:9: '-'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1570:7: ( '-' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1570:9: '-'
 			{
 			match('-'); 
 			}
@@ -4339,8 +4339,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = MUL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1569:7: ( '*' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1569:9: '*'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1571:7: ( '*' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1571:9: '*'
 			{
 			match('*'); 
 			}
@@ -4359,8 +4359,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1570:7: ( '/' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1570:9: '/'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1572:7: ( '/' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1572:9: '/'
 			{
 			match('/'); 
 			}
@@ -4379,8 +4379,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = EXP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1571:7: ( '^' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1571:9: '^'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1573:7: ( '^' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1573:9: '^'
 			{
 			match('^'); 
 			}
@@ -4399,8 +4399,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1572:7: ( ',' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1572:9: ','
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1574:7: ( ',' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1574:9: ','
 			{
 			match(','); 
 			}
@@ -4419,8 +4419,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = COLON;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1573:7: ( ':' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1573:9: ':'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1575:7: ( ':' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1575:9: ':'
 			{
 			match(':'); 
 			}
@@ -4439,8 +4439,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SC;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1574:7: ( ';' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1574:9: ';'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1576:7: ( ';' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1576:9: ';'
 			{
 			match(';'); 
 			}
@@ -4459,8 +4459,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = LP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1575:7: ( '(' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1575:9: '('
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1577:7: ( '(' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1577:9: '('
 			{
 			match('('); 
 			}
@@ -4479,8 +4479,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = RP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1576:7: ( ')' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1576:10: ')'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1578:7: ( ')' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1578:10: ')'
 			{
 			match(')'); 
 			}
@@ -4499,8 +4499,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = LB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1577:7: ( '[' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1577:9: '['
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1579:7: ( '[' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1579:9: '['
 			{
 			match('['); 
 			}
@@ -4519,8 +4519,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = RB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1578:7: ( ']' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1578:9: ']'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1580:7: ( ']' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1580:9: ']'
 			{
 			match(']'); 
 			}
@@ -4539,8 +4539,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = LBR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1579:7: ( '{' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1579:9: '{'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1581:7: ( '{' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1581:9: '{'
 			{
 			match('{'); 
 			}
@@ -4559,8 +4559,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = RBR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1580:7: ( '}' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1580:9: '}'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1582:7: ( '}' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1582:9: '}'
 			{
 			match('}'); 
 			}
@@ -4579,8 +4579,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = APEX;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1581:7: ( '\\'' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1581:9: '\\''
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1583:7: ( '\\'' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1583:9: '\\''
 			{
 			match('\''); 
 			}
@@ -4599,8 +4599,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = QUOTE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1582:7: ( '\"' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1582:9: '\"'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1584:7: ( '\"' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1584:9: '\"'
 			{
 			match('\"'); 
 			}
@@ -4619,8 +4619,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = TILDE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1583:7: ( '~' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1583:9: '~'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1585:7: ( '~' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1585:9: '~'
 			{
 			match('~'); 
 			}
@@ -4639,8 +4639,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = XXX;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1584:7: ( '###TEST***' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1584:9: '###TEST***'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1586:7: ( '###TEST***' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1586:9: '###TEST***'
 			{
 			match("###TEST***"); 
 
@@ -4660,8 +4660,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = WHITE_SPACES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1589:3: ( WS )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1589:5: WS
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1591:3: ( WS )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1591:5: WS
 			{
 			mWS(); 
 
@@ -4682,11 +4682,11 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = APEX_VALUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1592:3: ( '\\'' (~ ( '\\'' ) )* '\\'' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1592:6: '\\'' (~ ( '\\'' ) )* '\\''
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1594:3: ( '\\'' (~ ( '\\'' ) )* '\\'' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1594:6: '\\'' (~ ( '\\'' ) )* '\\''
 			{
 			match('\''); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1592:11: (~ ( '\\'' ) )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1594:11: (~ ( '\\'' ) )*
 			loop20:
 			while (true) {
 				int alt20=2;
@@ -4732,11 +4732,11 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = QUOTED_VALUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1595:3: ( '\"' (~ ( '\"' ) )* '\"' )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1595:6: '\"' (~ ( '\"' ) )* '\"'
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1597:3: ( '\"' (~ ( '\"' ) )* '\"' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1597:6: '\"' (~ ( '\"' ) )* '\"'
 			{
 			match('\"'); 
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1595:10: (~ ( '\"' ) )*
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1597:10: (~ ( '\"' ) )*
 			loop21:
 			while (true) {
 				int alt21=2;
@@ -4782,7 +4782,7 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1598:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1600:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			int alt25=2;
 			int LA25_0 = input.LA(1);
 			if ( (LA25_0=='/') ) {
@@ -4816,11 +4816,11 @@ public class JCoQLLexer extends Lexer {
 
 			switch (alt25) {
 				case 1 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1598:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1600:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 					{
 					match("//"); 
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1598:14: (~ ( '\\n' | '\\r' ) )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1600:14: (~ ( '\\n' | '\\r' ) )*
 					loop22:
 					while (true) {
 						int alt22=2;
@@ -4849,7 +4849,7 @@ public class JCoQLLexer extends Lexer {
 						}
 					}
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1598:28: ( '\\r' )?
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1600:28: ( '\\r' )?
 					int alt23=2;
 					int LA23_0 = input.LA(1);
 					if ( (LA23_0=='\r') ) {
@@ -4857,7 +4857,7 @@ public class JCoQLLexer extends Lexer {
 					}
 					switch (alt23) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1598:28: '\\r'
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1600:28: '\\r'
 							{
 							match('\r'); 
 							}
@@ -4870,11 +4870,11 @@ public class JCoQLLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1599:9: '/*' ( options {greedy=false; } : . )* '*/'
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1601:9: '/*' ( options {greedy=false; } : . )* '*/'
 					{
 					match("/*"); 
 
-					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1599:14: ( options {greedy=false; } : . )*
+					// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1601:14: ( options {greedy=false; } : . )*
 					loop24:
 					while (true) {
 						int alt24=2;
@@ -4895,7 +4895,7 @@ public class JCoQLLexer extends Lexer {
 
 						switch (alt24) {
 						case 1 :
-							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1599:46: .
+							// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1601:46: .
 							{
 							matchAny(); 
 							}
@@ -4927,8 +4927,8 @@ public class JCoQLLexer extends Lexer {
 		try {
 			int _type = SCAN_ERROR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1604:3: ( . )
-			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1604:5: .
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1606:3: ( . )
+			// C:\\Users\\Unibg\\Documents\\Eclipse\\WS Geco\\GecoProject 4.0\\src\\jco\\ql\\parser\\JCoQL.g:1606:5: .
 			{
 			matchAny(); 
 			 env.myScannerErrorHandler(getLine(), getCharPositionInLine(), getText());	
